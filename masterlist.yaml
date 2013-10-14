@@ -1,0 +1,3485 @@
+globals:
+  - type: warn
+    content: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list"
+    condition: version("BOSS","2.1.1.0",<)
+  - type: say
+    content: "\"http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/ Latest BOSS thread\""
+  - type: say
+    content: We are currently having around 700 unrecogniced plugins in our database. If you wish to help us PM wrinklyninja at forums.bethsoft.com
+  - type: warn
+    content: Need check for Tale of Two Wastelands load order
+    condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
+plugins:
+  - name: DeadMoney.esm
+    tag:
+      - Deflst
+    dirty:
+      - crc: 0xd70f165b
+        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+        udr: 51
+  - name: HonestHearts.esm
+    dirty:
+      - crc: 0x2352b189
+        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+        udr: 10
+  - name: OldWorldBlues.esm
+    dirty:
+      - crc: 0x7f8f8225
+        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+  - name: LonesomeRoad.esm
+    dirty:
+      - crc: 0x30073d50
+        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+        udr: 6
+  - name: GunRunnersArsenal.esm
+    dirty:
+      - crc: 0xaac938d
+        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+  - name: TaleOfTwoWastelands.esm
+    msg:
+      - type: warn
+        content: Need check for Tale of Two Wastelands load order
+        condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
+  - name: Community Bugfix Compilation Patch.esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Invent
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Old, update to NVCE."
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: NVCE Main.esm
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: NVCE Main (Faces Only).esm
+    tag:
+      - Actors.ACBS
+      - Deactivate
+      - Filter
+      - NPC.Race
+      - NpcFaces
+  - name: OFT_Merge_All.esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+      - type: say
+        content: "Incompatible with: All other OFT plugins are merged with it."
+  - name: OFT_Merge_Base.esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esm"
+      - type: say
+        content: "Incompatible with: OFT_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base_Interiors.esp"
+      - type: say
+        content: "Incompatible with: OFT_IWR_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+  - name: OFT_Merge_HonestHearts.esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esm"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts.esp"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
+  - name: OFT_Merge_OldWorldBlues.esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esm"
+      - type: say
+        content: "Incompatible with: OFT_OldWorldBlues.esp"
+      - type: say
+        content: "Incompatible with: OFT_IWR_OldWorldBlues.esp"
+  - name: AmmoSpreadEffectFixer.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Companion Core.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Loaded early in the event Companion .esm mods require this.
+  - name: IWR.esm
+    msg:
+      - type: say
+        content: Loaded early to let other mods override boundaries if needed.
+      - type: say
+        content: Does the same thing as OWNB - Open World.esm; Use one or the other.
+      - type: say
+        content: "Incompatible with: These resources are now in OFT_IWR_Base.esp"
+  - name: IWS-Core.esm
+    msg:
+      - type: say
+        content: Loaded early to let other mods override spawn points if needed.
+    tag:
+      - Delev
+  - name: NosCo Companion System.esm
+    msg:
+      - type: say
+        content: Loaded early in the event Companion .esm mods require this.
+  - name: OWNB - Open World.esm
+    msg:
+      - type: say
+        content: Loaded early to let other mods override boundaries if needed.
+      - type: say
+        content: Does the same thing as IWR.esm; Use one or the other.
+  - name: RBX.esm
+    msg:
+      - type: say
+        content: Needs to be before any mod using a reloading bench including a lot of house mods.
+  - name: RRCompanionVault.esm
+    msg:
+      - type: say
+        content: Loaded early in the event Companion .esm mods require this.
+  - name: AccuRifles.esm
+    msg:
+      - type: say
+        content: "Requires: NVSE"
+  - name: Caliber.esm
+    tag:
+      - Invent
+      - Names
+  - name: CaliberXgunrunners.esm
+    tag:
+      - Names
+  - name: CINEMATECH.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender and The Mod Configuration Menu for Version 1.5+"
+  - name: Eve.esm
+    msg:
+      - type: say
+        content: Recommended that you upgrade to the official EVE FNV mod.
+        condition: checksum("Eve.esm",A4084FA6)
+  - name: EZ_CompanionNVSE_Killable_Normal.esm
+    msg:
+      - type: say
+        content: Old
+  - name: Fiends, With Style.esm
+    tag:
+      - Delev
+  - name: FOOK - New Vegas.esm
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: LDFemalePowerArmorPack.esm
+    msg:
+      - type: say
+        content: "Incompatible with: LDFemalePowerArmorPack.esp"
+  - name: LW Companion.esm
+    msg:
+      - type: say
+        content: The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.
+  - name: Moddable Unique Weps.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Moddable Unique Weps.esp"
+    tag:
+      - WeaponMods
+  - name: AWorldOfPain(Preview).esm
+    tag:
+      - Deflst
+      - Invent
+  - name: AWorldOfPain(LowLoot).esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version along with the low loot patches instead.
+  - name: MoMod.esm
+    msg:
+      - type: say
+        content: "Incompatible with: monsterrach.esp"
+    tag:
+      - Relev
+  - name: New Vegas Error Corrections Complete - NO DLC.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
+        condition: file("Mission Mojave - Ultmate Edition.esp")
+  - name: New Vegas Error Corrections BugFixes - NO DLC.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
+        condition: file("Mission Mojave - Ultmate Edition.esp")
+  - name: New Vegas Error Corrections BugFixes - DLC + GRA.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
+        condition: file("Mission Mojave - Ultmate Edition.esp")
+  - name: New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
+        condition: file("Mission Mojave - Ultmate Edition.esp")
+  - name: NSkies - Vanilla Edition.esm
+    msg:
+      - type: say
+        content: Choose only one of NSkies - Vanilla Edition.esm and NSkies URWLified.esm, not both
+    tag:
+      - C.Climate
+      - C.Light
+  - name: NSkies URWLified.esm
+    msg:
+      - type: say
+        content: Choose only one of NSkies - Vanilla Edition.esm and NSkies URWLified.esm, not both
+    tag:
+      - C.Climate
+      - C.Light
+  - name: NVInteriors_WastelandEditon.esm
+    msg:
+      - type: say
+        content: Choose only one of NVInteriors_WastelandEditon.esm and NVInteriors_WastelandEditonAWOP.esm, not both
+  - name: NVInteriors_WastelandEditonAWOP.esm
+    msg:
+      - type: say
+        content: Choose only one of NVInteriors_WastelandEditon.esm and NVInteriors_WastelandEditonAWOP.esm, not both
+  - name: NVInteriors_ComboEdition.esm
+    msg:
+      - type: say
+        content: Merge of NVInteriors_WastelandEdition, NVInteriorsUrbanEdition, and NVInteriors_Tweeks
+      - type: say
+        content: "Incompatible with: NVInteriors_ComboEdition_AWOP.esm"
+  - name: NVInteriors_ComboEdition_AWOP.esm
+    msg:
+      - type: say
+        content: Merge of NVInteriors_WastelandEdition, NVInteriorsUrbanEdition, and NVInteriors_Tweeks
+      - type: say
+        content: "Incompatible with: NVInteriors_ComboEdition.esm"
+  - name: Interior Lighting Overhaul - Core.esm
+    tag:
+      - C.Light
+  - name: Project Nevada - Core.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Project Nevada - Equipment.esm
+    tag:
+      - Delev
+      - Invent
+  - name: SelectFire.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Selective Fire.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: SunnyCompanion.esm
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Weapon Mod Expansion.esm
+    tag:
+      - Names
+  - name: WME - DLCs.esm
+    msg:
+      - type: say
+        content: "Incompatible with: WME - Dead Money.esm, WME - Honest Hearts.esm, WME - Old World Blues.esm"
+  - name: Clean-Deluxe FNV.esm
+    msg:
+      - type: say
+        content: "Incompatible with: Performance of the Gods.esp"
+  - name: aHUD.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: iHUD.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: oHUD.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: aHUD.esm, iHUD.esm, Primary Needs HUD.esm"
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: NVCE Main.esm
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: NVCE Main (Faces Only).esm
+    tag:
+      - Actors.ACBS
+      - Deactivate
+      - Filter
+      - NPC.Race
+      - NpcFaces
+  - name: IWS-Core.esm
+    tag:
+      - Delev
+  - name: EZ_CompanionNVSE_Killable_Normal.esm
+    msg:
+      - type: say
+        content: Old
+  - name: Project Nevada - Core.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: iHUD.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: CINEMATECH.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Caliber.esm
+    tag:
+      - Invent
+      - Names
+  - name: Weapon Mod Expansion.esm
+    tag:
+      - Names
+  - name: FOOK - New Vegas.esm
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: nVamp - Effects nVamped.esm
+    msg:
+      - type: say
+        content: Optional for the nVamp graphics effects.
+  - name: nVamp - Hardcore nVamped.esm
+    msg:
+      - type: say
+        content: "Requires: Separate resource files."
+      - type: say
+        content: Optional for a more difficult experience.
+  - name: nVamp - Hardcore Really nVamped.esm
+    msg:
+      - type: say
+        content: Optional for a more difficult experience.
+  - name: nVamp - Performance nVamped.esm
+    msg:
+      - type: say
+        content: Optional file designed to increase game performance for those with older computers.
+  - name: nVamp - Vaernus's Voracious Vermin.esm
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: HonestHearts-CaliberX.esm
+    tag:
+      - Names
+  - name: AWorldOfPain(Preview).esm
+    tag:
+      - Deflst
+      - Invent
+  - name: AWorldOfPain(LowLoot).esm
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version along with the low loot patches instead.
+  - name: MoMod.esm
+    msg:
+      - type: say
+        content: "Incompatible with: monsterrach.esp"
+    tag:
+      - Relev
+  - name: Project Nevada - Equipment.esm
+    tag:
+      - Delev
+      - Invent
+  - name: WME - DLCs.esm
+    msg:
+      - type: say
+        content: "Incompatible with: WME - Dead Money.esm, WME - Honest Hearts.esm, WME - Old World Blues.esm"
+        condition: ( ( file("WME - Dead Money.esm") ) or file("WME - Honest Hearts.esm") ) or file("WME - Old World Blues.esm")
+  - name: New Vegas Redesigned.esm
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: New Vegas Redesigned II.esm
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: Lings.esm
+    tag:
+      - Eyes
+      - Hair
+  - name: MikotoBeauty.esm
+    tag:
+      - Eyes
+      - Graphics
+      - Hair
+  - name: NV GameStabilizerA8.esm
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: FalloutNV_lang.esp
+    msg:
+      - type: say
+        content: Translation file.
+  - name: MM-Main.esp
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+  - name: MM-HonestHearts.esp
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+  - name: MM-OldWorldBlues.esp
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+  - name: MM-LonesomeRoad.esp
+    msg:
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+  - name: Mission Mojave - Ultimate Edition.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Community Bugfix Compilation Patch.esp"
+    tag:
+      - Actors.AIPackages
+      - NoMerge
+      - Scripts
+      - Sound
+      - Stats
+  - name: MMUE - Deutsch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Community Bugfix Compilation Patch.esp, Mission Mojave - Ultimate Edition.esp"
+    tag:
+      - Actors.AIPackages
+      - NoMerge
+      - Scripts
+      - Sound
+      - Stats
+  - name: MMUE+.esp
+    msg:
+      - type: say
+        content: Plugin is old. Please update it.
+  - name: MMUE-Tools-InvisibleWallRemover.esp
+    msg:
+      - type: say
+        content: "Incompatible with: IWR.esm"
+  - name: Community Bugfix Compilation Patch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Mission Mojave - Ultimate Edition.esp"
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Invent
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: CBC Dead Money Patch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Compiled Patch - DeadMoney.esp"
+  - name: Compiled Patch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Community Bugfix Compilation Patch.esp, Compiled Patch All_DLCs.esp, Mission Mojave - Ultimate Edition.esp"
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: Compiled Patch - DeadMoney.esp
+    msg:
+      - type: say
+        content: "Incompatible with: CBC Dead Money Patch.esm AND CBC Dead Money Patch.esp"
+  - name: Compiled Patch All_DLCs.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Compiled Patch.esp, Community Bugfix Compilation Patch.esp, Mission Mojave - Ultimate Edition.esp"
+      - type: say
+        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+  - name: CaravanCardFix.esp
+    msg:
+      - type: say
+        content: Obsolete with latest patch
+  - name: DLM_QuestItemsFix_1.3b_Eng.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: DLM_QuestItemsFix_1.3b-DLC_DM.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: ED-EUpgradeInventoryFix.esp
+    msg:
+      - type: say
+        content: Obsolete with latest patch
+  - name: JacknDianeFix.esp
+    tag:
+      - Invent
+  - name: MarcusInvFix.esp
+    tag:
+      - Invent
+  - name: MushroomCloudFix.esp
+    msg:
+      - type: say
+        content: Obsolete with latest patch
+  - name: NV Error Fixes DLCs 1.0.esp
+    msg:
+      - type: say
+        content: Old, update to latest version.
+  - name: NV Error Fixes FNV 1.1.esp
+    msg:
+      - type: say
+        content: Old, update to latest version.
+  - name: NV Error Fixes FNV 1.1 - FOOK Patch.esp
+    msg:
+      - type: say
+        content: Old, update to latest version.
+  - name: NV Error Fixes Merged 1.1.esp
+    msg:
+      - type: say
+        content: Old, update to latest version.
+  - name: NV Error Corrections FNV.esp
+    msg:
+      - type: say
+        content: Old, update to latest version 1.7+.
+  - name: NV Error Corrections FNV - FOOK Patch.esp
+    msg:
+      - type: say
+        content: Old, update to latest version 1.7+.
+  - name: NV Error Corrections Merged.esp
+    msg:
+      - type: say
+        content: Old, update to latest version 1.7+.
+  - name: NV Error Corrections Merged - FOOK Patch.esp
+    msg:
+      - type: say
+        content: Old, update to latest version 1.7+.
+  - name: ReloadBugFix.esp
+    msg:
+      - type: say
+        content: Obsolete with latest patch
+  - name: RepairKitFix.esp
+    msg:
+      - type: say
+        content: This fix does not currently work for custom weapon durability mods which increase the weapon's health by anything other than 50%.
+  - name: VendorAmmo45-70Fix.esp
+    msg:
+      - type: say
+        content: Obsolete with latest patch
+  - name: OFT_Merge_All.esp
+    msg:
+      - type: say
+        content: "Incompatible with: All other OFT plugins are merged with it."
+  - name: OFT_Merge_Base.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base_Interiors.esp"
+      - type: say
+        content: "Incompatible with: OFT_IWR_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+  - name: OFT_Merge_HonestHearts.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts.esp"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
+  - name: OFT_Merge_OldWorldBlues.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_OldWorldBlues.esp"
+      - type: say
+        content: "Incompatible with: OFT_IWR_OldWorldBlues.esp"
+  - name: OFT_NoIWR_Merge_All.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base_Interiors.esp"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts.esp"
+      - type: say
+        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
+      - type: say
+        content: "Incompatible with: OFT_OldWorldBlues.esp"
+      - type: say
+        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+  - name: OFT_NoIWR_Merge_Base.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base.esp"
+      - type: say
+        content: "Incompatible with: OFT_Base_Interiors.esp"
+      - type: say
+        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+  - name: OFT_Base.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_Base.esp"
+  - name: OFT_Base_Interiors.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_Base.esp"
+  - name: OFT_HonestHearts.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_HonestHearts.esp"
+  - name: OFT_HonestHearts_Interiors.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_HonestHearts.esp"
+  - name: OFT_OldWorldBlues.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_OldWorldBlues.esp"
+  - name: OFT_IWR_Base.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_Base.esp"
+  - name: OFT_IWR_OldWorldBlues.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_OldWorldBlues.esp"
+  - name: OFT_Coordinate_Finder.esp
+    msg:
+      - type: say
+        content: "Incompatible with: OFT_Merge_All.esp"
+      - type: say
+        content: "Incompatible with: OFT_Merge_Base.esp"
+  - name: AutoSaverNV.esp
+    msg:
+      - type: say
+        content: Do not use with other Auto Savers as they serve the same purpose.
+  - name: RX-Auto Incremental Save.esp
+    msg:
+      - type: say
+        content: Do not use with CASM; has the same purpose.
+  - name: CASM.esp
+    msg:
+      - type: say
+        content: Do not use with Auto Incremental Save; has the same purpose.
+  - name: BIS - Brumbek's Inventory Sorting.esp
+    tag:
+      - Names
+  - name: BIS - Dead Money.esp
+    tag:
+      - Names
+  - name: BIS - Honest Hearts.esp
+    tag:
+      - Names
+  - name: BIS - Old World Blues.esp
+    tag:
+      - Names
+  - name: BIS - Lonesome Road.esp
+    tag:
+      - Names
+  - name: BIS - Gun Runners Arsenal.esp
+    tag:
+      - Names
+  - name: BIS - Community Bugfix Comp ESM.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - Community Bugfix Comp ESP.esp"
+    tag:
+      - Names
+  - name: BIS - CBC Dead Money Patch ESM.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - CBC Dead Money Patch ESP.esp"
+    tag:
+      - Names
+  - name: BIS - Community Bugfix Comp ESP.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - Community Bugfix Comp ESM.esp"
+    tag:
+      - Names
+  - name: BIS - CBC Dead Money Patch ESP.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - CBC Dead Money Patch ESM.esp"
+    tag:
+      - Names
+  - name: BIS - Promo DLC Caravan Pack.esp
+    tag:
+      - Names
+  - name: BIS - Promo DLC Classic Pack.esp
+    tag:
+      - Names
+  - name: BIS - Promo DLC Mercenary Pack.esp
+    tag:
+      - Names
+  - name: BIS - Promo DLC Tribal Pack.esp
+    tag:
+      - Names
+  - name: BIS - CFWNV.esp
+    tag:
+      - Names
+  - name: BIS - CFWNV-DLC.esp
+    tag:
+      - Names
+  - name: BIS - Primary Needs HUD.esp
+    tag:
+      - Names
+  - name: BIS - More Cactus Water Recipes.esp
+    tag:
+      - Names
+  - name: BIS - Compiled Patch.esp
+    tag:
+      - Names
+  - name: BIS - Compiled Patch - DeadMoney.esp
+    tag:
+      - Names
+  - name: BIS - Compiled Patch - HonestHearts.esp
+    tag:
+      - Names
+  - name: BIS - Bobblehunt Patch.esp
+    tag:
+      - Names
+  - name: Centered 3rd Person Camera.esp
+    msg:
+      - type: say
+        content: "Incompatible with: FOOK - New Vegas.esm"
+  - name: Centered 3rd Person Camera - Unraised.esp
+    msg:
+      - type: say
+        content: "Incompatible with: FOOK - New Vegas.esm"
+  - name: NVORganizedItems.esp
+    tag:
+      - Names
+  - name: OperationFixedTerrain.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: OFT_ElectroCity.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: 188 Trading Post Revisited.esp
+    tag:
+      - NpcFaces
+  - name: A Better Arcade.esp
+    tag:
+      - Invent
+      - NpcFaces
+  - name: A Better Boone.esp
+    tag:
+      - Invent
+      - NpcFaces
+  - name: A Better Cass.esp
+    tag:
+      - Invent
+      - NpcFaces
+  - name: A Better Cass - Rearmed SG.esp
+    tag:
+      - Graphics
+      - Sound
+      - Stats
+  - name: A Better Cass - Rearmed M1911.esp
+    tag:
+      - Graphics
+      - Sound
+      - Stats
+  - name: A Better Veronica.esp
+    tag:
+      - Invent
+      - NpcFaces
+  - name: Bitter Springs Revisited.esp
+    tag:
+      - NpcFaces
+  - name: Cass and Veronica.esp
+    tag:
+      - Invent
+      - NpcFaces
+  - name: Cuter Boone.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: Cuter Boone NEW.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: Cuter Veronica Felicia Day.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: Cuter Veronica Felicia Day-Essential.esp
+    tag:
+      - NpcFaces
+  - name: Hanlon the badass 4.esp
+    tag:
+      - NpcFaces
+  - name: Lore version.esp
+    tag:
+      - NpcFaces
+  - name: MikotoBPCCArcade.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: MikotoBPCCBoone.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: MikotoBPCCCass.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: MikotoBPWastersOverhaul.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: MikotoBPCCFull.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: Mutant Eyes.esp
+    tag:
+      - Eyes
+  - name: NiceCass.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NiceCass - C.esp"
+    tag:
+      - NpcFaces
+  - name: NiceCass - C.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NiceCass.esp"
+    tag:
+      - NpcFaces
+  - name: NPC Project - Aero Office Park.esp
+    tag:
+      - NpcFaces
+  - name: Raul - Danny Trejo.esp
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: ReElijahfied.esp
+    tag:
+      - NpcFaces
+  - name: RivensEyescapesNV.esp
+    tag:
+      - Eyes
+  - name: Mikotos_REyescapesNV.esp
+    tag:
+      - Eyes
+  - name: Veronica1.0.esp
+    tag:
+      - NpcFaces
+  - name: Veronica_nerdy.esp
+    tag:
+      - NpcFaces
+  - name: VeronicaOlder.esp
+    tag:
+      - NpcFaces
+  - name: Vulpes Inculta.esp
+    tag:
+      - NpcFaces
+  - name: VyntageCass02.esp
+    tag:
+      - NpcFaces
+  - name: VyntageVeronica02.esp
+    tag:
+      - NpcFaces
+  - name: 1st Recon Revised.esp
+    tag:
+      - Invent
+  - name: Doc Mitchell's House Owner.esp
+    tag:
+      - C.Owner
+  - name: KillableKids_E.esp
+    msg:
+      - type: say
+        content: "Incompatible with: KillableKids_NE.esp"
+  - name: KillableKids_NE.esp
+    msg:
+      - type: say
+        content: "Incompatible with: KillableKids_E.esp"
+  - name: monsterranch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: MoMod.esm"
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - Relev
+  - name: Alpha's MoMod Overhaul.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Monster Mod Wasteland Edition.esp
+    tag:
+      - Relev
+  - name: MMWE-No Oblivion.esp
+    tag:
+      - Delev
+  - name: MMWE-Claw Beast B Gone.esp
+    tag:
+      - Delev
+  - name: MMWE-LoreOut.esp
+    tag:
+      - Delev
+  - name: MMWE-No Werewolves.esp
+    tag:
+      - Delev
+  - name: MMWE - Rebalanced Leveled Lists.esp
+    tag:
+      - Delev
+      - Relev
+  - name: MMWE - Vanilla Spawn Chance.esp
+    tag:
+      - Delev
+      - Relev
+  - name: MMWE-LoreOut-Rebalanced.esp
+    tag:
+      - Delev
+      - Relev
+  - name: MMWE-LoreOut-VanillaSpawnChance.esp
+    tag:
+      - Delev
+      - Relev
+  - name: NPCsUseAmmo.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NPCsUseAmmo-More Ammo.esp"
+  - name: NPCsUseAmmo-More Ammo.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NPCsUseAmmo.esp"
+  - name: populatedcasino.esp
+    msg:
+      - type: say
+        content: "Incompatible with: populatedcasino-medium.esp and populatedcasino-light.esp"
+  - name: populatedcasino-medium.esp
+    msg:
+      - type: say
+        content: "Incompatible with: populatedcasino.esp and populatedcasino-light.esp"
+  - name: populatedcasino-light.esp
+    msg:
+      - type: say
+        content: "Incompatible with: populatedcasino.esp and populatedcasino-medium.esp"
+  - name: Project13 - Populated Wasteland.esp
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Relev
+  - name: VendorGameTimeRestock.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: VendorGameTimeRestockNoNVSE.esp"
+  - name: VendorGameTimeRestockNoNVSE.esp
+    msg:
+      - type: say
+        content: "Incompatible with: VendorGameTimeRestock.esp"
+  - name: VendorGameTimeRestockNoDefaultRestock.esp
+    msg:
+      - type: say
+        content: Recommended to be used with one of the main .esp's
+  - name: IIWR 2.0.3.esp
+    msg:
+      - type: say
+        content: Outdated Version. Consider Updating to IWR.esm
+  - name: IIWR 2.0.7.esp
+    msg:
+      - type: say
+        content: Outdated Version. Consider Updating to IWR.esm
+  - name: IIWR 2.0.9.esp
+    msg:
+      - type: say
+        content: Outdated Version. Consider Updating to IWR.esm
+  - name: IIWR 2.1.0.esp
+    msg:
+      - type: say
+        content: Outdated Version. Consider Updating to IWR.esm
+  - name: GunRunnersExpandedV3.3.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: GunRunnersExpandedV3.4.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: GunRunnersExpandedV3.5.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: GunRunnersExpanded-LoreFriendly.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Novac Hotel Suite Upgrade.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp"
+  - name: NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Novac Hotel Suite Upgrade.esp"
+  - name: NVInteriors_WastelandEditon.esp
+    msg:
+      - type: say
+        content: Old, update to NVInteriors_WastelandEditon.esm
+  - name: return_deadmoney.esp
+    msg:
+      - type: say
+        content: Same Purpose as SierraMadreEXIT.esp; use one or the other.
+  - name: Schoolhouse Base.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: Seachlight Airport NCR.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: SierraMadreEXIT.esp
+    msg:
+      - type: say
+        content: Same purpose as return_deadmoney.esp; use one or the other.
+  - name: SierraMadrev2.0.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: SierraMadrev2.1.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: UHNV-Performance-Patch.esp
+    msg:
+      - type: say
+        content: Outdated as of Version 2.9
+  - name: UHNV-Brighter Lighting.esp
+    msg:
+      - type: say
+        content: "Incompatible with: UHNV-IncreasedLighting.esp"
+  - name: UHNV-IncreasedLighting.esp
+    msg:
+      - type: say
+        content: "Incompatible with: UHNV-Brighter Lighting.esp"
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: UWHNV-Core.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: YangtzeBunkerPlayerHome.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: YangtzeBunkerPlayerHomeV1_2.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: YangtzeBunkerPlayerHomeV1_3.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: YangtzeBunkerPlayerHomeV1_4.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: HighlyPopulatedFreeside.esp
+    msg:
+      - type: say
+        content: "Incompatible with: MediumPopulatedFreeside.esp, LowPopulatedFreeside.esp"
+  - name: MediumPopulatedFreeside.esp
+    msg:
+      - type: say
+        content: "Incompatible with: HighlyPopulatedFreeside.esp, LowPopulatedFreeside.esp"
+  - name: LowPopulatedFreeside.esp
+    msg:
+      - type: say
+        content: "Incompatible with: HighlyPopulatedFreeside.esp, MediumPopulatedFreeside.esp"
+  - name: NVR-Version_9.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: NVFR-Version 1.esp
+    msg:
+      - type: say
+        content: Outdated; Consider Updating.
+  - name: NVHarderCore.esp
+    tag:
+      - Names
+      - Stats
+  - name: NVWastelandUnlocked.esp
+    tag:
+      - Delev
+      - Names
+      - Relations
+      - Relev
+      - Stats
+      - WeaponMods
+  - name: NVWeaponAmmoTweaks.esp
+    tag:
+      - Stats
+      - WeaponMods
+  - name: FOOK - New Vegas.esp
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: BIS - FOOK - New Vegas.esp
+    tag:
+      - Names
+  - name: BIS - FOOK - New Vegas DLCs.esp
+    tag:
+      - Names
+  - name: LinkesAuge - Bug fixing compilation.esp
+    tag:
+      - Deflst
+      - Names
+      - Scripts
+      - Stats
+  - name: LinkesAuge - Retexture edits.esp
+    tag:
+      - Graphics
+  - name: NoWeaponZoom.esp
+    tag:
+      - Stats
+  - name: ImprovedBinocs.esp
+    tag:
+      - Invent
+  - name: HeadWearShaderFX.esp
+    tag:
+      - Scripts
+      - Stats
+  - name: LootOverhaul.esp
+    tag:
+      - Invent
+  - name: Food&DrinkDontHeal.esp
+    tag:
+      - Stats
+  - name: CompanionsImproved.esp
+    tag:
+      - Actors.AIPackages
+  - name: Npc&CreatureRespawn.esp
+    tag:
+      - Relev
+  - name: M.M.A.T - Companion Module.esp
+    tag:
+      - Actors.AIPackages
+  - name: M.M.A.T - Ingestible Module.esp
+    tag:
+      - Stats
+  - name: M.M.A.T - Shader Module.esp
+    tag:
+      - Stats
+  - name: M.M.A.T Loot Module.esp
+    tag:
+      - Invent
+  - name: M.M.A.T - Loot Module.esp
+    tag:
+      - Invent
+  - name: M.M.A.T - Weapon Module.esp
+    tag:
+      - Stats
+  - name: M.M.A.T - Spawn Module.esp
+    tag:
+      - Relev
+  - name: NEVAX - BEAUTYPACK.esp
+    tag:
+      - Body-F
+      - Body-M
+      - NPCFaces
+  - name: NEVAX - FUNDE.esp
+    tag:
+      - Deflst
+      - Relev
+  - name: NEVAX - ITEMBALANCINGS.esp
+    tag:
+      - Stats
+  - name: NEVAX - KAUFINHALTE.esp
+    tag:
+      - Deflst
+      - Invent
+      - Relev
+  - name: NEVAX - MEHR MONSTER.esp
+    tag:
+      - Relev
+      - Scripts
+  - name: NEVAX - MONSTER.esp
+    tag:
+      - Deflst
+      - Relev
+  - name: NEVAX - NPC BALANCING.esp
+    tag:
+      - Deflst
+      - Relev
+      - Scripts
+  - name: NEVAX - RAIDER u NPC.esp
+    tag:
+      - Deflst
+      - Relev
+      - Scripts
+  - name: NEVAX - RUESTUNGEN.esp
+    tag:
+      - Deflst
+      - Relev
+  - name: NEVAX - WAFFEN.esp
+    tag:
+      - Deflst
+      - Relev
+  - name: PMT - XPadjust.esp
+    tag:
+      - Invent
+  - name: PMT - Tougher XPadjust.esp
+    tag:
+      - Invent
+  - name: PMT - Slower Reloading.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Slower Reloading No Visible Perk.esp"
+    tag:
+      - Stats
+  - name: PMT - Slower Reloading No Visible Perk.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Slower Reloading.esp"
+    tag:
+      - Stats
+  - name: PMT - Reduced Ammo and Chems.esp
+    tag:
+      - Delev
+      - Relev
+  - name: PMT - Reduced Caps and Item Value.esp
+    tag:
+      - Delev
+      - Relev
+  - name: PMT - More Demanding Hardcore.esp
+    tag:
+      - Stats
+  - name: PMT - Destructible Ordnance.esp
+    tag:
+      - Destructible
+  - name: PMT - Deadlier Combat.esp
+    tag:
+      - Stats
+  - name: PMT - Deadlier Combat Mk II.esp
+    tag:
+      - Stats
+  - name: PMT - Faint Heartbeat.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Silent Heartbeat.esp"
+  - name: PMT - Silent Heartbeat.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Faint Heartbeat.esp"
+  - name: PMT - Total Challenge Remover.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Reduced Challenge Notifications.esp"
+  - name: PMT - Reduced Challenge Notifications.esp
+    msg:
+      - type: say
+        content: "Incompatible with: PMT - Total Challenge Remover.esp"
+  - name: Reload.esp
+    tag:
+      - Delev
+      - Names
+      - Relev
+  - name: Rebalance.esp
+    tag:
+      - Names
+      - Stats
+  - name: Rearm.esp
+    tag:
+      - Delev
+      - Relev
+  - name: RebalanceRearm.esp
+    tag:
+      - Stats
+  - name: RearmRebalance.esp
+    tag:
+      - Stats
+  - name: ReSort.esp
+    tag:
+      - Names
+  - name: Superior Firepower - Unique Weaponry.esp
+    tag:
+      - Stats
+  - name: Superior Firepower - Factional Changes.esp
+    tag:
+      - Delev
+      - Relev
+  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp med.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp high.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 2ba - Armor - DR+DT - simple low.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 2ba - Armor - DR+DT - simple med.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 2ba - Armor - DR+DT - simple high.esp
+    tag:
+      - Names
+  - name: BIS - XFO - 6aa - Epic Skills.esp
+    tag:
+      - Names
+  - name: Adventurers_New_Vegas-V0.1.esp
+    msg:
+      - type: say
+        content: Old
+  - name: Arwen_NV_Realism_Core.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender 1.4.2+"
+        condition: ( version("..\nvse_loader.exe","0.1.4.2",<) ) or not file("..\nvse_loader.exe")
+    tag:
+      - Stats
+  - name: hardercore_combat.esp
+    tag:
+      - Stats
+  - name: hardercore_wealth.esp
+    tag:
+      - Delev
+      - Relev
+  - name: BIS - Project Nevada - Core.esp
+    tag:
+      - Names
+  - name: BIS - Project Nevada - Equipment.esp
+    tag:
+      - Invent
+      - Names
+  - name: BIS - Project Nevada - Cyberware.esp
+    tag:
+      - Names
+  - name: Project Nevada - Dead Money.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Project Nevada - Dead Money + Honest Heart Patch.esp and Project Nevada - Dead Money SF + Honest Hearts Patch.esp"
+  - name: Project Nevada - Honest Hearts.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Project Nevada - Dead Money + Honest Heart Patch.esp and Project Nevada - Dead Money SF + Honest Hearts Patch.esp"
+  - name: Project Nevada - Dead Money + Honest Heart Patch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Project Nevada - Dead Money.esp and Project Nevada - Honest Hearts.esp"
+      - type: say
+        content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
+  - name: Project Nevada - Dead Money SF + Honest Hearts Patch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Project Nevada - Dead Money.esp and Project Nevada - Honest Hearts.esp"
+      - type: say
+        content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
+  - name: Project Nevada - Old World Blues.esp
+    msg:
+      - type: say
+        content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
+  - name: Project Nevada - Old World Blues (No Cyberware).esp
+    msg:
+      - type: say
+        content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
+  - name: OWB Big Empty Overhaul.esp
+    tag:
+      - Invent
+      - Names
+      - Stats
+  - name: Improved Sound FX - Weapon Sharing Fix.esp
+    tag:
+      - Sound
+  - name: Improved Sound FX - HH Sharing Fix.esp
+    tag:
+      - Sound
+  - name: Improved Sound FX - OWB Sharing Fix.esp
+    tag:
+      - Sound
+  - name: Improved Sound FX - LR Sharing Fix.esp
+    tag:
+      - Sound
+  - name: Improved Sound FX - GRA.esp
+    tag:
+      - Sound
+  - name: Improved Sound FX - Merged Major DLCs.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Improved Sound FX - DM.esp, Improved Sound FX - HH.esp, Improved Sound FX - HH Sharing Fix.esp, Improved Sound FX - OWB Sharing Fix.esp, Improved Sound FX - LR Sharing Fix.esp, Improved Sound FX - WMX - Merged Major DLCs.esp"
+    tag:
+      - Sound
+  - name: Improved Sound FX - Project Nevada.esp
+    tag:
+      - Sound
+  - name: LouderGuns.esp
+    tag:
+      - Sound
+  - name: awilderwasteland.esp
+    msg:
+      - type: say
+        content: "Incompatible with: awilderwastelandnobenny.esp"
+  - name: awilderwastelandnobenny.esp
+    msg:
+      - type: say
+        content: "Incompatible with: awilderwasteland.esp"
+  - name: betsybrahmin.esp
+    msg:
+      - type: say
+        content: "Incompatible with: betsybrahminFSO.esp"
+  - name: betsybrahminFSO.esp
+    msg:
+      - type: say
+        content: "Incompatible with: betsybrahmin.esp"
+  - name: wsex_workgirl.esp
+    msg:
+      - type: say
+        content: "Incompatible with: wsex_workgirl_tryout.esp"
+  - name: wsex_workgirl_tryout.esp
+    msg:
+      - type: say
+        content: "Incompatible with: wsex_workgirl.esp"
+  - name: BrainPerkBugfix.esp
+    msg:
+      - type: say
+        content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
+  - name: BrainPerkBugfix_Cardiac.esp
+    msg:
+      - type: say
+        content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
+  - name: FourEyesDynamic.esp
+    msg:
+      - type: say
+        content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
+  - name: FourEyesBetter.esp
+    msg:
+      - type: say
+        content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
+  - name: ZZZZ--APB_By_Nokturnihs.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: AutoLoot.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Detect Traps - Dead Money.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Detect Traps - DLC.esp"
+  - name: "IFNOT VAR(DM) REQ: DeadMoney.esm and HonestHearts.esm"
+    msg:
+      - type: say
+        content: "Incompatible with: Detect Traps - Dead Money.esp"
+  - name: IWS-AS-HighSpawns.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Only use one of the spawn .esp's
+  - name: IWS-AS-MedSpawns.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Only use one of the spawn .esp's
+  - name: IWS-AS-LowSpawns.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Only use one of the spawn .esp's
+  - name: IWS-MoreSpawns.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: IWS-UltraSpawns.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Less Weight.esp
+    msg:
+      - type: say
+        content: "Incompatible with: More Weight.esp"
+  - name: Isul-MagExchange.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Mail Order Catalogs PopUp.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO PopUp.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs DLC.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs DLC PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO DLC.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO DLC PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: More Weight.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Less Weight.esp"
+  - name: BIS - Sprint Mod.esp
+    tag:
+      - Names
+  - name: ACS-HonestHearts.esp
+    tag:
+      - Invent
+  - name: ArmourRepairKits.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Better Ammo Crafting.esp
+    tag:
+      - Names
+  - name: BetterCraftingSorting.esp
+    tag:
+      - Names
+  - name: Bountiful Harvest.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Dynamic Herbalism.esp"
+  - name: Dynamic Herbalism.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Bountiful Harvest.esp"
+  - name: 1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: AEVegas.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: AG Shell Casing Fixes-All Five.esp
+    tag:
+      - Graphics
+  - name: AG Shell Casing Fixes Repeater-Service-ThatGun.esp
+    tag:
+      - Graphics
+  - name: AG Shell Casing Fixes - OWB.esp
+    tag:
+      - Graphics
+  - name: AG Supplementary Uniques.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AG Supplementary Uniques WME.esp"
+  - name: AG Supplementary Uniques-Dead Money.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AG Supplementary Uniques-Dead Money WME.esp"
+  - name: AG Supplementary Uniques-Honest Hearts.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AG Supplementary Uniques-Honest Hearts WME.esp"
+  - name: AG Supplementary Uniques-Lonesome Road.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AG Supplementary Uniques-Lonesome Road WME.esp"
+  - name: AG Supplementary Uniques-AllInOne.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AG Supplementary Uniques.esp, AG Supplementary Uniques-Dead Money.esp, AG Supplementary Uniques-Honest Hearts.esp, AG Supplementary Uniques-Old World Blues.esp, AG Supplementary Uniques-Lonesome Road.esp"
+  - name: Ahzteks Weapon Replacements.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: Selective Fire - Ahzteks NV Weapon Overhaul.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Ahzteks Weapon Overhaul.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Ahzteks Weapon Overhaul NO xCALIBER.esp"
+    tag:
+      - Deflst
+      - Delev
+      - Invent
+  - name: Ahzteks Weapon Overhaul NO xCALIBER.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Ahzteks Weapon Overhaul.esp"
+  - name: Ahzteks Pistol and SMG Replacements.esp
+    tag:
+      - Graphics
+      - Names
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: A Load of Balls.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Assault Carbine mods.esp
+    tag:
+      - WeaponMods
+  - name: Better Binoculars.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Better Binoculars Low.esp
+    msg:
+      - type: say
+        content: Select only one Better Bincoulars .esp to use.
+  - name: BIS - Kobu Better Binoculars Low.esp
+    msg:
+      - type: say
+        content: For use with Better Binoculars Low.esp
+    tag:
+      - Names
+  - name: Better Binoculars Medium.esp
+    msg:
+      - type: say
+        content: Select only one Better Bincoulars .esp to use.
+  - name: BIS - Kobu Better Binoculars Medium.esp
+    msg:
+      - type: say
+        content: For use with Better Binoculars Medium.esp
+    tag:
+      - Names
+  - name: Better Binoculars High.esp
+    msg:
+      - type: say
+        content: Select only one Better Bincoulars .esp to use.
+  - name: BIS - Kobu Better Binoculars High.esp
+    msg:
+      - type: say
+        content: For use with Better Binoculars High.esp
+    tag:
+      - Names
+  - name: Better Binoculars Max.esp
+    msg:
+      - type: say
+        content: Select only one Better Bincoulars .esp to use.
+  - name: BIS - Kobu Better Binoculars Max.esp
+    msg:
+      - type: say
+        content: For use with Better Binoculars Max.esp
+    tag:
+      - Names
+  - name: better that gun 223.esp
+    tag:
+      - Names
+      - Stats
+  - name: better that gun 44mag.esp
+    tag:
+      - Names
+      - Stats
+  - name: christinecos.esp
+    tag:
+      - Graphics
+  - name: GRA WRP Compatibility Patch.esp
+    tag:
+      - Graphics
+  - name: Classic Plasma Grenade.esp
+    tag:
+      - Graphics
+  - name: Classic Pulse Grenade (classic sound).esp
+    tag:
+      - Graphics
+      - Sounds
+  - name: Classic Pulse Grenade (vanilla sound).esp
+    tag:
+      - Graphics
+  - name: DWM4A1.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DWM4A1V18Personal.esp"
+  - name: DWM4A1V18Personal.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DWM4A1.esp"
+  - name: DWUSP45.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DWUSP_V18.esp"
+  - name: DWUSP_V18.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DWUSP45.esp"
+  - name: EnergyBoost.esp
+    tag:
+      - Stats
+  - name: FO3WeaponsRestoration_SoundRestoration.esp
+    msg:
+      - type: say
+        content: User needs to move wav files from fallout 3 sound.bsa to use.
+  - name: ImmaSightinMahLazor.esp
+    tag:
+      - Stats
+  - name: ironsightsnozoom.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ironsightsnozoom-wmx.esp"
+  - name: m110.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Moddable Anti-Materiel Rifle.esp
+    tag:
+      - WeaponMods
+  - name: Moddable Anti-Materiel Rifle 2.esp
+    tag:
+      - WeaponMods
+  - name: Moddable Unique Weps.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Moddable Unique Weps.esm"
+    tag:
+      - WeaponMods
+  - name: OWB HQ Textures Fix.esp
+    tag:
+      - Graphics
+  - name: PlasmaRifleAwesomefied.esp
+    tag:
+      - Sound
+      - Stats
+  - name: ScientistPack.esp
+    msg:
+      - type: say
+        content: Choose only one of ScientistPack.esp and ScientistPackWMX.esp, not both
+  - name: Shotgun Commando.esp
+    tag:
+      - Stats
+  - name: Shotgun Commando 1.2 Caravan.esp
+    tag:
+      - Stats
+  - name: Stalker Weapons Pack.esp
+    msg:
+      - type: say
+        content: Old, update to latest version.
+  - name: Advanced Recon Tech - Fiendish Power Armor.esp
+    msg:
+      - type: say
+        content: Merged into nVamp -Advanced Mod Project. Do not use both at the same time.
+  - name: Armored PA Gloves.esp
+    tag:
+      - Deflst
+  - name: LDFemalePowerArmorPack.esp
+    msg:
+      - type: say
+        content: "Incompatible with: LDFemalePowerArmorPack.esm"
+  - name: BlackWolf Backpack.esp
+    msg:
+      - type: say
+        content: "Incompatible with: QS_Blackwolf_NV_Backpackmod.esp"
+      - type: say
+        content: To be used with BlackWolf Backpack - Vendor Script Replenish.esp
+  - name: BlackWolf Backpack - Vendor Script Replenish.esp
+    msg:
+      - type: say
+        content: To be used with BlackWolf Backpack.esp
+  - name: DragonskinNCRPersonnelWearingOutfits.esp
+    tag:
+      - Relev
+  - name: epock.esp
+    msg:
+      - type: say
+        content: Meshes based off of the Type 3 Female Body.
+  - name: ERCA FACTLESS.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ERCA.esp"
+  - name: ERCAFACTLESS.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ERCA.esp"
+  - name: Fiendish Power Armor - Project Nevada.esp
+    msg:
+      - type: say
+        content: Merged into nVamp - New Vegas Mod Project. Do not use together.
+  - name: FlashlightNVSE.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Project Nevada - FlashlightNVSE.esp"
+  - name: Project Nevada - FlashlightNVSE.esp
+    msg:
+      - type: say
+        content: "Incompatible with: FlashlightNVSE.esp"
+  - name: ghostbodysuitcamo.esp
+    msg:
+      - type: say
+        content: "Requires: Type 3 Body Replacer"
+  - name: Ghost Variants.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Ghost Variants Safe.esp and Ghost Variants Adjutant.esp"
+  - name: Ghost Variants Adjutant.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Ghost Variants.esp and Ghost Variants Safe.esp"
+  - name: Ghost Variants Safe.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Ghost Variants.esp and Ghost Variants Adjutant.esp"
+  - name: Hereticus Faction Armors Fading.esp
+    tag:
+      - Names
+  - name: HHType3tribalhands.esp
+    tag:
+      - Body-F
+  - name: JillBSAA Multicolor.esp
+    msg:
+      - type: say
+        content: "Requires: Type 3 Body Replacer"
+    tag:
+      - Invent
+  - name: JNinjasNinjasComeBack.esp
+    msg:
+      - type: say
+        content: "Incompatible with: JNinjasStealthFieldStops.esp and JNinjasStealthFieldStopsNinjasComeBack.esp"
+  - name: JNinjasStealthFieldStops.esp
+    msg:
+      - type: say
+        content: "Incompatible with: JNinjasNinjasComeBack.esp and JNinjasStealthFieldStopsNinjasComeBack.esp"
+  - name: JNinjasStealthFieldStopsNinjasComeBack.esp
+    msg:
+      - type: say
+        content: "Incompatible with: JNinjasNinjasComeBack.esp and JNinjasStealthFieldStops.esp"
+  - name: KDS Wearable Backpacks.esp
+    tag:
+      - Invent
+  - name: NCR Black Ops Stealth Armor.esp
+    msg:
+      - type: say
+        content: Due to a master issue, this requires ClassicPack.esm; Can be fixed manually using FNVEdit.
+  - name: NCR Rearmament v1.5.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NCR Rearmament v1.5 (Lore).esp"
+  - name: NCR Rearmament v1.5 (Lore).esp
+    msg:
+      - type: say
+        content: "Incompatible with: NCR Rearmament v1.5.esp"
+  - name: Nidaoutfitv1.esp
+    msg:
+      - type: say
+        content: Designed for the Type3 Female Body Replacer variants.
+  - name: Powered Power Armor.esp
+    tag:
+      - Deflst
+  - name: QS_Blackwolf_NV_Backpackmod.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BlackWolf Backpack.esp"
+  - name: ReworkStuff.esp
+    msg:
+      - type: say
+        content: "Requires: Type 3 Body Replacer"
+  - name: Rivens Costume Mod.esp
+    msg:
+      - type: say
+        content: Designed for Robert's Male Body and Type3 Female Body variants.
+  - name: Seeker Veronica.esp
+    tag:
+      - Invent
+  - name: sexysleepwear.esp
+    msg:
+      - type: say
+        content: Choose only one of sexysleepwear.esp and sexysleepwearnr.esp, not both
+  - name: sexysleepwearnr.esp
+    msg:
+      - type: say
+        content: Choose only one of sexysleepwear.esp and sexysleepwearnr.esp, not both
+  - name: Type3 Leather Armors.esp
+    msg:
+      - type: say
+        content: Designed for the Type3 Female Body Replacer.
+  - name: Type3 Leather Armors-lvld.esp
+    msg:
+      - type: say
+        content: "Requires: meshes and textures from New Vegas Type3 Leather Armors."
+  - name: w44Satchels - Full.esp
+    msg:
+      - type: say
+        content: "Incompatible with: w44Satchels - Lite.esp"
+  - name: w44Satchels - Lite.esp
+    msg:
+      - type: say
+        content: "Incompatible with: w44Satchels - Full.esp"
+  - name: LingsPrettyThings.esp
+    tag:
+      - Eyes
+      - Hair
+      - Invent
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - NpcFaces
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.Description
+      - R.Head
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+  - name: Machienzo - NPC Cosmetic Fixes DLC01.esp
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+  - name: Machienzo - NPC Cosmetic Fixes DLC02.esp
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+  - name: Machienzo - NPC Cosmetic Fixes DLC03.esp
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+  - name: NVCE DLC01.esp
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
+  - name: NVCE DLC02.esp
+    tag:
+      - Actors.ACBS
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: NVCE DLC03.esp
+    tag:
+      - Actors.ACBS
+      - Body-M
+      - NpcFaces
+  - name: NVCE DLC04.esp
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: NVR- Lore version.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NVR- Recommended.esp"
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: NVR- Recommended.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NVR- Lore version.esp"
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: New Vegas redesigned- Honest Hearts.esp
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: Voice dissonance fix.esp
+    tag:
+      - NpcFaces
+  - name: AWOPLowRobots.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AWOPVeryLowRobots.esp"
+  - name: AWOPVeryLowRobots.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AWOPLowRobots.esp"
+  - name: AWOP-AhztekWeaponPatch.esp
+    tag:
+      - Invent
+  - name: AWOPCaliberXAmmoPatch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AWOPCaliberXAmmoPatchLOW.esp"
+    tag:
+      - Invent
+  - name: AWOPCaliberXAmmoPatchLOW.esp
+    msg:
+      - type: say
+        content: "Incompatible with: AWOPCaliberXAmmoPatch.esp"
+    tag:
+      - Invent
+  - name: MMUE-CP-AWOP+NVInteriors.esp
+    msg:
+      - type: say
+        content: "Incompatible with: MMUE-CP-AWOP.esp"
+  - name: Companion Module Pack.esp
+    msg:
+      - type: say
+        content: Consists of a number of Companion-Related mods. Be aware when installing.
+      - type: say
+        content: You will have to remove any mods that you have that are included in the pack to avoid issues.
+  - name: Companion Weapons - Special Ammo.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Companion Weapons - Special Ammo - Dead Money.esp"
+  - name: Companion Weapons - Special Ammo - Dead Money.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Companion Weapons - Special Ammo.esp"
+  - name: CompanionLevel30Cap.esp
+    msg:
+      - type: say
+        content: "Incompatible with: HigherCompanionLevelCap.esp"
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - Actors.ACBS
+  - name: HigherCompanionLevelCap.esp
+    msg:
+      - type: say
+        content: "Incompatible with: CompanionLevel30Cap.esp"
+  - name: Correction - Passive 2 Option.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Correction - Passive.esp"
+  - name: Correction - Passive.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Correction - Passive 2 Option.esp"
+  - name: Cass Passive Fix.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Cass Passive Fix 2 Option.esp"
+  - name: Cass Passive Fix 2 Option.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Cass Passive Fix.esp"
+  - name: CCC - Save Cass.esp
+    msg:
+      - type: say
+        content: For use with the Save Cass mod.
+  - name: EZ_VanillaFollowers.esp
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+  - name: LilyFawkes.esp
+    msg:
+      - type: say
+        content: "Incompatible with: LilyArmored.esp"
+  - name: LilyArmored.esp
+    msg:
+      - type: say
+        content: "Incompatible with: LilyFawkes.esp"
+  - name: NVPhalanx.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Incompatible with a majority of other companion mods. Be aware when installing."
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - C.Owner
+      - Scripts
+  - name: RexReplacerEss.esp
+    tag:
+      - Graphics
+  - name: BetterRepairKits.esp
+    msg:
+      - type: say
+        content: Old
+  - name: BetterRepairKits2.esp
+    msg:
+      - type: say
+        content: Old
+  - name: Cowboy Repeater with Vanilla Name.esp
+    msg:
+      - type: say
+        content: For use with GunSmith.esm and GunSmith Guns Upgrade.esp
+  - name: Real Weapon Names.esp
+    tag:
+      - Names
+  - name: Real Weapon Names - NPC Compnaion Weapons.esp
+    tag:
+      - Names
+  - name: Real Weapon Names - Dead Money.esp
+    tag:
+      - Names
+  - name: Real Weapon Names - Honest Hearts.esp
+    tag:
+      - Names
+  - name: Real Weapon Names - Project Nevada.esp
+    tag:
+      - Names
+  - name: MiscItemIconsNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: T3T_MiscItemIconsNV.esp"
+    tag:
+      - Graphics
+      - NoMerge
+  - name: T3T_MiscItemIconsNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: MiscItemIconsNV.esp"
+      - type: say
+        content: Outdated. Consider updating.
+    tag:
+      - Graphics
+  - name: BIS - T3T_MiscItemIconsNV 0.7.esp
+    tag:
+      - Names
+  - name: BIS - MiscItemIconsNV 0.9.esp
+    tag:
+      - Names
+  - name: Sorter - Combined.esp
+    tag:
+      - Names
+  - name: Sorter - Dead Money.esp
+    tag:
+      - Names
+  - name: Sorter - Combined - T3T Icon Compatch.esp
+    msg:
+      - type: say
+        content: Outdated as of Version 2.0; Phased into Sorted - Combined.esp
+    tag:
+      - Names
+  - name: Sorter - Combined - Aid Crafting.esp
+    msg:
+      - type: say
+        content: Outdated as of Version 2.0; Phased into Sorted - Combined.esp
+    tag:
+      - Names
+  - name: Sorter - Books.esp
+    tag:
+      - Names
+  - name: Sorter - Magazines.esp
+    tag:
+      - Names
+  - name: Sorter - Combined - Weighted.esp
+    tag:
+      - Names
+  - name: Sorter - Empty Consumables.esp
+    tag:
+      - Names
+  - name: Sorter - Empty Consumables - Dead Money.esp
+    tag:
+      - Names
+  - name: Inventory Sorter - Moddable Unique Weps.esp
+    tag:
+      - Names
+  - name: DrugsAreBadMKay-IS.esp
+    tag:
+      - Names
+  - name: FeelingIrradiated-IS.esp
+    tag:
+      - Names
+  - name: IntegratedFullDLC.esp
+    msg:
+      - type: say
+        content: "Requires: All four DLC's."
+  - name: Max Level 50.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: Other mods that change the max level."
+  - name: Max Level 60.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: Other mods that change the max level."
+  - name: Max Level 75.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: Other mods that change the max level."
+  - name: Max Level 100.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: Other mods that change the max level."
+  - name: Max Level 255.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: Other mods that change the max level."
+  - name: CCC - weaker weapons.esp
+    msg:
+      - type: say
+        content: Does not require CCC to work.
+  - name: Couriers Stash - Package Selection Menu.esp
+    msg:
+      - type: say
+        content: Does not require all the Courier's Stash/Pre-order packs to work.
+  - name: Delay DLC - DM + HH + OWB.esp
+    msg:
+      - type: say
+        content: Old, update to Delay DLC - DM + HH + OWB + LR.esp
+  - name: Dynamic Quantity Prompt.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender Beta 2 Ver.4 and Newer."
+  - name: BIS - Grenade Hotkey.esp
+    tag:
+      - Names
+  - name: Imp's More Complex Needs - JA - SORTED.esp
+    msg:
+      - type: say
+        content: Older version. Consider using version 1.0.3 HotfixA or later.
+    tag:
+      - Names
+  - name: IMCNNV - Sorted.esp
+    tag:
+      - Names
+  - name: Intelligence_And_Skill_Points_Hardcore.esp
+    msg:
+      - type: say
+        content: Choose only one 'Intelligence and Skill Points' ESP.
+  - name: Intelligence_And_Skill_Points_High.esp
+    msg:
+      - type: say
+        content: Choose only one 'Intelligence and Skill Points' ESP.
+  - name: Intelligence_And_Skill_Points_Increased.esp
+    msg:
+      - type: say
+        content: Choose only one 'Intelligence and Skill Points' ESP.
+  - name: Intelligence_And_Skill_Points_Normal.esp
+    msg:
+      - type: say
+        content: Choose only one 'Intelligence and Skill Points' ESP.
+  - name: Intelligence_And_Skill_Points_Very_High.esp
+    msg:
+      - type: say
+        content: Choose only one 'Intelligence and Skill Points' ESP.
+  - name: Invisibility for No Reputation.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: lexx-no-dialog-tags-Deutsch.esp
+    msg:
+      - type: say
+        content: "Incompatible with: lexx-no-dialog-tags-English.esp"
+  - name: lexx-no-dialog-tags-English.esp
+    msg:
+      - type: say
+        content: "Incompatible with: lexx-no-dialog-tags-Deutsch.esp"
+  - name: LFox Bottle That Water.esp
+    tag:
+      - Names
+      - Scripts
+  - name: Moddable Unique Weps.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Moddable Unique Weps.esm"
+  - name: More Realistic Aiming.esp
+    msg:
+      - type: say
+        content: "Requires: NVSE"
+  - name: NoDegredation.esp
+    msg:
+      - type: say
+        content: Old, update to NoDegradation.esp.
+  - name: NVDLC04 Allegiance.esp
+    msg:
+      - type: say
+        content: Choose only one of NVDLC04 Allegiance.esp and NVDLC04 Allegiance w Duster.esp, not both
+  - name: NVDLC04 Allegiance w Duster.esp
+    msg:
+      - type: say
+        content: Choose only one of NVDLC04 Allegiance.esp and NVDLC04 Allegiance w Duster.esp, not both
+  - name: BIS - Project Nevada - Rebalance.esp
+    tag:
+      - Names
+  - name: Permanent_Weapon_Shells_Heavy.esp
+    msg:
+      - type: say
+        content: Choose only one of Permanent_Weapon_Shells esps, not both
+  - name: Permanent_Weapon_Shells_Light.esp
+    msg:
+      - type: say
+        content: Choose only one of Permanent_Weapon_Shells esps, not both
+  - name: Permanent_Weapon_Shells_Medium.esp
+    msg:
+      - type: say
+        content: Choose only one of Permanent_Weapon_Shells esps, not both
+  - name: Permanent_Weapon_Shells_Very_Heavy.esp
+    msg:
+      - type: say
+        content: Choose only one of Permanent_Weapon_Shells esps, not both
+  - name: Permanent_Weapon_Shells_Very_Light.esp
+    msg:
+      - type: say
+        content: Choose only one of Permanent_Weapon_Shells esps, not both
+  - name: RespawnerImprovedEx.esp
+    msg:
+      - type: say
+        content: "Requires: Respawn Timer (Any Version)"
+  - name: Quick Trade.esp
+    msg:
+      - type: say
+        content: "Requires: The Mod Configuration Menu"
+  - name: Reactive People - Ultimatum.esp
+    msg:
+      - type: say
+        content: "Requires: NVSE"
+  - name: Realistic Weight.esp
+    tag:
+      - NoMerge
+      - Stats
+  - name: Realistic Weight Overhaul.esp
+    tag:
+      - NoMerge
+      - Stats
+  - name: RealisticWeaponRecoil.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RealisticWeaponRecoilDM.esp"
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: RealisticWeaponRecoilDM.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RealisticWeaponRecoil.esp"
+  - name: Real Time Entry Skills.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Recharge Low.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Recharge High.esp"
+      - type: say
+        content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
+  - name: Recharge High.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Recharge Low.esp"
+      - type: say
+        content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
+  - name: RRDynamicXPonly.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Runner.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: SpecialEveryFiveLevels.esp
+    msg:
+      - type: say
+        content: Choose only one of SpecialEveryThreeLevels.esp and SpecialEveryTwoLevels.esp, not both
+  - name: SpecialEveryThreeLevels.esp
+    msg:
+      - type: say
+        content: Choose only one of SpecialEveryFiveLevels.esp and SpecialEveryTwoLevels.esp, not both
+  - name: SpecialEveryTwoLevels.esp
+    msg:
+      - type: say
+        content: Choose only one of SpecialEveryFiveLevels.esp and SpecialEveryThreeLevels.esp, not both
+  - name: SubtitlesHotkeyNV.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: UltimateRecoil.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: "Incompatible with: RealisticWeaponRecoil.esp and RealisticWeaponRecoilDM.esp as they do the same thing."
+  - name: UltimateRecoilPN.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+      - type: say
+        content: For use with Project Nevada - Core.esm
+      - type: say
+        content: "Incompatible with: UltimateRecoil.esp"
+  - name: VarmintRifle22LR.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WMX-VarmintRifle22LR.esp"
+  - name: Weight_Balance.esp
+    tag:
+      - Stats
+  - name: Weight_Balance_v07.esp
+    tag:
+      - Stats
+  - name: Weight_Balance_v10.esp
+    tag:
+      - Stats
+  - name: Weight_Rebalance_v10.esp.
+    tag:
+      - Stats
+  - name: BIS - Weight_Balance_v10.esp
+    tag:
+      - Names
+  - name: WeaponModsExpanded.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RH_IRONSIGHTS_NV.esm, Weapon Mod Expansion.esm, Weapon Mod Expansion.esp"
+    tag:
+      - Delev
+      - Invent
+      - WeaponMods
+  - name: WMXUE.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RH_IRONSIGHTS_NV.esm, Weapon Mod Expansion.esm, Weapon Mod Expansion.esp, WeaponModsExpanded.esp"
+    tag:
+      - Delev
+      - Invent
+      - WeaponMods
+  - name: WMX - Sorted.esp
+    msg:
+      - type: say
+        content: Merged into the main mod; No longer required.
+  - name: WMXArenovalisRiotShottieCompat.esp
+    msg:
+      - type: say
+        content: Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.
+  - name: WMXMilleniaThatGunRetexCompat.esp
+    msg:
+      - type: say
+        content: Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.
+  - name: WMXTemporaryPatch.esp
+    msg:
+      - type: say
+        content: Outdated. Please update to Version 1.7 of WMX.
+  - name: Improved Sound FX - WMX - Weapon Sharing Fix.esp
+    tag:
+      - Sound
+  - name: WMX-AWOP Patch.esp
+    tag:
+      - WeaponMods
+  - name: WMX-AWOP-Overhaul.esp
+    tag:
+      - WeaponMods
+  - name: Frequency - WMX Patch.esp
+    tag:
+      - Graphics
+  - name: WMX-ShotgunCommando.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WMX-Arwen_NV_Realism.esp"
+  - name: WMX-Arwen_NV_Realism.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WMX-ShotgunCommando.esp"
+  - name: Project Nevada - WMX.esp
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+  - name: WMXUE-PN.esp
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+  - name: Frequency - PN+WMX Patch.esp
+    tag:
+      - Graphics
+  - name: ironsightsnozoom-wmx.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ironsightsnozoom.esp"
+  - name: Real Weapon Names - WMX.esp
+    tag:
+      - Names
+  - name: WMX-VarmintRifle22LR.esp
+    msg:
+      - type: say
+        content: "Incompatible with: VarmintRifle22LR.esp"
+  - name: WMX-ModernWeapons.esp
+    tag:
+      - Invent
+  - name: ACS-WMXModernWeapons.esp
+    tag:
+      - Invent
+  - name: WMX-DeadMoney.esp
+    tag:
+      - Invent
+  - name: Real Weapon Names - WMX - Dead Money.esp
+    tag:
+      - Names
+  - name: WMX-HonestHearts.esp
+    tag:
+      - Invent
+  - name: WMX-OldWorldBlues.esp
+    tag:
+      - Invent
+  - name: WMX-LonesomeRoad.esp
+    tag:
+      - Invent
+  - name: WMX-GunRunnersArsenal.esp
+    tag:
+      - Invent
+      - WeaponMods
+  - name: Improved Sound FX - WMX - Merged Major DLCs.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Improved Sound FX - DM.esp, Improved Sound FX - HH.esp, Improved Sound FX - HH Sharing Fix.esp, Improved Sound FX - OWB Sharing Fix.esp, Improved Sound FX - LR Sharing Fix.esp, Improved Sound FX - Merged Major DLCs.esp"
+    tag:
+      - Sound
+  - name: Improved Sound FX - WMX - GRA Sharing Fix.esp
+    tag:
+      - Sound
+  - name: WMX-ArenovalisTextures.esp
+    tag:
+      - Graphics
+      - NoMerge
+  - name: ScientistPackWMX.esp
+    msg:
+      - type: say
+        content: Choose only one of ScientistPack.esp and ScientistPackWMX.esp, not both
+  - name: RH_IronSights_NV_Vanilla.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WeaponModsExpanded.esp"
+    tag:
+      - Graphics
+  - name: Weapon Mod Expansion.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WeaponModsExpanded.esp"
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - 00 Commando.esp
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - Arwen Core.esp
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - RH Ironsights.esp
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: WME - FOOK.esp
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Sound
+      - Stats
+  - name: WME Replacer - FOOK.esp
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - that gun 223.esp
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - that gun 44 mag.esp
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: WME - that gun 556.esp
+    msg:
+      - type: say
+        content: Old
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: BIS - Weapon Mod Expansion.esp
+    tag:
+      - Names
+  - name: Project Nevada - WME.esp
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+  - name: BIS - WME - Dead Money.esp
+    tag:
+      - Names
+  - name: WME - FOOK - Dead Money.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: BIS - WME - Honest Hearts.esp
+    tag:
+      - Names
+  - name: WME - DLCs.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WME - Dead Money.esp, WME - Honest Hearts.esp, WME - Old World Blues.esp, WME - DLCs Arenovalis.esp"
+  - name: WME - DLCs Arenovalis.esp
+    msg:
+      - type: say
+        content: "Incompatible with: WME - Dead Money.esp, WME - Honest Hearts.esp, WME - Old World Blues.esp, WME - DLCs.esp"
+  - name: BIS - WME - Dead Money Arenovalis Retex.esp
+    tag:
+      - Names
+  - name: BIS - WME - Honest Hearts Arenovalis Retex.esp
+    tag:
+      - Names
+  - name: EVE FNV.esp
+    tag:
+      - Graphics
+      - Sound
+  - name: EVE FNV - ALL DLC.esp
+    tag:
+      - Graphics
+      - Sound
+  - name: Improved Sound FX - EVE.esp
+    tag:
+      - Sound
+  - name: WMX-EVE.esp
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: Mail Order Catalogs.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Mail Order Catalogs WMX PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO WMX.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO WMX PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs WMX DLC.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs WMX DLC PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO WMX DLC.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs XFO WMX DLC PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: Mail Order Catalogs WME.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+  - name: Mail Order Catalogs WME PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod.
+  - name: Mail Order Catalogs XFO WME.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+  - name: Mail Order Catalogs XFO WME PopUp.esp
+    msg:
+      - type: say
+        content: Select only ONE .esp when installing this mod. Does not require XFO.
+  - name: GRA Overhaul.esp
+    msg:
+      - type: say
+        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+    tag:
+      - Names
+      - Stats
+  - name: GRA Overhaul - EVE.esp
+    msg:
+      - type: say
+        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+    tag:
+      - Names
+      - Stats
+  - name: GRA Overhaul - WMX or WME.esp
+    msg:
+      - type: say
+        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+    tag:
+      - Names
+      - Stats
+  - name: NV Game Stabilizer.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NV GameStabilizerA.esp"
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA.esp
+    msg:
+      - type: say
+        content: "Incompatible with: NV Game Stabilizer.esp"
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA1.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA2.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA4.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA5.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA5F.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA6.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA7.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA7b.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA8.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updatng.
+    tag:
+      - NoMerge
+  - name: NV GameStabilizerA9.esp
+    tag:
+      - NoMerge
+  - name: SimpleStreetLights.esp
+    msg:
+      - type: say
+        content: "Incompatible with: SimpleStreetLights (Extra Lights).esp"
+  - name: SimpleStreetLights (Extra Lights).esp
+    msg:
+      - type: say
+        content: "Incompatible with: SimpleStreetLights.esp"
+  - name: Vurt's Trees & Grass.esp
+    msg:
+      - type: say
+        content: This is an outdated version. Consider updating to the latest.
+  - name: Vurt's WFO.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Vurt's Trees & Grass.esp"
+  - name: Vurt's WFO [Lite].esp
+    msg:
+      - type: say
+        content: "Incompatible with: Vurt's WFO.esp"
+  - name: DN More Lights.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ELECTRO-CITY - CompletedWorkorder.esp / .esm ; Has the same purpose."
+  - name: LUMENARIUM - Working Sunglasses ONLY.esp
+    tag:
+      - Names
+  - name: ELECTRO-CITY - CompletedWorkorders.esp
+    msg:
+      - type: say
+        content: Outdated; Latest Versions use .esm instead of .esp
+    tag:
+      - Names
+  - name: ELECTRO-CITY - Highways and Byways.esp
+    msg:
+      - type: say
+        content: Outdated; Latest Versions use .esm instead of .esp
+  - name: BIS - ELECTRO-CITY Extended Cateye.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+  - name: ELECTRO-CITY - IncreasedWastelandSpawnCOMPATIBILITYPatch.esp
+    msg:
+      - type: say
+        content: This patch will work with the latest version of Electro-City but it won't be updated any further.
+  - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp"
+  - name: BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - ELECTRO-CITY RegularCATEYEvalue.esp"
+  - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp"
+  - name: BIS - ELECTRO-CITY RegularCATEYEvalue.esp
+    msg:
+      - type: say
+        content: "Incompatible with: BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp"
+  - name: ACF Brighter Days and Darker Nights v5 - Medium
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes image space and image space modifiers."
+  - name: ACF Brighter Days and Darker Nights v5 - Dark
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes image space and image space modifiers."
+  - name: Emperical Weather.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+  - name: Fellout.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+  - name: friendofnightforfellout.esp
+    msg:
+      - type: say
+        content: Recommended for use with Fellout.esp
+  - name: night_and_day.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+  - name: URWLNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+  - name: Western Sky.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+  - name: LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, and LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp"
+      - type: say
+        content: Outdated and no longer to be used.
+  - name: LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
+      - type: say
+        content: Outdated and no longer to be used.
+  - name: Nevada Skies.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
+      - type: warn
+        content: "Contains dirty edits: Contains unnecessary landscape edits."
+    tag:
+      - C.Climate
+      - C.Light
+  - name: Nevada Skies - URWLified.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLHH.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
+      - type: say
+        content: Outdated. Please update via the Nevada Skies download page.
+    tag:
+      - C.Climate
+      - C.Light
+  - name: Nevada Skies - URWLHH.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
+      - type: say
+        content: Outdated. Please update via the Nevada Skies download page.
+    tag:
+      - C.Climate
+      - C.Light
+  - name: NSkies - URWLNV.esp
+    msg:
+      - type: say
+        content: Outdated. Please update via the Nevada Skies download page.
+  - name: NSkies URWLifiedOWB.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: NSkies URWLifiedHH.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: NSkies URWLifiedDM.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: Project Westland vision.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: Project Westland vision-ZionHH.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: F3NVProjectRealityMkIv3.esp
+    msg:
+      - type: say
+        content: Old, update to latest version 4.2+.
+    tag:
+      - C.Climate
+      - C.Light
+  - name: F3NVProjectRealityMkIv4.2.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: ProjectRealityMkIv5HDR.esp
+    tag:
+      - C.Climate
+      - C.Light
+  - name: ELECTRO-CITY - Darker Nights.esp
+    msg:
+      - type: say
+        content: No longer supported by the mod. Can still be used.
+  - name: Interior Lighting Overhaul-Realistic.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+    tag:
+      - C.Light
+  - name: Interior Lighting Overhaul-Realistic Interiors-Full.esp
+    tag:
+      - C.Light
+  - name: Interior Lighting Overhaul-Realistic Interiors-Combined.esp
+    tag:
+      - C.Light
+  - name: Interior Lighting Overhaul - Ultimate Edition.esp
+    tag:
+      - C.Light
+  - name: Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp
+    tag:
+      - C.Light
+  - name: Interior Lighting Overhaul.esp
+    msg:
+      - type: say
+        content: Outdated Version. Consider Updating.
+    tag:
+      - C.Light
+  - name: ILO - Fallout New Vegas.esp
+    tag:
+      - C.Light
+  - name: ILO - Fallout New Vegas - No Lucky38.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ILO - Fallout New Vegas.esp"
+    tag:
+      - C.Light
+  - name: ILO - GS Shack.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Original Lucky38 Suite.esp
+    tag:
+      - C.Light
+  - name: ILO - Dead Money.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Dead Money.esp
+    tag:
+      - C.Light
+  - name: ILO - Honest Hearts.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Honest Hearts.esp
+    tag:
+      - C.Light
+  - name: ILO - Old World Blues.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Old World Blues.esp
+    tag:
+      - C.Light
+  - name: ILO - Lonesome Road.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Lonesome Road.esp
+    tag:
+      - C.Light
+  - name: ILO-RI-Rust Town.esp
+    tag:
+      - C.Light
+  - name: ILO - NVInteriors Project.esp
+    tag:
+      - C.Light
+  - name: ILO - NVInteriors Project - AWOP.esp
+    tag:
+      - C.Light
+  - name: ILO - Project Reality Patch.esp
+    tag:
+      - C.Climate
+  - name: Interior Lighting Overhaul-Darker.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: ILO - A World of Pain.esp
+    tag:
+      - C.Light
+  - name: DYNAVISION - Dynamic Lens Effect.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Field Depth.esp"
+      - type: say
+        content: Outdated. Consider updating.
+  - name: DYNAVISION 2 - Dynamic Lens Effect.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DYNAVISION - Dynamic Lens Effect.esp"
+      - type: say
+        content: "Incompatible with: Field Depth.esp"
+  - name: Field Depth.esp
+    msg:
+      - type: say
+        content: "Incompatible with: DYNAVISION - Dynamic Lens Effect.esp"
+  - name: RadiationEffects-greenNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RadiationEffects-whiteNV.esp"
+  - name: RadiationEffects-whiteNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: RadiationEffects-greenNV.esp"
+  - name: SneakNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: Sneak - less saturated version NV.esp"
+  - name: Sneak - less saturated version NV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: SneakNV.esp"
+  - name: ELECTRO-CITY - Emittance.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ELECTRO-CITY - Imaginator.esp"
+      - type: say
+        content: Outdated. Consider updating.
+  - name: ELECTRO-CITY - Imaginator.esp
+    msg:
+      - type: say
+        content: "Incompatible with: ELECTRO-CITY - Emittance.esp"
+  - name: CustomLighting-I DoF Blur.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: CustomLighting-IE DoF Blur.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: CustomLighting-IE DOF Clear.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: CustomLighting-IE Clear.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: CustomLighting-IE DoF.esp
+    msg:
+      - type: say
+        content: Outdated.
+  - name: UnderwaterFX.esp
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: BetterGamePerformanceV1.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+      - type: say
+        content: Loaded last so that deleted references stay deleted.
+  - name: BetterGamePerformanceV2.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+      - type: say
+        content: Loaded last so that deleted references stay deleted.
+  - name: BetterGamePerformanceV3.esp
+    msg:
+      - type: say
+        content: Outdated. Consider Updating.
+      - type: say
+        content: Loaded last so that deleted references stay deleted.
+  - name: BetterGamePerformanceV4.esp
+    msg:
+      - type: say
+        content: Loaded last so that deleted references stay deleted.
+  - name: Clean Up New Vegas.esp
+    msg:
+      - type: say
+        content: Loaded last so that deleted references stay deleted.
+  - name: BIS - Project Nevada - Rebalance.esp
+    tag:
+      - Names
+  - name: nVamp - Tales from the Burning Sands.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - A World of Pain.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Classic Fallout Weapons.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - New Vegas Bounties.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Caesars Legion Overhaul.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - More Perks.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Increased Wasteland Spawns.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Effects and Graphics.esp
+    msg:
+      - type: say
+        content: OPTIONAL FOR GRAPHICAL OVERHAUL
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Superior Firepower.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Combat Enhancement.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Game Fixes.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - Core.esp
+    msg:
+      - type: error
+        content: nVamp - Core.esm is missing.
+  - name: nVamp - VVV - Bosses.esp
+    msg:
+      - type: say
+        content: Optional component of nVamp.
+  - name: nVamp - VVV - Glowy Creatures.esp
+    msg:
+      - type: say
+        content: Optional component of nVamp.
+  - name: nVamp - Effects nVamped.esp
+    msg:
+      - type: say
+        content: Optional for nVamp's graphics overhaul.
+  - name: nVamp - Performance nVamped.esp
+    msg:
+      - type: say
+        content: Optional to increase game performance for those with older computers.
+  - name: nVamp - HalfSpeed.esp
+    msg:
+      - type: say
+        content: Use either nVamp – HalfSpeed.esp or nVamp - VanillaSpeed.esp, not both.
+  - name: nVamp - VanillaSpeed.esp
+    msg:
+      - type: say
+        content: Use either nVamp – HalfSpeed.esp or nVamp - VanillaSpeed.esp, not both.
+  - name: nVamp - EasierAI.esp
+    msg:
+      - type: say
+        content: Use either nVamp - EasierAI.esp or nVamp - HarderAI.esp, not both.
+  - name: nVamp - HarderAI.esp
+    msg:
+      - type: say
+        content: Use either nVamp - EasierAI.esp or nVamp - HarderAI.esp, not both.
+  - name: nVamp - VVV - Low Spawns.esp
+    msg:
+      - type: say
+        content: Use either nVamp - VVV - Low Spawns.esp or nVamp - VVV - Med Spawns.esp, not both.
+  - name: nVamp - VVV - Med Spawns.esp
+    msg:
+      - type: say
+        content: Use either nVamp - VVV - Low Spawns.esp or nVamp - VVV - Med Spawns.esp, not both.
+  - name: nVamp - Hardcore nVamped.esp
+    msg:
+      - type: say
+        content: Optional for a more difficult experience.
+  - name: nVamp - Hardcore Really nVamped.esp
+    msg:
+      - type: say
+        content: Optional for a more difficult experience.
+  - name: nVamp - Vaernus's Voracious Vermin.esp
+    msg:
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: nVamp - More Hardcore.esp
+    msg:
+      - type: say
+        content: OPTIONAL FOR MORE HARDCORE EXPERIENCE
+      - type: say
+        content: Old, consider upgrading to nVamp version 0.15
+  - name: DK Caucasians.esp
+    msg:
+      - type: say
+        content: "Requires: \"http://newvegas.nexusmods.com/mods/41548 Lings compatibility patch\""
+        condition: file("Lings.esm") and checksum("DK Caucasians.esp",B67B57E2)
+  - name: EwwGhoulyBody.esp
+    tag:
+      - Body-F
+  - name: tkEyelashesFNV.esp
+    msg:
+      - type: say
+        content: "Incompatible with: conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
+  - name: tkEyelashesFNV_FemalesOnly.esp
+    msg:
+      - type: say
+        content: "Incompatible with: conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
