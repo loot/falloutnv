@@ -2,6 +2,8 @@ common:
   - &NVSE
     name: "..\nvse_loader.exe"
     display: "http://nvse.silverlock.org/ NVSE"
+  - &dirty
+    util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
 
 globals:
   - type: say
@@ -16,27 +18,27 @@ plugins:
     tag:
       - Deflst
     dirty:
-      - crc: 0xd70f165b
-        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+      - <<: *dirty
+        crc: 0xd70f165b
         udr: 51
   - name: HonestHearts.esm
     dirty:
-      - crc: 0x2352b189
-        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+      - <<: *dirty
+        crc: 0x2352b189
         udr: 10
   - name: OldWorldBlues.esm
     dirty:
-      - crc: 0x7f8f8225
-        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+      - <<: *dirty
+        crc: 0x7f8f8225
   - name: LonesomeRoad.esm
     dirty:
-      - crc: 0x30073d50
-        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+      - <<: *dirty
+        crc: 0x30073d50
         udr: 6
   - name: GunRunnersArsenal.esm
     dirty:
-      - crc: 0xaac938d
-        util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+      - <<: *dirty
+        crc: 0xaac938d
   - name: TaleOfTwoWastelands.esm
     msg:
       - type: warn
@@ -3181,7 +3183,7 @@ plugins:
       - type: say
         content: "Incompatible with: Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
       - type: warn
-        content: "Contains dirty edits: Contains unnecessary landscape edits."
+        content: "Contains unnecessary landscape edits."
     tag:
       - C.Climate
       - C.Light
