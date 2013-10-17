@@ -1002,15 +1002,13 @@ plugins:
     tag:
       - Eyes
   - name: NiceCass.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NiceCass - C.esp"
+    inc:
+      - NiceCass - C.esp
     tag:
       - NpcFaces
   - name: NiceCass - C.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NiceCass.esp"
+    inc:
+      - NiceCass.esp
     tag:
       - NpcFaces
   - name: NPC Project - Aero Office Park.esp
@@ -1056,17 +1054,15 @@ plugins:
     tag:
       - C.Owner
   - name: KillableKids_E.esp
-    msg:
-      - type: say
-        content: "Incompatible with: KillableKids_NE.esp"
+    inc:
+      - KillableKids_NE.esp
   - name: KillableKids_NE.esp
-    msg:
-      - type: say
-        content: "Incompatible with: KillableKids_E.esp"
+    inc:
+      - KillableKids_E.esp
   - name: monsterranch.esp
+    inc:
+      - MoMod.esm
     msg:
-      - type: say
-        content: "Incompatible with: MoMod.esm"
       - type: say
         content: Outdated. Consider Updating.
     tag:
@@ -1107,41 +1103,38 @@ plugins:
       - Delev
       - Relev
   - name: NPCsUseAmmo.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NPCsUseAmmo-More Ammo.esp"
+    inc:
+      - NPCsUseAmmo-More Ammo.esp
   - name: NPCsUseAmmo-More Ammo.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NPCsUseAmmo.esp"
+    inc:
+      - NPCsUseAmmo.esp
   - name: populatedcasino.esp
-    msg:
-      - type: say
-        content: "Incompatible with: populatedcasino-medium.esp and populatedcasino-light.esp"
+    inc:
+      - populatedcasino-medium.esp
+      - populatedcasino-light.esp
   - name: populatedcasino-medium.esp
-    msg:
-      - type: say
-        content: "Incompatible with: populatedcasino.esp and populatedcasino-light.esp"
+    inc:
+      - populatedcasino.esp
+      - populatedcasino-light.esp
   - name: populatedcasino-light.esp
-    msg:
-      - type: say
-        content: "Incompatible with: populatedcasino.esp and populatedcasino-medium.esp"
+    inc:
+      - populatedcasino.esp
+      - populatedcasino-medium.esp
   - name: Project13 - Populated Wasteland.esp
     tag:
       - Actors.AIPackages
       - Delev
       - Relev
   - name: VendorGameTimeRestock.esp
+    inc:
+      - VendorGameTimeRestockNoNVSE.esp
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
+        content: "Requires: \"http://nvse.silverlock.org New Vegas Script Extender\""
         condition: not file("..\nvse_loader.exe")
-      - type: say
-        content: "Incompatible with: VendorGameTimeRestockNoNVSE.esp"
   - name: VendorGameTimeRestockNoNVSE.esp
-    msg:
-      - type: say
-        content: "Incompatible with: VendorGameTimeRestock.esp"
+    inc:
+      - VendorGameTimeRestock.esp
   - name: VendorGameTimeRestockNoDefaultRestock.esp
     msg:
       - type: say
