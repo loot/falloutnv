@@ -1130,10 +1130,7 @@ plugins:
   - name: VendorGameTimeRestock.esp
     inc:
       - VendorGameTimeRestockNoNVSE.esp
-    msg:
-      - type: say
-        content: "Requires: \"http://nvse.silverlock.org New Vegas Script Extender\""
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: VendorGameTimeRestockNoNVSE.esp
     inc:
       - VendorGameTimeRestock.esp
