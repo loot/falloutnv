@@ -1,16 +1,19 @@
 common:
+  - &dirty
+    util: "http://newvegas.nexusmods.com/mods/34703 FNVEdit"
   - &NVSE
     name: "..\nvse_loader.exe"
     display: "http://nvse.silverlock.org/ NVSE"
-  - &dirty
-    util: "\"http://newvegas.nexusmods.com/mods/34703 FNVEdit\""
+  - &MCM
+    name: "NVSE\Plugins\MCM.dll"
+    display: "http://newvegas.nexusmods.com/mods/42507 MCM"
 
 globals:
   - type: say
     content: "\"http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/ Latest BOSS thread\""
   - type: warn
     content: Need check for Tale of Two Wastelands load order
-    condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
+    condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
 
 plugins:
 # ESMs
@@ -43,7 +46,7 @@ plugins:
     msg:
       - type: warn
         content: Need check for Tale of Two Wastelands load order
-        condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
+        condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
   - name: Community Bugfix Compilation Patch.esm
     msg:
       - type: say
@@ -59,7 +62,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
     msg:
       - type: say
-        content: "Incompatible with: Old, update to NVCE."
+        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
     tag:
       - Body-F
       - Body-M
@@ -73,7 +76,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
     msg:
       - type: say
-        content: Old, update to NVCE.
+        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
     tag:
       - Body-F
       - Body-M
@@ -87,7 +90,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes.esm
     msg:
       - type: say
-        content: Old, update to NVCE.
+        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
     tag:
       - Body-F
       - Body-M
@@ -99,6 +102,7 @@ plugins:
       - Voice-F
       - Voice-M
   - name: NVCE Main.esm
+    url: http://newvegas.nexusmods.com/mods/39325
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -113,93 +117,65 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: OFT_Merge_All.esm
+    inc:
+      - OFT_Merge_Base.esm
+      - OFT_Merge_HonestHearts.esm
+      - OFT_Merge_HonestHearts.esp
+      - OFT_HonestHearts_Interiors.esp
+      - OFT_Merge_OldWorldBlues.esm
+      - OFT_OldWorldBlues.esp
+      - OFT_IWR_OldWorldBlues.esp
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_IWR_Base.esp
+      - OFT_Coordinate_Finder.esp
     msg:
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-      - type: say
-        content: "Incompatible with: All other OFT plugins are merged with it."
   - name: OFT_Merge_Base.esm
+    inc:
+      - OFT_Merge_All.esm
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_IWR_Base.esp
+      - OFT_Coordinate_Finder.esp
     msg:
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esm"
-      - type: say
-        content: "Incompatible with: OFT_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base_Interiors.esp"
-      - type: say
-        content: "Incompatible with: OFT_IWR_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Coordinate_Finder.esp"
   - name: OFT_Merge_HonestHearts.esm
+    inc:
+      - OFT_Merge_All.esm
+      - OFT_Merge_HonestHearts.esp
+      - OFT_HonestHearts_Interiors.esp
     msg:
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esm"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts.esp"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
   - name: OFT_Merge_OldWorldBlues.esm
+    inc:
+      - OFT_Merge_All.esm
+      - OFT_OldWorldBlues.esp
+      - OFT_IWR_OldWorldBlues.esp
     msg:
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esm"
-      - type: say
-        content: "Incompatible with: OFT_OldWorldBlues.esp"
-      - type: say
-        content: "Incompatible with: OFT_IWR_OldWorldBlues.esp"
   - name: AmmoSpreadEffectFixer.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Companion Core.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
-        content: Loaded early in the event Companion .esm mods require this.
+    req: [ *NVSE ]
   - name: IWR.esm
-    msg:
-      - type: say
-        content: Loaded early to let other mods override boundaries if needed.
-      - type: say
-        content: Does the same thing as OWNB - Open World.esm; Use one or the other.
-      - type: say
-        content: "Incompatible with: These resources are now in OFT_IWR_Base.esp"
+    inc:
+      - "OWNB - Open World.esm"
+      - OFT_IWR_Base.esp
   - name: IWS-Core.esm
-    msg:
-      - type: say
-        content: Loaded early to let other mods override spawn points if needed.
     tag:
       - Delev
-  - name: NosCo Companion System.esm
-    msg:
-      - type: say
-        content: Loaded early in the event Companion .esm mods require this.
   - name: OWNB - Open World.esm
-    msg:
-      - type: say
-        content: Loaded early to let other mods override boundaries if needed.
-      - type: say
-        content: Does the same thing as IWR.esm; Use one or the other.
+    inc:
+      - IWR.esm
   - name: RBX.esm
-    msg:
-      - type: say
-        content: Needs to be before any mod using a reloading bench including a lot of house mods.
-  - name: RRCompanionVault.esm
-    msg:
-      - type: say
-        content: Loaded early in the event Companion .esm mods require this.
+# Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: AccuRifles.esm
-    msg:
-      - type: say
-        content: "Requires: NVSE"
+    req: [ *NVSE ]
   - name: Caliber.esm
     tag:
       - Invent
@@ -208,18 +184,18 @@ plugins:
     tag:
       - Names
   - name: CINEMATECH.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender and The Mod Configuration Menu for Version 1.5+"
+    req:
+      - *NVSE
+      - *MCM
   - name: Eve.esm
     msg:
       - type: say
-        content: Recommended that you upgrade to the official EVE FNV mod.
-        condition: checksum("Eve.esm",A4084FA6)
+        content: it is recommended that you upgrade to the official EVE FNV mod.
+        condition: checksum("Eve.esm", A4084FA6)
   - name: EZ_CompanionNVSE_Killable_Normal.esm
     msg:
       - type: say
-        content: Old
+        content: This file is old
   - name: Fiends, With Style.esm
     tag:
       - Delev
@@ -234,17 +210,15 @@ plugins:
       - Sound
       - Stats
   - name: LDFemalePowerArmorPack.esm
-    msg:
-      - type: say
-        content: "Incompatible with: LDFemalePowerArmorPack.esp"
+    inc:
+      - LDFemalePowerArmorPack.esp
   - name: LW Companion.esm
     msg:
       - type: say
         content: The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.
   - name: Moddable Unique Weps.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Moddable Unique Weps.esp"
+    inc:
+      - Moddable Unique Weps.esp
     tag:
       - WeaponMods
   - name: AWorldOfPain(Preview).esm
@@ -256,87 +230,63 @@ plugins:
       - type: say
         content: Outdated. Consider using the latest version along with the low loot patches instead.
   - name: MoMod.esm
-    msg:
-      - type: say
-        content: "Incompatible with: monsterrach.esp"
+    inc:
+      - monsterrach.esp
     tag:
       - Relev
   - name: New Vegas Error Corrections Complete - NO DLC.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
-        condition: file("Mission Mojave - Ultmate Edition.esp")
+    inc:
+      - Mission Mojave - Ultimate Edition.esp
   - name: New Vegas Error Corrections BugFixes - NO DLC.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
-        condition: file("Mission Mojave - Ultmate Edition.esp")
+    inc:
+      - Mission Mojave - Ultimate Edition.esp
   - name: New Vegas Error Corrections BugFixes - DLC + GRA.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
-        condition: file("Mission Mojave - Ultmate Edition.esp")
+    inc:
+      - Mission Mojave - Ultimate Edition.esp
   - name: New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Mission Mojave - Ultimate Edition.esp"
-        condition: file("Mission Mojave - Ultmate Edition.esp")
+    inc:
+      - Mission Mojave - Ultimate Edition.esp
   - name: NSkies - Vanilla Edition.esm
-    msg:
-      - type: say
-        content: Choose only one of NSkies - Vanilla Edition.esm and NSkies URWLified.esm, not both
+    inc:
+      - NSkies URWLified.esm
     tag:
       - C.Climate
       - C.Light
   - name: NSkies URWLified.esm
-    msg:
-      - type: say
-        content: Choose only one of NSkies - Vanilla Edition.esm and NSkies URWLified.esm, not both
+    inc:
+      - NSkies - Vanilla Edition.esm
     tag:
       - C.Climate
       - C.Light
   - name: NVInteriors_WastelandEditon.esm
-    msg:
-      - type: say
-        content: Choose only one of NVInteriors_WastelandEditon.esm and NVInteriors_WastelandEditonAWOP.esm, not both
+    inc:
+      - NVInteriors_WastelandEditonAWOP.esm
   - name: NVInteriors_WastelandEditonAWOP.esm
-    msg:
-      - type: say
-        content: Choose only one of NVInteriors_WastelandEditon.esm and NVInteriors_WastelandEditonAWOP.esm, not both
+    inc:
+      - NVInteriors_WastelandEditon.esm
   - name: NVInteriors_ComboEdition.esm
-    msg:
-      - type: say
-        content: Merge of NVInteriors_WastelandEdition, NVInteriorsUrbanEdition, and NVInteriors_Tweeks
-      - type: say
-        content: "Incompatible with: NVInteriors_ComboEdition_AWOP.esm"
+    inc:
+      - NVInteriors_WastelandEdition.esm
+      - NVInteriors_WastelandEditonAWOP.esm
+      - NVInteriors_ComboEdition_AWOP.esm
   - name: NVInteriors_ComboEdition_AWOP.esm
-    msg:
-      - type: say
-        content: Merge of NVInteriors_WastelandEdition, NVInteriorsUrbanEdition, and NVInteriors_Tweeks
-      - type: say
-        content: "Incompatible with: NVInteriors_ComboEdition.esm"
+    inc:
+      - NVInteriors_WastelandEdition.esm
+      - NVInteriors_WastelandEditonAWOP.esm
+      - NVInteriors_ComboEdition.esm
   - name: Interior Lighting Overhaul - Core.esm
     tag:
       - C.Light
   - name: Project Nevada - Core.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Project Nevada - Equipment.esm
     tag:
       - Delev
       - Invent
   - name: SelectFire.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Selective Fire.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: SunnyCompanion.esm
     msg:
       - type: say
@@ -345,125 +295,23 @@ plugins:
     tag:
       - Names
   - name: WME - DLCs.esm
-    msg:
-      - type: say
-        content: "Incompatible with: WME - Dead Money.esm, WME - Honest Hearts.esm, WME - Old World Blues.esm"
+    inc:
+      - WME - Dead Money.esm
+      - WME - Honest Hearts.esm
+      - WME - Old World Blues.esm
   - name: Clean-Deluxe FNV.esm
-    msg:
-      - type: say
-        content: "Incompatible with: Performance of the Gods.esp"
+    inc:
+      - Performance of the Gods.esp
   - name: aHUD.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: iHUD.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: oHUD.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
-        content: "Incompatible with: aHUD.esm, iHUD.esm, Primary Needs HUD.esm"
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: NVCE Main.esm
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: NVCE Main (Faces Only).esm
-    tag:
-      - Actors.ACBS
-      - Deactivate
-      - Filter
-      - NPC.Race
-      - NpcFaces
-  - name: IWS-Core.esm
-    tag:
-      - Delev
-  - name: EZ_CompanionNVSE_Killable_Normal.esm
-    msg:
-      - type: say
-        content: Old
-  - name: Project Nevada - Core.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-  - name: iHUD.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-  - name: CINEMATECH.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-  - name: Caliber.esm
-    tag:
-      - Invent
-      - Names
-  - name: Weapon Mod Expansion.esm
-    tag:
-      - Names
-  - name: FOOK - New Vegas.esm
-    tag:
-      - Deflst
-      - Delev
-      - Graphics
-      - Names
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
+    inc:
+      - aHUD.esm
+      - iHUD.esm
+      - Primary Needs HUD.esm
+    req: [ *NVSE ]
   - name: nVamp - Effects nVamped.esm
     msg:
       - type: say
@@ -489,29 +337,10 @@ plugins:
   - name: HonestHearts-CaliberX.esm
     tag:
       - Names
-  - name: AWorldOfPain(Preview).esm
-    tag:
-      - Deflst
-      - Invent
-  - name: AWorldOfPain(LowLoot).esm
-    msg:
-      - type: say
-        content: Outdated. Consider using the latest version along with the low loot patches instead.
-  - name: MoMod.esm
-    msg:
-      - type: say
-        content: "Incompatible with: monsterrach.esp"
-    tag:
-      - Relev
   - name: Project Nevada - Equipment.esm
     tag:
       - Delev
       - Invent
-  - name: WME - DLCs.esm
-    msg:
-      - type: say
-        content: "Incompatible with: WME - Dead Money.esm, WME - Honest Hearts.esm, WME - Old World Blues.esm"
-        condition: ( ( file("WME - Dead Money.esm") ) or file("WME - Honest Hearts.esm") ) or file("WME - Old World Blues.esm")
   - name: New Vegas Redesigned.esm
     tag:
       - Body-F
