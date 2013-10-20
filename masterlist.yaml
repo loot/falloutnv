@@ -367,7 +367,7 @@ plugins:
   - name: NV GameStabilizerA8.esm
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
 # ENDGROUP: ESMs
@@ -395,9 +395,10 @@ plugins:
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
   - name: Mission Mojave - Ultimate Edition.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Community Bugfix Compilation Patch.esp"
+    inc:
+      - Compiled Patch.esp
+      - Compiled Patch All_DLCs.esp
+      - Community Bugfix Compilation Patch.esp
     tag:
       - Actors.AIPackages
       - NoMerge
@@ -405,9 +406,11 @@ plugins:
       - Sound
       - Stats
   - name: MMUE - Deutsch.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Community Bugfix Compilation Patch.esp, Mission Mojave - Ultimate Edition.esp"
+    inc:
+      - Compiled Patch.esp
+      - Compiled Patch All_DLCs.esp
+      - Community Bugfix Compilation Patch.esp
+      - Mission Mojave - Ultimate Edition.esp
     tag:
       - Actors.AIPackages
       - NoMerge
@@ -419,13 +422,14 @@ plugins:
       - type: say
         content: Plugin is old. Please update it.
   - name: MMUE-Tools-InvisibleWallRemover.esp
-    msg:
-      - type: say
-        content: "Incompatible with: IWR.esm"
+    inc:
+      - IWR.esm
   - name: Community Bugfix Compilation Patch.esp
+    inc:
+      - Compiled Patch.esp
+      - Compiled Patch All_DLCs.esp
+      - Mission Mojave - Ultimate Edition.esp
     msg:
-      - type: say
-        content: "Incompatible with: Compiled Patch.esp, Compiled Patch All_DLCs.esp, Mission Mojave - Ultimate Edition.esp"
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
     tag:
@@ -437,13 +441,13 @@ plugins:
       - Sound
       - Stats
   - name: CBC Dead Money Patch.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Compiled Patch - DeadMoney.esp"
+    inc:
+      - Compiled Patch - DeadMoney.esp
   - name: Compiled Patch.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Community Bugfix Compilation Patch.esp, Compiled Patch All_DLCs.esp, Mission Mojave - Ultimate Edition.esp"
+    inc:
+      - Community Bugfix Compilation Patch.esp
+      - Compiled Patch All_DLCs.esp
+      - Mission Mojave - Ultimate Edition.esp
     tag:
       - Actors.AIPackages
       - Delev
@@ -452,13 +456,15 @@ plugins:
       - Sound
       - Stats
   - name: Compiled Patch - DeadMoney.esp
-    msg:
-      - type: say
-        content: "Incompatible with: CBC Dead Money Patch.esm AND CBC Dead Money Patch.esp"
+    inc:
+      - CBC Dead Money Patch.esm
+      - CBC Dead Money Patch.esp
   - name: Compiled Patch All_DLCs.esp
+    inc:
+      - Compiled Patch.esp
+      - Community Bugfix Compilation Patch.esp
+      - Mission Mojave - Ultimate Edition.esp
     msg:
-      - type: say
-        content: "Incompatible with: Compiled Patch.esp, Community Bugfix Compilation Patch.esp, Mission Mojave - Ultimate Edition.esp"
       - type: say
         content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
   - name: CaravanCardFix.esp
@@ -533,111 +539,83 @@ plugins:
         content: Obsolete with latest patch
 # BEGINGROUP: Operation Fixed Terrain
   - name: OFT_Merge_All.esp
-    msg:
-      - type: say
-        content: "Incompatible with: All other OFT plugins are merged with it."
+      - OFT_Merge_Base.esp
+      - OFT_Merge_HonestHearts.esp
+      - OFT_Merge_OldWorldBlues.esp
+      - OFT_NoIWR_Merge_All.esp
+      - OFT_NoIWR_Merge_Base.esp
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_HonestHearts.esp
+      - OFT_HonestHearts_Interiors.esp
+      - OFT_OldWorldBlues.esp
+      - OFT_IWR_Base.esp
+      - OFT_IWR_OldWorldBlues.esp
+      - OFT_Coordinate_Finder.esp
   - name: OFT_Merge_Base.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base_Interiors.esp"
-      - type: say
-        content: "Incompatible with: OFT_IWR_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_IWR_Base.esp
+      - OFT_Coordinate_Finder.esp
   - name: OFT_Merge_HonestHearts.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts.esp"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_HonestHearts.esp
+      - OFT_HonestHearts_Interiors.esp
   - name: OFT_Merge_OldWorldBlues.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_OldWorldBlues.esp"
-      - type: say
-        content: "Incompatible with: OFT_IWR_OldWorldBlues.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_OldWorldBlues.esp
+      - OFT_IWR_OldWorldBlues.esp
   - name: OFT_NoIWR_Merge_All.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base_Interiors.esp"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts.esp"
-      - type: say
-        content: "Incompatible with: OFT_HonestHearts_Interiors.esp"
-      - type: say
-        content: "Incompatible with: OFT_OldWorldBlues.esp"
-      - type: say
-        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_HonestHearts.esp
+      - OFT_HonestHearts_Interiors.esp
+      - OFT_OldWorldBlues.esp
+      - OFT_Coordinate_Finder.esp
   - name: OFT_NoIWR_Merge_Base.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base.esp"
-      - type: say
-        content: "Incompatible with: OFT_Base_Interiors.esp"
-      - type: say
-        content: "Incompatible with: OFT_Coordinate_Finder.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Base.esp
+      - OFT_Base_Interiors.esp
+      - OFT_Coordinate_Finder.esp
   - name: OFT_Base.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_Base.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_Base.esp
   - name: OFT_Base_Interiors.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_Base.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_Base.esp
   - name: OFT_HonestHearts.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_HonestHearts.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_HonestHearts.esp
   - name: OFT_HonestHearts_Interiors.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_HonestHearts.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_HonestHearts.esp
   - name: OFT_OldWorldBlues.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_OldWorldBlues.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_OldWorldBlues.esp
   - name: OFT_IWR_Base.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_Base.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_Base.esp
   - name: OFT_IWR_OldWorldBlues.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_OldWorldBlues.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_OldWorldBlues.esp
   - name: OFT_Coordinate_Finder.esp
-    msg:
-      - type: say
-        content: "Incompatible with: OFT_Merge_All.esp"
-      - type: say
-        content: "Incompatible with: OFT_Merge_Base.esp"
+    inc:
+      - OFT_Merge_All.esp
+      - OFT_Merge_Base.esp
 # ENDGROUP: Operation Fixed Terrain
 # ENDGROUP: Unofficial Patches and Fixes
 # BEGINGROUP: Early Loading Mods
@@ -645,14 +623,17 @@ plugins:
     msg:
       - type: say
         content: Do not use with other Auto Savers as they serve the same purpose.
+        condition: "file(\"RX-Auto Incremental Save.esp\") or file(\"CASM.esp\")"
   - name: RX-Auto Incremental Save.esp
     msg:
       - type: say
         content: Do not use with CASM; has the same purpose.
+        condition: "file(\"CASM.esp\")"
   - name: CASM.esp
     msg:
       - type: say
         content: Do not use with Auto Incremental Save; has the same purpose.
+        condition: "file(\"RX-Auto Incremental Save.esp\")"
   - name: BIS - Brumbek's Inventory Sorting.esp
     tag:
       - Names
@@ -672,27 +653,23 @@ plugins:
     tag:
       - Names
   - name: BIS - Community Bugfix Comp ESM.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - Community Bugfix Comp ESP.esp"
+    inc:
+      - BIS - Community Bugfix Comp ESP.esp
     tag:
       - Names
   - name: BIS - CBC Dead Money Patch ESM.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - CBC Dead Money Patch ESP.esp"
+    inc:
+      - BIS - CBC Dead Money Patch ESP.esp
     tag:
       - Names
   - name: BIS - Community Bugfix Comp ESP.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - Community Bugfix Comp ESM.esp"
+    inc:
+      - BIS - Community Bugfix Comp ESM.esp
     tag:
       - Names
   - name: BIS - CBC Dead Money Patch ESP.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - CBC Dead Money Patch ESM.esp"
+    inc:
+      - BIS - CBC Dead Money Patch ESM.esp
     tag:
       - Names
   - name: BIS - Promo DLC Caravan Pack.esp
@@ -732,13 +709,11 @@ plugins:
     tag:
       - Names
   - name: Centered 3rd Person Camera.esp
-    msg:
-      - type: say
-        content: "Incompatible with: FOOK - New Vegas.esm"
+    inc:
+      - FOOK - New Vegas.esm
   - name: Centered 3rd Person Camera - Unraised.esp
-    msg:
-      - type: say
-        content: "Incompatible with: FOOK - New Vegas.esm"
+    inc:
+      - FOOK - New Vegas.esm
   - name: NVORganizedItems.esp
     tag:
       - Names
@@ -1002,21 +977,18 @@ plugins:
       - type: say
         content: Outdated. Consider Updating.
   - name: Novac Hotel Suite Upgrade.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp"
+    inc:
+      - NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp
   - name: NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Novac Hotel Suite Upgrade.esp"
+    inc:
+      - Novac Hotel Suite Upgrade.esp
   - name: NVInteriors_WastelandEditon.esp
     msg:
       - type: say
         content: Old, update to NVInteriors_WastelandEditon.esm
   - name: return_deadmoney.esp
-    msg:
-      - type: say
-        content: Same Purpose as SierraMadreEXIT.esp; use one or the other.
+    inc:
+      - SierraMadreEXIT.esp
   - name: Schoolhouse Base.esp
     msg:
       - type: say
@@ -1026,9 +998,8 @@ plugins:
       - type: say
         content: Outdated; Consider Updating.
   - name: SierraMadreEXIT.esp
-    msg:
-      - type: say
-        content: Same purpose as return_deadmoney.esp; use one or the other.
+    inc:
+      - return_deadmoney.esp
   - name: SierraMadrev2.0.esp
     msg:
       - type: say
@@ -1042,20 +1013,16 @@ plugins:
       - type: say
         content: Outdated as of Version 2.9
   - name: UHNV-Brighter Lighting.esp
-    msg:
-      - type: say
-        content: "Incompatible with: UHNV-IncreasedLighting.esp"
+    inc:
+      - UHNV-IncreasedLighting.esp
   - name: UHNV-IncreasedLighting.esp
+    inc:
+      - UHNV-Brighter Lighting.esp
     msg:
-      - type: say
-        content: "Incompatible with: UHNV-Brighter Lighting.esp"
       - type: say
         content: Outdated; Consider Updating.
   - name: UWHNV-Core.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: YangtzeBunkerPlayerHome.esp
     msg:
       - type: say
@@ -1074,17 +1041,17 @@ plugins:
         content: Outdated; Consider Updating.
 # BEGINGROUP: New Vegas Restoration
   - name: HighlyPopulatedFreeside.esp
-    msg:
-      - type: say
-        content: "Incompatible with: MediumPopulatedFreeside.esp, LowPopulatedFreeside.esp"
+    inc:
+      - MediumPopulatedFreeside.esp
+      - LowPopulatedFreeside.esp
   - name: MediumPopulatedFreeside.esp
-    msg:
-      - type: say
-        content: "Incompatible with: HighlyPopulatedFreeside.esp, LowPopulatedFreeside.esp"
+    inc:
+      - HighlyPopulatedFreeside.esp
+      - LowPopulatedFreeside.esp
   - name: LowPopulatedFreeside.esp
-    msg:
-      - type: say
-        content: "Incompatible with: HighlyPopulatedFreeside.esp, MediumPopulatedFreeside.esp"
+    inc:
+      - HighlyPopulatedFreeside.esp
+      - MediumPopulatedFreeside.esp
   - name: NVR-Version_9.esp
     msg:
       - type: say
@@ -1239,15 +1206,13 @@ plugins:
     tag:
       - Invent
   - name: PMT - Slower Reloading.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Slower Reloading No Visible Perk.esp"
+    inc:
+      - PMT - Slower Reloading No Visible Perk.esp
     tag:
       - Stats
   - name: PMT - Slower Reloading No Visible Perk.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Slower Reloading.esp"
+    inc:
+      - PMT - Slower Reloading.esp
     tag:
       - Stats
   - name: PMT - Reduced Ammo and Chems.esp
@@ -1271,21 +1236,17 @@ plugins:
     tag:
       - Stats
   - name: PMT - Faint Heartbeat.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Silent Heartbeat.esp"
+    inc:
+      - PMT - Silent Heartbeat.esp
   - name: PMT - Silent Heartbeat.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Faint Heartbeat.esp"
+    inc:
+      - PMT - Faint Heartbeat.esp
   - name: PMT - Total Challenge Remover.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Reduced Challenge Notifications.esp"
+    inc:
+      - PMT - Reduced Challenge Notifications.esp
   - name: PMT - Reduced Challenge Notifications.esp
-    msg:
-      - type: say
-        content: "Incompatible with: PMT - Total Challenge Remover.esp"
+    inc:
+      - PMT - Total Challenge Remover.esp
 # ENDGROUP: Puce Moose Tweak and Balance Center
 # BEGINGROUP: Reload
   - name: Reload.esp
@@ -1349,10 +1310,11 @@ plugins:
       - type: say
         content: Old
   - name: Arwen_NV_Realism_Core.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender 1.4.2+"
-        condition: ( version("..\nvse_loader.exe","0.1.4.2",<) ) or not file("..\nvse_loader.exe")
+        content: "Requires updating New Vegas Script Extender to version 1.4.2+"
+        condition: "version(\"..\\nvse_loader.exe\",\"0.1.4.2\",<) and file(\"..\\nvse_loader.exe\")"
     tag:
       - Stats
   - name: hardercore_combat.esp
@@ -1373,33 +1335,37 @@ plugins:
     tag:
       - Names
   - name: Project Nevada - Dead Money.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Project Nevada - Dead Money + Honest Heart Patch.esp and Project Nevada - Dead Money SF + Honest Hearts Patch.esp"
+    inc:
+      - Project Nevada - Dead Money + Honest Heart Patch.esp
+      - Project Nevada - Dead Money SF + Honest Hearts Patch.esp
   - name: Project Nevada - Honest Hearts.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Project Nevada - Dead Money + Honest Heart Patch.esp and Project Nevada - Dead Money SF + Honest Hearts Patch.esp"
+    inc:
+      - Project Nevada - Dead Money + Honest Heart Patch.esp
+      - Project Nevada - Dead Money SF + Honest Hearts Patch.esp
   - name: Project Nevada - Dead Money + Honest Heart Patch.esp
+    inc:
+      - Project Nevada - Dead Money.esp
+      - Project Nevada - Honest Hearts.esp
     msg:
-      - type: say
-        content: "Incompatible with: Project Nevada - Dead Money.esp and Project Nevada - Honest Hearts.esp"
       - type: say
         content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
   - name: Project Nevada - Dead Money SF + Honest Hearts Patch.esp
+    inc:
+      - Project Nevada - Dead Money.esp
+      - Project Nevada - Honest Hearts.esp
     msg:
-      - type: say
-        content: "Incompatible with: Project Nevada - Dead Money.esp and Project Nevada - Honest Hearts.esp"
       - type: say
         content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
   - name: Project Nevada - Old World Blues.esp
     msg:
       - type: say
         content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
+        condition: "file(\"Project Nevada - Old World Blues (No Cyberware).esp\")"
   - name: Project Nevada - Old World Blues (No Cyberware).esp
     msg:
       - type: say
         content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
+        condition: "file(\"Project Nevada - Old World Blues.esp\")"
   - name: OWB Big Empty Overhaul.esp
     tag:
       - Invent
