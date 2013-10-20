@@ -1390,9 +1390,13 @@ plugins:
     tag:
       - Sound
   - name: Improved Sound FX - Merged Major DLCs.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Improved Sound FX - DM.esp, Improved Sound FX - HH.esp, Improved Sound FX - HH Sharing Fix.esp, Improved Sound FX - OWB Sharing Fix.esp, Improved Sound FX - LR Sharing Fix.esp, Improved Sound FX - WMX - Merged Major DLCs.esp"
+    inc:
+      - Improved Sound FX - DM.esp
+      - Improved Sound FX - HH.esp
+      - Improved Sound FX - HH Sharing Fix.esp
+      - Improved Sound FX - OWB Sharing Fix.esp
+      - Improved Sound FX - LR Sharing Fix.esp
+      - Improved Sound FX - WMX - Merged Major DLCs.esp
     tag:
       - Sound
   - name: Improved Sound FX - Project Nevada.esp
@@ -1404,47 +1408,45 @@ plugins:
 # ENDGROUP: Sounds
 # BEGINGROUP: Quests
   - name: awilderwasteland.esp
-    msg:
-      - type: say
-        content: "Incompatible with: awilderwastelandnobenny.esp"
+    inc:
+      - awilderwastelandnobenny.esp
   - name: awilderwastelandnobenny.esp
-    msg:
-      - type: say
-        content: "Incompatible with: awilderwasteland.esp"
+    inc:
+      - awilderwasteland.esp
   - name: betsybrahmin.esp
-    msg:
-      - type: say
-        content: "Incompatible with: betsybrahminFSO.esp"
+    inc:
+      - betsybrahminFSO.esp
   - name: betsybrahminFSO.esp
-    msg:
-      - type: say
-        content: "Incompatible with: betsybrahmin.esp"
+    inc:
+      - betsybrahmin.esp
   - name: wsex_workgirl.esp
-    msg:
-      - type: say
-        content: "Incompatible with: wsex_workgirl_tryout.esp"
+    inc:
+      - wsex_workgirl_tryout.esp
   - name: wsex_workgirl_tryout.esp
-    msg:
-      - type: say
-        content: "Incompatible with: wsex_workgirl.esp"
+    inc:
+      - wsex_workgirl.esp
 # ENDGROUP: Quests
 # BEGINGROUP: Perks
   - name: BrainPerkBugfix.esp
     msg:
       - type: say
         content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
+        condition: "file(\"BrainPerkBugfix_Cardiac.esp\")"
   - name: BrainPerkBugfix_Cardiac.esp
     msg:
       - type: say
         content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
+        condition: "file(\"BrainPerkBugfix.esp\")"
   - name: FourEyesDynamic.esp
     msg:
       - type: say
         content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
+        condition: "file(\"FourEyesBetter.esp\")"
   - name: FourEyesBetter.esp
     msg:
       - type: say
         content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
+        condition: "file(\"FourEyesDynamic.esp\")"
   - name: ZZZZ--APB_By_Nokturnihs.esp
     msg:
       - type: say
@@ -1452,39 +1454,36 @@ plugins:
 # ENDGROUP: Perks
 # BEGINGROUP: Early Misc
   - name: AutoLoot.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Detect Traps - Dead Money.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Detect Traps - DLC.esp"
-  - name: "IFNOT VAR(DM) REQ: DeadMoney.esm and HonestHearts.esm"
-    msg:
-      - type: say
-        content: "Incompatible with: Detect Traps - Dead Money.esp"
+    req:
+      - DeadMoney.esm
+    inc:
+      - Detect Traps - DLC.esp
+  - name: Detect Traps - DLC.esp
+    req:
+      - DeadMoney.esm
+      - HonestHearts.esm
+    inc:
+      - Detect Traps - Dead Money.esp
   - name: IWS-AS-HighSpawns.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
         content: Only use one of the spawn .esp's
+        condition: "file(\"IWS-AS-MedSpawns.esp\") or file(\"IWS-AS-LowSpawns.esp\")"
   - name: IWS-AS-MedSpawns.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
         content: Only use one of the spawn .esp's
+        condition: "file(\"IWS-AS-HighSpawns.esp\") or file(\"IWS-AS-LowSpawns.esp\")"
   - name: IWS-AS-LowSpawns.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
         content: Only use one of the spawn .esp's
+        condition: "file(\"IWS-AS-MedSpawns.esp\") or file(\"IWS-AS-HighSpawns.esp\")"
   - name: IWS-MoreSpawns.esp
     msg:
       - type: say
@@ -1494,69 +1493,69 @@ plugins:
       - type: say
         content: Outdated. Consider Updating.
   - name: Less Weight.esp
-    msg:
-      - type: say
-        content: "Incompatible with: More Weight.esp"
+    inc:
+      - More Weight.esp
   - name: Isul-MagExchange.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Mail Order Catalogs PopUp.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: Select only ONE .esp when installing this mod.
-      - type: say
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
+        - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
+        condition: "file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO PopUp.esp
+    req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs DLC.esp
+    req: [ *NVSE ]
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod.
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs DLC PopUp.esp
+    req: [ *NVSE ]
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod.
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO DLC.esp
+    req: [ *NVSE ]
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\") or file(\"Mail Order Catalogs PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO DLC PopUp.esp
+    req: [ *NVSE ]
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
+        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: More Weight.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Less Weight.esp"
+    inc:
+      - Less Weight.esp
   - name: BIS - Sprint Mod.esp
     tag:
       - Names
@@ -1566,10 +1565,7 @@ plugins:
     tag:
       - Invent
   - name: ArmourRepairKits.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Better Ammo Crafting.esp
     tag:
       - Names
@@ -1577,13 +1573,11 @@ plugins:
     tag:
       - Names
   - name: Bountiful Harvest.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Dynamic Herbalism.esp"
+    inc:
+      - Dynamic Herbalism.esp
   - name: Dynamic Herbalism.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Bountiful Harvest.esp"
+    inc:
+      - Bountiful Harvest.esp
 # ENDGROUP: Crafting
 # BEGINGROUP: Weapons
   - name: 1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp
@@ -1604,25 +1598,24 @@ plugins:
     tag:
       - Graphics
   - name: AG Supplementary Uniques.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AG Supplementary Uniques WME.esp"
+    inc:
+      - AG Supplementary Uniques WME.esp
   - name: AG Supplementary Uniques-Dead Money.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AG Supplementary Uniques-Dead Money WME.esp"
+    inc:
+      - AG Supplementary Uniques-Dead Money WME.esp
   - name: AG Supplementary Uniques-Honest Hearts.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AG Supplementary Uniques-Honest Hearts WME.esp"
+    inc:
+      - AG Supplementary Uniques-Honest Hearts WME.esp
   - name: AG Supplementary Uniques-Lonesome Road.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AG Supplementary Uniques-Lonesome Road WME.esp"
+    inc:
+      - AG Supplementary Uniques-Lonesome Road WME.esp
   - name: AG Supplementary Uniques-AllInOne.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AG Supplementary Uniques.esp, AG Supplementary Uniques-Dead Money.esp, AG Supplementary Uniques-Honest Hearts.esp, AG Supplementary Uniques-Old World Blues.esp, AG Supplementary Uniques-Lonesome Road.esp"
+    inc:
+      - AG Supplementary Uniques.esp
+      - AG Supplementary Uniques-Dead Money.esp
+      - AG Supplementary Uniques-Honest Hearts.esp
+      - AG Supplementary Uniques-Old World Blues.esp
+      - AG Supplementary Uniques-Lonesome Road.esp
   - name: Ahzteks Weapon Replacements.esp
     msg:
       - type: say
@@ -1632,17 +1625,15 @@ plugins:
       - type: say
         content: Outdated. Consider Updating.
   - name: Ahzteks Weapon Overhaul.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ahzteks Weapon Overhaul NO xCALIBER.esp"
+    inc:
+      - Ahzteks Weapon Overhaul NO xCALIBER.esp
     tag:
       - Deflst
       - Delev
       - Invent
   - name: Ahzteks Weapon Overhaul NO xCALIBER.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ahzteks Weapon Overhaul.esp"
+    inc:
+      - Ahzteks Weapon Overhaul.esp
   - name: Ahzteks Pistol and SMG Replacements.esp
     tag:
       - Graphics
@@ -1651,10 +1642,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: A Load of Balls.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Assault Carbine mods.esp
     tag:
       - WeaponMods
@@ -1666,40 +1654,48 @@ plugins:
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
+        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Max.esp\")"
   - name: BIS - Kobu Better Binoculars Low.esp
     msg:
       - type: say
         content: For use with Better Binoculars Low.esp
+        condition: "not file(\"Better Binoculars Low.esp\")"
     tag:
       - Names
   - name: Better Binoculars Medium.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
+        condition: "file(\"Better Binoculars Low.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Max.esp\")"
   - name: BIS - Kobu Better Binoculars Medium.esp
     msg:
       - type: say
         content: For use with Better Binoculars Medium.esp
+        condition: "not file(\"Better Binoculars Medium.esp\")"
     tag:
       - Names
   - name: Better Binoculars High.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
+        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars Low.esp\") or file(\"Better Binoculars Max.esp\")"
   - name: BIS - Kobu Better Binoculars High.esp
     msg:
       - type: say
         content: For use with Better Binoculars High.esp
+        condition: "not file(\"Better Binoculars High.esp\")"
     tag:
       - Names
   - name: Better Binoculars Max.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
+        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Low.esp\")"
   - name: BIS - Kobu Better Binoculars Max.esp
     msg:
       - type: say
         content: For use with Better Binoculars Max.esp
+        condition: "not file(\"Better Binoculars Max.esp\")"
     tag:
       - Names
   - name: better that gun 223.esp
@@ -1727,21 +1723,17 @@ plugins:
     tag:
       - Graphics
   - name: DWM4A1.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DWM4A1V18Personal.esp"
+    inc:
+      - DWM4A1V18Personal.esp
   - name: DWM4A1V18Personal.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DWM4A1.esp"
+    inc:
+      - DWM4A1.esp
   - name: DWUSP45.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DWUSP_V18.esp"
+    inc:
+      - DWUSP_V18.esp
   - name: DWUSP_V18.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DWUSP45.esp"
+    inc:
+      - DWUSP45.esp
   - name: EnergyBoost.esp
     tag:
       - Stats
@@ -1753,14 +1745,10 @@ plugins:
     tag:
       - Stats
   - name: ironsightsnozoom.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ironsightsnozoom-wmx.esp"
+    inc:
+      - ironsightsnozoom-wmx.esp
   - name: m110.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Moddable Anti-Materiel Rifle.esp
     tag:
       - WeaponMods
@@ -1768,9 +1756,8 @@ plugins:
     tag:
       - WeaponMods
   - name: Moddable Unique Weps.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Moddable Unique Weps.esm"
+    inc:
+      - Moddable Unique Weps.esm
     tag:
       - WeaponMods
   - name: OWB HQ Textures Fix.esp
@@ -1781,9 +1768,8 @@ plugins:
       - Sound
       - Stats
   - name: ScientistPack.esp
-    msg:
-      - type: say
-        content: Choose only one of ScientistPack.esp and ScientistPackWMX.esp, not both
+    inc:
+      - ScientistPackWMX.esp
   - name: Shotgun Commando.esp
     tag:
       - Stats
@@ -2587,9 +2573,8 @@ plugins:
       - Graphics
       - NoMerge
   - name: ScientistPackWMX.esp
-    msg:
-      - type: say
-        content: Choose only one of ScientistPack.esp and ScientistPackWMX.esp, not both
+    inc:
+      - ScientistPack.esp
 # ENDGROUP: Weapon Mods Expanded or WMX
 # BEGINGROUP: Weapon Mod Expansion or WME
   - name: RH_IronSights_NV_Vanilla.esp
