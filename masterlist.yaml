@@ -1982,16 +1982,14 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: NVR- Lore version.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NVR- Recommended.esp"
+    inc:
+      - NVR- Recommended.esp
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: NVR- Recommended.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NVR- Lore version.esp"
+    inc:
+      - NVR- Lore version.esp
     tag:
       - Actors.ACBS
       - NpcFaces
@@ -2005,96 +2003,88 @@ plugins:
 # ENDGROUP: Cosmetics
 # BEGINGROUP: Middle Misc
   - name: AWOPLowRobots.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AWOPVeryLowRobots.esp"
+    inc:
+      - AWOPVeryLowRobots.esp
   - name: AWOPVeryLowRobots.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AWOPLowRobots.esp"
+    inc:
+      - AWOPLowRobots.esp
   - name: AWOP-AhztekWeaponPatch.esp
     tag:
       - Invent
   - name: AWOPCaliberXAmmoPatch.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AWOPCaliberXAmmoPatchLOW.esp"
+    inc:
+      - AWOPCaliberXAmmoPatchLOW.esp
     tag:
       - Invent
   - name: AWOPCaliberXAmmoPatchLOW.esp
-    msg:
-      - type: say
-        content: "Incompatible with: AWOPCaliberXAmmoPatch.esp"
+    inc:
+      - AWOPCaliberXAmmoPatch.esp
     tag:
       - Invent
   - name: MMUE-CP-AWOP+NVInteriors.esp
-    msg:
-      - type: say
-        content: "Incompatible with: MMUE-CP-AWOP.esp"
+    inc:
+      - MMUE-CP-AWOP.esp
 # ENDGROUP: Middle Misc
 # BEGINGROUP: Companions
   - name: Companion Module Pack.esp
-    msg:
-      - type: say
-        content: Consists of a number of Companion-Related mods. Be aware when installing.
-      - type: say
-        content: You will have to remove any mods that you have that are included in the pack to avoid issues.
+    inc:
+      - Companion Sandbox Mode.esp
+      - UnlimitedCompanions.esp
+      - dressup.esp
+      - AllCompanionsEssential 2.0.esp
+      - AllCompanionsEssential 2.0 DLC1.esp
+      - AllCompanionsEssential 2.0 DLC2.esp
+      - AllCompanionsEssential 2.0b.esp
+      - Comp_Idles_NV.esp
+      - Companions Relax.esp
   - name: Companion Weapons - Special Ammo.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Companion Weapons - Special Ammo - Dead Money.esp"
+    inc:
+      - Companion Weapons - Special Ammo - Dead Money.esp
   - name: Companion Weapons - Special Ammo - Dead Money.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Companion Weapons - Special Ammo.esp"
+    inc:
+      - Companion Weapons - Special Ammo.esp
   - name: CompanionLevel30Cap.esp
+    inc:
+      - HigherCompanionLevelCap.esp
     msg:
-      - type: say
-        content: "Incompatible with: HigherCompanionLevelCap.esp"
       - type: say
         content: Outdated. Consider Updating.
     tag:
       - Actors.ACBS
   - name: HigherCompanionLevelCap.esp
-    msg:
-      - type: say
-        content: "Incompatible with: CompanionLevel30Cap.esp"
+    inc:
+      - CompanionLevel30Cap.esp
   - name: Correction - Passive 2 Option.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Correction - Passive.esp"
+    inc:
+      - Correction - Passive.esp
   - name: Correction - Passive.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Correction - Passive 2 Option.esp"
+    inc:
+      - Correction - Passive 2 Option.esp
   - name: Cass Passive Fix.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Cass Passive Fix 2 Option.esp"
+    inc:
+      - Cass Passive Fix 2 Option.esp
   - name: Cass Passive Fix 2 Option.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Cass Passive Fix.esp"
+    inc:
+      - Cass Passive Fix.esp
   - name: CCC - Save Cass.esp
     msg:
       - type: say
         content: For use with the Save Cass mod.
+        condition: "not file(\"SaveCass.esp\")"
   - name: EZ_VanillaFollowers.esp
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
   - name: LilyFawkes.esp
-    msg:
-      - type: say
-        content: "Incompatible with: LilyArmored.esp"
+    inc:
+      - LilyArmored.esp
   - name: LilyArmored.esp
-    msg:
-      - type: say
-        content: "Incompatible with: LilyFawkes.esp"
+    inc:
+      - LilyFawkes.esp
   - name: NVPhalanx.esp
     msg:
       - type: say
-        content: "Incompatible with: Incompatible with a majority of other companion mods. Be aware when installing."
+        content: "Incompatible with a majority of other companion mods. Be aware when installing."
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
@@ -2117,6 +2107,7 @@ plugins:
     msg:
       - type: say
         content: For use with GunSmith.esm and GunSmith Guns Upgrade.esp
+        condition: "not file(\"GunSmith.esm\") or not file(\"GunSmith Guns Upgrade.esp\")"
   - name: Real Weapon Names.esp
     tag:
       - Names
@@ -2133,16 +2124,15 @@ plugins:
     tag:
       - Names
   - name: MiscItemIconsNV.esp
-    msg:
-      - type: say
-        content: "Incompatible with: T3T_MiscItemIconsNV.esp"
+    inc:
+      - T3T_MiscItemIconsNV.esp
     tag:
       - Graphics
       - NoMerge
   - name: T3T_MiscItemIconsNV.esp
+    inc:
+      - MiscItemIconsNV.esp
     msg:
-      - type: say
-        content: "Incompatible with: MiscItemIconsNV.esp"
       - type: say
         content: Outdated. Consider updating.
     tag:
@@ -2198,42 +2188,29 @@ plugins:
 # ENDGROUP: Later Misc
 # BEGINGROUP: Game-Settings and Overrides
   - name: IntegratedFullDLC.esp
-    msg:
-      - type: say
-        content: "Requires: All four DLC's."
   - name: Max Level 50.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: "Incompatible with: Other mods that change the max level."
   - name: Max Level 60.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: "Incompatible with: Other mods that change the max level."
   - name: Max Level 75.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: "Incompatible with: Other mods that change the max level."
   - name: Max Level 100.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: "Incompatible with: Other mods that change the max level."
   - name: Max Level 255.esp
+    req: [ *NVSE ]
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: "Incompatible with: Other mods that change the max level."
   - name: CCC - weaker weapons.esp
@@ -2249,9 +2226,7 @@ plugins:
       - type: say
         content: Old, update to Delay DLC - DM + HH + OWB + LR.esp
   - name: Dynamic Quantity Prompt.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender Beta 2 Ver.4 and Newer."
+    req: [ *NVSE ]
   - name: BIS - Grenade Hotkey.esp
     tag:
       - Names
@@ -2265,97 +2240,103 @@ plugins:
     tag:
       - Names
   - name: Intelligence_And_Skill_Points_Hardcore.esp
-    msg:
-      - type: say
-        content: Choose only one 'Intelligence and Skill Points' ESP.
+    inc:
+      - Intelligence_And_Skill_Points_High.esp
+      - Intelligence_And_Skill_Points_Increased.esp
+      - Intelligence_And_Skill_Points_Normal.esp
+      - Intelligence_And_Skill_Points_Very_High.esp
   - name: Intelligence_And_Skill_Points_High.esp
-    msg:
-      - type: say
-        content: Choose only one 'Intelligence and Skill Points' ESP.
+    inc:
+      - Intelligence_And_Skill_Points_Hardcore.esp
+      - Intelligence_And_Skill_Points_Increased.esp
+      - Intelligence_And_Skill_Points_Normal.esp
+      - Intelligence_And_Skill_Points_Very_High.esp
   - name: Intelligence_And_Skill_Points_Increased.esp
-    msg:
-      - type: say
-        content: Choose only one 'Intelligence and Skill Points' ESP.
+    inc:
+      - Intelligence_And_Skill_Points_Hardcore.esp
+      - Intelligence_And_Skill_Points_High.esp
+      - Intelligence_And_Skill_Points_Normal.esp
+      - Intelligence_And_Skill_Points_Very_High.esp
   - name: Intelligence_And_Skill_Points_Normal.esp
-    msg:
-      - type: say
-        content: Choose only one 'Intelligence and Skill Points' ESP.
+    inc:
+      - Intelligence_And_Skill_Points_Hardcore.esp
+      - Intelligence_And_Skill_Points_High.esp
+      - Intelligence_And_Skill_Points_Increased.esp
+      - Intelligence_And_Skill_Points_Very_High.esp
   - name: Intelligence_And_Skill_Points_Very_High.esp
-    msg:
-      - type: say
-        content: Choose only one 'Intelligence and Skill Points' ESP.
+    inc:
+      - Intelligence_And_Skill_Points_Hardcore.esp
+      - Intelligence_And_Skill_Points_High.esp
+      - Intelligence_And_Skill_Points_Increased.esp
+      - Intelligence_And_Skill_Points_Normal.esp
   - name: Invisibility for No Reputation.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: lexx-no-dialog-tags-Deutsch.esp
-    msg:
-      - type: say
-        content: "Incompatible with: lexx-no-dialog-tags-English.esp"
+    inc:
+      - lexx-no-dialog-tags-English.esp
   - name: lexx-no-dialog-tags-English.esp
-    msg:
-      - type: say
-        content: "Incompatible with: lexx-no-dialog-tags-Deutsch.esp"
+    inc:
+      - lexx-no-dialog-tags-Deutsch.esp
   - name: LFox Bottle That Water.esp
     tag:
       - Names
       - Scripts
   - name: Moddable Unique Weps.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Moddable Unique Weps.esm"
+    inc:
+      - Moddable Unique Weps.esm
   - name: More Realistic Aiming.esp
-    msg:
-      - type: say
-        content: "Requires: NVSE"
+    req: [ *NVSE ]
   - name: NoDegredation.esp
     msg:
       - type: say
         content: Old, update to NoDegradation.esp.
   - name: NVDLC04 Allegiance.esp
-    msg:
-      - type: say
-        content: Choose only one of NVDLC04 Allegiance.esp and NVDLC04 Allegiance w Duster.esp, not both
+    inc:
+      - NVDLC04 Allegiance w Duster.esp
   - name: NVDLC04 Allegiance w Duster.esp
-    msg:
-      - type: say
-        content: Choose only one of NVDLC04 Allegiance.esp and NVDLC04 Allegiance w Duster.esp, not both
+    inc:
+      - NVDLC04 Allegiance.esp
   - name: BIS - Project Nevada - Rebalance.esp
     tag:
       - Names
   - name: Permanent_Weapon_Shells_Heavy.esp
-    msg:
-      - type: say
-        content: Choose only one of Permanent_Weapon_Shells esps, not both
+    inc:
+      - Permanent_Weapon_Shells_Light.esp
+      - Permanent_Weapon_Shells_Medium.esp
+      - Permanent_Weapon_Shells_Very_Heavy.esp
+      - Permanent_Weapon_Shells_Very_Light.esp
   - name: Permanent_Weapon_Shells_Light.esp
-    msg:
-      - type: say
-        content: Choose only one of Permanent_Weapon_Shells esps, not both
+    inc:
+      - Permanent_Weapon_Shells_Heavy.esp
+      - Permanent_Weapon_Shells_Medium.esp
+      - Permanent_Weapon_Shells_Very_Heavy.esp
+      - Permanent_Weapon_Shells_Very_Light.esp
   - name: Permanent_Weapon_Shells_Medium.esp
-    msg:
-      - type: say
-        content: Choose only one of Permanent_Weapon_Shells esps, not both
+    inc:
+      - Permanent_Weapon_Shells_Heavy.esp
+      - Permanent_Weapon_Shells_Light.esp
+      - Permanent_Weapon_Shells_Very_Heavy.esp
+      - Permanent_Weapon_Shells_Very_Light.esp
   - name: Permanent_Weapon_Shells_Very_Heavy.esp
-    msg:
-      - type: say
-        content: Choose only one of Permanent_Weapon_Shells esps, not both
+    inc:
+      - Permanent_Weapon_Shells_Heavy.esp
+      - Permanent_Weapon_Shells_Light.esp
+      - Permanent_Weapon_Shells_Medium.esp
+      - Permanent_Weapon_Shells_Very_Light.esp
   - name: Permanent_Weapon_Shells_Very_Light.esp
-    msg:
-      - type: say
-        content: Choose only one of Permanent_Weapon_Shells esps, not both
+    inc:
+      - Permanent_Weapon_Shells_Heavy.esp
+      - Permanent_Weapon_Shells_Light.esp
+      - Permanent_Weapon_Shells_Medium.esp
+      - Permanent_Weapon_Shells_Very_Heavy.esp
   - name: RespawnerImprovedEx.esp
     msg:
       - type: say
         content: "Requires: Respawn Timer (Any Version)"
   - name: Quick Trade.esp
-    msg:
-      - type: say
-        content: "Requires: The Mod Configuration Menu"
+    req: [ *MCM ]
   - name: Reactive People - Ultimatum.esp
-    msg:
-      - type: say
-        content: "Requires: NVSE"
+    req: [ *NVSE ]
   - name: Realistic Weight.esp
     tag:
       - NoMerge
@@ -2365,80 +2346,60 @@ plugins:
       - NoMerge
       - Stats
   - name: RealisticWeaponRecoil.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RealisticWeaponRecoilDM.esp"
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    inc:
+      - RealisticWeaponRecoilDM.esp
+    req: [ *NVSE ]
   - name: RealisticWeaponRecoilDM.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RealisticWeaponRecoil.esp"
+    inc:
+      - RealisticWeaponRecoil.esp
   - name: Real Time Entry Skills.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Recharge Low.esp
+    inc:
+      - Recharge High.esp
     msg:
-      - type: say
-        content: "Incompatible with: Recharge High.esp"
       - type: say
         content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
   - name: Recharge High.esp
+    inc:
+      - Recharge Low.esp
     msg:
-      - type: say
-        content: "Incompatible with: Recharge Low.esp"
       - type: say
         content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
   - name: RRDynamicXPonly.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Runner.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: SpecialEveryFiveLevels.esp
-    msg:
-      - type: say
-        content: Choose only one of SpecialEveryThreeLevels.esp and SpecialEveryTwoLevels.esp, not both
+    inc:
+      - SpecialEveryThreeLevels.esp
+      - SpecialEveryTwoLevels.esp
   - name: SpecialEveryThreeLevels.esp
-    msg:
-      - type: say
-        content: Choose only one of SpecialEveryFiveLevels.esp and SpecialEveryTwoLevels.esp, not both
+    inc:
+      - SpecialEveryThreeLevels.esp
+      - SpecialEveryTwoLevels.esp
   - name: SpecialEveryTwoLevels.esp
-    msg:
-      - type: say
-        content: Choose only one of SpecialEveryFiveLevels.esp and SpecialEveryThreeLevels.esp, not both
+    inc:
+      - SpecialEveryThreeLevels.esp
+      - SpecialEveryTwoLevels.esp
   - name: SubtitlesHotkeyNV.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: UltimateRecoil.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-      - type: say
-        content: "Incompatible with: RealisticWeaponRecoil.esp and RealisticWeaponRecoilDM.esp as they do the same thing."
+    req: [ *NVSE ]
+    inc:
+      - RealisticWeaponRecoil.esp
+      - RealisticWeaponRecoilDM.esp
   - name: UltimateRecoilPN.esp
+    req: [ *NVSE ]
+    inc:
+      - UltimateRecoil.esp
     msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
       - type: say
         content: For use with Project Nevada - Core.esm
-      - type: say
-        content: "Incompatible with: UltimateRecoil.esp"
+        condition: "not file(\"Project Nevada - Core.esm\")"
   - name: VarmintRifle22LR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WMX-VarmintRifle22LR.esp"
+    inc:
+      - WMX-VarmintRifle22LR.esp
   - name: Weight_Balance.esp
     tag:
       - Stats
@@ -2457,17 +2418,20 @@ plugins:
 # ENDGROUP: Game-Settings and Overrides
 # BEGINGROUP: Weapon Mods Expanded or WMX
   - name: WeaponModsExpanded.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RH_IRONSIGHTS_NV.esm, Weapon Mod Expansion.esm, Weapon Mod Expansion.esp"
+    inc:
+      - RH_IRONSIGHTS_NV.esm
+      - Weapon Mod Expansion.esm
+      - Weapon Mod Expansion.esp
     tag:
       - Delev
       - Invent
       - WeaponMods
   - name: WMXUE.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RH_IRONSIGHTS_NV.esm, Weapon Mod Expansion.esm, Weapon Mod Expansion.esp, WeaponModsExpanded.esp"
+    inc:
+      - RH_IRONSIGHTS_NV.esm
+      - Weapon Mod Expansion.esm
+      - Weapon Mod Expansion.esp
+      - WeaponModsExpanded.esp
     tag:
       - Delev
       - Invent
@@ -2501,13 +2465,11 @@ plugins:
     tag:
       - Graphics
   - name: WMX-ShotgunCommando.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WMX-Arwen_NV_Realism.esp"
+    inc:
+      - WMX-Arwen_NV_Realism.esp
   - name: WMX-Arwen_NV_Realism.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WMX-ShotgunCommando.esp"
+    inc:
+      - WMX-ShotgunCommando.esp
   - name: Project Nevada - WMX.esp
     tag:
       - Graphics
@@ -2524,16 +2486,14 @@ plugins:
     tag:
       - Graphics
   - name: ironsightsnozoom-wmx.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ironsightsnozoom.esp"
+    inc:
+      - ironsightsnozoom.esp
   - name: Real Weapon Names - WMX.esp
     tag:
       - Names
   - name: WMX-VarmintRifle22LR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: VarmintRifle22LR.esp"
+    inc:
+      - VarmintRifle22LR.esp
   - name: WMX-ModernWeapons.esp
     tag:
       - Invent
@@ -2560,9 +2520,13 @@ plugins:
       - Invent
       - WeaponMods
   - name: Improved Sound FX - WMX - Merged Major DLCs.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Improved Sound FX - DM.esp, Improved Sound FX - HH.esp, Improved Sound FX - HH Sharing Fix.esp, Improved Sound FX - OWB Sharing Fix.esp, Improved Sound FX - LR Sharing Fix.esp, Improved Sound FX - Merged Major DLCs.esp"
+    inc:
+      - Improved Sound FX - DM.esp
+      - Improved Sound FX - HH.esp
+      - Improved Sound FX - HH Sharing Fix.esp
+      - Improved Sound FX - OWB Sharing Fix.esp
+      - Improved Sound FX - LR Sharing Fix.esp
+      - Improved Sound FX - Merged Major DLCs.esp
     tag:
       - Sound
   - name: Improved Sound FX - WMX - GRA Sharing Fix.esp
@@ -2578,15 +2542,13 @@ plugins:
 # ENDGROUP: Weapon Mods Expanded or WMX
 # BEGINGROUP: Weapon Mod Expansion or WME
   - name: RH_IronSights_NV_Vanilla.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WeaponModsExpanded.esp"
+    inc:
+      - WeaponModsExpanded.esp
     tag:
       - Graphics
   - name: Weapon Mod Expansion.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WeaponModsExpanded.esp"
+    inc:
+      - WeaponModsExpanded.esp
     tag:
       - Graphics
       - Names
@@ -2659,13 +2621,17 @@ plugins:
     tag:
       - Names
   - name: WME - DLCs.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WME - Dead Money.esp, WME - Honest Hearts.esp, WME - Old World Blues.esp, WME - DLCs Arenovalis.esp"
+    inc:
+      - WME - Dead Money.esp
+      - WME - Honest Hearts.esp
+      - WME - Old World Blues.esp
+      - WME - DLCs Arenovalis.esp
   - name: WME - DLCs Arenovalis.esp
-    msg:
-      - type: say
-        content: "Incompatible with: WME - Dead Money.esp, WME - Honest Hearts.esp, WME - Old World Blues.esp, WME - DLCs.esp"
+    inc:
+      - WME - Dead Money.esp
+      - WME - Honest Hearts.esp
+      - WME - Old World Blues.esp
+      - WME - DLCs.esp
   - name: BIS - WME - Dead Money Arenovalis Retex.esp
     tag:
       - Names
@@ -2690,10 +2656,7 @@ plugins:
       - Graphics
       - WeaponMods
   - name: Mail Order Catalogs.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
   - name: Mail Order Catalogs WMX PopUp.esp
     msg:
       - type: say
