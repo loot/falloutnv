@@ -1784,7 +1784,8 @@ plugins:
 # BEGINGROUP: Armor and Clothes
   - name: Advanced Recon Tech - Fiendish Power Armor.esp
     inc:
-      - 'nVamp - Core.esm'
+      - name: 'nVamp - Core.esm'
+        display: 'nVamp - Advanced Mod Project'
   - name: Armored PA Gloves.esp
     tag:
       - Deflst
