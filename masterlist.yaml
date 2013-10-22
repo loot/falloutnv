@@ -1798,12 +1798,12 @@ plugins:
     msg:
       - type: say
         content: To be used with BlackWolf Backpack - Vendor Script Replenish.esp
-        condition: "file(\"BlackWolf Backpack - Vendor Script Replenish.esp\")"
+        condition: "not file(\"BlackWolf Backpack - Vendor Script Replenish.esp\")"
   - name: BlackWolf Backpack - Vendor Script Replenish.esp
     msg:
       - type: say
         content: To be used with BlackWolf Backpack.esp
-        condition: "file(\"BlackWolf Backpack.esp\")"
+        condition: "not file(\"BlackWolf Backpack.esp\")"
   - name: DragonskinNCRPersonnelWearingOutfits.esp
     tag:
       - Relev
