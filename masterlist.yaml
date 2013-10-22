@@ -1785,24 +1785,26 @@ plugins:
   - name: Advanced Recon Tech - Fiendish Power Armor.esp
     msg:
       - type: say
-        content: Merged into nVamp -Advanced Mod Project. Do not use both at the same time.
+        content: Merged into nVamp - Advanced Mod Project. Do not use both at the same time.
+        condition: "regex(\"nVamp.*\.esp\")"
   - name: Armored PA Gloves.esp
     tag:
       - Deflst
   - name: LDFemalePowerArmorPack.esp
-    msg:
-      - type: say
-        content: "Incompatible with: LDFemalePowerArmorPack.esm"
+    inc:
+      - LDFemalePowerArmorPack.esm
   - name: BlackWolf Backpack.esp
+    inc:
+      - QS_Blackwolf_NV_Backpackmod.esp
     msg:
-      - type: say
-        content: "Incompatible with: QS_Blackwolf_NV_Backpackmod.esp"
       - type: say
         content: To be used with BlackWolf Backpack - Vendor Script Replenish.esp
+        condition: "file(\"BlackWolf Backpack - Vendor Script Replenish.esp\")"
   - name: BlackWolf Backpack - Vendor Script Replenish.esp
     msg:
       - type: say
         content: To be used with BlackWolf Backpack.esp
+        condition: "file(\"BlackWolf Backpack.esp\")"
   - name: DragonskinNCRPersonnelWearingOutfits.esp
     tag:
       - Relev
@@ -1811,41 +1813,38 @@ plugins:
       - type: say
         content: Meshes based off of the Type 3 Female Body.
   - name: ERCA FACTLESS.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ERCA.esp"
+    inc:
+      - ERCA.esp
   - name: ERCAFACTLESS.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ERCA.esp"
+    inc:
+      - ERCA.esp
   - name: Fiendish Power Armor - Project Nevada.esp
     msg:
       - type: say
         content: Merged into nVamp - New Vegas Mod Project. Do not use together.
+        condition: "regex(\"nVamp.*\.esp\")"
   - name: FlashlightNVSE.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Project Nevada - FlashlightNVSE.esp"
+    inc:
+      - Project Nevada - FlashlightNVSE.esp
   - name: Project Nevada - FlashlightNVSE.esp
-    msg:
-      - type: say
-        content: "Incompatible with: FlashlightNVSE.esp"
+    inc:
+      - FlashlightNVSE.esp
   - name: ghostbodysuitcamo.esp
     msg:
       - type: say
         content: "Requires: Type 3 Body Replacer"
   - name: Ghost Variants.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ghost Variants Safe.esp and Ghost Variants Adjutant.esp"
+    inc:
+      - Ghost Variants Safe.esp
+      - Ghost Variants Adjutant.esp
   - name: Ghost Variants Adjutant.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ghost Variants.esp and Ghost Variants Safe.esp"
+    inc:
+      - Ghost Variants.esp
+      - Ghost Variants Safe.esp
   - name: Ghost Variants Safe.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ghost Variants.esp and Ghost Variants Adjutant.esp"
+    inc:
+      - Ghost Variants.esp
+      - Ghost Variants Adjutant.esp
   - name: Hereticus Faction Armors Fading.esp
     tag:
       - Names
@@ -1859,17 +1858,17 @@ plugins:
     tag:
       - Invent
   - name: JNinjasNinjasComeBack.esp
-    msg:
-      - type: say
-        content: "Incompatible with: JNinjasStealthFieldStops.esp and JNinjasStealthFieldStopsNinjasComeBack.esp"
+    inc:
+      - JNinjasStealthFieldStops.esp
+      - JNinjasStealthFieldStopsNinjasComeBack.esp
   - name: JNinjasStealthFieldStops.esp
-    msg:
-      - type: say
-        content: "Incompatible with: JNinjasNinjasComeBack.esp and JNinjasStealthFieldStopsNinjasComeBack.esp"
+    inc:
+      - JNinjasNinjasComeBack.esp
+      - JNinjasStealthFieldStopsNinjasComeBack.esp
   - name: JNinjasStealthFieldStopsNinjasComeBack.esp
-    msg:
-      - type: say
-        content: "Incompatible with: JNinjasNinjasComeBack.esp and JNinjasStealthFieldStops.esp"
+    inc:
+      - JNinjasNinjasComeBack.esp
+      - JNinjasStealthFieldStops.esp
   - name: KDS Wearable Backpacks.esp
     tag:
       - Invent
@@ -1878,13 +1877,11 @@ plugins:
       - type: say
         content: Due to a master issue, this requires ClassicPack.esm; Can be fixed manually using FNVEdit.
   - name: NCR Rearmament v1.5.esp
-    msg:
-      - type: say
-        content: "Incompatible with: NCR Rearmament v1.5 (Lore).esp"
+    inc:
+      - NCR Rearmament v1.5 (Lore).esp
   - name: NCR Rearmament v1.5 (Lore).esp
-    msg:
-      - type: say
-        content: "Incompatible with: NCR Rearmament v1.5.esp"
+    inc:
+      - NCR Rearmament v1.5.esp
   - name: Nidaoutfitv1.esp
     msg:
       - type: say
@@ -1893,9 +1890,8 @@ plugins:
     tag:
       - Deflst
   - name: QS_Blackwolf_NV_Backpackmod.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BlackWolf Backpack.esp"
+    inc:
+      - BlackWolf Backpack.esp
   - name: ReworkStuff.esp
     msg:
       - type: say
@@ -1908,13 +1904,11 @@ plugins:
     tag:
       - Invent
   - name: sexysleepwear.esp
-    msg:
-      - type: say
-        content: Choose only one of sexysleepwear.esp and sexysleepwearnr.esp, not both
+    inc:
+      - sexysleepwearnr.esp
   - name: sexysleepwearnr.esp
-    msg:
-      - type: say
-        content: Choose only one of sexysleepwear.esp and sexysleepwearnr.esp, not both
+    inc:
+      - sexysleepwear.esp
   - name: Type3 Leather Armors.esp
     msg:
       - type: say
@@ -1924,13 +1918,11 @@ plugins:
       - type: say
         content: "Requires: meshes and textures from New Vegas Type3 Leather Armors."
   - name: w44Satchels - Full.esp
-    msg:
-      - type: say
-        content: "Incompatible with: w44Satchels - Lite.esp"
+    inc:
+      - w44Satchels - Lite.esp
   - name: w44Satchels - Lite.esp
-    msg:
-      - type: say
-        content: "Incompatible with: w44Satchels - Full.esp"
+    inc:
+      - w44Satchels - Full.esp
 # ENDGROUP: Armor and Clothes
 # BEGINGROUP: Cosmetics
   - name: LingsPrettyThings.esp
