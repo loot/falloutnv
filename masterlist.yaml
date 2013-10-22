@@ -1783,10 +1783,8 @@ plugins:
 # ENDGROUP: Weapons
 # BEGINGROUP: Armor and Clothes
   - name: Advanced Recon Tech - Fiendish Power Armor.esp
-    msg:
-      - type: say
-        content: Merged into nVamp - Advanced Mod Project. Do not use both at the same time.
-        condition: "regex(\"nVamp.*\.esp\")"
+    inc:
+      - 'nVamp - Core.esm'
   - name: Armored PA Gloves.esp
     tag:
       - Deflst
