@@ -1502,15 +1502,13 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
-        - type: say
+      - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO.esp
     req: [ *NVSE ]
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
-        condition: "file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO PopUp.esp
@@ -1518,7 +1516,6 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs DLC.esp
@@ -1526,7 +1523,6 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs DLC PopUp.esp
@@ -1534,7 +1530,6 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO DLC.esp
@@ -1542,7 +1537,6 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC PopUp.esp\") or file(\"Mail Order Catalogs PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: Mail Order Catalogs XFO DLC PopUp.esp
@@ -1550,7 +1544,6 @@ plugins:
     msg:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
-        condition: "file(\"Mail Order Catalogs XFO.esp\") or file(\"Mail Order Catalogs XFO PopUp.esp\") or file(\"Mail Order Catalogs DLC.esp\") or file(\"Mail Order Catalogs DLC PopUp.esp\") or file(\"Mail Order Catalogs XFO DLC.esp\") or file(\"Mail Order Catalogs PopUp.esp\")"
       - type: say
         content: Outdated. Consider Updating.
   - name: More Weight.esp
@@ -2707,40 +2700,40 @@ plugins:
       - type: say
         content: Select only ONE .esp when installing this mod. Does not require XFO.
   - name: GRA Overhaul.esp
-    msg:
-      - type: say
-        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+    inc:
+      - GRA Overhaul - EVE.esp
+      - GRA Overhaul - WMX or WME.esp
     tag:
       - Names
       - Stats
   - name: GRA Overhaul - EVE.esp
-    msg:
-      - type: say
-        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+    inc:
+      - GRA Overhaul.esp
+      - GRA Overhaul - WMX or WME.esp
     tag:
       - Names
       - Stats
   - name: GRA Overhaul - WMX or WME.esp
     msg:
-      - type: say
-        content: Choose only one of GRA Overhaul.esp and GRA Overhaul - EVE.esp and GRA Overhaul - WMX or WME.esp, not both
+      - GRA Overhaul - EVE.esp
+      - GRA Overhaul.esp
     tag:
       - Names
       - Stats
 # ENDGROUP: Special Cases for WMX and/or WME support
 # BEGINGROUP: NV Game Stabilizer
   - name: NV Game Stabilizer.esp
+    inc:
+      - NV GameStabilizerA.esp
     msg:
-      - type: say
-        content: "Incompatible with: NV GameStabilizerA.esp"
       - type: say
         content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA.esp
+    inc:
+      - NV Game Stabilizer.esp
     msg:
-      - type: say
-        content: "Incompatible with: NV Game Stabilizer.esp"
       - type: say
         content: Outdated. Consider Updating.
     tag:
@@ -2760,43 +2753,43 @@ plugins:
   - name: NV GameStabilizerA4.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA5.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA5F.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA6.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA7.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA7b.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA8.esp
     msg:
       - type: say
-        content: Outdated. Consider Updatng.
+        content: Outdated. Consider Updating.
     tag:
       - NoMerge
   - name: NV GameStabilizerA9.esp
@@ -2805,29 +2798,25 @@ plugins:
 # ENDGROUP: NV Game Stabilizer
 # BEGINGROUP: Weather\Light\Water
   - name: SimpleStreetLights.esp
-    msg:
-      - type: say
-        content: "Incompatible with: SimpleStreetLights (Extra Lights).esp"
+    inc:
+      - SimpleStreetLights (Extra Lights).esp
   - name: SimpleStreetLights (Extra Lights).esp
-    msg:
-      - type: say
-        content: "Incompatible with: SimpleStreetLights.esp"
+    inc:
+      - SimpleStreetLights.esp
   - name: Vurt's Trees & Grass.esp
     msg:
       - type: say
         content: This is an outdated version. Consider updating to the latest.
   - name: Vurt's WFO.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Vurt's Trees & Grass.esp"
+    inc:
+      - Vurt's Trees & Grass.esp
   - name: Vurt's WFO [Lite].esp
-    msg:
-      - type: say
-        content: "Incompatible with: Vurt's WFO.esp"
+    inc:
+      - Vurt's WFO.esp
   - name: DN More Lights.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ELECTRO-CITY - CompletedWorkorder.esp / .esm ; Has the same purpose."
+    inc:
+      - ELECTRO-CITY - CompletedWorkorder.esp
+      - ELECTRO-CITY - CompletedWorkorder.esm
   - name: LUMENARIUM - Working Sunglasses ONLY.esp
     tag:
       - Names
@@ -2850,87 +2839,98 @@ plugins:
       - type: say
         content: This patch will work with the latest version of Electro-City but it won't be updated any further.
   - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp"
+    inc:
+      - ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp
   - name: BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - ELECTRO-CITY RegularCATEYEvalue.esp"
+    inc:
+      - BIS - ELECTRO-CITY RegularCATEYEvalue.esp
   - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp"
+    inc:
+      - ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp
   - name: BIS - ELECTRO-CITY RegularCATEYEvalue.esp
-    msg:
-      - type: say
-        content: "Incompatible with: BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp"
+    inc:
+      - BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp
   - name: ACF Brighter Days and Darker Nights v5 - Medium
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes image space and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes image space and image space modifiers."
   - name: ACF Brighter Days and Darker Nights v5 - Dark
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes image space and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes image space and image space modifiers."
   - name: Emperical Weather.esp
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
   - name: Fellout.esp
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
   - name: friendofnightforfellout.esp
     msg:
       - type: say
         content: Recommended for use with Fellout.esp
+        condition: "not file(\"Fellout.esp\")"
   - name: night_and_day.esp
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
   - name: URWLNV.esp
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
   - name: Western Sky.esp
     msg:
       - type: say
-        content: "Incompatible with: Will conflict with any other mod that changes weather, image space, and image space modifiers."
+        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
   - name: LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+    inc:
+      - Nevada Skies.esp
+      - Nevada Skies - URWLified.esp
+      - Nevada Skies - URWLHH.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
     msg:
-      - type: say
-        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, and LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp"
       - type: say
         content: Outdated and no longer to be used.
   - name: LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+    inc:
+      - Nevada Skies.esp, Nevada Skies - URWLified.esp
+      - Nevada Skies - URWLHH.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
     msg:
-      - type: say
-        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
       - type: say
         content: Outdated and no longer to be used.
   - name: Nevada Skies.esp
+    inc:
+      - Nevada Skies - URWLified.esp
+      - Nevada Skies - URWLHH.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
     msg:
-      - type: say
-        content: "Incompatible with: Nevada Skies - URWLified.esp, Nevada Skies - URWLHH.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
       - type: warn
         content: "Contains unnecessary landscape edits."
     tag:
       - C.Climate
       - C.Light
   - name: Nevada Skies - URWLified.esp
+    inc:
+      - Nevada Skies.esp
+      - Nevada Skies - URWLHH.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
     msg:
-      - type: say
-        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLHH.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
       - type: say
         content: Outdated. Please update via the Nevada Skies download page.
     tag:
       - C.Climate
       - C.Light
   - name: Nevada Skies - URWLHH.esp
+    inc:
+      - Nevada Skies.esp
+      - Nevada Skies - URWLified.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
     msg:
-      - type: say
-        content: "Incompatible with: Nevada Skies.esp, Nevada Skies - URWLified.esp, LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp, and LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp"
       - type: say
         content: Outdated. Please update via the Nevada Skies download page.
     tag:
@@ -3007,9 +3007,8 @@ plugins:
     tag:
       - C.Light
   - name: ILO - Fallout New Vegas - No Lucky38.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ILO - Fallout New Vegas.esp"
+    inc:
+      - ILO - Fallout New Vegas.esp
     tag:
       - C.Light
   - name: ILO - GS Shack.esp
@@ -3062,47 +3061,39 @@ plugins:
     tag:
       - C.Light
   - name: DYNAVISION - Dynamic Lens Effect.esp
+    inc:
+      - Field Depth.esp
     msg:
-      - type: say
-        content: "Incompatible with: Field Depth.esp"
       - type: say
         content: Outdated. Consider updating.
   - name: DYNAVISION 2 - Dynamic Lens Effect.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DYNAVISION - Dynamic Lens Effect.esp"
-      - type: say
-        content: "Incompatible with: Field Depth.esp"
+    inc:
+      - DYNAVISION - Dynamic Lens Effect.esp
+      - Field Depth.esp
   - name: Field Depth.esp
-    msg:
-      - type: say
-        content: "Incompatible with: DYNAVISION - Dynamic Lens Effect.esp"
+    inc:
+      - DYNAVISION - Dynamic Lens Effect.esp
   - name: RadiationEffects-greenNV.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RadiationEffects-whiteNV.esp"
+    inc:
+      - RadiationEffects-whiteNV.esp
   - name: RadiationEffects-whiteNV.esp
-    msg:
-      - type: say
-        content: "Incompatible with: RadiationEffects-greenNV.esp"
+    inc:
+      - RadiationEffects-greenNV.esp
   - name: SneakNV.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Sneak - less saturated version NV.esp"
+    inc:
+      - Sneak - less saturated version NV.esp
   - name: Sneak - less saturated version NV.esp
-    msg:
-      - type: say
-        content: "Incompatible with: SneakNV.esp"
+    inc:
+      - SneakNV.esp"
   - name: ELECTRO-CITY - Emittance.esp
+    inc:
+      - ELECTRO-CITY - Imaginator.esp
     msg:
-      - type: say
-        content: "Incompatible with: ELECTRO-CITY - Imaginator.esp"
       - type: say
         content: Outdated. Consider updating.
   - name: ELECTRO-CITY - Imaginator.esp
-    msg:
-      - type: say
-        content: "Incompatible with: ELECTRO-CITY - Emittance.esp"
+    inc:
+      - ELECTRO-CITY - Emittance.esp
   - name: CustomLighting-I DoF Blur.esp
     msg:
       - type: say
@@ -3126,10 +3117,7 @@ plugins:
   - name: UWFXGodrays.esp
     req: [ *NVSE ]
   - name: UnderwaterFX.esp
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
+    req: [ *NVSE ]
 # ENDGROUP: Weather\Light\Water
 # BEGINGROUP: Lastish
   - name: BetterGamePerformanceV1.esp
@@ -3213,6 +3201,7 @@ plugins:
     msg:
       - type: error
         content: nVamp - Core.esm is missing.
+        condition: "not file(\"nVamp - Core.esm\")"
   - name: nVamp - VVV - Bosses.esp
     msg:
       - type: say
@@ -3230,29 +3219,23 @@ plugins:
       - type: say
         content: Optional to increase game performance for those with older computers.
   - name: nVamp - HalfSpeed.esp
-    msg:
-      - type: say
-        content: Use either nVamp – HalfSpeed.esp or nVamp - VanillaSpeed.esp, not both.
+    inc:
+      - nVamp - VanillaSpeed.esp
   - name: nVamp - VanillaSpeed.esp
-    msg:
-      - type: say
-        content: Use either nVamp – HalfSpeed.esp or nVamp - VanillaSpeed.esp, not both.
+    inc:
+      - nVamp - HalfSpeed.esp
   - name: nVamp - EasierAI.esp
-    msg:
-      - type: say
-        content: Use either nVamp - EasierAI.esp or nVamp - HarderAI.esp, not both.
+    inc:
+      - nVamp - HarderAI.esp
   - name: nVamp - HarderAI.esp
-    msg:
-      - type: say
-        content: Use either nVamp - EasierAI.esp or nVamp - HarderAI.esp, not both.
+    inc:
+      - nVamp - EasierAI.esp
   - name: nVamp - VVV - Low Spawns.esp
-    msg:
-      - type: say
-        content: Use either nVamp - VVV - Low Spawns.esp or nVamp - VVV - Med Spawns.esp, not both.
+    inc:
+      - nVamp - VVV - Med Spawns.esp
   - name: nVamp - VVV - Med Spawns.esp
-    msg:
-      - type: say
-        content: Use either nVamp - VVV - Low Spawns.esp or nVamp - VVV - Med Spawns.esp, not both.
+    inc:
+      - nVamp - VVV - Low Spawns.esp
   - name: nVamp - Hardcore nVamped.esp
     msg:
       - type: say
@@ -3277,16 +3260,16 @@ plugins:
     msg:
       - type: say
         content: "Requires: \"http://newvegas.nexusmods.com/mods/41548 Lings compatibility patch\""
-        condition: file("Lings.esm") and checksum("DK Caucasians.esp",B67B57E2)
+        condition: file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)
   - name: EwwGhoulyBody.esp
     tag:
       - Body-F
   - name: tkEyelashesFNV.esp
     msg:
       - type: say
-        content: "Incompatible with: conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
+        content: "Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
   - name: tkEyelashesFNV_FemalesOnly.esp
     msg:
       - type: say
-        content: "Incompatible with: conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
+        content: "Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
 # ENDGROUP: Beauty Packs & Race Addons
