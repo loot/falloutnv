@@ -623,17 +623,17 @@ plugins:
     msg:
       - type: say
         content: Do not use with other Auto Savers as they serve the same purpose.
-        condition: "file(\"RX-Auto Incremental Save.esp\") or file(\"CASM.esp\")"
+        condition: file("RX-Auto Incremental Save.esp") or file("CASM.esp")
   - name: RX-Auto Incremental Save.esp
     msg:
       - type: say
         content: Do not use with CASM; has the same purpose.
-        condition: "file(\"CASM.esp\")"
+        condition: file("CASM.esp")
   - name: CASM.esp
     msg:
       - type: say
         content: Do not use with Auto Incremental Save; has the same purpose.
-        condition: "file(\"RX-Auto Incremental Save.esp\")"
+        condition: file("RX-Auto Incremental Save.esp")
   - name: BIS - Brumbek's Inventory Sorting.esp
     tag:
       - Names
@@ -1313,8 +1313,8 @@ plugins:
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Requires updating New Vegas Script Extender to version 1.4.2+"
-        condition: "version(\"..\\nvse_loader.exe\",\"0.1.4.2\",<) and file(\"..\\nvse_loader.exe\")"
+        content: "Requires New Vegas Script Extender version 1.4.2+"
+        condition: version("..\nvse_loader.exe", "0.1.4.2", <)
     tag:
       - Stats
   - name: hardercore_combat.esp
@@ -1348,24 +1348,20 @@ plugins:
       - Project Nevada - Honest Hearts.esp
     msg:
       - type: say
-        content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
+        content: Recommended that you use the official Project Nevada Patches. You can find them "http://newvegas.nexusmods.com/mods/42363 here".
   - name: Project Nevada - Dead Money SF + Honest Hearts Patch.esp
     inc:
       - Project Nevada - Dead Money.esp
       - Project Nevada - Honest Hearts.esp
     msg:
       - type: say
-        content: "Recommended that you use the official Project Nevada Patches. You can find them here: \"http://newvegas.nexusmods.com/mods/42363\""
+        content: Recommended that you use the official Project Nevada Patches. You can find them "http://newvegas.nexusmods.com/mods/42363 here".
   - name: Project Nevada - Old World Blues.esp
-    msg:
-      - type: say
-        content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
-        condition: "file(\"Project Nevada - Old World Blues (No Cyberware).esp\")"
+    inc:
+      - "Project Nevada - Old World Blues (No Cyberware).esp"
   - name: Project Nevada - Old World Blues (No Cyberware).esp
-    msg:
-      - type: say
-        content: Choose only one of Project Nevada - Old World Blues.esp and Project Nevada - Old World Blues (No Cyberware).esp, not both
-        condition: "file(\"Project Nevada - Old World Blues.esp\")"
+    inc:
+      - "Project Nevada - Old World Blues.esp"
   - name: OWB Big Empty Overhaul.esp
     tag:
       - Invent
@@ -1428,25 +1424,17 @@ plugins:
 # ENDGROUP: Quests
 # BEGINGROUP: Perks
   - name: BrainPerkBugfix.esp
-    msg:
-      - type: say
-        content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
-        condition: "file(\"BrainPerkBugfix_Cardiac.esp\")"
+    inc:
+      - BrainPerkBugfix_Cardiac.esp
   - name: BrainPerkBugfix_Cardiac.esp
-    msg:
-      - type: say
-        content: Choose only one of BrainPerkBugfix.esp and BrainPerkBugfix_Cardiac.esp, not both
-        condition: "file(\"BrainPerkBugfix.esp\")"
+    inc:
+      - BrainPerkBugfix.esp
   - name: FourEyesDynamic.esp
-    msg:
-      - type: say
-        content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
-        condition: "file(\"FourEyesBetter.esp\")"
+    inc:
+      - FourEyesBetter.esp
   - name: FourEyesBetter.esp
-    msg:
-      - type: say
-        content: Choose only one of FourEyesDynamic.esp and FourEyesBetter.esp, not both
-        condition: "file(\"FourEyesDynamic.esp\")"
+    inc:
+      - FourEyesDynamic.esp
   - name: ZZZZ--APB_By_Nokturnihs.esp
     msg:
       - type: say
@@ -1471,19 +1459,19 @@ plugins:
     msg:
       - type: say
         content: Only use one of the spawn .esp's
-        condition: "file(\"IWS-AS-MedSpawns.esp\") or file(\"IWS-AS-LowSpawns.esp\")"
+        condition: file("IWS-AS-MedSpawns.esp") or file("IWS-AS-LowSpawns.esp")
   - name: IWS-AS-MedSpawns.esp
     req: [ *NVSE ]
     msg:
       - type: say
         content: Only use one of the spawn .esp's
-        condition: "file(\"IWS-AS-HighSpawns.esp\") or file(\"IWS-AS-LowSpawns.esp\")"
+        condition: file("IWS-AS-HighSpawns.esp") or file("IWS-AS-LowSpawns.esp")
   - name: IWS-AS-LowSpawns.esp
     req: [ *NVSE ]
     msg:
       - type: say
         content: Only use one of the spawn .esp's
-        condition: "file(\"IWS-AS-MedSpawns.esp\") or file(\"IWS-AS-HighSpawns.esp\")"
+        condition: file("IWS-AS-MedSpawns.esp") or file("IWS-AS-HighSpawns.esp")
   - name: IWS-MoreSpawns.esp
     msg:
       - type: say
@@ -1647,48 +1635,48 @@ plugins:
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
-        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Max.esp\")"
+        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")
   - name: BIS - Kobu Better Binoculars Low.esp
     msg:
       - type: say
         content: For use with Better Binoculars Low.esp
-        condition: "not file(\"Better Binoculars Low.esp\")"
+        condition: not file("Better Binoculars Low.esp")
     tag:
       - Names
   - name: Better Binoculars Medium.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
-        condition: "file(\"Better Binoculars Low.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Max.esp\")"
+        condition: file("Better Binoculars Low.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")
   - name: BIS - Kobu Better Binoculars Medium.esp
     msg:
       - type: say
         content: For use with Better Binoculars Medium.esp
-        condition: "not file(\"Better Binoculars Medium.esp\")"
+        condition: not file("Better Binoculars Medium.esp")
     tag:
       - Names
   - name: Better Binoculars High.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
-        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars Low.esp\") or file(\"Better Binoculars Max.esp\")"
+        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars Low.esp") or file("Better Binoculars Max.esp")
   - name: BIS - Kobu Better Binoculars High.esp
     msg:
       - type: say
         content: For use with Better Binoculars High.esp
-        condition: "not file(\"Better Binoculars High.esp\")"
+        condition: not file("Better Binoculars High.esp")
     tag:
       - Names
   - name: Better Binoculars Max.esp
     msg:
       - type: say
         content: Select only one Better Bincoulars .esp to use.
-        condition: "file(\"Better Binoculars Medium.esp\") or file(\"Better Binoculars High.esp\") or file(\"Better Binoculars Low.esp\")"
+        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Low.esp")
   - name: BIS - Kobu Better Binoculars Max.esp
     msg:
       - type: say
         content: For use with Better Binoculars Max.esp
-        condition: "not file(\"Better Binoculars Max.esp\")"
+        condition: not file("Better Binoculars Max.esp")
     tag:
       - Names
   - name: better that gun 223.esp
@@ -1792,12 +1780,12 @@ plugins:
     msg:
       - type: say
         content: To be used with BlackWolf Backpack - Vendor Script Replenish.esp
-        condition: "not file(\"BlackWolf Backpack - Vendor Script Replenish.esp\")"
+        condition: not file("BlackWolf Backpack - Vendor Script Replenish.esp")
   - name: BlackWolf Backpack - Vendor Script Replenish.esp
     msg:
       - type: say
         content: To be used with BlackWolf Backpack.esp
-        condition: "not file(\"BlackWolf Backpack.esp\")"
+        condition: not file("BlackWolf Backpack.esp")
   - name: DragonskinNCRPersonnelWearingOutfits.esp
     tag:
       - Relev
@@ -2055,7 +2043,7 @@ plugins:
     msg:
       - type: say
         content: For use with the Save Cass mod.
-        condition: "not file(\"SaveCass.esp\")"
+        condition: not file("SaveCass.esp")
   - name: EZ_VanillaFollowers.esp
     tag:
       - Actors.AIPackages
@@ -2092,7 +2080,7 @@ plugins:
     msg:
       - type: say
         content: For use with GunSmith.esm and GunSmith Guns Upgrade.esp
-        condition: "not file(\"GunSmith.esm\") or not file(\"GunSmith Guns Upgrade.esp\")"
+        condition: not file("GunSmith.esm") or not file("GunSmith Guns Upgrade.esp")
   - name: Real Weapon Names.esp
     tag:
       - Names
@@ -2177,27 +2165,27 @@ plugins:
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with: Other mods that change the max level."
+        content: "Incompatible with Other mods that change the max level."
   - name: Max Level 60.esp
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with: Other mods that change the max level."
+        content: "Incompatible with Other mods that change the max level."
   - name: Max Level 75.esp
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with: Other mods that change the max level."
+        content: "Incompatible with Other mods that change the max level."
   - name: Max Level 100.esp
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with: Other mods that change the max level."
+        content: "Incompatible with Other mods that change the max level."
   - name: Max Level 255.esp
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with: Other mods that change the max level."
+        content: "Incompatible with Other mods that change the max level."
   - name: CCC - weaker weapons.esp
     msg:
       - type: say
@@ -2381,7 +2369,7 @@ plugins:
     msg:
       - type: say
         content: For use with Project Nevada - Core.esm
-        condition: "not file(\"Project Nevada - Core.esm\")"
+        condition: not file("Project Nevada - Core.esm")
   - name: VarmintRifle22LR.esp
     inc:
       - WMX-VarmintRifle22LR.esp
@@ -2871,7 +2859,7 @@ plugins:
     msg:
       - type: say
         content: Recommended for use with Fellout.esp
-        condition: "not file(\"Fellout.esp\")"
+        condition: not file("Fellout.esp")
   - name: night_and_day.esp
     msg:
       - type: say
@@ -3202,7 +3190,7 @@ plugins:
     msg:
       - type: error
         content: nVamp - Core.esm is missing.
-        condition: "not file(\"nVamp - Core.esm\")"
+        condition: not file("nVamp - Core.esm")
   - name: nVamp - VVV - Bosses.esp
     msg:
       - type: say
