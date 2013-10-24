@@ -1308,10 +1308,9 @@ plugins:
       - type: say
         content: Old
   - name: Arwen_NV_Realism_Core.esp
-    req: [ *NVSE ]
-    msg:
-      - type: say
-        content: "Requires New Vegas Script Extender version 1.4.2+"
+    req:
+      - name: "..\\nvse_loader.exe"
+        display: New Vegas Script Extender version 1.4.2+
         condition: version("..\nvse_loader.exe", "0.1.4.2", <)
     tag:
       - Stats
@@ -3238,7 +3237,7 @@ plugins:
   - name: nVamp - More Hardcore.esp
     msg:
       - type: say
-        content: OPTIONAL FOR MORE HARDCORE EXPERIENCE
+        content: Optional for a more difficult experience.
       - type: say
         content: Old, consider upgrading to nVamp version 0.15
 # ENDGROUP: nVamp
