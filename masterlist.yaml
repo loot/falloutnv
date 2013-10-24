@@ -2,10 +2,10 @@ common:
   - &dirty
     util: "http://newvegas.nexusmods.com/mods/34703 FNVEdit"
   - &NVSE
-    name: "..\nvse_loader.exe"
+    name: "..\\nvse_loader.exe"
     display: "http://nvse.silverlock.org/ NVSE"
   - &MCM
-    name: "NVSE\Plugins\MCM.dll"
+    name: "NVSE\\Plugins\\MCM.dll"
     display: "http://newvegas.nexusmods.com/mods/42507 MCM"
 
 globals:
