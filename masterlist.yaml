@@ -1815,7 +1815,7 @@ plugins:
     msg:
       - type: say
         content: Merged into nVamp - New Vegas Mod Project. Do not use together.
-        condition: "regex(\"nVamp.*\.esp\")"
+        condition: regex("nVamp.*\.esp")
   - name: FlashlightNVSE.esp
     inc:
       - Project Nevada - FlashlightNVSE.esp
@@ -1868,7 +1868,7 @@ plugins:
   - name: NCR Black Ops Stealth Armor.esp
     msg:
       - type: say
-        content: Due to a master issue, this requires ClassicPack.esm; Can be fixed manually using FNVEdit.
+        content: Due to a master issue this plugin requires ClassicPack.esm and can be fixed manually using FNVEdit.
   - name: NCR Rearmament v1.5.esp
     inc:
       - NCR Rearmament v1.5 (Lore).esp
