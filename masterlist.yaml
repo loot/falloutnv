@@ -219,14 +219,20 @@ plugins:
     tag:
       - WeaponMods
   - name: AWorldOfPain(Preview).esm
+    after:
+      - 'nVamp - Core.esm'
     tag:
       - Deflst
       - Invent
   - name: AWorldOfPain(LowLoot).esm
+    after:
+      - 'nVamp - Core.esm'
     msg:
       - type: say
         content: Outdated. Consider using the latest version along with the low loot patches instead.
   - name: MoMod.esm
+    after:
+      - 'nVamp - Core.esm'
     inc:
       - monsterrach.esp
     tag:
@@ -276,7 +282,15 @@ plugins:
       - C.Light
   - name: Project Nevada - Core.esm
     req: [ *NVSE ]
+  - name: CFWNV-DLC.esm
+    after:
+      - 'nVamp - Core.esm'
+  - name: Project Nevada - Extra Options.esm
+    after:
+      - 'nVamp - Core.esm'
   - name: Project Nevada - Equipment.esm
+    after:
+      - 'nVamp - Core.esm'
     tag:
       - Delev
       - Invent
@@ -291,7 +305,24 @@ plugins:
   - name: Weapon Mod Expansion.esm
     tag:
       - Names
-  - name: WME - DLCs.esm
+  - name: 'WME - Dead Money.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - Honest Hearts.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - Old World Blues.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - GRA.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - GRA Light.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - DLCs.esm'
+    after:
+      - 'nVamp - Core.esm'
     inc:
       - WME - Dead Money.esm
       - WME - Honest Hearts.esm
@@ -331,13 +362,20 @@ plugins:
     msg:
       - type: say
         content: Old, consider upgrading to nVamp version 0.15
+  - name: BoulderCityFaceliftProject.esm
+    after:
+      - 'nVamp - Core.esm'
+  - name: The Roost.esm
+    after:
+      - 'nVamp - Core.esm'
+  - name: dangame.esm
+    after:
+      - 'nVamp - Core.esm'
   - name: HonestHearts-CaliberX.esm
+    after:
+      - 'nVamp - Core.esm'
     tag:
       - Names
-  - name: Project Nevada - Equipment.esm
-    tag:
-      - Delev
-      - Invent
   - name: New Vegas Redesigned.esm
     tag:
       - Body-F
