@@ -10,11 +10,10 @@ globals:
   - type: say
     content: '"http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/ Latest BOSS thread"'
   - type: warn
-    content: Need check for Tale of Two Wastelands load order
+    content: You need to check your Tale of Two Wastelands load order
     condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
 
 plugins:
-# ESMs
   - name: DeadMoney.esm
     tag:
       - Deflst
@@ -43,7 +42,7 @@ plugins:
   - name: TaleOfTwoWastelands.esm
     msg:
       - type: warn
-        content: Need check for Tale of Two Wastelands load order
+        content: You need to check your Tale of Two Wastelands load order
         condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
   - name: Community Bugfix Compilation Patch.esm
     msg:
@@ -129,7 +128,7 @@ plugins:
       - OFT_Coordinate_Finder.esp
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
   - name: OFT_Merge_Base.esm
     inc:
       - OFT_Merge_All.esm
@@ -139,7 +138,7 @@ plugins:
       - OFT_Coordinate_Finder.esp
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
   - name: OFT_Merge_HonestHearts.esm
     inc:
       - OFT_Merge_All.esm
@@ -147,7 +146,7 @@ plugins:
       - OFT_HonestHearts_Interiors.esp
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
   - name: OFT_Merge_OldWorldBlues.esm
     inc:
       - OFT_Merge_All.esm
@@ -155,7 +154,7 @@ plugins:
       - OFT_IWR_OldWorldBlues.esp
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
   - name: AmmoSpreadEffectFixer.esm
     req: [ *NVSE ]
   - name: Companion Core.esm
@@ -170,7 +169,7 @@ plugins:
   - name: OWNB - Open World.esm
     inc:
       - IWR.esm
-  - name: RBX.esm
+#  - name: RBX.esm
 # Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: AccuRifles.esm
     req: [ *NVSE ]
@@ -368,14 +367,10 @@ plugins:
         content: Outdated. Consider Updating.
     tag:
       - NoMerge
-# ENDGROUP: ESMs
-# BEGINGROUP: Earliest
   - name: FalloutNV_lang.esp
     msg:
       - type: say
         content: Translation file.
-# ENDGROUP: Earliest
-# BEGINGROUP: Unofficial Patches and Fixes
   - name: MM-Main.esp
     msg:
       - type: say
@@ -535,7 +530,6 @@ plugins:
     msg:
       - type: say
         content: Obsolete with latest patch
-# BEGINGROUP: Operation Fixed Terrain
   - name: OFT_Merge_All.esp
       - OFT_Merge_Base.esp
       - OFT_Merge_HonestHearts.esp
@@ -614,9 +608,6 @@ plugins:
     inc:
       - OFT_Merge_All.esp
       - OFT_Merge_Base.esp
-# ENDGROUP: Operation Fixed Terrain
-# ENDGROUP: Unofficial Patches and Fixes
-# BEGINGROUP: Early Loading Mods
   - name: AutoSaverNV.esp
     msg:
       - type: say
@@ -723,8 +714,6 @@ plugins:
     msg:
       - type: say
         content: Outdated. Consider Updating.
-# ENDGROUP: Early Loading Mods
-# BEGINGROUP: Faces
   - name: 188 Trading Post Revisited.esp
     tag:
       - NpcFaces
@@ -849,8 +838,6 @@ plugins:
   - name: VyntageVeronica02.esp
     tag:
       - NpcFaces
-# ENDGROUP: Faces
-# BEGINGROUP: NPC
   - name: 1st Recon Revised.esp
     tag:
       - Invent
@@ -940,8 +927,6 @@ plugins:
     msg:
       - type: say
         content: Recommended to be used with one of the main .esp's
-# ENDGROUP: NPC
-# BEGINGROUP: Places
   - name: IIWR 2.0.3.esp
     msg:
       - type: say
@@ -1037,7 +1022,6 @@ plugins:
     msg:
       - type: say
         content: Outdated; Consider Updating.
-# BEGINGROUP: New Vegas Restoration
   - name: HighlyPopulatedFreeside.esp
     inc:
       - MediumPopulatedFreeside.esp
@@ -1058,10 +1042,6 @@ plugins:
     msg:
       - type: say
         content: Outdated; Consider Updating.
-# ENDGROUP: New Vegas Restoration
-# ENDGROUP: Places
-# BEGINGROUP: Overhauls
-# BEGINGROUP: BlackCompany HarderCore Pack
   - name: NVHarderCore.esp
     tag:
       - Names
@@ -1078,8 +1058,6 @@ plugins:
     tag:
       - Stats
       - WeaponMods
-# ENDGROUP: BlackCompany HarderCore Pack
-# BEGINGROUP: FOOK
   - name: FOOK - New Vegas.esp
     tag:
       - Deflst
@@ -1105,8 +1083,6 @@ plugins:
   - name: LinkesAuge - Retexture edits.esp
     tag:
       - Graphics
-# ENDGROUP: FOOK
-# BEGINGROUP: Frontsalats Modular Mods and Tweaks
   - name: NoWeaponZoom.esp
     tag:
       - Stats
@@ -1150,8 +1126,6 @@ plugins:
   - name: M.M.A.T - Spawn Module.esp
     tag:
       - Relev
-# ENDGROUP: Frontsalats Modular Mods and Tweaks
-# BEGINGROUP: NEVAX - New Vegas Expanded (German)
   - name: NEVAX - BEAUTYPACK.esp
     tag:
       - Body-F
@@ -1195,8 +1169,6 @@ plugins:
     tag:
       - Deflst
       - Relev
-# ENDGROUP: NEVAX - New Vegas Expanded (German)
-# BEGINGROUP: Puce Moose Tweak and Balance Center
   - name: PMT - XPadjust.esp
     tag:
       - Invent
@@ -1245,8 +1217,6 @@ plugins:
   - name: PMT - Reduced Challenge Notifications.esp
     inc:
       - PMT - Total Challenge Remover.esp
-# ENDGROUP: Puce Moose Tweak and Balance Center
-# BEGINGROUP: Reload
   - name: Reload.esp
     tag:
       - Delev
@@ -1269,8 +1239,6 @@ plugins:
   - name: ReSort.esp
     tag:
       - Names
-# ENDGROUP: Reload
-# BEGINGROUP: Superior Firepower
   - name: Superior Firepower - Unique Weaponry.esp
     tag:
       - Stats
@@ -1278,8 +1246,6 @@ plugins:
     tag:
       - Delev
       - Relev
-# ENDGROUP: Superior Firepower
-# BEGINGROUP: XFO NV - The New Vegas Overhaul
   - name: BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp
     tag:
       - Names
@@ -1301,8 +1267,6 @@ plugins:
   - name: BIS - XFO - 6aa - Epic Skills.esp
     tag:
       - Names
-# ENDGROUP: XFO NV - The New Vegas Overhaul
-# BEGINGROUP: Other
   - name: Adventurers_New_Vegas-V0.1.esp
     msg:
       - type: say
@@ -1364,9 +1328,6 @@ plugins:
       - Invent
       - Names
       - Stats
-# ENDGROUP: Other
-# ENDGROUP: Overhauls
-# BEGINGROUP: Sounds
   - name: Improved Sound FX - Weapon Sharing Fix.esp
     tag:
       - Sound
@@ -1398,8 +1359,6 @@ plugins:
   - name: LouderGuns.esp
     tag:
       - Sound
-# ENDGROUP: Sounds
-# BEGINGROUP: Quests
   - name: awilderwasteland.esp
     inc:
       - awilderwastelandnobenny.esp
@@ -1418,8 +1377,6 @@ plugins:
   - name: wsex_workgirl_tryout.esp
     inc:
       - wsex_workgirl.esp
-# ENDGROUP: Quests
-# BEGINGROUP: Perks
   - name: BrainPerkBugfix.esp
     inc:
       - BrainPerkBugfix_Cardiac.esp
@@ -1436,8 +1393,6 @@ plugins:
     msg:
       - type: say
         content: Outdated. Consider Updating.
-# ENDGROUP: Perks
-# BEGINGROUP: Early Misc
   - name: AutoLoot.esp
     req: [ *NVSE ]
   - name: Detect Traps - Dead Money.esp
@@ -1537,8 +1492,6 @@ plugins:
   - name: BIS - Sprint Mod.esp
     tag:
       - Names
-# ENDGROUP: Early Misc
-# BEGINGROUP: Crafting
   - name: ACS-HonestHearts.esp
     tag:
       - Invent
@@ -1556,8 +1509,6 @@ plugins:
   - name: Dynamic Herbalism.esp
     inc:
       - Bountiful Harvest.esp
-# ENDGROUP: Crafting
-# BEGINGROUP: Weapons
   - name: 1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp
     msg:
       - type: say
@@ -1758,8 +1709,6 @@ plugins:
     msg:
       - type: say
         content: Old, update to latest version.
-# ENDGROUP: Weapons
-# BEGINGROUP: Armor and Clothes
   - name: Advanced Recon Tech - Fiendish Power Armor.esp
     msg:
       - type: say
@@ -1901,8 +1850,6 @@ plugins:
   - name: w44Satchels - Lite.esp
     inc:
       - w44Satchels - Full.esp
-# ENDGROUP: Armor and Clothes
-# BEGINGROUP: Cosmetics
   - name: LingsPrettyThings.esp
     tag:
       - Eyes
@@ -1970,8 +1917,6 @@ plugins:
   - name: Voice dissonance fix.esp
     tag:
       - NpcFaces
-# ENDGROUP: Cosmetics
-# BEGINGROUP: Middle Misc
   - name: AWOPLowRobots.esp
     inc:
       - AWOPVeryLowRobots.esp
@@ -1994,8 +1939,6 @@ plugins:
   - name: MMUE-CP-AWOP+NVInteriors.esp
     inc:
       - MMUE-CP-AWOP.esp
-# ENDGROUP: Middle Misc
-# BEGINGROUP: Companions
   - name: Companion Module Pack.esp
     inc:
       - Companion Sandbox Mode.esp
@@ -2063,8 +2006,6 @@ plugins:
   - name: RexReplacerEss.esp
     tag:
       - Graphics
-# ENDGROUP: Companions
-# BEGINGROUP: Later Misc
   - name: BetterRepairKits.esp
     msg:
       - type: say
@@ -2155,8 +2096,6 @@ plugins:
   - name: FeelingIrradiated-IS.esp
     tag:
       - Names
-# ENDGROUP: Later Misc
-# BEGINGROUP: Game-Settings and Overrides
   - name: IntegratedFullDLC.esp
   - name: Max Level 50.esp
     req: [ *NVSE ]
@@ -2385,8 +2324,6 @@ plugins:
   - name: BIS - Weight_Balance_v10.esp
     tag:
       - Names
-# ENDGROUP: Game-Settings and Overrides
-# BEGINGROUP: Weapon Mods Expanded or WMX
   - name: WeaponModsExpanded.esp
     inc:
       - RH_IRONSIGHTS_NV.esm
@@ -2509,8 +2446,6 @@ plugins:
   - name: ScientistPackWMX.esp
     inc:
       - ScientistPack.esp
-# ENDGROUP: Weapon Mods Expanded or WMX
-# BEGINGROUP: Weapon Mod Expansion or WME
   - name: RH_IronSights_NV_Vanilla.esp
     inc:
       - WeaponModsExpanded.esp
@@ -2608,8 +2543,6 @@ plugins:
   - name: BIS - WME - Honest Hearts Arenovalis Retex.esp
     tag:
       - Names
-# ENDGROUP: Weapon Mod Expansion or WME
-# BEGINGROUP: Special Cases for WMX and/or WME support
   - name: EVE FNV.esp
     tag:
       - Graphics
@@ -2706,8 +2639,6 @@ plugins:
     tag:
       - Names
       - Stats
-# ENDGROUP: Special Cases for WMX and/or WME support
-# BEGINGROUP: NV Game Stabilizer
   - name: NV Game Stabilizer.esp
     inc:
       - NV GameStabilizerA.esp
@@ -2781,8 +2712,6 @@ plugins:
   - name: NV GameStabilizerA9.esp
     tag:
       - NoMerge
-# ENDGROUP: NV Game Stabilizer
-# BEGINGROUP: Weather\Light\Water
   - name: SimpleStreetLights.esp
     inc:
       - SimpleStreetLights (Extra Lights).esp
@@ -3104,8 +3033,6 @@ plugins:
     req: [ *NVSE ]
   - name: UnderwaterFX.esp
     req: [ *NVSE ]
-# ENDGROUP: Weather\Light\Water
-# BEGINGROUP: Lastish
   - name: BetterGamePerformanceV1.esp
     msg:
       - type: say
@@ -3135,8 +3062,6 @@ plugins:
   - name: BIS - Project Nevada - Rebalance.esp
     tag:
       - Names
-# ENDGROUP: Lastish
-# BEGINGROUP: nVamp
   - name: nVamp - Tales from the Burning Sands.esp
     msg:
       - type: say
@@ -3240,8 +3165,6 @@ plugins:
         content: Optional for a more difficult experience.
       - type: say
         content: Old, consider upgrading to nVamp version 0.15
-# ENDGROUP: nVamp
-# BEGINGROUP: Beauty Packs & Race Addons
   - name: DK Caucasians.esp
     msg:
       - type: say
@@ -3258,4 +3181,3 @@ plugins:
     msg:
       - type: say
         content: "Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
-# ENDGROUP: Beauty Packs & Race Addons
