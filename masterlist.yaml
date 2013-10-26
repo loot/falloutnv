@@ -347,7 +347,7 @@ plugins:
   - name: nVamp - Hardcore nVamped.esm
     msg:
       - type: say
-        content: "Requires: Separate resource files."
+        content: Requires: Separate resource files.
       - type: say
         content: Optional for a more difficult experience.
   - name: nVamp - Hardcore Really nVamped.esm
