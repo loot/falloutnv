@@ -569,6 +569,7 @@ plugins:
       - type: say
         content: Obsolete with latest patch
   - name: OFT_Merge_All.esp
+    inc:
       - OFT_Merge_Base.esp
       - OFT_Merge_HonestHearts.esp
       - OFT_Merge_OldWorldBlues.esp
