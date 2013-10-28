@@ -2,6 +2,10 @@
 
 This repository holds the BOSSv3 masterlist for Fallout: New Vegas. For more information on the format and syntax of the masterlist, please see the [Metadata Syntax documentation](http://boss-developers.github.io/docs/BOSS%20Metadata%20Syntax.html).
 
-The repository wiki contains a [Bash Tags Reference](https://github.com/boss-developers/boss-fallout-new-vegas/wiki/Bash-Tags-Reference) page.
+### Bash Tags Reference
 
-This repository is currently a work in progress.
+Wrye Flash recognises the following Bash Tags specifically for Fallout: New Vegas:
+
+* `Deflst`: Mod over-rides FormID changes, works a little like the `Delev` tag. Required for mods that remove items from repair lists, amongst other things.
+* `Destructible`: Mod modifies destructible statistics for objects (Import Destuctible)
+* `WeaponMods`: mod changes modifications for weapons (such as scope, suppressor, ex-magazine, etc.) (Import Weapon Modifications).
