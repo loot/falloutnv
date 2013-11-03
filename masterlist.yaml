@@ -1,10 +1,14 @@
 common:
+# Files
   - &NVSE
     name: "..\\nvse_loader.exe"
     display: '"http://nvse.silverlock.org/ NVSE"'
   - &MCM
     name: "NVSE\\Plugins\\MCM.dll"
     display: '"http://newvegas.nexusmods.com/mods/42507 MCM"'
+# Other Strings
+  - &dirtyUtil
+    '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
 
 globals:
   - type: say
@@ -18,26 +22,26 @@ plugins:
     tag:
       - Deflst
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0xd70f165b
         udr: 51
   - name: HonestHearts.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x2352b189
         udr: 10
   - name: OldWorldBlues.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x7f8f8225
   - name: LonesomeRoad.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x30073d50
         udr: 6
   - name: GunRunnersArsenal.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0xaac938d
   - name: TaleOfTwoWastelands.esm
     msg:
