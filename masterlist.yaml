@@ -1,14 +1,16 @@
 common:
   - &NVSE
     name: "..\\nvse_loader.exe"
-    display: '"http://nvse.silverlock.org/ NVSE"'
+    display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
     name: "NVSE\\Plugins\\MCM.dll"
-    display: '"http://newvegas.nexusmods.com/mods/42507 MCM"'
+    display: '[MCM](http://newvegas.nexusmods.com/mods/42507)'
+  - &dirtyUtil
+    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703'
 
 globals:
   - type: say
-    content: '"http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/ Latest BOSS thread"'
+    content: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/)'
   - type: warn
     content: You need to check your Tale of Two Wastelands load order
     condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
@@ -18,26 +20,26 @@ plugins:
     tag:
       - Deflst
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0xd70f165b
         udr: 51
   - name: HonestHearts.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x2352b189
         udr: 10
   - name: OldWorldBlues.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x7f8f8225
   - name: LonesomeRoad.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0x30073d50
         udr: 6
   - name: GunRunnersArsenal.esm
     dirty:
-      - util: '"http://newvegas.nexusmods.com/mods/34703 FNVEdit"'
+      - util: *dirtyUtil
         crc: 0xaac938d
   - name: TaleOfTwoWastelands.esm
     msg:
@@ -59,7 +61,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
     msg:
       - type: say
-        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
+        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
     tag:
       - Body-F
       - Body-M
@@ -73,7 +75,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
     msg:
       - type: say
-        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
+        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
     tag:
       - Body-F
       - Body-M
@@ -87,7 +89,7 @@ plugins:
   - name: Machienzo - NPC Cosmetic Fixes.esm
     msg:
       - type: say
-        content: "Old, update to \"http://newvegas.nexusmods.com/mods/39325 NVCE\"."
+        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
     tag:
       - Body-F
       - Body-M
@@ -99,7 +101,7 @@ plugins:
       - Voice-F
       - Voice-M
   - name: NVCE Main.esm
-    url: http://newvegas.nexusmods.com/mods/39325
+    url: [ 'http://newvegas.nexusmods.com/mods/39325' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -1348,14 +1350,14 @@ plugins:
       - Project Nevada - Honest Hearts.esp
     msg:
       - type: say
-        content: Recommended that you use the official Project Nevada Patches. You can find them "http://newvegas.nexusmods.com/mods/42363 here".
+        content: Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).
   - name: Project Nevada - Dead Money SF + Honest Hearts Patch.esp
     inc:
       - Project Nevada - Dead Money.esp
       - Project Nevada - Honest Hearts.esp
     msg:
       - type: say
-        content: Recommended that you use the official Project Nevada Patches. You can find them "http://newvegas.nexusmods.com/mods/42363 here".
+        content: Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).
   - name: Project Nevada - Old World Blues.esp
     inc:
       - "Project Nevada - Old World Blues (No Cyberware).esp"
@@ -3207,7 +3209,7 @@ plugins:
   - name: DK Caucasians.esp
     msg:
       - type: say
-        content: "Requires: \"http://newvegas.nexusmods.com/mods/41548 Lings compatibility patch\""
+        content: "Requires: [Lings compatibility patch](http://newvegas.nexusmods.com/mods/41548)."
         condition: file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)
   - name: EwwGhoulyBody.esp
     tag:
