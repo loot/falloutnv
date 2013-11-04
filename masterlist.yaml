@@ -6,8 +6,9 @@ common:
   - &MCM
     name: "NVSE\\Plugins\\MCM.dll"
     display: '[MCM](http://newvegas.nexusmods.com/mods/42507)'
+# Other Strings
   - &dirtyUtil
-    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703'
+    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
 
 globals:
   - type: say
