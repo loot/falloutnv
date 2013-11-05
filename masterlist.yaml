@@ -91,6 +91,22 @@ plugins:
       - CaravanPack.esm
       - ClassicPack.esm
       - MercenaryPack.esm
+  - name: Fallout3.esm
+    after:
+      - GunRunnersArsenal.esm
+      - TribalPack.esm
+  - name: ThePitt.esm
+    after:
+      - Anchorage.esm
+  - name: BrokenSteel.esm
+    after:
+      - ThePitt.esm
+  - name: PointLookout.esm
+    after:
+      - BrokenSteel.esm
+  - name: Zeta.esm
+    after:
+      - PointLookout.esm
   - name: TaleOfTwoWastelands.esm
     msg:
       - type: warn
