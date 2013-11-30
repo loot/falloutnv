@@ -1,121 +1,121 @@
 common:
 # Files
   - &NVSE
-    name: "..\\nvse_loader.exe"
+    name: '..\nvse_loader.exe'
     display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
-    name: "NVSE\\Plugins\\MCM.dll"
+    name: 'NVSE\Plugins\MCM.dll'
     display: '[MCM](http://newvegas.nexusmods.com/mods/42507)'
 # Other Strings
   - &dirtyUtil
-    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
+    ''[FNVEdit](http://newvegas.nexusmods.com/mods/34703)''
 
 globals:
   - type: say
     content: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/)'
   - type: warn
-    content: You need to check your Tale of Two Wastelands load order
-    condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
+    content: 'You need to check your Tale of Two Wastelands load order'
+    condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)'
 
 plugins:
-  - name: DeadMoney.esm
+  - name: 'DeadMoney.esm'
     tag:
       - Deflst
     dirty:
       - util: *dirtyUtil
         crc: 0xd70f165b
         udr: 51
-  - name: HonestHearts.esm
+  - name: 'HonestHearts.esm'
     after:
-      - DeadMoney.esm
+      - 'DeadMoney.esm'
     dirty:
       - util: *dirtyUtil
         crc: 0x2352b189
         udr: 10
-  - name: OldWorldBlues.esm
+  - name: 'OldWorldBlues.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
     dirty:
       - util: *dirtyUtil
         crc: 0x7f8f8225
-  - name: LonesomeRoad.esm
+  - name: 'LonesomeRoad.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
     dirty:
       - util: *dirtyUtil
         crc: 0x30073d50
         udr: 6
-  - name: GunRunnersArsenal.esm
+  - name: 'GunRunnersArsenal.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
-      - LonesomeRoad.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
     dirty:
       - util: *dirtyUtil
         crc: 0xaac938d
-  - name: CaravanPack.esm
+  - name: 'CaravanPack.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
-      - LonesomeRoad.esm
-      - GunRunnersArsenal.esm
-  - name: ClassicPack.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+  - name: 'ClassicPack.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
-      - LonesomeRoad.esm
-      - GunRunnersArsenal.esm
-      - CaravanPack.esm
-  - name: MercenaryPack.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+  - name: 'MercenaryPack.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
-      - LonesomeRoad.esm
-      - GunRunnersArsenal.esm
-      - CaravanPack.esm
-      - ClassicPack.esm
-  - name: TribalPack.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+  - name: 'TribalPack.esm'
     after:
-      - DeadMoney.esm
-      - HonestHearts.esm
-      - OldWorldBlues.esm
-      - LonesomeRoad.esm
-      - GunRunnersArsenal.esm
-      - CaravanPack.esm
-      - ClassicPack.esm
-      - MercenaryPack.esm
-  - name: Fallout3.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+  - name: 'Fallout3.esm'
     after:
-      - GunRunnersArsenal.esm
-      - TribalPack.esm
-  - name: ThePitt.esm
+      - 'GunRunnersArsenal.esm'
+      - 'TribalPack.esm'
+  - name: 'ThePitt.esm'
     after:
-      - Anchorage.esm
-  - name: BrokenSteel.esm
+      - 'Anchorage.esm'
+  - name: 'BrokenSteel.esm'
     after:
-      - ThePitt.esm
-  - name: PointLookout.esm
+      - 'ThePitt.esm'
+  - name: 'PointLookout.esm'
     after:
-      - BrokenSteel.esm
-  - name: Zeta.esm
+      - 'BrokenSteel.esm'
+  - name: 'Zeta.esm'
     after:
-      - PointLookout.esm
-  - name: TaleOfTwoWastelands.esm
+      - 'PointLookout.esm'
+  - name: 'TaleOfTwoWastelands.esm'
     msg:
       - type: warn
-        content: You need to check your Tale of Two Wastelands load order
-        condition: file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)
-  - name: Community Bugfix Compilation Patch.esm
+        content: 'You need to check your Tale of Two Wastelands load order'
+        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)'
+  - name: 'Community Bugfix Compilation Patch.esm'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
     tag:
       - Actors.AIPackages
       - Delev
@@ -124,10 +124,10 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
+  - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
-        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
+        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -138,10 +138,10 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
+  - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm'
     msg:
       - type: say
-        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
+        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -152,10 +152,10 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes.esm
+  - name: 'Machienzo - NPC Cosmetic Fixes.esm'
     msg:
       - type: say
-        content: "Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."
+        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -166,105 +166,105 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: NVCE Main.esm
-    url: [ 'http://newvegas.nexusmods.com/mods/39325' ]
+  - name: 'NVCE Main.esm'
+    url: [ ''http://newvegas.nexusmods.com/mods/39325'' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
       - Invent
       - NPC.Race
       - NpcFaces
-  - name: NVCE Main (Faces Only).esm
+  - name: 'NVCE Main (Faces Only).esm'
     tag:
       - Actors.ACBS
       - Deactivate
       - Filter
       - NPC.Race
       - NpcFaces
-  - name: OFT_Merge_All.esm
+  - name: 'OFT_Merge_All.esm'
     inc:
-      - OFT_Merge_Base.esm
-      - OFT_Merge_HonestHearts.esm
-      - OFT_Merge_HonestHearts.esp
-      - OFT_HonestHearts_Interiors.esp
-      - OFT_Merge_OldWorldBlues.esm
-      - OFT_OldWorldBlues.esp
-      - OFT_IWR_OldWorldBlues.esp
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_IWR_Base.esp
-      - OFT_Coordinate_Finder.esp
+      - 'OFT_Merge_Base.esm'
+      - 'OFT_Merge_HonestHearts.esm'
+      - 'OFT_Merge_HonestHearts.esp'
+      - 'OFT_HonestHearts_Interiors.esp'
+      - 'OFT_Merge_OldWorldBlues.esm'
+      - 'OFT_OldWorldBlues.esp'
+      - 'OFT_IWR_OldWorldBlues.esp'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_IWR_Base.esp'
+      - 'OFT_Coordinate_Finder.esp'
     msg:
       - type: say
         content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
-  - name: OFT_Merge_Base.esm
+  - name: 'OFT_Merge_Base.esm'
     inc:
-      - OFT_Merge_All.esm
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_IWR_Base.esp
-      - OFT_Coordinate_Finder.esp
+      - 'OFT_Merge_All.esm'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_IWR_Base.esp'
+      - 'OFT_Coordinate_Finder.esp'
     msg:
       - type: say
         content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
-  - name: OFT_Merge_HonestHearts.esm
+  - name: 'OFT_Merge_HonestHearts.esm'
     inc:
-      - OFT_Merge_All.esm
-      - OFT_Merge_HonestHearts.esp
-      - OFT_HonestHearts_Interiors.esp
+      - 'OFT_Merge_All.esm'
+      - 'OFT_Merge_HonestHearts.esp'
+      - 'OFT_HonestHearts_Interiors.esp'
     msg:
       - type: say
         content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
-  - name: OFT_Merge_OldWorldBlues.esm
+  - name: 'OFT_Merge_OldWorldBlues.esm'
     inc:
-      - OFT_Merge_All.esm
-      - OFT_OldWorldBlues.esp
-      - OFT_IWR_OldWorldBlues.esp
+      - 'OFT_Merge_All.esm'
+      - 'OFT_OldWorldBlues.esp'
+      - 'OFT_IWR_OldWorldBlues.esp'
     msg:
       - type: say
         content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
-  - name: AmmoSpreadEffectFixer.esm
+  - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
-  - name: Companion Core.esm
+  - name: 'Companion Core.esm'
     req: [ *NVSE ]
-  - name: IWR.esm
+  - name: 'IWR.esm'
     inc:
       - "OWNB - Open World.esm"
-      - OFT_IWR_Base.esp
-  - name: IWS-Core.esm
+      - 'OFT_IWR_Base.esp'
+  - name: 'IWS-Core.esm'
     tag:
       - Delev
-  - name: OWNB - Open World.esm
+  - name: 'OWNB - Open World.esm'
     inc:
-      - IWR.esm
-#  - name: RBX.esm
+      - 'IWR.esm'
+#  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
-  - name: AccuRifles.esm
+  - name: 'AccuRifles.esm'
     req: [ *NVSE ]
-  - name: Caliber.esm
+  - name: 'Caliber.esm'
     tag:
       - Invent
       - Names
-  - name: CaliberXgunrunners.esm
+  - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
-  - name: CINEMATECH.esm
+  - name: 'CINEMATECH.esm'
     req:
       - *NVSE
       - *MCM
-  - name: Eve.esm
+  - name: 'Eve.esm'
     msg:
       - type: say
-        content: it is recommended that you upgrade to the official EVE FNV mod.
-        condition: checksum("Eve.esm", A4084FA6)
-  - name: EZ_CompanionNVSE_Killable_Normal.esm
+        content: 'it is recommended that you upgrade to the official EVE FNV mod.'
+        condition: 'checksum("Eve.esm", A4084FA6)'
+  - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
     msg:
       - type: say
-        content: This file is old
-  - name: Fiends, With Style.esm
+        content: 'This file is old'
+  - name: 'Fiends, With Style.esm'
     tag:
       - Delev
-  - name: FOOK - New Vegas.esm
+  - name: 'FOOK - New Vegas.esm'
     tag:
       - Deflst
       - Delev
@@ -274,103 +274,103 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: LDFemalePowerArmorPack.esm
+  - name: 'LDFemalePowerArmorPack.esm'
     inc:
-      - LDFemalePowerArmorPack.esp
-  - name: LW Companion.esm
+      - 'LDFemalePowerArmorPack.esp'
+  - name: 'LW Companion.esm'
     msg:
       - type: say
-        content: The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.
-  - name: Moddable Unique Weps.esm
+        content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
+  - name: 'Moddable Unique Weps.esm'
     inc:
-      - Moddable Unique Weps.esp
+      - 'Moddable Unique Weps.esp'
     tag:
       - WeaponMods
-  - name: AWorldOfPain(Preview).esm
+  - name: 'AWorldOfPain(Preview).esm'
     after:
       - 'nVamp - Core.esm'
     tag:
       - Deflst
       - Invent
-  - name: AWorldOfPain(LowLoot).esm
+  - name: 'AWorldOfPain(LowLoot).esm'
     after:
       - 'nVamp - Core.esm'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version along with the low loot patches instead.
-  - name: MoMod.esm
+        content: 'Outdated. Consider using the latest version along with the low loot patches instead.'
+  - name: 'MoMod.esm'
     after:
       - 'nVamp - Core.esm'
     inc:
-      - monsterrach.esp
+      - 'monsterrach.esp'
     tag:
       - Relev
-  - name: New Vegas Error Corrections Complete - NO DLC.esm
+  - name: 'New Vegas Error Corrections Complete - NO DLC.esm'
     inc:
-      - Mission Mojave - Ultimate Edition.esp
-  - name: New Vegas Error Corrections BugFixes - NO DLC.esm
+      - 'Mission Mojave - Ultimate Edition.esp'
+  - name: 'New Vegas Error Corrections BugFixes - NO DLC.esm'
     inc:
-      - Mission Mojave - Ultimate Edition.esp
-  - name: New Vegas Error Corrections BugFixes - DLC + GRA.esm
+      - 'Mission Mojave - Ultimate Edition.esp'
+  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
     inc:
-      - Mission Mojave - Ultimate Edition.esp
-  - name: New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm
+      - 'Mission Mojave - Ultimate Edition.esp'
+  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm'
     inc:
-      - Mission Mojave - Ultimate Edition.esp
-  - name: NSkies - Vanilla Edition.esm
+      - 'Mission Mojave - Ultimate Edition.esp'
+  - name: 'NSkies - Vanilla Edition.esm'
     inc:
-      - NSkies URWLified.esm
+      - 'NSkies URWLified.esm'
     tag:
       - C.Climate
       - C.Light
-  - name: NSkies URWLified.esm
+  - name: 'NSkies URWLified.esm'
     inc:
-      - NSkies - Vanilla Edition.esm
+      - 'NSkies - Vanilla Edition.esm'
     tag:
       - C.Climate
       - C.Light
-  - name: NVInteriors_WastelandEditon.esm
+  - name: 'NVInteriors_WastelandEditon.esm'
     inc:
-      - NVInteriors_WastelandEditonAWOP.esm
-  - name: NVInteriors_WastelandEditonAWOP.esm
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+  - name: 'NVInteriors_WastelandEditonAWOP.esm'
     inc:
-      - NVInteriors_WastelandEditon.esm
-  - name: NVInteriors_ComboEdition.esm
+      - 'NVInteriors_WastelandEditon.esm'
+  - name: 'NVInteriors_ComboEdition.esm'
     inc:
-      - NVInteriors_WastelandEdition.esm
-      - NVInteriors_WastelandEditonAWOP.esm
-      - NVInteriors_ComboEdition_AWOP.esm
-  - name: NVInteriors_ComboEdition_AWOP.esm
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+  - name: 'NVInteriors_ComboEdition_AWOP.esm'
     inc:
-      - NVInteriors_WastelandEdition.esm
-      - NVInteriors_WastelandEditonAWOP.esm
-      - NVInteriors_ComboEdition.esm
-  - name: Interior Lighting Overhaul - Core.esm
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+  - name: 'Interior Lighting Overhaul - Core.esm'
     tag:
       - C.Light
-  - name: Project Nevada - Core.esm
+  - name: 'Project Nevada - Core.esm'
     req: [ *NVSE ]
-  - name: CFWNV-DLC.esm
+  - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
-  - name: Project Nevada - Extra Options.esm
+  - name: 'Project Nevada - Extra Options.esm'
     after:
       - 'nVamp - Core.esm'
-  - name: Project Nevada - Equipment.esm
+  - name: 'Project Nevada - Equipment.esm'
     after:
       - 'nVamp - Core.esm'
     tag:
       - Delev
       - Invent
-  - name: SelectFire.esm
+  - name: 'SelectFire.esm'
     req: [ *NVSE ]
-  - name: Selective Fire.esm
+  - name: 'Selective Fire.esm'
     req: [ *NVSE ]
-  - name: SunnyCompanion.esm
+  - name: 'SunnyCompanion.esm'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Weapon Mod Expansion.esm
+        content: 'Outdated. Consider Updating.'
+  - name: 'Weapon Mod Expansion.esm'
     tag:
       - Names
   - name: 'WME - Dead Money.esm'
@@ -392,145 +392,145 @@ plugins:
     after:
       - 'nVamp - Core.esm'
     inc:
-      - WME - Dead Money.esm
-      - WME - Honest Hearts.esm
-      - WME - Old World Blues.esm
-  - name: Clean-Deluxe FNV.esm
+      - 'WME - Dead Money.esm'
+      - 'WME - Honest Hearts.esm'
+      - 'WME - Old World Blues.esm'
+  - name: 'Clean-Deluxe FNV.esm'
     inc:
-      - Performance of the Gods.esp
-  - name: aHUD.esm
+      - 'Performance of the Gods.esp'
+  - name: 'aHUD.esm'
     req: [ *NVSE ]
-  - name: iHUD.esm
+  - name: 'iHUD.esm'
     req: [ *NVSE ]
-  - name: oHUD.esm
+  - name: 'oHUD.esm'
     inc:
-      - aHUD.esm
-      - iHUD.esm
-      - Primary Needs HUD.esm
+      - 'aHUD.esm'
+      - 'iHUD.esm'
+      - 'Primary Needs HUD.esm'
     req: [ *NVSE ]
-  - name: nVamp - Effects nVamped.esm
+  - name: 'nVamp - Effects nVamped.esm'
     msg:
       - type: say
-        content: Optional for the nVamp graphics effects.
-  - name: nVamp - Hardcore nVamped.esm
+        content: 'Optional for the nVamp graphics effects.'
+  - name: 'nVamp - Hardcore nVamped.esm'
     msg:
       - type: say
         content: 'Requires: Separate resource files.'
       - type: say
-        content: Optional for a more difficult experience.
-  - name: nVamp - Hardcore Really nVamped.esm
+        content: 'Optional for a more difficult experience.'
+  - name: 'nVamp - Hardcore Really nVamped.esm'
     msg:
       - type: say
-        content: Optional for a more difficult experience.
-  - name: nVamp - Performance nVamped.esm
+        content: 'Optional for a more difficult experience.'
+  - name: 'nVamp - Performance nVamped.esm'
     msg:
       - type: say
-        content: Optional file designed to increase game performance for those with older computers.
-  - name: nVamp - Vaernus's Voracious Vermin.esm
+        content: 'Optional file designed to increase game performance for those with older computers.'
+  - name: 'nVamp - Vaernus''s Voracious Vermin.esm'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: BoulderCityFaceliftProject.esm
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'BoulderCityFaceliftProject.esm'
     after:
       - 'nVamp - Core.esm'
-  - name: The Roost.esm
+  - name: 'The Roost.esm'
     after:
       - 'nVamp - Core.esm'
-  - name: dangame.esm
+  - name: 'dangame.esm'
     after:
       - 'nVamp - Core.esm'
-  - name: HonestHearts-CaliberX.esm
+  - name: 'HonestHearts-CaliberX.esm'
     after:
       - 'nVamp - Core.esm'
     tag:
       - Names
-  - name: New Vegas Redesigned.esm
+  - name: 'New Vegas Redesigned.esm'
     tag:
       - Body-F
       - Body-M
       - Eyes
       - Hair
       - NpcFaces
-  - name: New Vegas Redesigned II.esm
+  - name: 'New Vegas Redesigned II.esm'
     tag:
       - Body-F
       - Body-M
       - Eyes
       - Hair
       - NpcFaces
-  - name: Lings.esm
+  - name: 'Lings.esm'
     tag:
       - Eyes
       - Hair
-  - name: MikotoBeauty.esm
+  - name: 'MikotoBeauty.esm'
     tag:
       - Eyes
       - Graphics
       - Hair
-  - name: NV GameStabilizerA8.esm
+  - name: 'NV GameStabilizerA8.esm'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: FalloutNV_lang.esp
+  - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
-        content: Translation file.
-  - name: MM-Main.esp
+        content: 'Translation file.'
+  - name: 'MM-Main.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-  - name: MM-HonestHearts.esp
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - name: 'MM-HonestHearts.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-  - name: MM-OldWorldBlues.esp
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - name: 'MM-OldWorldBlues.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-  - name: MM-LonesomeRoad.esp
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - name: 'MM-LonesomeRoad.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-  - name: Mission Mojave - Ultimate Edition.esp
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - name: 'Mission Mojave - Ultimate Edition.esp'
     inc:
-      - Compiled Patch.esp
-      - Compiled Patch All_DLCs.esp
-      - Community Bugfix Compilation Patch.esp
-    tag:
-      - Actors.AIPackages
-      - NoMerge
-      - Scripts
-      - Sound
-      - Stats
-  - name: MMUE - Deutsch.esp
-    inc:
-      - Compiled Patch.esp
-      - Compiled Patch All_DLCs.esp
-      - Community Bugfix Compilation Patch.esp
-      - Mission Mojave - Ultimate Edition.esp
+      - 'Compiled Patch.esp'
+      - 'Compiled Patch All_DLCs.esp'
+      - 'Community Bugfix Compilation Patch.esp'
     tag:
       - Actors.AIPackages
       - NoMerge
       - Scripts
       - Sound
       - Stats
-  - name: MMUE+.esp
+  - name: 'MMUE - Deutsch.esp'
+    inc:
+      - 'Compiled Patch.esp'
+      - 'Compiled Patch All_DLCs.esp'
+      - 'Community Bugfix Compilation Patch.esp'
+      - 'Mission Mojave - Ultimate Edition.esp'
+    tag:
+      - Actors.AIPackages
+      - NoMerge
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'MMUE+.esp'
     msg:
       - type: say
-        content: Plugin is old. Please update it.
-  - name: MMUE-Tools-InvisibleWallRemover.esp
+        content: 'Plugin is old. Please update it.'
+  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     inc:
-      - IWR.esm
-  - name: Community Bugfix Compilation Patch.esp
+      - 'IWR.esm'
+  - name: 'Community Bugfix Compilation Patch.esp'
     inc:
-      - Compiled Patch.esp
-      - Compiled Patch All_DLCs.esp
-      - Mission Mojave - Ultimate Edition.esp
+      - 'Compiled Patch.esp'
+      - 'Compiled Patch All_DLCs.esp'
+      - 'Mission Mojave - Ultimate Edition.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
     tag:
       - Actors.AIPackages
       - Delev
@@ -539,14 +539,14 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: CBC Dead Money Patch.esp
+  - name: 'CBC Dead Money Patch.esp'
     inc:
-      - Compiled Patch - DeadMoney.esp
-  - name: Compiled Patch.esp
+      - 'Compiled Patch - DeadMoney.esp'
+  - name: 'Compiled Patch.esp'
     inc:
-      - Community Bugfix Compilation Patch.esp
-      - Compiled Patch All_DLCs.esp
-      - Mission Mojave - Ultimate Edition.esp
+      - 'Community Bugfix Compilation Patch.esp'
+      - 'Compiled Patch All_DLCs.esp'
+      - 'Mission Mojave - Ultimate Edition.esp'
     tag:
       - Actors.AIPackages
       - Delev
@@ -554,606 +554,606 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: Compiled Patch - DeadMoney.esp
+  - name: 'Compiled Patch - DeadMoney.esp'
     inc:
-      - CBC Dead Money Patch.esm
-      - CBC Dead Money Patch.esp
-  - name: Compiled Patch All_DLCs.esp
+      - 'CBC Dead Money Patch.esm'
+      - 'CBC Dead Money Patch.esp'
+  - name: 'Compiled Patch All_DLCs.esp'
     inc:
-      - Compiled Patch.esp
-      - Community Bugfix Compilation Patch.esp
-      - Mission Mojave - Ultimate Edition.esp
+      - 'Compiled Patch.esp'
+      - 'Community Bugfix Compilation Patch.esp'
+      - 'Mission Mojave - Ultimate Edition.esp'
     msg:
       - type: say
-        content: Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.
-  - name: CaravanCardFix.esp
+        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - name: 'CaravanCardFix.esp'
     msg:
       - type: say
-        content: Obsolete with latest patch
-  - name: DLM_QuestItemsFix_1.3b_Eng.esp
+        content: 'Obsolete with latest patch'
+  - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: DLM_QuestItemsFix_1.3b-DLC_DM.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'DLM_QuestItemsFix_1.3b-DLC_DM.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: ED-EUpgradeInventoryFix.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'ED-EUpgradeInventoryFix.esp'
     msg:
       - type: say
-        content: Obsolete with latest patch
-  - name: JacknDianeFix.esp
+        content: 'Obsolete with latest patch'
+  - name: 'JacknDianeFix.esp'
     tag:
       - Invent
-  - name: MarcusInvFix.esp
+  - name: 'MarcusInvFix.esp'
     tag:
       - Invent
-  - name: MushroomCloudFix.esp
+  - name: 'MushroomCloudFix.esp'
     msg:
       - type: say
-        content: Obsolete with latest patch
-  - name: NV Error Fixes DLCs 1.0.esp
+        content: 'Obsolete with latest patch'
+  - name: 'NV Error Fixes DLCs 1.0.esp'
     msg:
       - type: say
-        content: Old, update to latest version.
-  - name: NV Error Fixes FNV 1.1.esp
+        content: 'Old, update to latest version.'
+  - name: 'NV Error Fixes FNV 1.1.esp'
     msg:
       - type: say
-        content: Old, update to latest version.
-  - name: NV Error Fixes FNV 1.1 - FOOK Patch.esp
+        content: 'Old, update to latest version.'
+  - name: 'NV Error Fixes FNV 1.1 - FOOK Patch.esp'
     msg:
       - type: say
-        content: Old, update to latest version.
-  - name: NV Error Fixes Merged 1.1.esp
+        content: 'Old, update to latest version.'
+  - name: 'NV Error Fixes Merged 1.1.esp'
     msg:
       - type: say
-        content: Old, update to latest version.
-  - name: NV Error Corrections FNV.esp
+        content: 'Old, update to latest version.'
+  - name: 'NV Error Corrections FNV.esp'
     msg:
       - type: say
-        content: Old, update to latest version 1.7+.
-  - name: NV Error Corrections FNV - FOOK Patch.esp
+        content: 'Old, update to latest version 1.7+.'
+  - name: 'NV Error Corrections FNV - FOOK Patch.esp'
     msg:
       - type: say
-        content: Old, update to latest version 1.7+.
-  - name: NV Error Corrections Merged.esp
+        content: 'Old, update to latest version 1.7+.'
+  - name: 'NV Error Corrections Merged.esp'
     msg:
       - type: say
-        content: Old, update to latest version 1.7+.
-  - name: NV Error Corrections Merged - FOOK Patch.esp
+        content: 'Old, update to latest version 1.7+.'
+  - name: 'NV Error Corrections Merged - FOOK Patch.esp'
     msg:
       - type: say
-        content: Old, update to latest version 1.7+.
-  - name: ReloadBugFix.esp
+        content: 'Old, update to latest version 1.7+.'
+  - name: 'ReloadBugFix.esp'
     msg:
       - type: say
-        content: Obsolete with latest patch
-  - name: RepairKitFix.esp
+        content: 'Obsolete with latest patch'
+  - name: 'RepairKitFix.esp'
     msg:
       - type: say
-        content: This fix does not currently work for custom weapon durability mods which increase the weapon's health by anything other than 50%.
-  - name: VendorAmmo45-70Fix.esp
+        content: 'This fix does not currently work for custom weapon durability mods which increase the weapon''s health by anything other than 50%.'
+  - name: 'VendorAmmo45-70Fix.esp'
     msg:
       - type: say
-        content: Obsolete with latest patch
-  - name: OFT_Merge_All.esp
+        content: 'Obsolete with latest patch'
+  - name: 'OFT_Merge_All.esp'
     inc:
-      - OFT_Merge_Base.esp
-      - OFT_Merge_HonestHearts.esp
-      - OFT_Merge_OldWorldBlues.esp
-      - OFT_NoIWR_Merge_All.esp
-      - OFT_NoIWR_Merge_Base.esp
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_HonestHearts.esp
-      - OFT_HonestHearts_Interiors.esp
-      - OFT_OldWorldBlues.esp
-      - OFT_IWR_Base.esp
-      - OFT_IWR_OldWorldBlues.esp
-      - OFT_Coordinate_Finder.esp
-  - name: OFT_Merge_Base.esp
+      - 'OFT_Merge_Base.esp'
+      - 'OFT_Merge_HonestHearts.esp'
+      - 'OFT_Merge_OldWorldBlues.esp'
+      - 'OFT_NoIWR_Merge_All.esp'
+      - 'OFT_NoIWR_Merge_Base.esp'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_HonestHearts.esp'
+      - 'OFT_HonestHearts_Interiors.esp'
+      - 'OFT_OldWorldBlues.esp'
+      - 'OFT_IWR_Base.esp'
+      - 'OFT_IWR_OldWorldBlues.esp'
+      - 'OFT_Coordinate_Finder.esp'
+  - name: 'OFT_Merge_Base.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_IWR_Base.esp
-      - OFT_Coordinate_Finder.esp
-  - name: OFT_Merge_HonestHearts.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_IWR_Base.esp'
+      - 'OFT_Coordinate_Finder.esp'
+  - name: 'OFT_Merge_HonestHearts.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_HonestHearts.esp
-      - OFT_HonestHearts_Interiors.esp
-  - name: OFT_Merge_OldWorldBlues.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_HonestHearts.esp'
+      - 'OFT_HonestHearts_Interiors.esp'
+  - name: 'OFT_Merge_OldWorldBlues.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_OldWorldBlues.esp
-      - OFT_IWR_OldWorldBlues.esp
-  - name: OFT_NoIWR_Merge_All.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_OldWorldBlues.esp'
+      - 'OFT_IWR_OldWorldBlues.esp'
+  - name: 'OFT_NoIWR_Merge_All.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_HonestHearts.esp
-      - OFT_HonestHearts_Interiors.esp
-      - OFT_OldWorldBlues.esp
-      - OFT_Coordinate_Finder.esp
-  - name: OFT_NoIWR_Merge_Base.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_HonestHearts.esp'
+      - 'OFT_HonestHearts_Interiors.esp'
+      - 'OFT_OldWorldBlues.esp'
+      - 'OFT_Coordinate_Finder.esp'
+  - name: 'OFT_NoIWR_Merge_Base.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Base.esp
-      - OFT_Base_Interiors.esp
-      - OFT_Coordinate_Finder.esp
-  - name: OFT_Base.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Base.esp'
+      - 'OFT_Base_Interiors.esp'
+      - 'OFT_Coordinate_Finder.esp'
+  - name: 'OFT_Base.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_Base.esp
-  - name: OFT_Base_Interiors.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_Base.esp'
+  - name: 'OFT_Base_Interiors.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_Base.esp
-  - name: OFT_HonestHearts.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_Base.esp'
+  - name: 'OFT_HonestHearts.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_HonestHearts.esp
-  - name: OFT_HonestHearts_Interiors.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_HonestHearts.esp'
+  - name: 'OFT_HonestHearts_Interiors.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_HonestHearts.esp
-  - name: OFT_OldWorldBlues.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_HonestHearts.esp'
+  - name: 'OFT_OldWorldBlues.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_OldWorldBlues.esp
-  - name: OFT_IWR_Base.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_OldWorldBlues.esp'
+  - name: 'OFT_IWR_Base.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_Base.esp
-  - name: OFT_IWR_OldWorldBlues.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_Base.esp'
+  - name: 'OFT_IWR_OldWorldBlues.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_OldWorldBlues.esp
-  - name: OFT_Coordinate_Finder.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_OldWorldBlues.esp'
+  - name: 'OFT_Coordinate_Finder.esp'
     inc:
-      - OFT_Merge_All.esp
-      - OFT_Merge_Base.esp
-  - name: AutoSaverNV.esp
+      - 'OFT_Merge_All.esp'
+      - 'OFT_Merge_Base.esp'
+  - name: 'AutoSaverNV.esp'
     msg:
       - type: say
-        content: Do not use with other Auto Savers as they serve the same purpose.
-        condition: file("RX-Auto Incremental Save.esp") or file("CASM.esp")
-  - name: RX-Auto Incremental Save.esp
+        content: 'Do not use with other Auto Savers as they serve the same purpose.'
+        condition: 'file("RX-Auto Incremental Save.esp") or file("CASM.esp")'
+  - name: 'RX-Auto Incremental Save.esp'
     msg:
       - type: say
-        content: Do not use with CASM; has the same purpose.
-        condition: file("CASM.esp")
-  - name: CASM.esp
+        content: 'Do not use with CASM; has the same purpose.'
+        condition: 'file("CASM.esp")'
+  - name: 'CASM.esp'
     msg:
       - type: say
-        content: Do not use with Auto Incremental Save; has the same purpose.
-        condition: file("RX-Auto Incremental Save.esp")
-  - name: BIS - Brumbek's Inventory Sorting.esp
+        content: 'Do not use with Auto Incremental Save; has the same purpose.'
+        condition: 'file("RX-Auto Incremental Save.esp")'
+  - name: 'BIS - Brumbek''s Inventory Sorting.esp'
     tag:
       - Names
-  - name: BIS - Dead Money.esp
+  - name: 'BIS - Dead Money.esp'
     tag:
       - Names
-  - name: BIS - Honest Hearts.esp
+  - name: 'BIS - Honest Hearts.esp'
     tag:
       - Names
-  - name: BIS - Old World Blues.esp
+  - name: 'BIS - Old World Blues.esp'
     tag:
       - Names
-  - name: BIS - Lonesome Road.esp
+  - name: 'BIS - Lonesome Road.esp'
     tag:
       - Names
-  - name: BIS - Gun Runners Arsenal.esp
+  - name: 'BIS - Gun Runners Arsenal.esp'
     tag:
       - Names
-  - name: BIS - Community Bugfix Comp ESM.esp
+  - name: 'BIS - Community Bugfix Comp ESM.esp'
     inc:
-      - BIS - Community Bugfix Comp ESP.esp
+      - 'BIS - Community Bugfix Comp ESP.esp'
     tag:
       - Names
-  - name: BIS - CBC Dead Money Patch ESM.esp
+  - name: 'BIS - CBC Dead Money Patch ESM.esp'
     inc:
-      - BIS - CBC Dead Money Patch ESP.esp
+      - 'BIS - CBC Dead Money Patch ESP.esp'
     tag:
       - Names
-  - name: BIS - Community Bugfix Comp ESP.esp
+  - name: 'BIS - Community Bugfix Comp ESP.esp'
     inc:
-      - BIS - Community Bugfix Comp ESM.esp
+      - 'BIS - Community Bugfix Comp ESM.esp'
     tag:
       - Names
-  - name: BIS - CBC Dead Money Patch ESP.esp
+  - name: 'BIS - CBC Dead Money Patch ESP.esp'
     inc:
-      - BIS - CBC Dead Money Patch ESM.esp
+      - 'BIS - CBC Dead Money Patch ESM.esp'
     tag:
       - Names
-  - name: BIS - Promo DLC Caravan Pack.esp
+  - name: 'BIS - Promo DLC Caravan Pack.esp'
     tag:
       - Names
-  - name: BIS - Promo DLC Classic Pack.esp
+  - name: 'BIS - Promo DLC Classic Pack.esp'
     tag:
       - Names
-  - name: BIS - Promo DLC Mercenary Pack.esp
+  - name: 'BIS - Promo DLC Mercenary Pack.esp'
     tag:
       - Names
-  - name: BIS - Promo DLC Tribal Pack.esp
+  - name: 'BIS - Promo DLC Tribal Pack.esp'
     tag:
       - Names
-  - name: BIS - CFWNV.esp
+  - name: 'BIS - CFWNV.esp'
     tag:
       - Names
-  - name: BIS - CFWNV-DLC.esp
+  - name: 'BIS - CFWNV-DLC.esp'
     tag:
       - Names
-  - name: BIS - Primary Needs HUD.esp
+  - name: 'BIS - Primary Needs HUD.esp'
     tag:
       - Names
-  - name: BIS - More Cactus Water Recipes.esp
+  - name: 'BIS - More Cactus Water Recipes.esp'
     tag:
       - Names
-  - name: BIS - Compiled Patch.esp
+  - name: 'BIS - Compiled Patch.esp'
     tag:
       - Names
-  - name: BIS - Compiled Patch - DeadMoney.esp
+  - name: 'BIS - Compiled Patch - DeadMoney.esp'
     tag:
       - Names
-  - name: BIS - Compiled Patch - HonestHearts.esp
+  - name: 'BIS - Compiled Patch - HonestHearts.esp'
     tag:
       - Names
-  - name: BIS - Bobblehunt Patch.esp
+  - name: 'BIS - Bobblehunt Patch.esp'
     tag:
       - Names
-  - name: Centered 3rd Person Camera.esp
+  - name: 'Centered 3rd Person Camera.esp'
     inc:
-      - FOOK - New Vegas.esm
-  - name: Centered 3rd Person Camera - Unraised.esp
+      - 'FOOK - New Vegas.esm'
+  - name: 'Centered 3rd Person Camera - Unraised.esp'
     inc:
-      - FOOK - New Vegas.esm
-  - name: NVORganizedItems.esp
+      - 'FOOK - New Vegas.esm'
+  - name: 'NVORganizedItems.esp'
     tag:
       - Names
-  - name: OperationFixedTerrain.esp
+  - name: 'OperationFixedTerrain.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: OFT_ElectroCity.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'OFT_ElectroCity.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: 188 Trading Post Revisited.esp
+        content: 'Outdated. Consider Updating.'
+  - name: '188 Trading Post Revisited.esp'
     tag:
       - NpcFaces
-  - name: A Better Arcade.esp
-    tag:
-      - Invent
-      - NpcFaces
-  - name: A Better Boone.esp
+  - name: 'A Better Arcade.esp'
     tag:
       - Invent
       - NpcFaces
-  - name: A Better Cass.esp
+  - name: 'A Better Boone.esp'
     tag:
       - Invent
       - NpcFaces
-  - name: A Better Cass - Rearmed SG.esp
+  - name: 'A Better Cass.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'A Better Cass - Rearmed SG.esp'
     tag:
       - Graphics
       - Sound
       - Stats
-  - name: A Better Cass - Rearmed M1911.esp
+  - name: 'A Better Cass - Rearmed M1911.esp'
     tag:
       - Graphics
       - Sound
       - Stats
-  - name: A Better Veronica.esp
+  - name: 'A Better Veronica.esp'
     tag:
       - Invent
       - NpcFaces
-  - name: Bitter Springs Revisited.esp
+  - name: 'Bitter Springs Revisited.esp'
     tag:
       - NpcFaces
-  - name: Cass and Veronica.esp
+  - name: 'Cass and Veronica.esp'
     tag:
       - Invent
       - NpcFaces
-  - name: Cuter Boone.esp
+  - name: 'Cuter Boone.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: Cuter Boone NEW.esp
+  - name: 'Cuter Boone NEW.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: Cuter Veronica Felicia Day.esp
+  - name: 'Cuter Veronica Felicia Day.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: Cuter Veronica Felicia Day-Essential.esp
+  - name: 'Cuter Veronica Felicia Day-Essential.esp'
     tag:
       - NpcFaces
-  - name: Hanlon the badass 4.esp
+  - name: 'Hanlon the badass 4.esp'
     tag:
       - NpcFaces
-  - name: Lore version.esp
+  - name: 'Lore version.esp'
     tag:
       - NpcFaces
-  - name: MikotoBPCCArcade.esp
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: MikotoBPCCBoone.esp
+  - name: 'MikotoBPCCArcade.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: MikotoBPCCCass.esp
+  - name: 'MikotoBPCCBoone.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: MikotoBPWastersOverhaul.esp
+  - name: 'MikotoBPCCCass.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: MikotoBPCCFull.esp
+  - name: 'MikotoBPWastersOverhaul.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: Mutant Eyes.esp
+  - name: 'MikotoBPCCFull.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mutant Eyes.esp'
     tag:
       - Eyes
-  - name: NiceCass.esp
+  - name: 'NiceCass.esp'
     inc:
-      - NiceCass - C.esp
+      - 'NiceCass - C.esp'
     tag:
       - NpcFaces
-  - name: NiceCass - C.esp
+  - name: 'NiceCass - C.esp'
     inc:
-      - NiceCass.esp
+      - 'NiceCass.esp'
     tag:
       - NpcFaces
-  - name: NPC Project - Aero Office Park.esp
+  - name: 'NPC Project - Aero Office Park.esp'
     tag:
       - NpcFaces
-  - name: Raul - Danny Trejo.esp
+  - name: 'Raul - Danny Trejo.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: ReElijahfied.esp
+  - name: 'ReElijahfied.esp'
     tag:
       - NpcFaces
-  - name: RivensEyescapesNV.esp
+  - name: 'RivensEyescapesNV.esp'
     tag:
       - Eyes
-  - name: Mikotos_REyescapesNV.esp
+  - name: 'Mikotos_REyescapesNV.esp'
     tag:
       - Eyes
-  - name: Veronica1.0.esp
+  - name: 'Veronica1.0.esp'
     tag:
       - NpcFaces
-  - name: Veronica_nerdy.esp
+  - name: 'Veronica_nerdy.esp'
     tag:
       - NpcFaces
-  - name: VeronicaOlder.esp
+  - name: 'VeronicaOlder.esp'
     tag:
       - NpcFaces
-  - name: Vulpes Inculta.esp
+  - name: 'Vulpes Inculta.esp'
     tag:
       - NpcFaces
-  - name: VyntageCass02.esp
+  - name: 'VyntageCass02.esp'
     tag:
       - NpcFaces
-  - name: VyntageVeronica02.esp
+  - name: 'VyntageVeronica02.esp'
     tag:
       - NpcFaces
-  - name: 1st Recon Revised.esp
+  - name: '1st Recon Revised.esp'
     tag:
       - Invent
-  - name: Doc Mitchell's House Owner.esp
+  - name: 'Doc Mitchell''s House Owner.esp'
     tag:
       - C.Owner
-  - name: KillableKids_E.esp
+  - name: 'KillableKids_E.esp'
     inc:
-      - KillableKids_NE.esp
-  - name: KillableKids_NE.esp
+      - 'KillableKids_NE.esp'
+  - name: 'KillableKids_NE.esp'
     inc:
-      - KillableKids_E.esp
-  - name: monsterranch.esp
+      - 'KillableKids_E.esp'
+  - name: 'monsterranch.esp'
     inc:
-      - MoMod.esm
+      - 'MoMod.esm'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - Relev
-  - name: Alpha's MoMod Overhaul.esp
+  - name: 'Alpha''s MoMod Overhaul.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Monster Mod Wasteland Edition.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Monster Mod Wasteland Edition.esp'
     tag:
       - Relev
-  - name: MMWE-No Oblivion.esp
+  - name: 'MMWE-No Oblivion.esp'
     tag:
       - Delev
-  - name: MMWE-Claw Beast B Gone.esp
+  - name: 'MMWE-Claw Beast B Gone.esp'
     tag:
       - Delev
-  - name: MMWE-LoreOut.esp
+  - name: 'MMWE-LoreOut.esp'
     tag:
       - Delev
-  - name: MMWE-No Werewolves.esp
+  - name: 'MMWE-No Werewolves.esp'
     tag:
       - Delev
-  - name: MMWE - Rebalanced Leveled Lists.esp
-    tag:
-      - Delev
-      - Relev
-  - name: MMWE - Vanilla Spawn Chance.esp
+  - name: 'MMWE - Rebalanced Leveled Lists.esp'
     tag:
       - Delev
       - Relev
-  - name: MMWE-LoreOut-Rebalanced.esp
+  - name: 'MMWE - Vanilla Spawn Chance.esp'
     tag:
       - Delev
       - Relev
-  - name: MMWE-LoreOut-VanillaSpawnChance.esp
+  - name: 'MMWE-LoreOut-Rebalanced.esp'
     tag:
       - Delev
       - Relev
-  - name: NPCsUseAmmo.esp
+  - name: 'MMWE-LoreOut-VanillaSpawnChance.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'NPCsUseAmmo.esp'
     inc:
-      - NPCsUseAmmo-More Ammo.esp
-  - name: NPCsUseAmmo-More Ammo.esp
+      - 'NPCsUseAmmo-More Ammo.esp'
+  - name: 'NPCsUseAmmo-More Ammo.esp'
     inc:
-      - NPCsUseAmmo.esp
-  - name: populatedcasino.esp
+      - 'NPCsUseAmmo.esp'
+  - name: 'populatedcasino.esp'
     inc:
-      - populatedcasino-medium.esp
-      - populatedcasino-light.esp
-  - name: populatedcasino-medium.esp
+      - 'populatedcasino-medium.esp'
+      - 'populatedcasino-light.esp'
+  - name: 'populatedcasino-medium.esp'
     inc:
-      - populatedcasino.esp
-      - populatedcasino-light.esp
-  - name: populatedcasino-light.esp
+      - 'populatedcasino.esp'
+      - 'populatedcasino-light.esp'
+  - name: 'populatedcasino-light.esp'
     inc:
-      - populatedcasino.esp
-      - populatedcasino-medium.esp
-  - name: Project13 - Populated Wasteland.esp
+      - 'populatedcasino.esp'
+      - 'populatedcasino-medium.esp'
+  - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
       - Delev
       - Relev
-  - name: VendorGameTimeRestock.esp
+  - name: 'VendorGameTimeRestock.esp'
     inc:
-      - VendorGameTimeRestockNoNVSE.esp
+      - 'VendorGameTimeRestockNoNVSE.esp'
     req: [ *NVSE ]
-  - name: VendorGameTimeRestockNoNVSE.esp
+  - name: 'VendorGameTimeRestockNoNVSE.esp'
     inc:
-      - VendorGameTimeRestock.esp
-  - name: VendorGameTimeRestockNoDefaultRestock.esp
+      - 'VendorGameTimeRestock.esp'
+  - name: 'VendorGameTimeRestockNoDefaultRestock.esp'
     msg:
       - type: say
-        content: Recommended to be used with one of the main .esp's
-  - name: IIWR 2.0.3.esp
+        content: 'Recommended to be used with one of the main .esp''s'
+  - name: 'IIWR 2.0.3.esp'
     msg:
       - type: say
-        content: Outdated Version. Consider Updating to IWR.esm
-  - name: IIWR 2.0.7.esp
+        content: 'Outdated Version. Consider Updating to IWR.esm'
+  - name: 'IIWR 2.0.7.esp'
     msg:
       - type: say
-        content: Outdated Version. Consider Updating to IWR.esm
-  - name: IIWR 2.0.9.esp
+        content: 'Outdated Version. Consider Updating to IWR.esm'
+  - name: 'IIWR 2.0.9.esp'
     msg:
       - type: say
-        content: Outdated Version. Consider Updating to IWR.esm
-  - name: IIWR 2.1.0.esp
+        content: 'Outdated Version. Consider Updating to IWR.esm'
+  - name: 'IIWR 2.1.0.esp'
     msg:
       - type: say
-        content: Outdated Version. Consider Updating to IWR.esm
-  - name: GunRunnersExpandedV3.3.esp
+        content: 'Outdated Version. Consider Updating to IWR.esm'
+  - name: 'GunRunnersExpandedV3.3.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: GunRunnersExpandedV3.4.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'GunRunnersExpandedV3.4.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: GunRunnersExpandedV3.5.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'GunRunnersExpandedV3.5.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: GunRunnersExpanded-LoreFriendly.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'GunRunnersExpanded-LoreFriendly.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Novac Hotel Suite Upgrade.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Novac Hotel Suite Upgrade.esp'
     inc:
-      - NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp
-  - name: NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp
+      - 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp'
+  - name: 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp'
     inc:
-      - Novac Hotel Suite Upgrade.esp
-  - name: NVInteriors_WastelandEditon.esp
+      - 'Novac Hotel Suite Upgrade.esp'
+  - name: 'NVInteriors_WastelandEditon.esp'
     msg:
       - type: say
-        content: Old, update to NVInteriors_WastelandEditon.esm
-  - name: return_deadmoney.esp
+        content: 'Old, update to NVInteriors_WastelandEditon.esm'
+  - name: 'return_deadmoney.esp'
     inc:
-      - SierraMadreEXIT.esp
-  - name: Schoolhouse Base.esp
+      - 'SierraMadreEXIT.esp'
+  - name: 'Schoolhouse Base.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: Seachlight Airport NCR.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'Seachlight Airport NCR.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: SierraMadreEXIT.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'SierraMadreEXIT.esp'
     inc:
-      - return_deadmoney.esp
-  - name: SierraMadrev2.0.esp
+      - 'return_deadmoney.esp'
+  - name: 'SierraMadrev2.0.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: SierraMadrev2.1.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'SierraMadrev2.1.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: UHNV-Performance-Patch.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'UHNV-Performance-Patch.esp'
     msg:
       - type: say
-        content: Outdated as of Version 2.9
-  - name: UHNV-Brighter Lighting.esp
+        content: 'Outdated as of Version 2.9'
+  - name: 'UHNV-Brighter Lighting.esp'
     inc:
-      - UHNV-IncreasedLighting.esp
-  - name: UHNV-IncreasedLighting.esp
+      - 'UHNV-IncreasedLighting.esp'
+  - name: 'UHNV-IncreasedLighting.esp'
     inc:
-      - UHNV-Brighter Lighting.esp
+      - 'UHNV-Brighter Lighting.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: UWHNV-Core.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'UWHNV-Core.esp'
     req: [ *NVSE ]
-  - name: YangtzeBunkerPlayerHome.esp
+  - name: 'YangtzeBunkerPlayerHome.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: YangtzeBunkerPlayerHomeV1_2.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: YangtzeBunkerPlayerHomeV1_3.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'YangtzeBunkerPlayerHomeV1_3.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: YangtzeBunkerPlayerHomeV1_4.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'YangtzeBunkerPlayerHomeV1_4.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: HighlyPopulatedFreeside.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'HighlyPopulatedFreeside.esp'
     inc:
-      - MediumPopulatedFreeside.esp
-      - LowPopulatedFreeside.esp
-  - name: MediumPopulatedFreeside.esp
+      - 'MediumPopulatedFreeside.esp'
+      - 'LowPopulatedFreeside.esp'
+  - name: 'MediumPopulatedFreeside.esp'
     inc:
-      - HighlyPopulatedFreeside.esp
-      - LowPopulatedFreeside.esp
-  - name: LowPopulatedFreeside.esp
+      - 'HighlyPopulatedFreeside.esp'
+      - 'LowPopulatedFreeside.esp'
+  - name: 'LowPopulatedFreeside.esp'
     inc:
-      - HighlyPopulatedFreeside.esp
-      - MediumPopulatedFreeside.esp
-  - name: NVR-Version_9.esp
+      - 'HighlyPopulatedFreeside.esp'
+      - 'MediumPopulatedFreeside.esp'
+  - name: 'NVR-Version_9.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: NVFR-Version 1.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'NVFR-Version 1.esp'
     msg:
       - type: say
-        content: Outdated; Consider Updating.
-  - name: NVHarderCore.esp
+        content: 'Outdated; Consider Updating.'
+  - name: 'NVHarderCore.esp'
     tag:
       - Names
       - Stats
-  - name: NVWastelandUnlocked.esp
+  - name: 'NVWastelandUnlocked.esp'
     tag:
       - Delev
       - Names
@@ -1161,11 +1161,11 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
-  - name: NVWeaponAmmoTweaks.esp
+  - name: 'NVWeaponAmmoTweaks.esp'
     tag:
       - Stats
       - WeaponMods
-  - name: FOOK - New Vegas.esp
+  - name: 'FOOK - New Vegas.esp'
     tag:
       - Deflst
       - Delev
@@ -1175,789 +1175,786 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: BIS - FOOK - New Vegas.esp
+  - name: 'BIS - FOOK - New Vegas.esp'
     tag:
       - Names
-  - name: BIS - FOOK - New Vegas DLCs.esp
+  - name: 'BIS - FOOK - New Vegas DLCs.esp'
     tag:
       - Names
-  - name: LinkesAuge - Bug fixing compilation.esp
+  - name: 'LinkesAuge - Bug fixing compilation.esp'
     tag:
       - Deflst
       - Names
       - Scripts
       - Stats
-  - name: LinkesAuge - Retexture edits.esp
+  - name: 'LinkesAuge - Retexture edits.esp'
     tag:
       - Graphics
-  - name: NoWeaponZoom.esp
+  - name: 'NoWeaponZoom.esp'
     tag:
       - Stats
-  - name: ImprovedBinocs.esp
+  - name: 'ImprovedBinocs.esp'
     tag:
       - Invent
-  - name: HeadWearShaderFX.esp
+  - name: 'HeadWearShaderFX.esp'
     tag:
       - Scripts
       - Stats
-  - name: LootOverhaul.esp
+  - name: 'LootOverhaul.esp'
     tag:
       - Invent
-  - name: Food&DrinkDontHeal.esp
+  - name: 'Food&DrinkDontHeal.esp'
     tag:
       - Stats
-  - name: CompanionsImproved.esp
+  - name: 'CompanionsImproved.esp'
     tag:
       - Actors.AIPackages
-  - name: Npc&CreatureRespawn.esp
+  - name: 'Npc&CreatureRespawn.esp'
     tag:
       - Relev
-  - name: M.M.A.T - Companion Module.esp
+  - name: 'M.M.A.T - Companion Module.esp'
     tag:
       - Actors.AIPackages
-  - name: M.M.A.T - Ingestible Module.esp
+  - name: 'M.M.A.T - Ingestible Module.esp'
     tag:
       - Stats
-  - name: M.M.A.T - Shader Module.esp
+  - name: 'M.M.A.T - Shader Module.esp'
     tag:
       - Stats
-  - name: M.M.A.T Loot Module.esp
+  - name: 'M.M.A.T Loot Module.esp'
     tag:
       - Invent
-  - name: M.M.A.T - Loot Module.esp
+  - name: 'M.M.A.T - Loot Module.esp'
     tag:
       - Invent
-  - name: M.M.A.T - Weapon Module.esp
+  - name: 'M.M.A.T - Weapon Module.esp'
     tag:
       - Stats
-  - name: M.M.A.T - Spawn Module.esp
+  - name: 'M.M.A.T - Spawn Module.esp'
     tag:
       - Relev
-  - name: NEVAX - BEAUTYPACK.esp
+  - name: 'NEVAX - BEAUTYPACK.esp'
     tag:
       - Body-F
       - Body-M
       - NPCFaces
-  - name: NEVAX - FUNDE.esp
+  - name: 'NEVAX - FUNDE.esp'
     tag:
       - Deflst
       - Relev
-  - name: NEVAX - ITEMBALANCINGS.esp
+  - name: 'NEVAX - ITEMBALANCINGS.esp'
     tag:
       - Stats
-  - name: NEVAX - KAUFINHALTE.esp
+  - name: 'NEVAX - KAUFINHALTE.esp'
     tag:
       - Deflst
       - Invent
       - Relev
-  - name: NEVAX - MEHR MONSTER.esp
+  - name: 'NEVAX - MEHR MONSTER.esp'
     tag:
       - Relev
       - Scripts
-  - name: NEVAX - MONSTER.esp
+  - name: 'NEVAX - MONSTER.esp'
     tag:
       - Deflst
       - Relev
-  - name: NEVAX - NPC BALANCING.esp
-    tag:
-      - Deflst
-      - Relev
-      - Scripts
-  - name: NEVAX - RAIDER u NPC.esp
+  - name: 'NEVAX - NPC BALANCING.esp'
     tag:
       - Deflst
       - Relev
       - Scripts
-  - name: NEVAX - RUESTUNGEN.esp
+  - name: 'NEVAX - RAIDER u NPC.esp'
     tag:
       - Deflst
       - Relev
-  - name: NEVAX - WAFFEN.esp
+      - Scripts
+  - name: 'NEVAX - RUESTUNGEN.esp'
     tag:
       - Deflst
       - Relev
-  - name: PMT - XPadjust.esp
+  - name: 'NEVAX - WAFFEN.esp'
+    tag:
+      - Deflst
+      - Relev
+  - name: 'PMT - XPadjust.esp'
     tag:
       - Invent
-  - name: PMT - Tougher XPadjust.esp
+  - name: 'PMT - Tougher XPadjust.esp'
     tag:
       - Invent
-  - name: PMT - Slower Reloading.esp
+  - name: 'PMT - Slower Reloading.esp'
     inc:
-      - PMT - Slower Reloading No Visible Perk.esp
+      - 'PMT - Slower Reloading No Visible Perk.esp'
     tag:
       - Stats
-  - name: PMT - Slower Reloading No Visible Perk.esp
+  - name: 'PMT - Slower Reloading No Visible Perk.esp'
     inc:
-      - PMT - Slower Reloading.esp
+      - 'PMT - Slower Reloading.esp'
     tag:
       - Stats
-  - name: PMT - Reduced Ammo and Chems.esp
+  - name: 'PMT - Reduced Ammo and Chems.esp'
     tag:
       - Delev
       - Relev
-  - name: PMT - Reduced Caps and Item Value.esp
+  - name: 'PMT - Reduced Caps and Item Value.esp'
     tag:
       - Delev
       - Relev
-  - name: PMT - More Demanding Hardcore.esp
+  - name: 'PMT - More Demanding Hardcore.esp'
     tag:
       - Stats
-  - name: PMT - Destructible Ordnance.esp
+  - name: 'PMT - Destructible Ordnance.esp'
     tag:
       - Destructible
-  - name: PMT - Deadlier Combat.esp
+  - name: 'PMT - Deadlier Combat.esp'
     tag:
       - Stats
-  - name: PMT - Deadlier Combat Mk II.esp
+  - name: 'PMT - Deadlier Combat Mk II.esp'
     tag:
       - Stats
-  - name: PMT - Faint Heartbeat.esp
+  - name: 'PMT - Faint Heartbeat.esp'
     inc:
-      - PMT - Silent Heartbeat.esp
-  - name: PMT - Silent Heartbeat.esp
+      - 'PMT - Silent Heartbeat.esp'
+  - name: 'PMT - Silent Heartbeat.esp'
     inc:
-      - PMT - Faint Heartbeat.esp
-  - name: PMT - Total Challenge Remover.esp
+      - 'PMT - Faint Heartbeat.esp'
+  - name: 'PMT - Total Challenge Remover.esp'
     inc:
-      - PMT - Reduced Challenge Notifications.esp
-  - name: PMT - Reduced Challenge Notifications.esp
+      - 'PMT - Reduced Challenge Notifications.esp'
+  - name: 'PMT - Reduced Challenge Notifications.esp'
     inc:
-      - PMT - Total Challenge Remover.esp
-  - name: Reload.esp
+      - 'PMT - Total Challenge Remover.esp'
+  - name: 'Reload.esp'
     tag:
       - Delev
       - Names
       - Relev
-  - name: Rebalance.esp
+  - name: 'Rebalance.esp'
     tag:
       - Names
       - Stats
-  - name: Rearm.esp
+  - name: 'Rearm.esp'
     tag:
       - Delev
       - Relev
-  - name: RebalanceRearm.esp
+  - name: 'RebalanceRearm.esp'
     tag:
       - Stats
-  - name: RearmRebalance.esp
+  - name: 'RearmRebalance.esp'
     tag:
       - Stats
-  - name: ReSort.esp
+  - name: 'ReSort.esp'
     tag:
       - Names
-  - name: Superior Firepower - Unique Weaponry.esp
+  - name: 'Superior Firepower - Unique Weaponry.esp'
     tag:
       - Stats
-  - name: Superior Firepower - Factional Changes.esp
+  - name: 'Superior Firepower - Factional Changes.esp'
     tag:
       - Delev
       - Relev
-  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp
+  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp'
     tag:
       - Names
-  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp med.esp
+  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp med.esp'
     tag:
       - Names
-  - name: BIS - XFO - 2aa - Armor - DR+DT - revamp high.esp
+  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp high.esp'
     tag:
       - Names
-  - name: BIS - XFO - 2ba - Armor - DR+DT - simple low.esp
+  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple low.esp'
     tag:
       - Names
-  - name: BIS - XFO - 2ba - Armor - DR+DT - simple med.esp
+  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple med.esp'
     tag:
       - Names
-  - name: BIS - XFO - 2ba - Armor - DR+DT - simple high.esp
+  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple high.esp'
     tag:
       - Names
-  - name: BIS - XFO - 6aa - Epic Skills.esp
+  - name: 'BIS - XFO - 6aa - Epic Skills.esp'
     tag:
       - Names
-  - name: Adventurers_New_Vegas-V0.1.esp
+  - name: 'Adventurers_New_Vegas-V0.1.esp'
     msg:
       - type: say
-        content: Old
-  - name: Arwen_NV_Realism_Core.esp
-    req:
-      - name: "..\\nvse_loader.exe"
-        display: New Vegas Script Extender version 1.4.2+
-        condition: version("..\nvse_loader.exe", "0.1.4.2", <)
+        content: 'Old'
+  - name: 'Arwen_NV_Realism_Core.esp'
+    req: [ *NVSE ]
     tag:
       - Stats
-  - name: hardercore_combat.esp
+  - name: 'hardercore_combat.esp'
     tag:
       - Stats
-  - name: hardercore_wealth.esp
+  - name: 'hardercore_wealth.esp'
     tag:
       - Delev
       - Relev
-  - name: BIS - Project Nevada - Core.esp
+  - name: 'BIS - Project Nevada - Core.esp'
     tag:
       - Names
-  - name: BIS - Project Nevada - Equipment.esp
+  - name: 'BIS - Project Nevada - Equipment.esp'
     tag:
       - Invent
       - Names
-  - name: BIS - Project Nevada - Cyberware.esp
+  - name: 'BIS - Project Nevada - Cyberware.esp'
     tag:
       - Names
-  - name: Project Nevada - Dead Money.esp
+  - name: 'Project Nevada - Dead Money.esp'
     inc:
-      - Project Nevada - Dead Money + Honest Heart Patch.esp
-      - Project Nevada - Dead Money SF + Honest Hearts Patch.esp
-  - name: Project Nevada - Honest Hearts.esp
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+  - name: 'Project Nevada - Honest Hearts.esp'
     inc:
-      - Project Nevada - Dead Money + Honest Heart Patch.esp
-      - Project Nevada - Dead Money SF + Honest Hearts Patch.esp
-  - name: Project Nevada - Dead Money + Honest Heart Patch.esp
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+  - name: 'Project Nevada - Dead Money + Honest Heart Patch.esp'
     inc:
-      - Project Nevada - Dead Money.esp
-      - Project Nevada - Honest Hearts.esp
+      - 'Project Nevada - Dead Money.esp'
+      - 'Project Nevada - Honest Hearts.esp'
     msg:
       - type: say
-        content: Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).
-  - name: Project Nevada - Dead Money SF + Honest Hearts Patch.esp
+        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).'
+  - name: 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
     inc:
-      - Project Nevada - Dead Money.esp
-      - Project Nevada - Honest Hearts.esp
+      - 'Project Nevada - Dead Money.esp'
+      - 'Project Nevada - Honest Hearts.esp'
     msg:
       - type: say
-        content: Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).
-  - name: Project Nevada - Old World Blues.esp
+        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).'
+  - name: 'Project Nevada - Old World Blues.esp'
     inc:
       - "Project Nevada - Old World Blues (No Cyberware).esp"
-  - name: Project Nevada - Old World Blues (No Cyberware).esp
+  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
     inc:
       - "Project Nevada - Old World Blues.esp"
-  - name: OWB Big Empty Overhaul.esp
+  - name: 'OWB Big Empty Overhaul.esp'
     tag:
       - Invent
       - Names
       - Stats
-  - name: Improved Sound FX - Weapon Sharing Fix.esp
+  - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - HH Sharing Fix.esp
+  - name: 'Improved Sound FX - HH Sharing Fix.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - OWB Sharing Fix.esp
+  - name: 'Improved Sound FX - OWB Sharing Fix.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - LR Sharing Fix.esp
+  - name: 'Improved Sound FX - LR Sharing Fix.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - GRA.esp
+  - name: 'Improved Sound FX - GRA.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - Merged Major DLCs.esp
+  - name: 'Improved Sound FX - Merged Major DLCs.esp'
     inc:
-      - Improved Sound FX - DM.esp
-      - Improved Sound FX - HH.esp
-      - Improved Sound FX - HH Sharing Fix.esp
-      - Improved Sound FX - OWB Sharing Fix.esp
-      - Improved Sound FX - LR Sharing Fix.esp
-      - Improved Sound FX - WMX - Merged Major DLCs.esp
+      - 'Improved Sound FX - DM.esp'
+      - 'Improved Sound FX - HH.esp'
+      - 'Improved Sound FX - HH Sharing Fix.esp'
+      - 'Improved Sound FX - OWB Sharing Fix.esp'
+      - 'Improved Sound FX - LR Sharing Fix.esp'
+      - 'Improved Sound FX - WMX - Merged Major DLCs.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - Project Nevada.esp
+  - name: 'Improved Sound FX - Project Nevada.esp'
     tag:
       - Sound
-  - name: LouderGuns.esp
+  - name: 'LouderGuns.esp'
     tag:
       - Sound
-  - name: awilderwasteland.esp
+  - name: 'awilderwasteland.esp'
     inc:
-      - awilderwastelandnobenny.esp
-  - name: awilderwastelandnobenny.esp
+      - 'awilderwastelandnobenny.esp'
+  - name: 'awilderwastelandnobenny.esp'
     inc:
-      - awilderwasteland.esp
-  - name: betsybrahmin.esp
+      - 'awilderwasteland.esp'
+  - name: 'betsybrahmin.esp'
     inc:
-      - betsybrahminFSO.esp
-  - name: betsybrahminFSO.esp
+      - 'betsybrahminFSO.esp'
+  - name: 'betsybrahminFSO.esp'
     inc:
-      - betsybrahmin.esp
-  - name: wsex_workgirl.esp
+      - 'betsybrahmin.esp'
+  - name: 'wsex_workgirl.esp'
     inc:
-      - wsex_workgirl_tryout.esp
-  - name: wsex_workgirl_tryout.esp
+      - 'wsex_workgirl_tryout.esp'
+  - name: 'wsex_workgirl_tryout.esp'
     inc:
-      - wsex_workgirl.esp
-  - name: BrainPerkBugfix.esp
+      - 'wsex_workgirl.esp'
+  - name: 'BrainPerkBugfix.esp'
     inc:
-      - BrainPerkBugfix_Cardiac.esp
-  - name: BrainPerkBugfix_Cardiac.esp
+      - 'BrainPerkBugfix_Cardiac.esp'
+  - name: 'BrainPerkBugfix_Cardiac.esp'
     inc:
-      - BrainPerkBugfix.esp
-  - name: FourEyesDynamic.esp
+      - 'BrainPerkBugfix.esp'
+  - name: 'FourEyesDynamic.esp'
     inc:
-      - FourEyesBetter.esp
-  - name: FourEyesBetter.esp
+      - 'FourEyesBetter.esp'
+  - name: 'FourEyesBetter.esp'
     inc:
-      - FourEyesDynamic.esp
-  - name: ZZZZ--APB_By_Nokturnihs.esp
+      - 'FourEyesDynamic.esp'
+  - name: 'ZZZZ--APB_By_Nokturnihs.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: AutoLoot.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'AutoLoot.esp'
     req: [ *NVSE ]
-  - name: Detect Traps - Dead Money.esp
+  - name: 'Detect Traps - Dead Money.esp'
     req:
-      - DeadMoney.esm
+      - 'DeadMoney.esm'
     inc:
-      - Detect Traps - DLC.esp
-  - name: Detect Traps - DLC.esp
+      - 'Detect Traps - DLC.esp'
+  - name: 'Detect Traps - DLC.esp'
     req:
-      - DeadMoney.esm
-      - HonestHearts.esm
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
     inc:
-      - Detect Traps - Dead Money.esp
-  - name: IWS-AS-HighSpawns.esp
+      - 'Detect Traps - Dead Money.esp'
+  - name: 'IWS-AS-HighSpawns.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Only use one of the spawn .esp's
-        condition: file("IWS-AS-MedSpawns.esp") or file("IWS-AS-LowSpawns.esp")
-  - name: IWS-AS-MedSpawns.esp
+        content: 'Only use one of the spawn .esp''s'
+        condition: 'file("IWS-AS-MedSpawns.esp") or file("IWS-AS-LowSpawns.esp")'
+  - name: 'IWS-AS-MedSpawns.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Only use one of the spawn .esp's
-        condition: file("IWS-AS-HighSpawns.esp") or file("IWS-AS-LowSpawns.esp")
-  - name: IWS-AS-LowSpawns.esp
+        content: 'Only use one of the spawn .esp''s'
+        condition: 'file("IWS-AS-HighSpawns.esp") or file("IWS-AS-LowSpawns.esp")'
+  - name: 'IWS-AS-LowSpawns.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Only use one of the spawn .esp's
-        condition: file("IWS-AS-MedSpawns.esp") or file("IWS-AS-HighSpawns.esp")
-  - name: IWS-MoreSpawns.esp
+        content: 'Only use one of the spawn .esp''s'
+        condition: 'file("IWS-AS-MedSpawns.esp") or file("IWS-AS-HighSpawns.esp")'
+  - name: 'IWS-MoreSpawns.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: IWS-UltraSpawns.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'IWS-UltraSpawns.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Less Weight.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Less Weight.esp'
     inc:
-      - More Weight.esp
-  - name: Isul-MagExchange.esp
+      - 'More Weight.esp'
+  - name: 'Isul-MagExchange.esp'
     req: [ *NVSE ]
-  - name: Mail Order Catalogs PopUp.esp
-    req: [ *NVSE ]
-    msg:
-      - type: say
-        content: Select only ONE .esp when installing this mod.
-      - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO.esp
+  - name: 'Mail Order Catalogs PopUp.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs DLC.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO PopUp.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs DLC PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs DLC.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO DLC.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs DLC PopUp.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO DLC PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO DLC.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: More Weight.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO DLC PopUp.esp'
+    req: [ *NVSE ]
+    msg:
+      - type: say
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
+      - type: say
+        content: 'Outdated. Consider Updating.'
+  - name: 'More Weight.esp'
     inc:
-      - Less Weight.esp
-  - name: BIS - Sprint Mod.esp
+      - 'Less Weight.esp'
+  - name: 'BIS - Sprint Mod.esp'
     tag:
       - Names
-  - name: ACS-HonestHearts.esp
+  - name: 'ACS-HonestHearts.esp'
     tag:
       - Invent
-  - name: ArmourRepairKits.esp
+  - name: 'ArmourRepairKits.esp'
     req: [ *NVSE ]
-  - name: Better Ammo Crafting.esp
+  - name: 'Better Ammo Crafting.esp'
     tag:
       - Names
-  - name: BetterCraftingSorting.esp
+  - name: 'BetterCraftingSorting.esp'
     tag:
       - Names
-  - name: Bountiful Harvest.esp
+  - name: 'Bountiful Harvest.esp'
     inc:
-      - Dynamic Herbalism.esp
-  - name: Dynamic Herbalism.esp
+      - 'Dynamic Herbalism.esp'
+  - name: 'Dynamic Herbalism.esp'
     inc:
-      - Bountiful Harvest.esp
-  - name: 1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp
+      - 'Bountiful Harvest.esp'
+  - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: AEVegas.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'AEVegas.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: AG Shell Casing Fixes-All Five.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'AG Shell Casing Fixes-All Five.esp'
     tag:
       - Graphics
-  - name: AG Shell Casing Fixes Repeater-Service-ThatGun.esp
+  - name: 'AG Shell Casing Fixes Repeater-Service-ThatGun.esp'
     tag:
       - Graphics
-  - name: AG Shell Casing Fixes - OWB.esp
+  - name: 'AG Shell Casing Fixes - OWB.esp'
     tag:
       - Graphics
-  - name: AG Supplementary Uniques.esp
+  - name: 'AG Supplementary Uniques.esp'
     inc:
-      - AG Supplementary Uniques WME.esp
-  - name: AG Supplementary Uniques-Dead Money.esp
+      - 'AG Supplementary Uniques WME.esp'
+  - name: 'AG Supplementary Uniques-Dead Money.esp'
     inc:
-      - AG Supplementary Uniques-Dead Money WME.esp
-  - name: AG Supplementary Uniques-Honest Hearts.esp
+      - 'AG Supplementary Uniques-Dead Money WME.esp'
+  - name: 'AG Supplementary Uniques-Honest Hearts.esp'
     inc:
-      - AG Supplementary Uniques-Honest Hearts WME.esp
-  - name: AG Supplementary Uniques-Lonesome Road.esp
+      - 'AG Supplementary Uniques-Honest Hearts WME.esp'
+  - name: 'AG Supplementary Uniques-Lonesome Road.esp'
     inc:
-      - AG Supplementary Uniques-Lonesome Road WME.esp
-  - name: AG Supplementary Uniques-AllInOne.esp
+      - 'AG Supplementary Uniques-Lonesome Road WME.esp'
+  - name: 'AG Supplementary Uniques-AllInOne.esp'
     inc:
-      - AG Supplementary Uniques.esp
-      - AG Supplementary Uniques-Dead Money.esp
-      - AG Supplementary Uniques-Honest Hearts.esp
-      - AG Supplementary Uniques-Old World Blues.esp
-      - AG Supplementary Uniques-Lonesome Road.esp
-  - name: Ahzteks Weapon Replacements.esp
+      - 'AG Supplementary Uniques.esp'
+      - 'AG Supplementary Uniques-Dead Money.esp'
+      - 'AG Supplementary Uniques-Honest Hearts.esp'
+      - 'AG Supplementary Uniques-Old World Blues.esp'
+      - 'AG Supplementary Uniques-Lonesome Road.esp'
+  - name: 'Ahzteks Weapon Replacements.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: Selective Fire - Ahzteks NV Weapon Overhaul.esp
+        content: 'Outdated.'
+  - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Ahzteks Weapon Overhaul.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Ahzteks Weapon Overhaul.esp'
     inc:
-      - Ahzteks Weapon Overhaul NO xCALIBER.esp
+      - 'Ahzteks Weapon Overhaul NO xCALIBER.esp'
     tag:
       - Deflst
       - Delev
       - Invent
-  - name: Ahzteks Weapon Overhaul NO xCALIBER.esp
+  - name: 'Ahzteks Weapon Overhaul NO xCALIBER.esp'
     inc:
-      - Ahzteks Weapon Overhaul.esp
-  - name: Ahzteks Pistol and SMG Replacements.esp
+      - 'Ahzteks Weapon Overhaul.esp'
+  - name: 'Ahzteks Pistol and SMG Replacements.esp'
     tag:
       - Graphics
       - Names
       - Sound
       - Stats
       - WeaponMods
-  - name: A Load of Balls.esp
+  - name: 'A Load of Balls.esp'
     req: [ *NVSE ]
-  - name: Assault Carbine mods.esp
+  - name: 'Assault Carbine mods.esp'
     tag:
       - WeaponMods
-  - name: Better Binoculars.esp
+  - name: 'Better Binoculars.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Better Binoculars Low.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Better Binoculars Low.esp'
     msg:
       - type: say
-        content: Select only one Better Bincoulars .esp to use.
-        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")
-  - name: BIS - Kobu Better Binoculars Low.esp
+        content: 'Select only one Better Bincoulars .esp to use.'
+        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")'
+  - name: 'BIS - Kobu Better Binoculars Low.esp'
     msg:
       - type: say
-        content: For use with Better Binoculars Low.esp
-        condition: not file("Better Binoculars Low.esp")
+        content: 'For use with Better Binoculars Low.esp'
+        condition: 'not file("Better Binoculars Low.esp")'
     tag:
       - Names
-  - name: Better Binoculars Medium.esp
+  - name: 'Better Binoculars Medium.esp'
     msg:
       - type: say
-        content: Select only one Better Bincoulars .esp to use.
-        condition: file("Better Binoculars Low.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")
-  - name: BIS - Kobu Better Binoculars Medium.esp
+        content: 'Select only one Better Bincoulars .esp to use.'
+        condition: 'file("Better Binoculars Low.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")'
+  - name: 'BIS - Kobu Better Binoculars Medium.esp'
     msg:
       - type: say
-        content: For use with Better Binoculars Medium.esp
-        condition: not file("Better Binoculars Medium.esp")
+        content: 'For use with Better Binoculars Medium.esp'
+        condition: 'not file("Better Binoculars Medium.esp")'
     tag:
       - Names
-  - name: Better Binoculars High.esp
+  - name: 'Better Binoculars High.esp'
     msg:
       - type: say
-        content: Select only one Better Bincoulars .esp to use.
-        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars Low.esp") or file("Better Binoculars Max.esp")
-  - name: BIS - Kobu Better Binoculars High.esp
+        content: 'Select only one Better Bincoulars .esp to use.'
+        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars Low.esp") or file("Better Binoculars Max.esp")'
+  - name: 'BIS - Kobu Better Binoculars High.esp'
     msg:
       - type: say
-        content: For use with Better Binoculars High.esp
-        condition: not file("Better Binoculars High.esp")
+        content: 'For use with Better Binoculars High.esp'
+        condition: 'not file("Better Binoculars High.esp")'
     tag:
       - Names
-  - name: Better Binoculars Max.esp
+  - name: 'Better Binoculars Max.esp'
     msg:
       - type: say
-        content: Select only one Better Bincoulars .esp to use.
-        condition: file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Low.esp")
-  - name: BIS - Kobu Better Binoculars Max.esp
+        content: 'Select only one Better Bincoulars .esp to use.'
+        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Low.esp")'
+  - name: 'BIS - Kobu Better Binoculars Max.esp'
     msg:
       - type: say
-        content: For use with Better Binoculars Max.esp
-        condition: not file("Better Binoculars Max.esp")
+        content: 'For use with Better Binoculars Max.esp'
+        condition: 'not file("Better Binoculars Max.esp")'
     tag:
       - Names
-  - name: better that gun 223.esp
-    tag:
-      - Names
-      - Stats
-  - name: better that gun 44mag.esp
+  - name: 'better that gun 223.esp'
     tag:
       - Names
       - Stats
-  - name: christinecos.esp
+  - name: 'better that gun 44mag.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'christinecos.esp'
     tag:
       - Graphics
-  - name: GRA WRP Compatibility Patch.esp
+  - name: 'GRA WRP Compatibility Patch.esp'
     tag:
       - Graphics
-  - name: Classic Plasma Grenade.esp
+  - name: 'Classic Plasma Grenade.esp'
     tag:
       - Graphics
-  - name: Classic Pulse Grenade (classic sound).esp
+  - name: 'Classic Pulse Grenade (classic sound).esp'
     tag:
       - Graphics
       - Sounds
-  - name: Classic Pulse Grenade (vanilla sound).esp
+  - name: 'Classic Pulse Grenade (vanilla sound).esp'
     tag:
       - Graphics
-  - name: DWM4A1.esp
+  - name: 'DWM4A1.esp'
     inc:
-      - DWM4A1V18Personal.esp
-  - name: DWM4A1V18Personal.esp
+      - 'DWM4A1V18Personal.esp'
+  - name: 'DWM4A1V18Personal.esp'
     inc:
-      - DWM4A1.esp
-  - name: DWUSP45.esp
+      - 'DWM4A1.esp'
+  - name: 'DWUSP45.esp'
     inc:
-      - DWUSP_V18.esp
-  - name: DWUSP_V18.esp
+      - 'DWUSP_V18.esp'
+  - name: 'DWUSP_V18.esp'
     inc:
-      - DWUSP45.esp
-  - name: EnergyBoost.esp
+      - 'DWUSP45.esp'
+  - name: 'EnergyBoost.esp'
     tag:
       - Stats
-  - name: FO3WeaponsRestoration_SoundRestoration.esp
+  - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
     msg:
       - type: say
-        content: User needs to move wav files from fallout 3 sound.bsa to use.
-  - name: ImmaSightinMahLazor.esp
+        content: 'User needs to move wav files from fallout 3 sound.bsa to use.'
+  - name: 'ImmaSightinMahLazor.esp'
     tag:
       - Stats
-  - name: ironsightsnozoom.esp
+  - name: 'ironsightsnozoom.esp'
     inc:
-      - ironsightsnozoom-wmx.esp
-  - name: m110.esp
+      - 'ironsightsnozoom-wmx.esp'
+  - name: 'm110.esp'
     req: [ *NVSE ]
-  - name: Moddable Anti-Materiel Rifle.esp
+  - name: 'Moddable Anti-Materiel Rifle.esp'
     tag:
       - WeaponMods
-  - name: Moddable Anti-Materiel Rifle 2.esp
+  - name: 'Moddable Anti-Materiel Rifle 2.esp'
     tag:
       - WeaponMods
-  - name: Moddable Unique Weps.esp
+  - name: 'Moddable Unique Weps.esp'
     inc:
-      - Moddable Unique Weps.esm
+      - 'Moddable Unique Weps.esm'
     tag:
       - WeaponMods
-  - name: OWB HQ Textures Fix.esp
+  - name: 'OWB HQ Textures Fix.esp'
     tag:
       - Graphics
-  - name: PlasmaRifleAwesomefied.esp
+  - name: 'PlasmaRifleAwesomefied.esp'
     tag:
       - Sound
       - Stats
-  - name: ScientistPack.esp
+  - name: 'ScientistPack.esp'
     inc:
-      - ScientistPackWMX.esp
-  - name: Shotgun Commando.esp
+      - 'ScientistPackWMX.esp'
+  - name: 'Shotgun Commando.esp'
     tag:
       - Stats
-  - name: Shotgun Commando 1.2 Caravan.esp
+  - name: 'Shotgun Commando 1.2 Caravan.esp'
     tag:
       - Stats
-  - name: Stalker Weapons Pack.esp
+  - name: 'Stalker Weapons Pack.esp'
     msg:
       - type: say
-        content: Old, update to latest version.
-  - name: Advanced Recon Tech - Fiendish Power Armor.esp
+        content: 'Old, update to latest version.'
+  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
     msg:
       - type: say
-        content: Merged into nVamp - Advanced Mod Project. Do not use both at the same time.
-        condition: file("nVamp - Core.esm")
-  - name: Armored PA Gloves.esp
+        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
+        condition: 'file("nVamp - Core.esm")'
+  - name: 'Armored PA Gloves.esp'
     tag:
       - Deflst
-  - name: LDFemalePowerArmorPack.esp
+  - name: 'LDFemalePowerArmorPack.esp'
     inc:
-      - LDFemalePowerArmorPack.esm
-  - name: BlackWolf Backpack.esp
+      - 'LDFemalePowerArmorPack.esm'
+  - name: 'BlackWolf Backpack.esp'
     inc:
-      - QS_Blackwolf_NV_Backpackmod.esp
+      - 'QS_Blackwolf_NV_Backpackmod.esp'
     msg:
       - type: say
-        content: To be used with BlackWolf Backpack - Vendor Script Replenish.esp
-        condition: not file("BlackWolf Backpack - Vendor Script Replenish.esp")
-  - name: BlackWolf Backpack - Vendor Script Replenish.esp
+        content: 'To be used with BlackWolf Backpack - Vendor Script Replenish.esp'
+        condition: 'not file("BlackWolf Backpack - Vendor Script Replenish.esp")'
+  - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
     msg:
       - type: say
-        content: To be used with BlackWolf Backpack.esp
-        condition: not file("BlackWolf Backpack.esp")
-  - name: DragonskinNCRPersonnelWearingOutfits.esp
+        content: 'To be used with BlackWolf Backpack.esp'
+        condition: 'not file("BlackWolf Backpack.esp")'
+  - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
     tag:
       - Relev
-  - name: epock.esp
+  - name: 'epock.esp'
     msg:
       - type: say
-        content: Meshes based off of the Type 3 Female Body.
-  - name: ERCA FACTLESS.esp
+        content: 'Meshes based off of the Type 3 Female Body.'
+  - name: 'ERCA FACTLESS.esp'
     inc:
-      - ERCA.esp
-  - name: ERCAFACTLESS.esp
+      - 'ERCA.esp'
+  - name: 'ERCAFACTLESS.esp'
     inc:
-      - ERCA.esp
-  - name: Fiendish Power Armor - Project Nevada.esp
+      - 'ERCA.esp'
+  - name: 'Fiendish Power Armor - Project Nevada.esp'
     msg:
       - type: say
-        content: Merged into nVamp - New Vegas Mod Project. Do not use together.
-        condition: regex("nVamp.*\.esp")
-  - name: FlashlightNVSE.esp
+        content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
+        condition: 'regex("nVamp.*\.esp")'
+  - name: 'FlashlightNVSE.esp'
     inc:
-      - Project Nevada - FlashlightNVSE.esp
-  - name: Project Nevada - FlashlightNVSE.esp
+      - 'Project Nevada - FlashlightNVSE.esp'
+  - name: 'Project Nevada - FlashlightNVSE.esp'
     inc:
-      - FlashlightNVSE.esp
-  - name: ghostbodysuitcamo.esp
+      - 'FlashlightNVSE.esp'
+  - name: 'ghostbodysuitcamo.esp'
     msg:
       - type: say
-        content: "Requires: Type 3 Body Replacer"
-  - name: Ghost Variants.esp
+        content: '"Requires: Type 3 Body Replacer"'
+  - name: 'Ghost Variants.esp'
     inc:
-      - Ghost Variants Safe.esp
-      - Ghost Variants Adjutant.esp
-  - name: Ghost Variants Adjutant.esp
+      - 'Ghost Variants Safe.esp'
+      - 'Ghost Variants Adjutant.esp'
+  - name: 'Ghost Variants Adjutant.esp'
     inc:
-      - Ghost Variants.esp
-      - Ghost Variants Safe.esp
-  - name: Ghost Variants Safe.esp
+      - 'Ghost Variants.esp'
+      - 'Ghost Variants Safe.esp'
+  - name: 'Ghost Variants Safe.esp'
     inc:
-      - Ghost Variants.esp
-      - Ghost Variants Adjutant.esp
-  - name: Hereticus Faction Armors Fading.esp
+      - 'Ghost Variants.esp'
+      - 'Ghost Variants Adjutant.esp'
+  - name: 'Hereticus Faction Armors Fading.esp'
     tag:
       - Names
-  - name: HHType3tribalhands.esp
+  - name: 'HHType3tribalhands.esp'
     tag:
       - Body-F
-  - name: JillBSAA Multicolor.esp
+  - name: 'JillBSAA Multicolor.esp'
     msg:
       - type: say
-        content: "Requires: Type 3 Body Replacer"
+        content: '"Requires: Type 3 Body Replacer"'
     tag:
       - Invent
-  - name: JNinjasNinjasComeBack.esp
+  - name: 'JNinjasNinjasComeBack.esp'
     inc:
-      - JNinjasStealthFieldStops.esp
-      - JNinjasStealthFieldStopsNinjasComeBack.esp
-  - name: JNinjasStealthFieldStops.esp
+      - 'JNinjasStealthFieldStops.esp'
+      - 'JNinjasStealthFieldStopsNinjasComeBack.esp'
+  - name: 'JNinjasStealthFieldStops.esp'
     inc:
-      - JNinjasNinjasComeBack.esp
-      - JNinjasStealthFieldStopsNinjasComeBack.esp
-  - name: JNinjasStealthFieldStopsNinjasComeBack.esp
+      - 'JNinjasNinjasComeBack.esp'
+      - 'JNinjasStealthFieldStopsNinjasComeBack.esp'
+  - name: 'JNinjasStealthFieldStopsNinjasComeBack.esp'
     inc:
-      - JNinjasNinjasComeBack.esp
-      - JNinjasStealthFieldStops.esp
-  - name: KDS Wearable Backpacks.esp
+      - 'JNinjasNinjasComeBack.esp'
+      - 'JNinjasStealthFieldStops.esp'
+  - name: 'KDS Wearable Backpacks.esp'
     tag:
       - Invent
-  - name: NCR Black Ops Stealth Armor.esp
+  - name: 'NCR Black Ops Stealth Armor.esp'
     msg:
       - type: say
-        content: Due to a master issue this plugin requires ClassicPack.esm and can be fixed manually using FNVEdit.
-  - name: NCR Rearmament v1.5.esp
+        content: 'Due to a master issue this plugin requires ClassicPack.esm and can be fixed manually using FNVEdit.'
+  - name: 'NCR Rearmament v1.5.esp'
     inc:
-      - NCR Rearmament v1.5 (Lore).esp
-  - name: NCR Rearmament v1.5 (Lore).esp
+      - 'NCR Rearmament v1.5 (Lore).esp'
+  - name: 'NCR Rearmament v1.5 (Lore).esp'
     inc:
-      - NCR Rearmament v1.5.esp
-  - name: Nidaoutfitv1.esp
+      - 'NCR Rearmament v1.5.esp'
+  - name: 'Nidaoutfitv1.esp'
     msg:
       - type: say
-        content: Designed for the Type3 Female Body Replacer variants.
-  - name: Powered Power Armor.esp
+        content: 'Designed for the Type3 Female Body Replacer variants.'
+  - name: 'Powered Power Armor.esp'
     tag:
       - Deflst
-  - name: QS_Blackwolf_NV_Backpackmod.esp
+  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     inc:
-      - BlackWolf Backpack.esp
-  - name: ReworkStuff.esp
+      - 'BlackWolf Backpack.esp'
+  - name: 'ReworkStuff.esp'
     msg:
       - type: say
-        content: "Requires: Type 3 Body Replacer"
-  - name: Rivens Costume Mod.esp
+        content: '"Requires: Type 3 Body Replacer"'
+  - name: 'Rivens Costume Mod.esp'
     msg:
       - type: say
-        content: Designed for Robert's Male Body and Type3 Female Body variants.
-  - name: Seeker Veronica.esp
+        content: 'Designed for Robert''s Male Body and Type3 Female Body variants.'
+  - name: 'Seeker Veronica.esp'
     tag:
       - Invent
-  - name: sexysleepwear.esp
+  - name: 'sexysleepwear.esp'
     inc:
-      - sexysleepwearnr.esp
-  - name: sexysleepwearnr.esp
+      - 'sexysleepwearnr.esp'
+  - name: 'sexysleepwearnr.esp'
     inc:
-      - sexysleepwear.esp
-  - name: Type3 Leather Armors.esp
+      - 'sexysleepwear.esp'
+  - name: 'Type3 Leather Armors.esp'
     msg:
       - type: say
-        content: Designed for the Type3 Female Body Replacer.
-  - name: Type3 Leather Armors-lvld.esp
+        content: 'Designed for the Type3 Female Body Replacer.'
+  - name: 'Type3 Leather Armors-lvld.esp'
     msg:
       - type: say
-        content: "Requires: meshes and textures from New Vegas Type3 Leather Armors."
-  - name: w44Satchels - Full.esp
+        content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
+  - name: 'w44Satchels - Full.esp'
     inc:
-      - w44Satchels - Lite.esp
-  - name: w44Satchels - Lite.esp
+      - 'w44Satchels - Lite.esp'
+  - name: 'w44Satchels - Lite.esp'
     inc:
-      - w44Satchels - Full.esp
-  - name: LingsPrettyThings.esp
+      - 'w44Satchels - Full.esp'
+  - name: 'LingsPrettyThings.esp'
     tag:
       - Eyes
       - Hair
@@ -1973,1318 +1970,1318 @@ plugins:
       - R.Mouth
       - R.Teeth
       - Voice-F
-  - name: Machienzo - NPC Cosmetic Fixes DLC01.esp
+  - name: 'Machienzo - NPC Cosmetic Fixes DLC01.esp'
     msg:
       - type: say
-        content: Old, update to NVCE.
-  - name: Machienzo - NPC Cosmetic Fixes DLC02.esp
+        content: 'Old, update to NVCE.'
+  - name: 'Machienzo - NPC Cosmetic Fixes DLC02.esp'
     msg:
       - type: say
-        content: Old, update to NVCE.
-  - name: Machienzo - NPC Cosmetic Fixes DLC03.esp
+        content: 'Old, update to NVCE.'
+  - name: 'Machienzo - NPC Cosmetic Fixes DLC03.esp'
     msg:
       - type: say
-        content: Old, update to NVCE.
-  - name: NVCE DLC01.esp
+        content: 'Old, update to NVCE.'
+  - name: 'NVCE DLC01.esp'
     tag:
       - Actors.ACBS
       - NPC.Race
       - NpcFaces
-  - name: NVCE DLC02.esp
+  - name: 'NVCE DLC02.esp'
     tag:
       - Actors.ACBS
       - Invent
       - NPC.Race
       - NpcFaces
-  - name: NVCE DLC03.esp
+  - name: 'NVCE DLC03.esp'
     tag:
       - Actors.ACBS
       - Body-M
       - NpcFaces
-  - name: NVCE DLC04.esp
+  - name: 'NVCE DLC04.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
-  - name: NVR- Lore version.esp
+  - name: 'NVR- Lore version.esp'
     inc:
-      - NVR- Recommended.esp
+      - 'NVR- Recommended.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
-  - name: NVR- Recommended.esp
+  - name: 'NVR- Recommended.esp'
     inc:
-      - NVR- Lore version.esp
+      - 'NVR- Lore version.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
-  - name: New Vegas redesigned- Honest Hearts.esp
+  - name: 'New Vegas redesigned- Honest Hearts.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
-  - name: Voice dissonance fix.esp
+  - name: 'Voice dissonance fix.esp'
     tag:
       - NpcFaces
-  - name: AWOPLowRobots.esp
+  - name: 'AWOPLowRobots.esp'
     inc:
-      - AWOPVeryLowRobots.esp
-  - name: AWOPVeryLowRobots.esp
+      - 'AWOPVeryLowRobots.esp'
+  - name: 'AWOPVeryLowRobots.esp'
     inc:
-      - AWOPLowRobots.esp
-  - name: AWOP-AhztekWeaponPatch.esp
+      - 'AWOPLowRobots.esp'
+  - name: 'AWOP-AhztekWeaponPatch.esp'
     tag:
       - Invent
-  - name: AWOPCaliberXAmmoPatch.esp
+  - name: 'AWOPCaliberXAmmoPatch.esp'
     inc:
-      - AWOPCaliberXAmmoPatchLOW.esp
+      - 'AWOPCaliberXAmmoPatchLOW.esp'
     tag:
       - Invent
-  - name: AWOPCaliberXAmmoPatchLOW.esp
+  - name: 'AWOPCaliberXAmmoPatchLOW.esp'
     inc:
-      - AWOPCaliberXAmmoPatch.esp
+      - 'AWOPCaliberXAmmoPatch.esp'
     tag:
       - Invent
-  - name: MMUE-CP-AWOP+NVInteriors.esp
+  - name: 'MMUE-CP-AWOP+NVInteriors.esp'
     inc:
-      - MMUE-CP-AWOP.esp
-  - name: Companion Module Pack.esp
+      - 'MMUE-CP-AWOP.esp'
+  - name: 'Companion Module Pack.esp'
     inc:
-      - Companion Sandbox Mode.esp
-      - UnlimitedCompanions.esp
-      - dressup.esp
-      - AllCompanionsEssential 2.0.esp
-      - AllCompanionsEssential 2.0 DLC1.esp
-      - AllCompanionsEssential 2.0 DLC2.esp
-      - AllCompanionsEssential 2.0b.esp
-      - Comp_Idles_NV.esp
-      - Companions Relax.esp
-  - name: Companion Weapons - Special Ammo.esp
+      - 'Companion Sandbox Mode.esp'
+      - 'UnlimitedCompanions.esp'
+      - 'dressup.esp'
+      - 'AllCompanionsEssential 2.0.esp'
+      - 'AllCompanionsEssential 2.0 DLC1.esp'
+      - 'AllCompanionsEssential 2.0 DLC2.esp'
+      - 'AllCompanionsEssential 2.0b.esp'
+      - 'Comp_Idles_NV.esp'
+      - 'Companions Relax.esp'
+  - name: 'Companion Weapons - Special Ammo.esp'
     inc:
-      - Companion Weapons - Special Ammo - Dead Money.esp
-  - name: Companion Weapons - Special Ammo - Dead Money.esp
+      - 'Companion Weapons - Special Ammo - Dead Money.esp'
+  - name: 'Companion Weapons - Special Ammo - Dead Money.esp'
     inc:
-      - Companion Weapons - Special Ammo.esp
-  - name: CompanionLevel30Cap.esp
+      - 'Companion Weapons - Special Ammo.esp'
+  - name: 'CompanionLevel30Cap.esp'
     inc:
-      - HigherCompanionLevelCap.esp
+      - 'HigherCompanionLevelCap.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - Actors.ACBS
-  - name: HigherCompanionLevelCap.esp
+  - name: 'HigherCompanionLevelCap.esp'
     inc:
-      - CompanionLevel30Cap.esp
-  - name: Correction - Passive 2 Option.esp
+      - 'CompanionLevel30Cap.esp'
+  - name: 'Correction - Passive 2 Option.esp'
     inc:
-      - Correction - Passive.esp
-  - name: Correction - Passive.esp
+      - 'Correction - Passive.esp'
+  - name: 'Correction - Passive.esp'
     inc:
-      - Correction - Passive 2 Option.esp
-  - name: Cass Passive Fix.esp
+      - 'Correction - Passive 2 Option.esp'
+  - name: 'Cass Passive Fix.esp'
     inc:
-      - Cass Passive Fix 2 Option.esp
-  - name: Cass Passive Fix 2 Option.esp
+      - 'Cass Passive Fix 2 Option.esp'
+  - name: 'Cass Passive Fix 2 Option.esp'
     inc:
-      - Cass Passive Fix.esp
-  - name: CCC - Save Cass.esp
+      - 'Cass Passive Fix.esp'
+  - name: 'CCC - Save Cass.esp'
     msg:
       - type: say
-        content: For use with the Save Cass mod.
-        condition: not file("SaveCass.esp")
-  - name: EZ_VanillaFollowers.esp
+        content: 'For use with the Save Cass mod.'
+        condition: 'not file("SaveCass.esp")'
+  - name: 'EZ_VanillaFollowers.esp'
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
-  - name: LilyFawkes.esp
+  - name: 'LilyFawkes.esp'
     inc:
-      - LilyArmored.esp
-  - name: LilyArmored.esp
+      - 'LilyArmored.esp'
+  - name: 'LilyArmored.esp'
     inc:
-      - LilyFawkes.esp
-  - name: NVPhalanx.esp
+      - 'LilyFawkes.esp'
+  - name: 'NVPhalanx.esp'
     msg:
       - type: say
-        content: "Incompatible with a majority of other companion mods. Be aware when installing."
+        content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
       - C.Owner
       - Scripts
-  - name: RexReplacerEss.esp
+  - name: 'RexReplacerEss.esp'
     tag:
       - Graphics
-  - name: BetterRepairKits.esp
+  - name: 'BetterRepairKits.esp'
     msg:
       - type: say
-        content: Old
-  - name: BetterRepairKits2.esp
+        content: 'Old'
+  - name: 'BetterRepairKits2.esp'
     msg:
       - type: say
-        content: Old
-  - name: Cowboy Repeater with Vanilla Name.esp
+        content: 'Old'
+  - name: 'Cowboy Repeater with Vanilla Name.esp'
     msg:
       - type: say
-        content: For use with GunSmith.esm and GunSmith Guns Upgrade.esp
-        condition: not file("GunSmith.esm") or not file("GunSmith Guns Upgrade.esp")
-  - name: Real Weapon Names.esp
+        content: 'For use with GunSmith.esm and GunSmith Guns Upgrade.esp'
+        condition: 'not file("GunSmith.esm") or not file("GunSmith Guns Upgrade.esp")'
+  - name: 'Real Weapon Names.esp'
     tag:
       - Names
-  - name: Real Weapon Names - NPC Compnaion Weapons.esp
+  - name: 'Real Weapon Names - NPC Compnaion Weapons.esp'
     tag:
       - Names
-  - name: Real Weapon Names - Dead Money.esp
+  - name: 'Real Weapon Names - Dead Money.esp'
     tag:
       - Names
-  - name: Real Weapon Names - Honest Hearts.esp
+  - name: 'Real Weapon Names - Honest Hearts.esp'
     tag:
       - Names
-  - name: Real Weapon Names - Project Nevada.esp
+  - name: 'Real Weapon Names - Project Nevada.esp'
     tag:
       - Names
-  - name: MiscItemIconsNV.esp
+  - name: 'MiscItemIconsNV.esp'
     inc:
-      - T3T_MiscItemIconsNV.esp
+      - 'T3T_MiscItemIconsNV.esp'
     tag:
       - Graphics
       - NoMerge
-  - name: T3T_MiscItemIconsNV.esp
+  - name: 'T3T_MiscItemIconsNV.esp'
     inc:
-      - MiscItemIconsNV.esp
+      - 'MiscItemIconsNV.esp'
     msg:
       - type: say
-        content: Outdated. Consider updating.
+        content: 'Outdated. Consider updating.'
     tag:
       - Graphics
-  - name: BIS - T3T_MiscItemIconsNV 0.7.esp
+  - name: 'BIS - T3T_MiscItemIconsNV 0.7.esp'
     tag:
       - Names
-  - name: BIS - MiscItemIconsNV 0.9.esp
+  - name: 'BIS - MiscItemIconsNV 0.9.esp'
     tag:
       - Names
-  - name: Sorter - Combined.esp
+  - name: 'Sorter - Combined.esp'
     tag:
       - Names
-  - name: Sorter - Dead Money.esp
+  - name: 'Sorter - Dead Money.esp'
     tag:
       - Names
-  - name: Sorter - Combined - T3T Icon Compatch.esp
+  - name: 'Sorter - Combined - T3T Icon Compatch.esp'
     msg:
       - type: say
-        content: Outdated as of Version 2.0; Phased into Sorted - Combined.esp
+        content: 'Outdated as of Version 2.0; Phased into Sorted - Combined.esp'
     tag:
       - Names
-  - name: Sorter - Combined - Aid Crafting.esp
+  - name: 'Sorter - Combined - Aid Crafting.esp'
     msg:
       - type: say
-        content: Outdated as of Version 2.0; Phased into Sorted - Combined.esp
+        content: 'Outdated as of Version 2.0; Phased into Sorted - Combined.esp'
     tag:
       - Names
-  - name: Sorter - Books.esp
+  - name: 'Sorter - Books.esp'
     tag:
       - Names
-  - name: Sorter - Magazines.esp
+  - name: 'Sorter - Magazines.esp'
     tag:
       - Names
-  - name: Sorter - Combined - Weighted.esp
+  - name: 'Sorter - Combined - Weighted.esp'
     tag:
       - Names
-  - name: Sorter - Empty Consumables.esp
+  - name: 'Sorter - Empty Consumables.esp'
     tag:
       - Names
-  - name: Sorter - Empty Consumables - Dead Money.esp
+  - name: 'Sorter - Empty Consumables - Dead Money.esp'
     tag:
       - Names
-  - name: Inventory Sorter - Moddable Unique Weps.esp
+  - name: 'Inventory Sorter - Moddable Unique Weps.esp'
     tag:
       - Names
-  - name: DrugsAreBadMKay-IS.esp
+  - name: 'DrugsAreBadMKay-IS.esp'
     tag:
       - Names
-  - name: FeelingIrradiated-IS.esp
+  - name: 'FeelingIrradiated-IS.esp'
     tag:
       - Names
-  - name: IntegratedFullDLC.esp
-  - name: Max Level 50.esp
+  - name: 'IntegratedFullDLC.esp'
+  - name: 'Max Level 50.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with Other mods that change the max level."
-  - name: Max Level 60.esp
+        content: '"Incompatible with Other mods that change the max level."'
+  - name: 'Max Level 60.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with Other mods that change the max level."
-  - name: Max Level 75.esp
+        content: '"Incompatible with Other mods that change the max level."'
+  - name: 'Max Level 75.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with Other mods that change the max level."
-  - name: Max Level 100.esp
+        content: '"Incompatible with Other mods that change the max level."'
+  - name: 'Max Level 100.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with Other mods that change the max level."
-  - name: Max Level 255.esp
+        content: '"Incompatible with Other mods that change the max level."'
+  - name: 'Max Level 255.esp'
     req: [ *NVSE ]
     msg:
       - type: say
-        content: "Incompatible with Other mods that change the max level."
-  - name: CCC - weaker weapons.esp
+        content: '"Incompatible with Other mods that change the max level."'
+  - name: 'CCC - weaker weapons.esp'
     msg:
       - type: say
-        content: Does not require CCC to work.
-  - name: Couriers Stash - Package Selection Menu.esp
+        content: 'Does not require CCC to work.'
+  - name: 'Couriers Stash - Package Selection Menu.esp'
     msg:
       - type: say
-        content: Does not require all the Courier's Stash/Pre-order packs to work.
-  - name: Delay DLC - DM + HH + OWB.esp
+        content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
+  - name: 'Delay DLC - DM + HH + OWB.esp'
     msg:
       - type: say
-        content: Old, update to Delay DLC - DM + HH + OWB + LR.esp
-  - name: Dynamic Quantity Prompt.esp
+        content: 'Old, update to Delay DLC - DM + HH + OWB + LR.esp'
+  - name: 'Dynamic Quantity Prompt.esp'
     req: [ *NVSE ]
-  - name: BIS - Grenade Hotkey.esp
+  - name: 'BIS - Grenade Hotkey.esp'
     tag:
       - Names
-  - name: Imp's More Complex Needs - JA - SORTED.esp
+  - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg:
       - type: say
-        content: Older version. Consider using version 1.0.3 HotfixA or later.
+        content: 'Older version. Consider using version 1.0.3 HotfixA or later.'
     tag:
       - Names
-  - name: IMCNNV - Sorted.esp
+  - name: 'IMCNNV - Sorted.esp'
     tag:
       - Names
-  - name: Intelligence_And_Skill_Points_Hardcore.esp
+  - name: 'Intelligence_And_Skill_Points_Hardcore.esp'
     inc:
-      - Intelligence_And_Skill_Points_High.esp
-      - Intelligence_And_Skill_Points_Increased.esp
-      - Intelligence_And_Skill_Points_Normal.esp
-      - Intelligence_And_Skill_Points_Very_High.esp
-  - name: Intelligence_And_Skill_Points_High.esp
+      - 'Intelligence_And_Skill_Points_High.esp'
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_High.esp'
     inc:
-      - Intelligence_And_Skill_Points_Hardcore.esp
-      - Intelligence_And_Skill_Points_Increased.esp
-      - Intelligence_And_Skill_Points_Normal.esp
-      - Intelligence_And_Skill_Points_Very_High.esp
-  - name: Intelligence_And_Skill_Points_Increased.esp
+      - 'Intelligence_And_Skill_Points_Hardcore.esp'
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_Increased.esp'
     inc:
-      - Intelligence_And_Skill_Points_Hardcore.esp
-      - Intelligence_And_Skill_Points_High.esp
-      - Intelligence_And_Skill_Points_Normal.esp
-      - Intelligence_And_Skill_Points_Very_High.esp
-  - name: Intelligence_And_Skill_Points_Normal.esp
+      - 'Intelligence_And_Skill_Points_Hardcore.esp'
+      - 'Intelligence_And_Skill_Points_High.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_Normal.esp'
     inc:
-      - Intelligence_And_Skill_Points_Hardcore.esp
-      - Intelligence_And_Skill_Points_High.esp
-      - Intelligence_And_Skill_Points_Increased.esp
-      - Intelligence_And_Skill_Points_Very_High.esp
-  - name: Intelligence_And_Skill_Points_Very_High.esp
+      - 'Intelligence_And_Skill_Points_Hardcore.esp'
+      - 'Intelligence_And_Skill_Points_High.esp'
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_Very_High.esp'
     inc:
-      - Intelligence_And_Skill_Points_Hardcore.esp
-      - Intelligence_And_Skill_Points_High.esp
-      - Intelligence_And_Skill_Points_Increased.esp
-      - Intelligence_And_Skill_Points_Normal.esp
-  - name: Invisibility for No Reputation.esp
+      - 'Intelligence_And_Skill_Points_Hardcore.esp'
+      - 'Intelligence_And_Skill_Points_High.esp'
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+  - name: 'Invisibility for No Reputation.esp'
     req: [ *NVSE ]
-  - name: lexx-no-dialog-tags-Deutsch.esp
+  - name: 'lexx-no-dialog-tags-Deutsch.esp'
     inc:
-      - lexx-no-dialog-tags-English.esp
-  - name: lexx-no-dialog-tags-English.esp
+      - 'lexx-no-dialog-tags-English.esp'
+  - name: 'lexx-no-dialog-tags-English.esp'
     inc:
-      - lexx-no-dialog-tags-Deutsch.esp
-  - name: LFox Bottle That Water.esp
+      - 'lexx-no-dialog-tags-Deutsch.esp'
+  - name: 'LFox Bottle That Water.esp'
     tag:
       - Names
       - Scripts
-  - name: Moddable Unique Weps.esp
+  - name: 'Moddable Unique Weps.esp'
     inc:
-      - Moddable Unique Weps.esm
-  - name: More Realistic Aiming.esp
+      - 'Moddable Unique Weps.esm'
+  - name: 'More Realistic Aiming.esp'
     req: [ *NVSE ]
-  - name: NoDegredation.esp
+  - name: 'NoDegredation.esp'
     msg:
       - type: say
-        content: Old, update to NoDegradation.esp.
-  - name: NVDLC04 Allegiance.esp
+        content: 'Old, update to NoDegradation.esp.'
+  - name: 'NVDLC04 Allegiance.esp'
     inc:
-      - NVDLC04 Allegiance w Duster.esp
-  - name: NVDLC04 Allegiance w Duster.esp
+      - 'NVDLC04 Allegiance w Duster.esp'
+  - name: 'NVDLC04 Allegiance w Duster.esp'
     inc:
-      - NVDLC04 Allegiance.esp
-  - name: BIS - Project Nevada - Rebalance.esp
+      - 'NVDLC04 Allegiance.esp'
+  - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
-  - name: Permanent_Weapon_Shells_Heavy.esp
+  - name: 'Permanent_Weapon_Shells_Heavy.esp'
     inc:
-      - Permanent_Weapon_Shells_Light.esp
-      - Permanent_Weapon_Shells_Medium.esp
-      - Permanent_Weapon_Shells_Very_Heavy.esp
-      - Permanent_Weapon_Shells_Very_Light.esp
-  - name: Permanent_Weapon_Shells_Light.esp
+      - 'Permanent_Weapon_Shells_Light.esp'
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Light.esp'
     inc:
-      - Permanent_Weapon_Shells_Heavy.esp
-      - Permanent_Weapon_Shells_Medium.esp
-      - Permanent_Weapon_Shells_Very_Heavy.esp
-      - Permanent_Weapon_Shells_Very_Light.esp
-  - name: Permanent_Weapon_Shells_Medium.esp
+      - 'Permanent_Weapon_Shells_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Medium.esp'
     inc:
-      - Permanent_Weapon_Shells_Heavy.esp
-      - Permanent_Weapon_Shells_Light.esp
-      - Permanent_Weapon_Shells_Very_Heavy.esp
-      - Permanent_Weapon_Shells_Very_Light.esp
-  - name: Permanent_Weapon_Shells_Very_Heavy.esp
+      - 'Permanent_Weapon_Shells_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Light.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Very_Heavy.esp'
     inc:
-      - Permanent_Weapon_Shells_Heavy.esp
-      - Permanent_Weapon_Shells_Light.esp
-      - Permanent_Weapon_Shells_Medium.esp
-      - Permanent_Weapon_Shells_Very_Light.esp
-  - name: Permanent_Weapon_Shells_Very_Light.esp
+      - 'Permanent_Weapon_Shells_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Light.esp'
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Very_Light.esp'
     inc:
-      - Permanent_Weapon_Shells_Heavy.esp
-      - Permanent_Weapon_Shells_Light.esp
-      - Permanent_Weapon_Shells_Medium.esp
-      - Permanent_Weapon_Shells_Very_Heavy.esp
-  - name: RespawnerImprovedEx.esp
+      - 'Permanent_Weapon_Shells_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Light.esp'
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+  - name: 'RespawnerImprovedEx.esp'
     msg:
       - type: say
-        content: "Requires: Respawn Timer (Any Version)"
-  - name: Quick Trade.esp
+        content: '"Requires: Respawn Timer (Any Version)"'
+  - name: 'Quick Trade.esp'
     req: [ *MCM ]
-  - name: Reactive People - Ultimatum.esp
+  - name: 'Reactive People - Ultimatum.esp'
     req: [ *NVSE ]
-  - name: Realistic Weight.esp
+  - name: 'Realistic Weight.esp'
     tag:
       - NoMerge
       - Stats
-  - name: Realistic Weight Overhaul.esp
+  - name: 'Realistic Weight Overhaul.esp'
     tag:
       - NoMerge
       - Stats
-  - name: RealisticWeaponRecoil.esp
+  - name: 'RealisticWeaponRecoil.esp'
     inc:
-      - RealisticWeaponRecoilDM.esp
+      - 'RealisticWeaponRecoilDM.esp'
     req: [ *NVSE ]
-  - name: RealisticWeaponRecoilDM.esp
+  - name: 'RealisticWeaponRecoilDM.esp'
     inc:
-      - RealisticWeaponRecoil.esp
-  - name: Real Time Entry Skills.esp
+      - 'RealisticWeaponRecoil.esp'
+  - name: 'Real Time Entry Skills.esp'
     req: [ *NVSE ]
-  - name: Recharge Low.esp
+  - name: 'Recharge Low.esp'
     inc:
-      - Recharge High.esp
+      - 'Recharge High.esp'
     msg:
       - type: say
-        content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
-  - name: Recharge High.esp
+        content: 'For use with E.C.K.O. Energy Cell Killer Overhaul.esp'
+  - name: 'Recharge High.esp'
     inc:
-      - Recharge Low.esp
+      - 'Recharge Low.esp'
     msg:
       - type: say
-        content: For use with E.C.K.O. Energy Cell Killer Overhaul.esp
-  - name: RRDynamicXPonly.esp
+        content: 'For use with E.C.K.O. Energy Cell Killer Overhaul.esp'
+  - name: 'RRDynamicXPonly.esp'
     req: [ *NVSE ]
-  - name: Runner.esp
+  - name: 'Runner.esp'
     req: [ *NVSE ]
-  - name: SpecialEveryFiveLevels.esp
+  - name: 'SpecialEveryFiveLevels.esp'
     inc:
-      - SpecialEveryThreeLevels.esp
-      - SpecialEveryTwoLevels.esp
-  - name: SpecialEveryThreeLevels.esp
+      - 'SpecialEveryThreeLevels.esp'
+      - 'SpecialEveryTwoLevels.esp'
+  - name: 'SpecialEveryThreeLevels.esp'
     inc:
-      - SpecialEveryThreeLevels.esp
-      - SpecialEveryTwoLevels.esp
-  - name: SpecialEveryTwoLevels.esp
+      - 'SpecialEveryThreeLevels.esp'
+      - 'SpecialEveryTwoLevels.esp'
+  - name: 'SpecialEveryTwoLevels.esp'
     inc:
-      - SpecialEveryThreeLevels.esp
-      - SpecialEveryTwoLevels.esp
-  - name: SubtitlesHotkeyNV.esp
+      - 'SpecialEveryThreeLevels.esp'
+      - 'SpecialEveryTwoLevels.esp'
+  - name: 'SubtitlesHotkeyNV.esp'
     req: [ *NVSE ]
-  - name: UltimateRecoil.esp
-    req: [ *NVSE ]
-    inc:
-      - RealisticWeaponRecoil.esp
-      - RealisticWeaponRecoilDM.esp
-  - name: UltimateRecoilPN.esp
+  - name: 'UltimateRecoil.esp'
     req: [ *NVSE ]
     inc:
-      - UltimateRecoil.esp
+      - 'RealisticWeaponRecoil.esp'
+      - 'RealisticWeaponRecoilDM.esp'
+  - name: 'UltimateRecoilPN.esp'
+    req: [ *NVSE ]
+    inc:
+      - 'UltimateRecoil.esp'
     msg:
       - type: say
-        content: For use with Project Nevada - Core.esm
-        condition: not file("Project Nevada - Core.esm")
-  - name: VarmintRifle22LR.esp
+        content: 'For use with Project Nevada - Core.esm'
+        condition: 'not file("Project Nevada - Core.esm")'
+  - name: 'VarmintRifle22LR.esp'
     inc:
-      - WMX-VarmintRifle22LR.esp
-  - name: Weight_Balance.esp
+      - 'WMX-VarmintRifle22LR.esp'
+  - name: 'Weight_Balance.esp'
     tag:
       - Stats
-  - name: Weight_Balance_v07.esp
+  - name: 'Weight_Balance_v07.esp'
     tag:
       - Stats
-  - name: Weight_Balance_v10.esp
+  - name: 'Weight_Balance_v10.esp'
     tag:
       - Stats
-  - name: Weight_Rebalance_v10.esp.
+  - name: 'Weight_Rebalance_v10.esp.'
     tag:
       - Stats
-  - name: BIS - Weight_Balance_v10.esp
+  - name: 'BIS - Weight_Balance_v10.esp'
     tag:
       - Names
-  - name: WeaponModsExpanded.esp
+  - name: 'WeaponModsExpanded.esp'
     inc:
-      - RH_IRONSIGHTS_NV.esm
-      - Weapon Mod Expansion.esm
-      - Weapon Mod Expansion.esp
+      - 'RH_IRONSIGHTS_NV.esm'
+      - 'Weapon Mod Expansion.esm'
+      - 'Weapon Mod Expansion.esp'
     tag:
       - Delev
       - Invent
       - WeaponMods
-  - name: WMXUE.esp
+  - name: 'WMXUE.esp'
     inc:
-      - RH_IRONSIGHTS_NV.esm
-      - Weapon Mod Expansion.esm
-      - Weapon Mod Expansion.esp
-      - WeaponModsExpanded.esp
+      - 'RH_IRONSIGHTS_NV.esm'
+      - 'Weapon Mod Expansion.esm'
+      - 'Weapon Mod Expansion.esp'
+      - 'WeaponModsExpanded.esp'
     tag:
       - Delev
       - Invent
       - WeaponMods
-  - name: WMX - Sorted.esp
+  - name: 'WMX - Sorted.esp'
     msg:
       - type: say
-        content: Merged into the main mod; No longer required.
-  - name: WMXArenovalisRiotShottieCompat.esp
+        content: 'Merged into the main mod; No longer required.'
+  - name: 'WMXArenovalisRiotShottieCompat.esp'
     msg:
       - type: say
-        content: Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.
-  - name: WMXMilleniaThatGunRetexCompat.esp
+        content: 'Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.'
+  - name: 'WMXMilleniaThatGunRetexCompat.esp'
     msg:
       - type: say
-        content: Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.
-  - name: WMXTemporaryPatch.esp
+        content: 'Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.'
+  - name: 'WMXTemporaryPatch.esp'
     msg:
       - type: say
-        content: Outdated. Please update to Version 1.7 of WMX.
-  - name: Improved Sound FX - WMX - Weapon Sharing Fix.esp
+        content: 'Outdated. Please update to Version 1.7 of WMX.'
+  - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
     tag:
       - Sound
-  - name: WMX-AWOP Patch.esp
+  - name: 'WMX-AWOP Patch.esp'
     tag:
       - WeaponMods
-  - name: WMX-AWOP-Overhaul.esp
+  - name: 'WMX-AWOP-Overhaul.esp'
     tag:
       - WeaponMods
-  - name: Frequency - WMX Patch.esp
+  - name: 'Frequency - WMX Patch.esp'
     tag:
       - Graphics
-  - name: WMX-ShotgunCommando.esp
+  - name: 'WMX-ShotgunCommando.esp'
     inc:
-      - WMX-Arwen_NV_Realism.esp
-  - name: WMX-Arwen_NV_Realism.esp
+      - 'WMX-Arwen_NV_Realism.esp'
+  - name: 'WMX-Arwen_NV_Realism.esp'
     inc:
-      - WMX-ShotgunCommando.esp
-  - name: Project Nevada - WMX.esp
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - WeaponMods
-  - name: WMXUE-PN.esp
+      - 'WMX-ShotgunCommando.esp'
+  - name: 'Project Nevada - WMX.esp'
     tag:
       - Graphics
       - Invent
       - Names
       - WeaponMods
-  - name: Frequency - PN+WMX Patch.esp
+  - name: 'WMXUE-PN.esp'
     tag:
       - Graphics
-  - name: ironsightsnozoom-wmx.esp
+      - Invent
+      - Names
+      - WeaponMods
+  - name: 'Frequency - PN+WMX Patch.esp'
+    tag:
+      - Graphics
+  - name: 'ironsightsnozoom-wmx.esp'
     inc:
-      - ironsightsnozoom.esp
-  - name: Real Weapon Names - WMX.esp
+      - 'ironsightsnozoom.esp'
+  - name: 'Real Weapon Names - WMX.esp'
     tag:
       - Names
-  - name: WMX-VarmintRifle22LR.esp
+  - name: 'WMX-VarmintRifle22LR.esp'
     inc:
-      - VarmintRifle22LR.esp
-  - name: WMX-ModernWeapons.esp
+      - 'VarmintRifle22LR.esp'
+  - name: 'WMX-ModernWeapons.esp'
     tag:
       - Invent
-  - name: ACS-WMXModernWeapons.esp
+  - name: 'ACS-WMXModernWeapons.esp'
     tag:
       - Invent
-  - name: WMX-DeadMoney.esp
+  - name: 'WMX-DeadMoney.esp'
     tag:
       - Invent
-  - name: Real Weapon Names - WMX - Dead Money.esp
+  - name: 'Real Weapon Names - WMX - Dead Money.esp'
     tag:
       - Names
-  - name: WMX-HonestHearts.esp
+  - name: 'WMX-HonestHearts.esp'
     tag:
       - Invent
-  - name: WMX-OldWorldBlues.esp
+  - name: 'WMX-OldWorldBlues.esp'
     tag:
       - Invent
-  - name: WMX-LonesomeRoad.esp
+  - name: 'WMX-LonesomeRoad.esp'
     tag:
       - Invent
-  - name: WMX-GunRunnersArsenal.esp
+  - name: 'WMX-GunRunnersArsenal.esp'
     tag:
       - Invent
       - WeaponMods
-  - name: Improved Sound FX - WMX - Merged Major DLCs.esp
+  - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
     inc:
-      - Improved Sound FX - DM.esp
-      - Improved Sound FX - HH.esp
-      - Improved Sound FX - HH Sharing Fix.esp
-      - Improved Sound FX - OWB Sharing Fix.esp
-      - Improved Sound FX - LR Sharing Fix.esp
-      - Improved Sound FX - Merged Major DLCs.esp
+      - 'Improved Sound FX - DM.esp'
+      - 'Improved Sound FX - HH.esp'
+      - 'Improved Sound FX - HH Sharing Fix.esp'
+      - 'Improved Sound FX - OWB Sharing Fix.esp'
+      - 'Improved Sound FX - LR Sharing Fix.esp'
+      - 'Improved Sound FX - Merged Major DLCs.esp'
     tag:
       - Sound
-  - name: Improved Sound FX - WMX - GRA Sharing Fix.esp
+  - name: 'Improved Sound FX - WMX - GRA Sharing Fix.esp'
     tag:
       - Sound
-  - name: WMX-ArenovalisTextures.esp
+  - name: 'WMX-ArenovalisTextures.esp'
     tag:
       - Graphics
       - NoMerge
-  - name: ScientistPackWMX.esp
+  - name: 'ScientistPackWMX.esp'
     inc:
-      - ScientistPack.esp
-  - name: RH_IronSights_NV_Vanilla.esp
+      - 'ScientistPack.esp'
+  - name: 'RH_IronSights_NV_Vanilla.esp'
     inc:
-      - WeaponModsExpanded.esp
+      - 'WeaponModsExpanded.esp'
     tag:
       - Graphics
-  - name: Weapon Mod Expansion.esp
+  - name: 'Weapon Mod Expansion.esp'
     inc:
-      - WeaponModsExpanded.esp
+      - 'WeaponModsExpanded.esp'
     tag:
       - Graphics
       - Names
       - Stats
       - WeaponMods
-  - name: WME - 00 Commando.esp
+  - name: 'WME - 00 Commando.esp'
     tag:
       - Graphics
       - Names
       - Stats
       - WeaponMods
-  - name: WME - Arwen Core.esp
+  - name: 'WME - Arwen Core.esp'
     tag:
       - Graphics
       - Names
       - Stats
       - WeaponMods
-  - name: WME - RH Ironsights.esp
+  - name: 'WME - RH Ironsights.esp'
     tag:
       - Graphics
       - WeaponMods
-  - name: WME - FOOK.esp
+  - name: 'WME - FOOK.esp'
     tag:
       - Delev
       - Graphics
       - Names
       - Sound
       - Stats
-  - name: WME Replacer - FOOK.esp
+  - name: 'WME Replacer - FOOK.esp'
     tag:
       - Graphics
       - Names
       - Stats
       - WeaponMods
-  - name: WME - that gun 223.esp
+  - name: 'WME - that gun 223.esp'
     tag:
       - Names
       - Stats
       - WeaponMods
-  - name: WME - that gun 44 mag.esp
+  - name: 'WME - that gun 44 mag.esp'
     tag:
       - Names
       - Stats
       - WeaponMods
-  - name: WME - that gun 556.esp
+  - name: 'WME - that gun 556.esp'
     msg:
       - type: say
-        content: Old
+        content: 'Old'
     tag:
       - Names
       - Stats
       - WeaponMods
-  - name: BIS - Weapon Mod Expansion.esp
+  - name: 'BIS - Weapon Mod Expansion.esp'
     tag:
       - Names
-  - name: Project Nevada - WME.esp
+  - name: 'Project Nevada - WME.esp'
     tag:
       - Graphics
       - Invent
       - Names
       - WeaponMods
-  - name: BIS - WME - Dead Money.esp
+  - name: 'BIS - WME - Dead Money.esp'
     tag:
       - Names
-  - name: WME - FOOK - Dead Money.esp
+  - name: 'WME - FOOK - Dead Money.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: BIS - WME - Honest Hearts.esp
+        content: 'Outdated.'
+  - name: 'BIS - WME - Honest Hearts.esp'
     tag:
       - Names
-  - name: WME - DLCs.esp
+  - name: 'WME - DLCs.esp'
     inc:
-      - WME - Dead Money.esp
-      - WME - Honest Hearts.esp
-      - WME - Old World Blues.esp
-      - WME - DLCs Arenovalis.esp
-  - name: WME - DLCs Arenovalis.esp
+      - 'WME - Dead Money.esp'
+      - 'WME - Honest Hearts.esp'
+      - 'WME - Old World Blues.esp'
+      - 'WME - DLCs Arenovalis.esp'
+  - name: 'WME - DLCs Arenovalis.esp'
     inc:
-      - WME - Dead Money.esp
-      - WME - Honest Hearts.esp
-      - WME - Old World Blues.esp
-      - WME - DLCs.esp
-  - name: BIS - WME - Dead Money Arenovalis Retex.esp
+      - 'WME - Dead Money.esp'
+      - 'WME - Honest Hearts.esp'
+      - 'WME - Old World Blues.esp'
+      - 'WME - DLCs.esp'
+  - name: 'BIS - WME - Dead Money Arenovalis Retex.esp'
     tag:
       - Names
-  - name: BIS - WME - Honest Hearts Arenovalis Retex.esp
+  - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
     tag:
       - Names
-  - name: EVE FNV.esp
+  - name: 'EVE FNV.esp'
     tag:
       - Graphics
       - Sound
-  - name: EVE FNV - ALL DLC.esp
+  - name: 'EVE FNV - ALL DLC.esp'
     tag:
       - Graphics
       - Sound
-  - name: Improved Sound FX - EVE.esp
+  - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
-  - name: WMX-EVE.esp
+  - name: 'WMX-EVE.esp'
     tag:
       - Graphics
       - WeaponMods
-  - name: Mail Order Catalogs.esp
+  - name: 'Mail Order Catalogs.esp'
     req: [ *NVSE ]
-  - name: Mail Order Catalogs WMX PopUp.esp
+  - name: 'Mail Order Catalogs WMX PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO WMX.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO WMX.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO WMX PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO WMX PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs WMX DLC.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs WMX DLC.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs WMX DLC PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs WMX DLC PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
+        content: 'Select only ONE .esp when installing this mod.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO WMX DLC.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO WMX DLC.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs XFO WMX DLC PopUp.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs XFO WMX DLC PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
       - type: say
-        content: Outdated. Consider Updating.
-  - name: Mail Order Catalogs WME.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'Mail Order Catalogs WME.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
-  - name: Mail Order Catalogs WME PopUp.esp
+        content: 'Select only ONE .esp when installing this mod.'
+  - name: 'Mail Order Catalogs WME PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod.
-  - name: Mail Order Catalogs XFO WME.esp
+        content: 'Select only ONE .esp when installing this mod.'
+  - name: 'Mail Order Catalogs XFO WME.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
-  - name: Mail Order Catalogs XFO WME PopUp.esp
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
+  - name: 'Mail Order Catalogs XFO WME PopUp.esp'
     msg:
       - type: say
-        content: Select only ONE .esp when installing this mod. Does not require XFO.
-  - name: GRA Overhaul.esp
+        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
+  - name: 'GRA Overhaul.esp'
     inc:
-      - GRA Overhaul - EVE.esp
-      - GRA Overhaul - WMX or WME.esp
+      - 'GRA Overhaul - EVE.esp'
+      - 'GRA Overhaul - WMX or WME.esp'
     tag:
       - Names
       - Stats
-  - name: GRA Overhaul - EVE.esp
+  - name: 'GRA Overhaul - EVE.esp'
     inc:
-      - GRA Overhaul.esp
-      - GRA Overhaul - WMX or WME.esp
+      - 'GRA Overhaul.esp'
+      - 'GRA Overhaul - WMX or WME.esp'
     tag:
       - Names
       - Stats
-  - name: GRA Overhaul - WMX or WME.esp
+  - name: 'GRA Overhaul - WMX or WME.esp'
     inc:
-      - GRA Overhaul - EVE.esp
-      - GRA Overhaul.esp
+      - 'GRA Overhaul - EVE.esp'
+      - 'GRA Overhaul.esp'
     tag:
       - Names
       - Stats
-  - name: NV Game Stabilizer.esp
+  - name: 'NV Game Stabilizer.esp'
     inc:
-      - NV GameStabilizerA.esp
+      - 'NV GameStabilizerA.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA.esp
+  - name: 'NV GameStabilizerA.esp'
     inc:
-      - NV Game Stabilizer.esp
+      - 'NV Game Stabilizer.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA1.esp
+  - name: 'NV GameStabilizerA1.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA2.esp
+  - name: 'NV GameStabilizerA2.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA4.esp
+  - name: 'NV GameStabilizerA4.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA5.esp
+  - name: 'NV GameStabilizerA5.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA5F.esp
+  - name: 'NV GameStabilizerA5F.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA6.esp
+  - name: 'NV GameStabilizerA6.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA7.esp
+  - name: 'NV GameStabilizerA7.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA7b.esp
+  - name: 'NV GameStabilizerA7b.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA8.esp
+  - name: 'NV GameStabilizerA8.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
-  - name: NV GameStabilizerA9.esp
+  - name: 'NV GameStabilizerA9.esp'
     tag:
       - NoMerge
-  - name: SimpleStreetLights.esp
+  - name: 'SimpleStreetLights.esp'
     inc:
-      - SimpleStreetLights (Extra Lights).esp
-  - name: SimpleStreetLights (Extra Lights).esp
+      - 'SimpleStreetLights (Extra Lights).esp'
+  - name: 'SimpleStreetLights (Extra Lights).esp'
     inc:
-      - SimpleStreetLights.esp
-  - name: Vurt's Trees & Grass.esp
+      - 'SimpleStreetLights.esp'
+  - name: 'Vurt''s Trees & Grass.esp'
     msg:
       - type: say
-        content: This is an outdated version. Consider updating to the latest.
-  - name: Vurt's WFO.esp
+        content: 'This is an outdated version. Consider updating to the latest.'
+  - name: 'Vurt''s WFO.esp'
     inc:
-      - Vurt's Trees & Grass.esp
-  - name: Vurt's WFO [Lite].esp
+      - 'Vurt''s Trees & Grass.esp'
+  - name: 'Vurt''s WFO [Lite].esp'
     inc:
-      - Vurt's WFO.esp
-  - name: DN More Lights.esp
+      - 'Vurt''s WFO.esp'
+  - name: 'DN More Lights.esp'
     inc:
-      - ELECTRO-CITY - CompletedWorkorder.esp
-      - ELECTRO-CITY - CompletedWorkorder.esm
-  - name: LUMENARIUM - Working Sunglasses ONLY.esp
+      - 'ELECTRO-CITY - CompletedWorkorder.esp'
+      - 'ELECTRO-CITY - CompletedWorkorder.esm'
+  - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
     tag:
       - Names
-  - name: ELECTRO-CITY - CompletedWorkorders.esp
+  - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
     msg:
       - type: say
-        content: Outdated; Latest Versions use .esm instead of .esp
+        content: 'Outdated; Latest Versions use .esm instead of .esp'
     tag:
       - Names
-  - name: ELECTRO-CITY - Highways and Byways.esp
+  - name: 'ELECTRO-CITY - Highways and Byways.esp'
     msg:
       - type: say
-        content: Outdated; Latest Versions use .esm instead of .esp
-  - name: BIS - ELECTRO-CITY Extended Cateye.esp
+        content: 'Outdated; Latest Versions use .esm instead of .esp'
+  - name: 'BIS - ELECTRO-CITY Extended Cateye.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
-  - name: ELECTRO-CITY - IncreasedWastelandSpawnCOMPATIBILITYPatch.esp
+        content: 'Outdated. Consider Updating.'
+  - name: 'ELECTRO-CITY - IncreasedWastelandSpawnCOMPATIBILITYPatch.esp'
     msg:
       - type: say
-        content: This patch will work with the latest version of Electro-City but it won't be updated any further.
-  - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp
+        content: 'This patch will work with the latest version of Electro-City but it won''t be updated any further.'
+  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
     inc:
-      - ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp
-  - name: BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+  - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
     inc:
-      - BIS - ELECTRO-CITY RegularCATEYEvalue.esp
-  - name: ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp
+      - 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp'
+  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
     inc:
-      - ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp
-  - name: BIS - ELECTRO-CITY RegularCATEYEvalue.esp
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
+  - name: 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp'
     inc:
-      - BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp
-  - name: ACF Brighter Days and Darker Nights v5 - Medium
+      - 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
+  - name: 'ACF Brighter Days and Darker Nights v5 - Medium'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes image space and image space modifiers."
-  - name: ACF Brighter Days and Darker Nights v5 - Dark
+        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
+  - name: 'ACF Brighter Days and Darker Nights v5 - Dark'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes image space and image space modifiers."
-  - name: Emperical Weather.esp
+        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
+  - name: 'Emperical Weather.esp'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
-  - name: Fellout.esp
+        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'Fellout.esp'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
-  - name: friendofnightforfellout.esp
+        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'friendofnightforfellout.esp'
     msg:
       - type: say
-        content: Recommended for use with Fellout.esp
-        condition: not file("Fellout.esp")
-  - name: night_and_day.esp
+        content: 'Recommended for use with Fellout.esp'
+        condition: 'not file("Fellout.esp")'
+  - name: 'night_and_day.esp'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
-  - name: URWLNV.esp
+        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'URWLNV.esp'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
-  - name: Western Sky.esp
+        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'Western Sky.esp'
     msg:
       - type: say
-        content: "Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."
-  - name: LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     inc:
-      - Nevada Skies.esp
-      - Nevada Skies - URWLified.esp
-      - Nevada Skies - URWLHH.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+      - 'Nevada Skies.esp'
+      - 'Nevada Skies - URWLified.esp'
+      - 'Nevada Skies - URWLHH.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     msg:
       - type: say
-        content: Outdated and no longer to be used.
-  - name: LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
+        content: 'Outdated and no longer to be used.'
+  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     inc:
-      - Nevada Skies.esp, Nevada Skies - URWLified.esp
-      - Nevada Skies - URWLHH.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+      - 'Nevada Skies.esp, Nevada Skies - URWLified.esp'
+      - 'Nevada Skies - URWLHH.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg:
       - type: say
-        content: Outdated and no longer to be used.
-  - name: Nevada Skies.esp
+        content: 'Outdated and no longer to be used.'
+  - name: 'Nevada Skies.esp'
     inc:
-      - Nevada Skies - URWLified.esp
-      - Nevada Skies - URWLHH.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+      - 'Nevada Skies - URWLified.esp'
+      - 'Nevada Skies - URWLHH.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg:
       - type: warn
-        content: "Contains unnecessary landscape edits."
+        content: '"Contains unnecessary landscape edits."'
     tag:
       - C.Climate
       - C.Light
-  - name: Nevada Skies - URWLified.esp
+  - name: 'Nevada Skies - URWLified.esp'
     inc:
-      - Nevada Skies.esp
-      - Nevada Skies - URWLHH.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+      - 'Nevada Skies.esp'
+      - 'Nevada Skies - URWLHH.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg:
       - type: say
-        content: Outdated. Please update via the Nevada Skies download page.
+        content: 'Outdated. Please update via the Nevada Skies download page.'
     tag:
       - C.Climate
       - C.Light
-  - name: Nevada Skies - URWLHH.esp
+  - name: 'Nevada Skies - URWLHH.esp'
     inc:
-      - Nevada Skies.esp
-      - Nevada Skies - URWLified.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp
-      - LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp
+      - 'Nevada Skies.esp'
+      - 'Nevada Skies - URWLified.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
+      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg:
       - type: say
-        content: Outdated. Please update via the Nevada Skies download page.
+        content: 'Outdated. Please update via the Nevada Skies download page.'
     tag:
       - C.Climate
       - C.Light
-  - name: NSkies - URWLNV.esp
+  - name: 'NSkies - URWLNV.esp'
     msg:
       - type: say
-        content: Outdated. Please update via the Nevada Skies download page.
-  - name: NSkies URWLifiedOWB.esp
+        content: 'Outdated. Please update via the Nevada Skies download page.'
+  - name: 'NSkies URWLifiedOWB.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: NSkies URWLifiedHH.esp
+  - name: 'NSkies URWLifiedHH.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: NSkies URWLifiedDM.esp
+  - name: 'NSkies URWLifiedDM.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: Project Westland vision.esp
+  - name: 'Project Westland vision.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: Project Westland vision-ZionHH.esp
+  - name: 'Project Westland vision-ZionHH.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: F3NVProjectRealityMkIv3.esp
+  - name: 'F3NVProjectRealityMkIv3.esp'
     msg:
       - type: say
-        content: Old, update to latest version 4.2+.
+        content: 'Old, update to latest version 4.2+.'
     tag:
       - C.Climate
       - C.Light
-  - name: F3NVProjectRealityMkIv4.2.esp
+  - name: 'F3NVProjectRealityMkIv4.2.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: ProjectRealityMkIv5HDR.esp
+  - name: 'ProjectRealityMkIv5HDR.esp'
     tag:
       - C.Climate
       - C.Light
-  - name: ELECTRO-CITY - Darker Nights.esp
+  - name: 'ELECTRO-CITY - Darker Nights.esp'
     msg:
       - type: say
-        content: No longer supported by the mod. Can still be used.
-  - name: Interior Lighting Overhaul-Realistic.esp
+        content: 'No longer supported by the mod. Can still be used.'
+  - name: 'Interior Lighting Overhaul-Realistic.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
     tag:
       - C.Light
-  - name: Interior Lighting Overhaul-Realistic Interiors-Full.esp
+  - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
     tag:
       - C.Light
-  - name: Interior Lighting Overhaul-Realistic Interiors-Combined.esp
+  - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
     tag:
       - C.Light
-  - name: Interior Lighting Overhaul - Ultimate Edition.esp
+  - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag:
       - C.Light
-  - name: Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp
+  - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
-  - name: Interior Lighting Overhaul.esp
+  - name: 'Interior Lighting Overhaul.esp'
     msg:
       - type: say
-        content: Outdated Version. Consider Updating.
+        content: 'Outdated Version. Consider Updating.'
     tag:
       - C.Light
-  - name: ILO - Fallout New Vegas.esp
+  - name: 'ILO - Fallout New Vegas.esp'
     tag:
       - C.Light
-  - name: ILO - Fallout New Vegas - No Lucky38.esp
+  - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
     inc:
-      - ILO - Fallout New Vegas.esp
+      - 'ILO - Fallout New Vegas.esp'
     tag:
       - C.Light
-  - name: ILO - GS Shack.esp
+  - name: 'ILO - GS Shack.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Original Lucky38 Suite.esp
+  - name: 'ILO-RI-Original Lucky38 Suite.esp'
     tag:
       - C.Light
-  - name: ILO - Dead Money.esp
+  - name: 'ILO - Dead Money.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Dead Money.esp
+  - name: 'ILO-RI-Dead Money.esp'
     tag:
       - C.Light
-  - name: ILO - Honest Hearts.esp
+  - name: 'ILO - Honest Hearts.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Honest Hearts.esp
+  - name: 'ILO-RI-Honest Hearts.esp'
     tag:
       - C.Light
-  - name: ILO - Old World Blues.esp
+  - name: 'ILO - Old World Blues.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Old World Blues.esp
+  - name: 'ILO-RI-Old World Blues.esp'
     tag:
       - C.Light
-  - name: ILO - Lonesome Road.esp
+  - name: 'ILO - Lonesome Road.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Lonesome Road.esp
+  - name: 'ILO-RI-Lonesome Road.esp'
     tag:
       - C.Light
-  - name: ILO-RI-Rust Town.esp
+  - name: 'ILO-RI-Rust Town.esp'
     tag:
       - C.Light
-  - name: ILO - NVInteriors Project.esp
+  - name: 'ILO - NVInteriors Project.esp'
     tag:
       - C.Light
-  - name: ILO - NVInteriors Project - AWOP.esp
+  - name: 'ILO - NVInteriors Project - AWOP.esp'
     tag:
       - C.Light
-  - name: ILO - Project Reality Patch.esp
+  - name: 'ILO - Project Reality Patch.esp'
     tag:
       - C.Climate
-  - name: Interior Lighting Overhaul-Darker.esp
+  - name: 'Interior Lighting Overhaul-Darker.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: ILO - A World of Pain.esp
+        content: 'Outdated.'
+  - name: 'ILO - A World of Pain.esp'
     tag:
       - C.Light
-  - name: DYNAVISION - Dynamic Lens Effect.esp
+  - name: 'DYNAVISION - Dynamic Lens Effect.esp'
     inc:
-      - Field Depth.esp
+      - 'Field Depth.esp'
     msg:
       - type: say
-        content: Outdated. Consider updating.
-  - name: DYNAVISION 2 - Dynamic Lens Effect.esp
+        content: 'Outdated. Consider updating.'
+  - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
     inc:
-      - DYNAVISION - Dynamic Lens Effect.esp
-      - Field Depth.esp
-  - name: Field Depth.esp
+      - 'DYNAVISION - Dynamic Lens Effect.esp'
+      - 'Field Depth.esp'
+  - name: 'Field Depth.esp'
     inc:
-      - DYNAVISION - Dynamic Lens Effect.esp
-  - name: RadiationEffects-greenNV.esp
+      - 'DYNAVISION - Dynamic Lens Effect.esp'
+  - name: 'RadiationEffects-greenNV.esp'
     inc:
-      - RadiationEffects-whiteNV.esp
-  - name: RadiationEffects-whiteNV.esp
+      - 'RadiationEffects-whiteNV.esp'
+  - name: 'RadiationEffects-whiteNV.esp'
     inc:
-      - RadiationEffects-greenNV.esp
-  - name: SneakNV.esp
+      - 'RadiationEffects-greenNV.esp'
+  - name: 'SneakNV.esp'
     inc:
-      - Sneak - less saturated version NV.esp
-  - name: Sneak - less saturated version NV.esp
+      - 'Sneak - less saturated version NV.esp'
+  - name: 'Sneak - less saturated version NV.esp'
     inc:
       - SneakNV.esp"
-  - name: ELECTRO-CITY - Emittance.esp
+  - name: 'ELECTRO-CITY - Emittance.esp'
     inc:
-      - ELECTRO-CITY - Imaginator.esp
+      - 'ELECTRO-CITY - Imaginator.esp'
     msg:
       - type: say
-        content: Outdated. Consider updating.
-  - name: ELECTRO-CITY - Imaginator.esp
+        content: 'Outdated. Consider updating.'
+  - name: 'ELECTRO-CITY - Imaginator.esp'
     inc:
-      - ELECTRO-CITY - Emittance.esp
-  - name: CustomLighting-I DoF Blur.esp
+      - 'ELECTRO-CITY - Emittance.esp'
+  - name: 'CustomLighting-I DoF Blur.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: CustomLighting-IE DoF Blur.esp
+        content: 'Outdated.'
+  - name: 'CustomLighting-IE DoF Blur.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: CustomLighting-IE DOF Clear.esp
+        content: 'Outdated.'
+  - name: 'CustomLighting-IE DOF Clear.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: CustomLighting-IE Clear.esp
+        content: 'Outdated.'
+  - name: 'CustomLighting-IE Clear.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: CustomLighting-IE DoF.esp
+        content: 'Outdated.'
+  - name: 'CustomLighting-IE DoF.esp'
     msg:
       - type: say
-        content: Outdated.
-  - name: UWFXGodrays.esp
+        content: 'Outdated.'
+  - name: 'UWFXGodrays.esp'
     req: [ *NVSE ]
-  - name: UnderwaterFX.esp
+  - name: 'UnderwaterFX.esp'
     req: [ *NVSE ]
-  - name: BetterGamePerformanceV1.esp
+  - name: 'BetterGamePerformanceV1.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
       - type: say
-        content: Loaded last so that deleted references stay deleted.
-  - name: BetterGamePerformanceV2.esp
+        content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'BetterGamePerformanceV2.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
       - type: say
-        content: Loaded last so that deleted references stay deleted.
-  - name: BetterGamePerformanceV3.esp
+        content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'BetterGamePerformanceV3.esp'
     msg:
       - type: say
-        content: Outdated. Consider Updating.
+        content: 'Outdated. Consider Updating.'
       - type: say
-        content: Loaded last so that deleted references stay deleted.
-  - name: BetterGamePerformanceV4.esp
+        content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'BetterGamePerformanceV4.esp'
     msg:
       - type: say
-        content: Loaded last so that deleted references stay deleted.
-  - name: Clean Up New Vegas.esp
+        content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'Clean Up New Vegas.esp'
     msg:
       - type: say
-        content: Loaded last so that deleted references stay deleted.
-  - name: BIS - Project Nevada - Rebalance.esp
+        content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
-  - name: nVamp - Tales from the Burning Sands.esp
+  - name: 'nVamp - Tales from the Burning Sands.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - A World of Pain.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - A World of Pain.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Classic Fallout Weapons.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Classic Fallout Weapons.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - New Vegas Bounties.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - New Vegas Bounties.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Caesars Legion Overhaul.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Caesars Legion Overhaul.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - More Perks.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - More Perks.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Increased Wasteland Spawns.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Increased Wasteland Spawns.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Effects and Graphics.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Effects and Graphics.esp'
     msg:
       - type: say
-        content: OPTIONAL FOR GRAPHICAL OVERHAUL
+        content: 'OPTIONAL FOR GRAPHICAL OVERHAUL'
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Superior Firepower.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Superior Firepower.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Combat Enhancement.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Combat Enhancement.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Game Fixes.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Game Fixes.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - Core.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - Core.esp'
     msg:
       - type: error
-        content: nVamp - Core.esm is missing.
-        condition: not file("nVamp - Core.esm")
-  - name: nVamp - VVV - Bosses.esp
+        content: 'nVamp - Core.esm is missing.'
+        condition: 'not file("nVamp - Core.esm")'
+  - name: 'nVamp - VVV - Bosses.esp'
     msg:
       - type: say
-        content: Optional component of nVamp.
-  - name: nVamp - VVV - Glowy Creatures.esp
+        content: 'Optional component of nVamp.'
+  - name: 'nVamp - VVV - Glowy Creatures.esp'
     msg:
       - type: say
-        content: Optional component of nVamp.
-  - name: nVamp - Effects nVamped.esp
+        content: 'Optional component of nVamp.'
+  - name: 'nVamp - Effects nVamped.esp'
     msg:
       - type: say
-        content: Optional for nVamp's graphics overhaul.
-  - name: nVamp - Performance nVamped.esp
+        content: 'Optional for nVamp''s graphics overhaul.'
+  - name: 'nVamp - Performance nVamped.esp'
     msg:
       - type: say
-        content: Optional to increase game performance for those with older computers.
-  - name: nVamp - HalfSpeed.esp
+        content: 'Optional to increase game performance for those with older computers.'
+  - name: 'nVamp - HalfSpeed.esp'
     inc:
-      - nVamp - VanillaSpeed.esp
-  - name: nVamp - VanillaSpeed.esp
+      - 'nVamp - VanillaSpeed.esp'
+  - name: 'nVamp - VanillaSpeed.esp'
     inc:
-      - nVamp - HalfSpeed.esp
-  - name: nVamp - EasierAI.esp
+      - 'nVamp - HalfSpeed.esp'
+  - name: 'nVamp - EasierAI.esp'
     inc:
-      - nVamp - HarderAI.esp
-  - name: nVamp - HarderAI.esp
+      - 'nVamp - HarderAI.esp'
+  - name: 'nVamp - HarderAI.esp'
     inc:
-      - nVamp - EasierAI.esp
-  - name: nVamp - VVV - Low Spawns.esp
+      - 'nVamp - EasierAI.esp'
+  - name: 'nVamp - VVV - Low Spawns.esp'
     inc:
-      - nVamp - VVV - Med Spawns.esp
-  - name: nVamp - VVV - Med Spawns.esp
+      - 'nVamp - VVV - Med Spawns.esp'
+  - name: 'nVamp - VVV - Med Spawns.esp'
     inc:
-      - nVamp - VVV - Low Spawns.esp
-  - name: nVamp - Hardcore nVamped.esp
+      - 'nVamp - VVV - Low Spawns.esp'
+  - name: 'nVamp - Hardcore nVamped.esp'
     msg:
       - type: say
-        content: Optional for a more difficult experience.
-  - name: nVamp - Hardcore Really nVamped.esp
+        content: 'Optional for a more difficult experience.'
+  - name: 'nVamp - Hardcore Really nVamped.esp'
     msg:
       - type: say
-        content: Optional for a more difficult experience.
-  - name: nVamp - Vaernus's Voracious Vermin.esp
+        content: 'Optional for a more difficult experience.'
+  - name: 'nVamp - Vaernus''s Voracious Vermin.esp'
     msg:
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: nVamp - More Hardcore.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'nVamp - More Hardcore.esp'
     msg:
       - type: say
-        content: Optional for a more difficult experience.
+        content: 'Optional for a more difficult experience.'
       - type: say
-        content: Old, consider upgrading to nVamp version 0.15
-  - name: DK Caucasians.esp
+        content: 'Old, consider upgrading to nVamp version 0.15'
+  - name: 'DK Caucasians.esp'
     msg:
       - type: say
-        content: "Requires: [Lings compatibility patch](http://newvegas.nexusmods.com/mods/41548)."
-        condition: file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)
-  - name: EwwGhoulyBody.esp
+        content: '"Requires: [Lings compatibility patch](http://newvegas.nexusmods.com/mods/41548)."'
+        condition: 'file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)'
+  - name: 'EwwGhoulyBody.esp'
     tag:
       - Body-F
-  - name: tkEyelashesFNV.esp
+  - name: 'tkEyelashesFNV.esp'
     msg:
       - type: say
-        content: "Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
-  - name: tkEyelashesFNV_FemalesOnly.esp
+        content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
+  - name: 'tkEyelashesFNV_FemalesOnly.esp'
     msg:
       - type: say
-        content: "Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"
+        content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
