@@ -8,14 +8,14 @@ common:
     display: '[MCM](http://newvegas.nexusmods.com/mods/42507)'
 # Other Strings
   - &dirtyUtil
-    ''[FNVEdit](http://newvegas.nexusmods.com/mods/34703)''
+    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
 
 globals:
   - type: say
     content: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/)'
   - type: warn
     content: 'You need to check your Tale of Two Wastelands load order'
-    condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)'
+    condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
 
 plugins:
   - name: 'DeadMoney.esm'
@@ -167,7 +167,7 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'NVCE Main.esm'
-    url: [ ''http://newvegas.nexusmods.com/mods/39325'' ]
+    url: [ 'http://newvegas.nexusmods.com/mods/39325' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
