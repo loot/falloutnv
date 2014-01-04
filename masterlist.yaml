@@ -111,7 +111,7 @@ plugins:
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
-        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 8104A5CA)'
+        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
   - name: 'Community Bugfix Compilation Patch.esm'
     msg:
       - type: say
