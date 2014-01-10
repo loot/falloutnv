@@ -19,8 +19,6 @@ globals:
 
 plugins:
   - name: 'DeadMoney.esm'
-    after:
-      - 'FalloutNV.esm'
     tag:
       - Deflst
     dirty:
