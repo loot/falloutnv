@@ -12,7 +12,7 @@ common:
 
 globals:
   - type: say
-    content: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/)'
+    content: Latest BOSS thread "http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/"
   - type: warn
     content: 'You need to check your Tale of Two Wastelands load order'
     condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
