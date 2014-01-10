@@ -19,8 +19,6 @@ globals:
 
 plugins:
   - name: 'DeadMoney.esm'
-    after:
-      - 'FalloutNV.esm'
     tag:
       - Deflst
     dirty:
@@ -3322,11 +3320,3 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
-  - name: 'More Perks for Dead Money.esm'
-    after:
-      - 'DeadMoney.esm'
-      - 'More Perks.esm'
-  - name: 'Bashed Patch, 0.esp'
-    msg:
-      - type: say
-        content: 'This should always load last'
