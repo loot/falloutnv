@@ -3320,3 +3320,8 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
+		
+  - name: 'Bashed Patch, 0.esp'
+    msg:
+      - type: say
+        content: 'This should always load last'
