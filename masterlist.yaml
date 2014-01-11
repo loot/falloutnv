@@ -541,7 +541,7 @@ plugins:
     tag:
       - Eyes
       - Hair
-	  - Graphics
+      - Graphics
       - NpcFaces
   - name: 'MikotoBeauty.esm'
     tag:
@@ -2147,7 +2147,7 @@ plugins:
     tag:
       - Graphics
       - Stats
-	  - Invent
+      - Invent
   - name: 'Type3 Leather Armors.esp'
     msg:
       - type: say
@@ -2330,8 +2330,8 @@ plugins:
       - R.Mouth
       - R.Teeth
       - Hair
-	  - Graphics
-	  - NpcFaces
+      - Graphics
+      - NpcFaces
   - name: 'BetterRepairKits.esp'
     msg:
       - type: say
@@ -3539,23 +3539,23 @@ plugins:
   - name: 'CFW-DLC.esp'
     tag:
       - Invent
-	  - Graphics
+      - Graphics
   - name: 'ammoingredientsloot.esp'
     tag:
       - Invent
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
     tag:
-	  - Graphics
+      - Graphics
   - name: 'More Perks for Old World Blues Update.esp'
     tag:
-	  - Names
+      - Names
   - name: 'More Perks for Honest Hearts Update.esp'
     tag:
-	  - Graphics
+      - Graphics
   - name: 'More Perks for Dead Money Update.esp'
     tag:
-	  - Invent
-	  - Actors.ACBS
+      - Invent
+      - Actors.ACBS
   - name: 'Bashed Patch, 0.esp'
     priority: 400
     
