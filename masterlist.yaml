@@ -127,6 +127,9 @@ plugins:
       - Sounds
       - Stats
       - Voice-F
+  - name: 'Afterschool Special.esm'
+    tag:
+      - Invent
   - name: 'Fallout3.esm'
     priority: -400
     after:
@@ -437,6 +440,7 @@ plugins:
     tag:
       - Graphics
       - Names
+	  - Invent
   - name: 'WARZONES Respawner.esp'
     tag:
       - Actors.ACBS
@@ -537,6 +541,8 @@ plugins:
     tag:
       - Eyes
       - Hair
+	  - Graphics
+      - NpcFaces
   - name: 'MikotoBeauty.esm'
     tag:
       - Eyes
@@ -1516,6 +1522,7 @@ plugins:
   - name: 'BIS - Project Nevada - Cyberware.esp'
     tag:
       - Names
+      - Invent
   - name: 'Project Nevada - Dead Money.esp'
     inc:
       - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
@@ -1541,6 +1548,8 @@ plugins:
   - name: 'Project Nevada - Old World Blues.esp'
     inc:
       - "Project Nevada - Old World Blues (No Cyberware).esp"
+    tag:
+      - Invent
   - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
     inc:
       - "Project Nevada - Old World Blues.esp"
@@ -1619,6 +1628,7 @@ plugins:
   - name: 'More Perks Update.esp'
     tag:
       - Actors.ACBS
+      - Invent
   - name: 'More Traits Update.esp'
     tag:
       - Actors.ACBS
@@ -2110,6 +2120,8 @@ plugins:
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     inc:
       - 'BlackWolf Backpack.esp'
+    tag:
+      - Invent
   - name: 'ReworkStuff.esp'
     msg:
       - type: say
@@ -2135,6 +2147,7 @@ plugins:
     tag:
       - Graphics
       - Stats
+	  - Invent
   - name: 'Type3 Leather Armors.esp'
     msg:
       - type: say
@@ -2316,6 +2329,9 @@ plugins:
     tag:
       - R.Mouth
       - R.Teeth
+      - Hair
+	  - Graphics
+	  - NpcFaces
   - name: 'BetterRepairKits.esp'
     msg:
       - type: say
@@ -2521,6 +2537,7 @@ plugins:
   - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
+      - Invent
   - name: 'Permanent_Weapon_Shells_Heavy.esp'
     inc:
       - 'Permanent_Weapon_Shells_Light.esp'
@@ -3519,6 +3536,26 @@ plugins:
       - Eyes
       - Hair
       - Names
+  - name: 'CFW-DLC.esp'
+    tag:
+      - Invent
+	  - Graphics
+  - name: 'ammoingredientsloot.esp'
+    tag:
+      - Invent
+  - name: 'Alternative Repairing - Breakdown Item Icons.esp'
+    tag:
+	  - Graphics
+  - name: 'More Perks for Old World Blues Update.esp'
+    tag:
+	  - Names
+  - name: 'More Perks for Honest Hearts Update.esp'
+    tag:
+	  - Graphics
+  - name: 'More Perks for Dead Money Update.esp'
+    tag:
+	  - Invent
+	  - Actors.ACBS
   - name: 'Bashed Patch, 0.esp'
     priority: 400
     
