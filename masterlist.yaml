@@ -19,6 +19,7 @@ globals:
 
 plugins:
   - name: 'DeadMoney.esm'
+    priority: -400
     tag:
       - Deflst
     dirty:
@@ -26,6 +27,7 @@ plugins:
         crc: 0xd70f165b
         udr: 51
   - name: 'HonestHearts.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
     dirty:
@@ -33,6 +35,7 @@ plugins:
         crc: 0x2352b189
         udr: 10
   - name: 'OldWorldBlues.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -40,6 +43,7 @@ plugins:
       - util: *dirtyUtil
         crc: 0x7f8f8225
   - name: 'LonesomeRoad.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -49,6 +53,7 @@ plugins:
         crc: 0x30073d50
         udr: 6
   - name: 'GunRunnersArsenal.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -58,6 +63,7 @@ plugins:
       - util: *dirtyUtil
         crc: 0xaac938d
   - name: 'CaravanPack.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -65,6 +71,7 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
   - name: 'ClassicPack.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -73,6 +80,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'CaravanPack.esm'
   - name: 'MercenaryPack.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -82,6 +90,7 @@ plugins:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
+    priority: -400
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -92,22 +101,30 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'Fallout3.esm'
+    priority: -400
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
+  - name: 'Anchorage.esm'
+    priority: -400
   - name: 'ThePitt.esm'
+    priority: -400
     after:
       - 'Anchorage.esm'
   - name: 'BrokenSteel.esm'
+    priority: -400
     after:
       - 'ThePitt.esm'
   - name: 'PointLookout.esm'
+    priority: -400
     after:
       - 'BrokenSteel.esm'
   - name: 'Zeta.esm'
+    priority: -400
     after:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
+    priority: -400
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
@@ -3320,3 +3337,11 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
+  - name: 'More Perks for Dead Money.esm'
+    after:
+      - 'DeadMoney.esm'
+      - 'More Perks.esm'
+  - name: 'Bashed Patch, 0.esp'
+    msg:
+      - type: say
+        content: 'This should always load last'
