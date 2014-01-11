@@ -100,6 +100,33 @@ plugins:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
+  - name: 'YUP - Base Game + All DLC.esm'
+    priority: -400
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Delev
+      - Eyes
+      - Factions
+      - Graphics
+      - Hair
+      - Invent
+      - Names
+      - NpcFaces
+      - Relev
+      - Sounds
+      - Stats
+      - Voice-F
   - name: 'Fallout3.esm'
     priority: -400
     after:
@@ -141,6 +168,8 @@ plugins:
       - Scripts
       - Sound
       - Stats
+  - name: 'UWHNV-Core.esm'
+    req: [ *NVSE ]
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
@@ -265,6 +294,13 @@ plugins:
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
+  - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Invent
+      - Names
+      - NpcFaces
   - name: 'CINEMATECH.esm'
     req:
       - *NVSE
@@ -367,6 +403,8 @@ plugins:
       - C.Light
   - name: 'Project Nevada - Core.esm'
     req: [ *NVSE ]
+    tag:
+      - Invent
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
@@ -379,6 +417,14 @@ plugins:
     tag:
       - Delev
       - Invent
+      - Names
+  - name: 'Project Nevada - Rebalance.esp'
+    tag:
+      - Invent
+      - Names
+  - name: Psiclones.esm
+    tag:
+      - Names
   - name: 'SelectFire.esm'
     req: [ *NVSE ]
   - name: 'Selective Fire.esm'
@@ -387,6 +433,18 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Consider Updating.'
+  - name: 'T6M Equipment Replacer NV.esm'
+    tag:
+      - Graphics
+      - Names
+  - name: 'WARZONES Respawner.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+  - name: 'WARZONES RespawnerLITE.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
   - name: 'Weapon Mod Expansion.esm'
     tag:
       - Names
@@ -484,6 +542,7 @@ plugins:
       - Eyes
       - Graphics
       - Hair
+      - Names
   - name: 'NV GameStabilizerA8.esm'
     msg:
       - type: say
@@ -645,6 +704,11 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete with latest patch'
+  - name: 'Reload Speed Game Start Fix.esp'
+    req: [ *NVSE ]      
+    msg:
+      - type: say
+        content: Obsolete with latest patch
   - name: 'RepairKitFix.esp'
     msg:
       - type: say
@@ -827,6 +891,15 @@ plugins:
   - name: 'Centered 3rd Person Camera - Unraised.esp'
     inc:
       - 'FOOK - New Vegas.esm'
+  - name: 'ImplantGRX-ActivatorHotkey.esp'
+    msg:
+      - type: say
+        content: Use only one Implant GRX Activator
+  - name: 'ImplantGRX-NVSEHotkey.esp'
+    req: [ *NVSE ]      
+    msg:
+      - type: say
+        content: Use only one Implant GRX Activator
   - name: 'NVORganizedItems.esp'
     tag:
       - Names
@@ -1093,9 +1166,18 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to NVInteriors_WastelandEditon.esm'
+  - name: 'NVInteriors_Urban_Edition_v1.0.esp'
+    msg:
+      - type: say
+        content: Old, update to NVInteriors_Urban_Edition.esm
   - name: 'return_deadmoney.esp'
     inc:
       - 'SierraMadreEXIT.esp'
+  - name: 'RustTownAdditions3.esp'
+    tag:
+      - Factions
+      - Invent
+      - Names
   - name: 'Schoolhouse Base.esp'
     msg:
       - type: say
@@ -1130,6 +1212,24 @@ plugins:
         content: 'Outdated; Consider Updating.'
   - name: 'UWHNV-Core.esp'
     req: [ *NVSE ]
+    msg:
+      - type: say
+        content: Obsolete, upgrade to new version 4.202, UWHNV-Core.esm
+  - name: 'UWHNV-Addon-DLC.esp'
+    tag:
+      - C.Light
+  - name: 'UWHNV-Addon-GRA.esp'
+    tag:
+      - C.Light
+  - name: 'UWHNV-Addon-FollowerHome.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - NpcFaces
+  - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
+    msg:
+      - type: say
+        content: "Incompatible with: UWHNV-Addon-Follower.esp"
   - name: 'YangtzeBunkerPlayerHome.esp'
     msg:
       - type: say
@@ -1444,11 +1544,17 @@ plugins:
   - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
     inc:
       - "Project Nevada - Old World Blues.esp"
+  - name: 'Project Brazil Project Nevada Patch.esp'
+    tag:
+      - Invent
   - name: 'OWB Big Empty Overhaul.esp'
     tag:
       - Invent
       - Names
       - Stats
+  - name: 'Flight of the ValkED-E.esp'
+    tag:
+      - Sound
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
@@ -1510,6 +1616,12 @@ plugins:
   - name: 'FourEyesBetter.esp'
     inc:
       - 'FourEyesDynamic.esp'
+  - name: 'More Perks Update.esp'
+    tag:
+      - Actors.ACBS
+  - name: 'More Traits Update.esp'
+    tag:
+      - Actors.ACBS
   - name: 'ZZZZ--APB_By_Nokturnihs.esp'
     msg:
       - type: say
@@ -1648,9 +1760,26 @@ plugins:
   - name: 'BIS - Sprint Mod.esp'
     tag:
       - Names
+  - name: 'ACS-DeadMoney.esp'
+    tag:
+      - Invent
   - name: 'ACS-HonestHearts.esp'
     tag:
       - Invent
+  - name: 'ACS-LonesomeRoad.esp'
+    tag:
+      - Names
+  - name: 'ACS-GunRunnersArsenal.esp'
+    tag:
+      - Invent
+      - Names
+  - name: 'ACS-DLCMerged.esp'
+    msg:
+      - type: say
+        content: Requires DeadMoney.esm, HonestHearts.esm, LonesomeRoad.esm, GunRunnersArsenal.esm and AmmoCraftingSchematics.esp
+    tag:
+      - Invent
+      - Names
   - name: 'ArmourRepairKits.esp'
     req: [ *NVSE ]
   - name: 'Better Ammo Crafting.esp'
@@ -1865,6 +1994,10 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to latest version.'
+  - name: '1nivVSLArmors.esp'
+    tag:
+      - Invent
+      - Names
   - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
     msg:
       - type: say
@@ -1873,6 +2006,11 @@ plugins:
   - name: 'Armored PA Gloves.esp'
     tag:
       - Deflst
+  - name: 'AsharasLightningItems_ForNV.esp'
+    tag:
+      - Actors.AIData
+      - Invent
+      - NpcFaces
   - name: 'LDFemalePowerArmorPack.esp'
     inc:
       - 'LDFemalePowerArmorPack.esm'
@@ -1992,6 +2130,14 @@ plugins:
   - name: 'sexysleepwearnr.esp'
     inc:
       - 'sexysleepwear.esp'
+  - name: 'T6M Equipment Replacer NV.esp'
+    tag:
+      - Graphics
+      - Stats
+  - name: 'Type 6.esp'
+    tag:
+      - Graphics
+      - Stats
   - name: 'Type3 Leather Armors.esp'
     msg:
       - type: say
@@ -2006,6 +2152,9 @@ plugins:
   - name: 'w44Satchels - Lite.esp'
     inc:
       - 'w44Satchels - Full.esp'
+  - name: 'XVEnclaveBunker.esp'
+    tag:
+      - Invent
   - name: 'LingsPrettyThings.esp'
     tag:
       - Eyes
@@ -2150,6 +2299,10 @@ plugins:
   - name: 'LilyArmored.esp'
     inc:
       - 'LilyFawkes.esp'
+  - name: 'My essential friends (animals).esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
   - name: 'NVPhalanx.esp'
     msg:
       - type: say
@@ -2162,6 +2315,10 @@ plugins:
   - name: 'RexReplacerEss.esp'
     tag:
       - Graphics
+  - name: 'RHKGilbertCompanion-Mikoto.esp'
+    tag:
+      - R.Mouth
+      - R.Teeth
   - name: 'BetterRepairKits.esp'
     msg:
       - type: say
@@ -2208,6 +2365,9 @@ plugins:
     tag:
       - Names
   - name: 'BIS - MiscItemIconsNV 0.9.esp'
+    tag:
+      - Names
+  - name: 'repairkitsexpanded.esp'
     tag:
       - Names
   - name: 'Sorter - Combined.esp'
@@ -2400,6 +2560,10 @@ plugins:
         content: '"Requires: Respawn Timer (Any Version)"'
   - name: 'Quick Trade.esp'
     req: [ *MCM ]
+  - name: 'Quick Trade - iHud.esp'
+    msg:
+      - type: say
+        content: Obsolete, update to latest version 3.4 of iHud.
   - name: 'Reactive People - Ultimatum.esp'
     req: [ *NVSE ]
   - name: 'Realistic Weight.esp'
@@ -2937,6 +3101,22 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+  - name: 'fnvrwlo - original.esp'
+    msg:
+      - type: say
+        content: Use only one FNV Realistic Wasteland Lighting
+  - name: 'fnvrwlo - brighter nights.esp'
+    msg:
+      - type: say
+        content: Use only one FNV Realistic Wasteland Lighting
+  - name: 'fnvrwl FNV only - brighter nights.esp'
+    msg:
+      - type: say
+        content: Use only one FNV Realistic Wasteland Lighting
+  - name: 'fnvrwl FNV only.esp'
+    msg:
+      - type: say
+        content: Use only one FNV Realistic Wasteland Lighting
   - name: 'friendofnightforfellout.esp'
     msg:
       - type: say
@@ -3337,11 +3517,11 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
-  - name: 'More Perks for Dead Money.esm'
-    after:
-      - 'DeadMoney.esm'
-      - 'More Perks.esm'
+  - name: 'MikotoBeauty.esp'
+    tag:
+      - Eyes
+      - Hair
+      - Names
   - name: 'Bashed Patch, 0.esp'
-    msg:
-      - type: say
-        content: 'This should always load last'
+    priority: 400
+    
