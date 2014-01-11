@@ -900,12 +900,12 @@ plugins:
   - name: 'ImplantGRX-ActivatorHotkey.esp'
     msg:
       - type: say
-        content: Use only one Implant GRX Activator
+        content: 'Do not load together with ImplantGRX-NVSEHotkey.esp'
   - name: 'ImplantGRX-NVSEHotkey.esp'
     req: [ *NVSE ]      
     msg:
       - type: say
-        content: Use only one Implant GRX Activator
+        content: 'Do not load together with ImplantGRX-ActivatorHotkey.esp'
   - name: 'NVORganizedItems.esp'
     tag:
       - Names
@@ -2005,6 +2005,10 @@ plugins:
     tag:
       - Invent
       - Names
+      - Deflst
+      - Delev
+      - Graphics
+      - Relev
   - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
     msg:
       - type: say
@@ -2667,6 +2671,7 @@ plugins:
       - Delev
       - Invent
       - WeaponMods
+      - Names
   - name: 'WMXUE.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
@@ -2744,19 +2749,27 @@ plugins:
   - name: 'WMX-DeadMoney.esp'
     tag:
       - Invent
+      - WeaponMods
   - name: 'Real Weapon Names - WMX - Dead Money.esp'
     tag:
       - Names
   - name: 'WMX-HonestHearts.esp'
     tag:
       - Invent
+      - WeaponMods
   - name: 'WMX-OldWorldBlues.esp'
     tag:
       - Invent
+      - WeaponMods
   - name: 'WMX-LonesomeRoad.esp'
     tag:
       - Invent
+      - WeaponMods
   - name: 'WMX-GunRunnersArsenal.esp'
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-EVE-AllDLC.esp'
     tag:
       - Invent
       - WeaponMods
@@ -3556,6 +3569,65 @@ plugins:
     tag:
       - Invent
       - Actors.ACBS
+  - name: 'CCO - FT DM Patch.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+  - name: 'CCO - FT HH Patch.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+  - name: 'CCO - FT OWB Patch.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+  - name: 'CCO - FT LR Patch.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+  - name: 'CCO - FT All DLC Patch.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with CCO - FT DM Patch.esp, CCO - FT HH Patch.esp, CCO - FT OWB Patch.esp or CCO - FT LR Patch.esp'
+  - name: 'Lucky 38 Lights.esp'
+    tag:
+      - C.Light
+  - name: 'MadScience02.esp'
+    tag:
+      - Actors.DeathItem
+  - name: '1nivPNSLPatch.esp'
+    tag:
+      - Deflst
+      - Names
+      - Stats
+  - name: 'DLC Weapon Integration.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with DLC Weapon Integration - WMX.esp'
+  - name: 'DLC Weapon Integration - WMX.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with DLC Weapon Integration.esp'
+  - name: 'OldWorldBlues - Keep Big MT Active.esp'
+    msg:
+      - type: say
+        content: 'Do not load with OldWorldBlues - Keep Big MT Active No Announcements.esp'
+  - name: 'OldWorldBlues - Keep Big MT Active No Announcements.esp'
+    msg:
+      - type: say
+        content: 'Do not load with OldWorldBlues - Keep Big MT Active.esp'
+  - name: 'OldWorldBlues - Improved Transportalponder.esp'
+    msg:
+      - type: say
+        content: 'Do not load with OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
+  - name: 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
+    msg:
+      - type: say
+        content: 'Do not load with OldWorldBlues - Improved Transportalponder.esp'
+  - name: 'Shotgun Commando Redone.esp'
+    msg:
+      - type: say
+        content: 'Do not load together with Shotgun Commando.esp'
   - name: 'Bashed Patch, 0.esp'
     priority: 400
     
