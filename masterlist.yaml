@@ -11,6 +11,15 @@ common:
     '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
 
 globals:
+  - type: warn
+    content:
+      condition: version("BOSS","2.1.1.0",<)
+      - lang: eng
+        str: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page."
+      - lang: rus
+        str: Вышло обновление для BOSS версии 2.1.1. Скачать его вы можете на "http://code.google.com/p/better-oblivion-sorting-software/downloads/list странице проекта BOSS", на Google Code.
+      - lang: spa
+        str: "Tu versión de BOSS es obsoleto Puedes descargar la nueva versión (v2.1.1) aquí: \"http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page.\""
   - type: say
     content: Latest BOSS thread "http://forums.bethsoft.com/topic/1313081-rel-boss-for-fallout-new-vegas/"
   - type: warn
