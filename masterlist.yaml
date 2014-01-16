@@ -15,6 +15,8 @@ globals:
     condition: 'version("BOSS","3.0.0.0",<=)'
     content: 'All Beta updates for BOSS (v3.0.0) can be downloaded [here](https://github.com/boss-developers/boss-code/releases).'
   - type: say
+    content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using FNVEdit to view conflicts.
+  - type: say
     content:
       - lang: eng
         str: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
@@ -23,8 +25,8 @@ globals:
       - lang: spa
         str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
   - type: warn
-    condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
-    content: 'You need to check your Tale of Two Wastelands load order'
+    condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
+    content: Need check for Tale of Two Wastelands load order
 
 plugins:
   - name: 'DeadMoney.esm'
@@ -34,6 +36,7 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0xd70f165b
+        itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
     priority: -400
@@ -42,6 +45,7 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0x2352b189
+        itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
     priority: -400
@@ -51,6 +55,7 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0x7f8f8225
+        itm: 124
   - name: 'LonesomeRoad.esm'
     priority: -400
     after:
@@ -60,6 +65,7 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0x30073d50
+        itm: 240
         udr: 6
   - name: 'GunRunnersArsenal.esm'
     priority: -400
@@ -109,33 +115,6 @@ plugins:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
-  - name: 'YUP - Base Game + All DLC.esm'
-    priority: -400
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Delev
-      - Eyes
-      - Factions
-      - Graphics
-      - Hair
-      - Invent
-      - Names
-      - NpcFaces
-      - Relev
-      - Sounds
-      - Stats
-      - Voice-F
   - name: 'Afterschool Special.esm'
     tag:
       - Invent
@@ -180,8 +159,35 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'UWHNV-Core.esm'
-    req: [ *NVSE ]
+-  - name: 'UWHNV-Core.esm'
+-    req: [ *NVSE ]
+  - name: 'YUP - Base Game + All DLC.esm'
+    priority: -400
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Delev
+      - Eyes
+      - Factions
+      - Graphics
+      - Hair
+      - Invent
+      - Names
+      - NpcFaces
+      - Relev
+      - Sounds
+      - Stats
+      - Voice-F
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
