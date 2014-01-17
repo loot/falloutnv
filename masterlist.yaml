@@ -159,8 +159,8 @@ plugins:
       - Scripts
       - Sound
       - Stats
--  - name: 'UWHNV-Core.esm'
--    req: [ *NVSE ]
+  - name: 'UWHNV-Core.esm'
+    req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     priority: -400
     after:
