@@ -2423,6 +2423,8 @@ plugins:
   - name: 'XVEnclaveBunker.esp'
     tag:
       - Invent
+# ENDGROUP: Armor and Clothes
+# BEGINGROUP: Cosmetics
   - name: 'LingsPrettyThings.esp'
     tag:
       - Eyes
@@ -2490,6 +2492,8 @@ plugins:
   - name: 'Voice dissonance fix.esp'
     tag:
       - NpcFaces
+# ENDGROUP: Cosmetics
+# BEGINGROUP: Middle Misc
   - name: 'AWOPLowRobots.esp'
     inc:
       - 'AWOPVeryLowRobots.esp'
@@ -2512,6 +2516,8 @@ plugins:
   - name: 'MMUE-CP-AWOP+NVInteriors.esp'
     inc:
       - 'MMUE-CP-AWOP.esp'
+# ENDGROUP: Middle Misc
+# BEGINGROUP: Companions
   - name: 'Companion Module Pack.esp'
     inc:
       - 'Companion Sandbox Mode.esp'
@@ -2583,12 +2589,19 @@ plugins:
   - name: 'RexReplacerEss.esp'
     tag:
       - Graphics
+# In two places probably a MOD command
+#  - name: MikotoBeauty.esm
+#    tag:
+#      - Eyes
+#      - Graphics
+#      - Hair
+#      - Names
   - name: 'RHKGilbertCompanion-Mikoto.esp'
     tag:
       - R.Mouth
       - R.Teeth
-      - Hair
-      - Graphics
+# ENDGROUP: Companions
+# BEGINGROUP: Later Misc
       - NpcFaces
   - name: 'BetterRepairKits.esp'
     msg:
@@ -2683,7 +2696,12 @@ plugins:
   - name: 'FeelingIrradiated-IS.esp'
     tag:
       - Names
+# ENDGROUP: Later Misc
+# BEGINGROUP: Game-Settings and Overrides
   - name: 'IntegratedFullDLC.esp'
+    msg:
+      - type: say
+        content: "Requires: All four DLC's."
   - name: 'Max Level 50.esp'
     req: [ *NVSE ]
     msg:
@@ -2916,6 +2934,8 @@ plugins:
   - name: 'BIS - Weight_Balance_v10.esp'
     tag:
       - Names
+# ENDGROUP: Game-Settings and Overrides
+# BEGINGROUP: Weapon Mods Expanded or WMX
   - name: 'WeaponModsExpanded.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
@@ -3047,6 +3067,8 @@ plugins:
   - name: 'ScientistPackWMX.esp'
     inc:
       - 'ScientistPack.esp'
+# ENDGROUP: Weapon Mods Expanded or WMX
+# BEGINGROUP: Weapon Mod Expansion or WME
   - name: 'RH_IronSights_NV_Vanilla.esp'
     inc:
       - 'WeaponModsExpanded.esp'
@@ -3144,6 +3166,8 @@ plugins:
   - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
     tag:
       - Names
+# ENDGROUP: Weapon Mod Expansion or WME
+# BEGINGROUP: Special Cases for WMX and/or WME support
   - name: 'EVE FNV.esp'
     tag:
       - Graphics
