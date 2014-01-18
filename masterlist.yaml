@@ -59,6 +59,7 @@ globals:
     content: Need check for Tale of Two Wastelands load order
 
 plugins:
+# BEGINGROUP: ESMs
   - name: 'DeadMoney.esm'
     priority: -400
     tag:
@@ -107,6 +108,7 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0xaac938d
+        itm: 97
   - name: 'CaravanPack.esm'
     priority: -400
     after:
@@ -189,8 +191,6 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'UWHNV-Core.esm'
-    req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     priority: -400
     after:
@@ -326,13 +326,24 @@ plugins:
       - "OWNB - Open World.esm"
       - 'OFT_IWR_Base.esp'
   - name: 'IWS-Core.esm'
+    msg:
+      - type: say
+        content: Loaded early to let other mods override spawn points if needed.
     tag:
       - Delev
+  - name: NosCo Companion System.esm
+    msg:
+      - type: say
+        content: Loaded early in the event Companion .esm mods require this.
   - name: 'OWNB - Open World.esm'
     inc:
       - 'IWR.esm'
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
+  - name: RRCompanionVault.esm
+    msg:
+      - type: say
+        content: Loaded early in the event Companion .esm mods require this.
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
@@ -342,13 +353,6 @@ plugins:
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
-  - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Invent
-      - Names
-      - NpcFaces
   - name: 'CINEMATECH.esm'
     req:
       - *NVSE
@@ -464,10 +468,6 @@ plugins:
       - 'nVamp - Core.esm'
     tag:
       - Delev
-      - Invent
-      - Names
-  - name: 'Project Nevada - Rebalance.esp'
-    tag:
       - Invent
       - Names
   - name: Psiclones.esm
