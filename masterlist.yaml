@@ -1570,6 +1570,10 @@ plugins:
   - name: 'M.M.A.T - Spawn Module.esp'
     tag:
       - Relev
+# ENDGROUP: Frontsalats Modular Mods and Tweaks
+# BEGINGROUP: Book Of Earache
+# ENDGROUP: Book Of Earache
+# BEGINGROUP: NEVAX - New Vegas Expanded (German)
   - name: 'NEVAX - BEAUTYPACK.esp'
     tag:
       - Body-F
@@ -1613,6 +1617,8 @@ plugins:
     tag:
       - Deflst
       - Relev
+# ENDGROUP: NEVAX - New Vegas Expanded (German)
+# BEGINGROUP: Puce Moose Tweak and Balance Center
   - name: 'PMT - XPadjust.esp'
     tag:
       - Invent
@@ -1661,6 +1667,8 @@ plugins:
   - name: 'PMT - Reduced Challenge Notifications.esp'
     inc:
       - 'PMT - Total Challenge Remover.esp'
+# ENDGROUP: Puce Moose Tweak and Balance Center
+# BEGINGROUP: Reload
   - name: 'Reload.esp'
     tag:
       - Delev
@@ -1683,6 +1691,8 @@ plugins:
   - name: 'ReSort.esp'
     tag:
       - Names
+# ENDGROUP: Reload
+# BEGINGROUP: Superior Firepower
   - name: 'Superior Firepower - Unique Weaponry.esp'
     tag:
       - Stats
@@ -1690,6 +1700,8 @@ plugins:
     tag:
       - Delev
       - Relev
+# ENDGROUP: Superior Firepower
+# BEGINGROUP: XFO NV - The New Vegas Overhaul
   - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp'
     tag:
       - Names
@@ -1711,6 +1723,8 @@ plugins:
   - name: 'BIS - XFO - 6aa - Epic Skills.esp'
     tag:
       - Names
+# ENDGROUP: XFO NV - The New Vegas Overhaul
+# BEGINGROUP: Other
   - name: 'Adventurers_New_Vegas-V0.1.esp'
     msg:
       - type: say
@@ -1726,10 +1740,16 @@ plugins:
     tag:
       - Delev
       - Relev
+# MoMod for FNV not available can't load into FNVEdit
+# MoMod-NightSpawn-HarderThan.esp
   - name: 'BIS - Project Nevada - Core.esp'
     tag:
       - Names
   - name: 'BIS - Project Nevada - Equipment.esp'
+    tag:
+      - Invent
+      - Names
+  - name: 'Project Nevada - Rebalance.esp'
     tag:
       - Invent
       - Names
@@ -1775,6 +1795,9 @@ plugins:
       - Invent
       - Names
       - Stats
+# ENDGROUP: Other
+# ENDGROUP: Overhauls
+# BEGINGROUP: Sounds
   - name: 'Flight of the ValkED-E.esp'
     tag:
       - Sound
@@ -1809,6 +1832,8 @@ plugins:
   - name: 'LouderGuns.esp'
     tag:
       - Sound
+# ENDGROUP: Sounds
+# BEGINGROUP: Quests
   - name: 'awilderwasteland.esp'
     inc:
       - 'awilderwastelandnobenny.esp'
