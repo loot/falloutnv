@@ -911,6 +911,7 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete with latest patch'
+# BEGINGROUP: Operation Fixed Terrain
   - name: 'OFT_Merge_All.esp'
     inc:
       - 'OFT_Merge_Base.esp'
@@ -990,6 +991,9 @@ plugins:
     inc:
       - 'OFT_Merge_All.esp'
       - 'OFT_Merge_Base.esp'
+# ENDGROUP: Operation Fixed Terrain
+# ENDGROUP: Unofficial Patches and Fixes
+# BEGINGROUP: Early Loading Mods
   - name: 'AutoSaverNV.esp'
     msg:
       - type: say
@@ -1105,6 +1109,11 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Consider Updating.'
+# ENDGROUP: Early Loading Mods
+# BEGINGROUP: Alternative starts
+# Must go after anything that alters the main quest.
+# ENDGROUP: Alternative starts
+# BEGINGROUP: Faces
   - name: '188 Trading Post Revisited.esp'
     tag:
       - NpcFaces
@@ -1229,6 +1238,8 @@ plugins:
   - name: 'VyntageVeronica02.esp'
     tag:
       - NpcFaces
+# ENDGROUP: Faces
+# BEGINGROUP: NPC
   - name: '1st Recon Revised.esp'
     tag:
       - Invent
@@ -1318,6 +1329,8 @@ plugins:
     msg:
       - type: say
         content: 'Recommended to be used with one of the main .esp''s'
+# ENDGROUP: NPC
+# BEGINGROUP: Places
   - name: 'IIWR 2.0.3.esp'
     msg:
       - type: say
@@ -1440,6 +1453,7 @@ plugins:
     msg:
       - type: say
         content: 'Outdated; Consider Updating.'
+# BEGINGROUP: New Vegas Restoration
   - name: 'HighlyPopulatedFreeside.esp'
     inc:
       - 'MediumPopulatedFreeside.esp'
@@ -1460,6 +1474,10 @@ plugins:
     msg:
       - type: say
         content: 'Outdated; Consider Updating.'
+# ENDGROUP: New Vegas Restoration
+# ENDGROUP: Places
+# BEGINGROUP: Overhauls
+# BEGINGROUP: BlackCompany HarderCore Pack
   - name: 'NVHarderCore.esp'
     tag:
       - Names
@@ -1476,6 +1494,10 @@ plugins:
     tag:
       - Stats
       - WeaponMods
+# ENDGROUP: BlackCompany HarderCore Pack
+# BEGINGROUP: Fallout New Vegas Advanced & HAM-Hardcore Advanced Mods
+# ENDGROUP: Fallout New Vegas Advanced & HAM-Hardcore Advanced Mods
+# BEGINGROUP: FOOK
   - name: 'FOOK - New Vegas.esp'
     tag:
       - Deflst
@@ -1501,6 +1523,10 @@ plugins:
   - name: 'LinkesAuge - Retexture edits.esp'
     tag:
       - Graphics
+# ENDGROUP: FOOK
+# BEGINGROUP: New Vegas Replayability
+# ENDGROUP: New Vegas Replayability
+# BEGINGROUP: Frontsalats Modular Mods and Tweaks
   - name: 'NoWeaponZoom.esp'
     tag:
       - Stats
