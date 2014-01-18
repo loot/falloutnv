@@ -1852,6 +1852,8 @@ plugins:
   - name: 'wsex_workgirl_tryout.esp'
     inc:
       - 'wsex_workgirl.esp'
+# ENDGROUP: Quests
+# BEGINGROUP: Perks
   - name: 'BrainPerkBugfix.esp'
     inc:
       - 'BrainPerkBugfix_Cardiac.esp'
@@ -1875,6 +1877,8 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Consider Updating.'
+# ENDGROUP: Perks
+# BEGINGROUP: Early Misc
   - name: 'AutoLoot.esp'
     req: [ *NVSE ]
   - name: 'Detect Traps - Dead Money.esp'
@@ -2009,6 +2013,8 @@ plugins:
   - name: 'BIS - Sprint Mod.esp'
     tag:
       - Names
+# ENDGROUP: Early Misc
+# BEGINGROUP: Crafting
   - name: 'ACS-DeadMoney.esp'
     tag:
       - Invent
@@ -2040,6 +2046,8 @@ plugins:
   - name: 'Dynamic Herbalism.esp'
     inc:
       - 'Bountiful Harvest.esp'
+# ENDGROUP: Crafting
+# BEGINGROUP: Weapons
   - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
     msg:
       - type: say
@@ -2240,6 +2248,8 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to latest version.'
+# ENDGROUP: Weapons
+# BEGINGROUP: Armor and Clothes
   - name: '1nivVSLArmors.esp'
     tag:
       - Invent
@@ -2248,11 +2258,6 @@ plugins:
       - Delev
       - Graphics
       - Relev
-  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
-    msg:
-      - type: say
-        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
-        condition: 'file("nVamp - Core.esm")'
   - name: 'Armored PA Gloves.esp'
     tag:
       - Deflst
@@ -2279,6 +2284,11 @@ plugins:
   - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
     tag:
       - Relev
+  - name: DWCNV-CS.esp
+    msg:
+      - type: say
+        content: "Requires: Couriers Stash"
+        condition: ( ( ( not file("ClassicPack.esm") ) or not file("MercenaryPack.esm") ) or not file("TribalPack.esm") ) or not file("CaravanPack.esm")
   - name: 'epock.esp'
     msg:
       - type: say
@@ -2294,6 +2304,11 @@ plugins:
       - type: say
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'regex("nVamp.*\.esp")'
+  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
+    msg:
+      - type: say
+        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
+        condition: 'file("nVamp - Core.esm")'
   - name: 'FlashlightNVSE.esp'
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
