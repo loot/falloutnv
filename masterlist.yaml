@@ -497,28 +497,20 @@ plugins:
   - name: 'Weapon Mod Expansion.esm'
     tag:
       - Names
-  - name: 'WME - Dead Money.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - Honest Hearts.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - Old World Blues.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - GRA.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - GRA Light.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - DLCs.esm'
-    after:
-      - 'nVamp - Core.esm'
-    inc:
-      - 'WME - Dead Money.esm'
-      - 'WME - Honest Hearts.esm'
-      - 'WME - Old World Blues.esm'
+##############################################################################
+# Two of these somehow probably a MOD command
+#  - name: WME - DLCs.esm
+#    msg:
+#      - type: say
+#        content: "Incompatible with: WME - Dead Money.esm, WME - Honest Hearts.esm, WME - Old World Blues.esm"
+# Two of these somehow probably a MOD command
+#  - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
+#    tag:
+#      - Actors.AIData
+#      - Actors.AIPackages
+#      - Invent
+#      - Names
+#      - NpcFaces
   - name: 'Clean-Deluxe FNV.esm'
     inc:
       - 'Performance of the Gods.esp'
@@ -532,6 +524,109 @@ plugins:
       - 'iHUD.esm'
       - 'Primary Needs HUD.esm'
     req: [ *NVSE ]
+  - name: 'UWHNV-Core.esm'
+    req: [ *NVSE ]
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: Machienzo - NPC Cosmetic Fixes.esm
+    msg:
+      - type: say
+        content: Old, update to NVCE.
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: NVCE Main.esm
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: NVCE Main (Faces Only).esm
+    tag:
+      - Actors.ACBS
+      - Deactivate
+      - Filter
+      - NPC.Race
+      - NpcFaces
+  - name: IWS-Core.esm
+    tag:
+      - Delev
+  - name: EZ_CompanionNVSE_Killable_Normal.esm
+    msg:
+      - type: say
+        content: Old
+  - name: Project Nevada - Core.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+    tag:
+      - Invent
+  - name: 'iHUD.esm'
+    req: [ *NVSE ]
+  - name: ELECTRO-CITY - CompletedWorkorders.esm
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Invent
+      - Names
+      - NpcFaces
+  - name: CINEMATECH.esm
+    msg:
+      - type: say
+        content: "Requires: New Vegas Script Extender"
+        condition: not file("..\nvse_loader.exe")
+  - name: Caliber.esm
+    tag:
+      - Invent
+      - Names
+  - name: Weapon Mod Expansion.esm
+    tag:
+      - Names
+  - name: FOOK - New Vegas.esm
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
   - name: 'nVamp - Effects nVamped.esm'
     msg:
       - type: say
