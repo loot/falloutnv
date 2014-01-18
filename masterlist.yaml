@@ -3264,6 +3264,8 @@ plugins:
     tag:
       - Names
       - Stats
+# ENDGROUP: Special Cases for WMX and/or WME support
+# BEGINGROUP: NV Game Stabilizer
   - name: 'NV Game Stabilizer.esp'
     inc:
       - 'NV GameStabilizerA.esp'
@@ -3337,6 +3339,8 @@ plugins:
   - name: 'NV GameStabilizerA9.esp'
     tag:
       - NoMerge
+# ENDGROUP: NV Game Stabilizer
+# BEGINGROUP: Weather\Light\Water
   - name: 'SimpleStreetLights.esp'
     inc:
       - 'SimpleStreetLights (Extra Lights).esp'
@@ -3674,6 +3678,8 @@ plugins:
     req: [ *NVSE ]
   - name: 'UnderwaterFX.esp'
     req: [ *NVSE ]
+# ENDGROUP: Weather\Light\Water
+# BEGINGROUP: Lastish
   - name: 'BetterGamePerformanceV1.esp'
     msg:
       - type: say
@@ -3703,6 +3709,8 @@ plugins:
   - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
+# ENDGROUP: Lastish
+# BEGINGROUP: nVamp
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg:
       - type: say
@@ -3806,6 +3814,10 @@ plugins:
         content: 'Optional for a more difficult experience.'
       - type: say
         content: 'Old, consider upgrading to nVamp version 0.15'
+# ENDGROUP: nVamp
+# BEGINGROUP: Pose mods
+# ENDGROUP: Pose mods
+# BEGINGROUP: Beauty Packs & Race Addons
   - name: 'DK Caucasians.esp'
     msg:
       - type: say
@@ -3822,11 +3834,14 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Conflicts with other race-altering mods, such as mods that add hairstyles or beauty packs"'
+# ENDGROUP: Beauty Packs & Race Addons
+# BEGINGROUP: Hair
   - name: 'MikotoBeauty.esp'
     tag:
       - Eyes
       - Hair
       - Names
+# ENDGROUP: Hair
   - name: 'CFW-DLC.esp'
     tag:
       - Invent
@@ -3906,6 +3921,18 @@ plugins:
     msg:
       - type: say
         content: 'Do not load together with Shotgun Commando.esp'
+# BEGINGROUP: Merged Patch
+# ENDGROUP: Merged Patch
+# BEGINGROUP: ModFusion
+# ENDGROUP: ModFusion
+# BEGINGROUP: Bashed Patch
   - name: 'Bashed Patch, 0.esp'
     priority: 400
+# ENDGROUP: Bashed Patch
+# BEGINGROUP: Post Bashed Patch
+# Mods rumoured to be needed after Bashed Patch.
+# Utility addons.
+# Ultimate final absolute end last mods, ever.
+# ENDGROUP: Post Bashed Patch
+
     
