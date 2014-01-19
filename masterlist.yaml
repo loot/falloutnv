@@ -2281,6 +2281,9 @@ plugins:
       - type: say
         content: 'To be used with BlackWolf Backpack.esp'
         condition: 'not file("BlackWolf Backpack.esp")'
+  - name: 'Daughters of Ares.esp'
+    after:
+      - 'Lings.esm'
   - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
     tag:
       - Relev
