@@ -3647,9 +3647,6 @@ plugins:
     msg:
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
-  - name: 'BIS - Project Nevada - Rebalance.esp'
-    tag:
-      - Names
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg:
       - type: say
