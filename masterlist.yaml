@@ -10,36 +10,6 @@ common:
   - &dirtyUtil
     '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
 
-# Masterlist variable setup for BOSS v1.7+.
-# IF FILE("NVSE") SET: NVSE
-# IF FILE("nVamp - Core.esm") SET: NVAMP
-# IF FILE("EVE FNV.esp") || IF FILE("EVE FNV - ALL DLC.esp") SET: EVE
-# IF FILE("Weapon Mod Expansion.esm") SET: WME
-# IF FILE("Project Nevada - Core.esm") SET: PN-C
-# IF FILE("Project Nevada - Rebalance.esp") SET: PN-R
-# IF FILE("Project Nevada - Equipment.esm") SET: PN-E
-# IF FILE("ProjectBrazil.esm") SET: PRJB
-# IF FILE("FOOK - New Vegas.esm") SET: FOOK
-# IF FILE("Mission Mojave - Ultmate Edition.esp") SET: MM
-# IF FILE("TaleOfTwoWastelands.esm") SET: TTW
-# IF VAR(TTW) && IFNOT CHECKSUM("TaleOfTwoWastelands.esm", 8104A5CA) SET: TTW-WARN
-
-# DLC variable setup.
-# IF FILE("DeadMoney.esm") SET: DM
-# IF FILE("HonestHearts.esm") SET: HH
-# IF FILE("OldWorldBlues.esm") SET: OWB
-# IF FILE("LonesomeRoad.esm") SET: LR
-# IF FILE("GunRunnersArsenal.esm") SET: GRA
-# IF FILE("ClassicPack.esm") SET: CLP
-# IF FILE("MercenaryPack.esm") SET: MEP
-# IF FILE("TribalPack.esm") SET: TRP
-# IF FILE("CaravanPack.esm") SET: CAP
-# IF VAR(LR) && IF VAR(OWB) && IF VAR(HH) && IF VAR(DM) SET: DLC
-# IF VAR(CLP) && IF VAR(MEP) && IF VAR(TRP) && IF VAR(CAP) SET: PACK
-# IF VAR(DLC) && IF VAR(PACK) SET: DLC-P
-# IF VAR(DLC) && IF VAR(GRA) SET: DLC-G
-# IF VAR(DLC-G) && IF VAR(PACK) SET: DLC-A
-
 globals:
   - type: say
     condition: 'version("BOSS","3.0.0.0",<=)'
