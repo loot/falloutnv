@@ -3815,8 +3815,6 @@ plugins:
       - Hair
       - Names
 # ENDGROUP: Hair
-# These can be relocated at a later time as needed
-# BEGINGROUP: Mods not in V2 masterlist
   - name: 'CFW-DLC.esp'
     tag:
       - Invent
@@ -3896,7 +3894,6 @@ plugins:
     msg:
       - type: say
         content: 'Do not load together with Shotgun Commando.esp'
-# ENDGROUP: Mods not in V2 masterlist
 # BEGINGROUP: Merged Patch
 # ENDGROUP: Merged Patch
 # BEGINGROUP: ModFusion
