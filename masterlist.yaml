@@ -9,6 +9,7 @@ common:
 # Other Strings
   - &dirtyUtil
     '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
+
 globals:
   - type: say
     condition: 'version("BOSS","3.0.0.0",<=)'
@@ -26,6 +27,7 @@ globals:
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: Need check for Tale of Two Wastelands load order
+
 plugins:
   - name: 'DeadMoney.esm'
     priority: -400
@@ -75,7 +77,6 @@ plugins:
     dirty:
       - util: *dirtyUtil
         crc: 0xaac938d
-        itm: 97
   - name: 'CaravanPack.esm'
     priority: -400
     after:
@@ -158,6 +159,8 @@ plugins:
       - Scripts
       - Sound
       - Stats
+  - name: 'UWHNV-Core.esm'
+    req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     priority: -400
     after:
@@ -293,22 +296,13 @@ plugins:
       - "OWNB - Open World.esm"
       - 'OFT_IWR_Base.esp'
   - name: 'IWS-Core.esm'
-    msg:
-      - type: say
-        content: Loaded early to let other mods override spawn points if needed.
     tag:
       - Delev
-  - name: NosCo Companion System.esm
-    msg:
-      - type: say
-        content: Loaded early in the event Companion .esm mods require this.
   - name: 'OWNB - Open World.esm'
     inc:
       - 'IWR.esm'
-  - name: RRCompanionVault.esm
-    msg:
-      - type: say
-        content: Loaded early in the event Companion .esm mods require this.
+#  - name: 'RBX.esm'
+# Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
@@ -318,6 +312,13 @@ plugins:
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
+  - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Invent
+      - Names
+      - NpcFaces
   - name: 'CINEMATECH.esm'
     req:
       - *NVSE
@@ -435,6 +436,10 @@ plugins:
       - Delev
       - Invent
       - Names
+  - name: 'Project Nevada - Rebalance.esp'
+    tag:
+      - Invent
+      - Names
   - name: Psiclones.esm
     tag:
       - Names
@@ -462,6 +467,28 @@ plugins:
   - name: 'Weapon Mod Expansion.esm'
     tag:
       - Names
+  - name: 'WME - Dead Money.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - Honest Hearts.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - Old World Blues.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - GRA.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - GRA Light.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'WME - DLCs.esm'
+    after:
+      - 'nVamp - Core.esm'
+    inc:
+      - 'WME - Dead Money.esm'
+      - 'WME - Honest Hearts.esm'
+      - 'WME - Old World Blues.esm'
   - name: 'Clean-Deluxe FNV.esm'
     inc:
       - 'Performance of the Gods.esp'
@@ -475,109 +502,6 @@ plugins:
       - 'iHUD.esm'
       - 'Primary Needs HUD.esm'
     req: [ *NVSE ]
-  - name: 'UWHNV-Core.esm'
-    req: [ *NVSE ]
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: Machienzo - NPC Cosmetic Fixes.esm
-    msg:
-      - type: say
-        content: Old, update to NVCE.
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: NVCE Main.esm
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: NVCE Main (Faces Only).esm
-    tag:
-      - Actors.ACBS
-      - Deactivate
-      - Filter
-      - NPC.Race
-      - NpcFaces
-  - name: IWS-Core.esm
-    tag:
-      - Delev
-  - name: EZ_CompanionNVSE_Killable_Normal.esm
-    msg:
-      - type: say
-        content: Old
-  - name: Project Nevada - Core.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-    tag:
-      - Invent
-  - name: 'iHUD.esm'
-    req: [ *NVSE ]
-  - name: ELECTRO-CITY - CompletedWorkorders.esm
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Invent
-      - Names
-      - NpcFaces
-  - name: CINEMATECH.esm
-    msg:
-      - type: say
-        content: "Requires: New Vegas Script Extender"
-        condition: not file("..\nvse_loader.exe")
-  - name: Caliber.esm
-    tag:
-      - Invent
-      - Names
-  - name: Weapon Mod Expansion.esm
-    tag:
-      - Names
-  - name: FOOK - New Vegas.esm
-    tag:
-      - Deflst
-      - Delev
-      - Graphics
-      - Names
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
   - name: 'nVamp - Effects nVamped.esm'
     msg:
       - type: say
@@ -600,52 +524,6 @@ plugins:
     msg:
       - type: say
         content: 'Old, consider upgrading to nVamp version 0.15'
-  - name: 'HonestHearts-CaliberX.esm'
-    after:
-      - 'nVamp - Core.esm'
-    tag:
-      - Names
-  - name: AWorldOfPain(Preview).esm
-    tag:
-      - Deflst
-      - Invent
-  - name: AWorldOfPain(LowLoot).esm
-    msg:
-      - type: say
-        content: Outdated. Consider using the latest version along with the low loot patches instead.
-  - name: MoMod.esm
-    msg:
-      - type: say
-        content: "Incompatible with: monsterrach.esp"
-    tag:
-      - Relev
-  - name: Project Nevada - Equipment.esm
-    tag:
-      - Delev
-      - Invent
-      - Names
-  - name: 'WME - DLCs.esm'
-    after:
-      - 'nVamp - Core.esm'
-    inc:
-      - 'WME - Dead Money.esm'
-      - 'WME - Honest Hearts.esm'
-      - 'WME - Old World Blues.esm'
-  - name: 'WME - Dead Money.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - Honest Hearts.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - Old World Blues.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - GRA.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'WME - GRA Light.esm'
-    after:
-      - 'nVamp - Core.esm'
   - name: 'BoulderCityFaceliftProject.esm'
     after:
       - 'nVamp - Core.esm'
@@ -655,6 +533,11 @@ plugins:
   - name: 'dangame.esm'
     after:
       - 'nVamp - Core.esm'
+  - name: 'HonestHearts-CaliberX.esm'
+    after:
+      - 'nVamp - Core.esm'
+    tag:
+      - Names
   - name: 'New Vegas Redesigned.esm'
     tag:
       - Body-F
@@ -1651,10 +1534,6 @@ plugins:
     tag:
       - Invent
       - Names
-  - name: 'Project Nevada - Rebalance.esp'
-    tag:
-      - Invent
-      - Names
   - name: 'BIS - Project Nevada - Cyberware.esp'
     tag:
       - Names
@@ -2145,6 +2024,11 @@ plugins:
       - Delev
       - Graphics
       - Relev
+  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
+    msg:
+      - type: say
+        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
+        condition: 'file("nVamp - Core.esm")'
   - name: 'Armored PA Gloves.esp'
     tag:
       - Deflst
@@ -2168,17 +2052,9 @@ plugins:
       - type: say
         content: 'To be used with BlackWolf Backpack.esp'
         condition: 'not file("BlackWolf Backpack.esp")'
-  - name: 'Daughters of Ares.esp'
-    after:
-      - 'Lings.esm'
   - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
     tag:
       - Relev
-  - name: DWCNV-CS.esp
-    msg:
-      - type: say
-        content: "Requires: Couriers Stash"
-        condition: ( ( ( not file("ClassicPack.esm") ) or not file("MercenaryPack.esm") ) or not file("TribalPack.esm") ) or not file("CaravanPack.esm")
   - name: 'epock.esp'
     msg:
       - type: say
@@ -2194,11 +2070,6 @@ plugins:
       - type: say
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'regex("nVamp.*\.esp")'
-  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
-    msg:
-      - type: say
-        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
-        condition: 'file("nVamp - Core.esm")'
   - name: 'FlashlightNVSE.esp'
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
@@ -2477,6 +2348,8 @@ plugins:
     tag:
       - R.Mouth
       - R.Teeth
+      - Hair
+      - Graphics
       - NpcFaces
   - name: 'BetterRepairKits.esp'
     msg:
@@ -2572,9 +2445,6 @@ plugins:
     tag:
       - Names
   - name: 'IntegratedFullDLC.esp'
-    msg:
-      - type: say
-        content: "Requires: All four DLC's."
   - name: 'Max Level 50.esp'
     req: [ *NVSE ]
     msg:
@@ -3567,6 +3437,9 @@ plugins:
     msg:
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'BIS - Project Nevada - Rebalance.esp'
+    tag:
+      - Names
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg:
       - type: say
@@ -3772,4 +3645,3 @@ plugins:
         content: 'Do not load together with Shotgun Commando.esp'
   - name: 'Bashed Patch, 0.esp'
     priority: 400
-    
