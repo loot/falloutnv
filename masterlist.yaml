@@ -18,11 +18,11 @@ globals:
     content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using FNVEdit to view conflicts.
   - type: say
     content:
-      - lang: eng
+      - lang: en
         str: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
-      - lang: rus
+      - lang: ru
         str: '[Обсуждение BOSS \"(Eng)\"](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
-      - lang: spa
+      - lang: es
         str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
