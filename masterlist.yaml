@@ -12,18 +12,18 @@ common:
 
 globals:
   - type: say
-    condition: 'version("BOSS","3.0.0.0",<=)'
-    content: 'All Beta updates for BOSS (v3.0.0) can be downloaded [here](https://github.com/boss-developers/boss-code/releases).'
+    condition: 'version("LOOT","0.5.0.0",<=)'
+    content: 'All Beta updates for LOOT (v0.5.0) can be downloaded [here](https://github.com/loot/loot/releases).'
   - type: say
-    content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using FNVEdit to view conflicts.
+    content: The first major release of LOOT is now open for "https://github.com/loot/loot/wiki/LOOT-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using FNVEdit to view conflicts.
   - type: say
     content:
       - lang: en
-        str: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
       - lang: ru
-        str: '[Обсуждение BOSS \"(Eng)\"](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
+        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
       - lang: es
-        str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1483857-rel-boss-for-fallout-new-vegas/).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: Need check for Tale of Two Wastelands load order
