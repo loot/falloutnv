@@ -727,7 +727,7 @@ plugins:
       - type: say
         content: 'Obsolete with latest patch'
   - name: 'Reload Speed Game Start Fix.esp'
-    req: [ *NVSE ]      
+    req: [ *NVSE ]
     msg:
       - type: say
         content: Obsolete with latest patch
@@ -918,7 +918,7 @@ plugins:
       - type: say
         content: 'Do not load together with ImplantGRX-NVSEHotkey.esp'
   - name: 'ImplantGRX-NVSEHotkey.esp'
-    req: [ *NVSE ]      
+    req: [ *NVSE ]
     msg:
       - type: say
         content: 'Do not load together with ImplantGRX-ActivatorHotkey.esp'
