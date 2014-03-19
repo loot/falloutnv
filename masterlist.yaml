@@ -30,7 +30,7 @@ globals:
 
 plugins:
   - name: 'DeadMoney.esm'
-    priority: -400
+    priority: -400999000
     tag:
       - Deflst
     dirty:
@@ -39,7 +39,7 @@ plugins:
         itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
-    priority: -400
+    priority: -400999000
     after:
       - 'DeadMoney.esm'
     dirty:
@@ -48,7 +48,7 @@ plugins:
         itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
-    priority: -400
+    priority: -400999000
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -57,7 +57,7 @@ plugins:
         crc: 0x7f8f8225
         itm: 124
   - name: 'LonesomeRoad.esm'
-    priority: -400
+    priority: -400999000
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -68,7 +68,7 @@ plugins:
         itm: 240
         udr: 6
   - name: 'GunRunnersArsenal.esm'
-    priority: -400
+    priority: -400999000
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -79,7 +79,7 @@ plugins:
         crc: 0xaac938d
         itm: 97
   - name: 'CaravanPack.esm'
-    priority: -400
+    priority: -400998960
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -87,7 +87,7 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
   - name: 'ClassicPack.esm'
-    priority: -400
+    priority: -400998990
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -96,7 +96,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'CaravanPack.esm'
   - name: 'MercenaryPack.esm'
-    priority: -400
+    priority: -400998980
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -106,7 +106,7 @@ plugins:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
-    priority: -400
+    priority: -400998970
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -120,30 +120,30 @@ plugins:
     tag:
       - Invent
   - name: 'Fallout3.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
   - name: 'Anchorage.esm'
-    priority: -400
+    priority: -400998000
   - name: 'ThePitt.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'Anchorage.esm'
   - name: 'BrokenSteel.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'ThePitt.esm'
   - name: 'PointLookout.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'BrokenSteel.esm'
   - name: 'Zeta.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
-    priority: -400
+    priority: -400998000
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
@@ -163,7 +163,7 @@ plugins:
   - name: 'UWHNV-Core.esm'
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
-    priority: -400
+    priority: -400998000
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -3639,4 +3639,4 @@ plugins:
       - type: say
         content: 'Do not load together with Shotgun Commando.esp'
   - name: 'Bashed Patch, 0.esp'
-    priority: 400
+    priority: 400991000
