@@ -723,9 +723,6 @@ plugins:
         content: 'Obsolete with latest patch'
   - name: 'Reload Speed Game Start Fix.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: Obsolete with latest patch
   - name: 'RepairKitFix.esp'
     msg:
       - type: say
