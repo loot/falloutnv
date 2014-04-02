@@ -2245,6 +2245,10 @@ plugins:
     tag:
       - Actors.ACBS
       - NpcFaces
+  - name: 'FCO.esp'
+    tag:
+      - NPC.Race
+      - NpcFaces
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
