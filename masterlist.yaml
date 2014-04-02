@@ -566,6 +566,26 @@ plugins:
         content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
+  - name: 'YUP - NPC Fixes (Base Game).esp'
+    priority: -400900000
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Factions
+      - Invent
+      - Names
+  - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    priority: -400900000
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Factions
+      - Invent
+      - Names
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
