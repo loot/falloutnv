@@ -3656,3 +3656,5 @@ plugins:
         content: 'Do not load together with Shotgun Commando.esp'
   - name: 'Bashed Patch, 0.esp'
     priority: 400991000
+  - name: 'NewVegasBountiesII.esp'
+    after: NewVegasBounties.esp
