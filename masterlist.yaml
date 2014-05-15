@@ -3657,4 +3657,4 @@ plugins:
   - name: 'Bashed Patch, 0.esp'
     priority: 400991000
   - name: 'NewVegasBountiesII.esp'
-    after: NewVegasBounties.esp
+    after: [ NewVegasBounties.esp ]
