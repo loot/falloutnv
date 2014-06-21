@@ -3680,6 +3680,6 @@ plugins:
     tag:
       - Names
   - name: 'vault22FloralOverhaul.esp'
-    - util: *dirtyUtil
-      crc: 0xd8f16ff2b
-      udr: 46
+    msg:
+      - type: warn
+        content: "Do not clean, otherwise, the game will crash on startup."
