@@ -3101,6 +3101,13 @@ plugins:
   - name: 'Vurt''s WFO.esp'
     inc:
       - 'Vurt''s Trees & Grass.esp'
+    dirty:
+      - util: *dirtyUtil
+        crc: 0x31b1b874
+        itm: 377
+    msg:
+      - type: warn
+        content: 'Do not clean UDR records from this mod, otherwise, the game will crash on startup.'
   - name: 'Vurt''s WFO [Lite].esp'
     inc:
       - 'Vurt''s WFO.esp'
