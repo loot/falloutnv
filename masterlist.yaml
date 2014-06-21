@@ -3674,5 +3674,5 @@ plugins:
   - name: 'PN-Refill Water Bottles Patch.esp'
     msg:
       - type: error
-        condition: 'checksum("KFE - Refill Water Bottles.esp", 0xb85ef60c)'
+        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
         content: "Deactivate. The main file already contains the proper edits for Project Nevada compatibility."
