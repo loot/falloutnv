@@ -3679,3 +3679,7 @@ plugins:
   - name: 'Project Nevada - Med-X Fix.esp'
     tag:
       - Names
+  - name: 'vault22FloralOverhaul.esp'
+    - util: *dirtyUtil
+      crc: 0xd8f16ff2b
+      udr: 46
