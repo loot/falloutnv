@@ -3668,3 +3668,11 @@ plugins:
     priority: 400991000
   - name: 'NewVegasBountiesII.esp'
     after: [ NewVegasBounties.esp ]
+  - name: 'KFE - Refill Water Bottles.esp'
+    tag:
+      - Scripts
+  - name: 'PN-Refill Water Bottles Patch.esp'
+    msg:
+      - type: error
+        condition: 'checksum("KFE - Refill Water Bottles.esp", 0xb85ef60c)'
+        content: "Deactivate. The main file already contains the proper edits for Project Nevada compatibility."
