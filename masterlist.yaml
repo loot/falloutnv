@@ -3105,6 +3105,9 @@ plugins:
       - util: *dirtyUtil
         crc: 0x31b1b874
         itm: 377
+      - util: *dirtyUtil
+        crc: 0x71755f08
+        itm: 356
     msg:
       - type: warn
         content: 'Do not clean UDR records from this mod, otherwise, the game will crash on startup.'
