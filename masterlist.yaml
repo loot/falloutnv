@@ -3676,3 +3676,6 @@ plugins:
       - type: error
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
         content: "Deactivate. The main file already contains the proper edits for Project Nevada compatibility."
+  - name: 'Project Nevada - Med-X Fix.esp'
+    tag:
+      - Names
