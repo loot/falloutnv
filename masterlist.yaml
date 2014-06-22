@@ -3714,6 +3714,8 @@ plugins:
     priority: 400991000
   - name: 'NewVegasBountiesII.esp'
     after: [ NewVegasBounties.esp ]
+    tag:
+      - Relations
   - name: 'KFE - Refill Water Bottles.esp'
     tag:
       - Scripts
