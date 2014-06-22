@@ -178,6 +178,7 @@ plugins:
       - C.Light
       - C.Owner
       - C.Water
+      - Deflst
       - Delev
       - Destructible
       - Factions
