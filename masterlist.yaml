@@ -26,8 +26,6 @@ globals:
 plugins:
   - name: 'DeadMoney.esm'
     priority: -400999000
-    tag:
-      - Deflst
     dirty:
       - util: *dirtyUtil
         crc: 0xd70f165b
