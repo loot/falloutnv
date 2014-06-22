@@ -419,12 +419,19 @@ plugins:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
       - 'NVInteriors_ComboEdition_AWOP.esm'
+    tag:
+      - Graphics
   - name: 'NVInteriors_ComboEdition_AWOP.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
       - 'NVInteriors_ComboEdition.esm'
   - name: 'Interior Lighting Overhaul - Core.esm'
+    tag:
+      - C.Climate
+      - C.Light
+      - Destructible
+  - name: Interior Lighting Overhaul - L38PS.esm
     tag:
       - C.Light
   - name: 'Project Nevada - Core.esm'
@@ -3435,6 +3442,7 @@ plugins:
   - name: 'ILO - NVInteriors Project.esp'
     tag:
       - C.Light
+      - C.Owner
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     tag:
       - C.Light
