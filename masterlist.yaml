@@ -454,6 +454,10 @@ plugins:
   - name: 'Project Nevada - Rebalance Complete.esp'
     tag:
       - Relev
+    dirty:
+      - util: *dirtyUtil
+        crc: 0xe0e2c3c0
+        itm: 22
   - name: 'Project Nevada - All DLC.esp'
     tag:
       - Actors.DeathItem
@@ -3752,3 +3756,8 @@ plugins:
       - util: *dirtyUtil
         crc: 0x35f7bae7
         itm: 17
+    tag:
+      - Factions
+      - Names
+      - Relev
+      - Scripts
