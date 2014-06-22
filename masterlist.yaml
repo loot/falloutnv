@@ -319,11 +319,14 @@ plugins:
       - Names
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
+      - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Destructible
       - Invent
       - Names
       - NpcFaces
+      - Stats
   - name: 'CINEMATECH.esm'
     req:
       - *NVSE
