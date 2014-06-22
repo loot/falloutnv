@@ -430,6 +430,7 @@ plugins:
     tag:
       - C.Climate
       - C.Light
+      - C.Owner
       - Destructible
   - name: Interior Lighting Overhaul - L38PS.esm
     tag:
