@@ -434,13 +434,31 @@ plugins:
     after:
       - 'nVamp - Core.esm'
     tag:
+      - Actors.ACBS
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'Project Nevada - Rebalance.esp'
+    tag:
       - Delev
       - Invent
       - Names
-  - name: 'Project Nevada - Rebalance.esp'
+      - Stats
+  - name: 'Project Nevada - Cyberware.esp'
     tag:
       - Invent
-      - Names
+  - name: 'Project Nevada - Rebalance Complete.esp'
+    tag:
+      - Relev
+  - name: 'Project Nevada - All DLC.esp'
+    tag:
+      - Actors.DeathItem
+      - Invent
+      - Relev
   - name: Psiclones.esm
     tag:
       - Names
