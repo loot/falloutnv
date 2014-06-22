@@ -3720,3 +3720,10 @@ plugins:
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
+  - name: 'RagdollOverhaulULTIMATE.esp'
+    tag:
+      - Actors.Skeleton
+    dirty:
+      - util: *dirtyUtil
+        crc: 0x8ab4f125
+        itm: 15
