@@ -3711,3 +3711,6 @@ plugins:
     msg:
       - type: warn
         content: "Do not clean, otherwise, the game will crash on startup."
+  - name: 'rotfacetoriches.esp'
+    tag:
+      - Factions
