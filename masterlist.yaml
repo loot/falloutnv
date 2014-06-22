@@ -226,6 +226,11 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
+  - name: 'FCOMaster.esm'
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
   - name: 'NVCE Main.esm'
     url: [ 'http://newvegas.nexusmods.com/mods/39325' ]
     tag:
@@ -2246,6 +2251,29 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'FCO.esp'
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Roberts Patch.esp'
+    dirty:
+      - util: *dirtyUtil
+        crc: 0xa03db8ae
+        itm: 1
+  - name: 'FCO - OWB.esp'
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
+    dirty:
+      - util: *dirtyUtil
+        crc: 0x15a3bcc8
+        itm: 18
+  - name: 'FCO - Willow.esp'
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Willow (Cazy).esp'
     tag:
       - NPC.Race
       - NpcFaces
