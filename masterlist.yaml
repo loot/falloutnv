@@ -3717,3 +3717,6 @@ plugins:
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
     tag:
       - C.Light
+  - name: 'AnimatedFan.esp'
+    tag:
+      - Destructible
