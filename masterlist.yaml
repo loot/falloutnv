@@ -3714,3 +3714,6 @@ plugins:
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
+  - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
+    tag:
+      - C.Light
