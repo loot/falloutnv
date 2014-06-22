@@ -3747,3 +3747,8 @@ plugins:
       - util: *dirtyUtil
         crc: 0x8ab4f125
         itm: 15
+  - name: 'Tales from the Burning Sands.esm'
+    dirty:
+      - util: *dirtyUtil
+        crc: 0x35f7bae7
+        itm: 17
