@@ -172,18 +172,23 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.AIData
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Stats
+      - C.Light
+      - C.Owner
+      - C.Water
       - Delev
-      - Eyes
+      - Destructible
       - Factions
+      - Eyes
       - Graphics
       - Hair
       - Invent
       - Names
-      - NpcFaces
       - Relev
       - Sounds
       - Stats
-      - Voice-F
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
@@ -599,20 +604,34 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
       - Actors.Stats
+      - Delev
       - Factions
       - Invent
       - Names
+      - NpcFaces
+      - NPC.Class
+      - NPC.Race
+      - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     priority: -400900000
     tag:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
       - Actors.Stats
+      - Delev
       - Factions
       - Invent
       - Names
+      - NpcFaces
+      - NPC.Class
+      - NPC.Race
+      - Scripts
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
