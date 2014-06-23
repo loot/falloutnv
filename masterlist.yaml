@@ -2311,6 +2311,8 @@ plugins:
       - util: *dirtyUtil
         crc: 0xa03db8ae
         itm: 1
+    tag:
+      - Body-M
   - name: 'FCO - OWB.esp'
     tag:
       - Actors.ACBS
@@ -3804,4 +3806,8 @@ plugins:
       - Factions
   - name: 'DeadMoneyFemaleTuxedo.esp'
     tag:
+      - Graphics
+  - name: 'Roberts_NewVegas.esp'
+    tag:
+      - Body-M
       - Graphics
