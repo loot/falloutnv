@@ -3802,3 +3802,6 @@ plugins:
     tag:
       - Actors.ACBS
       - Factions
+  - name: 'DeadMoneyFemaleTuxedo.esp'
+    tag:
+      - Graphics
