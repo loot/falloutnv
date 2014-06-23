@@ -3791,3 +3791,14 @@ plugins:
       - Names
       - Relev
       - Scripts
+  - name: 'avangraffscorned.esp'
+    tag:
+      - Actors.AIPackages
+    dirty:
+      - util: *dirtyUtil
+        crc: 0x026ab27d
+        itm: 1
+  - name: 'kochandbohr.esp'
+    tag:
+      - Actors.ACBS
+      - Factions
