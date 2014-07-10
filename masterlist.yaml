@@ -3814,3 +3814,5 @@ plugins:
     tag:
       - Body-M
       - Graphics
+  - name: 'MergedPatch.esp'
+    priority: 1999999
