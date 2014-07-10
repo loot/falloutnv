@@ -17,11 +17,11 @@ globals:
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1498392-rel-loot-thread-7/).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1503686-rel-loot-thread-10).'
       - lang: ru
-        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1498392-rel-loot-thread-7/).'
+        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1503686-rel-loot-thread-10).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1498392-rel-loot-thread-7/).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1503686-rel-loot-thread-10).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: Need check for Tale of Two Wastelands load order
