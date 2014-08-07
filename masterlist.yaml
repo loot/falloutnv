@@ -5,10 +5,10 @@ common:
     display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
     name: 'NVSE\Plugins\MCM.dll'
-    display: '[MCM](http://newvegas.nexusmods.com/mods/42507)'
+    display: '[MCM](http://www.nexusmods.com/newvegas/mods/42507)'
 # Other Strings
   - &dirtyUtil
-    '[FNVEdit](http://newvegas.nexusmods.com/mods/34703)'
+    '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
 
 globals:
   - type: say
@@ -194,7 +194,7 @@ plugins:
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
-        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
+        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -208,7 +208,7 @@ plugins:
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm'
     msg:
       - type: say
-        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
+        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -222,7 +222,7 @@ plugins:
   - name: 'Machienzo - NPC Cosmetic Fixes.esm'
     msg:
       - type: say
-        content: '"Old, update to [NVCE](http://newvegas.nexusmods.com/mods/39325)."'
+        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
     tag:
       - Body-F
       - Body-M
@@ -239,7 +239,7 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'NVCE Main.esm'
-    url: [ 'http://newvegas.nexusmods.com/mods/39325' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -1624,14 +1624,14 @@ plugins:
       - 'Project Nevada - Honest Hearts.esp'
     msg:
       - type: say
-        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).'
+        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://www.nexusmods.com/newvegas/mods/42363).'
   - name: 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
     inc:
       - 'Project Nevada - Dead Money.esp'
       - 'Project Nevada - Honest Hearts.esp'
     msg:
       - type: say
-        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://newvegas.nexusmods.com/mods/42363).'
+        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](http://www.nexusmods.com/newvegas/mods/42363).'
   - name: 'Project Nevada - Old World Blues.esp'
     inc:
       - "Project Nevada - Old World Blues (No Cyberware).esp"
@@ -3652,7 +3652,7 @@ plugins:
   - name: 'DK Caucasians.esp'
     msg:
       - type: say
-        content: '"Requires: [Lings compatibility patch](http://newvegas.nexusmods.com/mods/41548)."'
+        content: '"Requires: [Lings compatibility patch](http://www.nexusmods.com/newvegas/mods/41548)."'
         condition: 'file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)'
   - name: 'EwwGhoulyBody.esp'
     tag:
