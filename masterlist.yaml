@@ -2158,7 +2158,11 @@ plugins:
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
     after:
+      - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
   - name: 'Project Nevada - FlashlightNVSE.esp'
     inc:
       - 'FlashlightNVSE.esp'
@@ -3865,6 +3869,41 @@ plugins:
       - 'NewVegasBountiesII.esp'
       - 'OWB-Path Lights.esp'
       - 'PortableCampsite.esp'
+  - name: 'Pip-Boy Light - Amber.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    inc:
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Blue.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Green.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Vanilla.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - White.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
   - name: 'Tutorial Killer - Alternate Start.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/47746'
   - name: 'Weapons.of.the.New.Millenia.esm'
