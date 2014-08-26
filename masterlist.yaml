@@ -1689,8 +1689,12 @@ plugins:
     inc:
       - 'awilderwasteland.esp'
   - name: 'betsybrahmin.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/46574'
     inc:
       - 'betsybrahminFSO.esp'
+    after:
+      - 'kochandbohr.esp'
+      - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
     inc:
       - 'betsybrahmin.esp'
@@ -2310,6 +2314,8 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Roberts Patch.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/54460'
+    after: [ 'Roberts_NewVegas.esp' ]
     dirty:
       - util: *dirtyUtil
         crc: 0xa03db8ae
@@ -2333,6 +2339,9 @@ plugins:
     tag:
       - NPC.Race
       - NpcFaces
+  - name: 'FCO - Glowing One.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/54460'
+    tag: [ Scripts ]
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
@@ -3774,8 +3783,10 @@ plugins:
     tag:
       - Factions
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/55008'
     tag:
       - C.Light
+    after: [ 'GRARG.esp' ]
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
@@ -3814,5 +3825,25 @@ plugins:
     tag:
       - Body-M
       - Graphics
+
+  - name: 'GRA - The Right to Bear Arms.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/46138'
+    tag:
+      - Delev
+      - Relev
+      - Stats
+    after:
+      - '1nivVSLArmors.esp'
+      - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
+      - 'TrooperOverhaul-Dragbody.esp'
+  - name: 'NevadaSkies - Ultimate DLC Edition.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    after:
+      - 'athornysituation.esp'
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'OWB-Path Lights.esp'
+      - 'PortableCampsite.esp'
+
   - name: 'MergedPatch.esp'
     priority: 1999999
