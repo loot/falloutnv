@@ -1190,14 +1190,17 @@ plugins:
     inc:
       - 'NPCsUseAmmo.esp'
   - name: 'populatedcasino.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/35369'
     inc:
       - 'populatedcasino-medium.esp'
       - 'populatedcasino-light.esp'
   - name: 'populatedcasino-medium.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/35369'
     inc:
       - 'populatedcasino.esp'
       - 'populatedcasino-light.esp'
   - name: 'populatedcasino-light.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/35369'
     inc:
       - 'populatedcasino.esp'
       - 'populatedcasino-medium.esp'
@@ -2151,8 +2154,11 @@ plugins:
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'regex("nVamp.*\.esp")'
   - name: 'FlashlightNVSE.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/39968'
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
+    after:
+      - 'Pip-Boy Light - Blue.esp'
   - name: 'Project Nevada - FlashlightNVSE.esp'
     inc:
       - 'FlashlightNVSE.esp'
@@ -3021,9 +3027,12 @@ plugins:
       - Graphics
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/42666'
     tag:
       - Graphics
       - Sound
+    after:
+      - 'Improved Sound FX.esp'
   - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
@@ -3326,6 +3335,8 @@ plugins:
     tag:
       - C.Climate
       - C.Light
+  - name: 'Nevada Skies - Ultimate DLC Edition.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/35998'
   - name: 'Nevada Skies - URWLified.esp'
     inc:
       - 'Nevada Skies.esp'
@@ -3826,10 +3837,16 @@ plugins:
     tag:
       - Graphics
   - name: 'Roberts_NewVegas.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/54731'
     tag:
       - Body-M
       - Graphics
 
+  - name: 'athornysituation.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/46048'
+    tag:
+      - Relations
+      - Scripts
   - name: 'GRA - The Right to Bear Arms.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/46138'
     tag:
@@ -3848,6 +3865,12 @@ plugins:
       - 'NewVegasBountiesII.esp'
       - 'OWB-Path Lights.esp'
       - 'PortableCampsite.esp'
+  - name: 'Tutorial Killer - Alternate Start.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/47746'
+  - name: 'Weapons.of.the.New.Millenia.esm'
+    url: 'http://www.nexusmods.com/newvegas/mods/55008'
+  - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/39981'
 
   - name: 'MergedPatch.esp'
     priority: 1999999
