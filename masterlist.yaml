@@ -1696,8 +1696,12 @@ plugins:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
+    url: 'http://www.nexusmods.com/newvegas/mods/46574'
     inc:
       - 'betsybrahmin.esp'
+    after:
+      - 'kochandbohr.esp'
+      - 'rotfacetoriches.esp'
   - name: 'wsex_workgirl.esp'
     inc:
       - 'wsex_workgirl_tryout.esp'
