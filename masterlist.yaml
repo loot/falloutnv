@@ -1191,19 +1191,34 @@ plugins:
       - 'NPCsUseAmmo.esp'
   - name: 'populatedcasino.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    tag: [ AI.Packages ]
     inc:
       - 'populatedcasino-medium.esp'
       - 'populatedcasino-light.esp'
   - name: 'populatedcasino-medium.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
       - 'populatedcasino-light.esp'
+    dirty:
+      - crc: 0x39574E5A
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 47
+        udr: 8
+        nav: 0
   - name: 'populatedcasino-light.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
       - 'populatedcasino-medium.esp'
+    dirty:
+      - crc: 0xC7507F30
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 46
+        udr: 16
+        nav: 0
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
