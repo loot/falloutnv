@@ -3375,6 +3375,12 @@ plugins:
       - C.Light
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    dirty:
+      - crc: 0xD6B9E659
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 4
+        udr: 0
+        nav: 0
   - name: 'Nevada Skies - URWLified.esp'
     inc:
       - 'Nevada Skies.esp'
@@ -3840,6 +3846,12 @@ plugins:
     tag:
       - C.Light
     after: [ 'GRARG.esp' ]
+    dirty:
+      - crc: 0xB5824C7A
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 8
+        udr: 0
+        nav: 0
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
@@ -3960,8 +3972,20 @@ plugins:
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: 'http://www.nexusmods.com/newvegas/mods/55008'
+    dirty:
+      - crc: 0x1E04D898
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 7
+        udr: 0
+        nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    dirty:
+      - crc: 0xE0D9629C
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 1
+        udr: 0
+        nav: 0
 
   - name: 'MergedPatch.esp'
     priority: 1999999
