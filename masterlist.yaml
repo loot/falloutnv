@@ -315,8 +315,11 @@ plugins:
     req: [ *NVSE ]
   - name: 'Caliber.esm'
     tag:
+      - Delev
+      - Graphics
       - Invent
       - Names
+      - Stats
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
@@ -611,6 +614,13 @@ plugins:
         content: 'Outdated. Consider Updating.'
     tag:
       - NoMerge
+  - name: 'Tales of the Burning Sands.esm'
+    tag:
+      - Names
+      - Factions
+  - name: 'More Perks.esm'
+    tag:
+      - Names
   - name: 'YUP - NPC Fixes (Base Game).esp'
     priority: -400900000
     tag:
@@ -1716,6 +1726,9 @@ plugins:
   - name: 'awilderwasteland.esp'
     inc:
       - 'awilderwastelandnobenny.esp'
+    tag:
+      - Stats
+      - AI.Packages
   - name: 'awilderwastelandnobenny.esp'
     inc:
       - 'awilderwasteland.esp'
@@ -2708,6 +2721,8 @@ plugins:
   - name: 'NVDLC04 Allegiance w Duster.esp'
     inc:
       - 'NVDLC04 Allegiance.esp'
+    tag:
+      - Scripts
   - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
@@ -2838,10 +2853,14 @@ plugins:
       - 'Weapon Mod Expansion.esm'
       - 'Weapon Mod Expansion.esp'
     tag:
+      - Actors.AIData
       - Delev
+      - Graphics
       - Invent
-      - WeaponMods
       - Names
+      - Relev
+      - Stats
+      - WeaponMods
   - name: 'WMXUE.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
@@ -2912,7 +2931,18 @@ plugins:
       - 'VarmintRifle22LR.esp'
   - name: 'WMX-ModernWeapons.esp'
     tag:
+      - Delev
       - Invent
+      - Relev
+  - name: 'WMX-DLCMerged.esp'
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
+      - WeaponMods
   - name: 'ACS-WMXModernWeapons.esp'
     tag:
       - Invent
@@ -2942,6 +2972,11 @@ plugins:
   - name: 'WMX-EVE-AllDLC.esp'
     tag:
       - Invent
+      - WeaponMods
+  - name: 'WMX-EVE-AllDLCMerged.esp'
+    tag:
+      - Graphics
+      - Stats
       - WeaponMods
   - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
     inc:
@@ -3067,8 +3102,15 @@ plugins:
   - name: 'EVE FNV - ALL DLC.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/42666'
     tag:
+      - Delev
+      - Destructible
       - Graphics
+      - Invent
+      - Names
+      - Scripts
       - Sound
+      - Stats
+      - WeaponMods
     after:
       - 'Improved Sound FX.esp'
   - name: 'Improved Sound FX - EVE.esp'
@@ -3898,6 +3940,19 @@ plugins:
         udr: 0
         nav: 0
 
+  - name: 'ADAM Complete.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent
+      - Stats
+  - name: 'Alternative Blood Spout.esp'
+    tag:
+      - Graphics
+  - name: 'Armor Replacer Child NPC Fix.esp'
+    tag:
+      - Actors.ACBS
+      - Invent
   - name: 'athornysituation.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/46048'
     tag:
@@ -3919,6 +3974,18 @@ plugins:
       - '1nivVSLArmors.esp'
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
+  - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
+    tag:
+      - Graphics
+  - name: 'Improved Sounds FX.esp'
+    tag:
+      - Sound
+  - name: 'Integration - Couriers Stash+WMX.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35998'
     after:
@@ -3927,6 +3994,19 @@ plugins:
       - 'NewVegasBountiesII.esp'
       - 'OWB-Path Lights.esp'
       - 'PortableCampsite.esp'
+  - name: 'New Vegas Bounties II.esp'
+    tag:
+      - C.Light
+  - name: 'TrooperOverhaul-Dragbody.esp'
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
   - name: 'Pip-Boy Light - Amber.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/56523'
     inc:
@@ -3962,6 +4042,9 @@ plugins:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
+  - name: 'RaestlozFactionArmorEnhancement.esp'
+    tag:
+      - Scripts
   - name: 'Tutorial Killer - Alternate Start.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/47746'
     dirty:
@@ -3980,6 +4063,10 @@ plugins:
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    tag:
+      - Delev
+      - Graphics
+      - Stats
     dirty:
       - crc: 0xE0D9629C
         util: *dirtyUtil # FNVEdit 3.0.32
