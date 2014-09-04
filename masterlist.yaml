@@ -24,7 +24,7 @@ globals:
         str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1506584-rel-loot-thread-12).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
-    content: Need check for Tale of Two Wastelands load order
+    content: 'Need check for Tale of Two Wastelands load order.'
 
 plugins:
   - name: 'DeadMoney.esm'
@@ -438,7 +438,7 @@ plugins:
       - C.Light
       - C.Owner
       - Destructible
-  - name: Interior Lighting Overhaul - L38PS.esm
+  - name: 'Interior Lighting Overhaul - L38PS.esm'
     tag:
       - C.Light
   - name: 'Project Nevada - Core.esm'
@@ -484,7 +484,7 @@ plugins:
       - Actors.DeathItem
       - Invent
       - Relev
-  - name: Psiclones.esm
+  - name: 'Psiclones.esm'
     tag:
       - Names
   - name: 'SelectFire.esm'
@@ -1288,11 +1288,11 @@ plugins:
   - name: 'NVInteriors_WastelandEditon.esp'
     msg:
       - type: say
-        content: 'Old, update to NVInteriors_WastelandEditon.esm'
+        content: 'Old, update to NVInteriors_WastelandEditon.esm.'
   - name: 'NVInteriors_Urban_Edition_v1.0.esp'
     msg:
       - type: say
-        content: Old, update to NVInteriors_Urban_Edition.esm
+        content: 'Old, update to NVInteriors_Urban_Edition.esm.'
   - name: 'return_deadmoney.esp'
     inc:
       - 'SierraMadreEXIT.esp'
@@ -1337,7 +1337,7 @@ plugins:
     req: [ *NVSE ]
     msg:
       - type: say
-        content: Obsolete, upgrade to new version 4.202, UWHNV-Core.esm
+        content: 'Obsolete, upgrade to new version 4.202, UWHNV-Core.esm.'
   - name: 'UWHNV-Addon-DLC.esp'
     tag:
       - C.Light
@@ -1352,7 +1352,7 @@ plugins:
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
     msg:
       - type: say
-        content: "Incompatible with: UWHNV-Addon-Follower.esp"
+        content: 'Incompatible with: UWHNV-Addon-Follower.esp.'
   - name: 'YangtzeBunkerPlayerHome.esp'
     msg:
       - type: say
@@ -2762,7 +2762,7 @@ plugins:
   - name: 'Quick Trade - iHud.esp'
     msg:
       - type: say
-        content: Obsolete, update to latest version 3.4 of iHud.
+        content: 'Obsolete, update to latest version 3.4 of iHud.'
   - name: 'Reactive People - Ultimatum.esp'
     req: [ *NVSE ]
   - name: 'Realistic Weight.esp'
@@ -3872,14 +3872,14 @@ plugins:
     msg:
       - type: error
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
-        content: "Deactivate. The main file already contains the proper edits for Project Nevada compatibility."
+        content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
   - name: 'Project Nevada - Med-X Fix.esp'
     tag:
       - Names
   - name: 'vault22FloralOverhaul.esp'
     msg:
       - type: warn
-        content: "Do not clean, otherwise, the game will crash on startup."
+        content: 'Do not clean, otherwise, the game will crash on startup.'
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
