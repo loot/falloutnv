@@ -1723,8 +1723,12 @@ plugins:
     inc:
       - 'awilderwastelandnobenny.esp'
     tag:
-      - Stats
       - AI.Packages
+      - Stats
+    dirty:
+      - crc: 0xed3d7bb3
+        util: *dirtyUtil
+        itm: 9
   - name: 'awilderwastelandnobenny.esp'
     inc:
       - 'awilderwasteland.esp'
