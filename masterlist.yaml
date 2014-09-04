@@ -3350,21 +3350,25 @@ plugins:
       - type: say
         content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
   - name: 'fnvrwlo - original.esp'
-    msg:
-      - type: say
-        content: Use only one FNV Realistic Wasteland Lighting
+    inc:
+      - 'fnvrwlo - brighter nights.esp'
+      - 'fnvrwl FNV only - brighter nights.esp'
+      - 'fnvrwl FNV only.esp'
   - name: 'fnvrwlo - brighter nights.esp'
-    msg:
-      - type: say
-        content: Use only one FNV Realistic Wasteland Lighting
+    inc:
+      - 'fnvrwlo - original.esp'
+      - 'fnvrwl FNV only - brighter nights.esp'
+      - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only - brighter nights.esp'
-    msg:
-      - type: say
-        content: Use only one FNV Realistic Wasteland Lighting
+    inc:
+      - 'fnvrwlo - original.esp'
+      - 'fnvrwlo - brighter nights.esp'
+      - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only.esp'
-    msg:
-      - type: say
-        content: Use only one FNV Realistic Wasteland Lighting
+    inc:
+      - 'fnvrwlo - original.esp'
+      - 'fnvrwlo - brighter nights.esp'
+      - 'fnvrwl FNV only - brighter nights.esp'
   - name: 'friendofnightforfellout.esp'
     msg:
       - type: say
