@@ -3869,6 +3869,12 @@ plugins:
     after: [ NewVegasBounties.esp ]
     tag:
       - Relations
+    dirty:
+      - crc: 0x11d6afea # v1.47
+        util: *dirtyUtil
+        itm: 0
+        udr: 0
+        nav: 2
   - name: 'KFE - Refill Water Bottles.esp'
     tag:
       - Scripts
