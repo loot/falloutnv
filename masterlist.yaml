@@ -320,6 +320,12 @@ plugins:
       - Invent
       - Names
       - Stats
+	dirty:
+	  - crc: 0x38c75b04
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 7
+		udr: 0
+		nav: 0
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
@@ -3996,6 +4002,18 @@ plugins:
       - Names
       - Stats
       - WeaponMods
+  - name: 'NCRTrooperOverhaul.esp'
+	tag:
+	  - Graphics
+	  - Invent
+	  - Names
+	  - Stats
+	dirty:
+	  - crc: 0xbddf839b
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 6
+		udr: 0
+		nav: 0
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/35998'
     after:
@@ -4008,15 +4026,21 @@ plugins:
     tag:
       - C.Light
   - name: 'TrooperOverhaul-Dragbody.esp'
-    tag:
-      - Deflst
-      - Delev
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Sound
-      - Stats
+	tag:
+	  - Deflst
+	  - Delev
+	  - Graphics
+	  - Invent
+	  - Names
+	  - Relev
+	  - Sound
+	  - Stats
+	dirty:
+	  - crc: 0x40b5e4bc
+		util: *dirtyUtil # FNVEdit 3.0.32
+		itm: 4
+		udr: 0
+		nav: 0
   - name: 'Pip-Boy Light - Amber.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/56523'
     inc:
@@ -4068,7 +4092,7 @@ plugins:
     dirty:
       - crc: 0x1E04D898
         util: *dirtyUtil # FNVEdit 3.0.32
-        itm: 7
+        itm: 10
         udr: 0
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
