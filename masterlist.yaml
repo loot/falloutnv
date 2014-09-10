@@ -4041,6 +4041,17 @@ plugins:
 		itm: 4
 		udr: 0
 		nav: 0
+  - name: 'Pacersgambit.esp'
+	url: 'http://www.nexusmods.com/newvegas/mods/46584'
+	tag:
+	  - Actors.AIPackages
+	  - Scripts
+	dirty:
+	  - crc: 0x793d7342
+		util: *dirtyUtil # FNVEdit 3.0.32
+		itm: 1
+		udr: 0
+		nav: 0
   - name: 'Pip-Boy Light - Amber.esp'
     url: 'http://www.nexusmods.com/newvegas/mods/56523'
     inc:
@@ -4076,6 +4087,32 @@ plugins:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
+  - name: originalintro.esp
+	url: 'http://www.nexusmods.com/newvegas/mods/46585'
+	inc:
+	  - name: originalintroExtended.esp
+	tag:
+	  - Actors.AIPackages
+	  - Invent
+	dirty:
+	  - crc: 0xb0a1b1bb
+		util: *dirtyUtil # FNVEdit 3.0.32
+		itm: 6
+		udr: 0
+		nav: 0
+  - name: originalintroExtended.esp
+	url: 'http://www.nexusmods.com/newvegas/mods/46585'
+	inc:
+	  - name: originalintro.esp
+	tag:
+	  - Actors.AIPackages
+	  - Invent
+	dirty:
+	  - crc: 0x3abe494e
+		util: *dirtyUtil # FNVEdit 3.0.32
+		itm: 4
+		udr: 0
+		nav: 0
   - name: 'RaestlozFactionArmorEnhancement.esp'
     tag:
       - Scripts
