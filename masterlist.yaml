@@ -3956,6 +3956,9 @@ plugins:
       - Graphics
       - Invent
       - Stats
+    after:
+      - 'RaestlozFactionArmorEnhancement.esp'
+      - 'TrooperOverhaul-Dragbody.esp'
   - name: 'Alternative Blood Spout.esp'
     tag:
       - Graphics
