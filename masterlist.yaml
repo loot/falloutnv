@@ -117,29 +117,36 @@ plugins:
     tag:
       - Invent
   - name: 'Fallout3.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
   - name: 'Anchorage.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
   - name: 'ThePitt.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'Anchorage.esm'
   - name: 'BrokenSteel.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'ThePitt.esm'
   - name: 'PointLookout.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'BrokenSteel.esm'
   - name: 'Zeta.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     msg:
       - type: warn
