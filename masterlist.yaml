@@ -1209,7 +1209,7 @@ plugins:
     inc:
       - 'NPCsUseAmmo.esp'
   - name: 'populatedcasino.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino-medium.esp'
@@ -1221,7 +1221,7 @@ plugins:
         udr: 2
         nav: 0
   - name: 'populatedcasino-medium.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
@@ -1233,7 +1233,7 @@ plugins:
         udr: 8
         nav: 0
   - name: 'populatedcasino-light.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
@@ -1746,14 +1746,14 @@ plugins:
     inc:
       - 'awilderwasteland.esp'
   - name: 'betsybrahmin.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46574'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
       - 'betsybrahminFSO.esp'
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46574'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
       - 'betsybrahmin.esp'
     after:
@@ -2208,7 +2208,7 @@ plugins:
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'regex("nVamp.*\.esp")'
   - name: 'FlashlightNVSE.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39968'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39968' ]
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
     after:
@@ -2382,7 +2382,7 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Roberts Patch.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54460'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
     dirty:
       - util: *dirtyUtil
@@ -2408,7 +2408,7 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Glowing One.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54460'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag: [ Scripts ]
     dirty:
       - crc: 0x0E746E1D
@@ -3113,7 +3113,7 @@ plugins:
       - Graphics
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/42666'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/42666' ]
     tag:
       - Delev
       - Destructible
@@ -3433,7 +3433,7 @@ plugins:
       - C.Climate
       - C.Light
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     dirty:
       - crc: 0xD6B9E659
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -3907,7 +3907,7 @@ plugins:
     tag:
       - Factions
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - C.Light
     after: [ 'GRARG.esp' ]
@@ -3952,7 +3952,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Roberts_NewVegas.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54731'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54731' ]
     tag:
       - Body-M
       - Graphics
@@ -3980,7 +3980,7 @@ plugins:
       - Actors.ACBS
       - Invent
   - name: 'athornysituation.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46048'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46048' ]
     tag:
       - Relations
       - Scripts
@@ -3991,7 +3991,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'GRA - The Right to Bear Arms.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46138'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46138' ]
     tag:
       - Delev
       - Relev
@@ -4013,7 +4013,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     after:
       - 'athornysituation.esp'
       - 'NewVegasBounties.esp'
@@ -4034,35 +4034,35 @@ plugins:
       - Sound
       - Stats
   - name: 'Pip-Boy Light - Amber.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Blue.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Green.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Vanilla.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - White.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
@@ -4072,7 +4072,7 @@ plugins:
     tag:
       - Scripts
   - name: 'Tutorial Killer - Alternate Start.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/47746'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/47746' ]
     dirty:
       - crc: 0xD1257BC7
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -4080,7 +4080,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.esm'
-    url: 'http://www.nexusmods.com/newvegas/mods/55008'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
       - crc: 0x1E04D898
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -4088,7 +4088,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - Delev
       - Graphics
