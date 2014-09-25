@@ -165,6 +165,7 @@ plugins:
       - Sound
       - Stats
   - name: 'UWHNV-Core.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/36121/?' ]
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664/?' ]
