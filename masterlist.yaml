@@ -113,7 +113,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'Afterschool Special.esm'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/43757/?' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
       - Invent
   - name: 'Fallout3.esm'
@@ -165,10 +165,10 @@ plugins:
       - Sound
       - Stats
   - name: 'UWHNV-Core.esm'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/36121/?' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/36121' ]
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/51664/?' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400998000
     after:
       - 'DeadMoney.esm'
@@ -629,7 +629,7 @@ plugins:
     tag:
       - Names
   - name: 'YUP - NPC Fixes (Base Game).esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/51664/?' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400900000
     tag:
       - Actors.ACBS
@@ -647,7 +647,7 @@ plugins:
       - NPC.Race
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/51664/?' ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400900000
     tag:
       - Actors.ACBS
