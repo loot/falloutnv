@@ -4035,7 +4035,7 @@ plugins:
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 4
   - name: 'Pacersgambit.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46584'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46584' ]
     tag:
       - Actors.AIPackages
       - Scripts
@@ -4079,9 +4079,9 @@ plugins:
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintro.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46585'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
-      - name: 'originalintroExtended.esp'
+      - 'originalintroExtended.esp'
     tag:
       - Actors.AIPackages
       - Invent
@@ -4090,9 +4090,9 @@ plugins:
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 6
   - name: 'originalintroExtended.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46585'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
-      - name: 'originalintro.esp'
+      - 'originalintro.esp'
     tag:
       - Actors.AIPackages
       - Invent
