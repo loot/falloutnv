@@ -335,6 +335,8 @@ plugins:
       - crc: 0x38c75b04
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 7
+        udr: 0
+        nav: 0
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
@@ -1223,6 +1225,7 @@ plugins:
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 48
         udr: 2
+        nav: 0
   - name: 'populatedcasino-medium.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -1234,6 +1237,7 @@ plugins:
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 47
         udr: 8
+        nav: 0
   - name: 'populatedcasino-light.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -1245,6 +1249,7 @@ plugins:
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 46
         udr: 16
+        nav: 0
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
@@ -1689,6 +1694,8 @@ plugins:
       - crc: 0xE0E2C3C0
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 22
+        udr: 0
+        nav: 0
   - name: 'Project Brazil Project Nevada Patch.esp'
     tag:
       - Invent
@@ -2413,6 +2420,8 @@ plugins:
       - crc: 0x0E746E1D
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
+        udr: 0
+        nav: 0
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
@@ -3435,6 +3444,8 @@ plugins:
       - crc: 0xD6B9E659
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 4
+        udr: 0
+        nav: 0
   - name: 'Nevada Skies - URWLified.esp'
     inc:
       - 'Nevada Skies.esp'
@@ -3880,6 +3891,8 @@ plugins:
     dirty:
       - crc: 0x11d6afea # v1.47
         util: *dirtyUtil
+        itm: 0
+        udr: 0
         nav: 2
   - name: 'KFE - Refill Water Bottles.esp'
     tag:
@@ -3908,6 +3921,8 @@ plugins:
       - crc: 0xB5824C7A
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 8
+        udr: 0
+        nav: 0
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
@@ -3951,7 +3966,8 @@ plugins:
       - crc: 0x8162C3BA
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
-
+        udr: 0
+        nav: 0
   - name: 'ADAM Complete.esp'
     tag:
       - Delev
@@ -3977,6 +3993,8 @@ plugins:
       - crc: 0xCC32F754
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 10
+        udr: 0
+        nav: 0
   - name: 'GRA - The Right to Bear Arms.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/46138' ]
     tag:
@@ -4009,6 +4027,8 @@ plugins:
       - crc: 0xbddf839b
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 6
+        udr: 0
+        nav: 0
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     after:
@@ -4034,6 +4054,8 @@ plugins:
       - crc: 0x40b5e4bc
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 4
+        udr: 0
+        nav: 0
   - name: 'Pacersgambit.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/46584' ]
     tag:
@@ -4043,6 +4065,8 @@ plugins:
       - crc: 0x793d7342
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
+        udr: 0
+        nav: 0
   - name: 'Pip-Boy Light - Amber.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
@@ -4089,6 +4113,8 @@ plugins:
       - crc: 0xb0a1b1bb
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 6
+        udr: 0
+        nav: 0
   - name: 'originalintroExtended.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
@@ -4100,6 +4126,8 @@ plugins:
       - crc: 0x3abe494e
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 4
+        udr: 0
+        nav: 0
   - name: 'RaestlozFactionArmorEnhancement.esp'
     tag:
       - Scripts
@@ -4109,12 +4137,16 @@ plugins:
       - crc: 0xD1257BC7
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
+        udr: 0
+        nav: 0
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
       - crc: 0x1E04D898
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 10
+        udr: 0
+        nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
@@ -4125,5 +4157,7 @@ plugins:
       - crc: 0xE0D9629C
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
+        udr: 0
+        nav: 0
   - name: 'MergedPatch.esp'
     priority: 1999999
