@@ -113,6 +113,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'Afterschool Special.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43757/?' ]
     tag:
       - Invent
   - name: 'Fallout3.esm'
