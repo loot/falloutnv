@@ -2182,9 +2182,6 @@ plugins:
       - type: say
         content: 'To be used with BlackWolf Backpack.esp'
         condition: 'not file("BlackWolf Backpack.esp")'
-  - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
-    tag:
-      - Relev
   - name: 'epock.esp'
     msg:
       - type: say
@@ -3990,6 +3987,7 @@ plugins:
       - '1nivVSLArmors.esp'
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
+	  - 'DragonskinNCRPersonnelWearingOutfits.esp'
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
