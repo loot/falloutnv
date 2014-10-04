@@ -200,6 +200,7 @@ plugins:
       - Relev
       - Sound
       - Stats
+      - WeaponMods
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
