@@ -4172,8 +4172,8 @@ plugins:
   - name: 'REPCONN Test Site Fixes.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/41114']
     tag:
-      - Actors.AIPackages
       - Actors.AIData
+      - Actors.AIPackages
       - Factions
       - Scripts
   - name: 'MergedPatch.esp'
