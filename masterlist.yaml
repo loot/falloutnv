@@ -248,6 +248,8 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Actors.ACBS
+      - Eyes
+      - Names
       - NPC.Race
       - NpcFaces
   - name: 'NVCE Main.esm'
