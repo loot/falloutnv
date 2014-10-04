@@ -4159,5 +4159,9 @@ plugins:
         itm: 1
         udr: 0
         nav: 0
+  - name: 'TheInheritance.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/49012' ]
+    tag:
+      - Relations
   - name: 'MergedPatch.esp'
     priority: 1999999
