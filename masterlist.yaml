@@ -2397,6 +2397,14 @@ plugins:
         itm: 1
     tag:
       - Body-M
+  - name: 'FCO - Playable Races + Roberts Patch.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    after:
+      - 'Roberts_NewVegas.esp'
+    tag:
+      - Body-M
+      - Names
+      - R.Head
   - name: 'FCO - OWB.esp'
     tag:
       - Actors.ACBS
@@ -2408,6 +2416,7 @@ plugins:
         itm: 18
   - name: 'FCO - Willow.esp'
     tag:
+      - Actors.ACBS
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Willow (Cazy).esp'
@@ -2416,13 +2425,24 @@ plugins:
       - NpcFaces
   - name: 'FCO - Glowing One.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
-    tag: [ Scripts ]
+    tag:
+      - Scripts
     dirty:
       - crc: 0x0E746E1D
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
+  - name: 'FCO - The New Bison Steve.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Afterschool Special.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
