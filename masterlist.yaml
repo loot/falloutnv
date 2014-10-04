@@ -4210,6 +4210,16 @@ plugins:
         itm: 93
         udr: 73
         nav: 0
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - NpcFaces
+      - NPC.Race
+      - Relev
   - name: 'New Vegas Redesigned 3.esp'
     dirty:
       - crc: 0xFAF9F22E
@@ -4217,6 +4227,16 @@ plugins:
         itm: 1018
         udr: 74
         nav: 0
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - NpcFaces
+      - NPC.Race
+      - Relev
   - name: 'MergedPatch.esp'
     priority: 1999999
       
