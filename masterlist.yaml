@@ -4177,6 +4177,12 @@ plugins:
       - Actors.AIPackages
       - Factions
       - Scripts
+  - name: 'ILO - New Vegas Bounties.esp'
+    tag:
+      - C.Light
+  - name: 'ILO - New Vegas Bounties II.esp'
+    tag:
+      - C.Light
   - name: 'MergedPatch.esp'
     priority: 1999999
       
