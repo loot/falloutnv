@@ -199,7 +199,7 @@ plugins:
       - Invent
       - Names
       - Relev
-      - Sounds
+      - Sound
       - Stats
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
