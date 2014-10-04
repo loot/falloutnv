@@ -2404,7 +2404,6 @@ plugins:
     tag:
       - Body-M
       - Names
-      - R.Head
   - name: 'FCO - OWB.esp'
     tag:
       - Actors.ACBS
