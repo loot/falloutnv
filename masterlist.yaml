@@ -198,6 +198,7 @@ plugins:
       - Invent
       - Names
       - Relev
+      - Script
       - Sound
       - Stats
       - WeaponMods
