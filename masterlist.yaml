@@ -4203,6 +4203,20 @@ plugins:
   - name: 'ILO - New Vegas Bounties II.esp'
     tag:
       - C.Light
+  - name: 'New Vegas Redesigned 3.esm'
+    dirty:
+      - crc: 0xEB023707
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 93
+        udr: 73
+        nav: 0
+  - name: 'New Vegas Redesigned 3.esp'
+    dirty:
+      - crc: 0xFAF9F22E
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 1018
+        udr: 74
+        nav: 0
   - name: 'MergedPatch.esp'
     priority: 1999999
       
