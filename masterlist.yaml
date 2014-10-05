@@ -333,6 +333,7 @@ plugins:
       - Graphics
       - Invent
       - Names
+      - Relev
       - Stats
     dirty:
       - crc: 0x38c75b04
