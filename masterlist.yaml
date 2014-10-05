@@ -3995,6 +3995,7 @@ plugins:
       - Delev
       - Graphics
       - Invent
+      - Names
       - Stats
     after:
       - 'RaestlozFactionArmorEnhancement.esp'
