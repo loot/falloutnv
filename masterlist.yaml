@@ -4065,6 +4065,7 @@ plugins:
       - C.Light
   - name: 'TrooperOverhaul-Dragbody.esp'
     tag:
+      - Actors.ACBS
       - Deflst
       - Delev
       - Graphics
