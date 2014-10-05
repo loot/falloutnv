@@ -2164,11 +2164,9 @@ plugins:
         content: 'Old, update to latest version.'
   - name: '1nivVSLArmors.esp'
     tag:
+      - Graphics
       - Invent
       - Names
-      - Deflst
-      - Delev
-      - Graphics
       - Relev
   - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
     msg:
@@ -3873,7 +3871,6 @@ plugins:
       - Actors.DeathItem
   - name: '1nivPNSLPatch.esp'
     tag:
-      - Deflst
       - Names
       - Stats
   - name: 'DLC Weapon Integration.esp'
