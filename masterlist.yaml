@@ -4239,6 +4239,13 @@ plugins:
       - NpcFaces
       - NPC.Race
       - Relev
+  - name: 'Boacombat2glove.esp'
+    tag:
+      - Graphics
+  - name: 'boa ncrpahelmet.esp'
+    tag:
+      - Delev
+      - Graphics
   - name: 'MergedPatch.esp'
     priority: 1999999
       
