@@ -238,6 +238,7 @@ plugins:
       - Actors.ACBS
       - NPC.Race
       - NpcFaces
+      - Eyes
   - name: 'NVCE Main.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -3564,8 +3565,16 @@ plugins:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
       - C.Owner
+    dirty:
+      - crc: 0xE5B86A01
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 0
+        nav: 0
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     tag:
       - C.Light
@@ -3991,6 +4000,34 @@ plugins:
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
+  - name: 'ILO - D.E.I.M.O.S.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.LTemplate
+      - C.Owner
+  - name: 'ILO - New Vegas Bounties.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0xD7D915C3
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 1
+        udr: 0
+        nav: 0
+  - name: 'ILO - New Vegas Bounties II.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0x8E8F65E5
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 1
+        nav: 0
   - name: 'Improved Sounds FX.esp'
     tag:
       - Sound
