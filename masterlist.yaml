@@ -17,11 +17,11 @@ globals:
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1506584-rel-loot-thread-12).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
       - lang: ru
-        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1506584-rel-loot-thread-12).'
+        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1506584-rel-loot-thread-12).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: 'Need check for Tale of Two Wastelands load order.'
@@ -113,32 +113,40 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'Afterschool Special.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
       - Invent
   - name: 'Fallout3.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
   - name: 'Anchorage.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
   - name: 'ThePitt.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'Anchorage.esm'
   - name: 'BrokenSteel.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'ThePitt.esm'
   - name: 'PointLookout.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'BrokenSteel.esm'
   - name: 'Zeta.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
+    url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     msg:
       - type: warn
@@ -157,8 +165,10 @@ plugins:
       - Sound
       - Stats
   - name: 'UWHNV-Core.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/36121' ]
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400998000
     after:
       - 'DeadMoney.esm'
@@ -183,14 +193,15 @@ plugins:
       - Delev
       - Destructible
       - Factions
-      - Eyes
       - Graphics
       - Hair
       - Invent
       - Names
       - Relev
-      - Sounds
+      - Scripts
+      - Sound
       - Stats
+      - WeaponMods
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg:
       - type: say
@@ -234,8 +245,11 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'FCOMaster.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Actors.ACBS
+      - Eyes
+      - Names
       - NPC.Race
       - NpcFaces
       - Eyes
@@ -320,13 +334,14 @@ plugins:
       - Graphics
       - Invent
       - Names
+      - Relev
       - Stats
     dirty:
       - crc: 0x38c75b04
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 7
         udr: 0
-    nav: 0
+        nav: 0
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
@@ -625,6 +640,7 @@ plugins:
     tag:
       - Names
   - name: 'YUP - NPC Fixes (Base Game).esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400900000
     tag:
       - Actors.ACBS
@@ -642,6 +658,7 @@ plugins:
       - NPC.Race
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
     priority: -400900000
     tag:
       - Actors.ACBS
@@ -1203,7 +1220,7 @@ plugins:
     inc:
       - 'NPCsUseAmmo.esp'
   - name: 'populatedcasino.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino-medium.esp'
@@ -1215,7 +1232,7 @@ plugins:
         udr: 2
         nav: 0
   - name: 'populatedcasino-medium.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
@@ -1227,7 +1244,7 @@ plugins:
         udr: 8
         nav: 0
   - name: 'populatedcasino-light.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35369'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
     inc:
       - 'populatedcasino.esp'
@@ -1740,14 +1757,14 @@ plugins:
     inc:
       - 'awilderwasteland.esp'
   - name: 'betsybrahmin.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46574'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
       - 'betsybrahminFSO.esp'
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46574'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
       - 'betsybrahmin.esp'
     after:
@@ -2149,12 +2166,11 @@ plugins:
         content: 'Old, update to latest version.'
   - name: '1nivVSLArmors.esp'
     tag:
+      - Graphics
       - Invent
       - Names
-      - Deflst
-      - Delev
-      - Graphics
       - Relev
+      - Stats
   - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
     msg:
       - type: say
@@ -2199,7 +2215,7 @@ plugins:
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'regex("nVamp.*\.esp")'
   - name: 'FlashlightNVSE.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39968'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39968' ]
     inc:
       - 'Project Nevada - FlashlightNVSE.esp'
     after:
@@ -2373,7 +2389,7 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Roberts Patch.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54460'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
     dirty:
       - util: *dirtyUtil
@@ -2381,6 +2397,13 @@ plugins:
         itm: 1
     tag:
       - Body-M
+  - name: 'FCO - Playable Races + Roberts Patch.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    after:
+      - 'Roberts_NewVegas.esp'
+    tag:
+      - Body-M
+      - Names
   - name: 'FCO - OWB.esp'
     tag:
       - Actors.ACBS
@@ -2392,6 +2415,7 @@ plugins:
         itm: 18
   - name: 'FCO - Willow.esp'
     tag:
+      - Actors.ACBS
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Willow (Cazy).esp'
@@ -2399,14 +2423,25 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Glowing One.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54460'
-    tag: [ Scripts ]
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - Scripts
     dirty:
       - crc: 0x0E746E1D
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
+  - name: 'FCO - The New Bison Steve.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Afterschool Special.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
@@ -3104,7 +3139,7 @@ plugins:
       - Graphics
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/42666'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/42666' ]
     tag:
       - Delev
       - Destructible
@@ -3424,7 +3459,7 @@ plugins:
       - C.Climate
       - C.Light
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     dirty:
       - crc: 0xD6B9E659
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -3844,7 +3879,6 @@ plugins:
       - Actors.DeathItem
   - name: '1nivPNSLPatch.esp'
     tag:
-      - Deflst
       - Names
       - Stats
   - name: 'DLC Weapon Integration.esp'
@@ -3906,7 +3940,7 @@ plugins:
     tag:
       - Factions
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - C.Light
     after: [ 'GRARG.esp' ]
@@ -3951,7 +3985,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Roberts_NewVegas.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/54731'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54731' ]
     tag:
       - Body-M
       - Graphics
@@ -3961,13 +3995,16 @@ plugins:
         itm: 1
         udr: 0
         nav: 0
-
   - name: 'ADAM Complete.esp'
     tag:
       - Delev
       - Graphics
       - Invent
+      - Names
       - Stats
+    after:
+      - 'RaestlozFactionArmorEnhancement.esp'
+      - 'TrooperOverhaul-Dragbody.esp'
   - name: 'Alternative Blood Spout.esp'
     tag:
       - Graphics
@@ -3976,7 +4013,7 @@ plugins:
       - Actors.ACBS
       - Invent
   - name: 'athornysituation.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46048'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46048' ]
     tag:
       - Relations
       - Scripts
@@ -3987,7 +4024,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'GRA - The Right to Bear Arms.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46138'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46138' ]
     tag:
       - Delev
       - Relev
@@ -4038,19 +4075,19 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'NCRTrooperOverhaul.esp'
-	tag:
-	  - Graphics
-	  - Invent
-	  - Names
-	  - Stats
-	dirty:
-	  - crc: 0xbddf839b
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Stats
+    dirty:
+      - crc: 0xbddf839b
         util: *dirtyUtil # FNVEdit 3.0.32
         itm: 6
-		udr: 0
-		nav: 0
+        udr: 0
+        nav: 0
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/35998'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     after:
       - 'athornysituation.esp'
       - 'NewVegasBounties.esp'
@@ -4061,71 +4098,72 @@ plugins:
     tag:
       - C.Light
   - name: 'TrooperOverhaul-Dragbody.esp'
-	tag:
-	  - Deflst
-	  - Delev
-	  - Graphics
-	  - Invent
-	  - Names
-	  - Relev
-	  - Sound
-	  - Stats
-	dirty:
-	  - crc: 0x40b5e4bc
-		util: *dirtyUtil # FNVEdit 3.0.32
-		itm: 4
-		udr: 0
-		nav: 0
+    tag:
+      - Actors.ACBS
+      - Deflst
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
+    dirty:
+      - crc: 0x40b5e4bc
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 4
+        udr: 0
+        nav: 0
   - name: 'Pacersgambit.esp'
-	url: 'http://www.nexusmods.com/newvegas/mods/46584'
-	tag:
-	  - Actors.AIPackages
-	  - Scripts
-	dirty:
-	  - crc: 0x793d7342
-		util: *dirtyUtil # FNVEdit 3.0.32
-		itm: 1
-		udr: 0
-		nav: 0
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46584' ]
+    tag:
+      - Actors.AIPackages
+      - Scripts
+    dirty:
+      - crc: 0x793d7342
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 1
+        udr: 0
+        nav: 0
   - name: 'Pip-Boy Light - Amber.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Blue.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Green.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Vanilla.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - White.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/56523'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintro.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46585'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
-      - name: 'originalintroExtended.esp'
+      - 'originalintroExtended.esp'
     tag:
       - Actors.AIPackages
       - Invent
@@ -4136,9 +4174,9 @@ plugins:
         udr: 0
         nav: 0
   - name: 'originalintroExtended.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/46585'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
-      - name: 'originalintro.esp'
+      - 'originalintro.esp'
     tag:
       - Actors.AIPackages
       - Invent
@@ -4152,7 +4190,7 @@ plugins:
     tag:
       - Scripts
   - name: 'Tutorial Killer - Alternate Start.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/47746'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/47746' ]
     dirty:
       - crc: 0xD1257BC7
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -4160,7 +4198,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.esm'
-    url: 'http://www.nexusmods.com/newvegas/mods/55008'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
       - crc: 0x1E04D898
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -4168,7 +4206,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
-    url: 'http://www.nexusmods.com/newvegas/mods/39981'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - Delev
       - Graphics
@@ -4179,6 +4217,70 @@ plugins:
         itm: 1
         udr: 0
         nav: 0
-
+  - name: 'TheInheritance.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/49012' ]
+    tag:
+      - Relations
+    dirty:
+      - crc: 0x71715D56
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 0
+        udr: 2
+        nav: 4
+  - name: 'REPCONN Test Site Fixes.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/41114']
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Factions
+      - Scripts
+  - name: 'ILO - New Vegas Bounties.esp'
+    tag:
+      - C.Light
+  - name: 'ILO - New Vegas Bounties II.esp'
+    tag:
+      - C.Light
+  - name: 'New Vegas Redesigned 3.esm'
+    dirty:
+      - crc: 0xEB023707
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 93
+        udr: 73
+        nav: 0
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - NpcFaces
+      - NPC.Race
+      - Relev
+  - name: 'New Vegas Redesigned 3.esp'
+    dirty:
+      - crc: 0xFAF9F22E
+        util: *dirtyUtil # FNVEdit 3.0.32
+        itm: 1018
+        udr: 74
+        nav: 0
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - NpcFaces
+      - NPC.Race
+      - Relev
+  - name: 'Boacombat2glove.esp'
+    tag:
+      - Graphics
+  - name: 'boa ncrpahelmet.esp'
+    tag:
+      - Delev
+      - Graphics
   - name: 'MergedPatch.esp'
     priority: 1999999
+      
