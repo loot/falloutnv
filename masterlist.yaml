@@ -4033,7 +4033,7 @@ plugins:
       - '1nivVSLArmors.esp'
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
-	  - 'DragonskinNCRPersonnelWearingOutfits.esp'
+      - 'DragonskinNCRPersonnelWearingOutfits.esp'
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
