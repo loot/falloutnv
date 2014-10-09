@@ -252,6 +252,7 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+      - Eyes
   - name: 'NVCE Main.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -2198,9 +2199,6 @@ plugins:
       - type: say
         content: 'To be used with BlackWolf Backpack.esp'
         condition: 'not file("BlackWolf Backpack.esp")'
-  - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
-    tag:
-      - Relev
   - name: 'epock.esp'
     msg:
       - type: say
@@ -3602,8 +3600,16 @@ plugins:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
       - C.Owner
+    dirty:
+      - crc: 0xE5B86A01
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 0
+        nav: 0
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     tag:
       - C.Light
@@ -4027,9 +4033,16 @@ plugins:
       - '1nivVSLArmors.esp'
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
+      - 'DragonskinNCRPersonnelWearingOutfits.esp'
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
+  - name: 'ILO - D.E.I.M.O.S.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.LTemplate
+      - C.Owner
   - name: 'Improved Sounds FX.esp'
     tag:
       - Sound
@@ -4201,10 +4214,26 @@ plugins:
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0xD7D915C3
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 1
+        udr: 0
+        nav: 0
   - name: 'ILO - New Vegas Bounties II.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0x8E8F65E5
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 1
+        nav: 0
   - name: 'New Vegas Redesigned 3.esm'
     dirty:
       - crc: 0xEB023707
