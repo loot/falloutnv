@@ -4043,28 +4043,6 @@ plugins:
       - C.Light
       - C.LTemplate
       - C.Owner
-  - name: 'ILO - New Vegas Bounties.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-    dirty:
-      - crc: 0xD7D915C3
-        util: *dirtyUtil # FNVEdit 3.0.33
-        itm: 1
-        udr: 0
-        nav: 0
-  - name: 'ILO - New Vegas Bounties II.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-    dirty:
-      - crc: 0x8E8F65E5
-        util: *dirtyUtil # FNVEdit 3.0.33
-        itm: 7
-        udr: 1
-        nav: 0
   - name: 'Improved Sounds FX.esp'
     tag:
       - Sound
@@ -4236,10 +4214,26 @@ plugins:
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0xD7D915C3
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 1
+        udr: 0
+        nav: 0
   - name: 'ILO - New Vegas Bounties II.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0x8E8F65E5
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 1
+        nav: 0
   - name: 'New Vegas Redesigned 3.esm'
     dirty:
       - crc: 0xEB023707
