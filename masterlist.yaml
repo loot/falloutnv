@@ -182,7 +182,7 @@ plugins:
       - 'TribalPack.esm'
     tag:
       - Actors.ACBS
-      - Actors.AIData
+      - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
       - Actors.Stats
@@ -200,6 +200,7 @@ plugins:
       - Relev
       - Scripts
       - Sound
+      - SpellStats
       - Stats
       - WeaponMods
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
