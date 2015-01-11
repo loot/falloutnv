@@ -74,14 +74,6 @@ plugins:
       - util: *dirtyUtil
         crc: 0xaac938d
         itm: 97
-  - name: 'CaravanPack.esm'
-    priority: -400998960
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
   - name: 'ClassicPack.esm'
     priority: -400998990
     after:
@@ -90,7 +82,6 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
   - name: 'MercenaryPack.esm'
     priority: -400998980
     after:
@@ -99,7 +90,6 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
     priority: -400998970
@@ -109,9 +99,19 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
+  - name: 'CaravanPack.esm'
+    priority: -400998960
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
   - name: 'Afterschool Special.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
