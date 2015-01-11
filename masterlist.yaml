@@ -12,16 +12,16 @@ common:
 
 globals:
   - type: say
-    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.6.0) of LOOT is available.'
-    condition: 'version("LOOT", "0.6.0.0", <)'
+    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.6.1) of LOOT is available.'
+    condition: 'version("LOOT", "0.6.1.0", <)'
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
       - lang: ru
-        str: '[Обсуждение LOOT \"(Eng)\"](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
+        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1507988-rel-loot-thread-13).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: 'Need check for Tale of Two Wastelands load order.'
@@ -74,14 +74,6 @@ plugins:
       - util: *dirtyUtil
         crc: 0xaac938d
         itm: 97
-  - name: 'CaravanPack.esm'
-    priority: -400998960
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
   - name: 'ClassicPack.esm'
     priority: -400998990
     after:
@@ -90,7 +82,6 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
   - name: 'MercenaryPack.esm'
     priority: -400998980
     after:
@@ -99,7 +90,6 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
     priority: -400998970
@@ -109,9 +99,19 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
+  - name: 'CaravanPack.esm'
+    priority: -400998960
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
   - name: 'Afterschool Special.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
@@ -253,6 +253,7 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+      - Eyes
   - name: 'NVCE Main.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -2199,9 +2200,6 @@ plugins:
       - type: say
         content: 'To be used with BlackWolf Backpack.esp'
         condition: 'not file("BlackWolf Backpack.esp")'
-  - name: 'DragonskinNCRPersonnelWearingOutfits.esp'
-    tag:
-      - Relev
   - name: 'epock.esp'
     msg:
       - type: say
@@ -3603,8 +3601,16 @@ plugins:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
       - C.Owner
+    dirty:
+      - crc: 0xE5B86A01
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 0
+        nav: 0
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     tag:
       - C.Light
@@ -4028,9 +4034,16 @@ plugins:
       - '1nivVSLArmors.esp'
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
+      - 'DragonskinNCRPersonnelWearingOutfits.esp'
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
+  - name: 'ILO - D.E.I.M.O.S.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.LTemplate
+      - C.Owner
   - name: 'Improved Sounds FX.esp'
     tag:
       - Sound
@@ -4202,10 +4215,26 @@ plugins:
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0xD7D915C3
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 1
+        udr: 0
+        nav: 0
   - name: 'ILO - New Vegas Bounties II.esp'
     tag:
+      - C.ImageSpace
       - C.Light
+      - C.LTemplate
+    dirty:
+      - crc: 0x8E8F65E5
+        util: *dirtyUtil # FNVEdit 3.0.33
+        itm: 7
+        udr: 1
+        nav: 0
   - name: 'New Vegas Redesigned 3.esm'
     dirty:
       - crc: 0xEB023707
@@ -4249,4 +4278,4 @@ plugins:
       - Graphics
   - name: 'MergedPatch.esp'
     priority: 1999999
-      
+

@@ -1,18 +1,15 @@
 language: ruby
-rvm: 2.1.1
+rvm: 2.2.0
 install: gem install kwalify
 before_install: wget https://loot.github.io/masterlist.schema.yaml
 script:
   ### Check for basic coding style, but failure here won't fail the build.
-  - echo "Basic code-style checks."
   - 'grep --line-number --basic-regexp "name: [^'']" masterlist.yaml || true'
   ### Check masterlist against the Kwalify schema
-  - echo "Test against Kwalify schema."
-  - kwalify -f masterlist.schema.yaml masterlist.yaml
-  # The below is a hack as `kwalify` doesn't return with a non-zero exist code
-  # when the "kwalification" fails, so this forces an error if there are any
-  # errors in the file being validated.
-  - return $(kwalify -q -f masterlist.schema.yaml masterlist.yaml|wc -l)
+  # The `return` addition is a hack as `kwalify` doesn't return with a
+  # non-zero exist code when the "kwalification" fails, so this forces an
+  # error if anything fails the validation.
+  - kwalify -f masterlist.schema.yaml masterlist.yaml && return $(kwalify -q -f masterlist.schema.yaml masterlist.yaml|wc -l)
 
 notifications:
   irc:
