@@ -243,6 +243,10 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
+  - name: 'ProjectBrazil.esm'
+    after:
+      - 'Project Nevada - Core.esm'
+      - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
     after:
       - 'ProjectBrazil.esm'
