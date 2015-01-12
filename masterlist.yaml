@@ -244,6 +244,8 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'FCOMaster.esm'
+    after:
+      - 'ProjectBrazil.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Actors.ACBS
