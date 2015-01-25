@@ -3939,7 +3939,7 @@ plugins:
       - Names
   - name: 'vault22FloralOverhaul.esp'
     msg:
-      - type: warn
+      - type: say
         content: 'Do not clean, otherwise, the game will crash on startup.'
   - name: 'rotfacetoriches.esp'
     tag:
