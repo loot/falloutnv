@@ -3914,8 +3914,6 @@ plugins:
     msg:
       - type: say
         content: 'Do not load together with Shotgun Commando.esp'
-  - name: 'Bashed Patch, 0.esp'
-    priority: 400991000
   - name: 'NewVegasBountiesII.esp'
     after: [ NewVegasBounties.esp ]
     tag:
@@ -4281,5 +4279,17 @@ plugins:
       - Delev
       - Graphics
   - name: 'MergedPatch.esp'
-    priority: 1999999
+    priority: 400991000
+    tag:
+      - NoMerge
+  - name: 'FNVMerged.esp'
+    priority: 400991000
+    tag:
+      - NoMerge
+  - name: 'Bashed Patch, 0.esp'
+    priority: 400991000
+    after:
+      - 'MergedPatch.esp'
+      - 'FNVMerged.esp'
+    
 
