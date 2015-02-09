@@ -17,11 +17,11 @@ globals:
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1513925-rel-loot-thread-17/).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
+        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1513925-rel-loot-thread-17/).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1512502-rel-loot-thread-16/).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1513925-rel-loot-thread-17/).'
   - type: warn
     condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
     content: 'Need check for Tale of Two Wastelands load order.'
@@ -4291,5 +4291,5 @@ plugins:
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
-    
+
 
