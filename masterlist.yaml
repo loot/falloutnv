@@ -152,6 +152,35 @@ plugins:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
         condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
+  - name: 'TTWfixes.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-215-official-bugfix-pack-ttw' ]
+    priority: -400998000
+    inc:
+      - 'YUP - Base Game + All DLC.esm'
+    after:
+      - 'TaleOfTwoWastelands.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Stats
+      - C.Light
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Hair
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
   - name: 'Community Bugfix Compilation Patch.esm'
     msg:
       - type: say
@@ -4067,14 +4096,6 @@ plugins:
         itm: 6
         udr: 0
         nav: 0
-  - name: 'NevadaSkies - Ultimate DLC Edition.esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    after:
-      - 'athornysituation.esp'
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'OWB-Path Lights.esp'
-      - 'PortableCampsite.esp'
   - name: 'New Vegas Bounties II.esp'
     tag:
       - C.Light
@@ -4278,6 +4299,108 @@ plugins:
     tag:
       - Delev
       - Graphics
+  - name: 'NevadaSkies - Ultimate DLC Edition.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
+    priority: 400990000
+    inc:
+      - 'NevadaSkies - Basic Edition.esp'
+      - 'NevadaSkies - TTW Edition.esp'
+  - name: 'NevadaSkies - Basic Edition.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
+    priority: 400990000
+    inc:
+      - 'NevadaSkies - Ultimate DLC Edition.esp'
+      - 'NevadaSkies - TTW Edition.esp'
+  - name: 'NevadaSkies - TTW Edition.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
+    priority: 400990000
+    inc:
+      - 'NevadaSkies - Basic Edition.esp'
+      - 'NevadaSkies - Ultimate DLC Edition.esp'
+  - name: 'FNV Realistic Wasteland Lighting - Full.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV RWL Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV RWL Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV RWL Darker Nights.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    after:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+  - name: 'TTW Realistic Wasteland Lighting.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
   - name: 'MergedPatch.esp'
     priority: 400991000
     tag:
