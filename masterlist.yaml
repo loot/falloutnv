@@ -122,8 +122,6 @@ plugins:
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
-    after:
-      - 'Fallout3.esm'
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
