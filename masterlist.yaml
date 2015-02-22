@@ -22,9 +22,6 @@ globals:
         str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1513925-rel-loot-thread-17/).'
       - lang: es
         str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1513925-rel-loot-thread-17/).'
-  - type: warn
-    condition: ( file("TaleOfTwoWastelands.esm") ) and not checksum("TaleOfTwoWastelands.esm",8104A5CA)
-    content: 'Need check for Tale of Two Wastelands load order.'
 
 plugins:
   - name: 'DeadMoney.esm'
@@ -125,6 +122,8 @@ plugins:
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
+    after:
+      - 'Fallout3.esm'
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
@@ -151,7 +150,9 @@ plugins:
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
-        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 26497E29)'
+        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 6D6F2EA7)'
+    after:
+      - 'Zeta.esm'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-215-official-bugfix-pack-ttw' ]
     priority: -400998000
