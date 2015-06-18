@@ -6,6 +6,26 @@ common:
   - &MCM
     name: 'NVSE\Plugins\MCM.dll'
     display: '[MCM](http://www.nexusmods.com/newvegas/mods/42507)'
+# Messages
+  - &updateToNVCE
+    type: say
+    content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
+  - &updateToMMUE
+    type: say
+    content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+  - &obsolete
+    type: say
+    content:
+      - lang: en
+        str: 'Obsolete. Update to latest version.'
+      - lang: ru
+        str: 'Устарело. Обновите до последней версии.'
+      - lang: es
+        str: 'Obsoleto. Actualizar a la última versión.'
+      - lang: ko
+        str: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
+      - lang: zh_CN
+        str: '已过时。请升级到最新版本。'
 # Other Strings
   - &dirtyUtil
     '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
@@ -230,9 +250,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
-    msg:
-      - type: say
-        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
+    msg: [ *updateToNVCE ]
     tag:
       - Body-F
       - Body-M
@@ -244,9 +262,7 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm'
-    msg:
-      - type: say
-        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
+    msg: [ *updateToNVCE ]
     tag:
       - Body-F
       - Body-M
@@ -258,9 +274,7 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'Machienzo - NPC Cosmetic Fixes.esm'
-    msg:
-      - type: say
-        content: '"Old, update to [NVCE](http://www.nexusmods.com/newvegas/mods/39325)."'
+    msg: [ *updateToNVCE ]
     tag:
       - Body-F
       - Body-M
@@ -314,9 +328,7 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'OFT_Merge_Base.esm'
     inc:
       - 'OFT_Merge_All.esm'
@@ -324,25 +336,19 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'OFT_Merge_HonestHearts.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_Merge_HonestHearts.esp'
       - 'OFT_HonestHearts_Interiors.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'OFT_Merge_OldWorldBlues.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_OldWorldBlues.esp'
       - 'OFT_IWR_OldWorldBlues.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
   - name: 'Companion Core.esm'
@@ -398,9 +404,7 @@ plugins:
         content: 'it is recommended that you upgrade to the official EVE FNV mod.'
         condition: 'checksum("Eve.esm", A4084FA6)'
   - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
-    msg:
-      - type: say
-        content: 'This file is old'
+    msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
     tag:
       - Delev
@@ -435,9 +439,7 @@ plugins:
   - name: 'AWorldOfPain(LowLoot).esm'
     after:
       - 'nVamp - Core.esm'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version along with the low loot patches instead.'
+    msg: [ *obsolete ]
   - name: 'MoMod.esm'
     after:
       - 'nVamp - Core.esm'
@@ -547,9 +549,7 @@ plugins:
   - name: 'Selective Fire.esm'
     req: [ *NVSE ]
   - name: 'SunnyCompanion.esm'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'T6M Equipment Replacer NV.esm'
     tag:
       - Graphics
@@ -620,9 +620,7 @@ plugins:
       - type: say
         content: 'Optional file designed to increase game performance for those with older computers.'
   - name: 'nVamp - Vaernus''s Voracious Vermin.esm'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'BoulderCityFaceliftProject.esm'
     after:
       - 'nVamp - Core.esm'
@@ -664,9 +662,7 @@ plugins:
       - Hair
       - Names
   - name: 'NV GameStabilizerA8.esm'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'More Perks.esm'
@@ -713,21 +709,13 @@ plugins:
       - type: say
         content: 'Translation file.'
   - name: 'MM-Main.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'MM-HonestHearts.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'MM-OldWorldBlues.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'MM-LonesomeRoad.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'Mission Mojave - Ultimate Edition.esp'
     inc:
       - 'Compiled Patch.esp'
@@ -752,9 +740,7 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE+.esp'
-    msg:
-      - type: say
-        content: 'Plugin is old. Please update it.'
+    msg: [ *obsolete ]
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     inc:
       - 'IWR.esm'
@@ -763,9 +749,7 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
     tag:
       - Actors.AIPackages
       - Delev
@@ -798,25 +782,15 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Community Bugfix Compilation Patch.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToMMUE ]
   - name: 'CaravanCardFix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete with latest patch'
+    msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b-DLC_DM.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'ED-EUpgradeInventoryFix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete with latest patch'
+    msg: [ *obsolete ]
   - name: 'JacknDianeFix.esp'
     tag:
       - Invent
@@ -824,45 +798,25 @@ plugins:
     tag:
       - Invent
   - name: 'MushroomCloudFix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete with latest patch'
+    msg: [ *obsolete ]
   - name: 'NV Error Fixes DLCs 1.0.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'NV Error Fixes FNV 1.1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'NV Error Fixes FNV 1.1 - FOOK Patch.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'NV Error Fixes Merged 1.1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'NV Error Corrections FNV.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version 1.7+.'
+    msg: [ *obsolete ]
   - name: 'NV Error Corrections FNV - FOOK Patch.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version 1.7+.'
+    msg: [ *obsolete ]
   - name: 'NV Error Corrections Merged.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version 1.7+.'
+    msg: [ *obsolete ]
   - name: 'NV Error Corrections Merged - FOOK Patch.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version 1.7+.'
+    msg: [ *obsolete ]
   - name: 'ReloadBugFix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete with latest patch'
+    msg: [ *obsolete ]
   - name: 'Reload Speed Game Start Fix.esp'
     req: [ *NVSE ]
   - name: 'RepairKitFix.esp'
@@ -870,9 +824,7 @@ plugins:
       - type: say
         content: 'This fix does not currently work for custom weapon durability mods which increase the weapon''s health by anything other than 50%.'
   - name: 'VendorAmmo45-70Fix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete with latest patch'
+    msg: [ *obsolete ]
   - name: 'OFT_Merge_All.esp'
     inc:
       - 'OFT_Merge_Base.esp'
@@ -1060,13 +1012,9 @@ plugins:
     tag:
       - Names
   - name: 'OperationFixedTerrain.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'OFT_ElectroCity.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: '188 Trading Post Revisited.esp'
     tag:
       - NpcFaces
@@ -1206,15 +1154,11 @@ plugins:
   - name: 'monsterranch.esp'
     inc:
       - 'MoMod.esm'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - Relev
   - name: 'Alpha''s MoMod Overhaul.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Monster Mod Wasteland Edition.esp'
     tag:
       - Relev
@@ -1305,37 +1249,21 @@ plugins:
       - type: say
         content: 'Recommended to be used with one of the main .esp''s'
   - name: 'IIWR 2.0.3.esp'
-    msg:
-      - type: say
-        content: 'Outdated Version. Consider Updating to IWR.esm'
+    msg: [ *obsolete ]
   - name: 'IIWR 2.0.7.esp'
-    msg:
-      - type: say
-        content: 'Outdated Version. Consider Updating to IWR.esm'
+    msg: [ *obsolete ]
   - name: 'IIWR 2.0.9.esp'
-    msg:
-      - type: say
-        content: 'Outdated Version. Consider Updating to IWR.esm'
+    msg: [ *obsolete ]
   - name: 'IIWR 2.1.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated Version. Consider Updating to IWR.esm'
+    msg: [ *obsolete ]
   - name: 'GunRunnersExpandedV3.3.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'GunRunnersExpandedV3.4.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'GunRunnersExpandedV3.5.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'GunRunnersExpanded-LoreFriendly.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Novac Hotel Suite Upgrade.esp'
     inc:
       - 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp'
@@ -1343,13 +1271,9 @@ plugins:
     inc:
       - 'Novac Hotel Suite Upgrade.esp'
   - name: 'NVInteriors_WastelandEditon.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVInteriors_WastelandEditon.esm.'
+    msg: [ *obsolete ]
   - name: 'NVInteriors_Urban_Edition_v1.0.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVInteriors_Urban_Edition.esm.'
+    msg: [ *obsolete ]
   - name: 'return_deadmoney.esp'
     inc:
       - 'SierraMadreEXIT.esp'
@@ -1359,42 +1283,28 @@ plugins:
       - Invent
       - Names
   - name: 'Schoolhouse Base.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Seachlight Airport NCR.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'SierraMadreEXIT.esp'
     inc:
       - 'return_deadmoney.esp'
   - name: 'SierraMadrev2.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'SierraMadrev2.1.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'UHNV-Performance-Patch.esp'
-    msg:
-      - type: say
-        content: 'Outdated as of Version 2.9'
+    msg: [ *obsolete ]
   - name: 'UHNV-Brighter Lighting.esp'
     inc:
       - 'UHNV-IncreasedLighting.esp'
   - name: 'UHNV-IncreasedLighting.esp'
     inc:
       - 'UHNV-Brighter Lighting.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: 'Obsolete, upgrade to new version 4.202, UWHNV-Core.esm.'
+    msg: [ *obsolete ]
   - name: 'UWHNV-Addon-DLC.esp'
     tag:
       - C.Light
@@ -1411,21 +1321,13 @@ plugins:
       - type: say
         content: 'Incompatible with: UWHNV-Addon-Follower.esp.'
   - name: 'YangtzeBunkerPlayerHome.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'YangtzeBunkerPlayerHomeV1_3.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'YangtzeBunkerPlayerHomeV1_4.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'HighlyPopulatedFreeside.esp'
     inc:
       - 'MediumPopulatedFreeside.esp'
@@ -1439,13 +1341,9 @@ plugins:
       - 'HighlyPopulatedFreeside.esp'
       - 'MediumPopulatedFreeside.esp'
   - name: 'NVR-Version_9.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'NVFR-Version 1.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'NVHarderCore.esp'
     tag:
       - Names
@@ -1829,9 +1727,7 @@ plugins:
     tag:
       - Actors.ACBS
   - name: 'ZZZZ--APB_By_Nokturnihs.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'AutoLoot.esp'
     req: [ *NVSE ]
   - name: 'Detect Traps - Dead Money.esp'
@@ -1864,13 +1760,9 @@ plugins:
         content: 'Only use one of the spawn .esp''s'
         condition: 'file("IWS-AS-MedSpawns.esp") or file("IWS-AS-HighSpawns.esp")'
   - name: 'IWS-MoreSpawns.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'IWS-UltraSpawns.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Less Weight.esp'
     inc:
       - 'More Weight.esp'
@@ -1885,9 +1777,7 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs XFO.esp'
     req: [ *NVSE ]
     inc:
@@ -1897,9 +1787,7 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs XFO PopUp.esp'
     req: [ *NVSE ]
     inc:
@@ -1909,9 +1797,7 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs DLC.esp'
     req: [ *NVSE ]
     inc:
@@ -1921,9 +1807,7 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs DLC PopUp.esp'
     req: [ *NVSE ]
     inc:
@@ -1933,9 +1817,7 @@ plugins:
       - 'Mail Order Catalogs DLC.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs XFO DLC.esp'
     req: [ *NVSE ]
     inc:
@@ -1945,9 +1827,7 @@ plugins:
       - 'Mail Order Catalogs DLC.esp'
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Mail Order Catalogs XFO DLC PopUp.esp'
     req: [ *NVSE ]
     inc:
@@ -1957,9 +1837,7 @@ plugins:
       - 'Mail Order Catalogs DLC.esp'
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'More Weight.esp'
     inc:
       - 'Less Weight.esp'
@@ -1998,13 +1876,9 @@ plugins:
     inc:
       - 'Bountiful Harvest.esp'
   - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'AEVegas.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'AG Shell Casing Fixes-All Five.esp'
     tag:
       - Graphics
@@ -2034,13 +1908,9 @@ plugins:
       - 'AG Supplementary Uniques-Old World Blues.esp'
       - 'AG Supplementary Uniques-Lonesome Road.esp'
   - name: 'Ahzteks Weapon Replacements.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Ahzteks Weapon Overhaul.esp'
     inc:
       - 'Ahzteks Weapon Overhaul NO xCALIBER.esp'
@@ -2064,9 +1934,7 @@ plugins:
     tag:
       - WeaponMods
   - name: 'Better Binoculars.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'Better Binoculars Low.esp'
     msg:
       - type: say
@@ -2194,9 +2062,7 @@ plugins:
     tag:
       - Stats
   - name: 'Stalker Weapons Pack.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: '1nivVSLArmors.esp'
     tag:
       - Graphics
@@ -2536,9 +2402,7 @@ plugins:
   - name: 'CompanionLevel30Cap.esp'
     inc:
       - 'HigherCompanionLevelCap.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - Actors.ACBS
   - name: 'HigherCompanionLevelCap.esp'
@@ -2595,13 +2459,9 @@ plugins:
       - Graphics
       - NpcFaces
   - name: 'BetterRepairKits.esp'
-    msg:
-      - type: say
-        content: 'Old'
+    msg: [ *obsolete ]
   - name: 'BetterRepairKits2.esp'
-    msg:
-      - type: say
-        content: 'Old'
+    msg: [ *obsolete ]
   - name: 'Cowboy Repeater with Vanilla Name.esp'
     msg:
       - type: say
@@ -2631,9 +2491,7 @@ plugins:
   - name: 'T3T_MiscItemIconsNV.esp'
     inc:
       - 'MiscItemIconsNV.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider updating.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
   - name: 'BIS - T3T_MiscItemIconsNV 0.7.esp'
@@ -2652,15 +2510,11 @@ plugins:
     tag:
       - Names
   - name: 'Sorter - Combined - T3T Icon Compatch.esp'
-    msg:
-      - type: say
-        content: 'Outdated as of Version 2.0; Phased into Sorted - Combined.esp'
+    msg: [ *obsolete ]
     tag:
       - Names
   - name: 'Sorter - Combined - Aid Crafting.esp'
-    msg:
-      - type: say
-        content: 'Outdated as of Version 2.0; Phased into Sorted - Combined.esp'
+    msg: [ *obsolete ]
     tag:
       - Names
   - name: 'Sorter - Books.esp'
@@ -2722,18 +2576,14 @@ plugins:
       - type: say
         content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
   - name: 'Delay DLC - DM + HH + OWB.esp'
-    msg:
-      - type: say
-        content: 'Old, update to Delay DLC - DM + HH + OWB + LR.esp'
+    msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
     req: [ *NVSE ]
   - name: 'BIS - Grenade Hotkey.esp'
     tag:
       - Names
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
-    msg:
-      - type: say
-        content: 'Older version. Consider using version 1.0.3 HotfixA or later.'
+    msg: [ *obsolete ]
     tag:
       - Names
   - name: 'IMCNNV - Sorted.esp'
@@ -2784,9 +2634,7 @@ plugins:
   - name: 'More Realistic Aiming.esp'
     req: [ *NVSE ]
   - name: 'NoDegredation.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NoDegradation.esp.'
+    msg: [ *obsolete ]
   - name: 'NVDLC04 Allegiance.esp'
     inc:
       - 'NVDLC04 Allegiance w Duster.esp'
@@ -2836,9 +2684,7 @@ plugins:
   - name: 'Quick Trade.esp'
     req: [ *MCM ]
   - name: 'Quick Trade - iHud.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, update to latest version 3.4 of iHud.'
+    msg: [ *obsolete ]
   - name: 'Reactive People - Ultimatum.esp'
     req: [ *NVSE ]
   - name: 'Realistic Weight.esp'
@@ -2944,9 +2790,7 @@ plugins:
       - Invent
       - WeaponMods
   - name: 'WMX - Sorted.esp'
-    msg:
-      - type: say
-        content: 'Merged into the main mod; No longer required.'
+    msg: [ *obsolete ]
   - name: 'WMXArenovalisRiotShottieCompat.esp'
     msg:
       - type: say
@@ -2956,9 +2800,7 @@ plugins:
       - type: say
         content: 'Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.'
   - name: 'WMXTemporaryPatch.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Please update to Version 1.7 of WMX.'
+    msg: [ *obsolete ]
   - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
     tag:
       - Sound
@@ -3123,9 +2965,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'WME - that gun 556.esp'
-    msg:
-      - type: say
-        content: 'Old'
+    msg: [ *obsolete ]
     tag:
       - Names
       - Stats
@@ -3143,9 +2983,7 @@ plugins:
     tag:
       - Names
   - name: 'WME - FOOK - Dead Money.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'BIS - WME - Honest Hearts.esp'
     tag:
       - Names
@@ -3198,44 +3036,37 @@ plugins:
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs XFO WMX.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs XFO WMX PopUp.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs WMX DLC.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs WMX DLC PopUp.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs XFO WMX DLC.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs XFO WMX DLC PopUp.esp'
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
   - name: 'Mail Order Catalogs WME.esp'
     msg:
       - type: say
@@ -3276,71 +3107,49 @@ plugins:
   - name: 'NV Game Stabilizer.esp'
     inc:
       - 'NV GameStabilizerA.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA.esp'
     inc:
       - 'NV Game Stabilizer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA1.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA2.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA4.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA5.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA5F.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA6.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA7.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA7b.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA8.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - NoMerge
   - name: 'NV GameStabilizerA9.esp'
@@ -3353,9 +3162,7 @@ plugins:
     inc:
       - 'SimpleStreetLights.esp'
   - name: 'Vurt''s Trees & Grass.esp'
-    msg:
-      - type: say
-        content: 'This is an outdated version. Consider updating to the latest.'
+    msg: [ *obsolete ]
   - name: 'Vurt''s WFO.esp'
     inc:
       - 'Vurt''s Trees & Grass.esp'
@@ -3380,19 +3187,13 @@ plugins:
     tag:
       - Names
   - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Latest Versions use .esm instead of .esp'
+    msg: [ *obsolete ]
     tag:
       - Names
   - name: 'ELECTRO-CITY - Highways and Byways.esp'
-    msg:
-      - type: say
-        content: 'Outdated; Latest Versions use .esm instead of .esp'
+    msg: [ *obsolete ]
   - name: 'BIS - ELECTRO-CITY Extended Cateye.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
   - name: 'ELECTRO-CITY - IncreasedWastelandSpawnCOMPATIBILITYPatch.esp'
     msg:
       - type: say
@@ -3468,17 +3269,13 @@ plugins:
       - 'Nevada Skies - URWLified.esp'
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-    msg:
-      - type: say
-        content: 'Outdated and no longer to be used.'
+    msg: [ *obsolete ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     inc:
       - 'Nevada Skies.esp, Nevada Skies - URWLified.esp'
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg:
-      - type: say
-        content: 'Outdated and no longer to be used.'
+    msg: [ *obsolete ]
   - name: 'Nevada Skies.esp'
     inc:
       - 'Nevada Skies - URWLified.esp'
@@ -3505,9 +3302,7 @@ plugins:
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Please update via the Nevada Skies download page.'
+    msg: [ *obsolete ]
     tag:
       - C.Climate
       - C.Light
@@ -3517,16 +3312,12 @@ plugins:
       - 'Nevada Skies - URWLified.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Please update via the Nevada Skies download page.'
+    msg: [ *obsolete ]
     tag:
       - C.Climate
       - C.Light
   - name: 'NSkies - URWLNV.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Please update via the Nevada Skies download page.'
+    msg: [ *obsolete ]
   - name: 'NSkies URWLifiedOWB.esp'
     tag:
       - C.Climate
@@ -3548,9 +3339,7 @@ plugins:
       - C.Climate
       - C.Light
   - name: 'F3NVProjectRealityMkIv3.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version 4.2+.'
+    msg: [ *obsolete ]
     tag:
       - C.Climate
       - C.Light
@@ -3567,9 +3356,7 @@ plugins:
       - type: say
         content: 'No longer supported by the mod. Can still be used.'
   - name: 'Interior Lighting Overhaul-Realistic.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
@@ -3585,9 +3372,7 @@ plugins:
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul.esp'
-    msg:
-      - type: say
-        content: 'Outdated Version. Consider Updating.'
+    msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'ILO - Fallout New Vegas.esp'
@@ -3650,18 +3435,14 @@ plugins:
     tag:
       - C.Climate
   - name: 'Interior Lighting Overhaul-Darker.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'ILO - A World of Pain.esp'
     tag:
       - C.Light
   - name: 'DYNAVISION - Dynamic Lens Effect.esp'
     inc:
       - 'Field Depth.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider updating.'
+    msg: [ *obsolete ]
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
     inc:
       - 'DYNAVISION - Dynamic Lens Effect.esp'
@@ -3684,52 +3465,37 @@ plugins:
   - name: 'ELECTRO-CITY - Emittance.esp'
     inc:
       - 'ELECTRO-CITY - Imaginator.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Consider updating.'
+    msg: [ *obsolete ]
   - name: 'ELECTRO-CITY - Imaginator.esp'
     inc:
       - 'ELECTRO-CITY - Emittance.esp'
   - name: 'CustomLighting-I DoF Blur.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'CustomLighting-IE DoF Blur.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'CustomLighting-IE DOF Clear.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'CustomLighting-IE Clear.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'CustomLighting-IE DoF.esp'
-    msg:
-      - type: say
-        content: 'Outdated.'
+    msg: [ *obsolete ]
   - name: 'UWFXGodrays.esp'
     req: [ *NVSE ]
   - name: 'UnderwaterFX.esp'
     req: [ *NVSE ]
   - name: 'BetterGamePerformanceV1.esp'
     msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
   - name: 'BetterGamePerformanceV2.esp'
     msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
   - name: 'BetterGamePerformanceV3.esp'
     msg:
-      - type: say
-        content: 'Outdated. Consider Updating.'
+      - *obsolete
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
   - name: 'BetterGamePerformanceV4.esp'
@@ -3741,51 +3507,30 @@ plugins:
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
   - name: 'nVamp - Tales from the Burning Sands.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - A World of Pain.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Classic Fallout Weapons.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - New Vegas Bounties.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Caesars Legion Overhaul.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - More Perks.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Increased Wasteland Spawns.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Effects and Graphics.esp'
     msg:
       - type: say
         content: 'OPTIONAL FOR GRAPHICAL OVERHAUL'
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+      - *obsolete
   - name: 'nVamp - Superior Firepower.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Combat Enhancement.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Game Fixes.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - Core.esp'
     msg:
       - type: error
@@ -3834,15 +3579,12 @@ plugins:
       - type: say
         content: 'Optional for a more difficult experience.'
   - name: 'nVamp - Vaernus''s Voracious Vermin.esp'
-    msg:
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+    msg: [ *obsolete ]
   - name: 'nVamp - More Hardcore.esp'
     msg:
       - type: say
         content: 'Optional for a more difficult experience.'
-      - type: say
-        content: 'Old, consider upgrading to nVamp version 0.15'
+      - *obsolete
   - name: 'DK Caucasians.esp'
     msg:
       - type: say
