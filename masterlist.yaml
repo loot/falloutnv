@@ -26,6 +26,13 @@ common:
         str: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
       - lang: zh_CN
         str: '已过时。请升级到最新版本。'
+  - &incMaxLevelMods
+    type: say
+    content: 'Incompatible with Other mods that change the max level.'
+  - &incWeatherImageSpace
+    type: say
+    content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+
 # Other Strings
   - &dirtyUtil
     '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
@@ -2544,29 +2551,19 @@ plugins:
   - name: 'IntegratedFullDLC.esp'
   - name: 'Max Level 50.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: '"Incompatible with Other mods that change the max level."'
+    msg: [ *incMaxLevelMods ]
   - name: 'Max Level 60.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: '"Incompatible with Other mods that change the max level."'
+    msg: [ *incMaxLevelMods ]
   - name: 'Max Level 75.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: '"Incompatible with Other mods that change the max level."'
+    msg: [ *incMaxLevelMods ]
   - name: 'Max Level 100.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: '"Incompatible with Other mods that change the max level."'
+    msg: [ *incMaxLevelMods ]
   - name: 'Max Level 255.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: '"Incompatible with Other mods that change the max level."'
+    msg: [ *incMaxLevelMods ]
   - name: 'CCC - weaker weapons.esp'
     msg:
       - type: say
@@ -3219,13 +3216,9 @@ plugins:
       - type: say
         content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
   - name: 'Emperical Weather.esp'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+    msg: [ *incWeatherImageSpace ]
   - name: 'Fellout.esp'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+    msg: [ *incWeatherImageSpace ]
   - name: 'fnvrwlo - original.esp'
     inc:
       - 'fnvrwlo - brighter nights.esp'
@@ -3252,17 +3245,11 @@ plugins:
         content: 'Recommended for use with Fellout.esp'
         condition: 'not file("Fellout.esp")'
   - name: 'night_and_day.esp'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+    msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+    msg: [ *incWeatherImageSpace ]
   - name: 'Western Sky.esp'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers."'
+    msg: [ *incWeatherImageSpace ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     inc:
       - 'Nevada Skies.esp'
