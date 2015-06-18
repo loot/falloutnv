@@ -912,20 +912,12 @@ plugins:
       - 'OFT_Merge_All.esp'
       - 'OFT_Merge_Base.esp'
   - name: 'AutoSaverNV.esp'
-    msg:
-      - type: say
-        content: 'Do not use with other Auto Savers as they serve the same purpose.'
-        condition: 'file("RX-Auto Incremental Save.esp") or file("CASM.esp")'
+    inc:
+      - 'RX-Auto Incremental Save.esp'
+      - 'CASM.esp'
   - name: 'RX-Auto Incremental Save.esp'
-    msg:
-      - type: say
-        content: 'Do not use with CASM; has the same purpose.'
-        condition: 'file("CASM.esp")'
-  - name: 'CASM.esp'
-    msg:
-      - type: say
-        content: 'Do not use with Auto Incremental Save; has the same purpose.'
-        condition: 'file("RX-Auto Incremental Save.esp")'
+    inc:
+      - 'CASM.esp'
   - name: 'BIS - Brumbek''s Inventory Sorting.esp'
     tag:
       - Names
@@ -1006,15 +998,10 @@ plugins:
   - name: 'Centered 3rd Person Camera - Unraised.esp'
     inc:
       - 'FOOK - New Vegas.esm'
-  - name: 'ImplantGRX-ActivatorHotkey.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with ImplantGRX-NVSEHotkey.esp'
   - name: 'ImplantGRX-NVSEHotkey.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: 'Do not load together with ImplantGRX-ActivatorHotkey.esp'
+    inc:
+      - 'ImplantGRX-ActivatorHotkey.esp'
   - name: 'NVORganizedItems.esp'
     tag:
       - Names
@@ -1324,9 +1311,8 @@ plugins:
       - Actors.CombatStyle
       - NpcFaces
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: UWHNV-Addon-Follower.esp.'
+    inc:
+      - 'UWHNV-Addon-Follower.esp'
   - name: 'YangtzeBunkerPlayerHome.esp'
     msg: [ *obsolete ]
   - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
@@ -1750,22 +1736,19 @@ plugins:
       - 'Detect Traps - Dead Money.esp'
   - name: 'IWS-AS-HighSpawns.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: 'Only use one of the spawn .esp''s'
-        condition: 'file("IWS-AS-MedSpawns.esp") or file("IWS-AS-LowSpawns.esp")'
+    inc:
+      - 'IWS-AS-MedSpawns.esp'
+      - 'IWS-AS-LowSpawns.esp'
   - name: 'IWS-AS-MedSpawns.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: 'Only use one of the spawn .esp''s'
-        condition: 'file("IWS-AS-HighSpawns.esp") or file("IWS-AS-LowSpawns.esp")'
+    inc:
+      - 'IWS-AS-HighSpawns.esp'
+      - 'IWS-AS-LowSpawns.esp'
   - name: 'IWS-AS-LowSpawns.esp'
     req: [ *NVSE ]
-    msg:
-      - type: say
-        content: 'Only use one of the spawn .esp''s'
-        condition: 'file("IWS-AS-MedSpawns.esp") or file("IWS-AS-HighSpawns.esp")'
+    inc:
+      - 'IWS-AS-MedSpawns.esp'
+      - 'IWS-AS-HighSpawns.esp'
   - name: 'IWS-MoreSpawns.esp'
     msg: [ *obsolete ]
   - name: 'IWS-UltraSpawns.esp'
@@ -1943,42 +1926,40 @@ plugins:
   - name: 'Better Binoculars.esp'
     msg: [ *obsolete ]
   - name: 'Better Binoculars Low.esp'
-    msg:
-      - type: say
-        content: 'Select only one Better Bincoulars .esp to use.'
-        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")'
+    inc:
+      - 'Better Binoculars Medium.esp'
+      - 'Better Binoculars High.esp'
+      - 'Better Binoculars Max.esp'
   - name: 'BIS - Kobu Better Binoculars Low.esp'
-    msg:
-      - type: say
-        content: 'For use with Better Binoculars Low.esp'
-        condition: 'not file("Better Binoculars Low.esp")'
+    req:
+      - 'Better Binoculars Low.esp'
     tag:
       - Names
   - name: 'Better Binoculars Medium.esp'
-    msg:
-      - type: say
-        content: 'Select only one Better Bincoulars .esp to use.'
-        condition: 'file("Better Binoculars Low.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")'
+    inc:
+      - 'Better Binoculars Low.esp'
+      - 'Better Binoculars High.esp'
+      - 'Better Binoculars Max.esp'
   - name: 'BIS - Kobu Better Binoculars Medium.esp'
     req:
       - 'Better Binoculars Medium.esp'
     tag:
       - Names
   - name: 'Better Binoculars High.esp'
-    msg:
-      - type: say
-        content: 'Select only one Better Bincoulars .esp to use.'
-        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars Low.esp") or file("Better Binoculars Max.esp")'
+    inc:
+      - 'Better Binoculars Medium.esp'
+      - 'Better Binoculars Low.esp'
+      - 'Better Binoculars Max.esp'
   - name: 'BIS - Kobu Better Binoculars High.esp'
     req:
       - 'Better Binoculars High.esp'
     tag:
       - Names
   - name: 'Better Binoculars Max.esp'
-    msg:
-      - type: say
-        content: 'Select only one Better Bincoulars .esp to use.'
-        condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Low.esp")'
+    inc:
+      - 'Better Binoculars Medium.esp'
+      - 'Better Binoculars High.esp'
+      - 'Better Binoculars Low.esp'
   - name: 'BIS - Kobu Better Binoculars Max.esp'
     req:
       - 'Better Binoculars Max.esp'
@@ -3592,25 +3573,23 @@ plugins:
       - Invent
       - Actors.ACBS
   - name: 'CCO - FT DM Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+    inc:
+      - 'CCO - FT All DLC Patch.esp'
   - name: 'CCO - FT HH Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+    inc:
+      - 'CCO - FT All DLC Patch.esp'
   - name: 'CCO - FT OWB Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+    inc:
+      - 'CCO - FT All DLC Patch.esp'
   - name: 'CCO - FT LR Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with CCO - FT All DLC Patch.esp'
+    inc:
+      - 'CCO - FT All DLC Patch.esp'
   - name: 'CCO - FT All DLC Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with CCO - FT DM Patch.esp, CCO - FT HH Patch.esp, CCO - FT OWB Patch.esp or CCO - FT LR Patch.esp'
+    inc:
+      - 'CCO - FT DM Patch.esp'
+      - 'CCO - FT HH Patch.esp'
+      - 'CCO - FT OWB Patch.esp'
+      - 'CCO - FT LR Patch.esp'
   - name: 'Lucky 38 Lights.esp'
     tag:
       - C.Light
@@ -3622,33 +3601,17 @@ plugins:
       - Names
       - Stats
   - name: 'DLC Weapon Integration.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with DLC Weapon Integration - WMX.esp'
-  - name: 'DLC Weapon Integration - WMX.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with DLC Weapon Integration.esp'
+    inc:
+      - 'DLC Weapon Integration - WMX.esp'
   - name: 'OldWorldBlues - Keep Big MT Active.esp'
-    msg:
-      - type: say
-        content: 'Do not load with OldWorldBlues - Keep Big MT Active No Announcements.esp'
-  - name: 'OldWorldBlues - Keep Big MT Active No Announcements.esp'
-    msg:
-      - type: say
-        content: 'Do not load with OldWorldBlues - Keep Big MT Active.esp'
+    inc:
+      - 'OldWorldBlues - Keep Big MT Active No Announcements.esp'
   - name: 'OldWorldBlues - Improved Transportalponder.esp'
-    msg:
-      - type: say
-        content: 'Do not load with OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
-  - name: 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
-    msg:
-      - type: say
-        content: 'Do not load with OldWorldBlues - Improved Transportalponder.esp'
+    inc:
+      - 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
   - name: 'Shotgun Commando Redone.esp'
-    msg:
-      - type: say
-        content: 'Do not load together with Shotgun Commando.esp'
+    inc:
+      - 'Shotgun Commando.esp'
   - name: 'NewVegasBountiesII.esp'
     after: [ NewVegasBounties.esp ]
     tag:
