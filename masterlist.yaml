@@ -1960,10 +1960,8 @@ plugins:
         content: 'Select only one Better Bincoulars .esp to use.'
         condition: 'file("Better Binoculars Low.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Max.esp")'
   - name: 'BIS - Kobu Better Binoculars Medium.esp'
-    msg:
-      - type: say
-        content: 'For use with Better Binoculars Medium.esp'
-        condition: 'not file("Better Binoculars Medium.esp")'
+    req:
+      - 'Better Binoculars Medium.esp'
     tag:
       - Names
   - name: 'Better Binoculars High.esp'
@@ -1972,10 +1970,8 @@ plugins:
         content: 'Select only one Better Bincoulars .esp to use.'
         condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars Low.esp") or file("Better Binoculars Max.esp")'
   - name: 'BIS - Kobu Better Binoculars High.esp'
-    msg:
-      - type: say
-        content: 'For use with Better Binoculars High.esp'
-        condition: 'not file("Better Binoculars High.esp")'
+    req:
+      - 'Better Binoculars High.esp'
     tag:
       - Names
   - name: 'Better Binoculars Max.esp'
@@ -1984,10 +1980,8 @@ plugins:
         content: 'Select only one Better Bincoulars .esp to use.'
         condition: 'file("Better Binoculars Medium.esp") or file("Better Binoculars High.esp") or file("Better Binoculars Low.esp")'
   - name: 'BIS - Kobu Better Binoculars Max.esp'
-    msg:
-      - type: say
-        content: 'For use with Better Binoculars Max.esp'
-        condition: 'not file("Better Binoculars Max.esp")'
+    req:
+      - 'Better Binoculars Max.esp'
     tag:
       - Names
   - name: 'better that gun 223.esp'
@@ -2096,15 +2090,11 @@ plugins:
   - name: 'BlackWolf Backpack.esp'
     inc:
       - 'QS_Blackwolf_NV_Backpackmod.esp'
-    msg:
-      - type: say
-        content: 'To be used with BlackWolf Backpack - Vendor Script Replenish.esp'
-        condition: 'not file("BlackWolf Backpack - Vendor Script Replenish.esp")'
+    req:
+      - 'BlackWolf Backpack - Vendor Script Replenish.esp'
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
-    msg:
-      - type: say
-        content: 'To be used with BlackWolf Backpack.esp'
-        condition: 'not file("BlackWolf Backpack.esp")'
+    req:
+      - 'BlackWolf Backpack.esp'
   - name: 'epock.esp'
     msg:
       - type: say
@@ -2428,10 +2418,8 @@ plugins:
     inc:
       - 'Cass Passive Fix.esp'
   - name: 'CCC - Save Cass.esp'
-    msg:
-      - type: say
-        content: 'For use with the Save Cass mod.'
-        condition: 'not file("SaveCass.esp")'
+    req:
+      - 'SaveCass.esp'
   - name: 'EZ_VanillaFollowers.esp'
     tag:
       - Actors.AIPackages
@@ -2470,10 +2458,9 @@ plugins:
   - name: 'BetterRepairKits2.esp'
     msg: [ *obsolete ]
   - name: 'Cowboy Repeater with Vanilla Name.esp'
-    msg:
-      - type: say
-        content: 'For use with GunSmith.esm and GunSmith Guns Upgrade.esp'
-        condition: 'not file("GunSmith.esm") or not file("GunSmith Guns Upgrade.esp")'
+    req:
+      - 'GunSmith.esm'
+      - 'GunSmith Guns Upgrade.esp'
   - name: 'Real Weapon Names.esp'
     tag:
       - Names
@@ -2703,15 +2690,13 @@ plugins:
   - name: 'Recharge Low.esp'
     inc:
       - 'Recharge High.esp'
-    msg:
-      - type: say
-        content: 'For use with E.C.K.O. Energy Cell Killer Overhaul.esp'
+    req:
+      - 'E.C.K.O. Energy Cell Killer Overhaul.esp'
   - name: 'Recharge High.esp'
     inc:
       - 'Recharge Low.esp'
-    msg:
-      - type: say
-        content: 'For use with E.C.K.O. Energy Cell Killer Overhaul.esp'
+    req:
+      - 'E.C.K.O. Energy Cell Killer Overhaul.esp'
   - name: 'RRDynamicXPonly.esp'
     req: [ *NVSE ]
   - name: 'Runner.esp'
@@ -2736,13 +2721,11 @@ plugins:
       - 'RealisticWeaponRecoil.esp'
       - 'RealisticWeaponRecoilDM.esp'
   - name: 'UltimateRecoilPN.esp'
-    req: [ *NVSE ]
+    req:
+      - *NVSE
+      - 'Project Nevada - Core.esm'
     inc:
       - 'UltimateRecoil.esp'
-    msg:
-      - type: say
-        content: 'For use with Project Nevada - Core.esm'
-        condition: 'not file("Project Nevada - Core.esm")'
   - name: 'VarmintRifle22LR.esp'
     inc:
       - 'WMX-VarmintRifle22LR.esp'
@@ -3239,10 +3222,8 @@ plugins:
       - 'fnvrwlo - brighter nights.esp'
       - 'fnvrwl FNV only - brighter nights.esp'
   - name: 'friendofnightforfellout.esp'
-    msg:
-      - type: say
-        content: 'Recommended for use with Fellout.esp'
-        condition: 'not file("Fellout.esp")'
+    req:
+      - Fellout.esp'
   - name: 'night_and_day.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
@@ -3518,10 +3499,8 @@ plugins:
   - name: 'nVamp - Game Fixes.esp'
     msg: [ *obsolete ]
   - name: 'nVamp - Core.esp'
-    msg:
-      - type: error
-        content: 'nVamp - Core.esm is missing.'
-        condition: 'not file("nVamp - Core.esm")'
+    req:
+      - 'nVamp - Core.esm'
   - name: 'nVamp - VVV - Bosses.esp'
     msg:
       - type: say
