@@ -2548,7 +2548,6 @@ plugins:
   - name: 'FeelingIrradiated-IS.esp'
     tag:
       - Names
-  - name: 'IntegratedFullDLC.esp'
   - name: 'Max Level 50.esp'
     req: [ *NVSE ]
     msg: [ *incMaxLevelMods ]
