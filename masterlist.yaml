@@ -2739,6 +2739,8 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
+    after:
+      - 'MMUE-CP-EVE.esp'
   - name: 'WMXUE.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
