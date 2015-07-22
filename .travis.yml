@@ -1,16 +1,24 @@
 sudo: false
 language: ruby
-rvm: 2.2.0
-install: gem install kwalify
-before_install: wget https://loot.github.io/masterlist.schema.yaml
-script:
-  ### Check for basic coding style, but failure here won't fail the build.
-  - 'grep --line-number --basic-regexp "name: [^'']" masterlist.yaml || true'
-  ### Check masterlist against the Kwalify schema
-  # The `return` addition is a hack as `kwalify` doesn't return with a
-  # non-zero exist code when the "kwalification" fails, so this forces an
-  # error if anything fails the validation.
-  - kwalify -f masterlist.schema.yaml masterlist.yaml && return $(kwalify -q -f masterlist.schema.yaml masterlist.yaml|wc -l)
+
+# Need Boost 1.55, which isn't in the 12.04 repositories - install from a PPA.
+addons:
+  apt:
+    sources:
+      - boost-latest
+      - ubuntu-toolchain-r-test
+    packages:
+      - libboost-log1.55-dev
+      - libboost-date-time1.55-dev
+      - libboost-thread1.55-dev
+      - libboost-filesystem1.55-dev
+      - libboost-locale1.55-dev
+      - libboost-iostreams1.55-dev
+      - g++-5
+
+install: wget https://github.com/loot/loot/releases/download/v0.8.0/metadata-validator.tar.gz -O - | tar -xz
+
+script: ./metadata-validator $TRAVIS_BUILD_DIR/masterlist.yaml
 
 notifications:
   irc:
