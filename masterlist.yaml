@@ -39,16 +39,16 @@ common:
 
 globals:
   - type: say
-    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.7.0) of LOOT is available.'
-    condition: 'version("LOOT", "0.7.0.0", <)'
+    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.8.0) of LOOT is available.'
+    condition: 'version("LOOT", "0.8.0.0", <)'
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
 
 plugins:
   - name: 'DeadMoney.esm'
