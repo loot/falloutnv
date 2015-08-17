@@ -44,11 +44,16 @@ globals:
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Latest LOOT thread](%1%).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Обсуждение LOOT "(Eng)"](%1%).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Forum de LOOT](%1%).'
+      - lang: ko
+        str: '[최신 LOOT 스레드](%1%).'
+      - lang: zh_CN
+        str: '[最新的LOOT版本](%1%)。'
+    subs: [ 'http://forums.bethsoft.com/topic/1531778-rel-loot-thread-20/' ]
 
 plugins:
   - name: 'DeadMoney.esm'
