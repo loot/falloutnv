@@ -4089,5 +4089,16 @@ plugins:
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
-
-
+  - name: 'Fix the lights and Crap be gone.esp'
+    dirty:
+      - crc: 0xB5671CA9
+        util: *dirtyUtil
+        itm: 8
+        udr: 54166
+    url: [ '' ]
+  - name: 'SupahWeapons.esp'
+    dirty:
+      - crc: 0xEC7F4960
+        util: *dirtyUtil
+        itm: 15
+        udr: 8226
