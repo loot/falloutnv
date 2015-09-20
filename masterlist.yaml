@@ -3210,7 +3210,7 @@ plugins:
       - 'fnvrwl FNV only - brighter nights.esp'
   - name: 'friendofnightforfellout.esp'
     req:
-      - Fellout.esp'
+      - 'Fellout.esp'
   - name: 'night_and_day.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
