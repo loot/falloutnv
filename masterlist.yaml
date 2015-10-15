@@ -306,7 +306,6 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
-      - Eyes
   - name: 'NVCE Main.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -2739,6 +2738,8 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
+    after:
+      - 'MMUE-CP-EVE.esp'
   - name: 'WMXUE.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
@@ -3204,7 +3205,7 @@ plugins:
       - 'fnvrwl FNV only - brighter nights.esp'
   - name: 'friendofnightforfellout.esp'
     req:
-      - Fellout.esp'
+      - 'Fellout.esp'
   - name: 'night_and_day.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
@@ -4083,5 +4084,16 @@ plugins:
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
-
-
+  - name: 'Fix the lights and Crap be gone.esp'
+    dirty:
+      - crc: 0xB5671CA9
+        util: *dirtyUtil
+        itm: 8
+        udr: 54166
+    url: [ '' ]
+  - name: 'SupahWeapons.esp'
+    dirty:
+      - crc: 0xEC7F4960
+        util: *dirtyUtil
+        itm: 15
+        udr: 8226
