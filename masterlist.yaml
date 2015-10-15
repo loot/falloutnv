@@ -34,8 +34,7 @@ common:
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
 
 # Other Strings
-  - &dirtyUtil
-    '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
+  - &dirtyUtil '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
 
 globals:
   - type: say
