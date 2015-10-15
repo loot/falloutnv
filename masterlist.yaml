@@ -297,9 +297,9 @@ plugins:
       - 'Project Nevada - Core.esm'
       - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     after:
       - 'ProjectBrazil.esm'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Actors.ACBS
       - Eyes
