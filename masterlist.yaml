@@ -173,6 +173,31 @@ plugins:
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - NpcFaces
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
@@ -181,20 +206,48 @@ plugins:
     priority: -400998000
     after:
       - 'Anchorage.esm'
+    tag:
+      - Actors.DeathItem
+      - Graphics
+      - Relations
   - name: 'BrokenSteel.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
+      - 'Anchorage.esm'
       - 'ThePitt.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Relev
+      - Scripts
+      - Stats
   - name: 'PointLookout.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
       - 'BrokenSteel.esm'
+    tag:
+      - Graphics
+      - Names
+      - Stats
   - name: 'Zeta.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
     after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
@@ -207,6 +260,8 @@ plugins:
       - Actors.DeathItem
       - Actors.Skeleton
       - Actors.Stats
+      - C.Acoustic
+      - C.Light
       - C.Music
       - C.Owner
       - C.Water
@@ -228,6 +283,10 @@ plugins:
         content: 'You need to check your Tale of Two Wastelands load order'
         condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 6D6F2EA7)'
     after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
       - 'Zeta.esm'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-215-official-bugfix-pack-ttw' ]
@@ -799,6 +858,7 @@ plugins:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
   - name: 'JSawyer - EVE.esp'
@@ -817,6 +877,7 @@ plugins:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
     tag:
       - Names
       - Stats
@@ -1794,6 +1855,7 @@ plugins:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
       - 'jsawyer.esp'
       - 'JSawyer - CE.esp'
       - 'Project Nevada - Cyberware Additions.esp'
@@ -1814,6 +1876,7 @@ plugins:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
   - name: 'Equipment Restoration Project - JSawyer.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     tag:
