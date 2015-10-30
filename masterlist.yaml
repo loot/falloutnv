@@ -714,6 +714,45 @@ plugins:
       - NPC.Class
       - NPC.Race
       - Scripts
+  - name: 'jsawyer.esp'
+    url: [ 'http://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
+    priority: -400800000
+    inc:
+      - 'WeaponModsExpanded.esp'
+      - 'Weapon Mod Expansion.esp'
+      - 'Weapon Mod Expansion.esm'
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+  - name: 'JSawyer - CE.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
+    inc:
+      - 'WeaponModsExpanded.esp'
+      - 'Weapon Mod Expansion.esp'
+      - 'Weapon Mod Expansion.esm'
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+  - name: 'JSawyer - EVE.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+  - name: 'JSawyer - IMPACT.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
+    after:
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+  - name: 'JSawyer - Project Nevada.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
+    after:
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+  - name: 'JSawyer - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
