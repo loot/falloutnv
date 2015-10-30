@@ -820,6 +820,118 @@ plugins:
       - NPC.Class
       - NPC.Race
       - Scripts
+  - name: 'TTW_AnchorageCustomization.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Names
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+  - name: 'TTW_NoKarmaDCFollowers.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+  - name: 'TTW_OutcastTrading.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Actors.AIData
+      - Actors.Stats
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+  - name: 'TTW_Reputation.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Actors.Stats
+      - Factions
+      - Names
+      - Relations
+      - Stats
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+  - name: 'TTW_SpeechChecks.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Names
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+  - name: 'TTW Anchorage Customization - Speech Checks.esp'
+    url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
+    priority: -400800000
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+  - name: 'TTW_StartupMenu.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Names
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+  - name: 'TTW_StashPackOptions.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+  - name: 'TTW_WildWasteland.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+  - name: 'TTWOptions.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
+    tag:
+      - Names
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+      - 'TTW_WildWasteland.esp'
   - name: 'jsawyer.esp'
     url: [ 'http://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
@@ -841,6 +953,16 @@ plugins:
       - WeaponMods
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+      - 'TTW_WildWasteland.esp'
+      - 'TTWOptions.esp'
   - name: 'JSawyer - CE.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
     inc:
