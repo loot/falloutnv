@@ -1700,7 +1700,7 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     after:
       - 'EVE FNV - ALL DLC.esp'
-      - name: 'Equipment Restoration Project - IMPACT.esp'
+  - name: 'Equipment Restoration Project - IMPACT.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     after:
       - 'IMPACT.esp'
