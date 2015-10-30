@@ -57,6 +57,12 @@ globals:
 plugins:
   - name: 'DeadMoney.esm'
     priority: -400999000
+    tag:
+      - Actors.Stats
+      - Graphics
+      - Invent
+      - Names
+      - Stats
     dirty:
       - util: *dirtyUtil
         crc: 0xd70f165b
@@ -66,6 +72,11 @@ plugins:
     priority: -400999000
     after:
       - 'DeadMoney.esm'
+    tag:
+      - C.Light
+      - Graphics
+      - Names
+      - Sound
     dirty:
       - util: *dirtyUtil
         crc: 0x2352b189
@@ -76,6 +87,12 @@ plugins:
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
+    tag:
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
     dirty:
       - util: *dirtyUtil
         crc: 0x7f8f8225
@@ -86,6 +103,8 @@ plugins:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
+    tag:
+      - Stats
     dirty:
       - util: *dirtyUtil
         crc: 0x30073d50
@@ -98,6 +117,10 @@ plugins:
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Invent
     dirty:
       - util: *dirtyUtil
         crc: 0xaac938d
@@ -176,6 +199,30 @@ plugins:
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
     priority: -400998000
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Music
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
@@ -720,6 +767,19 @@ plugins:
       - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Deflst
+      - Delev
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - Relev
+      - Stats
+      - WeaponMods
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
   - name: 'JSawyer - CE.esp'
@@ -728,6 +788,12 @@ plugins:
       - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Stats
     after:
       - 'EVE FNV - ALL DLC.esp'
       - 'IMPACT.esp'
@@ -739,17 +805,42 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
     after:
       - 'EVE FNV - ALL DLC.esp'
+    tag:
+      - Graphics
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
   - name: 'JSawyer - IMPACT.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
     after:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
   - name: 'JSawyer - Project Nevada.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
     after:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Stats
+  - name: 'JSawyer - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
+    tag:
+      - Deflst
+      - Graphics
+      - Names
+      - NpcFaces
+      - Scripts
+      - Stats
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
@@ -1675,12 +1766,29 @@ plugins:
   - name: 'Flight of the ValkED-E.esp'
     tag:
       - Sound
+  - name: 'Book of Steel.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60666' ]
+    tag:
+      - Graphics
+  - name: 'Book of Steel - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60666' ]
+    tag:
+      - Graphics
   - name: 'Equipment Restoration Project.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     inc:
       - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
     after:
       - 'EVE FNV - ALL DLC.esp'
       - 'IMPACT.esp'
@@ -1708,16 +1816,43 @@ plugins:
       - 'IMPACT-POPMerged.esp'
   - name: 'Equipment Restoration Project - JSawyer.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Names
+      - NPC.Class
+      - Stats
     after:
       - 'jsawyer.esp'
       - 'JSawyer - CE.esp'
   - name: 'Equipment Restoration Project - Project Nevada.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
     after:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
+  - name: 'Equipment Restoration Project - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - C.Music
+      - C.Owner
+      - Invent
   - name: 'Equipment Restoration Project - WRP.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    tag:
+      - Graphics
     after:
       - '357retex.esp'
       - 'christinecos.esp'
@@ -1725,6 +1860,39 @@ plugins:
       - 'GRA WRP Compatibility Patch no Brush Gun.esp'
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
+  - name: 'Power Armor Distribution Overhaul.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    inc:
+      - 'boa ncrpahelmet.esp'
+      - 'Boacombat2glove.esp'
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Stats
+  - name: 'Power Armor Distribution Overhaul - Book of Steel.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    inc:
+      - 'boa ncrpahelmet.esp'
+      - 'Boacombat2glove.esp'
+    tag:
+      - Graphics
+      - Invent
+  - name: 'Power Armor Distribution Overhaul - JSawyer.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Stats
+  - name: 'Power Armor Distribution Overhaul - TTW_OutcastTrading.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Invent
+  - name: 'TTW-WEP.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
+    tag:
+      - Graphics
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
