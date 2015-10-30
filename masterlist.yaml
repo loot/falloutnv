@@ -1690,17 +1690,17 @@ plugins:
       - 'JSawyer - CE.esp'
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
-	  - '357retex.esp'
-	  - 'christinecos.esp'
-	  - 'GRA WRP Compatibility Patch.esp'
-	  - 'GRA WRP Compatibility Patch no Brush Gun.esp'
-	  - 'GRA-WRP-Patch-Two_Unofficial.esp'
-	  - 'singleshot_retex.esp'
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
   - name: 'Equipment Restoration Project - EVE.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     after:
       - 'EVE FNV - ALL DLC.esp'
-  - name: 'Equipment Restoration Project - IMPACT.esp'
+      - name: 'Equipment Restoration Project - IMPACT.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     after:
       - 'IMPACT.esp'
@@ -1719,12 +1719,12 @@ plugins:
   - name: 'Equipment Restoration Project - WRP.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
     after:
-	  - '357retex.esp'
-	  - 'christinecos.esp'
-	  - 'GRA WRP Compatibility Patch.esp'
-	  - 'GRA WRP Compatibility Patch no Brush Gun.esp'
-	  - 'GRA-WRP-Patch-Two_Unofficial.esp'
-	  - 'singleshot_retex.esp'
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
