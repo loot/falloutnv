@@ -716,7 +716,6 @@ plugins:
       - Scripts
   - name: 'jsawyer.esp'
     url: [ 'http://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
-    priority: -400800000
     inc:
       - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
@@ -751,8 +750,6 @@ plugins:
     after:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
-  - name: 'JSawyer - TTW.esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/60665' ]
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
@@ -1678,6 +1675,56 @@ plugins:
   - name: 'Flight of the ValkED-E.esp'
     tag:
       - Sound
+  - name: 'Equipment Restoration Project.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    inc:
+      - 'WeaponModsExpanded.esp'
+      - 'Weapon Mod Expansion.esp'
+      - 'Weapon Mod Expansion.esm'
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
+  - name: 'Equipment Restoration Project - EVE.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+  - name: 'Equipment Restoration Project - IMPACT.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    after:
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+  - name: 'Equipment Restoration Project - JSawyer.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    after:
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+  - name: 'Equipment Restoration Project - Project Nevada.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    after:
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+  - name: 'Equipment Restoration Project - WRP.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
+    after:
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
