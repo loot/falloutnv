@@ -752,6 +752,12 @@ plugins:
     tag:
       - Names
   - name: 'New Vegas Redesigned.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
+    inc:
+      - 'New Vegas Redesigned II.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - Body-F
       - Body-M
@@ -759,12 +765,56 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'New Vegas Redesigned II.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - Body-F
       - Body-M
       - Eyes
       - Hair
       - NpcFaces
+  - name: 'TTW Redesigned.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
+    inc:
+      - 'Project Beauty.esm'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned II.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NPC.Race
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: 'Project Beauty.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
+    inc:
+      - 'TTW Redesigned.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NPC.Race
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
   - name: 'Lings.esm'
     tag:
       - Eyes
@@ -2770,22 +2820,44 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'NVR- Lore version.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
     inc:
       - 'NVR- Recommended.esp'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Recommended.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
     inc:
       - 'NVR- Lore version.esp'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'New Vegas redesigned- Honest Hearts.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'Voice dissonance fix.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
     tag:
       - NpcFaces
   - name: 'AWOPLowRobots.esp'
@@ -4380,6 +4452,11 @@ plugins:
         udr: 1
         nav: 0
   - name: 'New Vegas Redesigned 3.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56312' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned II.esm'
+      - 'TTW Redesigned.esm'
     dirty:
       - crc: 0xEB023707
         util: *dirtyUtil # FNVEdit 3.0.32
@@ -4397,6 +4474,11 @@ plugins:
       - NPC.Race
       - Relev
   - name: 'New Vegas Redesigned 3.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56312' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned II.esm'
+      - 'TTW Redesigned.esm'
     dirty:
       - crc: 0xFAF9F22E
         util: *dirtyUtil # FNVEdit 3.0.32
