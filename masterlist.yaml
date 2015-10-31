@@ -2702,6 +2702,14 @@ plugins:
     tag:
       - Actors.ACBS
       - NpcFaces
+  - name: 'FCO - NPC Changes.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
+    tag:
+      - Actors.ACBS
+      - Eyes
+      - Names
+      - NPC.Race
+      - NpcFaces
   - name: 'FCO.esp'
     tag:
       - Actors.ACBS
