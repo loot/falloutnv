@@ -4597,6 +4597,10 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
   - name: 'FNV RWL Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
     priority: 400990000
@@ -4635,6 +4639,10 @@ plugins:
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
     priority: 400990000
