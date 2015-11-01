@@ -187,7 +187,6 @@ plugins:
       - Delev
       - Destructible
       - Factions
-      - Graphics
       - Invent
       - Names
       - NPC.Class
