@@ -4517,6 +4517,12 @@ plugins:
     tag:
       - Delev
       - Graphics
+  - name: 'FNVLODGen.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
+    priority: 400980000
+  - name: 'TTWLODGen.esp'
+    url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
+    priority: 400980000
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     priority: 400990000
