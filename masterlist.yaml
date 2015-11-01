@@ -510,6 +510,16 @@ plugins:
       - Names
       - NpcFaces
       - Stats
+  - name: 'StreetLights.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-street-lights' ]
+    inc:
+      - 'ELECTRO-CITY - CompletedWorkorders.esm'
+      - 'SimpleStreetLights.esp'
+      - 'SimpleStreetLights (Extra Lights).esp'
+    tag:
+      - Graphics
+      - Scripts
+      - Stats
   - name: 'CINEMATECH.esm'
     req:
       - *NVSE
