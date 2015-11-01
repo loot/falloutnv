@@ -3646,10 +3646,14 @@ plugins:
     inc:
       - 'SimpleStreetLights.esp'
   - name: 'Vurt''s Trees & Grass.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
   - name: 'Vurt''s WFO.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     inc:
       - 'Vurt''s Trees & Grass.esp'
+    after:
+      - 'Flora Overhaul.esp'
     dirty:
       - util: *dirtyUtil
         crc: 0x31b1b874
@@ -3661,6 +3665,7 @@ plugins:
       - type: warn
         content: 'Do not clean UDR records from this mod, otherwise, the game will crash on startup.'
   - name: 'Vurt''s WFO [Lite].esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     inc:
       - 'Vurt''s WFO.esp'
   - name: 'DN More Lights.esp'
