@@ -187,7 +187,6 @@ plugins:
       - Delev
       - Destructible
       - Factions
-      - Graphics
       - Invent
       - Names
       - NPC.Class
@@ -509,6 +508,16 @@ plugins:
       - Invent
       - Names
       - NpcFaces
+      - Stats
+  - name: 'StreetLights.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-street-lights' ]
+    inc:
+      - 'ELECTRO-CITY - CompletedWorkorders.esm'
+      - 'SimpleStreetLights.esp'
+      - 'SimpleStreetLights (Extra Lights).esp'
+    tag:
+      - Graphics
+      - Scripts
       - Stats
   - name: 'CINEMATECH.esm'
     req:
@@ -3646,10 +3655,14 @@ plugins:
     inc:
       - 'SimpleStreetLights.esp'
   - name: 'Vurt''s Trees & Grass.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
   - name: 'Vurt''s WFO.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     inc:
       - 'Vurt''s Trees & Grass.esp'
+    after:
+      - 'Flora Overhaul.esp'
     dirty:
       - util: *dirtyUtil
         crc: 0x31b1b874
@@ -3661,6 +3674,7 @@ plugins:
       - type: warn
         content: 'Do not clean UDR records from this mod, otherwise, the game will crash on startup.'
   - name: 'Vurt''s WFO [Lite].esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/39856' ]
     inc:
       - 'Vurt''s WFO.esp'
   - name: 'DN More Lights.esp'
@@ -4502,6 +4516,12 @@ plugins:
     tag:
       - Delev
       - Graphics
+  - name: 'FNVLODGen.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
+    priority: 400980000
+  - name: 'TTWLODGen.esp'
+    url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
+    priority: 400980000
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     priority: 400990000
@@ -4582,6 +4602,10 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
   - name: 'FNV RWL Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
     priority: 400990000
@@ -4620,6 +4644,10 @@ plugins:
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
     priority: 400990000
