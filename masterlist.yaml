@@ -4015,6 +4015,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
       - 'FNV RWL Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
@@ -4026,6 +4027,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV RWL Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
@@ -4033,6 +4035,20 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
     priority: 400990000
     inc:
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    after:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+    msg: [ *obsolete ]
+  - name: 'FNV Realistic Wasteland Lighting Darker Nights.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV RWL Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
       - 'TTW Realistic Wasteland Lighting.esp'
