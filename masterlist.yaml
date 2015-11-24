@@ -4628,7 +4628,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
     msg: [ *obsolete ]
-  - name: 'FNV Realistic Wasteland Lighting Darker Nights.esp'
+  - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
     priority: 400990000
     inc:
