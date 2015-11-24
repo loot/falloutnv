@@ -406,9 +406,9 @@ plugins:
       - 'Project Nevada - Core.esm'
       - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     after:
       - 'ProjectBrazil.esm'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Actors.ACBS
       - Eyes
@@ -4572,6 +4572,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
       - 'FNV RWL Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
@@ -4585,6 +4586,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV RWL Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
@@ -4610,6 +4612,22 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
     priority: 400990000
     inc:
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    after:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+    msg: [ *obsolete ]
+  - name: 'FNV Realistic Wasteland Lighting Darker Nights.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
+    priority: 400990000
+    inc:
+      - 'FNV RWL Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
