@@ -57,7 +57,7 @@ globals:
         str: '[최신 LOOT 스레드](%1%).'
       - lang: zh_CN
         str: '[最新的LOOT版本](%1%)。'
-    subs: [ 'http://forums.bethsoft.com/topic/1557786-rel-loot-thread-21/' ]
+    subs: [ 'http://forums.bethsoft.com/topic/1588424-rel-loot-thread-22/' ]
 
 plugins:
   - name: 'DeadMoney.esm'
