@@ -44,11 +44,11 @@ globals:
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Latest LOOT thread](https://loot.github.io/latest-thread/).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Обсуждение LOOT "(Eng)"](https://loot.github.io/latest-thread/).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Forum de LOOT](https://loot.github.io/latest-thread/).'
 
 plugins:
   - name: 'DeadMoney.esm'
