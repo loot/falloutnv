@@ -2577,8 +2577,6 @@ plugins:
   - name: 'BlackWolf Backpack.esp'
     inc:
       - 'QS_Blackwolf_NV_Backpackmod.esp'
-    req:
-      - 'BlackWolf Backpack - Vendor Script Replenish.esp'
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
     req:
       - 'BlackWolf Backpack.esp'
