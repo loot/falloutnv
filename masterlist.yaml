@@ -884,6 +884,9 @@ plugins:
       - NPC.Class
       - NPC.Race
       - Scripts
+  - name: 'TTW Perks and Home Markers.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    priority: -400800000
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     priority: -400800000
@@ -996,6 +999,12 @@ plugins:
       - 'TTW_StartupMenu.esp'
       - 'TTW_StashPackOptions.esp'
       - 'TTW_WildWasteland.esp'
+  - name: 'ttwadvertitronradioshownfix.esp'
+    priority: -900000
+  - name: 'ttw_-_cut_item_stats.esp'
+    priority: -900000
+    tag:
+      - Stats
   - name: 'jsawyer.esp'
     url: [ 'http://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
@@ -2023,10 +2032,6 @@ plugins:
       - Graphics
   - name: 'Equipment Restoration Project.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/43875' ]
-    inc:
-      - 'WeaponModsExpanded.esp'
-      - 'Weapon Mod Expansion.esp'
-      - 'Weapon Mod Expansion.esm'
     tag:
       - Actors.Stats
       - Delev
@@ -2872,6 +2877,17 @@ plugins:
       - 'TTW Redesigned.esm'
     tag:
       - NpcFaces
+  - name: 'Destruction.esm'
+    url: [ 'https://taleoftwowastelands.com/content/destruction' ]
+    tag:
+      - C.Owner
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
   - name: 'AWOPLowRobots.esp'
     inc:
       - 'AWOPVeryLowRobots.esp'
@@ -4525,6 +4541,12 @@ plugins:
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
     priority: 400980000
+  - name: 'tmzLODadditions.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
+    priority: 400980000
+    after:
+      - 'FNVLODGen.esp'
+      - 'TTWLODGen.esp'
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     priority: 400990000
@@ -4693,12 +4715,50 @@ plugins:
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+  - name: 'FNV TTW RWLE - NVBII Patch.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59591' ]
+    after:
+      - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
+      - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
+  - name: '47 ENB Weather.esp'
+    url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
+    priority: 400990000
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Nevada Skies.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
+  - name: '47 ENB Weather - TTW Patch.esp'
+    url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
+    priority: 400990000
+    after:
+      - '47 ENB Weather.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
   - name: 'MergedPatch.esp'
     priority: 400991000
     tag:
       - NoMerge
   - name: 'FNVMerged.esp'
     priority: 400991000
+    tag:
+      - NoMerge
+  - name: 'Smashed Patch.esp'
+    priority: 400991000
+    after:
+      - TES5Merged.esp
     tag:
       - NoMerge
   - name: 'Bashed Patch, 0.esp'
