@@ -604,14 +604,22 @@ plugins:
   - name: 'NVInteriors_WastelandEditon.esm'
     inc:
       - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
   - name: 'NVInteriors_WastelandEditonAWOP.esm'
     inc:
       - 'NVInteriors_WastelandEditon.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
   - name: 'NVInteriors_ComboEdition.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
       - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
     tag:
       - Graphics
   - name: 'NVInteriors_ComboEdition_AWOP.esm'
@@ -619,6 +627,28 @@ plugins:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
       - 'NVInteriors_ComboEdition.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+  - name: 'TTWInteriorsProject_Combo.esm'
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+    tag:
+      - Invent
+      - Names
+  - name: 'TTWInteriorsProject_Combo_AWOP.esm'
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+    tag:
+      - Invent
+      - Names
   - name: 'Interior Lighting Overhaul - Core.esm'
     tag:
       - C.Climate
@@ -670,6 +700,14 @@ plugins:
     tag:
       - Actors.DeathItem
       - Invent
+      - Relev
+  - name: 'Project Nevada - TTW.esp'
+    url: [ 'https://taleoftwowastelands.com/content/project-nevada-w-extra-options-ttw-patch' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
       - Relev
   - name: 'Psiclones.esm'
     tag:
@@ -765,6 +803,16 @@ plugins:
       - 'nVamp - Core.esm'
     tag:
       - Names
+  - name: 'CFWTTW.esm'
+    url: [ 'https://taleoftwowastelands.com/content/classic-fallout-weapons-ttw' ]
+    inc:
+      - 'CFWNV.esp'
+      - 'CFWNV-DLC.esp'
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Relev
   - name: 'New Vegas Redesigned.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39218' ]
     inc:
@@ -800,18 +848,9 @@ plugins:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
+      - Factions
+      - Invent
+      - Names
   - name: 'Project Beauty.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
     inc:
@@ -829,6 +868,22 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
+  - name: "Mart's Mutant Mod.esm"
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'MMM_NV.esp'
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
   - name: 'Lings.esm'
     tag:
       - Eyes
@@ -1097,6 +1152,40 @@ plugins:
       - NpcFaces
       - Scripts
       - Stats
+  - name: 'JSawyer Ultimate.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/61592' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'JSawyer Ultimate - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/61592' ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Relev
+  - name: "Gun Runners' Arsenal Disabled.esp"
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59615' ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+  - name: "Gun Runners' Arsenal Disabled - TTW.esp"
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59615' ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+  - name: 'NewVegasUncut.esm'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
@@ -2116,25 +2205,19 @@ plugins:
       - 'singleshot_retex.esp'
   - name: 'Power Armor Distribution Overhaul.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
-    inc:
-      - 'boa ncrpahelmet.esp'
-      - 'Boacombat2glove.esp'
     tag:
-      - Actors.ACBS
-      - Delev
-      - Graphics
       - Invent
       - Names
-      - Relev
-      - Stats
-  - name: 'Power Armor Distribution Overhaul - Book of Steel.esp'
+    after:
+      - 'Equipment Restoration Project.esp'
+      - 'Equipment Restoration Project - TTW.esp'
+  - name: 'Power Armor Distribution Overhaul - TTW.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
-    inc:
-      - 'boa ncrpahelmet.esp'
-      - 'Boacombat2glove.esp'
     tag:
-      - Graphics
+      - Delev
+      - Factions
       - Invent
+      - Names
   - name: 'Power Armor Distribution Overhaul - JSawyer.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
     tag:
@@ -4486,6 +4569,8 @@ plugins:
         nav: 0
   - name: 'New Vegas Redesigned 3.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/56312' ]
+    after:
+      - 'Project Beauty.esm'
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
