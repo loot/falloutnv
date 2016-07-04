@@ -1060,6 +1060,42 @@ plugins:
     priority: -900000
     tag:
       - Stats
+  - name: 'YUP - Gameplay Tweaks.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
+    priority: -890000
+    after:
+      - 'TTW Perks and Home Markers.esp'
+      - 'TTWOptions.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - Actors.Stats
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - Scripts
+      - Stats
+  - name: 'YUP - Gameplay Tweaks - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
+    priority: -890000
+    after:
+      - 'TTW Perks and Home Markers.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.CombatStyle
+      - Actors.Stats
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
   - name: 'jsawyer.esp'
     url: [ 'http://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
