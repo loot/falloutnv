@@ -36,6 +36,11 @@ common:
 # Other Strings
   - &dirtyUtil '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
 
+bash_tags:
+  - 'Deflst'
+  - 'Destructible'
+  - 'WeaponMods'
+
 globals:
   - type: say
     content:
