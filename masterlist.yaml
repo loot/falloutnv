@@ -873,7 +873,7 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: "Mart's Mutant Mod.esm"
+  - name: 'Mart''s Mutant Mod.esm'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
     tag:
       - Delev
@@ -1208,13 +1208,13 @@ plugins:
       - Invent
       - Names
       - Relev
-  - name: "Gun Runners' Arsenal Disabled.esp"
+  - name: 'Gun Runners'' Arsenal Disabled.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59615' ]
     tag:
       - Delev
       - Invent
       - Names
-  - name: "Gun Runners' Arsenal Disabled - TTW.esp"
+  - name: 'Gun Runners'' Arsenal Disabled - TTW.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59615' ]
     tag:
       - Delev
