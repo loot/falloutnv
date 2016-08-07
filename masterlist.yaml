@@ -1,10 +1,10 @@
 common:
 # Files
   - &NVSE
-    name: '..\nvse_loader.exe'
+    name: '../nvse_loader.exe'
     display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
-    name: 'NVSE\Plugins\MCM.dll'
+    name: 'NVSE/Plugins/MCM.dll'
     display: '[MCM](http://www.nexusmods.com/newvegas/mods/42507)'
 # Messages
   - &updateToNVCE
@@ -17,24 +17,25 @@ common:
     type: say
     content:
       - lang: en
-        str: 'Obsolete. Update to latest version.'
+        text: 'Obsolete. Update to latest version.'
       - lang: ru
-        str: 'Устарело. Обновите до последней версии.'
+        text: 'Устарело. Обновите до последней версии.'
       - lang: es
-        str: 'Obsoleto. Actualizar a la última versión.'
+        text: 'Obsoleto. Actualizar a la última versión.'
       - lang: ko
-        str: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
+        text: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
       - lang: zh_CN
-        str: '已过时。请升级到最新版本。'
+        text: '已过时。请升级到最新版本。'
   - &incMaxLevelMods
     type: say
     content: 'Incompatible with Other mods that change the max level.'
   - &incWeatherImageSpace
     type: say
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
-
-# Other Strings
-  - &dirtyUtil '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
+# Cleaning data
+  - &dirtyPlugin
+    utility: '[TES5Edit](http://www.nexusmods.com/skyrim/mods/25859)'
+    info: 'A cleaning guide is available [here](http://www.creationkit.com/index.php?title=TES5Edit_Cleaning_Guide_-_TES5Edit).'
 
 bash_tags:
   - 'Deflst'
@@ -45,28 +46,28 @@ globals:
   - type: say
     content:
       - lang: en
-        str: 'A [new release](%1%) of LOOT is available.'
+        text: 'A [new release](%1%) of LOOT is available.'
       - lang: zh_CN
-        str: '一个[新版本](%1%)的LOOT已发布。'
+        text: '一个[新版本](%1%)的LOOT已发布。'
     subs: [ 'https://github.com/loot/loot/releases/latest' ]
     condition: 'version("LOOT", "0.9.2.0", <)'
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](%1%).'
+        text: '[Latest LOOT thread](%1%).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](%1%).'
+        text: '[Обсуждение LOOT "(Eng)"](%1%).'
       - lang: es
-        str: '[Forum de LOOT](%1%).'
+        text: '[Forum de LOOT](%1%).'
       - lang: ko
-        str: '[최신 LOOT 스레드](%1%).'
+        text: '[최신 LOOT 스레드](%1%).'
       - lang: zh_CN
-        str: '[最新的LOOT版本](%1%)。'
+        text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
 plugins:
   - name: 'DeadMoney.esm'
-    priority: -400999000
+    global_priority: -125
     tag:
       - Actors.Stats
       - Graphics
@@ -74,12 +75,12 @@ plugins:
       - Names
       - Stats
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0xd70f165b
         itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
-    priority: -400999000
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
     tag:
@@ -88,12 +89,12 @@ plugins:
       - Names
       - Sound
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x2352b189
         itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
-    priority: -400999000
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -104,11 +105,11 @@ plugins:
       - Sound
       - Stats
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x7f8f8225
         itm: 124
   - name: 'LonesomeRoad.esm'
-    priority: -400999000
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -116,12 +117,12 @@ plugins:
     tag:
       - Stats
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x30073d50
         itm: 240
         udr: 6
   - name: 'GunRunnersArsenal.esm'
-    priority: -400999000
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -132,11 +133,11 @@ plugins:
       - Graphics
       - Invent
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0xaac938d
         itm: 97
   - name: 'ClassicPack.esm'
-    priority: -400998990
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -144,7 +145,7 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
   - name: 'MercenaryPack.esm'
-    priority: -400998980
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -153,7 +154,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
-    priority: -400998970
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -163,7 +164,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'CaravanPack.esm'
-    priority: -400998960
+    global_priority: -125
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -179,7 +180,7 @@ plugins:
       - Invent
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
@@ -209,10 +210,10 @@ plugins:
       - WeaponMods
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     after:
       - 'Anchorage.esm'
     tag:
@@ -221,7 +222,7 @@ plugins:
       - Relations
   - name: 'BrokenSteel.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -241,7 +242,7 @@ plugins:
       - Stats
   - name: 'PointLookout.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -252,7 +253,7 @@ plugins:
       - Stats
   - name: 'Zeta.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -260,7 +261,7 @@ plugins:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    priority: -400998000
+    global_priority: -120
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -299,7 +300,7 @@ plugins:
       - 'Zeta.esm'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-215-official-bugfix-pack-ttw' ]
-    priority: -400998000
+    global_priority: -120
     inc:
       - 'YUP - Base Game + All DLC.esm'
     after:
@@ -343,7 +344,7 @@ plugins:
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    priority: -400998000
+    global_priority: -120
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -502,7 +503,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0x38c75b04
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 7
         udr: 0
         nav: 0
@@ -698,7 +699,7 @@ plugins:
     tag:
       - Relev
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0xe0e2c3c0
         itm: 22
   - name: 'Project Nevada - All DLC.esp'
@@ -910,7 +911,7 @@ plugins:
       - Names
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    priority: -400900000
+    global_priority: -115
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -928,7 +929,7 @@ plugins:
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    priority: -400900000
+    global_priority: -115
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -946,23 +947,23 @@ plugins:
       - Scripts
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Names
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
   - name: 'TTW_NoKarmaDCFollowers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
   - name: 'TTW_OutcastTrading.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -972,7 +973,7 @@ plugins:
       - 'TTW_NoKarmaDCFollowers.esp'
   - name: 'TTW_Reputation.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Actors.Stats
       - Factions
@@ -986,7 +987,7 @@ plugins:
       - 'TTW_OutcastTrading.esp'
   - name: 'TTW_SpeechChecks.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Names
     after:
@@ -997,7 +998,7 @@ plugins:
       - 'TTW_Reputation.esp'
   - name: 'TTW Anchorage Customization - Speech Checks.esp'
     url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
-    priority: -400800000
+    global_priority: -100
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1007,7 +1008,7 @@ plugins:
       - 'TTW_SpeechChecks.esp'
   - name: 'TTW_StartupMenu.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Names
     after:
@@ -1020,7 +1021,7 @@ plugins:
       - 'TTW Anchorage Customization - Speech Checks.esp'
   - name: 'TTW_StashPackOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1032,7 +1033,7 @@ plugins:
       - 'TTW_StartupMenu.esp'
   - name: 'TTW_WildWasteland.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1045,7 +1046,7 @@ plugins:
       - 'TTW_StashPackOptions.esp'
   - name: 'TTWOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    priority: -400800000
+    global_priority: -100
     tag:
       - Names
     after:
@@ -1060,14 +1061,14 @@ plugins:
       - 'TTW_StashPackOptions.esp'
       - 'TTW_WildWasteland.esp'
   - name: 'ttwadvertitronradioshownfix.esp'
-    priority: -900000
+    priority: -115
   - name: 'ttw_-_cut_item_stats.esp'
-    priority: -900000
+    priority: -115
     tag:
       - Stats
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
-    priority: -890000
+    priority: -110
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
@@ -1087,7 +1088,7 @@ plugins:
       - Stats
   - name: 'YUP - Gameplay Tweaks - TTW.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
-    priority: -890000
+    priority: -110
     after:
       - 'TTW Perks and Home Markers.esp'
     tag:
@@ -1714,7 +1715,7 @@ plugins:
       - 'populatedcasino-light.esp'
     dirty:
       - crc: 0x9EAE96FF
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 48
         udr: 2
         nav: 0
@@ -1726,7 +1727,7 @@ plugins:
       - 'populatedcasino-light.esp'
     dirty:
       - crc: 0x39574E5A
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 47
         udr: 8
         nav: 0
@@ -1738,7 +1739,7 @@ plugins:
       - 'populatedcasino-medium.esp'
     dirty:
       - crc: 0xC7507F30
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 46
         udr: 16
         nav: 0
@@ -2137,7 +2138,7 @@ plugins:
   - name: 'Project Nevada Rebalance Complete.esp'
     dirty:
       - crc: 0xE0E2C3C0
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 22
         udr: 0
         nav: 0
@@ -2310,7 +2311,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0xed3d7bb3
-        util: *dirtyUtil
+        <<: *dirtyPlugin
         itm: 9
   - name: 'awilderwastelandnobenny.esp'
     inc:
@@ -2723,7 +2724,7 @@ plugins:
     msg:
       - type: say
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
-        condition: 'regex("nVamp.*\.esp")'
+        condition: 'file("nVamp.*\.esp")'
   - name: 'FlashlightNVSE.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39968' ]
     inc:
@@ -2910,7 +2911,7 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0xa03db8ae
         itm: 1
     tag:
@@ -2928,7 +2929,7 @@ plugins:
       - NPC.Race
       - NpcFaces
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x15a3bcc8
         itm: 18
   - name: 'FCO - Willow.esp'
@@ -2946,7 +2947,7 @@ plugins:
       - Scripts
     dirty:
       - crc: 0x0E746E1D
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
@@ -3807,10 +3808,10 @@ plugins:
     after:
       - 'Flora Overhaul.esp'
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x31b1b874
         itm: 377
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x71755f08
         itm: 356
     msg:
@@ -3921,7 +3922,7 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
     dirty:
       - crc: 0xD6B9E659
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 4
         udr: 0
         nav: 0
@@ -4053,7 +4054,7 @@ plugins:
       - C.Owner
     dirty:
       - crc: 0xE5B86A01
-        util: *dirtyUtil # FNVEdit 3.0.33
+        <<: *dirtyPlugin # FNVEdit 3.0.33
         itm: 7
         udr: 0
         nav: 0
@@ -4299,7 +4300,7 @@ plugins:
       - Relations
     dirty:
       - crc: 0x11d6afea # v1.47
-        util: *dirtyUtil
+        <<: *dirtyPlugin
         itm: 0
         udr: 0
         nav: 2
@@ -4328,7 +4329,7 @@ plugins:
     after: [ 'GRARG.esp' ]
     dirty:
       - crc: 0xB5824C7A
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 8
         udr: 0
         nav: 0
@@ -4339,12 +4340,12 @@ plugins:
     tag:
       - Actors.Skeleton
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x8ab4f125
         itm: 15
   - name: 'Tales from the Burning Sands.esm'
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x35f7bae7
         itm: 17
     tag:
@@ -4356,7 +4357,7 @@ plugins:
     tag:
       - Actors.AIPackages
     dirty:
-      - util: *dirtyUtil
+      - <<: *dirtyPlugin
         crc: 0x026ab27d
         itm: 1
   - name: 'kochandbohr.esp'
@@ -4373,7 +4374,7 @@ plugins:
       - Graphics
     dirty:
       - crc: 0x8162C3BA
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
@@ -4401,7 +4402,7 @@ plugins:
       - Scripts
     dirty:
       - crc: 0xCC32F754
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 10
         udr: 0
         nav: 0
@@ -4442,7 +4443,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0xbddf839b
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 6
         udr: 0
         nav: 0
@@ -4462,7 +4463,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0x40b5e4bc
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 4
         udr: 0
         nav: 0
@@ -4473,7 +4474,7 @@ plugins:
       - Scripts
     dirty:
       - crc: 0x793d7342
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
@@ -4521,7 +4522,7 @@ plugins:
       - Invent
     dirty:
       - crc: 0xb0a1b1bb
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 6
         udr: 0
         nav: 0
@@ -4534,7 +4535,7 @@ plugins:
       - Invent
     dirty:
       - crc: 0x3abe494e
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 4
         udr: 0
         nav: 0
@@ -4545,7 +4546,7 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/47746' ]
     dirty:
       - crc: 0xD1257BC7
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
@@ -4553,7 +4554,7 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
       - crc: 0x1E04D898
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 10
         udr: 0
         nav: 0
@@ -4565,7 +4566,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0xE0D9629C
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1
         udr: 0
         nav: 0
@@ -4575,7 +4576,7 @@ plugins:
       - Relations
     dirty:
       - crc: 0x71715D56
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 0
         udr: 2
         nav: 4
@@ -4593,7 +4594,7 @@ plugins:
       - C.LTemplate
     dirty:
       - crc: 0xD7D915C3
-        util: *dirtyUtil # FNVEdit 3.0.33
+        <<: *dirtyPlugin # FNVEdit 3.0.33
         itm: 1
         udr: 0
         nav: 0
@@ -4604,7 +4605,7 @@ plugins:
       - C.LTemplate
     dirty:
       - crc: 0x8E8F65E5
-        util: *dirtyUtil # FNVEdit 3.0.33
+        <<: *dirtyPlugin # FNVEdit 3.0.33
         itm: 7
         udr: 1
         nav: 0
@@ -4618,7 +4619,7 @@ plugins:
       - 'TTW Redesigned.esm'
     dirty:
       - crc: 0xEB023707
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 93
         udr: 73
         nav: 0
@@ -4640,7 +4641,7 @@ plugins:
       - 'TTW Redesigned.esm'
     dirty:
       - crc: 0xFAF9F22E
-        util: *dirtyUtil # FNVEdit 3.0.32
+        <<: *dirtyPlugin # FNVEdit 3.0.32
         itm: 1018
         udr: 74
         nav: 0
@@ -4663,37 +4664,37 @@ plugins:
       - Graphics
   - name: 'FNVLODGen.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
-    priority: 400980000
+    global_priority: 115
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
-    priority: 400980000
+    global_priority: 115
   - name: 'tmzLODadditions.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
-    priority: 400980000
+    global_priority: 115
     after:
       - 'FNVLODGen.esp'
       - 'TTWLODGen.esp'
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - Basic Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'NevadaSkies - Ultimate DLC Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - TTW Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - Ultimate DLC Edition.esp'
   - name: 'FNV Realistic Wasteland Lighting - Full.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4705,7 +4706,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4717,7 +4718,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - Full.esp'
@@ -4731,7 +4732,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4745,7 +4746,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - Enhanced.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59591' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4761,7 +4762,7 @@ plugins:
       - Sound
   - name: 'FNV RWL Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
@@ -4776,7 +4777,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV RWL Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4791,7 +4792,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
   - name: 'TTW Realistic Wasteland Lighting.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4803,7 +4804,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - Enhanced.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59591' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4819,7 +4820,7 @@ plugins:
       - Sound
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4831,7 +4832,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4848,7 +4849,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
   - name: '47 ENB Weather.esp'
     url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    priority: 400990000
+    global_priority: 120
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -4866,7 +4867,7 @@ plugins:
       - Sound
   - name: '47 ENB Weather - TTW Patch.esp'
     url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    priority: 400990000
+    global_priority: 120
     after:
       - '47 ENB Weather.esp'
     tag:
@@ -4874,34 +4875,34 @@ plugins:
       - C.Water
       - Sound
   - name: 'MergedPatch.esp'
-    priority: 400991000
+    global_priority: 125
     tag:
       - NoMerge
   - name: 'FNVMerged.esp'
-    priority: 400991000
+    global_priority: 125
     tag:
       - NoMerge
   - name: 'Smashed Patch.esp'
-    priority: 400991000
+    global_priority: 125
     after:
       - TES5Merged.esp
     tag:
       - NoMerge
   - name: 'Bashed Patch, 0.esp'
-    priority: 400991000
+    global_priority: 125
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
   - name: 'Fix the lights and Crap be gone.esp'
     dirty:
       - crc: 0xB5671CA9
-        util: *dirtyUtil
+        <<: *dirtyPlugin
         itm: 8
         udr: 54166
     url: [ '' ]
   - name: 'SupahWeapons.esp'
     dirty:
       - crc: 0xEC7F4960
-        util: *dirtyUtil
+        <<: *dirtyPlugin
         itm: 15
         udr: 8226
