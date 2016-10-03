@@ -1,7 +1,7 @@
 common:
 # Files
   - &NVSE
-    name: '..\nvse_loader.exe'
+    name: '..\nvse_1_4.dll'
     display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
     name: 'NVSE\Plugins\MCM.dll'
