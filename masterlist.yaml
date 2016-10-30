@@ -34,7 +34,7 @@ common:
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
 # Cleaning data
   - &dirtyPlugin
-    utility: '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
+    util: '[FNVEdit](http://www.nexusmods.com/newvegas/mods/34703)'
     info: ''
 
 bash_tags:
