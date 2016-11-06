@@ -1,7 +1,7 @@
 common:
 # Files
   - &NVSE
-    name: '../nvse_loader.exe'
+    name: '../nvse_1_4.dll'
     display: '[NVSE](http://nvse.silverlock.org/)'
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
@@ -487,11 +487,13 @@ plugins:
     req: [ *NVSE ]
   - name: 'Caliber.esm'
     tag:
-      - Delev
+      - Actors.ACBS
+      - Actors.Stats
       - Graphics
       - Invent
       - Names
       - Relev
+      - Scripts
       - Stats
     dirty:
       - crc: 0x38c75b04
@@ -882,6 +884,15 @@ plugins:
       - Invent
       - Names
       - Relev
+  - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
+    priority: 1990000
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.DeathItem
+      - Graphics
+      - Scripts
   - name: 'Lings.esm'
     tag:
       - Eyes
@@ -1068,8 +1079,12 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Skeleton
       - Actors.Stats
+      - C.Owner
+      - Delev
       - Destructible
       - Factions
       - Graphics
@@ -1077,16 +1092,19 @@ plugins:
       - Names
       - NPC.Class
       - Scripts
+      - Sound
       - Stats
   - name: 'YUP - Gameplay Tweaks - TTW.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
     priority: -110
     after:
       - 'TTW Perks and Home Markers.esp'
+      - 'TTWOptions.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
       - Actors.CombatStyle
+      - Actors.Skeleton
       - Actors.Stats
       - Graphics
       - Invent
@@ -2240,18 +2258,46 @@ plugins:
   - name: 'Power Armor Distribution Overhaul.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
     tag:
-      - Invent
-      - Names
-    after:
-      - 'Equipment Restoration Project.esp'
-      - 'Equipment Restoration Project - TTW.esp'
-  - name: 'Power Armor Distribution Overhaul - TTW.esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
-    tag:
-      - Delev
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Stats
       - Factions
       - Invent
       - Names
+      - Scripts
+    after:
+      - 'Equipment Restoration Project.esp'
+      - 'Equipment Restoration Project - TTW.esp'
+      - 'TTW MMM + EVE.esp'
+  - name: 'Power Armor Distribution Overhaul - TTW.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Skeleton
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - Stats
+  - name: 'Power Armor Distribution Overhaul - MMM.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Actors.Stats
+      - Factions
+      - Scripts
+  - name: 'Power Armor Distribution Overhaul - NVCE.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent
+      - NPC.Class
+      - NpcFaces
   - name: 'Power Armor Distribution Overhaul - JSawyer.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
     tag:
@@ -2260,10 +2306,17 @@ plugins:
     url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
     tag:
       - Invent
+  - name: 'Power Armor Distribution Overhaul - Unoctium.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/59677' ]
+    tag:
+      - Graphics
   - name: 'TTW-WEP.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
     tag:
       - Graphics
+  - name: 'Improved Sound FX.esp'
+    tag:
+      - Sound
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
     tag:
       - Sound
