@@ -1233,11 +1233,15 @@ plugins:
       - Names
   - name: 'NewVegasUncut.esm'
     url: [ 'https://github.com/Uncut/Uncut' ]
+    global_priority: -70
     tag:
       - Delev
       - Factions
       - Invent
       - Names
+  - name: 'NewVegasUncut - TTW.esm'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    global_priority: -70
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
@@ -4031,67 +4035,169 @@ plugins:
       - type: say
         content: 'No longer supported by the mod. Can still be used.'
   - name: 'Interior Lighting Overhaul-Realistic.esp'
+    global_priority: 50
     msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
+    global_priority: 50
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
+    global_priority: 50
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    global_priority: 50
+    inc:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    global_priority: 50
+    inc:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul.esp'
+    global_priority: 50
     msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'ILO - Fallout New Vegas.esp'
+    global_priority: 50
+    inc:
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
+    global_priority: 50
     inc:
       - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - GS Shack.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Original Lucky38 Suite.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Dead Money.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Dead Money.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Honest Hearts.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Honest Hearts.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Old World Blues.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Old World Blues.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Lonesome Road.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Lonesome Road.esp'
+    global_priority: 50
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO-RI-Rust Town.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.ImageSpace
       - C.Light
@@ -4104,14 +4210,46 @@ plugins:
         udr: 0
         nav: 0
   - name: 'ILO - NVInteriors Project - AWOP.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
   - name: 'ILO - Project Reality Patch.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Climate
   - name: 'Interior Lighting Overhaul-Darker.esp'
+    global_priority: 50
     msg: [ *obsolete ]
   - name: 'ILO - A World of Pain.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.Light
+  - name: 'ILO - Tale of Two Wastelands.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.Light
+  - name: 'TTW - Realistic Interior Lighting.esp'
+    global_priority: 50
     tag:
       - C.Light
   - name: 'DYNAVISION - Dynamic Lens Effect.esp'
@@ -4340,6 +4478,7 @@ plugins:
     inc:
       - 'Shotgun Commando.esp'
   - name: 'NewVegasBountiesII.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/41184' ]
     after: [ NewVegasBounties.esp ]
     tag:
       - Relations
@@ -4349,6 +4488,207 @@ plugins:
         itm: 0
         udr: 0
         nav: 2
+  - name: 'TheInheritance.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/49012' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+    tag:
+      - Relations
+    dirty:
+      - crc: 0x71715D56
+        <<: *dirtyPlugin # FNVEdit 3.0.32
+        itm: 0
+        udr: 2
+        nav: 4
+  - name: 'Russell.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/50107' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+  - name: 'KingOfTheRing.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56353' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+  - name: 'NewVegasKiller.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56408' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+  - name: 'Badmothafucka.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/56742' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+  - name: 'NewVegasBountiesIII.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/55744' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+  - name: 'TheBetterAngels.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60837' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+  - name: 'CheckpointGary.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/60877' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+  - name: 'NewVegasUncut - New Vegas Bounties.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+  - name: 'NewVegasUncut - New Vegas Bounties II.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+  - name: 'NewVegasUncut - Inheritance.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+      - 'NewVegasUncut - New Vegas Bounties II.esp'
+  - name: 'NewVegasUncut - Russell.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+      - 'NewVegasUncut - New Vegas Bounties II.esp'
+      - 'NewVegasUncut - Inheritance.esp'
+  - name: 'NewVegasUncut - NewVegasKiller.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+      - 'NewVegasUncut - New Vegas Bounties II.esp'
+      - 'NewVegasUncut - Inheritance.esp'
+      - 'NewVegasUncut - Russell.esp'
+  - name: 'NewVegasUncut - NewVegasBountiesIII.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - Someguy Series.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+      - 'NewVegasUncut - New Vegas Bounties II.esp'
+      - 'NewVegasUncut - Inheritance.esp'
+      - 'NewVegasUncut - Russell.esp'
+      - 'NewVegasUncut - NewVegasKiller.esp'
+  - name: 'NewVegasUncut - Someguy Series.esp'
+    url: [ 'https://github.com/Uncut/Uncut' ]
+    inc:
+      - 'NewVegasUncut - New Vegas Bounties.esp'
+      - 'NewVegasUncut - New Vegas Bounties II.esp'
+      - 'NewVegasUncut - Inheritance.esp'
+      - 'NewVegasUncut - Russell.esp'
+      - 'NewVegasUncut - NewVegasKiller.esp'
+      - 'NewVegasUncut - NewVegasBountiesIII.esp'
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+      - 'CheckpointGary.esp'
   - name: 'KFE - Refill Water Bottles.esp'
     tag:
       - Scripts
@@ -4466,6 +4806,12 @@ plugins:
     tag:
       - Graphics
   - name: 'ILO - D.E.I.M.O.S.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.ImageSpace
       - C.Light
@@ -4615,16 +4961,6 @@ plugins:
         itm: 1
         udr: 0
         nav: 0
-  - name: 'TheInheritance.esp'
-    url: [ 'http://www.nexusmods.com/newvegas/mods/49012' ]
-    tag:
-      - Relations
-    dirty:
-      - crc: 0x71715D56
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 0
-        udr: 2
-        nav: 4
   - name: 'REPCONN Test Site Fixes.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/41114']
     tag:
@@ -4633,6 +4969,12 @@ plugins:
       - Factions
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.ImageSpace
       - C.Light
@@ -4644,6 +4986,12 @@ plugins:
         udr: 0
         nav: 0
   - name: 'ILO - New Vegas Bounties II.esp'
+    global_priority: 50
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.ImageSpace
       - C.Light
