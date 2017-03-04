@@ -5301,7 +5301,7 @@ plugins:
         udr: 8226
   - name: 'ExplosivesImmunityFix.esp'
     dirty:
-      - crc: 0x026ab27d
+      - crc: 0xEC0F1920
         <<: *dirtyPlugin
         itm: 1
         udr: 0
