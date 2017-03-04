@@ -309,6 +309,7 @@ plugins:
       - Deflst
       - Delev
       - Destructible
+      - Eyes
       - Factions
       - Graphics
       - Hair
@@ -349,13 +350,17 @@ plugins:
       - 'TribalPack.esm'
     tag:
       - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
       - Actors.DeathItem
-      - C.Light
+      - Actors.Stats
+      - C.Acoustic
       - C.Owner
-      - C.Water
       - Deflst
       - Delev
       - Destructible
+      - Eyes
       - Factions
       - Graphics
       - Hair
@@ -365,9 +370,7 @@ plugins:
       - Relev
       - Scripts
       - Sound
-      - SpellStats
       - Stats
-      - WeaponMods
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
     tag:
@@ -937,16 +940,12 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
-      - Actors.CombatStyle
       - Actors.DeathItem
       - Actors.Stats
       - Delev
       - Factions
       - Invent
-      - Names
       - NpcFaces
-      - NPC.Class
-      - NPC.Race
       - Scripts
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
@@ -4778,7 +4777,6 @@ plugins:
       - Graphics
   - name: 'Armor Replacer Child NPC Fix.esp'
     tag:
-      - Actors.ACBS
       - Invent
   - name: 'athornysituation.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/46048' ]
