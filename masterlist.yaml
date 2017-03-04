@@ -357,6 +357,7 @@ plugins:
       - Actors.Stats
       - C.Acoustic
       - C.Owner
+      - C.Water
       - Deflst
       - Delev
       - Destructible
@@ -4706,6 +4707,7 @@ plugins:
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
+      - Names
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
