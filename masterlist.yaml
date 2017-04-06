@@ -291,7 +291,7 @@ plugins:
       - 'PointLookout.esm'
       - 'Zeta.esm'
   - name: 'TTWfixes.esm'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-215-official-bugfix-pack-ttw' ]
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     global_priority: -90
     inc:
       - 'YUP - Base Game + All DLC.esm'
