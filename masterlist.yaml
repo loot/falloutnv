@@ -59,6 +59,7 @@ globals:
 
 plugins:
   - name: 'DeadMoney.esm'
+    url: [ 'http://store.steampowered.com/app/72730/']
     global_priority: -125
     tag:
       - Actors.Stats
@@ -72,6 +73,7 @@ plugins:
         itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
+    url: [ 'http://store.steampowered.com/app/72740/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -86,6 +88,7 @@ plugins:
         itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
+    url: [ 'http://store.steampowered.com/app/72750/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -101,6 +104,7 @@ plugins:
         crc: 0x7f8f8225
         itm: 124
   - name: 'LonesomeRoad.esm'
+    url: [ 'http://store.steampowered.com/app/72760/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -114,6 +118,7 @@ plugins:
         itm: 240
         udr: 6
   - name: 'GunRunnersArsenal.esm'
+    url: [ 'http://store.steampowered.com/app/72840/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -129,6 +134,7 @@ plugins:
         crc: 0xaac938d
         itm: 97
   - name: 'ClassicPack.esm'
+    url: [ 'http://store.steampowered.com/app/901778/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -137,6 +143,7 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
   - name: 'MercenaryPack.esm'
+    url: [ 'http://store.steampowered.com/app/901778/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -146,6 +153,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
+    url: [ 'http://store.steampowered.com/app/901778/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -156,6 +164,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
   - name: 'CaravanPack.esm'
+    url: [ 'http://store.steampowered.com/app/901778/']
     global_priority: -125
     after:
       - 'DeadMoney.esm'
@@ -1255,6 +1264,7 @@ plugins:
   - name: 'MM-LonesomeRoad.esp'
     msg: [ *updateToMMUE ]
   - name: 'Mission Mojave - Ultimate Edition.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/45104/' ]
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
@@ -1266,6 +1276,7 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE - Deutsch.esp'
+    url: [ 'https://modworkshop.net/mydownloads.php?action=view_down&did=1' ]
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
@@ -1279,7 +1290,16 @@ plugins:
       - Stats
   - name: 'MMUE+.esp'
     msg: [ *obsolete ]
+  - name: 'Mission Mojave - Ultimate Edition Plus.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/47014/' ]
+    tag:
+       - NoMerge
+  - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/47014/' ]
+    tag:
+       - NoMerge
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
+    url: [ 'http://www.nexusmods.com/newvegas/mods/45104/' ]
     inc:
       - 'IWR.esm'
   - name: 'Community Bugfix Compilation Patch.esp'
