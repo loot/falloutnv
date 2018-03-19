@@ -57,10 +57,37 @@ globals:
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
+groups:
+  - name: &dlcGroup DLC
+
+  - name: &ttwGroup Tale of Two Wastelands
+    after: [ *dlcGroup ]
+
+  - name: &yupFixesGroup YUP NPC Fixes
+    after: [ *ttwGroup ]
+
+  - name: &ttwPatchesGroup Tale of Two Wastelands Patches
+    after: [ *yupFixesGroup ]
+
+  - name: default
+    after: [ *ttwPatchesGroup ]
+
+  - name: &lightingGroup Interior Lighting Overhaul
+    after: [ default ]
+
+  - name: &lodGroup LOD
+    after: [ *lightingGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *lodGroup ]
+
+  - name: &dynamicPatchGroup Dynamic Patches
+    after: [ *weatherGroup ]
+
 plugins:
   - name: 'DeadMoney.esm'
     url: [ 'http://store.steampowered.com/app/72730/']
-    global_priority: -125
+    group: *dlcGroup
     tag:
       - Actors.Stats
       - Graphics
@@ -74,7 +101,7 @@ plugins:
         udr: 51
   - name: 'HonestHearts.esm'
     url: [ 'http://store.steampowered.com/app/72740/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
     tag:
@@ -89,7 +116,7 @@ plugins:
         udr: 10
   - name: 'OldWorldBlues.esm'
     url: [ 'http://store.steampowered.com/app/72750/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -105,7 +132,7 @@ plugins:
         itm: 124
   - name: 'LonesomeRoad.esm'
     url: [ 'http://store.steampowered.com/app/72760/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -119,7 +146,7 @@ plugins:
         udr: 6
   - name: 'GunRunnersArsenal.esm'
     url: [ 'http://store.steampowered.com/app/72840/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -135,7 +162,7 @@ plugins:
         itm: 97
   - name: 'ClassicPack.esm'
     url: [ 'http://store.steampowered.com/app/901778/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -144,7 +171,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
   - name: 'MercenaryPack.esm'
     url: [ 'http://store.steampowered.com/app/901778/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -154,7 +181,7 @@ plugins:
       - 'ClassicPack.esm'
   - name: 'TribalPack.esm'
     url: [ 'http://store.steampowered.com/app/901778/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -165,7 +192,7 @@ plugins:
       - 'MercenaryPack.esm'
   - name: 'CaravanPack.esm'
     url: [ 'http://store.steampowered.com/app/901778/']
-    global_priority: -125
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -181,7 +208,7 @@ plugins:
       - Invent
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'GunRunnersArsenal.esm'
       - 'TribalPack.esm'
@@ -211,10 +238,10 @@ plugins:
       - WeaponMods
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'Anchorage.esm'
     tag:
@@ -223,7 +250,7 @@ plugins:
       - Relations
   - name: 'BrokenSteel.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -243,7 +270,7 @@ plugins:
       - Stats
   - name: 'PointLookout.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -254,7 +281,7 @@ plugins:
       - Stats
   - name: 'Zeta.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -262,7 +289,7 @@ plugins:
       - 'PointLookout.esm'
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    global_priority: -90
+    group: *ttwGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -301,7 +328,7 @@ plugins:
       - 'Zeta.esm'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
-    global_priority: -90
+    group: *ttwGroup
     inc:
       - 'YUP - Base Game + All DLC.esm'
     after:
@@ -346,7 +373,7 @@ plugins:
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    global_priority: -90
+    group: *ttwGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -899,7 +926,7 @@ plugins:
       - Relev
   - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    priority: 1990000
+    priority: -90
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -927,7 +954,7 @@ plugins:
       - Names
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    global_priority: -80
+    group: *yupFixesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -945,7 +972,7 @@ plugins:
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/51664' ]
-    global_priority: -80
+    group: *ttwPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -959,23 +986,23 @@ plugins:
       - Scripts
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Names
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
   - name: 'TTW_NoKarmaDCFollowers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
   - name: 'TTW_OutcastTrading.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -985,7 +1012,7 @@ plugins:
       - 'TTW_NoKarmaDCFollowers.esp'
   - name: 'TTW_Reputation.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Actors.Stats
       - Factions
@@ -999,7 +1026,7 @@ plugins:
       - 'TTW_OutcastTrading.esp'
   - name: 'TTW_SpeechChecks.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Names
     after:
@@ -1010,7 +1037,7 @@ plugins:
       - 'TTW_Reputation.esp'
   - name: 'TTW Anchorage Customization - Speech Checks.esp'
     url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1020,7 +1047,7 @@ plugins:
       - 'TTW_SpeechChecks.esp'
   - name: 'TTW_StartupMenu.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Names
     after:
@@ -1033,7 +1060,7 @@ plugins:
       - 'TTW Anchorage Customization - Speech Checks.esp'
   - name: 'TTW_StashPackOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1045,7 +1072,7 @@ plugins:
       - 'TTW_StartupMenu.esp'
   - name: 'TTW_WildWasteland.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -1058,7 +1085,7 @@ plugins:
       - 'TTW_StashPackOptions.esp'
   - name: 'TTWOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Names
     after:
@@ -1242,7 +1269,7 @@ plugins:
       - Names
   - name: 'NewVegasUncut.esm'
     url: [ 'https://github.com/Uncut/Uncut' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
     tag:
       - Delev
       - Factions
@@ -1250,7 +1277,7 @@ plugins:
       - Names
   - name: 'NewVegasUncut - TTW.esm'
     url: [ 'https://github.com/Uncut/Uncut' ]
-    global_priority: -70
+    group: *ttwPatchesGroup
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
@@ -4055,20 +4082,20 @@ plugins:
       - type: say
         content: 'No longer supported by the mod. Can still be used.'
   - name: 'Interior Lighting Overhaul-Realistic.esp'
-    global_priority: 50
+    group: *lightingGroup
     msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
-    global_priority: 50
+    group: *lightingGroup
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
-    global_priority: 50
+    group: *lightingGroup
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4076,7 +4103,7 @@ plugins:
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4084,12 +4111,12 @@ plugins:
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul.esp'
-    global_priority: 50
+    group: *lightingGroup
     msg: [ *obsolete ]
     tag:
       - C.Light
   - name: 'ILO - Fallout New Vegas.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -4097,7 +4124,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -4105,7 +4132,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - GS Shack.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4114,7 +4141,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Original Lucky38 Suite.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4123,7 +4150,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Dead Money.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4133,7 +4160,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Dead Money.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4143,7 +4170,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Honest Hearts.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4153,7 +4180,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Honest Hearts.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4163,7 +4190,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Old World Blues.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4173,7 +4200,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Old World Blues.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4183,7 +4210,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Lonesome Road.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4193,7 +4220,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Lonesome Road.esp'
-    global_priority: 50
+    group: *lightingGroup
     inc:
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -4203,7 +4230,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO-RI-Rust Town.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4212,7 +4239,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4230,7 +4257,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'ILO - NVInteriors Project - AWOP.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4239,7 +4266,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Project Reality Patch.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4248,10 +4275,10 @@ plugins:
     tag:
       - C.Climate
   - name: 'Interior Lighting Overhaul-Darker.esp'
-    global_priority: 50
+    group: *lightingGroup
     msg: [ *obsolete ]
   - name: 'ILO - A World of Pain.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4260,7 +4287,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - Tale of Two Wastelands.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4269,7 +4296,7 @@ plugins:
     tag:
       - C.Light
   - name: 'TTW - Realistic Interior Lighting.esp'
-    global_priority: 50
+    group: *lightingGroup
     tag:
       - C.Light
   - name: 'DYNAVISION - Dynamic Lens Effect.esp'
@@ -4826,7 +4853,7 @@ plugins:
     tag:
       - Graphics
   - name: 'ILO - D.E.I.M.O.S.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -4989,7 +5016,7 @@ plugins:
       - Factions
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -5006,7 +5033,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'ILO - New Vegas Bounties II.esp'
-    global_priority: 50
+    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
@@ -5077,37 +5104,37 @@ plugins:
       - Graphics
   - name: 'FNVLODGen.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
-    global_priority: 60
+    group: *lodGroup
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
-    global_priority: 60
+    group: *lodGroup
   - name: 'tmzLODadditions.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/58562' ]
-    global_priority: 60
+    group: *lodGroup
     after:
       - 'FNVLODGen.esp'
       - 'TTWLODGen.esp'
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - Basic Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'NevadaSkies - Ultimate DLC Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - TTW Edition.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/35998' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - Ultimate DLC Edition.esp'
   - name: 'FNV Realistic Wasteland Lighting - Full.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5119,7 +5146,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5131,7 +5158,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - Full.esp'
@@ -5145,7 +5172,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5159,7 +5186,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - Enhanced.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59591' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5175,7 +5202,7 @@ plugins:
       - Sound
   - name: 'FNV RWL Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
       - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
@@ -5190,7 +5217,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/52037' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV RWL Darker Nights.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5205,7 +5232,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
   - name: 'TTW Realistic Wasteland Lighting.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5217,7 +5244,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - Enhanced.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/59591' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5233,7 +5260,7 @@ plugins:
       - Sound
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5245,7 +5272,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5262,7 +5289,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
   - name: '47 ENB Weather.esp'
     url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    global_priority: 70
+    group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5280,7 +5307,7 @@ plugins:
       - Sound
   - name: '47 ENB Weather - TTW Patch.esp'
     url: [ 'http://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    global_priority: 70
+    group: *weatherGroup
     after:
       - '47 ENB Weather.esp'
     tag:
@@ -5288,21 +5315,21 @@ plugins:
       - C.Water
       - Sound
   - name: 'MergedPatch.esp'
-    global_priority: 80
+    group: *dynamicPatchGroup
     tag:
       - NoMerge
   - name: 'FNVMerged.esp'
-    global_priority: 80
+    group: *dynamicPatchGroup
     tag:
       - NoMerge
   - name: 'Smashed Patch.esp'
-    global_priority: 80
+    group: *dynamicPatchGroup
     after:
       - TES5Merged.esp
     tag:
       - NoMerge
   - name: 'Bashed Patch, 0.esp'
-    global_priority: 80
+    group: *dynamicPatchGroup
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
