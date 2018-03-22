@@ -69,8 +69,11 @@ groups:
   - name: &ttwPatchesGroup Tale of Two Wastelands Patches
     after: [ *yupFixesGroup ]
 
-  - name: default
+  - name: &yupGameplayTweaksGroup YUP Gameplay Tweaks
     after: [ *ttwPatchesGroup ]
+
+  - name: default
+    after: [ *yupGameplayTweaksGroup ]
 
   - name: &lightingGroup Interior Lighting Overhaul
     after: [ default ]
@@ -926,7 +929,7 @@ plugins:
       - Relev
   - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    priority: -90
+    group: *ttwGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1100,14 +1103,14 @@ plugins:
       - 'TTW_StashPackOptions.esp'
       - 'TTW_WildWasteland.esp'
   - name: 'ttwadvertitronradioshownfix.esp'
-    priority: -115
+    group: *ttwPatchesGroup
   - name: 'ttw_-_cut_item_stats.esp'
-    priority: -115
+    group: *ttwPatchesGroup
     tag:
       - Stats
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
-    priority: -110
+    group: *yupGameplayTweaksGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
@@ -1132,7 +1135,7 @@ plugins:
       - Stats
   - name: 'YUP - Gameplay Tweaks - TTW.esp'
     url: [ 'http://www.nexusmods.com/newvegas/mods/61639/?' ]
-    priority: -110
+    group: *yupGameplayTweaksGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
