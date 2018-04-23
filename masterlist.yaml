@@ -5325,3 +5325,15 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
         udr: 0
+  - name: 'lexx_brahmin-variant.esp'
+    dirty:
+      - crc: 0xB596767C
+      << *dirtyPlugin
+      itm: 16
+      udr: 1
+  - name: 'lexx_brahmin-betsy.esp'
+    dirty:
+      - crc: 0x0BA26C46
+      << *dirtyPlugin
+      itm: 13
+      udr: 0
