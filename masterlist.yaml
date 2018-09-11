@@ -322,7 +322,7 @@ plugins:
     msg:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
-        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 6D6F2EA7)'
+        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 74563216)'
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
