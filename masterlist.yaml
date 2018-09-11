@@ -172,6 +172,10 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
+      - name: 'Zeta.esm'
+        condition: 'file("TaleOfTwoWastelands.esm")'
+      - name: 'CaravanPack.esm'
+        condition: 'file("TaleOfTwoWastelands.esm")'
   - name: 'MercenaryPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -182,6 +186,8 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
+      - name: 'Zeta.esm'
+        condition: 'file("TaleOfTwoWastelands.esm")'
   - name: 'TribalPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -193,6 +199,8 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
+      - name: 'Zeta.esm'
+        condition: 'file("TaleOfTwoWastelands.esm")'
   - name: 'CaravanPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -202,9 +210,14 @@ plugins:
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
+      - name: 'ClassicPack.esm'
+        condition: 'not file("TaleOfTwoWastelands.esm")'
+      - name: 'MercenaryPack.esm'
+        condition: 'not file("TaleOfTwoWastelands.esm")'
+      - name: 'TribalPack.esm'
+        condition: 'not file("TaleOfTwoWastelands.esm")'
+      - name: 'Zeta.esm'
+        condition: 'file("TaleOfTwoWastelands.esm")'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
@@ -214,7 +227,6 @@ plugins:
     group: *ttwGroup
     after:
       - 'GunRunnersArsenal.esm'
-      - 'TribalPack.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -293,6 +305,11 @@ plugins:
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *ttwGroup
+    after:
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'Mercenary.esm'
+      - 'TribalPack.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -323,12 +340,6 @@ plugins:
       - type: warn
         content: 'You need to check your Tale of Two Wastelands load order'
         condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 74563216)'
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-      - 'PointLookout.esm'
-      - 'Zeta.esm'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *ttwGroup
