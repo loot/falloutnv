@@ -239,6 +239,7 @@ plugins:
       - 'PointLookout.esm'
       - 'Zeta.esm'
       - 'TaleOfTwoWastelands.esm'
+      - 'Alternative Start.esp'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
