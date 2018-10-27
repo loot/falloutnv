@@ -218,6 +218,27 @@ plugins:
         condition: 'not file("TaleOfTwoWastelands.esm")'
       - name: 'Zeta.esm'
         condition: 'file("TaleOfTwoWastelands.esm")'
+  - name: 'NewCalifornia.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    group: *ttwGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    inc:
+      - 'Fallout3.esm'
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
+      - 'Zeta.esm'
+      - 'TaleOfTwoWastelands.esm'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
