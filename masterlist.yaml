@@ -240,6 +240,7 @@ plugins:
       - 'Zeta.esm'
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
+      - 'Mission Mojave - Ultimate Edition.esp'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
@@ -1606,6 +1607,23 @@ plugins:
   - name: 'BIS - Bobblehunt Patch.esp'
     tag:
       - Names
+  - name: 'NewCalifornia DLC Control.esp'
+
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'  
+    inc: 
+      - 'Simple DLC Delay.esp'
+  - name: 'NewCalifornia Courier Stash Control.esp'
+
+    after:
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
   - name: 'Centered 3rd Person Camera.esp'
     inc:
       - 'FOOK - New Vegas.esm'
