@@ -1608,7 +1608,6 @@ plugins:
     tag:
       - Names
   - name: 'NewCalifornia DLC Control.esp'
-
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -1618,7 +1617,6 @@ plugins:
     inc: 
       - 'Simple DLC Delay.esp'
   - name: 'NewCalifornia Courier Stash Control.esp'
-
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
