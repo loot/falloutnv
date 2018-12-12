@@ -32,10 +32,17 @@ common:
   - &incWeatherImageSpace
     type: say
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+
 # Cleaning data
   - &dirtyPlugin
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
-    info: ''
+    info: 'A cleaning guide is available [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-B).'
+  - &quickClean
+    util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703) **Quick Auto Clean**'
+    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#quickautoclean).'
+  - &reqManualFix
+    util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703) **Quick Auto Clean**'
+    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#quickautoclean). It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually. More information on **Deleted navmeshes** is provided [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
 
 bash_tags:
   - 'Deflst'
