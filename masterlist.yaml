@@ -32,10 +32,17 @@ common:
   - &incWeatherImageSpace
     type: say
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+
 # Cleaning data
   - &dirtyPlugin
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
-    info: ''
+    info: 'A cleaning guide is available [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-B).'
+  - &quickClean
+    util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703) **Quick Auto Clean**'
+    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#quickautoclean).'
+  - &reqManualFix
+    util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703) **Quick Auto Clean**'
+    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#quickautoclean). It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually. More information on **Deleted navmeshes** is provided [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
 
 bash_tags:
   - 'Deflst'
@@ -98,10 +105,16 @@ plugins:
       - Names
       - Stats
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0xd70f165b
+      # version: 1.4.0.525
+      - <<: *quickClean
+        crc: 0xD70F165B
+        util: '[FNVEdit v4.0.0](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 403
         udr: 51
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x6ACCD876
+        util: 'FNVEdit v4.0.0'
   - name: 'HonestHearts.esm'
     url: [ 'https://store.steampowered.com/app/72740/']
     group: *dlcGroup
@@ -113,10 +126,16 @@ plugins:
       - Names
       - Sound
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0x2352b189
+      # version: 1.4.0.525
+      - <<: *quickClean
+        crc: 0x2352B189
+        util: '[FNVEdit v4.0.0](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 121
         udr: 10
+    clean:
+      # version: 1.4.0.525
+      - crc: 0xD0361921
+        util: 'FNVEdit v4.0.0'
   - name: 'OldWorldBlues.esm'
     url: [ 'https://store.steampowered.com/app/72750/']
     group: *dlcGroup
@@ -130,9 +149,15 @@ plugins:
       - Sound
       - Stats
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0x7f8f8225
+      # version: 1.4.0.525
+      - <<: *quickClean
+        crc: 0x7F8F8225
+        util: '[FNVEdit v4.0.0](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 124
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x0117E59F
+        util: 'FNVEdit v4.0.0'
   - name: 'LonesomeRoad.esm'
     url: [ 'https://store.steampowered.com/app/72760/']
     group: *dlcGroup
@@ -143,10 +168,16 @@ plugins:
     tag:
       - Stats
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0x30073d50
-        itm: 240
+      # version: 1.4.0.525
+      - <<: *quickClean
+        crc: 0x30073D50
+        util: '[FNVEdit v4.0.0](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 243
         udr: 6
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x09E3731F
+        util: 'FNVEdit v4.0.0'
   - name: 'GunRunnersArsenal.esm'
     url: [ 'https://store.steampowered.com/app/72840/']
     group: *dlcGroup
@@ -160,9 +191,15 @@ plugins:
       - Graphics
       - Invent
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0xaac938d
+      # version: 1.4.0.525
+      - <<: *quickClean
+        crc: 0x0AAC938D
+        util: '[FNVEdit v4.0.0](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 97
+    clean:
+      # version: 1.4.0.525
+      - crc: 0xDC7CB6A1
+        util: 'FNVEdit v4.0.0'
   - name: 'ClassicPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -176,6 +213,10 @@ plugins:
         condition: 'file("TaleOfTwoWastelands.esm")'
       - name: 'CaravanPack.esm'
         condition: 'file("TaleOfTwoWastelands.esm")'
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x41F95714
+        util: 'FNVEdit v4.0.0'
   - name: 'MercenaryPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -188,6 +229,10 @@ plugins:
       - 'ClassicPack.esm'
       - name: 'Zeta.esm'
         condition: 'file("TaleOfTwoWastelands.esm")'
+    clean:
+      # version: 1.4.0.525
+      - crc: 0xD377B2B9
+        util: 'FNVEdit v4.0.0'
   - name: 'TribalPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -201,6 +246,10 @@ plugins:
       - 'MercenaryPack.esm'
       - name: 'Zeta.esm'
         condition: 'file("TaleOfTwoWastelands.esm")'
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x0DE09873
+        util: 'FNVEdit v4.0.0'
   - name: 'CaravanPack.esm'
     url: [ 'https://store.steampowered.com/app/901778/']
     group: *dlcGroup
@@ -218,6 +267,10 @@ plugins:
         condition: 'not file("TaleOfTwoWastelands.esm")'
       - name: 'Zeta.esm'
         condition: 'file("TaleOfTwoWastelands.esm")'
+    clean:
+      # version: 1.4.0.525
+      - crc: 0x228740D1
+        util: 'FNVEdit v4.0.0'
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     group: *ttwGroup
