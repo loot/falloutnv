@@ -628,15 +628,19 @@ plugins:
         crc: 0x3B28B2FE
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
-    clean:
+    reqManualFix:
       - crc: 0xAA3DB25C
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
-     req: 'OldWorldBlues.esm'
-     after: 'OldWorldBlues.esm'
-            'Companion Core.esm'
-     msg:
-     - type: say
-       content: 'Contains wild edits. [A cleaning guide can be found here:] (https://gist.github.com/gutfuckllc/44d0e976f67948f3e1a88bd9439c9135)'
+        msg:
+        - type: say
+          content: 'Contains wild edits. [A cleaning guide can be found here:] (https://gist.github.com/gutfuckllc/44d0e976f67948f3e1a88bd9439c9135)'
+    clean:
+      - crc: 0x591A61FC
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+    req: 'OldWorldBlues.esm'
+    after: 
+      - 'OldWorldBlues.esm'
+      - 'Companion Core.esm'
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
