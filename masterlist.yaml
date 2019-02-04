@@ -636,7 +636,6 @@ plugins:
     clean:
       - crc: 0x591A61FC
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
-    req: 'OldWorldBlues.esm'
     after: 
       - 'OldWorldBlues.esm'
       - 'Companion Core.esm'
