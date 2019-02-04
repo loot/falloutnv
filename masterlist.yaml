@@ -613,6 +613,30 @@ plugins:
       - 'IWR.esm'
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
+  - name: 'Companion Core.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF5E979C
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x34D73517
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+  - name: 'RobCo Certified.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B28B2FE
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+    clean:
+      - crc: 0xAA3DB25C
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+     req: 'OldWorldBlues.esm'
+     after: 'OldWorldBlues.esm'
+            'Companion Core.esm'
+     msg:
+     - type: say
+       content: 'Contains wild edits. [A cleaning guide can be found here:] (https://gist.github.com/gutfuckllc/44d0e976f67948f3e1a88bd9439c9135)'
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
