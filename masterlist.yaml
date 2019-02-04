@@ -601,6 +601,14 @@ plugins:
     req: [ *NVSE ]
   - name: 'Companion Core.esm'
     req: [ *NVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF5E979C
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x34D73517
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'IWR.esm'
     inc:
       - "OWNB - Open World.esm"
@@ -613,15 +621,6 @@ plugins:
       - 'IWR.esm'
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
-  - name: 'Companion Core.esm'
-    dirty:
-      - <<: *quickClean
-        crc: 0xCF5E979C
-        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-    clean:
-      - crc: 0x34D73517
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'RobCo Certified.esm'
     dirty:
       - <<: *quickClean
