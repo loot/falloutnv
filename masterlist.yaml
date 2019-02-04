@@ -639,6 +639,8 @@ plugins:
     after: 
       - 'OldWorldBlues.esm'
       - 'Companion Core.esm'
+    tag: 
+      - Factions
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
