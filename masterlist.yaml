@@ -4916,6 +4916,19 @@ plugins:
         itm: 1
         udr: 0
         nav: 0
+  - name: 'RobCo Certified.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
+    tag:
+      - Factions
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B28B2FE
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+    clean:
+      - crc: 0xAA3DB25C
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+        info: 'Contains wild edits to records 0x00094684 (DLC01TrogFaction) and 0x00137622 (FortCaesarScript).'
   - name: 'ADAM Complete.esp'
     tag:
       - Delev
