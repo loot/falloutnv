@@ -3861,6 +3861,7 @@ plugins:
       - WeaponMods
     after:
       - 'Improved Sound FX.esp'
+      - "Project Nevada - Gun Runners' Arsenal.esp"
   - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
