@@ -4917,6 +4917,7 @@ plugins:
         udr: 0
         nav: 0
   - name: 'RobCo Certified.esm'
+    req: [ *NVSE ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
     tag:
       - Factions
