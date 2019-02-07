@@ -1052,6 +1052,7 @@ plugins:
     clean:
       - crc: 0xDBE03720
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+        info: 'Contains wild edits to records 0x00160BFA(TreeJoshANV) and 0x010117C6(Placed Object "Scotch"). Contains multiple ITPO records, use xEdit's Remove ITPO records script to remove them.'
   - name: 'More Perks for Honest Hearts.esm'
     dirty:
       - <<: *quickClean
