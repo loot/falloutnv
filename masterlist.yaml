@@ -1052,6 +1052,15 @@ plugins:
     clean:
       - crc: 0xDBE03720
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+  - name: 'More Perks for Honest Hearts.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x25B6073B
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0x341FAF0A
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *yupFixesGroup
