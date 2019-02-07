@@ -1042,6 +1042,15 @@ plugins:
   - name: 'More Perks.esm'
     tag:
       - Names
+  - name: 'More Perks for Dead Money.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x129204A2
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 301
+    clean:
+      - crc: 0xDBE03720
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *yupFixesGroup
