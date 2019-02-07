@@ -1040,6 +1040,7 @@ plugins:
     tag:
       - NoMerge
   - name: 'More Perks.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
     tag:
       - Names
   - name: 'More Perks for Dead Money.esm'
