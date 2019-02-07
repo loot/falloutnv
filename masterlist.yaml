@@ -3861,6 +3861,8 @@ plugins:
       - WeaponMods
     after:
       - 'Improved Sound FX.esp'
+      - "Project Nevada - Gun Runners' Arsenal.esp"
+      - 'dD - Enhanced Blood Main NV.esp'
   - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
