@@ -1049,10 +1049,11 @@ plugins:
         crc: 0x129204A2
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 301
-    clean:
-      - crc: 0xDBE03720
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
         info: "Contains wild edits to records 0x00160BFA(TreeJoshANV) and 0x010117C6(Placed Object 'Scotch'). Contains multiple ITPO records, use xEdit's Remove Identitical to Previous Override records script to remove them."
+    clean:
+      - crc: 0x6A5738CA
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+        
   - name: 'More Perks for Honest Hearts.esm'
     dirty:
       - <<: *quickClean
