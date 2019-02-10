@@ -4922,8 +4922,7 @@ plugins:
     tag:
       - Factions
     dirty:
-      - <<: *quickClean
-        crc: 0x3B28B2FE
+      - crc: 0x3B28B2FE
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
         info: 'Contains wild edits to records 0x00094684 (DLC01TrogFaction) and 0x00137622 (FortCaesarScript).'
