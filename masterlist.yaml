@@ -1045,7 +1045,6 @@ plugins:
       - Names
   - name: 'More Perks for Dead Money.esm'
     dirty:
-      - <<: *quickClean
         crc: 0x129204A2
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 301
@@ -1056,7 +1055,6 @@ plugins:
         
   - name: 'More Perks for Honest Hearts.esm'
     dirty:
-      - <<: *quickClean
         crc: 0x25B6073B
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 13
