@@ -3887,6 +3887,10 @@ plugins:
       - 'Improved Sound FX.esp'
       - "Project Nevada - Gun Runners' Arsenal.esp"
       - 'dD - Enhanced Blood Main NV.esp'
+    inc: 
+    - name: 'Project Nevada - Equipment.esm'
+      condition: 'active("Project Nevada - Equipment.esm") and not file("Project Nevada - Equipment - EVE ALL DLC Patch.esp")'
+      msg: 'Incompatible with "Project Nevada - Equipment.esm", a patch can be found here: [ "https://github.com/gutfuckllc/Patchy-s-Patchonarium-for-NV/releases/download/0.1/Project.Nevada.-.Equipment.-.EVE.ALL.DLC.Patch.zip" ]'
   - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
