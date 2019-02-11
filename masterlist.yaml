@@ -811,9 +811,9 @@ plugins:
       - Scripts
       - Stats
     inc: 
-    - name: 'Project Nevada - Equipment.esm'
-      condition: 'active("Project Nevada - Equipment.esm") and not file("Project Nevada - Equipment - EVE ALL DLC Patch.esp")'
-      msg: 'Incompatible with "Project Nevada - Equipment.esm", a patch can be found here: [ "https://github.com/gutfuckllc/Patchy-s-Patchonarium-for-NV/releases/download/0.1/Project.Nevada.-.Equipment.-.EVE.ALL.DLC.Patch.zip" ]'
+    - name: 'EVE FNV - ALL DLC.esp'
+      condition: 'active("EVE FNV - ALL DLC.esp") and not file("Project Nevada - Equipment - EVE ALL DLC Patch.esp")'
+      msg: 'Incompatible with "EVE FNV - ALL DLC.esp", a patch can be found here: [ "https://github.com/gutfuckllc/Patchy-s-Patchonarium-for-NV/releases/download/0.1/Project.Nevada.-.Equipment.-.EVE.ALL.DLC.Patch.zip" ]'
   - name: 'Project Nevada - Rebalance.esp'
     tag:
       - Delev
