@@ -4488,6 +4488,14 @@ plugins:
       - *obsolete
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
+  - name: 'rtsrevamped.esp'
+    dirty:
+        crc: 0x5FE872B9
+        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0x70B855F4
+        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'BetterGamePerformanceV3.esp'
     msg:
       - *obsolete
