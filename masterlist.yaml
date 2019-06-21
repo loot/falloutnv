@@ -498,6 +498,22 @@ plugins:
       - Scripts
       - Sound
       - Stats
+  - name: 'Unofficial Patch NVSE.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/65412']
+    group: *ttwGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+      - 'YUP - Base Game + All DLC.esm'
+    tag:
+      - Scripts
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
     tag:
