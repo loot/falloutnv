@@ -5130,7 +5130,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/?' ]
     msg:
       - type: say
-        content: 'Contains wild edits to records 00116185 and 00116187. These two records should be removed, as they would overwrite any changes made to Benny or the Tops dialogue.'
+        content: 'Contains wild edits to records 00116185 and 00116187. These two records should be removed, as they will overwrite any changes made to Benny or the Tops dialogue.'
         condition: 'checksum("Wasteland Defense.esp", D9241E23)'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
