@@ -5126,6 +5126,12 @@ plugins:
         itm: 6
         udr: 0
         nav: 0
+  - name: 'Wasteland Defense.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38049/?' ]
+    msg:
+      - type: say
+        content: 'Contains wild edits to records 00116185 and 00116187.'
+        condition: 'checksum("Wasteland Defense.esp", D9241E23)'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
