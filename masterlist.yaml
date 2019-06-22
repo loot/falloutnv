@@ -502,6 +502,9 @@ plugins:
       - Sound
       - Stats
   - name: 'Unofficial Patch NVSE.esp'
+    req: 
+      - *NVSE
+      - *JIPNVSE
     url: ['https://www.nexusmods.com/newvegas/mods/65412']
     group: *ttwGroup
     after:
