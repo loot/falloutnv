@@ -6,6 +6,9 @@ common:
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
     display: '[MCM](https://www.nexusmods.com/newvegas/mods/42507)'
+  - &JIPNVSE
+    name: 'NVSE/Plugins/jip_nvse.dll'
+    display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277)'
 # Messages
   - &updateToNVCE
     type: say
@@ -499,6 +502,9 @@ plugins:
       - Sound
       - Stats
   - name: 'Unofficial Patch NVSE.esp'
+    req: 
+      - *NVSE
+      - *JIPNVSE
     url: ['https://www.nexusmods.com/newvegas/mods/65412']
     group: *ttwGroup
     after:
