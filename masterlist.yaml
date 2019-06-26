@@ -13,9 +13,9 @@ common:
   - &updateToNVCE
     type: say
     content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
-  - &updateToMMUE
+  - &updateToYUP
     type: say
-    content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
   - &obsolete
     type: say
     content:
@@ -450,9 +450,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'Community Bugfix Compilation Patch.esm'
-    msg:
-      - type: say
-        content: 'Outdated. Consider using the latest version of Mission Mojave - Ultimate Edition instead.'
+    msg: [ *updateToYUP ]
     tag:
       - Actors.AIPackages
       - Delev
@@ -598,7 +596,7 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'OFT_Merge_Base.esm'
     inc:
       - 'OFT_Merge_All.esm'
@@ -606,19 +604,19 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'OFT_Merge_HonestHearts.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_Merge_HonestHearts.esp'
       - 'OFT_HonestHearts_Interiors.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'OFT_Merge_OldWorldBlues.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_OldWorldBlues.esp'
       - 'OFT_IWR_OldWorldBlues.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
   - name: 'Companion Core.esm'
@@ -1415,14 +1413,15 @@ plugins:
       - type: say
         content: 'Translation file.'
   - name: 'MM-Main.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'MM-HonestHearts.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'MM-OldWorldBlues.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'MM-LonesomeRoad.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'Mission Mojave - Ultimate Edition.esp'
+    msg: [ *updateToYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
     inc:
       - 'Compiled Patch.esp'
@@ -1448,12 +1447,14 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE+.esp'
-    msg: [ *obsolete ]
+    msg: [ *updateToYUP ]
   - name: 'Mission Mojave - Ultimate Edition Plus.esp'
+    msg: [ *updateToYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag:
        - NoMerge
   - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
+    msg: [ *updateToYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag:
        - NoMerge
@@ -1462,11 +1463,11 @@ plugins:
     inc:
       - 'IWR.esm'
   - name: 'Community Bugfix Compilation Patch.esp'
+    msg: [ *updateToYUP ]
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *updateToMMUE ]
     tag:
       - Actors.AIPackages
       - Delev
@@ -1499,7 +1500,7 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Community Bugfix Compilation Patch.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *updateToMMUE ]
+    msg: [ *updateToYUP ]
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
