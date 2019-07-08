@@ -387,7 +387,7 @@ plugins:
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
-      - 'Mercenary.esm'
+      - 'MercenaryPack.esm'
       - 'TribalPack.esm'
     tag:
       - Actors.ACBS
