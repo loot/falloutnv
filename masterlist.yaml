@@ -1386,7 +1386,7 @@ plugins:
       - Names
       - Relev
   - name: 'Gun Runners'' Arsenal Disabled.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59615' ]
+    url: []
     tag:
       - Delev
       - Invent
@@ -1398,7 +1398,7 @@ plugins:
       - Invent
       - Names
   - name: 'NewVegasUncut.esm'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     group: *ttwPatchesGroup
     tag:
       - Delev
@@ -1406,7 +1406,7 @@ plugins:
       - Invent
       - Names
   - name: 'NewVegasUncut - TTW.esm'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     group: *ttwPatchesGroup
   - name: 'FalloutNV_lang.esp'
     msg:
@@ -1434,7 +1434,7 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE - Deutsch.esp'
-    url: [ 'https://modworkshop.net/mydownloads.php?action=view_down&did=1' ]
+    url: []
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
@@ -2455,7 +2455,7 @@ plugins:
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
   - name: 'Power Armor Distribution Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -2469,7 +2469,7 @@ plugins:
       - 'Equipment Restoration Project - TTW.esp'
       - 'TTW MMM + EVE.esp'
   - name: 'Power Armor Distribution Overhaul - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -2484,13 +2484,13 @@ plugins:
       - NPC.Class
       - Stats
   - name: 'Power Armor Distribution Overhaul - MMM.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Actors.Stats
       - Factions
       - Scripts
   - name: 'Power Armor Distribution Overhaul - NVCE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -2498,15 +2498,15 @@ plugins:
       - NPC.Class
       - NpcFaces
   - name: 'Power Armor Distribution Overhaul - JSawyer.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Stats
   - name: 'Power Armor Distribution Overhaul - TTW_OutcastTrading.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Invent
   - name: 'Power Armor Distribution Overhaul - Unoctium.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59677' ]
+    url: []
     tag:
       - Graphics
   - name: 'TTW-WEP.esp'
@@ -4762,7 +4762,7 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
   - name: 'NewVegasUncut - New Vegas Bounties.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4777,7 +4777,7 @@ plugins:
       - 'TheBetterAngels.esp'
       - 'CheckpointGary.esp'
   - name: 'NewVegasUncut - New Vegas Bounties II.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4793,7 +4793,7 @@ plugins:
       - 'CheckpointGary.esp'
       - 'NewVegasUncut - New Vegas Bounties.esp'
   - name: 'NewVegasUncut - Inheritance.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4810,7 +4810,7 @@ plugins:
       - 'NewVegasUncut - New Vegas Bounties.esp'
       - 'NewVegasUncut - New Vegas Bounties II.esp'
   - name: 'NewVegasUncut - Russell.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4828,7 +4828,7 @@ plugins:
       - 'NewVegasUncut - New Vegas Bounties II.esp'
       - 'NewVegasUncut - Inheritance.esp'
   - name: 'NewVegasUncut - NewVegasKiller.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4847,7 +4847,7 @@ plugins:
       - 'NewVegasUncut - Inheritance.esp'
       - 'NewVegasUncut - Russell.esp'
   - name: 'NewVegasUncut - NewVegasBountiesIII.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - Someguy Series.esp'
     after:
@@ -4867,7 +4867,7 @@ plugins:
       - 'NewVegasUncut - Russell.esp'
       - 'NewVegasUncut - NewVegasKiller.esp'
   - name: 'NewVegasUncut - Someguy Series.esp'
-    url: [ 'https://github.com/Uncut/Uncut' ]
+    url: []
     inc:
       - 'NewVegasUncut - New Vegas Bounties.esp'
       - 'NewVegasUncut - New Vegas Bounties II.esp'
@@ -5354,7 +5354,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - Enhanced.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59591' ]
+    url: []
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -5412,7 +5412,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - Enhanced.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59591' ]
+    url: []
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -5452,7 +5452,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
   - name: 'FNV TTW RWLE - NVBII Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/59591' ]
+    url: []
     after:
       - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
@@ -5508,7 +5508,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 8
         udr: 54166
-    url: [ '' ]
+    url: []
   - name: 'SupahWeapons.esp'
     dirty:
       - crc: 0xEC7F4960
