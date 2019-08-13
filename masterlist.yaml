@@ -656,6 +656,9 @@ plugins:
       - 'WMX-PreOrderPackClassic.esp'
       - 'WMX-PreOrderPackMercenary.esp'
       - 'WMX-PreOrderPackTribal.esp'
+    tag:
+      - Stats
+      - Sound
     msg:
       - type: say
         content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
