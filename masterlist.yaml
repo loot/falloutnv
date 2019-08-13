@@ -10,6 +10,12 @@ common:
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277)'
 
+# Conditions
+  - &condFileTTW
+    file("TaleOfTwoWastelands.esm")
+  - &condNotFileTTW
+    not file("TaleOfTwoWastelands.esm")
+
 # Messages
   - &updateToNVCE
     type: say
@@ -261,9 +267,9 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
       - name: 'Zeta.esm'
-        condition: 'file("TaleOfTwoWastelands.esm")'
+        condition: *condFileTTW
       - name: 'CaravanPack.esm'
-        condition: 'file("TaleOfTwoWastelands.esm")'
+        condition: *condFileTTW
     clean:
       # version: 1.4.0.525
       - crc: 0x41F95714
@@ -279,7 +285,7 @@ plugins:
       - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
       - name: 'Zeta.esm'
-        condition: 'file("TaleOfTwoWastelands.esm")'
+        condition: *condFileTTW
     clean:
       # version: 1.4.0.525
       - crc: 0xD377B2B9
@@ -296,7 +302,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - name: 'Zeta.esm'
-        condition: 'file("TaleOfTwoWastelands.esm")'
+        condition: *condFileTTW
     clean:
       # version: 1.4.0.525
       - crc: 0x0DE09873
@@ -311,13 +317,13 @@ plugins:
       - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
       - name: 'ClassicPack.esm'
-        condition: 'not file("TaleOfTwoWastelands.esm")'
+        condition: *condNotFileTTW
       - name: 'MercenaryPack.esm'
-        condition: 'not file("TaleOfTwoWastelands.esm")'
+        condition: *condNotFileTTW
       - name: 'TribalPack.esm'
-        condition: 'not file("TaleOfTwoWastelands.esm")'
+        condition: *condNotFileTTW
       - name: 'Zeta.esm'
-        condition: 'file("TaleOfTwoWastelands.esm")'
+        condition: *condFileTTW
     clean:
       # version: 1.4.0.525
       - crc: 0x228740D1
