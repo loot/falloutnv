@@ -547,6 +547,9 @@ plugins:
       - Scripts
       - Sound
       - Stats
+    msg:
+      - type: say
+        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'Unofficial Patch NVSE.esp'
     req: 
       - *NVSE
@@ -602,6 +605,63 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
+  - name: 'Uncut Skeletons.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56625' ]
+    msg:
+      - type: say
+        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
+  - name: 'WMIMNV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
+    inc:
+      - 'EVE FNV - ALL DLC.esp'
+      - 'EVE FNV - NO DLC.esp'
+      - 'EVE FNV - NO GRA.esp'
+      - 'Weapon Mod Expansion.esm'
+      - 'Weapon Mod Expansion.esp'
+      - 'WME - DLCs.esm'
+      - 'WME - DLCs Arenovalis.esp'
+      - 'WME - DLCs.esp'
+      - 'WME - GRA.esm'
+      - 'WME - GRA - All Weapons.esp'
+      - 'WME - GRA - Arenovalis.esp'
+      - 'WME - GRA - Complete.esp'
+      - 'WME - GRA - Just Guns.esp'
+      - 'WME - GRA - Unique Integration.esp'
+      - 'WME - GRA - Vendor Reform.esp'
+      - 'WME - GRA - Weapon Integration.esp'
+      - 'WME - GRA Light.esm'
+      - 'WME - GRA Light Arenovalis.esp'
+      - 'WME - GRA Light.esp'
+      - 'WeaponModsExpanded.esp'
+      - 'WMX-EVE-AllDLC.esp'
+      - 'WMX-EVE-AllDLCMerged.esp'
+      - 'WMX-EVE-NoDLC.esp'
+      - 'WMX-EVE-NoGRA.esp'
+      - 'WMX-ModernWeapons.esp'
+      - 'WMX-ArenovalisTextures.esp'
+      - 'WMX-Arwen_NV_Realism.esp'
+      - 'WMX-EnergyWeaponsNoTrueIronSightsFix.esp'
+      - 'WMX-FOOKNV CP.esp'
+      - 'WMX-FOOKNV-DLCMerged CP.esp'
+      - 'WMX-FOOKNV-DLCs CP.esp'
+      - 'WMX-ShotgunCommando.esp'
+      - 'WMX-DeadMoney.esp'
+      - 'WMX-DLCMerged.esp'
+      - 'WMX-GunRunnersArsenal.esp'
+      - 'WMX-HonestHearts.esp'
+      - 'WMX-LonesomeRoad.esp'
+      - 'WMX-OldWorldBlues.esp'
+      - 'WMX-POPMerged.esp'
+      - 'WMX-PreOrderPackCaravan.esp'
+      - 'WMX-PreOrderPackClassic.esp'
+      - 'WMX-PreOrderPackMercenary.esp'
+      - 'WMX-PreOrderPackTribal.esp'
+    tag:
+      - Stats
+      - Sound
+    msg:
+      - type: say
+        content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
   - name: 'ProjectBrazil.esm'
     after:
       - 'Project Nevada - Core.esm'
