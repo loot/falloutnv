@@ -463,10 +463,6 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
-    msg:
-      - type: warn
-        content: 'You need to check your Tale of Two Wastelands load order'
-        condition: 'file("TaleOfTwoWastelands.esm") and not checksum("TaleOfTwoWastelands.esm", 74563216)'
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *ttwGroup
