@@ -41,7 +41,7 @@ common:
       - lang: ja
         text: '旧式のプラグインです。最新版に更新してください。 %1%'
       - lang: de
-        text: 'Veraltet. Aktualisere zur letzten Version. %1%'
+        text: 'Veraltet. Aktualisiere zur letzten Version. %1%'
     subs: [ '' ]
   - &incMaxLevelMods
     type: say
