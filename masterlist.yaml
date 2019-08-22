@@ -72,7 +72,7 @@ common:
       - lang: ru
         text: 'Из-за изменений в способе очистки в версии xEdit 4.0.x+, моды, что были проверены как чистые с предыдущими версиями xEdit могут вновь потребовать очистки. Руководство по запуску xEdit 4.0.x+ в режиме **Быстрой очистки** может быть найдено [здесь](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4).'
       - lang: de
-        text: 'Wegen Verbesserungen die dem Säuberungsprozess zugute gekommen sind mit der offiziellen Veröffentlichung von xEdit 4.0.x+, sämtliche Mods die als sauber verifiziert wurden mithilfe älterer Versionen von xEdit brauchen eventuell zusätzliche Säuberungen. Eine englische Anleitung zum ausführen von xEdit 4.0.x+ im **Schnell-Automatisch-Säubern** Modus kann [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4) aufgefunden werden.'
+        text: 'Wegen Verbesserungen die dem Säuberungsprozess mit der offiziellen Veröffentlichung von xEdit 4.0.x+ zugute gekommen sind, müssen eventuell sämtliche Mods die mithilfe älterer Versionen von xEdit als sauber verifiziert wurden, erneut gesäubert werden. Eine englische Anleitung zum Ausführen von xEdit 4.0.x+ im **Schnell-Automatisch-Säubern** Modus kann [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4) aufgefunden werden.'
       - lang: ko
         text: 'xEdit 4.0.x+ 공식 출시와 함께 소개된 향상된 청소 기능으로 인해, 구 버전의 xEdit로 검증되었던 모드는 추가적인 청소가 필요할 수 있습니다. xEdit 4.0.x+ **Quick Auto Clean** 모드 실행 설명서는 [여기](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4)에서 찾을 수 있습니다. '
       - lang: ja
@@ -87,7 +87,7 @@ common:
       - lang: ru
         text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: de
-        text: 'Es wird streng empfohlen keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden(Ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** wird [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
+        text: 'Es wird streng empfohlen, keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten, da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden (ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** werden [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
       - lang: ja
         text: '**navmeshの削除**を含むmodは使用しないことを強く推奨します。クラッシュの原因になります。**navmeshの削除**は手動で修正する必要があります(mod作成者が行う必要がある複雑なプロセスです)。**navmeshの削除**の詳細については[ここ](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)を参照してください。'
       - lang: pt
