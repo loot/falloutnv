@@ -50,6 +50,18 @@ common:
     type: say
     content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
 
+  - &requiresX
+    type: warn
+    content:
+      - lang: en
+        text: 'Requires: %1%'
+      - lang: ru
+        text: 'Требуется: %1%'
+      - lang: es
+        text: 'Requiere: %1%'
+      - lang: ja
+        text: '要: %1%'
+
 # Dirty Aliases
   - &dirtyPlugin
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
