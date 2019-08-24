@@ -533,6 +533,9 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
+  - name: 'YUPTTW.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *ttwGroup
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *ttwGroup
