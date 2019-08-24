@@ -477,6 +477,10 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
+    msg:
+      - <<: *requiresX
+        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
+        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
     tag:
       - Actors.ACBS
       - Actors.AIData
