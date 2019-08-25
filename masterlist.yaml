@@ -5743,4 +5743,9 @@ plugins:
       - crc: 0x0BA26C46
         <<: *dirtyPlugin
         itm: 13
-        udr: 0
+
+  - name: 'Static Battery Replacer.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'YUPTTW.esm' ]
+        condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", "3.2.2", >=)'
