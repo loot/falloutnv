@@ -277,6 +277,13 @@ common:
       - lang: ru
         text: '%1% не полностью совместим с этим модом. %2%'
 
+  - &updateToNVCE
+    type: say
+    content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
+  - &updateToYUP
+    type: say
+    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
+
   - &useOnlyOneX
     type: error
     content:
@@ -396,13 +403,6 @@ common:
     <<: *useVersionNon
     subs: [ 'Gun Runners Arsenal' ]
     condition: 'not active("GunRunnersArsenal.esm")'
-
-  - &updateToNVCE
-    type: say
-    content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
-  - &updateToYUP
-    type: say
-    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
 
 # Dirty Aliases
   - &dirtyPlugin
