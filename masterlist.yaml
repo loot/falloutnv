@@ -162,7 +162,9 @@ common:
 
   - &incWeatherImageSpace
     type: say
-    content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+    content:
+      - lang: en
+        text: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
 
   - &obsolete
     type: say
