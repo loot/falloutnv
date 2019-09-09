@@ -447,7 +447,7 @@ common:
         text: 'Плагин содержит дикие правки, кроме ITM, UDR записей и удаленных навмешей и может потребовать дополнительной ручной чистки, чтобы не пересекаться с другими модами. %1%'
     subs: [ '' ]
 
-# Dirty Aliases
+# Cleaning data
   - &dirtyPlugin
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
     info:
