@@ -154,7 +154,11 @@ common:
 
   - &incMaxLevelMods
     type: say
-    content: 'Incompatible with Other mods that change the max level.'
+    content:
+      - lang: en
+        text: 'Incompatible with Other mods that change the max level.'
+      - lang: de
+        text: 'Inkompatible mit anderen Mods, die das maximale Level verändern.'
 
   - &incWeatherImageSpace
     type: say
