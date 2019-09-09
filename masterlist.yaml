@@ -17,39 +17,6 @@ common:
     not file("TaleOfTwoWastelands.esm")
 
 # Messages
-  - &updateToNVCE
-    type: say
-    content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
-  - &updateToYUP
-    type: say
-    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
-  - &obsolete
-    type: say
-    content:
-      - lang: en
-        text: 'Obsolete. Update to the latest version. %1%'
-      - lang: da
-        text: 'Forældet. Opdatér til den nyeste version. %1%'
-      - lang: de
-        text: 'Veraltet. Aktualisiere zur letzten Version. %1%'
-      - lang: es
-        text: 'Obsoleto. Actualizar a la última versión. %1%'
-      - lang: ja
-        text: '旧式のプラグインです。最新版に更新してください。 %1%'
-      - lang: ko
-        text: '사용되지 않습니다. 최신 버전으로 업데이트하십시오. %1%'
-      - lang: ru
-        text: 'Устарело. Обновите до последней версии. %1%'
-      - lang: zh_CN
-        text: '已过时。请升级到最新版本。 %1%'
-    subs: [ '' ]
-  - &incMaxLevelMods
-    type: say
-    content: 'Incompatible with Other mods that change the max level.'
-  - &incWeatherImageSpace
-    type: say
-    content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
-
   - &alreadyInX
     type: error
     content:
@@ -102,6 +69,35 @@ common:
       - lang: zh_CN
         text: '不干净。"脏"数据是故意的，这是mod需要的功能。'
 
+  - &incMaxLevelMods
+    type: say
+    content: 'Incompatible with Other mods that change the max level.'
+
+  - &incWeatherImageSpace
+    type: say
+    content: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+
+  - &obsolete
+    type: say
+    content:
+      - lang: en
+        text: 'Obsolete. Update to the latest version. %1%'
+      - lang: da
+        text: 'Forældet. Opdatér til den nyeste version. %1%'
+      - lang: de
+        text: 'Veraltet. Aktualisiere zur letzten Version. %1%'
+      - lang: es
+        text: 'Obsoleto. Actualizar a la última versión. %1%'
+      - lang: ja
+        text: '旧式のプラグインです。最新版に更新してください。 %1%'
+      - lang: ko
+        text: '사용되지 않습니다. 최신 버전으로 업데이트하십시오. %1%'
+      - lang: ru
+        text: 'Устарело. Обновите до последней версии. %1%'
+      - lang: zh_CN
+        text: '已过时。请升级到最新版本。 %1%'
+    subs: [ '' ]
+
   - &requiresX
     type: warn
     content:
@@ -113,6 +109,13 @@ common:
         text: '要: %1%'
       - lang: ru
         text: 'Требуется: %1%'
+
+  - &updateToNVCE
+    type: say
+    content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
+  - &updateToYUP
+    type: say
+    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
 
 # Dirty Aliases
   - &dirtyPlugin
