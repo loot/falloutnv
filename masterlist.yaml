@@ -1194,6 +1194,7 @@ plugins:
   - name: 'AccuRifles.esm'
     req: [ *NVSE ]
   - name: 'Caliber.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -1204,11 +1205,14 @@ plugins:
       - Scripts
       - Stats
     dirty:
-      - crc: 0x38c75b04
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # 4.017
+      - <<: *quickClean
+        crc: 0x38C75B04
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 7
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x74A11A7D
+        util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
     tag:
       - Names
@@ -1367,16 +1371,16 @@ plugins:
     tag:
       - C.Light
   - name: 'Project Nevada - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
     tag:
       - Invent
-  - name: 'CFWNV-DLC.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'Project Nevada - Extra Options.esm'
-    after:
-      - 'nVamp - Core.esm'
+    clean:
+      # v2.5
+      - crc: 0x2345512B
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Equipment.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     after:
       - 'nVamp - Core.esm'
     tag:
@@ -1388,27 +1392,157 @@ plugins:
       - Relev
       - Scripts
       - Stats
+    clean:
+      # v2.5
+      - crc: 0x2B4F3224
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     tag:
       - Delev
       - Invent
       - Names
       - Stats
+    clean:
+      # v2.5
+      - crc: 0xB4A87776
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     tag:
       - Invent
+    clean:
+      # v2.5
+      - crc: 0x2E724F8C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+    clean:
+      # v1.3
+      - crc: 0x4D7923AF
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0xA66A29E4
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Honest Hearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+    clean:
+      # v1.3
+      - crc: 0xE6D45D29
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - "Project Nevada - Old World Blues (No Cyberware).esp"
+    tag:
+      - Invent
+    clean:
+      # v1.34
+      - crc: 0xF61652C7
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - "Project Nevada - Old World Blues.esp"
+    clean:
+      # v1.34
+      - crc: 0xA2C10055
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Lonesome Road.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0x833E810B
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0xB8B0388F
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    dirty:
+      # v1.34
+      - <<: *quickClean
+        crc: 0xA0368AA6
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0xC0002069
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - WMX.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+    clean:
+      # v1.3
+      - crc: 0xC0DA6CFD
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - WME.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+    clean:
+      - crc: 0xBC51B676
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - EVE All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      - crc: 0x84EE1AF7
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Extra Options.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    after:
+      - 'nVamp - Core.esm'
+    clean:
+      # v1.3
+      - crc: 0xAB2F211D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance Complete.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
     tag:
       - Relev
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xe0e2c3c0
-        itm: 22
+    clean:
+      # v1.3
+      - crc: 0x5A9BCC6D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
     tag:
       - Actors.DeathItem
       - Invent
       - Relev
+    dirty:
+      # v1.3
+      - <<: *quickClean
+        crc: 0xB68CE3C4
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0xF1A74B56
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Cyberware Additions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    clean:
+      # v1.3
+      - crc: 0xBBFBAFD5
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - TTW.esp'
     url: [ 'https://taleoftwowastelands.com/content/project-nevada-w-extra-options-ttw-patch' ]
     tag:
@@ -1417,6 +1551,9 @@ plugins:
       - Invent
       - Names
       - Relev
+  - name: 'CFWNV-DLC.esm'
+    after:
+      - 'nVamp - Core.esm'
   - name: 'Psiclones.esm'
     tag:
       - Names
@@ -1440,30 +1577,114 @@ plugins:
       - Actors.ACBS
       - Actors.AIPackages
   - name: 'Weapon Mod Expansion.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
     tag:
       - Names
+    clean:
+      # v1.101
+      - crc: 0x2CBA5914
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Weapon Mod Expansion.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    inc:
+      - 'WeaponModsExpanded.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x685F6957
+        util: 'FNVEdit v4.0.2f'
   - name: 'WME - Dead Money.esm'
     after:
       - 'nVamp - Core.esm'
+    msg: [ *obsolete ]
   - name: 'WME - Honest Hearts.esm'
     after:
       - 'nVamp - Core.esm'
+    msg: [ *obsolete ]
   - name: 'WME - Old World Blues.esm'
     after:
       - 'nVamp - Core.esm'
+    msg: [ *obsolete ]
   - name: 'WME - GRA.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
     after:
       - 'nVamp - Core.esm'
+    clean:
+      - crc: 0x9CEED987
+        util: 'FNVEdit v4.0.2f'
   - name: 'WME - GRA Light.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
     after:
       - 'nVamp - Core.esm'
   - name: 'WME - DLCs.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
     after:
       - 'nVamp - Core.esm'
     inc:
       - 'WME - Dead Money.esm'
       - 'WME - Honest Hearts.esm'
       - 'WME - Old World Blues.esm'
+    clean:
+      - crc: 0x5092BAC5
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - DLCs.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    inc:
+      - 'WME - Dead Money.esp'
+      - 'WME - Honest Hearts.esp'
+      - 'WME - Old World Blues.esp'
+      - 'WME - DLCs Arenovalis.esp'
+    clean:
+      - crc: 0xD06CE844
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - DLCs Arenovalis.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    inc:
+      - 'WME - Dead Money.esp'
+      - 'WME - Honest Hearts.esp'
+      - 'WME - Old World Blues.esp'
+      - 'WME - DLCs.esp'
+    clean:
+      - crc: 0xDBCBAD04
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - All Weapons.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0x831711EA
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Arenovalis.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0x3BE2184E
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Complete.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0x5E6F4D4E
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Just Guns.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0xEC0FFB95
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Unique Integration.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0xD1938579
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Vendor Reform.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0xE7E8379C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - GRA - Weapon Integration.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    clean:
+      - crc: 0x14C4625C
+        util: 'FNVEdit v4.0.2f'
   - name: 'Clean-Deluxe FNV.esm'
     inc:
       - 'Performance of the Gods.esp'
@@ -2872,14 +3093,6 @@ plugins:
     tag:
       - Names
       - Invent
-  - name: 'Project Nevada - Dead Money.esp'
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
-  - name: 'Project Nevada - Honest Hearts.esp'
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
   - name: 'Project Nevada - Dead Money + Honest Heart Patch.esp'
     inc:
       - 'Project Nevada - Dead Money.esp'
@@ -2894,14 +3107,6 @@ plugins:
     msg:
       - type: say
         content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
-  - name: 'Project Nevada - Old World Blues.esp'
-    inc:
-      - "Project Nevada - Old World Blues (No Cyberware).esp"
-    tag:
-      - Invent
-  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
-    inc:
-      - "Project Nevada - Old World Blues.esp"
   - name: 'Project Nevada Rebalance Complete.esp'
     dirty:
       - crc: 0xE0E2C3C0
@@ -4203,6 +4408,7 @@ plugins:
     tag:
       - Names
   - name: 'WeaponModsExpanded.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
       - 'Weapon Mod Expansion.esm'
@@ -4218,6 +4424,83 @@ plugins:
       - WeaponMods
     after:
       - 'MMUE-CP-EVE.esp'
+    dirty:
+      # v1.1.4
+      - <<: *quickClean
+        crc: 0x92A9B6AD
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+    clean:
+      - crc: 0xF959C3B2
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WMX-ArenovalisTextures.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Graphics
+      - NoMerge
+    clean:
+      # v1.2.4
+      - crc: 0x2BB62550
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WMX-DeadMoney.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-HonestHearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-OldWorldBlues.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-LonesomeRoad.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-GunRunnersArsenal.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-DLCMerged.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
+      - WeaponMods
+    clean:
+      # v1.0.2
+      - crc: 0xB8E04023
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WMX-POPMerged.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    clean:
+      # v1.0.2
+      - crc: 0x852FA7C2
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WMX-EVE-AllDLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Invent
+      - WeaponMods
+  - name: 'WMX-EVE-AllDLCMerged.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
+    tag:
+      - Graphics
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x4256050B
+        util: 'FNVEdit v4.0.2f'
   - name: 'WMXUE.esp'
     inc:
       - 'RH_IRONSIGHTS_NV.esm'
@@ -4258,12 +4541,6 @@ plugins:
   - name: 'WMX-Arwen_NV_Realism.esp'
     inc:
       - 'WMX-ShotgunCommando.esp'
-  - name: 'Project Nevada - WMX.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - WeaponMods
   - name: 'WMXUE-PN.esp'
     tag:
       - Graphics
@@ -4287,50 +4564,12 @@ plugins:
       - Delev
       - Invent
       - Relev
-  - name: 'WMX-DLCMerged.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Sound
-      - Stats
-      - WeaponMods
   - name: 'ACS-WMXModernWeapons.esp'
     tag:
       - Invent
-  - name: 'WMX-DeadMoney.esp'
-    tag:
-      - Invent
-      - WeaponMods
   - name: 'Real Weapon Names - WMX - Dead Money.esp'
     tag:
       - Names
-  - name: 'WMX-HonestHearts.esp'
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-OldWorldBlues.esp'
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-LonesomeRoad.esp'
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-GunRunnersArsenal.esp'
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-EVE-AllDLC.esp'
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-EVE-AllDLCMerged.esp'
-    tag:
-      - Graphics
-      - Stats
-      - WeaponMods
   - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
     inc:
       - 'Improved Sound FX - DM.esp'
@@ -4344,10 +4583,6 @@ plugins:
   - name: 'Improved Sound FX - WMX - GRA Sharing Fix.esp'
     tag:
       - Sound
-  - name: 'WMX-ArenovalisTextures.esp'
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'ScientistPackWMX.esp'
     inc:
       - 'ScientistPack.esp'
@@ -4356,14 +4591,6 @@ plugins:
       - 'WeaponModsExpanded.esp'
     tag:
       - Graphics
-  - name: 'Weapon Mod Expansion.esp'
-    inc:
-      - 'WeaponModsExpanded.esp'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-      - WeaponMods
   - name: 'WME - 00 Commando.esp'
     tag:
       - Graphics
@@ -4412,12 +4639,6 @@ plugins:
   - name: 'BIS - Weapon Mod Expansion.esp'
     tag:
       - Names
-  - name: 'Project Nevada - WME.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - WeaponMods
   - name: 'BIS - WME - Dead Money.esp'
     tag:
       - Names
@@ -4426,18 +4647,6 @@ plugins:
   - name: 'BIS - WME - Honest Hearts.esp'
     tag:
       - Names
-  - name: 'WME - DLCs.esp'
-    inc:
-      - 'WME - Dead Money.esp'
-      - 'WME - Honest Hearts.esp'
-      - 'WME - Old World Blues.esp'
-      - 'WME - DLCs Arenovalis.esp'
-  - name: 'WME - DLCs Arenovalis.esp'
-    inc:
-      - 'WME - Dead Money.esp'
-      - 'WME - Honest Hearts.esp'
-      - 'WME - Old World Blues.esp'
-      - 'WME - DLCs.esp'
   - name: 'BIS - WME - Dead Money Arenovalis Retex.esp'
     tag:
       - Names
@@ -4464,6 +4673,15 @@ plugins:
       - 'Improved Sound FX.esp'
       - "Project Nevada - Gun Runners' Arsenal.esp"
       - 'dD - Enhanced Blood Main NV.esp'
+    dirty:
+      # v1.18
+      - <<: *quickClean
+        crc: 0x6C17EC3E
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0xB79DCBAF
+        util: 'FNVEdit v4.0.2f'
   - name: 'Improved Sound FX - EVE.esp'
     tag:
       - Sound
