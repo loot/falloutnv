@@ -1316,6 +1316,28 @@ plugins:
     tag:
       - C.Climate
       - C.Light
+  - name: 'NVInteriors_Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    clean:
+      # v2.1.1
+      - crc: 0x710F6308
+        util: 'FNVEdit v4.0.2f'
+  - name: 'NVInteriors_ComboEdition.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+    tag:
+      - Graphics
+    dirty:
+      # v1.3.4
+      - <<: *reqManualFix
+        crc: 0x70381CEB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 4
   - name: 'NVInteriors_WastelandEditon.esm'
     inc:
       - 'NVInteriors_WastelandEditonAWOP.esm'
@@ -1328,15 +1350,6 @@ plugins:
       - 'NVInteriors_ComboEdition_AWOP.esm'
       - 'TTWInteriorsProject_Combo.esm'
       - 'TTWInteriorsProject_Combo_AWOP.esm'
-  - name: 'NVInteriors_ComboEdition.esm'
-    inc:
-      - 'NVInteriors_WastelandEdition.esm'
-      - 'NVInteriors_WastelandEditonAWOP.esm'
-      - 'NVInteriors_ComboEdition_AWOP.esm'
-      - 'TTWInteriorsProject_Combo.esm'
-      - 'TTWInteriorsProject_Combo_AWOP.esm'
-    tag:
-      - Graphics
   - name: 'NVInteriors_ComboEdition_AWOP.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
@@ -1365,14 +1378,28 @@ plugins:
       - Invent
       - Names
   - name: 'Interior Lighting Overhaul - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     tag:
       - C.Climate
       - C.Light
       - C.Owner
       - Destructible
+    dirty:
+      # v6.9
+      - <<: *quickClean
+        crc: 0x2B1102F9
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      - crc: 0xF135F5C1
+        util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - L38PS.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     tag:
       - C.Light
+    clean:
+      - crc: 0x60C4877D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
@@ -4989,6 +5016,7 @@ plugins:
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas.esp'
@@ -4996,6 +5024,9 @@ plugins:
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
+    clean:
+      - crc: 0x393BF52E
+        util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     group: *lightingGroup
     inc:
@@ -5133,6 +5164,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
@@ -5144,12 +5176,10 @@ plugins:
       - C.Light
       - C.LTemplate
       - C.Owner
-    dirty:
-      - crc: 0xE5B86A01
-        <<: *dirtyPlugin # FNVEdit 3.0.33
-        itm: 7
-        udr: 0
-        nav: 0
+    clean:
+      # v6.9
+      - crc: 0xF3439EA3
+        util: 'FNVEdit v4.0.2f'
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     group: *lightingGroup
     after:
