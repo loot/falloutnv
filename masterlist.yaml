@@ -3313,18 +3313,27 @@ plugins:
     tag:
       - Sound
   - name: 'awilderwasteland.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
     inc:
       - 'awilderwastelandnobenny.esp'
     tag:
       - AI.Packages
       - Stats
     dirty:
-      - crc: 0xed3d7bb3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xED3D7BB3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
+    clean:
+      - crc: 0x0FD4B374
+        util: 'FNVEdit v4.0.2f'
   - name: 'awilderwastelandnobenny.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
     inc:
       - 'awilderwasteland.esp'
+    clean:
+      - crc: 0xEDF9A5A4
+        util: 'FNVEdit v4.0.2f'
   - name: 'betsybrahmin.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
