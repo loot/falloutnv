@@ -3927,10 +3927,8 @@ plugins:
       - crc: 0x0FFAA819
         util: 'FNVEdit v4.0.2f'
   - name: 'FCO.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    msg: [ *obsolete ]
   - name: 'FCO - Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
@@ -3941,20 +3939,10 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'FCO - Playable Races + Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
-    after:
-      - 'Roberts_NewVegas.esp'
-    tag:
-      - Body-M
-      - Names
+    msg: [ *obsolete ]
   - name: 'FCO - OWB.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0x15a3bcc8
-        itm: 18
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    msg: [ *obsolete ]
   - name: 'FCO - Willow.esp'
     tag:
       - Actors.ACBS
