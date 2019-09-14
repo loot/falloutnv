@@ -1217,8 +1217,17 @@ plugins:
       - crc: 0x74A11A7D
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - Names
+    clean:
+      - crc: 0x303F8818
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXhonesthearts.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    clean:
+      - crc: 0xAE91AF06
+        util: 'FNVEdit v4.0.2f'
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
