@@ -5744,12 +5744,9 @@ plugins:
     tag:
       - Body-M
       - Graphics
-    dirty:
-      - crc: 0x8162C3BA
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xA3ACB207
+        util: 'FNVEdit v4.0.2f'
   - name: 'RobCo Certified.esm'
     req: [ *NVSE ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
