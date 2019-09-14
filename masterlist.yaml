@@ -4930,46 +4930,42 @@ plugins:
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
-  - name: 'Nevada Skies.esp'
+  - name: 'NevadaSkies.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
     inc:
       - 'Nevada Skies - URWLified.esp'
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg:
-      - type: warn
-        content: '"Contains unnecessary landscape edits."'
     tag:
       - C.Climate
       - C.Light
+    clean:
+      - crc: 0x4494A10F
+        util: 'FNVEdit v4.0.2f'
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    dirty:
-      - crc: 0xD6B9E659
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 4
-        udr: 0
-        nav: 0
+    msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLified.esp'
     inc:
       - 'Nevada Skies.esp'
       - 'Nevada Skies - URWLHH.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg: [ *obsolete ]
     tag:
       - C.Climate
       - C.Light
+    msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLHH.esp'
     inc:
       - 'Nevada Skies.esp'
       - 'Nevada Skies - URWLified.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
       - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg: [ *obsolete ]
     tag:
       - C.Climate
       - C.Light
+    msg: [ *obsolete ]
   - name: 'NSkies - URWLNV.esp'
     msg: [ *obsolete ]
   - name: 'NSkies URWLifiedOWB.esp'
