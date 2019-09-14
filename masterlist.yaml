@@ -5467,10 +5467,16 @@ plugins:
     tag:
       - Relations
     dirty:
-      - crc: 0x71715D56
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 0
+      # v1.29
+      - <<: *reqManualFix
+        crc: 0x71715D56
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         udr: 2
+        nav: 4
+      # v1.29 - after first QAC
+      - <<: *reqManualFix
+        crc: 0x456E6B31
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
   - name: 'Russell.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/50107' ]
