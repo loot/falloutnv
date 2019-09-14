@@ -5946,11 +5946,13 @@ plugins:
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
-      - crc: 0x1E04D898
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x1E04D898
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 10
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xAF85969D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
@@ -5958,11 +5960,13 @@ plugins:
       - Graphics
       - Stats
     dirty:
-      - crc: 0xE0D9629C
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x718FD4CB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x695E7A34
+        util: 'FNVEdit v4.0.2f'
   - name: 'REPCONN Test Site Fixes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41114']
     tag:
