@@ -1501,6 +1501,11 @@ plugins:
     clean:
       - crc: 0xBC51B676
         util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - EVE All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      - crc: 0x84EE1AF7
+        util: 'FNVEdit v4.0.2f'
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
