@@ -1126,6 +1126,9 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+    clean:
+      - crc: 0xD8252B38
+        util: 'FNVEdit v4.0.2f'
   - name: 'NVCE Main.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -3920,6 +3923,9 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+    clean:
+      - crc: 0x0FFAA819
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO.esp'
     tag:
       - Actors.ACBS
@@ -3928,12 +3934,11 @@ plugins:
   - name: 'FCO - Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xa03db8ae
-        itm: 1
     tag:
       - Body-M
+    clean:
+      - crc: 0xDA98F6B1
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO - Playable Races + Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after:
@@ -3959,16 +3964,13 @@ plugins:
     tag:
       - NPC.Race
       - NpcFaces
-  - name: 'FCO - Glowing One.esp'
+  - name: 'FCO - GlowingOne.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Scripts
-    dirty:
+    clean:
       - crc: 0x0E746E1D
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1
-        udr: 0
-        nav: 0
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO - The New Bison Steve.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
