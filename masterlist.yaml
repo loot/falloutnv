@@ -1415,6 +1415,71 @@ plugins:
       # v2.5
       - crc: 0x2E724F8C
         util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+    clean:
+      # v1.3
+      - crc: 0x4D7923AF
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0xA66A29E4
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Honest Hearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
+      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
+    clean:
+      # v1.3
+      - crc: 0xE6D45D29
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - "Project Nevada - Old World Blues (No Cyberware).esp"
+    tag:
+      - Invent
+    clean:
+      # v1.34
+      - crc: 0xF61652C7
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    inc:
+      - "Project Nevada - Old World Blues.esp"
+    clean:
+      # v1.34
+      - crc: 0xA2C10055
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Lonesome Road.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0x833E810B
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    clean:
+      # v1.3
+      - crc: 0xB8B0388F
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    dirty:
+      # v1.34
+      - <<: *quickClean
+        crc: 0xA0368AA6
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0xC0002069
+        util: 'FNVEdit v4.0.2f'
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
@@ -2896,14 +2961,6 @@ plugins:
     tag:
       - Names
       - Invent
-  - name: 'Project Nevada - Dead Money.esp'
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
-  - name: 'Project Nevada - Honest Hearts.esp'
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
   - name: 'Project Nevada - Dead Money + Honest Heart Patch.esp'
     inc:
       - 'Project Nevada - Dead Money.esp'
@@ -2918,14 +2975,6 @@ plugins:
     msg:
       - type: say
         content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
-  - name: 'Project Nevada - Old World Blues.esp'
-    inc:
-      - "Project Nevada - Old World Blues (No Cyberware).esp"
-    tag:
-      - Invent
-  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
-    inc:
-      - "Project Nevada - Old World Blues.esp"
   - name: 'Project Nevada Rebalance Complete.esp'
     dirty:
       - crc: 0xE0E2C3C0
