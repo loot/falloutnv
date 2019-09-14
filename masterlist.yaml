@@ -1507,20 +1507,42 @@ plugins:
       - crc: 0x84EE1AF7
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Extra Options.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
     after:
       - 'nVamp - Core.esm'
+    clean:
+      # v1.3
+      - crc: 0xAB2F211D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance Complete.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
     tag:
       - Relev
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xe0e2c3c0
-        itm: 22
+    clean:
+      # v1.3
+      - crc: 0x5A9BCC6D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
     tag:
       - Actors.DeathItem
       - Invent
       - Relev
+    dirty:
+      # v1.3
+      - <<: *quickClean
+        crc: 0xB68CE3C4
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0xF1A74B56
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Cyberware Additions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    clean:
+      # v1.3
+      - crc: 0xBBFBAFD5
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - TTW.esp'
     url: [ 'https://taleoftwowastelands.com/content/project-nevada-w-extra-options-ttw-patch' ]
     tag:
