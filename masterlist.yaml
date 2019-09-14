@@ -1371,16 +1371,16 @@ plugins:
     tag:
       - C.Light
   - name: 'Project Nevada - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
     tag:
       - Invent
-  - name: 'CFWNV-DLC.esm'
-    after:
-      - 'nVamp - Core.esm'
-  - name: 'Project Nevada - Extra Options.esm'
-    after:
-      - 'nVamp - Core.esm'
+    clean:
+      # v2.5
+      - crc: 0x2345512B
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Equipment.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     after:
       - 'nVamp - Core.esm'
     tag:
@@ -1392,15 +1392,35 @@ plugins:
       - Relev
       - Scripts
       - Stats
+    clean:
+      # v2.5
+      - crc: 0x2B4F3224
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     tag:
       - Delev
       - Invent
       - Names
       - Stats
+    clean:
+      # v2.5
+      - crc: 0xB4A87776
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     tag:
       - Invent
+    clean:
+      # v2.5
+      - crc: 0x2E724F8C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CFWNV-DLC.esm'
+    after:
+      - 'nVamp - Core.esm'
+  - name: 'Project Nevada - Extra Options.esm'
+    after:
+      - 'nVamp - Core.esm'
   - name: 'Project Nevada - Rebalance Complete.esp'
     tag:
       - Relev
