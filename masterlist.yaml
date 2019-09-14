@@ -5700,11 +5700,13 @@ plugins:
       - C.Light
     after: [ 'GRARG.esp' ]
     dirty:
-      - crc: 0xB5824C7A
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0xB5824C7A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 8
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xCB44400D
+        util: 'FNVEdit v4.0.2f'
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
