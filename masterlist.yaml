@@ -1126,6 +1126,9 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+    clean:
+      - crc: 0xD8252B38
+        util: 'FNVEdit v4.0.2f'
   - name: 'NVCE Main.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39325' ]
     tag:
@@ -1214,8 +1217,17 @@ plugins:
       - crc: 0x74A11A7D
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
       - Names
+    clean:
+      - crc: 0x303F8818
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXhonesthearts.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    clean:
+      - crc: 0xAE91AF06
+        util: 'FNVEdit v4.0.2f'
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
@@ -1313,6 +1325,28 @@ plugins:
     tag:
       - C.Climate
       - C.Light
+  - name: 'NVInteriors_Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    clean:
+      # v2.1.1
+      - crc: 0x710F6308
+        util: 'FNVEdit v4.0.2f'
+  - name: 'NVInteriors_ComboEdition.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+    tag:
+      - Graphics
+    dirty:
+      # v1.3.4
+      - <<: *reqManualFix
+        crc: 0x70381CEB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 4
   - name: 'NVInteriors_WastelandEditon.esm'
     inc:
       - 'NVInteriors_WastelandEditonAWOP.esm'
@@ -1325,15 +1359,6 @@ plugins:
       - 'NVInteriors_ComboEdition_AWOP.esm'
       - 'TTWInteriorsProject_Combo.esm'
       - 'TTWInteriorsProject_Combo_AWOP.esm'
-  - name: 'NVInteriors_ComboEdition.esm'
-    inc:
-      - 'NVInteriors_WastelandEdition.esm'
-      - 'NVInteriors_WastelandEditonAWOP.esm'
-      - 'NVInteriors_ComboEdition_AWOP.esm'
-      - 'TTWInteriorsProject_Combo.esm'
-      - 'TTWInteriorsProject_Combo_AWOP.esm'
-    tag:
-      - Graphics
   - name: 'NVInteriors_ComboEdition_AWOP.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
@@ -1362,14 +1387,28 @@ plugins:
       - Invent
       - Names
   - name: 'Interior Lighting Overhaul - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     tag:
       - C.Climate
       - C.Light
       - C.Owner
       - Destructible
+    dirty:
+      # v6.9
+      - <<: *quickClean
+        crc: 0x2B1102F9
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      - crc: 0xF135F5C1
+        util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - L38PS.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     tag:
       - C.Light
+    clean:
+      - crc: 0x60C4877D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
@@ -2702,11 +2741,14 @@ plugins:
       - 'populatedcasino-medium.esp'
       - 'populatedcasino-light.esp'
     dirty:
-      - crc: 0x9EAE96FF
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x9EAE96FF
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 48
         udr: 2
-        nav: 0
+    clean:
+      - crc: 0x499083D4
+        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-medium.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -2714,11 +2756,14 @@ plugins:
       - 'populatedcasino.esp'
       - 'populatedcasino-light.esp'
     dirty:
-      - crc: 0x39574E5A
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x39574E5A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 47
         udr: 8
-        nav: 0
+    clean:
+      - crc: 0x9DCD85B4
+        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-light.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -2726,11 +2771,14 @@ plugins:
       - 'populatedcasino.esp'
       - 'populatedcasino-medium.esp'
     dirty:
-      - crc: 0xC7507F30
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0xFAB23559
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 46
         udr: 16
-        nav: 0
+    clean:
+      - crc: 0x72F47F2E
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
@@ -3107,13 +3155,6 @@ plugins:
     msg:
       - type: say
         content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
-  - name: 'Project Nevada Rebalance Complete.esp'
-    dirty:
-      - crc: 0xE0E2C3C0
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 22
-        udr: 0
-        nav: 0
   - name: 'Project Brazil Project Nevada Patch.esp'
     tag:
       - Invent
@@ -3311,18 +3352,27 @@ plugins:
     tag:
       - Sound
   - name: 'awilderwasteland.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
     inc:
       - 'awilderwastelandnobenny.esp'
     tag:
       - AI.Packages
       - Stats
     dirty:
-      - crc: 0xed3d7bb3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xED3D7BB3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
+    clean:
+      - crc: 0x0FD4B374
+        util: 'FNVEdit v4.0.2f'
   - name: 'awilderwastelandnobenny.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
     inc:
       - 'awilderwasteland.esp'
+    clean:
+      - crc: 0xEDF9A5A4
+        util: 'FNVEdit v4.0.2f'
   - name: 'betsybrahmin.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
     inc:
@@ -3909,36 +3959,26 @@ plugins:
       - Names
       - NPC.Race
       - NpcFaces
+    clean:
+      - crc: 0x0FFAA819
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    msg: [ *obsolete ]
   - name: 'FCO - Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xa03db8ae
-        itm: 1
     tag:
       - Body-M
+    clean:
+      - crc: 0xDA98F6B1
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO - Playable Races + Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
-    after:
-      - 'Roberts_NewVegas.esp'
-    tag:
-      - Body-M
-      - Names
+    msg: [ *obsolete ]
   - name: 'FCO - OWB.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0x15a3bcc8
-        itm: 18
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    msg: [ *obsolete ]
   - name: 'FCO - Willow.esp'
     tag:
       - Actors.ACBS
@@ -3948,16 +3988,13 @@ plugins:
     tag:
       - NPC.Race
       - NpcFaces
-  - name: 'FCO - Glowing One.esp'
+  - name: 'FCO - GlowingOne.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
       - Scripts
-    dirty:
+    clean:
       - crc: 0x0E746E1D
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1
-        udr: 0
-        nav: 0
+        util: 'FNVEdit v4.0.2f'
   - name: 'FCO - The New Bison Steve.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     tag:
@@ -4823,22 +4860,23 @@ plugins:
   - name: 'Vurt''s Trees & Grass.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
-  - name: 'Vurt''s WFO.esp'
+  - name: 'Vurt''s WFO.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    inc:
-      - 'Vurt''s Trees & Grass.esp'
     after:
       - 'Flora Overhaul.esp'
     dirty:
-      - <<: *dirtyPlugin
-        crc: 0x31b1b874
-        itm: 377
-      - <<: *dirtyPlugin
-        crc: 0x71755f08
-        itm: 356
-    msg:
-      - type: warn
-        content: 'Do not clean UDR records from this mod, otherwise, the game will crash on startup.'
+      # v3.2b
+      - <<: *quickClean
+        crc: 0xA22C920D
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 25
+    clean:
+      # v3.2b - after QAC
+      - crc: 0xF2DC4792
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Vurt''s WFO.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
+    msg: [ *obsolete ]
   - name: 'Vurt''s WFO [Lite].esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     inc:
@@ -4916,58 +4954,24 @@ plugins:
   - name: 'Western Sky.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     msg: [ *obsolete ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-    inc:
-      - 'Nevada Skies.esp, Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
-  - name: 'Nevada Skies.esp'
-    inc:
-      - 'Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg:
-      - type: warn
-        content: '"Contains unnecessary landscape edits."'
+  - name: 'NevadaSkies.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
     tag:
       - C.Climate
       - C.Light
+    clean:
+      - crc: 0x4494A10F
+        util: 'FNVEdit v4.0.2f'
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    dirty:
-      - crc: 0xD6B9E659
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 4
-        udr: 0
-        nav: 0
+    msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLified.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
-    tag:
-      - C.Climate
-      - C.Light
   - name: 'Nevada Skies - URWLHH.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLified.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
-    tag:
-      - C.Climate
-      - C.Light
   - name: 'NSkies - URWLNV.esp'
     msg: [ *obsolete ]
   - name: 'NSkies URWLifiedOWB.esp'
@@ -5021,6 +5025,7 @@ plugins:
     tag:
       - C.Light
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     inc:
       - 'ILO - Fallout New Vegas.esp'
@@ -5028,6 +5033,9 @@ plugins:
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     tag:
       - C.Light
+    clean:
+      - crc: 0x393BF52E
+        util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
     group: *lightingGroup
     inc:
@@ -5165,6 +5173,7 @@ plugins:
     tag:
       - C.Light
   - name: 'ILO - NVInteriors Project.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
@@ -5176,12 +5185,10 @@ plugins:
       - C.Light
       - C.LTemplate
       - C.Owner
-    dirty:
-      - crc: 0xE5B86A01
-        <<: *dirtyPlugin # FNVEdit 3.0.33
-        itm: 7
-        udr: 0
-        nav: 0
+    clean:
+      # v6.9
+      - crc: 0xF3439EA3
+        util: 'FNVEdit v4.0.2f'
   - name: 'ILO - NVInteriors Project - AWOP.esp'
     group: *lightingGroup
     after:
@@ -5456,10 +5463,10 @@ plugins:
     tag:
       - Relations
     dirty:
-      - crc: 0x11d6afea # v1.47
-        <<: *dirtyPlugin
-        itm: 0
-        udr: 0
+      # v1.47
+      - <<: *reqManualFix
+        crc: 0x11D6AFEA
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 2
   - name: 'TheInheritance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49012' ]
@@ -5469,10 +5476,16 @@ plugins:
     tag:
       - Relations
     dirty:
-      - crc: 0x71715D56
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 0
+      # v1.29
+      - <<: *reqManualFix
+        crc: 0x71715D56
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         udr: 2
+        nav: 4
+      # v1.29 - after first QAC
+      - <<: *reqManualFix
+        crc: 0x456E6B31
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
   - name: 'Russell.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/50107' ]
@@ -5687,11 +5700,13 @@ plugins:
       - C.Light
     after: [ 'GRARG.esp' ]
     dirty:
-      - crc: 0xB5824C7A
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0xB5824C7A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 8
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xCB44400D
+        util: 'FNVEdit v4.0.2f'
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
@@ -5731,12 +5746,9 @@ plugins:
     tag:
       - Body-M
       - Graphics
-    dirty:
-      - crc: 0x8162C3BA
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xA3ACB207
+        util: 'FNVEdit v4.0.2f'
   - name: 'RobCo Certified.esm'
     req: [ *NVSE ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
@@ -5936,11 +5948,13 @@ plugins:
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
-      - crc: 0x1E04D898
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x1E04D898
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 10
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0xAF85969D
+        util: 'FNVEdit v4.0.2f'
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
@@ -5948,11 +5962,13 @@ plugins:
       - Graphics
       - Stats
     dirty:
-      - crc: 0xE0D9629C
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x718FD4CB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x695E7A34
+        util: 'FNVEdit v4.0.2f'
   - name: 'REPCONN Test Site Fixes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41114']
     tag:
