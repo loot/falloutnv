@@ -5454,10 +5454,10 @@ plugins:
     tag:
       - Relations
     dirty:
-      - crc: 0x11d6afea # v1.47
-        <<: *dirtyPlugin
-        itm: 0
-        udr: 0
+      # v1.47
+      - <<: *reqManualFix
+        crc: 0x11D6AFEA
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 2
   - name: 'TheInheritance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49012' ]
