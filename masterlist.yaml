@@ -1491,6 +1491,16 @@ plugins:
       # v1.3
       - crc: 0xC0DA6CFD
         util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - WME.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+    clean:
+      - crc: 0xBC51B676
+        util: 'FNVEdit v4.0.2f'
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
@@ -4602,12 +4612,6 @@ plugins:
   - name: 'BIS - Weapon Mod Expansion.esp'
     tag:
       - Names
-  - name: 'Project Nevada - WME.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - WeaponMods
   - name: 'BIS - WME - Dead Money.esp'
     tag:
       - Names
