@@ -4918,25 +4918,11 @@ plugins:
   - name: 'Western Sky.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     msg: [ *obsolete ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-    inc:
-      - 'Nevada Skies.esp, Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    inc:
-      - 'Nevada Skies - URWLified.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     tag:
       - C.Climate
       - C.Light
@@ -4947,24 +4933,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
     msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLified.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLHH.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    tag:
-      - C.Climate
-      - C.Light
     msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLHH.esp'
-    inc:
-      - 'Nevada Skies.esp'
-      - 'Nevada Skies - URWLified.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-      - 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    tag:
-      - C.Climate
-      - C.Light
     msg: [ *obsolete ]
   - name: 'NSkies - URWLNV.esp'
     msg: [ *obsolete ]
