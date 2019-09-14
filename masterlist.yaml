@@ -2702,11 +2702,14 @@ plugins:
       - 'populatedcasino-medium.esp'
       - 'populatedcasino-light.esp'
     dirty:
-      - crc: 0x9EAE96FF
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x9EAE96FF
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 48
         udr: 2
-        nav: 0
+    clean:
+      - crc: 0x499083D4
+        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-medium.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -2714,11 +2717,14 @@ plugins:
       - 'populatedcasino.esp'
       - 'populatedcasino-light.esp'
     dirty:
-      - crc: 0x39574E5A
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0x39574E5A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 47
         udr: 8
-        nav: 0
+    clean:
+      - crc: 0x9DCD85B4
+        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-light.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -2726,11 +2732,14 @@ plugins:
       - 'populatedcasino.esp'
       - 'populatedcasino-medium.esp'
     dirty:
-      - crc: 0xC7507F30
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      - <<: *quickClean
+        crc: 0xFAB23559
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 46
         udr: 16
-        nav: 0
+    clean:
+      - crc: 0x72F47F2E
+        util: 'FNVEdit v4.0.2f'
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
