@@ -3116,13 +3116,6 @@ plugins:
     msg:
       - type: say
         content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
-  - name: 'Project Nevada Rebalance Complete.esp'
-    dirty:
-      - crc: 0xE0E2C3C0
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 22
-        udr: 0
-        nav: 0
   - name: 'Project Brazil Project Nevada Patch.esp'
     tag:
       - Invent
