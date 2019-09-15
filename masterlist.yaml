@@ -5853,6 +5853,7 @@ plugins:
     tag:
       - C.Light
   - name: 'TrooperOverhaul-Dragbody.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54978' ]
     tag:
       - Actors.ACBS
       - Deflst
@@ -5864,11 +5865,14 @@ plugins:
       - Sound
       - Stats
     dirty:
-      - crc: 0x40b5e4bc
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # v1.0
+      - <<: *quickClean
+        crc: 0x40B5E4BC
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x4A0CAB7E
+        util: 'FNVEdit v4.0.2f'
   - name: 'Pacersgambit.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46584' ]
     tag:
