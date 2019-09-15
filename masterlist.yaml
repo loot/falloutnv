@@ -6358,11 +6358,15 @@ plugins:
         udr: 8226
     msg: [ *corrupt ]
   - name: 'ExplosivesImmunityFix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60496' ]
     dirty:
-      - crc: 0xEC0F1920
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 0
+      - <<: *quickClean
+        crc: 0xEC0F1920
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+    clean:
+      - crc: 0xFFF2EB3D
+        util: 'FNVEdit v4.0.2f'
   - name: 'lexx_brahmin-variant.esp'
     dirty:
       - crc: 0xB596767C
