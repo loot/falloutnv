@@ -6004,6 +6004,7 @@ plugins:
       - Factions
       - Scripts
   - name: 'ILO - New Vegas Bounties.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
@@ -6015,12 +6016,15 @@ plugins:
       - C.Light
       - C.LTemplate
     dirty:
-      - crc: 0xD7D915C3
-        <<: *dirtyPlugin # FNVEdit 3.0.33
+      - <<: *quickClean
+        crc: 0xD7D915C3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x64784791
+        util: 'FNVEdit v4.0.2f'
   - name: 'ILO - New Vegas Bounties II.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
@@ -6031,12 +6035,9 @@ plugins:
       - C.ImageSpace
       - C.Light
       - C.LTemplate
-    dirty:
-      - crc: 0x8E8F65E5
-        <<: *dirtyPlugin # FNVEdit 3.0.33
-        itm: 7
-        udr: 1
-        nav: 0
+    clean:
+      - crc: 0x81D4AE7C
+        util: 'FNVEdit v4.0.2f'
   - name: 'New Vegas Redesigned 3.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
     after:
