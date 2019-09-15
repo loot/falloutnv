@@ -5922,25 +5922,6 @@ plugins:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
-  - name: 'originalintro.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
-    inc:
-      - 'originalintroExtended.esp'
-    tag:
-      - Actors.AIPackages
-      - Invent
-    dirty:
-      - crc: 0xb0a1b1bb
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 6
-        udr: 0
-        nav: 0
-  - name: 'Wasteland Defense.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/38049/?' ]
-    msg:
-      - type: say
-        content: 'Contains wild edits to records 00116185 and 00116187. These two records should be removed, as they will overwrite any changes made to Benny or the Tops dialogue.'
-        condition: 'checksum("Wasteland Defense.esp", D9241E23)'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
     inc:
@@ -5949,11 +5930,36 @@ plugins:
       - Actors.AIPackages
       - Invent
     dirty:
-      - crc: 0x3abe494e
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # v1.0
+      - <<: *quickClean
+        crc: 0x3ABE494E
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x746FE533
+        util: 'FNVEdit v4.0.2f'
+  - name: 'originalintro.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
+    inc:
+      - 'originalintroExtended.esp'
+    tag:
+      - Actors.AIPackages
+      - Invent
+    dirty:
+      # v1.1
+      - <<: *quickClean
+        crc: 0xB0A1B1BB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+    clean:
+      - crc: 0xCF8922DB
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Wasteland Defense.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38049/?' ]
+    msg:
+      - type: say
+        content: 'Contains wild edits to records 00116185 and 00116187. These two records should be removed, as they will overwrite any changes made to Benny or the Tops dialogue.'
+        condition: 'checksum("Wasteland Defense.esp", D9241E23)'
   - name: 'RaestlozFactionArmorEnhancement.esp'
     tag:
       - Scripts
