@@ -6380,10 +6380,13 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'lexx_brahmin-betsy.esp'
     dirty:
-      - crc: 0x0BA26C46
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0BA26C46
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 13
-
+    clean:
+      - crc: 0xB5E6F991
+        util: 'FNVEdit v4.0.2f'
   - name: 'Static Battery Replacer.esp'
     msg:
       - <<: *alreadyInX
