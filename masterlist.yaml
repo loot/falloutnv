@@ -5710,13 +5710,6 @@ plugins:
   - name: 'AnimatedFan.esp'
     tag:
       - Destructible
-  - name: 'RagdollOverhaulULTIMATE.esp'
-    tag:
-      - Actors.Skeleton
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0x8ab4f125
-        itm: 15
   - name: 'Tales from the Burning Sands.esm'
     dirty:
       - <<: *dirtyPlugin
