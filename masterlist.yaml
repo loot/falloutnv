@@ -6340,18 +6340,23 @@ plugins:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
   - name: 'Fix the lights and Crap be gone.esp'
+    url: []
     dirty:
-      - crc: 0xB5671CA9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB5671CA9
+        util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 8
         udr: 54166
-    url: []
+    msg: [ *corrupt ]
   - name: 'SupahWeapons.esp'
+    url: []
     dirty:
-      - crc: 0xEC7F4960
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEC7F4960
+        util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 15
         udr: 8226
+    msg: [ *corrupt ]
   - name: 'ExplosivesImmunityFix.esp'
     dirty:
       - crc: 0xEC0F1920
