@@ -5963,14 +5963,15 @@ plugins:
   - name: 'RaestlozFactionArmorEnhancement.esp'
     tag:
       - Scripts
+  - name: 'Tutorial Killer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47746' ]
+    clean:
+      # v1.52
+      - crc: 0x4FEB2B60
+        util: 'FNVEdit v4.0.2f'
   - name: 'Tutorial Killer - Alternate Start.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746' ]
-    dirty:
-      - crc: 0xD1257BC7
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1
-        udr: 0
-        nav: 0
+    msg: [ *obsolete ]
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
     dirty:
