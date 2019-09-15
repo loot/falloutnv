@@ -5879,11 +5879,14 @@ plugins:
       - Actors.AIPackages
       - Scripts
     dirty:
-      - crc: 0x793d7342
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # v1.0
+      - <<: *quickClean
+        crc: 0x793D7342
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x2763D9AD
+        util: 'FNVEdit v4.0.2f'
   - name: 'Pip-Boy Light - Amber.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
     inc:
