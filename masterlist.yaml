@@ -6046,12 +6046,6 @@ plugins:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
       - 'TTW Redesigned.esm'
-    dirty:
-      - crc: 0xEB023707
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 93
-        udr: 73
-        nav: 0
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6062,18 +6056,19 @@ plugins:
       - NpcFaces
       - NPC.Race
       - Relev
+    dirty:
+      # v4.4
+      - <<: *quickClean
+        crc: 0xF789959A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 94
+        udr: 73
   - name: 'New Vegas Redesigned 3.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
       - 'TTW Redesigned.esm'
-    dirty:
-      - crc: 0xFAF9F22E
-        <<: *dirtyPlugin # FNVEdit 3.0.32
-        itm: 1018
-        udr: 74
-        nav: 0
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6084,6 +6079,28 @@ plugins:
       - NpcFaces
       - NPC.Race
       - Relev
+    dirty:
+      # v4.4
+      - <<: *quickClean
+        crc: 0xA49C36C8
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1001
+        udr: 74
+  - name: 'Gomorrah Redesigned v2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x54E5F3EE
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        udr: 3
+  - name: 'Bitter Springs Redesigned.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0F5F3084
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 36
+        udr: 5
   - name: 'Boacombat2glove.esp'
     tag:
       - Graphics
