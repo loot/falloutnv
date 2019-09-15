@@ -5711,15 +5711,23 @@ plugins:
     tag:
       - Destructible
   - name: 'Tales from the Burning Sands.esm'
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0x35f7bae7
-        itm: 17
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37172' ]
     tag:
       - Factions
       - Names
       - Relev
       - Scripts
+    dirty:
+      # v1.31b
+      - <<: *reqManualFix
+        crc: 0x35F7BAE7
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 17
+        nav: 1
+      - <<: *reqManualFix
+        crc: 0x95F3592D
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 1
   - name: 'avangraffscorned.esp'
     tag:
       - Actors.AIPackages
