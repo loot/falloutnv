@@ -6368,11 +6368,16 @@ plugins:
       - crc: 0xFFF2EB3D
         util: 'FNVEdit v4.0.2f'
   - name: 'lexx_brahmin-variant.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58871' ]
     dirty:
-      - crc: 0xB596767C
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB596767C
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 16
         udr: 1
+    clean:
+      - crc: 0x7CC8AB9D
+        util: 'FNVEdit v4.0.2f'
   - name: 'lexx_brahmin-betsy.esp'
     dirty:
       - crc: 0x0BA26C46
