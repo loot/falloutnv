@@ -5834,17 +5834,21 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'NCRTrooperOverhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52721' ]
     tag:
       - Graphics
       - Invent
       - Names
       - Stats
     dirty:
-      - crc: 0xbddf839b
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # v7.2
+      - <<: *quickClean
+        crc: 0xBDDF839B
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 6
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x4DBECCE2
+        util: 'FNVEdit v4.0.2f'
   - name: 'New Vegas Bounties II.esp'
     tag:
       - C.Light
