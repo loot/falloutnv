@@ -5790,11 +5790,14 @@ plugins:
       - Relations
       - Scripts
     dirty:
-      - crc: 0xCC32F754
-        <<: *dirtyPlugin # FNVEdit 3.0.32
+      # v1.0
+      - <<: *quickClean
+        crc: 0xCC32F754
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 10
-        udr: 0
-        nav: 0
+    clean:
+      - crc: 0x55936DD2
+        util: 'FNVEdit v4.0.2f'
   - name: 'GRA - The Right to Bear Arms.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46138' ]
     tag:
