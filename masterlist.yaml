@@ -826,6 +826,30 @@ plugins:
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
+      - UnlimitedCompanionsFixed.esp
+      - NTO - FNC.esp
+      - NED - FNC.esp
+      - NED - FNC - Power Armor Scaling Patch.esp
+      - NCCO.esp
+      - LootEverything_ForDlcSupport.esp
+      - Simple DLC Delay.esp
+      - True Wasteland Economy.esp
+      - Project Nevada - Rebalance.esp
+      - HumanPlaguePerk.esp
+      - HumanPlaguePerkReduced.esp
+      - BoostedSkills.esp
+      - Delay Level Up.esp
+      - Delay Level Up - Stealth Suit Fix.esp
+      - Enhanced NPC Awareness.esp
+      - Vanilla Intro Plus.esp
+      - HonestHearts2.esp
+      - HonestHearts2b.esp
+      - Threshold.esp
+      - Awesome Crippling Effects v1.8.esp
+      - Ghoulified.esp
+      - BellevueBillRegalRises.esp
+      - fwv.esm
+      - fwv.esp
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
@@ -1043,7 +1067,7 @@ plugins:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'Unofficial Patch NVSE.esp'
-    req: 
+    req:
       - *NVSE
       - *JIPNVSE
     url: ['https://www.nexusmods.com/newvegas/mods/65412']
@@ -1932,7 +1956,7 @@ plugins:
     clean:
       - crc: 0x6A5738CA
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
-        
+
   - name: 'More Perks for Honest Hearts.esm'
     dirty:
       - crc: 0x25B6073B
@@ -2569,8 +2593,8 @@ plugins:
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
       - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'  
-    inc: 
+      - 'GunRunnersArsenal.esm'
+    inc:
       - 'Simple DLC Delay.esp'
   - name: 'NewCalifornia Courier Stash Control.esp'
     after:
