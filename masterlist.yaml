@@ -856,7 +856,7 @@ plugins:
       - Invent
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'GunRunnersArsenal.esm'
     msg: [ *doNotClean ]
@@ -886,11 +886,11 @@ plugins:
       - WeaponMods
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     msg: [ *doNotClean ]
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
     msg: [ *doNotClean ]
@@ -900,7 +900,7 @@ plugins:
       - Relations
   - name: 'BrokenSteel.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -921,7 +921,7 @@ plugins:
       - Stats
   - name: 'PointLookout.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -933,7 +933,7 @@ plugins:
       - Stats
   - name: 'Zeta.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
