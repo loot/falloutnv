@@ -612,11 +612,12 @@ groups:
       - *addonsPatchesGroup
       - *fixesGroup
 
-  - name: &yupGameplayTweaksGroup YUP Gameplay Tweaks
+  - name: &earlyLoadersGroup Early Loaders
+    description: 'A group for modules that should load early before most other mods.'
     after: [ *addonsGroup ]
 
   - name: default
-    after: [ *yupGameplayTweaksGroup ]
+    after: [ *earlyLoadersGroup ]
 
   - name: &lightingGroup Interior Lighting Overhaul
     after: [ default ]
@@ -2125,7 +2126,7 @@ plugins:
       - Stats
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *yupGameplayTweaksGroup
+    group: *earlyLoadersGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
@@ -2150,7 +2151,7 @@ plugins:
       - Stats
   - name: 'YUP - Gameplay Tweaks - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *yupGameplayTweaksGroup
+    group: *earlyLoadersGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
