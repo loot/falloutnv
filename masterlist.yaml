@@ -598,21 +598,27 @@ globals:
 
 groups:
   - name: &dlcGroup DLC
+    description: 'A group for official downloadable content.'
 
-  - name: &ttwGroup Tale of Two Wastelands
+  - name: &fixesGroup Fixes & Resources
+    description: 'A group for modules that fix issues and bugs or add resources for other mods.'
     after: [ *dlcGroup ]
 
-  - name: &yupFixesGroup YUP NPC Fixes
-    after: [ *ttwGroup ]
+  - name: &addonsPatchesGroup Add-ons & Expansions (Patches)
+    description: 'A group for patches of modules in Add-ons & Expansions.'
 
-  - name: &ttwPatchesGroup Tale of Two Wastelands Patches
-    after: [ *yupFixesGroup ]
+  - name: &addonsGroup Add-ons & Expansions
+    description: 'A group for modules that add new content or expand the vanilla game.'
+    after:
+      - *addonsPatchesGroup
+      - *fixesGroup
 
-  - name: &yupGameplayTweaksGroup YUP Gameplay Tweaks
-    after: [ *ttwPatchesGroup ]
+  - name: &earlyLoadersGroup Early Loaders
+    description: 'A group for modules that should load early before most other mods.'
+    after: [ *addonsGroup ]
 
   - name: default
-    after: [ *yupGameplayTweaksGroup ]
+    after: [ *earlyLoadersGroup ]
 
   - name: &lightingGroup Interior Lighting Overhaul
     after: [ default ]
@@ -805,7 +811,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
-    group: *ttwGroup
+    group: *addonsGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -856,7 +862,7 @@ plugins:
       - Invent
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'GunRunnersArsenal.esm'
     msg: [ *doNotClean ]
@@ -886,11 +892,11 @@ plugins:
       - WeaponMods
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     msg: [ *doNotClean ]
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
     msg: [ *doNotClean ]
@@ -900,7 +906,7 @@ plugins:
       - Relations
   - name: 'BrokenSteel.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -921,7 +927,7 @@ plugins:
       - Stats
   - name: 'PointLookout.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -933,7 +939,7 @@ plugins:
       - Stats
   - name: 'Zeta.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -942,7 +948,7 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *addonsGroup
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
@@ -981,11 +987,11 @@ plugins:
       - WeaponMods
   - name: 'YUPTTW.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *fixesGroup
     msg: [ *doNotClean ]
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
-    group: *ttwGroup
+    group: *fixesGroup
     inc:
       - 'YUP - Base Game + All DLC.esm'
     after:
@@ -1028,7 +1034,7 @@ plugins:
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *ttwGroup
+    group: *fixesGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -1071,7 +1077,7 @@ plugins:
       - *NVSE
       - *JIPNVSE
     url: ['https://www.nexusmods.com/newvegas/mods/65412']
-    group: *ttwGroup
+    group: *fixesGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -1920,7 +1926,7 @@ plugins:
       - Relev
   - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    group: *ttwGroup
+    group: *addonsGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1968,7 +1974,7 @@ plugins:
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *yupFixesGroup
+    group: *fixesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1986,7 +1992,7 @@ plugins:
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -2000,23 +2006,23 @@ plugins:
       - Scripts
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Names
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
   - name: 'TTW_NoKarmaDCFollowers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
   - name: 'TTW_OutcastTrading.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -2026,7 +2032,7 @@ plugins:
       - 'TTW_NoKarmaDCFollowers.esp'
   - name: 'TTW_Reputation.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Actors.Stats
       - Factions
@@ -2040,7 +2046,7 @@ plugins:
       - 'TTW_OutcastTrading.esp'
   - name: 'TTW_SpeechChecks.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Names
     after:
@@ -2051,7 +2057,7 @@ plugins:
       - 'TTW_Reputation.esp'
   - name: 'TTW Anchorage Customization - Speech Checks.esp'
     url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2061,7 +2067,7 @@ plugins:
       - 'TTW_SpeechChecks.esp'
   - name: 'TTW_StartupMenu.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Names
     after:
@@ -2074,7 +2080,7 @@ plugins:
       - 'TTW Anchorage Customization - Speech Checks.esp'
   - name: 'TTW_StashPackOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2086,7 +2092,7 @@ plugins:
       - 'TTW_StartupMenu.esp'
   - name: 'TTW_WildWasteland.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2099,7 +2105,7 @@ plugins:
       - 'TTW_StashPackOptions.esp'
   - name: 'TTWOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Names
     after:
@@ -2114,14 +2120,14 @@ plugins:
       - 'TTW_StashPackOptions.esp'
       - 'TTW_WildWasteland.esp'
   - name: 'ttwadvertitronradioshownfix.esp'
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
   - name: 'ttw_-_cut_item_stats.esp'
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Stats
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *yupGameplayTweaksGroup
+    group: *earlyLoadersGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
@@ -2146,7 +2152,7 @@ plugins:
       - Stats
   - name: 'YUP - Gameplay Tweaks - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *yupGameplayTweaksGroup
+    group: *earlyLoadersGroup
     after:
       - 'TTW Perks and Home Markers.esp'
       - 'TTWOptions.esp'
@@ -2283,7 +2289,7 @@ plugins:
       - Names
   - name: 'NewVegasUncut.esm'
     url: []
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
     tag:
       - Delev
       - Factions
@@ -2291,7 +2297,7 @@ plugins:
       - Names
   - name: 'NewVegasUncut - TTW.esm'
     url: []
-    group: *ttwPatchesGroup
+    group: *addonsPatchesGroup
   - name: 'FalloutNV_lang.esp'
     msg:
       - type: say
