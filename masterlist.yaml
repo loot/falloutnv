@@ -599,8 +599,12 @@ globals:
 groups:
   - name: &dlcGroup DLC
 
-  - name: &ttwGroup Tale of Two Wastelands
+  - name: &fixesGroup Fixes & Resources
+    description: 'A group for modules that fix issues and bugs or add resources for other mods.'
     after: [ *dlcGroup ]
+
+  - name: &ttwGroup Tale of Two Wastelands
+    after: [ *fixesGroup ]
 
   - name: &yupFixesGroup YUP NPC Fixes
     after: [ *ttwGroup ]
