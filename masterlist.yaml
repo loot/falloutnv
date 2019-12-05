@@ -826,30 +826,30 @@ plugins:
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-      - UnlimitedCompanionsFixed.esp
-      - NTO - FNC.esp
-      - NED - FNC.esp
-      - NED - FNC - Power Armor Scaling Patch.esp
-      - NCCO.esp
-      - LootEverything_ForDlcSupport.esp
-      - Simple DLC Delay.esp
-      - True Wasteland Economy.esp
-      - Project Nevada - Rebalance.esp
-      - HumanPlaguePerk.esp
-      - HumanPlaguePerkReduced.esp
-      - BoostedSkills.esp
-      - Delay Level Up.esp
-      - Delay Level Up - Stealth Suit Fix.esp
-      - Enhanced NPC Awareness.esp
-      - Vanilla Intro Plus.esp
-      - HonestHearts2.esp
-      - HonestHearts2b.esp
-      - Threshold.esp
-      - Awesome Crippling Effects v1.8.esp
-      - Ghoulified.esp
-      - BellevueBillRegalRises.esp
-      - fwv.esm
-      - fwv.esp
+      - 'UnlimitedCompanionsFixed.esp'
+      - 'NTO - FNC.esp'
+      - 'NED - FNC.esp'
+      - 'NED - FNC - Power Armor Scaling Patch.esp'
+      - 'NCCO.esp'
+      - 'LootEverything_ForDlcSupport.esp'
+      - 'Simple DLC Delay.esp'
+      - 'True Wasteland Economy.esp'
+      - 'Project Nevada - Rebalance.esp'
+      - 'HumanPlaguePerk.esp'
+      - 'HumanPlaguePerkReduced.esp'
+      - 'BoostedSkills.esp'
+      - 'Delay Level Up.esp'
+      - 'Delay Level Up - Stealth Suit Fix.esp'
+      - 'Enhanced NPC Awareness.esp'
+      - 'Vanilla Intro Plus.esp'
+      - 'HonestHearts2.esp'
+      - 'HonestHearts2b.esp'
+      - 'Threshold.esp'
+      - 'Awesome Crippling Effects v1.8.esp'
+      - 'Ghoulified.esp'
+      - 'BellevueBillRegalRises.esp'
+      - 'fwv.esm'
+      - 'fwv.esp'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
