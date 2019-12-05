@@ -990,7 +990,7 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
-    group: *ttwGroup
+    group: *fixesGroup
     inc:
       - 'YUP - Base Game + All DLC.esm'
     after:
