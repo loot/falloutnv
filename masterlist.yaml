@@ -607,11 +607,8 @@ groups:
     description: 'A group for modules that add new content or expand the vanilla game.'
     after: [ *fixesGroup ]
 
-  - name: &ttwGroup Tale of Two Wastelands
-    after: [ *addonsGroup ]
-
   - name: &ttwPatchesGroup Tale of Two Wastelands Patches
-    after: [ *ttwGroup ]
+    after: [ *addonsGroup ]
 
   - name: &yupGameplayTweaksGroup YUP Gameplay Tweaks
     after: [ *ttwPatchesGroup ]
