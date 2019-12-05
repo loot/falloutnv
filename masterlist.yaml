@@ -947,7 +947,7 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *addonsGroup
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
