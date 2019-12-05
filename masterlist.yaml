@@ -603,8 +603,12 @@ groups:
     description: 'A group for modules that fix issues and bugs or add resources for other mods.'
     after: [ *dlcGroup ]
 
-  - name: &ttwGroup Tale of Two Wastelands
+  - name: &addonsGroup Add-ons & Expansions
+    description: 'A group for modules that add new content or expand the vanilla game.'
     after: [ *fixesGroup ]
+
+  - name: &ttwGroup Tale of Two Wastelands
+    after: [ *addonsGroup ]
 
   - name: &ttwPatchesGroup Tale of Two Wastelands Patches
     after: [ *ttwGroup ]
