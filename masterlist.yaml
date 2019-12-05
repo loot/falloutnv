@@ -606,11 +606,8 @@ groups:
   - name: &ttwGroup Tale of Two Wastelands
     after: [ *fixesGroup ]
 
-  - name: &yupFixesGroup YUP NPC Fixes
-    after: [ *ttwGroup ]
-
   - name: &ttwPatchesGroup Tale of Two Wastelands Patches
-    after: [ *yupFixesGroup ]
+    after: [ *ttwGroup ]
 
   - name: &yupGameplayTweaksGroup YUP Gameplay Tweaks
     after: [ *ttwPatchesGroup ]
@@ -985,7 +982,7 @@ plugins:
       - WeaponMods
   - name: 'YUPTTW.esm'
     url: [ 'http://taleoftwowastelands.com/']
-    group: *ttwGroup
+    group: *fixesGroup
     msg: [ *doNotClean ]
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
@@ -1032,7 +1029,7 @@ plugins:
     req: [ *NVSE ]
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *ttwGroup
+    group: *fixesGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -1075,7 +1072,7 @@ plugins:
       - *NVSE
       - *JIPNVSE
     url: ['https://www.nexusmods.com/newvegas/mods/65412']
-    group: *ttwGroup
+    group: *fixesGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -1972,7 +1969,7 @@ plugins:
         util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *yupFixesGroup
+    group: *fixesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
