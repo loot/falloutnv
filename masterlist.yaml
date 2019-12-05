@@ -598,6 +598,7 @@ globals:
 
 groups:
   - name: &dlcGroup DLC
+    description: 'A group for official downloadable content.'
 
   - name: &fixesGroup Fixes & Resources
     description: 'A group for modules that fix issues and bugs or add resources for other mods.'
