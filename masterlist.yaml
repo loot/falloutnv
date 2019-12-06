@@ -1490,6 +1490,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     after:
       - 'nVamp - Core.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Actors.ACBS
       - Delev
@@ -1505,6 +1509,10 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Delev
       - Invent
@@ -1516,6 +1524,10 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Invent
     clean:
