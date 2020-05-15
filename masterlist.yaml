@@ -1041,6 +1041,10 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1068,6 +1072,11 @@ plugins:
     msg:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
+  - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
   - name: 'Unofficial Patch NVSE.esp'
     req:
       - *NVSE
