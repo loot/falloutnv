@@ -6724,3 +6724,10 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'Leave Conversation NV - (Normal|Lite).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62531/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
