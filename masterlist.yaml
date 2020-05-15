@@ -6073,6 +6073,10 @@ plugins:
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
