@@ -1108,6 +1108,13 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'HeroinZero Weapon Fixes.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/65041']
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
     tag:
