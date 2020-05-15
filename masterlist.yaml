@@ -6583,6 +6583,13 @@ plugins:
         subs: [ 'YUPTTW.esm' ]
         condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", "3.2.2", >=)'
 
+  - name: 'ClearCacheKey.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56390/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'Purge Cell Buffers.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
     inc:
