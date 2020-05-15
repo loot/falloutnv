@@ -1825,6 +1825,10 @@ plugins:
       - Actors.AIPackages
   - name: 'Weapon Mod Expansion.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Names
     clean:
