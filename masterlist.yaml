@@ -1094,6 +1094,10 @@ plugins:
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
       - 'YUP - Base Game + All DLC.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Scripts
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
