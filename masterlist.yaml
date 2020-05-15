@@ -1784,6 +1784,13 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'UnlimitedCompanions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34870' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'KillableKids.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
     inc:
