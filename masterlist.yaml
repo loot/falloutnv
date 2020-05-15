@@ -1331,6 +1331,11 @@ plugins:
     tag:
       - Delev
   - name: 'FOOK - New Vegas.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Deflst
       - Delev
@@ -3041,6 +3046,11 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'FOOK - New Vegas.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Deflst
       - Delev
