@@ -5013,10 +5013,15 @@ plugins:
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
+
   - name: 'GRA Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44170' ]
     inc:
       - 'GRA Overhaul - EVE.esp'
       - 'GRA Overhaul - WMX or WME.esp'
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Names
       - Stats
