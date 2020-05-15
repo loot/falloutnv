@@ -1100,6 +1100,14 @@ plugins:
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Scripts
+
+  - name: 'Unofficial Patch Plus.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/62953']
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
     tag:
