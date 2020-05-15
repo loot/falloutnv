@@ -1140,6 +1140,9 @@ plugins:
   - name: 'WMIMNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
     inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
       - 'EVE FNV - ALL DLC.esp'
       - 'EVE FNV - NO DLC.esp'
       - 'EVE FNV - NO GRA.esp'
