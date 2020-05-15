@@ -1219,6 +1219,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after:
       - 'ProjectBrazil.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Actors.ACBS
       - Eyes
