@@ -4912,6 +4912,10 @@ plugins:
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42666' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Delev
       - Destructible
