@@ -5248,6 +5248,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
