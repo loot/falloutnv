@@ -6582,3 +6582,10 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
