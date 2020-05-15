@@ -1532,6 +1532,15 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'FreesideOpen.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46355'
+        name: 'New Vegas Uncut - Freeside Open'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58871'
