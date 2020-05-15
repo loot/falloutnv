@@ -1477,6 +1477,42 @@ plugins:
     clean:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
+
+  - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58871'
+        name: 'NVEC - New Vegas Enhanced Content'
+  - name: 'NVEC Complete.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+  - name: 'NVEC Complete + NVCE.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+  - name: 'NVEC BugFixes.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+  - name: 'NVEC BugFixes + NVCE.esm'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+  - name: 'NVEC Enhancements.esp'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+  - name: 'NVEC Reduce CTD.esp'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
