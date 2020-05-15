@@ -1764,6 +1764,13 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'KillableKids.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
