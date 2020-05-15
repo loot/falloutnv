@@ -5040,6 +5040,13 @@ plugins:
       - Names
       - Stats
 
+  - name: 'GunRunnerArsenalAdjust.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44152' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'GunRunnersArsenal Integration Mod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
     inc:
