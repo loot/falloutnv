@@ -5047,6 +5047,13 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'GunRunnersArsenal - BEGONE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64249' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'GunRunnersArsenal Integration Mod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
     inc:
