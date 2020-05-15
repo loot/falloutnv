@@ -1478,6 +1478,13 @@ plugins:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
 
+  - name: 'DustSurvivalSimulator.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58871'
