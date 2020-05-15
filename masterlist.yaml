@@ -2032,6 +2032,10 @@ plugins:
       - Voice-M
   - name: 'Mart''s Mutant Mod.esm'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Delev
       - Factions
