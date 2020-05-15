@@ -2361,6 +2361,9 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Community Bugfix Compilation Patch.esp'
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     tag:
       - Actors.AIPackages
       - NoMerge
