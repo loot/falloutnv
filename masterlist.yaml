@@ -1483,6 +1483,13 @@ plugins:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
 
+  - name: 'After War Nevada.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55455' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'DustSurvivalSimulator.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
     inc:
