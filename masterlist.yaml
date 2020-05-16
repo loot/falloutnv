@@ -6766,3 +6766,14 @@ plugins:
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'IMPACT.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/57113'
+        name: 'IMPACT'
+      - link: 'https://www.nexusmods.com/newvegas/mods/62050'
+        name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
