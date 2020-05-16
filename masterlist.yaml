@@ -6828,3 +6828,38 @@ plugins:
         subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'Alternative Start.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Alternate Start - Roleplayers.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/59943/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'AlternateStart-TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50173/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Kobu''s New Game Quick Start and Better Rebuild.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36035/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Roleplay Start 1.2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39526/' ]
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
