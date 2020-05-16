@@ -6708,3 +6708,23 @@ plugins:
         name: '1st Person Weapon Animation Overhaul'
     inc: [ *TTWv320 ]
 
+  - name: 'DynamicTimeScale.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37536/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Imp''s Timescale Adjuster.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34718/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'MOD\.Time\..*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34859/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Timescale Pacemaker.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63880/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'VariousTimescaleSystem.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36196/' ]
+    inc: [ *TTWv320 ]
+
