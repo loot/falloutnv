@@ -6791,3 +6791,12 @@ plugins:
         subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
         condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'CAGE 1.9.3.2.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42428'
+        name: 'CAGE: Continue After Games Ending'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
