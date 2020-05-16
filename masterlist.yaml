@@ -74,6 +74,28 @@ common:
       - lang: de
         text: 'Es wird dringend empfohlen, dass Sie auch %1% benutzen.'
 
+  - &compatNotes
+    type: say
+    content:
+      - lang: en
+        text: 'It is recommended that you read this mod''s [Compatibility Notes](%1%).'
+      - lang: de
+        text: 'Es wird empfohlen, dass Sie die [Kompatibilitäts-Notizen](%1%) dieses Mods lesen.'
+      - lang: ja
+        text: '[互換性に関する注意事項](%1%)を読みましょう。'
+      - lang: ko
+        text: '이 모드의 [호환성 정보](%1%)를 읽어 보는 걸 권장합니다.'
+      - lang: pl
+        text: 'Jest rekomendowane abyś przeczytał [Notki Kompatybilności](%1%) tego moda.'
+      - lang: pt
+        text: 'É recomendada leitura das [Notas de Compatibilidade](%1%) deste mod.'
+      - lang: pt_BR
+        text: 'É recomendada a leitura das [Notas de Compatibilidade](%1%) deste mod.'
+      - lang: ru
+        text: 'Рекомендуется прочесть [заметки о совместимости](%1%) мода.'
+      - lang: sv
+        text: 'Det är rekommenderat att du läser denna mods [kompabilitetsanteckningar](%1%).'
+
   - &corrupt
     type: warn
     content:
@@ -966,6 +988,8 @@ plugins:
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
     msg:
+      - <<: *compatNotes
+        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
       - *doNotClean
       - <<: *requiresX
         subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
