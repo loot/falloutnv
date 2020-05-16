@@ -10,6 +10,11 @@ common:
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277)'
 
+  - &TTWv320
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.2+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
 # Conditions
   - &condFileTTW
     file("TaleOfTwoWastelands.esm")
@@ -68,6 +73,28 @@ common:
         text: 'It is highly recommended that you also use %1%.'
       - lang: de
         text: 'Es wird dringend empfohlen, dass Sie auch %1% benutzen.'
+
+  - &compatNotes
+    type: say
+    content:
+      - lang: en
+        text: 'It is recommended that you read this mod''s [Compatibility Notes](%1%).'
+      - lang: de
+        text: 'Es wird empfohlen, dass Sie die [Kompatibilitäts-Notizen](%1%) dieses Mods lesen.'
+      - lang: ja
+        text: '[互換性に関する注意事項](%1%)を読みましょう。'
+      - lang: ko
+        text: '이 모드의 [호환성 정보](%1%)를 읽어 보는 걸 권장합니다.'
+      - lang: pl
+        text: 'Jest rekomendowane abyś przeczytał [Notki Kompatybilności](%1%) tego moda.'
+      - lang: pt
+        text: 'É recomendada leitura das [Notas de Compatibilidade](%1%) deste mod.'
+      - lang: pt_BR
+        text: 'É recomendada a leitura das [Notas de Compatibilidade](%1%) deste mod.'
+      - lang: ru
+        text: 'Рекомендуется прочесть [заметки о совместимости](%1%) мода.'
+      - lang: sv
+        text: 'Det är rekommenderat att du läser denna mods [kompabilitetsanteckningar](%1%).'
 
   - &corrupt
     type: warn
@@ -305,6 +332,16 @@ common:
   - &updateToYUP
     type: say
     content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
+
+  - &useInstead
+    type: warn
+    content:
+      - lang: en
+        text: 'Use %1% instead.'
+      - lang: de
+        text: 'Nutzen Sie %1% stattdessen.'
+      - lang: ja
+        text: '代わりに%1%を使用してください。'
 
   - &useOnlyOneX
     type: error
@@ -950,7 +987,12 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
+    inc:
+      - name: 'Point Lookout Reborn.esm'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
+      - <<: *compatNotes
+        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
       - *doNotClean
       - <<: *requiresX
         subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
@@ -1041,6 +1083,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1068,6 +1111,8 @@ plugins:
     msg:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
+  - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
+    inc: [ *TTWv320 ]
   - name: 'Unofficial Patch NVSE.esp'
     req:
       - *NVSE
@@ -1085,8 +1130,18 @@ plugins:
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
       - 'YUP - Base Game + All DLC.esm'
+    inc: [ *TTWv320 ]
     tag:
       - Scripts
+
+  - name: 'Unofficial Patch Plus.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/62953']
+    inc: [ *TTWv320 ]
+
+  - name: 'HeroinZero Weapon Fixes.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/65041']
+    inc: [ *TTWv320 ]
+
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
     tag:
@@ -1131,6 +1186,7 @@ plugins:
   - name: 'WMIMNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
     inc:
+      - *TTWv320
       - 'EVE FNV - ALL DLC.esp'
       - 'EVE FNV - NO DLC.esp'
       - 'EVE FNV - NO GRA.esp'
@@ -1188,6 +1244,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after:
       - 'ProjectBrazil.esm'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Eyes
@@ -1331,6 +1388,8 @@ plugins:
     tag:
       - Delev
   - name: 'FOOK - New Vegas.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    inc: [ *TTWv320 ]
     tag:
       - Deflst
       - Delev
@@ -1477,6 +1536,38 @@ plugins:
     clean:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
+
+  - name: 'After War Nevada.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55455' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'DustSurvivalSimulator.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'FreesideOpen.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46355'
+        name: 'New Vegas Uncut - Freeside Open'
+    inc: [ *TTWv320 ]
+
+  - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58871'
+        name: 'NVEC - New Vegas Enhanced Content'
+  - name: 'NVEC Complete.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Complete + NVCE.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC BugFixes.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC BugFixes + NVCE.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Enhancements.esp'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Reduce CTD.esp'
+    inc: [ *TTWv320 ]
+
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
@@ -1490,6 +1581,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     after:
       - 'nVamp - Core.esm'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Delev
@@ -1505,6 +1597,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Invent
@@ -1516,6 +1609,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    inc: [ *TTWv320 ]
     tag:
       - Invent
     clean:
@@ -1658,6 +1752,27 @@ plugins:
       - Invent
       - Names
       - Relev
+
+  - name: 'XFO -.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37871' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Weapons of the Wasteland.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66115' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'UnlimitedCompanions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34870' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'UnlimitedCompanionsFixed.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66030' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'KillableKids.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
+    inc: [ *TTWv320 ]
+
   - name: 'CFWNV-DLC.esm'
     after:
       - 'nVamp - Core.esm'
@@ -1685,6 +1800,7 @@ plugins:
       - Actors.AIPackages
   - name: 'Weapon Mod Expansion.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
+    inc: [ *TTWv320 ]
     tag:
       - Names
     clean:
@@ -1906,6 +2022,7 @@ plugins:
       - Voice-M
   - name: 'Mart''s Mutant Mod.esm'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Factions
@@ -1949,6 +2066,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
     tag:
       - Names
+    inc: [ *TTWv320 ]
+  - name: 'More Perks for Companions.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
+    inc: [ *TTWv320 ]
   - name: 'More Perks for Dead Money.esm'
     dirty:
       - crc: 0x129204A2
@@ -2313,6 +2434,7 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Community Bugfix Compilation Patch.esp'
+      - *TTWv320
     tag:
       - Actors.AIPackages
       - NoMerge
@@ -2975,6 +3097,8 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'FOOK - New Vegas.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    inc: [ *TTWv320 ]
     tag:
       - Deflst
       - Delev
@@ -4515,6 +4639,7 @@ plugins:
   - name: 'WeaponModsExpanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
     inc:
+      - *TTWv320
       - 'RH_IRONSIGHTS_NV.esm'
       - 'Weapon Mod Expansion.esm'
       - 'Weapon Mod Expansion.esp'
@@ -4764,6 +4889,7 @@ plugins:
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42666' ]
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Destructible
@@ -4847,10 +4973,13 @@ plugins:
     msg:
       - type: say
         content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
+
   - name: 'GRA Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44170' ]
     inc:
       - 'GRA Overhaul - EVE.esp'
       - 'GRA Overhaul - WMX or WME.esp'
+      - *TTWv320
     tag:
       - Names
       - Stats
@@ -4868,6 +4997,23 @@ plugins:
     tag:
       - Names
       - Stats
+
+  - name: '001 Project Weaponry.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/53689' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnerArsenalAdjust.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44152' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnersArsenal - BEGONE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64249' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnersArsenal Integration Mod.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
+    inc: [ *TTWv320 ]
+
   - name: 'NV Game Stabilizer.esp'
     inc:
       - 'NV GameStabilizerA.esp'
@@ -5096,6 +5242,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     inc:
+      - *TTWv320
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -5877,6 +6024,7 @@ plugins:
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
+    inc: [ *TTWv320 ]
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
@@ -6042,6 +6190,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
+    inc: [ *TTWv320 ]
     dirty:
       - <<: *quickClean
         crc: 0x1E04D898
@@ -6169,6 +6318,11 @@ plugins:
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 36
         udr: 5
+
+  - name: 'Wasteland Gals.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/67079' ]
+    inc: [ *TTWv320 ]
+
   - name: 'Boacombat2glove.esp'
     tag:
       - Graphics
@@ -6460,3 +6614,148 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'YUPTTW.esm' ]
         condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", "3.2.2", >=)'
+
+  - name: 'GameSettings.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39157/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'ClearCacheKey.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56390/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'PCB Hotkey.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52428/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Purge Cell Buffers.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'fwv.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/50363/'
+        name: 'Fallout Who Vegas - Complete'
+    inc: [ *TTWv320 ]
+
+  - name: 'Enhanced NPC Awareness.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63425/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'FuckableCompanions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66274/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Leave Conversation NV - (Normal|Lite).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62531/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'The Storyteller.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'CFWNV.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'IMPACT.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/57113'
+        name: 'IMPACT'
+      - link: 'https://www.nexusmods.com/newvegas/mods/62050'
+        name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
+    inc:
+      - <<: *TTWv320
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      - <<: *useInstead
+        subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'CAGE 1.9.3.2.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42428'
+        name: 'CAGE: Continue After Games Ending'
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'ContinueAfterEnding.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57922/' ]
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'pipboy2500_edisleado.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38844/'
+        name: 'A Familiar Friend: Pip-Boy 2500 Handheld Pipboy'
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Readius_NV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/36646/'
+        name: 'Official Pipboy Readius - New Vegas Edition'
+    inc: [ *TTWv320 ]
+
+  - name: 'Alternative Start.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Alternate Start - Roleplayers.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/59943/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'AlternateStart-TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50173/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Kobu''s New Game Quick Start and Better Rebuild.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36035/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Roleplay Start 1.2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39526/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Asurah_reanimation.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64339/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Reload Sounds.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61501/'
+        name: '1st Person Weapon Animation Overhaul'
+    inc: [ *TTWv320 ]
+
+  - name: 'DynamicTimeScale.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37536/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Imp''s Timescale Adjuster.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34718/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'MOD\.Time\..*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34859/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Timescale Pacemaker.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63880/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'VariousTimescaleSystem.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36196/' ]
+    inc: [ *TTWv320 ]
+
