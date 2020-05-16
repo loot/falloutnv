@@ -10,6 +10,11 @@ common:
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277)'
 
+  - &TTWv320
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.2+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
 # Conditions
   - &condFileTTW
     file("TaleOfTwoWastelands.esm")
@@ -1051,10 +1056,7 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1083,10 +1085,7 @@ plugins:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'Unofficial Patch NVSE.esp'
     req:
       - *NVSE
@@ -1104,26 +1103,17 @@ plugins:
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
       - 'YUP - Base Game + All DLC.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Scripts
 
   - name: 'Unofficial Patch Plus.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953']
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
     msg: [ *updateToNVCE ]
@@ -1169,9 +1159,7 @@ plugins:
   - name: 'WMIMNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
     inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+      - *TTWv320
       - 'EVE FNV - ALL DLC.esp'
       - 'EVE FNV - NO DLC.esp'
       - 'EVE FNV - NO GRA.esp'
@@ -1229,10 +1217,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after:
       - 'ProjectBrazil.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Eyes
@@ -1377,10 +1362,7 @@ plugins:
       - Delev
   - name: 'FOOK - New Vegas.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Deflst
       - Delev
@@ -1530,61 +1512,34 @@ plugins:
 
   - name: 'After War Nevada.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55455' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'DustSurvivalSimulator.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'FreesideOpen.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46355'
         name: 'New Vegas Uncut - Freeside Open'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58871'
         name: 'NVEC - New Vegas Enhanced Content'
   - name: 'NVEC Complete.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'NVEC Complete + NVCE.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'NVEC BugFixes.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'NVEC BugFixes + NVCE.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'NVEC Enhancements.esp'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'NVEC Reduce CTD.esp'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
@@ -1599,10 +1554,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     after:
       - 'nVamp - Core.esm'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Delev
@@ -1618,10 +1570,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Invent
@@ -1633,10 +1582,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Invent
     clean:
@@ -1782,31 +1728,19 @@ plugins:
 
   - name: 'XFO -.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37871' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Weapons of the Wasteland.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/66115' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'UnlimitedCompanions.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34870' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'KillableKids.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'CFWNV-DLC.esm'
     after:
@@ -1835,10 +1769,7 @@ plugins:
       - Actors.AIPackages
   - name: 'Weapon Mod Expansion.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Names
     clean:
@@ -2060,10 +1991,7 @@ plugins:
       - Voice-M
   - name: 'Mart''s Mutant Mod.esm'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Factions
@@ -2107,16 +2035,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
     tag:
       - Names
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'More Perks for Companions.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'More Perks for Dead Money.esm'
     dirty:
       - crc: 0x129204A2
@@ -2481,9 +2403,7 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Community Bugfix Compilation Patch.esp'
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+      - *TTWv320
     tag:
       - Actors.AIPackages
       - NoMerge
@@ -3147,10 +3067,7 @@ plugins:
       - WeaponMods
   - name: 'FOOK - New Vegas.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Deflst
       - Delev
@@ -4691,9 +4608,7 @@ plugins:
   - name: 'WeaponModsExpanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
     inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+      - *TTWv320
       - 'RH_IRONSIGHTS_NV.esm'
       - 'Weapon Mod Expansion.esm'
       - 'Weapon Mod Expansion.esp'
@@ -4943,10 +4858,7 @@ plugins:
       - Sound
   - name: 'EVE FNV - ALL DLC.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42666' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     tag:
       - Delev
       - Destructible
@@ -5036,9 +4948,7 @@ plugins:
     inc:
       - 'GRA Overhaul - EVE.esp'
       - 'GRA Overhaul - WMX or WME.esp'
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+      - *TTWv320
     tag:
       - Names
       - Stats
@@ -5059,31 +4969,19 @@ plugins:
 
   - name: '001 Project Weaponry.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/53689' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'GunRunnerArsenalAdjust.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44152' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'GunRunnersArsenal - BEGONE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/64249' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'GunRunnersArsenal Integration Mod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'NV Game Stabilizer.esp'
     inc:
@@ -5313,9 +5211,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
     inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+      - *TTWv320
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
@@ -6097,10 +5993,7 @@ plugins:
       - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
       - 'TrooperOverhaul-Dragbody.esp'
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag:
       - Graphics
@@ -6266,10 +6159,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     dirty:
       - <<: *quickClean
         crc: 0x1E04D898
@@ -6400,10 +6290,7 @@ plugins:
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Boacombat2glove.esp'
     tag:
@@ -6699,82 +6586,49 @@ plugins:
 
   - name: 'GameSettings.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39157/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'ClearCacheKey.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56390/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'PCB Hotkey.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/52428/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Purge Cell Buffers.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'fwv.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/50363/'
         name: 'Fallout Who Vegas - Complete'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Enhanced NPC Awareness.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63425/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'FuckableCompanions.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/66274/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Leave Conversation NV - (Normal|Lite).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62531/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'The Storyteller.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'CFWNV.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'IMPACT.esp'
     url:
@@ -6783,8 +6637,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/62050'
         name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
     inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
+      - <<: *TTWv320
         condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
       - <<: *useInstead
@@ -6795,10 +6648,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/42428'
         name: 'CAGE: Continue After Games Ending'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     msg:
       - <<: *useInstead
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
@@ -6806,10 +6656,7 @@ plugins:
 
   - name: 'ContinueAfterEnding.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/57922/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     msg:
       - <<: *useInstead
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
@@ -6819,10 +6666,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/38844/'
         name: 'A Familiar Friend: Pip-Boy 2500 Handheld Pipboy'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
     msg:
       - <<: *useInstead
         subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
@@ -6832,59 +6676,35 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/36646/'
         name: 'Official Pipboy Readius - New Vegas Edition'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Alternative Start.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Alternate Start - Roleplayers.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/59943/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'AlternateStart-TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/50173/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Kobu''s New Game Quick Start and Better Rebuild.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36035/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Roleplay Start 1.2.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39526/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Asurah_reanimation.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/64339/' ]
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
   - name: 'Reload Sounds.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/61501/'
         name: '1st Person Weapon Animation Overhaul'
-    inc:
-      - name: 'TaleOfTwoWastelands.esm'
-        display: 'Tale Of Two Wastelands v3.2+'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    inc: [ *TTWv320 ]
 
