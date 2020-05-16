@@ -6815,3 +6815,12 @@ plugins:
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'pipboy2500_edisleado.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38844/'
+        name: 'A Familiar Friend: Pip-Boy 2500 Handheld Pipboy'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
