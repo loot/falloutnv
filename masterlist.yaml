@@ -306,6 +306,16 @@ common:
     type: say
     content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
 
+  - &useInstead
+    type: warn
+    content:
+      - lang: en
+        text: 'Use %1% instead.'
+      - lang: de
+        text: 'Nutzen Sie %1% stattdessen.'
+      - lang: ja
+        text: '代わりに%1%を使用してください。'
+
   - &useOnlyOneX
     type: error
     content:
@@ -6775,5 +6785,9 @@ plugins:
     inc:
       - name: 'TaleOfTwoWastelands.esm'
         display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      - <<: *useInstead
+        subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
         condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
