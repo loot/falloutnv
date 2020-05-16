@@ -6810,4 +6810,8 @@ plugins:
       - name: 'TaleOfTwoWastelands.esm'
         display: 'Tale Of Two Wastelands v3.2+'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      - <<: *useInstead
+        subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
