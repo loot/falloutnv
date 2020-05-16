@@ -6828,6 +6828,15 @@ plugins:
         subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'Readius_NV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/36646/'
+        name: 'Official Pipboy Readius - New Vegas Edition'
+    inc:
+      - name: 'TaleOfTwoWastelands.esm'
+        display: 'Tale Of Two Wastelands v3.2+'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
   - name: 'Alternative Start.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
     inc:
