@@ -1762,6 +1762,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/34870' ]
     inc: [ *TTWv320 ]
 
+  - name: 'UnlimitedCompanionsFixed.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66030' ]
+    inc: [ *TTWv320 ]
+
   - name: 'KillableKids.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
     inc: [ *TTWv320 ]
