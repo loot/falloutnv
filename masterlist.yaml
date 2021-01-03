@@ -2737,7 +2737,6 @@ plugins:
   - name: 'NewCalifornia Courier Stash Control.esp'
   - name: 'FNC Overhaul Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70735' ]
-    after:
     dirty:
       - <<: *reqManualFix
         crc: 0x82A778A9
