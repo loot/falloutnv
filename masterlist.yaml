@@ -1256,7 +1256,7 @@ plugins:
         content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
   - name: 'ProjectBrazil.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
-    msg: [ *obselete ]
+    msg: [ *obsolete ]
     after:
       - 'Project Nevada - Core.esm'
       - 'Project Nevada - Equipment.esm'
