@@ -1255,6 +1255,8 @@ plugins:
       - type: say
         content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
   - name: 'ProjectBrazil.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    msg: [ *obsolete ]
     after:
       - 'Project Nevada - Core.esm'
       - 'Project Nevada - Equipment.esm'
@@ -2730,20 +2732,24 @@ plugins:
     tag:
       - Names
   - name: 'NewCalifornia DLC Control.esp'
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     inc:
       - 'Simple DLC Delay.esp'
   - name: 'NewCalifornia Courier Stash Control.esp'
-    after:
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+  - name: 'FNC Overhaul Project.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70735' ]
+    dirty:
+      - <<: *reqManualFix
+        crc: 0x82A778A9
+        util: '[FNVEdit v4.0.3](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2640
+        udr: 2978
+        nav: 6
+      - <<: *reqManualFix
+        crc: 0x84906997
+        util: '[FNVEdit v4.0.3](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 6
   - name: 'Centered 3rd Person Camera.esp'
     inc:
       - 'FOOK - New Vegas.esm'
