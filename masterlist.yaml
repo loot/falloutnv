@@ -2732,9 +2732,11 @@ plugins:
     tag:
       - Names
   - name: 'NewCalifornia DLC Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     inc:
       - 'Simple DLC Delay.esp'
   - name: 'NewCalifornia Courier Stash Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
   - name: 'FNC Overhaul Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70735' ]
     dirty:
