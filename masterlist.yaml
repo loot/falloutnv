@@ -2415,6 +2415,9 @@ plugins:
       - Invent
       - Names
       - Relev
+    after:
+      - 'Unofficial Patch Plus.esp'
+      - 'Unofficial Patch Plus - Addendum.esp'
   - name: 'JSawyer Ultimate - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61592' ]
     tag:
