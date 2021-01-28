@@ -1154,7 +1154,17 @@ plugins:
 
   - name: 'Unofficial Patch Plus.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953']
+    group: *fixesGroup
+    after:
+      - 'YUP - Base Game + All DLC.esm'
     inc: [ *TTWv320 ]
+
+  - name: 'Unofficial Patch Plus - Addendum.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/62953']
+    group: *fixesGroup
+    after:
+      - 'YUP - Base Game + All DLC.esm'
+      - 'Unofficial Patch Plus.esp'
 
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
@@ -2405,6 +2415,9 @@ plugins:
       - Invent
       - Names
       - Relev
+    after:
+      - 'Unofficial Patch Plus.esp'
+      - 'Unofficial Patch Plus - Addendum.esp'
   - name: 'JSawyer Ultimate - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61592' ]
     tag:
