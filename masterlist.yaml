@@ -1154,6 +1154,9 @@ plugins:
 
   - name: 'Unofficial Patch Plus.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953']
+    group: *fixesGroup
+    after:
+      - 'YUP - Base Game + All DLC.esm'
     inc: [ *TTWv320 ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
