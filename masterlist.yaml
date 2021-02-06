@@ -890,6 +890,7 @@ plugins:
     group: *dlcGroup
     after:
       - 'GunRunnersArsenal.esm'
+    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -917,11 +918,13 @@ plugins:
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
+    # doNotClean
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after:
       - 'Anchorage.esm'
+    # doNotClean
     tag:
       - Actors.DeathItem
       - Graphics
@@ -932,6 +935,7 @@ plugins:
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
+    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -953,6 +957,7 @@ plugins:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
+    # doNotClean
     tag:
       - Graphics
       - Names
@@ -965,6 +970,7 @@ plugins:
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
       - 'PointLookout.esm'
+    # doNotClean
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *addonsGroup
@@ -977,6 +983,7 @@ plugins:
       - name: 'Point Lookout Reborn.esm'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
+      # doNotClean
       - <<: *compatNotes
         subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
       - <<: *requiresX
@@ -1011,6 +1018,7 @@ plugins:
   - name: 'YUPTTW.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *fixesGroup
+    # doNotClean
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
