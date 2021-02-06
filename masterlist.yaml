@@ -890,6 +890,7 @@ plugins:
     group: *dlcGroup
     after:
       - 'GunRunnersArsenal.esm'
+    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
