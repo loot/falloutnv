@@ -918,7 +918,6 @@ plugins:
     group: *dlcGroup
     after:
       - 'GunRunnersArsenal.esm'
-    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -946,13 +945,11 @@ plugins:
   - name: 'Anchorage.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
-    msg: [ *doNotClean ]
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after:
       - 'Anchorage.esm'
-    msg: [ *doNotClean ]
     tag:
       - Actors.DeathItem
       - Graphics
@@ -963,7 +960,6 @@ plugins:
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
-    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -985,7 +981,6 @@ plugins:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
-    msg: [ *doNotClean ]
     tag:
       - Graphics
       - Names
@@ -998,7 +993,6 @@ plugins:
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
       - 'PointLookout.esm'
-    msg: [ *doNotClean ]
   - name: 'TaleOfTwoWastelands.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *addonsGroup
@@ -1013,7 +1007,6 @@ plugins:
     msg:
       - <<: *compatNotes
         subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
-      - *doNotClean
       - <<: *requiresX
         subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
         condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
@@ -1046,7 +1039,6 @@ plugins:
   - name: 'YUPTTW.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *fixesGroup
-    msg: [ *doNotClean ]
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
