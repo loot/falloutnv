@@ -881,6 +881,7 @@ plugins:
       - 'BellevueBillRegalRises.esp'
       - 'fwv.esm'
       - 'fwv.esp'
+      - 'FNC Overhaul Project.esp'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
     tag:
@@ -2726,6 +2727,11 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
   - name: 'FNC Overhaul Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70735' ]
+    msg:
+      - type: warning
+        content:
+          - lang: en
+            text: 'The mod modifies New California to an extent causing weird bugs while playing the game.'
     dirty:
       - <<: *reqManualFix
         crc: 0x82A778A9
