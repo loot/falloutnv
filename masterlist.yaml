@@ -5202,6 +5202,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    group: *weatherGroup
     tag:
       - C.Climate
       - C.Light
