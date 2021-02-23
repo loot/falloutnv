@@ -81,6 +81,8 @@ common:
         text: '%1%の併用を強く推奨します。'
       - lang: pl
         text: 'Jest wysoce wskazane abyś używał także %1%.'
+      - lang: sv
+        text: 'Det är rekommenderat att du också använder %1%.'
 
   - &compatNotes
     type: say
@@ -141,6 +143,8 @@ common:
         text: 'Usuń lub dezaktywuj. %1%'
       - lang: ru
         text: 'Не забудьте отключить или удалить. %1%'
+      - lang: sv
+        text: 'Ta bort eller avaktivera. %1%'
     subs: [ '' ]
 
   - &deletePlugin
@@ -328,6 +332,8 @@ common:
         text: 'Nutzen Sie %1% stattdessen.'
       - lang: ja
         text: '代わりに%1%を使用してください。'
+      - lang: sv
+        text: 'Använd %1% istället.'
 
   - &useOnlyOneX
     type: error
@@ -372,6 +378,8 @@ common:
         text: 'Użyj wersji %1%'
       - lang: ru
         text: 'Используйте версию для %1%'
+      - lang: sv
+        text: 'Använd version %1%.'
   - &useVersionDeadMoney
     <<: *useVersion
     subs: [ 'Dead Money' ]
@@ -420,6 +428,8 @@ common:
         text: '%1%バージョン以外を使用してください。'
       - lang: pl
         text: 'Użyj wersji innej niż %1%.'
+      - lang: sv
+        text: 'Använd en icke-%1% version.'
   - &useVersionNonDeadMoney
     <<: *useVersionNon
     subs: [ 'Dead Money' ]
