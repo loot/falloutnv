@@ -186,7 +186,7 @@ common:
         text: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
 
   - &obsolete
-    type: say
+    type: warn
     content:
       - lang: en
         text: 'Obsolete. Update to the latest version. %1%'
