@@ -320,9 +320,6 @@ common:
       - lang: sv
         text: '%1% är inte helt kompatibel med denna mod. %2%'
 
-  - &updateToNVCE
-    type: say
-    content: '"Old, update to [NVCE](https://www.nexusmods.com/newvegas/mods/39325)."'
   - &updateToYUP
     type: say
     content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
@@ -1173,42 +1170,6 @@ plugins:
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
     inc: [ *TTWv320 ]
 
-  - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.55.esm'
-    msg: [ *updateToNVCE ]
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: 'Machienzo - NPC Cosmetic Fixes - Ver 1.57.esm'
-    msg: [ *updateToNVCE ]
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: 'Machienzo - NPC Cosmetic Fixes.esm'
-    msg: [ *updateToNVCE ]
-    tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
   - name: 'Uncut Skeletons.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56625' ]
     msg:
