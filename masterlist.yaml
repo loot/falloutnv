@@ -320,10 +320,6 @@ common:
       - lang: sv
         text: '%1% är inte helt kompatibel med denna mod. %2%'
 
-  - &updateToYUP
-    type: say
-    content: 'Outdated. Consider using the latest version of [Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664) instead.'
-
   - &useInstead
     type: warn
     content:
@@ -335,6 +331,9 @@ common:
         text: '代わりに%1%を使用してください。'
       - lang: sv
         text: 'Använd %1% istället.'
+  - &useInsteadYUP
+    <<: *useInstead
+    subs: [ '[Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664/)' ]
 
   - &useOnlyOneX
     type: error
@@ -1076,7 +1075,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'Community Bugfix Compilation Patch.esm'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
     tag:
       - Actors.AIPackages
       - Delev
@@ -1276,7 +1275,7 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'OFT_Merge_Base.esm'
     inc:
       - 'OFT_Merge_All.esm'
@@ -1284,19 +1283,19 @@ plugins:
       - 'OFT_Base_Interiors.esp'
       - 'OFT_IWR_Base.esp'
       - 'OFT_Coordinate_Finder.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'OFT_Merge_HonestHearts.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_Merge_HonestHearts.esp'
       - 'OFT_HonestHearts_Interiors.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'OFT_Merge_OldWorldBlues.esm'
     inc:
       - 'OFT_Merge_All.esm'
       - 'OFT_OldWorldBlues.esp'
       - 'OFT_IWR_OldWorldBlues.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
   - name: 'Companion Core.esm'
@@ -2417,15 +2416,15 @@ plugins:
       - type: say
         content: 'Translation file.'
   - name: 'MM-Main.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'MM-HonestHearts.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'MM-OldWorldBlues.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'MM-LonesomeRoad.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
     inc:
       - 'Compiled Patch.esp'
@@ -2452,14 +2451,14 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE+.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'Mission Mojave - Ultimate Edition Plus.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag:
        - NoMerge
   - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag:
        - NoMerge
@@ -2468,7 +2467,7 @@ plugins:
     inc:
       - 'IWR.esm'
   - name: 'Community Bugfix Compilation Patch.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
@@ -2505,7 +2504,7 @@ plugins:
       - 'Compiled Patch.esp'
       - 'Community Bugfix Compilation Patch.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *updateToYUP ]
+    msg: [ *useInsteadYUP ]
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
