@@ -184,6 +184,8 @@ common:
     content:
       - lang: en
         text: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+      - lang: de
+        text: 'Hinweis: Wird mit jeder anderen Modifikation Konflikte haben, die das Wetter, Image Space oder Image Space-Modifikatoren ändert.'
 
   - &obsolete
     type: warn
