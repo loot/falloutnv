@@ -106,7 +106,7 @@ common:
       - lang: ru
         text: 'Рекомендуется прочесть [заметки о совместимости](%1%) мода.'
       - lang: sv
-        text: 'Det är rekommenderat att du läser denna mods [kompabilitetsanteckningar](%1%).'
+        text: 'Det är rekommenderat att du läser det här moddets [kompabilitetsanteckningar](%1%).'
 
   - &corrupt
     type: warn
