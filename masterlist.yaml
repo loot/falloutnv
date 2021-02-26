@@ -516,7 +516,7 @@ common:
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
     subs: [ '' ]
 
-# Cleaning data
+# Dirty Aliases
   - &quickClean
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
     info:
