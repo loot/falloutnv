@@ -6767,3 +6767,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/36196/' ]
     inc: [ *TTWv320 ]
 
+  - name: 'Altitude.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71404/' ]
+    group: *weatherGroup
+    clean:
+      - crc: 0xE3EF6849
+        util: 'FNVEdit v4.0.3f'
