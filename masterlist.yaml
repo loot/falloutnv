@@ -712,8 +712,7 @@ plugins:
   - name: 'HonestHearts.esm'
     url: [ 'https://store.steampowered.com/app/72740/']
     group: *dlcGroup
-    after:
-      - 'DeadMoney.esm'
+    after: [ 'DeadMoney.esm' ]
     tag:
       - C.Light
       - Graphics
@@ -759,8 +758,7 @@ plugins:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
-    tag:
-      - Stats
+    tag: [ Stats ]
     dirty:
       # version: 1.4.0.525
       - <<: *quickClean
@@ -910,13 +908,11 @@ plugins:
       - 'FNC Overhaul Project.esp'
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
-    after:
-      - 'GunRunnersArsenal.esm'
+    after: [ 'GunRunnersArsenal.esm' ]
     # doNotClean
     tag:
       - Actors.ACBS
@@ -949,8 +945,7 @@ plugins:
   - name: 'ThePitt.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
+    after: [ 'Anchorage.esm' ]
     # doNotClean
     tag:
       - Actors.DeathItem
@@ -1049,10 +1044,8 @@ plugins:
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
-    inc:
-      - 'YUP - Base Game + All DLC.esm'
-    after:
-      - 'TaleOfTwoWastelands.esm'
+    inc: [ 'YUP - Base Game + All DLC.esm' ]
+    after: [ 'TaleOfTwoWastelands.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1156,8 +1149,7 @@ plugins:
   - name: 'Unofficial Patch Plus.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953']
     group: *fixesGroup
-    after:
-      - 'YUP - Base Game + All DLC.esm'
+    after: [ 'YUP - Base Game + All DLC.esm' ]
     inc: [ *TTWv320 ]
 
   - name: 'Unofficial Patch Plus - Addendum.esp'
@@ -1237,8 +1229,7 @@ plugins:
       - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
-    after:
-      - 'ProjectBrazil.esm'
+    after: [ 'ProjectBrazil.esm' ]
     inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
@@ -1307,8 +1298,7 @@ plugins:
       - "OWNB - Open World.esm"
       - 'OFT_IWR_Base.esp'
   - name: 'IWS-Core.esm'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'OWNB - Open World.esm'
     inc:
       - 'IWR.esm'
@@ -1338,8 +1328,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
-    tag:
-      - Names
+    tag: [ Names ]
     clean:
       - crc: 0x303F8818
         util: 'FNVEdit v4.0.2f'
@@ -1380,8 +1369,7 @@ plugins:
   - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
     msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'FOOK - New Vegas.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
     inc: [ *TTWv320 ]
@@ -1395,55 +1383,41 @@ plugins:
       - Sound
       - Stats
   - name: 'LDFemalePowerArmorPack.esm'
-    inc:
-      - 'LDFemalePowerArmorPack.esp'
+    inc: [ 'LDFemalePowerArmorPack.esp' ]
   - name: 'LW Companion.esm'
     msg:
       - type: say
         content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
   - name: 'Moddable Unique Weps.esm'
-    inc:
-      - 'Moddable Unique Weps.esp'
-    tag:
-      - WeaponMods
+    inc: [ 'Moddable Unique Weps.esp' ]
+    tag: [ WeaponMods ]
   - name: 'AWorldOfPain(Preview).esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     tag:
       - Deflst
       - Invent
   - name: 'AWorldOfPain(LowLoot).esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     msg: [ *obsolete ]
   - name: 'MoMod.esm'
-    after:
-      - 'nVamp - Core.esm'
-    inc:
-      - 'monsterrach.esp'
-    tag:
-      - Relev
+    after: [ 'nVamp - Core.esm' ]
+    inc: [ 'monsterrach.esp' ]
+    tag: [ Relev ]
   - name: 'New Vegas Error Corrections Complete - NO DLC.esm'
-    inc:
-      - 'Mission Mojave - Ultimate Edition.esp'
+    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
   - name: 'New Vegas Error Corrections BugFixes - NO DLC.esm'
-    inc:
-      - 'Mission Mojave - Ultimate Edition.esp'
+    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
   - name: 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
-    inc:
-      - 'Mission Mojave - Ultimate Edition.esp'
+    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
   - name: 'New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm'
-    inc:
-      - 'Mission Mojave - Ultimate Edition.esp'
+    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
   - name: 'NSkies - Vanilla Edition.esm'
-    inc:
-      - 'NSkies URWLified.esm'
+    inc: [ 'NSkies URWLified.esm' ]
     tag:
       - C.Climate
       - C.Light
   - name: 'NSkies URWLified.esm'
-    inc:
-      - 'NSkies - Vanilla Edition.esm'
+    inc: [ 'NSkies - Vanilla Edition.esm' ]
     tag:
       - C.Climate
       - C.Light
@@ -1461,8 +1435,7 @@ plugins:
       - 'NVInteriors_ComboEdition_AWOP.esm'
       - 'TTWInteriorsProject_Combo.esm'
       - 'TTWInteriorsProject_Combo_AWOP.esm'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
     dirty:
       # v1.3.4
       - <<: *reqManualFix
@@ -1526,8 +1499,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - L38PS.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
-    tag:
-      - C.Light
+    tag: [ C.Light ]
     clean:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
@@ -1566,16 +1538,14 @@ plugins:
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     req: [ *NVSE ]
-    tag:
-      - Invent
+    tag: [ Invent ]
     clean:
       # v2.5
       - crc: 0x2345512B
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Equipment.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
@@ -1605,8 +1575,7 @@ plugins:
   - name: 'Project Nevada - Cyberware.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
     inc: [ *TTWv320 ]
-    tag:
-      - Invent
+    tag: [ Invent ]
     clean:
       # v2.5
       - crc: 0x2E724F8C
@@ -1637,18 +1606,14 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Old World Blues.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
-    inc:
-      - "Project Nevada - Old World Blues (No Cyberware).esp"
-    tag:
-      - Invent
+    inc: [ 'Project Nevada - Old World Blues (No Cyberware).esp' ]
+    tag: [ Invent ]
     clean:
       # v1.34
       - crc: 0xF61652C7
         util: 'FNVEdit v4.0.2f'
-  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
+  - name: 'Project Nevada - Old World Blues \(No Cyberware\)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
-    inc:
-      - "Project Nevada - Old World Blues.esp"
     clean:
       # v1.34
       - crc: 0xA2C10055
@@ -1704,16 +1669,14 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Extra Options.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     clean:
       # v1.3
       - crc: 0xAB2F211D
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance Complete.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
-    tag:
-      - Relev
+    tag: [ Relev ]
     clean:
       # v1.3
       - crc: 0x5A9BCC6D
@@ -1769,11 +1732,9 @@ plugins:
     inc: [ *TTWv320 ]
 
   - name: 'CFWNV-DLC.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
   - name: 'Psiclones.esm'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'SelectFire.esm'
     req: [ *NVSE ]
   - name: 'Selective Fire.esm'
@@ -1796,16 +1757,14 @@ plugins:
   - name: 'Weapon Mod Expansion.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
     inc: [ *TTWv320 ]
-    tag:
-      - Names
+    tag: [ Names ]
     clean:
       # v1.101
       - crc: 0x2CBA5914
         util: 'FNVEdit v4.0.2f'
   - name: 'Weapon Mod Expansion.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc:
-      - 'WeaponModsExpanded.esp'
+    inc: [ 'WeaponModsExpanded.esp' ]
     tag:
       - Graphics
       - Names
@@ -1815,32 +1774,26 @@ plugins:
       - crc: 0x685F6957
         util: 'FNVEdit v4.0.2f'
   - name: 'WME - Dead Money.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     msg: [ *obsolete ]
   - name: 'WME - Honest Hearts.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     msg: [ *obsolete ]
   - name: 'WME - Old World Blues.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     msg: [ *obsolete ]
   - name: 'WME - GRA.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     clean:
       - crc: 0x9CEED987
         util: 'FNVEdit v4.0.2f'
   - name: 'WME - GRA Light.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
   - name: 'WME - DLCs.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
     inc:
       - 'WME - Dead Money.esm'
       - 'WME - Honest Hearts.esm'
@@ -1904,8 +1857,7 @@ plugins:
       - crc: 0x14C4625C
         util: 'FNVEdit v4.0.2f'
   - name: 'Clean-Deluxe FNV.esm'
-    inc:
-      - 'Performance of the Gods.esp'
+    inc: [ 'Performance of the Gods.esp' ]
   - name: 'aHUD.esm'
     req: [ *NVSE ]
   - name: 'iHUD.esm'
@@ -1937,19 +1889,14 @@ plugins:
   - name: 'nVamp - Vaernus''s Voracious Vermin.esm'
     msg: [ *obsolete ]
   - name: 'BoulderCityFaceliftProject.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
   - name: 'The Roost.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
   - name: 'dangame.esm'
-    after:
-      - 'nVamp - Core.esm'
+    after: [ 'nVamp - Core.esm' ]
   - name: 'HonestHearts-CaliberX.esm'
-    after:
-      - 'nVamp - Core.esm'
-    tag:
-      - Names
+    after: [ 'nVamp - Core.esm' ]
+    tag: [ Names ]
   - name: 'CFWTTW.esm'
     url: [ 'https://taleoftwowastelands.com/content/classic-fallout-weapons-ttw' ]
     inc:
@@ -2000,8 +1947,7 @@ plugins:
       - Names
   - name: 'Project Beauty.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
-    inc:
-      - 'TTW Redesigned.esm'
+    inc: [ 'TTW Redesigned.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -2055,12 +2001,10 @@ plugins:
       - Names
   - name: 'NV GameStabilizerA8.esm'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'More Perks.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
-    tag:
-      - Names
+    tag: [ Names ]
     inc: [ *TTWv320 ]
   - name: 'More Perks for Companions.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
@@ -2122,10 +2066,8 @@ plugins:
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
-    tag:
-      - Names
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    tag: [ Names ]
+    after: [ 'YUP - NPC Fixes (Base Game + All DLC).esp' ]
   - name: 'TTW_NoKarmaDCFollowers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
@@ -2159,8 +2101,7 @@ plugins:
   - name: 'TTW_SpeechChecks.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
-    tag:
-      - Names
+    tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2180,8 +2121,7 @@ plugins:
   - name: 'TTW_StartupMenu.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
-    tag:
-      - Names
+    tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2218,8 +2158,7 @@ plugins:
   - name: 'TTWOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
-    tag:
-      - Names
+    tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -2235,8 +2174,7 @@ plugins:
     group: *addonsPatchesGroup
   - name: 'ttw_-_cut_item_stats.esp'
     group: *addonsPatchesGroup
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
     group: *earlyLoadersGroup
@@ -2333,8 +2271,7 @@ plugins:
       - 'Project Nevada - All DLC.esp'
   - name: 'JSawyer - EVE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
-    after:
-      - 'EVE FNV - ALL DLC.esp'
+    after: [ 'EVE FNV - ALL DLC.esp' ]
     tag:
       - Graphics
       - Names
@@ -2391,7 +2328,6 @@ plugins:
       - Names
       - Relev
   - name: 'Gun Runners'' Arsenal Disabled.esp'
-    url: []
     tag:
       - Delev
       - Invent
@@ -2403,7 +2339,6 @@ plugins:
       - Invent
       - Names
   - name: 'NewVegasUncut.esm'
-    url: []
     group: *addonsPatchesGroup
     tag:
       - Delev
@@ -2411,7 +2346,6 @@ plugins:
       - Invent
       - Names
   - name: 'NewVegasUncut - TTW.esm'
-    url: []
     group: *addonsPatchesGroup
   - name: 'FalloutNV_lang.esp'
     msg:
@@ -2440,7 +2374,6 @@ plugins:
       - Sound
       - Stats
   - name: 'MMUE - Deutsch.esp'
-    url: []
     inc:
       - 'Compiled Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
@@ -2457,17 +2390,14 @@ plugins:
   - name: 'Mission Mojave - Ultimate Edition Plus.esp'
     msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag:
-       - NoMerge
+    tag: [ NoMerge ]
   - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
     msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag:
-       - NoMerge
+    tag: [ NoMerge ]
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-    inc:
-      - 'IWR.esm'
+    inc: [ 'IWR.esm' ]
   - name: 'Community Bugfix Compilation Patch.esp'
     msg: [ *useInsteadYUP ]
     inc:
@@ -2483,8 +2413,7 @@ plugins:
       - Sound
       - Stats
   - name: 'CBC Dead Money Patch.esp'
-    inc:
-      - 'Compiled Patch - DeadMoney.esp'
+    inc: [ 'Compiled Patch - DeadMoney.esp' ]
   - name: 'Compiled Patch.esp'
     inc:
       - 'Community Bugfix Compilation Patch.esp'
@@ -2516,11 +2445,9 @@ plugins:
   - name: 'ED-EUpgradeInventoryFix.esp'
     msg: [ *obsolete ]
   - name: 'JacknDianeFix.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'MarcusInvFix.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'MushroomCloudFix.esp'
     msg: [ *obsolete ]
   - name: 'NV Error Fixes DLCs 1.0.esp'
@@ -2633,86 +2560,56 @@ plugins:
       - 'RX-Auto Incremental Save.esp'
       - 'CASM.esp'
   - name: 'RX-Auto Incremental Save.esp'
-    inc:
-      - 'CASM.esp'
+    inc: [ 'CASM.esp' ]
   - name: 'BIS - Brumbek''s Inventory Sorting.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Honest Hearts.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Old World Blues.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Lonesome Road.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Gun Runners Arsenal.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Community Bugfix Comp ESM.esp'
-    inc:
-      - 'BIS - Community Bugfix Comp ESP.esp'
-    tag:
-      - Names
+    inc: [ 'BIS - Community Bugfix Comp ESP.esp' ]
+    tag: [ Names ]
   - name: 'BIS - CBC Dead Money Patch ESM.esp'
-    inc:
-      - 'BIS - CBC Dead Money Patch ESP.esp'
-    tag:
-      - Names
+    inc: [ 'BIS - CBC Dead Money Patch ESP.esp' ]
+    tag: [ Names ]
   - name: 'BIS - Community Bugfix Comp ESP.esp'
-    inc:
-      - 'BIS - Community Bugfix Comp ESM.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - CBC Dead Money Patch ESP.esp'
-    inc:
-      - 'BIS - CBC Dead Money Patch ESM.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Promo DLC Caravan Pack.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Promo DLC Classic Pack.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Promo DLC Mercenary Pack.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Promo DLC Tribal Pack.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - CFWNV.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - CFWNV-DLC.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Primary Needs HUD.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - More Cactus Water Recipes.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Compiled Patch.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Compiled Patch - DeadMoney.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Compiled Patch - HonestHearts.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Bobblehunt Patch.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'NewCalifornia DLC Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
-    inc:
-      - 'Simple DLC Delay.esp'
+    inc: [ 'Simple DLC Delay.esp' ]
   - name: 'NewCalifornia Courier Stash Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
   - name: 'FNC Overhaul Project.esp'
@@ -2734,25 +2631,20 @@ plugins:
         util: '[FNVEdit v4.0.3](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 6
   - name: 'Centered 3rd Person Camera.esp'
-    inc:
-      - 'FOOK - New Vegas.esm'
+    inc: [ 'FOOK - New Vegas.esm' ]
   - name: 'Centered 3rd Person Camera - Unraised.esp'
-    inc:
-      - 'FOOK - New Vegas.esm'
+    inc: [ 'FOOK - New Vegas.esm' ]
   - name: 'ImplantGRX-NVSEHotkey.esp'
     req: [ *NVSE ]
-    inc:
-      - 'ImplantGRX-ActivatorHotkey.esp'
+    inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
   - name: 'NVORganizedItems.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'OperationFixedTerrain.esp'
     msg: [ *obsolete ]
   - name: 'OFT_ElectroCity.esp'
     msg: [ *obsolete ]
   - name: '188 Trading Post Revisited.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'A Better Arcade.esp'
     tag:
       - Invent
@@ -2780,8 +2672,7 @@ plugins:
       - Invent
       - NpcFaces
   - name: 'Bitter Springs Revisited.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Cass and Veronica.esp'
     tag:
       - Invent
@@ -2799,14 +2690,11 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: 'Cuter Veronica Felicia Day-Essential.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Hanlon the badass 4.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Lore version.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'MikotoBPCCArcade.esp'
     tag:
       - NoMerge
@@ -2828,87 +2716,58 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: 'Mutant Eyes.esp'
-    tag:
-      - Eyes
+    tag: [ Eyes ]
   - name: 'NiceCass.esp'
-    inc:
-      - 'NiceCass - C.esp'
-    tag:
-      - NpcFaces
+    inc: [ 'NiceCass - C.esp' ]
+    tag: [ NpcFaces ]
   - name: 'NiceCass - C.esp'
-    inc:
-      - 'NiceCass.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'NPC Project - Aero Office Park.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Raul - Danny Trejo.esp'
     tag:
       - NoMerge
       - NpcFaces
   - name: 'ReElijahfied.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'RivensEyescapesNV.esp'
-    tag:
-      - Eyes
+    tag: [ Eyes ]
   - name: 'Mikotos_REyescapesNV.esp'
-    tag:
-      - Eyes
+    tag: [ Eyes ]
   - name: 'Veronica1.0.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Veronica_nerdy.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'VeronicaOlder.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Vulpes Inculta.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'VyntageCass02.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'VyntageVeronica02.esp'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: '1st Recon Revised.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Doc Mitchell''s House Owner.esp'
-    tag:
-      - C.Owner
+    tag: [ C.Owner ]
   - name: 'KillableKids_E.esp'
-    inc:
-      - 'KillableKids_NE.esp'
-  - name: 'KillableKids_NE.esp'
-    inc:
-      - 'KillableKids_E.esp'
+    inc: [ 'KillableKids_NE.esp' ]
   - name: 'monsterranch.esp'
-    inc:
-      - 'MoMod.esm'
+    inc: [ 'MoMod.esm' ]
     msg: [ *obsolete ]
-    tag:
-      - Relev
+    tag: [ Relev ]
   - name: 'Alpha''s MoMod Overhaul.esp'
     msg: [ *obsolete ]
   - name: 'Monster Mod Wasteland Edition.esp'
-    tag:
-      - Relev
+    tag: [ Relev ]
   - name: 'MMWE-No Oblivion.esp'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'MMWE-Claw Beast B Gone.esp'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'MMWE-LoreOut.esp'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'MMWE-No Werewolves.esp'
-    tag:
-      - Delev
+    tag: [ Delev ]
   - name: 'MMWE - Rebalanced Leveled Lists.esp'
     tag:
       - Delev
@@ -2926,11 +2785,7 @@ plugins:
       - Delev
       - Relev
   - name: 'NPCsUseAmmo.esp'
-    inc:
-      - 'NPCsUseAmmo-More Ammo.esp'
-  - name: 'NPCsUseAmmo-More Ammo.esp'
-    inc:
-      - 'NPCsUseAmmo.esp'
+    inc: [ 'NPCsUseAmmo-More Ammo.esp' ]
   - name: 'populatedcasino.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
@@ -2982,12 +2837,8 @@ plugins:
       - Delev
       - Relev
   - name: 'VendorGameTimeRestock.esp'
-    inc:
-      - 'VendorGameTimeRestockNoNVSE.esp'
+    inc: [ 'VendorGameTimeRestockNoNVSE.esp' ]
     req: [ *NVSE ]
-  - name: 'VendorGameTimeRestockNoNVSE.esp'
-    inc:
-      - 'VendorGameTimeRestock.esp'
   - name: 'VendorGameTimeRestockNoDefaultRestock.esp'
     msg:
       - type: say
@@ -3009,18 +2860,13 @@ plugins:
   - name: 'GunRunnersExpanded-LoreFriendly.esp'
     msg: [ *obsolete ]
   - name: 'Novac Hotel Suite Upgrade.esp'
-    inc:
-      - 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp'
-  - name: 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp'
-    inc:
-      - 'Novac Hotel Suite Upgrade.esp'
+    inc: [ 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp' ]
   - name: 'NVInteriors_WastelandEditon.esp'
     msg: [ *obsolete ]
   - name: 'NVInteriors_Urban_Edition_v1.0.esp'
     msg: [ *obsolete ]
   - name: 'return_deadmoney.esp'
-    inc:
-      - 'SierraMadreEXIT.esp'
+    inc: [ 'SierraMadreEXIT.esp' ]
   - name: 'RustTownAdditions3.esp'
     tag:
       - Factions
@@ -3030,39 +2876,29 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Seachlight Airport NCR.esp'
     msg: [ *obsolete ]
-  - name: 'SierraMadreEXIT.esp'
-    inc:
-      - 'return_deadmoney.esp'
   - name: 'SierraMadrev2.0.esp'
     msg: [ *obsolete ]
   - name: 'SierraMadrev2.1.esp'
     msg: [ *obsolete ]
   - name: 'UHNV-Performance-Patch.esp'
     msg: [ *obsolete ]
-  - name: 'UHNV-Brighter Lighting.esp'
-    inc:
-      - 'UHNV-IncreasedLighting.esp'
   - name: 'UHNV-IncreasedLighting.esp'
-    inc:
-      - 'UHNV-Brighter Lighting.esp'
+    inc: [ 'UHNV-Brighter Lighting.esp' ]
     msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
     req: [ *NVSE ]
     msg: [ *obsolete ]
   - name: 'UWHNV-Addon-DLC.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'UWHNV-Addon-GRA.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'UWHNV-Addon-FollowerHome.esp'
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
       - NpcFaces
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
-    inc:
-      - 'UWHNV-Addon-Follower.esp'
+    inc: [ 'UWHNV-Addon-Follower.esp' ]
   - name: 'YangtzeBunkerPlayerHome.esp'
     msg: [ *obsolete ]
   - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
@@ -3116,11 +2952,9 @@ plugins:
       - Sound
       - Stats
   - name: 'BIS - FOOK - New Vegas.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - FOOK - New Vegas DLCs.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'LinkesAuge - Bug fixing compilation.esp'
     tag:
       - Deflst
@@ -3128,51 +2962,37 @@ plugins:
       - Scripts
       - Stats
   - name: 'LinkesAuge - Retexture edits.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'NoWeaponZoom.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'ImprovedBinocs.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'HeadWearShaderFX.esp'
     tag:
       - Scripts
       - Stats
   - name: 'LootOverhaul.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Food&DrinkDontHeal.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'CompanionsImproved.esp'
-    tag:
-      - Actors.AIPackages
+    tag: [ Actors.AIPackages ]
   - name: 'Npc&CreatureRespawn.esp'
-    tag:
-      - Relev
+    tag: [ Relev ]
   - name: 'M.M.A.T - Companion Module.esp'
-    tag:
-      - Actors.AIPackages
+    tag: [ Actors.AIPackages ]
   - name: 'M.M.A.T - Ingestible Module.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'M.M.A.T - Shader Module.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'M.M.A.T Loot Module.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'M.M.A.T - Loot Module.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'M.M.A.T - Weapon Module.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'M.M.A.T - Spawn Module.esp'
-    tag:
-      - Relev
+    tag: [ Relev ]
   - name: 'NEVAX - BEAUTYPACK.esp'
     tag:
       - Body-F
@@ -3183,8 +3003,7 @@ plugins:
       - Deflst
       - Relev
   - name: 'NEVAX - ITEMBALANCINGS.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'NEVAX - KAUFINHALTE.esp'
     tag:
       - Deflst
@@ -3217,21 +3036,15 @@ plugins:
       - Deflst
       - Relev
   - name: 'PMT - XPadjust.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'PMT - Tougher XPadjust.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'PMT - Slower Reloading.esp'
-    inc:
-      - 'PMT - Slower Reloading No Visible Perk.esp'
-    tag:
-      - Stats
+    inc: [ 'PMT - Slower Reloading No Visible Perk.esp' ]
+    tag: [ Stats ]
   - name: 'PMT - Slower Reloading No Visible Perk.esp'
-    inc:
-      - 'PMT - Slower Reloading.esp'
-    tag:
-      - Stats
+    inc: [ 'PMT - Slower Reloading.esp' ]
+    tag: [ Stats ]
   - name: 'PMT - Reduced Ammo and Chems.esp'
     tag:
       - Delev
@@ -3241,29 +3054,17 @@ plugins:
       - Delev
       - Relev
   - name: 'PMT - More Demanding Hardcore.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'PMT - Destructible Ordnance.esp'
-    tag:
-      - Destructible
+    tag: [ Destructible ]
   - name: 'PMT - Deadlier Combat.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'PMT - Deadlier Combat Mk II.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'PMT - Faint Heartbeat.esp'
-    inc:
-      - 'PMT - Silent Heartbeat.esp'
-  - name: 'PMT - Silent Heartbeat.esp'
-    inc:
-      - 'PMT - Faint Heartbeat.esp'
+    inc: [ 'PMT - Silent Heartbeat.esp' ]
   - name: 'PMT - Total Challenge Remover.esp'
-    inc:
-      - 'PMT - Reduced Challenge Notifications.esp'
-  - name: 'PMT - Reduced Challenge Notifications.esp'
-    inc:
-      - 'PMT - Total Challenge Remover.esp'
+    inc: [ 'PMT - Reduced Challenge Notifications.esp' ]
   - name: 'Reload.esp'
     tag:
       - Delev
@@ -3278,60 +3079,46 @@ plugins:
       - Delev
       - Relev
   - name: 'RebalanceRearm.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'RearmRebalance.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'ReSort.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Superior Firepower - Unique Weaponry.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'Superior Firepower - Factional Changes.esp'
     tag:
       - Delev
       - Relev
   - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp med.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp high.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple low.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple med.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple high.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - XFO - 6aa - Epic Skills.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Adventurers_New_Vegas-V0.1.esp'
     msg:
       - type: say
         content: 'Old'
   - name: 'Arwen_NV_Realism_Core.esp'
     req: [ *NVSE ]
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'hardercore_combat.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'hardercore_wealth.esp'
     tag:
       - Delev
       - Relev
   - name: 'BIS - Project Nevada - Core.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - Project Nevada - Equipment.esp'
     tag:
       - Invent
@@ -3355,24 +3142,20 @@ plugins:
       - type: say
         content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
   - name: 'Project Brazil Project Nevada Patch.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'OWB Big Empty Overhaul.esp'
     tag:
       - Invent
       - Names
       - Stats
   - name: 'Flight of the ValkED-E.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Book of Steel.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60666' ]
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Book of Steel - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60666' ]
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Equipment Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
     tag:
@@ -3402,8 +3185,7 @@ plugins:
       - 'singleshot_retex.esp'
   - name: 'Equipment Restoration Project - EVE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
-    after:
-      - 'EVE FNV - ALL DLC.esp'
+    after: [ 'EVE FNV - ALL DLC.esp' ]
   - name: 'Equipment Restoration Project - IMPACT.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
     after:
@@ -3448,8 +3230,7 @@ plugins:
       - Invent
   - name: 'Equipment Restoration Project - WRP.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
-    tag:
-      - Graphics
+    tag: [ Graphics ]
     after:
       - '357retex.esp'
       - 'christinecos.esp'
@@ -3458,7 +3239,6 @@ plugins:
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
   - name: 'Power Armor Distribution Overhaul.esp'
-    url: []
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -3472,7 +3252,6 @@ plugins:
       - 'Equipment Restoration Project - TTW.esp'
       - 'TTW MMM + EVE.esp'
   - name: 'Power Armor Distribution Overhaul - TTW.esp'
-    url: []
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -3487,13 +3266,11 @@ plugins:
       - NPC.Class
       - Stats
   - name: 'Power Armor Distribution Overhaul - MMM.esp'
-    url: []
     tag:
       - Actors.Stats
       - Factions
       - Scripts
   - name: 'Power Armor Distribution Overhaul - NVCE.esp'
-    url: []
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -3501,39 +3278,26 @@ plugins:
       - NPC.Class
       - NpcFaces
   - name: 'Power Armor Distribution Overhaul - JSawyer.esp'
-    url: []
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'Power Armor Distribution Overhaul - TTW_OutcastTrading.esp'
-    url: []
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Power Armor Distribution Overhaul - Unoctium.esp'
-    url: []
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'TTW-WEP.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Improved Sound FX.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - HH Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - OWB Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - LR Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - GRA.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - Merged Major DLCs.esp'
     inc:
       - 'Improved Sound FX - DM.esp'
@@ -3542,18 +3306,14 @@ plugins:
       - 'Improved Sound FX - OWB Sharing Fix.esp'
       - 'Improved Sound FX - LR Sharing Fix.esp'
       - 'Improved Sound FX - WMX - Merged Major DLCs.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - Project Nevada.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'LouderGuns.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'awilderwasteland.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
-    inc:
-      - 'awilderwastelandnobenny.esp'
+    inc: [ 'awilderwastelandnobenny.esp' ]
     tag:
       - AI.Packages
       - Stats
@@ -3567,65 +3327,43 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'awilderwastelandnobenny.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
-    inc:
-      - 'awilderwasteland.esp'
     clean:
       - crc: 0xEDF9A5A4
         util: 'FNVEdit v4.0.2f'
   - name: 'betsybrahmin.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
-    inc:
-      - 'betsybrahminFSO.esp'
+    inc: [ 'betsybrahminFSO.esp' ]
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
-    inc:
-      - 'betsybrahmin.esp'
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'wsex_workgirl.esp'
-    inc:
-      - 'wsex_workgirl_tryout.esp'
-  - name: 'wsex_workgirl_tryout.esp'
-    inc:
-      - 'wsex_workgirl.esp'
+    inc: [ 'wsex_workgirl_tryout.esp' ]
   - name: 'BrainPerkBugfix.esp'
-    inc:
-      - 'BrainPerkBugfix_Cardiac.esp'
-  - name: 'BrainPerkBugfix_Cardiac.esp'
-    inc:
-      - 'BrainPerkBugfix.esp'
+    inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
   - name: 'FourEyesDynamic.esp'
-    inc:
-      - 'FourEyesBetter.esp'
-  - name: 'FourEyesBetter.esp'
-    inc:
-      - 'FourEyesDynamic.esp'
+    inc: [ 'FourEyesBetter.esp' ]
   - name: 'More Perks Update.esp'
     tag:
       - Actors.ACBS
       - Invent
   - name: 'More Traits Update.esp'
-    tag:
-      - Actors.ACBS
+    tag: [ Actors.ACBS ]
   - name: 'ZZZZ--APB_By_Nokturnihs.esp'
     msg: [ *obsolete ]
   - name: 'AutoLoot.esp'
     req: [ *NVSE ]
   - name: 'Detect Traps - Dead Money.esp'
-    req:
-      - 'DeadMoney.esm'
-    inc:
-      - 'Detect Traps - DLC.esp'
+    req: [ 'DeadMoney.esm' ]
+    inc: [ 'Detect Traps - DLC.esp' ]
   - name: 'Detect Traps - DLC.esp'
     req:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
-    inc:
-      - 'Detect Traps - Dead Money.esp'
   - name: 'IWS-AS-HighSpawns.esp'
     req: [ *NVSE ]
     inc:
@@ -3646,8 +3384,7 @@ plugins:
   - name: 'IWS-UltraSpawns.esp'
     msg: [ *obsolete ]
   - name: 'Less Weight.esp'
-    inc:
-      - 'More Weight.esp'
+    inc: [ 'More Weight.esp' ]
   - name: 'Isul-MagExchange.esp'
     req: [ *NVSE ]
   - name: 'Mail Order Catalogs PopUp.esp'
@@ -3720,21 +3457,14 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
     msg: [ *obsolete ]
-  - name: 'More Weight.esp'
-    inc:
-      - 'Less Weight.esp'
   - name: 'BIS - Sprint Mod.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'ACS-DeadMoney.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'ACS-HonestHearts.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'ACS-LonesomeRoad.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'ACS-GunRunnersArsenal.esp'
     tag:
       - Invent
@@ -3746,42 +3476,29 @@ plugins:
   - name: 'ArmourRepairKits.esp'
     req: [ *NVSE ]
   - name: 'Better Ammo Crafting.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BetterCraftingSorting.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Bountiful Harvest.esp'
-    inc:
-      - 'Dynamic Herbalism.esp'
-  - name: 'Dynamic Herbalism.esp'
-    inc:
-      - 'Bountiful Harvest.esp'
+    inc: [ 'Dynamic Herbalism.esp' ]
   - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
     msg: [ *obsolete ]
   - name: 'AEVegas.esp'
     msg: [ *obsolete ]
   - name: 'AG Shell Casing Fixes-All Five.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'AG Shell Casing Fixes Repeater-Service-ThatGun.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'AG Shell Casing Fixes - OWB.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'AG Supplementary Uniques.esp'
-    inc:
-      - 'AG Supplementary Uniques WME.esp'
+    inc: [ 'AG Supplementary Uniques WME.esp' ]
   - name: 'AG Supplementary Uniques-Dead Money.esp'
-    inc:
-      - 'AG Supplementary Uniques-Dead Money WME.esp'
+    inc: [ 'AG Supplementary Uniques-Dead Money WME.esp' ]
   - name: 'AG Supplementary Uniques-Honest Hearts.esp'
-    inc:
-      - 'AG Supplementary Uniques-Honest Hearts WME.esp'
+    inc: [ 'AG Supplementary Uniques-Honest Hearts WME.esp' ]
   - name: 'AG Supplementary Uniques-Lonesome Road.esp'
-    inc:
-      - 'AG Supplementary Uniques-Lonesome Road WME.esp'
+    inc: [ 'AG Supplementary Uniques-Lonesome Road WME.esp' ]
   - name: 'AG Supplementary Uniques-AllInOne.esp'
     inc:
       - 'AG Supplementary Uniques.esp'
@@ -3794,15 +3511,11 @@ plugins:
   - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
     msg: [ *obsolete ]
   - name: 'Ahzteks Weapon Overhaul.esp'
-    inc:
-      - 'Ahzteks Weapon Overhaul NO xCALIBER.esp'
+    inc: [ 'Ahzteks Weapon Overhaul NO xCALIBER.esp' ]
     tag:
       - Deflst
       - Delev
       - Invent
-  - name: 'Ahzteks Weapon Overhaul NO xCALIBER.esp'
-    inc:
-      - 'Ahzteks Weapon Overhaul.esp'
   - name: 'Ahzteks Pistol and SMG Replacements.esp'
     tag:
       - Graphics
@@ -3813,8 +3526,7 @@ plugins:
   - name: 'A Load of Balls.esp'
     req: [ *NVSE ]
   - name: 'Assault Carbine mods.esp'
-    tag:
-      - WeaponMods
+    tag: [ WeaponMods ]
   - name: 'Better Binoculars.esp'
     msg: [ *obsolete ]
   - name: 'Better Binoculars Low.esp'
@@ -3823,40 +3535,23 @@ plugins:
       - 'Better Binoculars High.esp'
       - 'Better Binoculars Max.esp'
   - name: 'BIS - Kobu Better Binoculars Low.esp'
-    req:
-      - 'Better Binoculars Low.esp'
-    tag:
-      - Names
+    req: [ 'Better Binoculars Low.esp' ]
+    tag: [ Names ]
   - name: 'Better Binoculars Medium.esp'
     inc:
-      - 'Better Binoculars Low.esp'
       - 'Better Binoculars High.esp'
       - 'Better Binoculars Max.esp'
   - name: 'BIS - Kobu Better Binoculars Medium.esp'
-    req:
-      - 'Better Binoculars Medium.esp'
-    tag:
-      - Names
+    req: [ 'Better Binoculars Medium.esp' ]
+    tag: [ Names ]
   - name: 'Better Binoculars High.esp'
-    inc:
-      - 'Better Binoculars Medium.esp'
-      - 'Better Binoculars Low.esp'
-      - 'Better Binoculars Max.esp'
+    inc: [ 'Better Binoculars Max.esp' ]
   - name: 'BIS - Kobu Better Binoculars High.esp'
-    req:
-      - 'Better Binoculars High.esp'
-    tag:
-      - Names
-  - name: 'Better Binoculars Max.esp'
-    inc:
-      - 'Better Binoculars Medium.esp'
-      - 'Better Binoculars High.esp'
-      - 'Better Binoculars Low.esp'
+    req: [ 'Better Binoculars High.esp' ]
+    tag: [ Names ]
   - name: 'BIS - Kobu Better Binoculars Max.esp'
-    req:
-      - 'Better Binoculars Max.esp'
-    tag:
-      - Names
+    req: [ 'Better Binoculars Max.esp' ]
+    tag: [ Names ]
   - name: 'better that gun 223.esp'
     tag:
       - Names
@@ -3866,75 +3561,58 @@ plugins:
       - Names
       - Stats
   - name: 'christinecos.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'GRA WRP Compatibility Patch.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Classic Plasma Grenade.esp'
-    tag:
-      - Graphics
-  - name: 'Classic Pulse Grenade (classic sound).esp'
+    tag: [ Graphics ]
+  - name: 'Classic Pulse Grenade \(classic sound\)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
     tag:
       - Graphics
       - Sounds
-  - name: 'Classic Pulse Grenade (vanilla sound).esp'
-    tag:
-      - Graphics
+  - name: 'Classic Pulse Grenade \(vanilla sound\)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
+    tag: [ Graphics ]
   - name: 'DWM4A1.esp'
-    inc:
-      - 'DWM4A1V18Personal.esp'
+    inc: [ 'DWM4A1V18Personal.esp' ]
   - name: 'DWM4A1V18Personal.esp'
-    inc:
-      - 'DWM4A1.esp'
+    inc: [ 'DWM4A1.esp' ]
   - name: 'DWUSP45.esp'
-    inc:
-      - 'DWUSP_V18.esp'
+    inc: [ 'DWUSP_V18.esp' ]
   - name: 'DWUSP_V18.esp'
-    inc:
-      - 'DWUSP45.esp'
+    inc: [ 'DWUSP45.esp' ]
   - name: 'EnergyBoost.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
     msg:
       - type: say
         content: 'User needs to move wav files from fallout 3 sound.bsa to use.'
   - name: 'ImmaSightinMahLazor.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'ironsightsnozoom.esp'
-    inc:
-      - 'ironsightsnozoom-wmx.esp'
+    inc: [ 'ironsightsnozoom-wmx.esp' ]
   - name: 'm110.esp'
     req: [ *NVSE ]
   - name: 'Moddable Anti-Materiel Rifle.esp'
-    tag:
-      - WeaponMods
+    tag: [ WeaponMods ]
   - name: 'Moddable Anti-Materiel Rifle 2.esp'
-    tag:
-      - WeaponMods
+    tag: [ WeaponMods ]
   - name: 'Moddable Unique Weps.esp'
-    inc:
-      - 'Moddable Unique Weps.esm'
-    tag:
-      - WeaponMods
+    inc: [ 'Moddable Unique Weps.esm' ]
+    tag: [ WeaponMods ]
   - name: 'OWB HQ Textures Fix.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'PlasmaRifleAwesomefied.esp'
     tag:
       - Sound
       - Stats
   - name: 'ScientistPack.esp'
-    inc:
-      - 'ScientistPackWMX.esp'
+    inc: [ 'ScientistPackWMX.esp' ]
   - name: 'Shotgun Commando.esp'
-    tag:
-      - Stats
-  - name: 'Shotgun Commando 1.2 Caravan.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
+  - name: 'Shotgun Commando 1\.2 Caravan\.esp'
+    tag: [ Stats ]
   - name: 'Stalker Weapons Pack.esp'
     msg: [ *obsolete ]
   - name: '1nivVSLArmors.esp'
@@ -3950,32 +3628,26 @@ plugins:
         content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
         condition: 'file("nVamp - Core.esm")'
   - name: 'Armored PA Gloves.esp'
-    tag:
-      - Deflst
+    tag: [ Deflst ]
   - name: 'AsharasLightningItems_ForNV.esp'
     tag:
       - Actors.AIData
       - Invent
       - NpcFaces
   - name: 'LDFemalePowerArmorPack.esp'
-    inc:
-      - 'LDFemalePowerArmorPack.esm'
+    inc: [ 'LDFemalePowerArmorPack.esm' ]
   - name: 'BlackWolf Backpack.esp'
-    inc:
-      - 'QS_Blackwolf_NV_Backpackmod.esp'
+    inc: [ 'QS_Blackwolf_NV_Backpackmod.esp' ]
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
-    req:
-      - 'BlackWolf Backpack.esp'
+    req: [ 'BlackWolf Backpack.esp' ]
   - name: 'epock.esp'
     msg:
       - type: say
         content: 'Meshes based off of the Type 3 Female Body.'
   - name: 'ERCA FACTLESS.esp'
-    inc:
-      - 'ERCA.esp'
+    inc: [ 'ERCA.esp' ]
   - name: 'ERCAFACTLESS.esp'
-    inc:
-      - 'ERCA.esp'
+    inc: [ 'ERCA.esp' ]
   - name: 'Fiendish Power Armor - Project Nevada.esp'
     msg:
       - type: say
@@ -3983,17 +3655,13 @@ plugins:
         condition: 'file("nVamp.*\.esp")'
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968' ]
-    inc:
-      - 'Project Nevada - FlashlightNVSE.esp'
+    inc: [ 'Project Nevada - FlashlightNVSE.esp' ]
     after:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
-  - name: 'Project Nevada - FlashlightNVSE.esp'
-    inc:
-      - 'FlashlightNVSE.esp'
   - name: 'ghostbodysuitcamo.esp'
     msg:
       - type: say
@@ -4011,54 +3679,37 @@ plugins:
       - 'Ghost Variants.esp'
       - 'Ghost Variants Adjutant.esp'
   - name: 'Hereticus Faction Armors Fading.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'HHType3tribalhands.esp'
-    tag:
-      - Body-F
+    tag: [ Body-F ]
   - name: 'JillBSAA Multicolor.esp'
     msg:
       - type: say
         content: '"Requires: Type 3 Body Replacer"'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'JNinjasNinjasComeBack.esp'
     inc:
       - 'JNinjasStealthFieldStops.esp'
       - 'JNinjasStealthFieldStopsNinjasComeBack.esp'
   - name: 'JNinjasStealthFieldStops.esp'
-    inc:
-      - 'JNinjasNinjasComeBack.esp'
-      - 'JNinjasStealthFieldStopsNinjasComeBack.esp'
-  - name: 'JNinjasStealthFieldStopsNinjasComeBack.esp'
-    inc:
-      - 'JNinjasNinjasComeBack.esp'
-      - 'JNinjasStealthFieldStops.esp'
+    inc: [ 'JNinjasStealthFieldStopsNinjasComeBack.esp' ]
   - name: 'KDS Wearable Backpacks.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'NCR Black Ops Stealth Armor.esp'
     msg:
       - type: say
         content: 'Due to a master issue this plugin requires ClassicPack.esm and can be fixed manually using FNVEdit.'
   - name: 'NCR Rearmament v1.5.esp'
-    inc:
-      - 'NCR Rearmament v1.5 (Lore).esp'
-  - name: 'NCR Rearmament v1.5 (Lore).esp'
-    inc:
-      - 'NCR Rearmament v1.5.esp'
+    inc: [ 'NCR Rearmament v1.5 (Lore).esp' ]
   - name: 'Nidaoutfitv1.esp'
     msg:
       - type: say
         content: 'Designed for the Type3 Female Body Replacer variants.'
   - name: 'Powered Power Armor.esp'
-    tag:
-      - Deflst
+    tag: [ Deflst ]
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
-    inc:
-      - 'BlackWolf Backpack.esp'
-    tag:
-      - Invent
+    inc: [ 'BlackWolf Backpack.esp' ]
+    tag: [ Invent ]
   - name: 'ReworkStuff.esp'
     msg:
       - type: say
@@ -4068,14 +3719,9 @@ plugins:
       - type: say
         content: 'Designed for Robert''s Male Body and Type3 Female Body variants.'
   - name: 'Seeker Veronica.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'sexysleepwear.esp'
-    inc:
-      - 'sexysleepwearnr.esp'
-  - name: 'sexysleepwearnr.esp'
-    inc:
-      - 'sexysleepwear.esp'
+    inc: [ 'sexysleepwearnr.esp' ]
   - name: 'T6M Equipment Replacer NV.esp'
     tag:
       - Graphics
@@ -4094,14 +3740,9 @@ plugins:
       - type: say
         content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
   - name: 'w44Satchels - Full.esp'
-    inc:
-      - 'w44Satchels - Lite.esp'
-  - name: 'w44Satchels - Lite.esp'
-    inc:
-      - 'w44Satchels - Full.esp'
+    inc: [ 'w44Satchels - Lite.esp' ]
   - name: 'XVEnclaveBunker.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'LingsPrettyThings.esp'
     tag:
       - Eyes
@@ -4167,8 +3808,7 @@ plugins:
   - name: 'FCO - Roberts Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
     after: [ 'Roberts_NewVegas.esp' ]
-    tag:
-      - Body-M
+    tag: [ Body-M ]
     clean:
       - crc: 0xDA98F6B1
         util: 'FNVEdit v4.0.2f'
@@ -4189,8 +3829,7 @@ plugins:
       - NpcFaces
   - name: 'FCO - GlowingOne.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
-    tag:
-      - Scripts
+    tag: [ Scripts ]
     clean:
       - crc: 0x0E746E1D
         util: 'FNVEdit v4.0.2f'
@@ -4243,8 +3882,7 @@ plugins:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
       - 'TTW Redesigned.esm'
-    tag:
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Destruction.esm'
     url: [ 'https://taleoftwowastelands.com/content/destruction' ]
     tag:
@@ -4257,27 +3895,16 @@ plugins:
       - Sound
       - Stats
   - name: 'AWOPLowRobots.esp'
-    inc:
-      - 'AWOPVeryLowRobots.esp'
-  - name: 'AWOPVeryLowRobots.esp'
-    inc:
-      - 'AWOPLowRobots.esp'
+    inc: [ 'AWOPVeryLowRobots.esp' ]
   - name: 'AWOP-AhztekWeaponPatch.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'AWOPCaliberXAmmoPatch.esp'
-    inc:
-      - 'AWOPCaliberXAmmoPatchLOW.esp'
-    tag:
-      - Invent
+    inc: [ 'AWOPCaliberXAmmoPatchLOW.esp' ]
+    tag: [ Invent ]
   - name: 'AWOPCaliberXAmmoPatchLOW.esp'
-    inc:
-      - 'AWOPCaliberXAmmoPatch.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'MMUE-CP-AWOP+NVInteriors.esp'
-    inc:
-      - 'MMUE-CP-AWOP.esp'
+    inc: [ 'MMUE-CP-AWOP.esp' ]
   - name: 'Companion Module Pack.esp'
     inc:
       - 'Companion Sandbox Mode.esp'
@@ -4290,46 +3917,24 @@ plugins:
       - 'Comp_Idles_NV.esp'
       - 'Companions Relax.esp'
   - name: 'Companion Weapons - Special Ammo.esp'
-    inc:
-      - 'Companion Weapons - Special Ammo - Dead Money.esp'
-  - name: 'Companion Weapons - Special Ammo - Dead Money.esp'
-    inc:
-      - 'Companion Weapons - Special Ammo.esp'
+    inc: [ 'Companion Weapons - Special Ammo - Dead Money.esp' ]
   - name: 'CompanionLevel30Cap.esp'
-    inc:
-      - 'HigherCompanionLevelCap.esp'
+    inc: [ 'HigherCompanionLevelCap.esp' ]
     msg: [ *obsolete ]
-    tag:
-      - Actors.ACBS
-  - name: 'HigherCompanionLevelCap.esp'
-    inc:
-      - 'CompanionLevel30Cap.esp'
+    tag: [ Actors.ACBS ]
   - name: 'Correction - Passive 2 Option.esp'
-    inc:
-      - 'Correction - Passive.esp'
-  - name: 'Correction - Passive.esp'
-    inc:
-      - 'Correction - Passive 2 Option.esp'
+    inc: [ 'Correction - Passive.esp' ]
   - name: 'Cass Passive Fix.esp'
-    inc:
-      - 'Cass Passive Fix 2 Option.esp'
-  - name: 'Cass Passive Fix 2 Option.esp'
-    inc:
-      - 'Cass Passive Fix.esp'
+    inc: [ 'Cass Passive Fix 2 Option.esp' ]
   - name: 'CCC - Save Cass.esp'
-    req:
-      - 'SaveCass.esp'
+    req: [ 'SaveCass.esp' ]
   - name: 'EZ_VanillaFollowers.esp'
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
   - name: 'LilyFawkes.esp'
-    inc:
-      - 'LilyArmored.esp'
-  - name: 'LilyArmored.esp'
-    inc:
-      - 'LilyFawkes.esp'
-  - name: 'My essential friends (animals).esp'
+    inc: [ 'LilyArmored.esp' ]
+  - name: 'My essential friends \(animals\)\.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -4343,8 +3948,7 @@ plugins:
       - C.Owner
       - Scripts
   - name: 'RexReplacerEss.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'RHKGilbertCompanion-Mikoto.esp'
     tag:
       - R.Mouth
@@ -4361,79 +3965,55 @@ plugins:
       - 'GunSmith.esm'
       - 'GunSmith Guns Upgrade.esp'
   - name: 'Real Weapon Names.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Real Weapon Names - NPC Compnaion Weapons.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Real Weapon Names - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Real Weapon Names - Honest Hearts.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Real Weapon Names - Project Nevada.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'MiscItemIconsNV.esp'
-    inc:
-      - 'T3T_MiscItemIconsNV.esp'
+    inc: [ 'T3T_MiscItemIconsNV.esp' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'T3T_MiscItemIconsNV.esp'
-    inc:
-      - 'MiscItemIconsNV.esp'
     msg: [ *obsolete ]
-    tag:
-      - Graphics
-  - name: 'BIS - T3T_MiscItemIconsNV 0.7.esp'
-    tag:
-      - Names
-  - name: 'BIS - MiscItemIconsNV 0.9.esp'
-    tag:
-      - Names
+    tag: [ Graphics ]
+  - name: 'BIS - T3T_MiscItemIconsNV 0\.7\.esp'
+    tag: [ Names ]
+  - name: 'BIS - MiscItemIconsNV 0\.9\.esp'
+    tag: [ Names ]
   - name: 'repairkitsexpanded.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Combined.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Combined - T3T Icon Compatch.esp'
     msg: [ *obsolete ]
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Combined - Aid Crafting.esp'
     msg: [ *obsolete ]
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Books.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Magazines.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Combined - Weighted.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Empty Consumables.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Sorter - Empty Consumables - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Inventory Sorter - Moddable Unique Weps.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'DrugsAreBadMKay-IS.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'FeelingIrradiated-IS.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Max Level 50.esp'
     req: [ *NVSE ]
     msg: [ *incMaxLevelMods ]
@@ -4457,20 +4037,17 @@ plugins:
     msg:
       - type: say
         content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
-  - name: 'Delay DLC - DM + HH + OWB.esp'
+  - name: 'Delay DLC - DM \+ HH \+ OWB\.esp'
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
     req: [ *NVSE ]
   - name: 'BIS - Grenade Hotkey.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg: [ *obsolete ]
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'IMCNNV - Sorted.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Intelligence_And_Skill_Points_Hardcore.esp'
     inc:
       - 'Intelligence_And_Skill_Points_High.esp'
@@ -4479,36 +4056,19 @@ plugins:
       - 'Intelligence_And_Skill_Points_Very_High.esp'
   - name: 'Intelligence_And_Skill_Points_High.esp'
     inc:
-      - 'Intelligence_And_Skill_Points_Hardcore.esp'
       - 'Intelligence_And_Skill_Points_Increased.esp'
       - 'Intelligence_And_Skill_Points_Normal.esp'
       - 'Intelligence_And_Skill_Points_Very_High.esp'
   - name: 'Intelligence_And_Skill_Points_Increased.esp'
     inc:
-      - 'Intelligence_And_Skill_Points_Hardcore.esp'
-      - 'Intelligence_And_Skill_Points_High.esp'
       - 'Intelligence_And_Skill_Points_Normal.esp'
       - 'Intelligence_And_Skill_Points_Very_High.esp'
   - name: 'Intelligence_And_Skill_Points_Normal.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Hardcore.esp'
-      - 'Intelligence_And_Skill_Points_High.esp'
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_Very_High.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Hardcore.esp'
-      - 'Intelligence_And_Skill_Points_High.esp'
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Normal.esp'
+    inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
   - name: 'Invisibility for No Reputation.esp'
     req: [ *NVSE ]
-  - name: 'lexx-no-dialog-tags-Deutsch.esp'
-    inc:
-      - 'lexx-no-dialog-tags-English.esp'
   - name: 'lexx-no-dialog-tags-English.esp'
-    inc:
-      - 'lexx-no-dialog-tags-Deutsch.esp'
+    inc: [ 'lexx-no-dialog-tags-Deutsch.esp' ]
   - name: 'LFox Bottle That Water.esp'
     tag:
       - Names
@@ -4517,14 +4077,9 @@ plugins:
     req: [ *NVSE ]
   - name: 'NoDegredation.esp'
     msg: [ *obsolete ]
-  - name: 'NVDLC04 Allegiance.esp'
-    inc:
-      - 'NVDLC04 Allegiance w Duster.esp'
   - name: 'NVDLC04 Allegiance w Duster.esp'
-    inc:
-      - 'NVDLC04 Allegiance.esp'
-    tag:
-      - Scripts
+    inc: [ 'NVDLC04 Allegiance.esp' ]
+    tag: [ Scripts ]
   - name: 'BIS - Project Nevada - Rebalance.esp'
     tag:
       - Names
@@ -4537,28 +4092,15 @@ plugins:
       - 'Permanent_Weapon_Shells_Very_Light.esp'
   - name: 'Permanent_Weapon_Shells_Light.esp'
     inc:
-      - 'Permanent_Weapon_Shells_Heavy.esp'
       - 'Permanent_Weapon_Shells_Medium.esp'
       - 'Permanent_Weapon_Shells_Very_Heavy.esp'
       - 'Permanent_Weapon_Shells_Very_Light.esp'
   - name: 'Permanent_Weapon_Shells_Medium.esp'
     inc:
-      - 'Permanent_Weapon_Shells_Heavy.esp'
-      - 'Permanent_Weapon_Shells_Light.esp'
       - 'Permanent_Weapon_Shells_Very_Heavy.esp'
       - 'Permanent_Weapon_Shells_Very_Light.esp'
   - name: 'Permanent_Weapon_Shells_Very_Heavy.esp'
-    inc:
-      - 'Permanent_Weapon_Shells_Heavy.esp'
-      - 'Permanent_Weapon_Shells_Light.esp'
-      - 'Permanent_Weapon_Shells_Medium.esp'
-      - 'Permanent_Weapon_Shells_Very_Light.esp'
-  - name: 'Permanent_Weapon_Shells_Very_Light.esp'
-    inc:
-      - 'Permanent_Weapon_Shells_Heavy.esp'
-      - 'Permanent_Weapon_Shells_Light.esp'
-      - 'Permanent_Weapon_Shells_Medium.esp'
-      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+    inc: [ 'Permanent_Weapon_Shells_Very_Light.esp' ]
   - name: 'RespawnerImprovedEx.esp'
     msg:
       - type: say
@@ -4578,24 +4120,15 @@ plugins:
       - NoMerge
       - Stats
   - name: 'RealisticWeaponRecoil.esp'
-    inc:
-      - 'RealisticWeaponRecoilDM.esp'
+    inc: [ 'RealisticWeaponRecoilDM.esp' ]
     req: [ *NVSE ]
-  - name: 'RealisticWeaponRecoilDM.esp'
-    inc:
-      - 'RealisticWeaponRecoil.esp'
   - name: 'Real Time Entry Skills.esp'
     req: [ *NVSE ]
   - name: 'Recharge Low.esp'
-    inc:
-      - 'Recharge High.esp'
-    req:
-      - 'E.C.K.O. Energy Cell Killer Overhaul.esp'
+    inc: [ 'Recharge High.esp' ]
+    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
   - name: 'Recharge High.esp'
-    inc:
-      - 'Recharge Low.esp'
-    req:
-      - 'E.C.K.O. Energy Cell Killer Overhaul.esp'
+    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
   - name: 'RRDynamicXPonly.esp'
     req: [ *NVSE ]
   - name: 'Runner.esp'
@@ -4605,13 +4138,7 @@ plugins:
       - 'SpecialEveryThreeLevels.esp'
       - 'SpecialEveryTwoLevels.esp'
   - name: 'SpecialEveryThreeLevels.esp'
-    inc:
-      - 'SpecialEveryThreeLevels.esp'
-      - 'SpecialEveryTwoLevels.esp'
-  - name: 'SpecialEveryTwoLevels.esp'
-    inc:
-      - 'SpecialEveryThreeLevels.esp'
-      - 'SpecialEveryTwoLevels.esp'
+    inc: [ 'SpecialEveryTwoLevels.esp' ]
   - name: 'SubtitlesHotkeyNV.esp'
     req: [ *NVSE ]
   - name: 'UltimateRecoil.esp'
@@ -4623,26 +4150,19 @@ plugins:
     req:
       - *NVSE
       - 'Project Nevada - Core.esm'
-    inc:
-      - 'UltimateRecoil.esp'
+    inc: [ 'UltimateRecoil.esp' ]
   - name: 'VarmintRifle22LR.esp'
-    inc:
-      - 'WMX-VarmintRifle22LR.esp'
+    inc: [ 'WMX-VarmintRifle22LR.esp' ]
   - name: 'Weight_Balance.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'Weight_Balance_v07.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'Weight_Balance_v10.esp'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'Weight_Rebalance_v10.esp.'
-    tag:
-      - Stats
+    tag: [ Stats ]
   - name: 'BIS - Weight_Balance_v10.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'WeaponModsExpanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
     inc:
@@ -4659,8 +4179,7 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
-    after:
-      - 'MMUE-CP-EVE.esp'
+    after: [ 'MMUE-CP-EVE.esp' ]
     dirty:
       # v1.1.4
       - <<: *quickClean
@@ -4761,23 +4280,15 @@ plugins:
   - name: 'WMXTemporaryPatch.esp'
     msg: [ *obsolete ]
   - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'WMX-AWOP Patch.esp'
-    tag:
-      - WeaponMods
+    tag: [ WeaponMods ]
   - name: 'WMX-AWOP-Overhaul.esp'
-    tag:
-      - WeaponMods
+    tag: [ WeaponMods ]
   - name: 'Frequency - WMX Patch.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'WMX-ShotgunCommando.esp'
-    inc:
-      - 'WMX-Arwen_NV_Realism.esp'
-  - name: 'WMX-Arwen_NV_Realism.esp'
-    inc:
-      - 'WMX-ShotgunCommando.esp'
+    inc: [ 'WMX-Arwen_NV_Realism.esp' ]
   - name: 'WMXUE-PN.esp'
     tag:
       - Graphics
@@ -4785,28 +4296,22 @@ plugins:
       - Names
       - WeaponMods
   - name: 'Frequency - PN+WMX Patch.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'ironsightsnozoom-wmx.esp'
-    inc:
-      - 'ironsightsnozoom.esp'
+    inc: [ 'ironsightsnozoom.esp' ]
   - name: 'Real Weapon Names - WMX.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'WMX-VarmintRifle22LR.esp'
-    inc:
-      - 'VarmintRifle22LR.esp'
+    inc: [ 'VarmintRifle22LR.esp' ]
   - name: 'WMX-ModernWeapons.esp'
     tag:
       - Delev
       - Invent
       - Relev
   - name: 'ACS-WMXModernWeapons.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Real Weapon Names - WMX - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
     inc:
       - 'Improved Sound FX - DM.esp'
@@ -4815,19 +4320,14 @@ plugins:
       - 'Improved Sound FX - OWB Sharing Fix.esp'
       - 'Improved Sound FX - LR Sharing Fix.esp'
       - 'Improved Sound FX - Merged Major DLCs.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Improved Sound FX - WMX - GRA Sharing Fix.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'ScientistPackWMX.esp'
-    inc:
-      - 'ScientistPack.esp'
+    inc: [ 'ScientistPack.esp' ]
   - name: 'RH_IronSights_NV_Vanilla.esp'
-    inc:
-      - 'WeaponModsExpanded.esp'
-    tag:
-      - Graphics
+    inc: [ 'WeaponModsExpanded.esp' ]
+    tag: [ Graphics ]
   - name: 'WME - 00 Commando.esp'
     tag:
       - Graphics
@@ -4874,22 +4374,17 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'BIS - Weapon Mod Expansion.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - WME - Dead Money.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'WME - FOOK - Dead Money.esp'
     msg: [ *obsolete ]
   - name: 'BIS - WME - Honest Hearts.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - WME - Dead Money Arenovalis Retex.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'EVE FNV.esp'
     tag:
       - Graphics
@@ -4909,7 +4404,7 @@ plugins:
       - WeaponMods
     after:
       - 'Improved Sound FX.esp'
-      - "Project Nevada - Gun Runners' Arsenal.esp"
+      - 'Project Nevada - Gun Runners'' Arsenal.esp'
       - 'dD - Enhanced Blood Main NV.esp'
     dirty:
       # v1.18
@@ -4921,8 +4416,7 @@ plugins:
       - crc: 0xB79DCBAF
         util: 'FNVEdit v4.0.2f'
   - name: 'Improved Sound FX - EVE.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'WMX-EVE.esp'
     tag:
       - Graphics
@@ -5022,69 +4516,49 @@ plugins:
     inc: [ *TTWv320 ]
 
   - name: 'NV Game Stabilizer.esp'
-    inc:
-      - 'NV GameStabilizerA.esp'
+    inc: [ 'NV GameStabilizerA.esp' ]
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA.esp'
-    inc:
-      - 'NV Game Stabilizer.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA1.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA2.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA4.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA5.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA5F.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA6.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA7.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA7b.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA8.esp'
     msg: [ *obsolete ]
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA9.esp'
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'SimpleStreetLights.esp'
-    inc:
-      - 'SimpleStreetLights (Extra Lights).esp'
-  - name: 'SimpleStreetLights (Extra Lights).esp'
-    inc:
-      - 'SimpleStreetLights.esp'
+    inc: [ 'SimpleStreetLights (Extra Lights).esp' ]
   - name: 'Vurt''s Trees & Grass.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
   - name: 'Vurt''s WFO.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    after:
-      - 'Flora Overhaul.esp'
+    after: [ 'Flora Overhaul.esp' ]
     dirty:
       # v3.2b
       - <<: *quickClean
@@ -5098,21 +4572,18 @@ plugins:
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
-  - name: 'Vurt''s WFO [Lite].esp'
+  - name: 'Vurt''s WFO \[Lite\]\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    inc:
-      - 'Vurt''s WFO.esp'
+    inc: [ 'Vurt''s WFO.esp' ]
   - name: 'DN More Lights.esp'
     inc:
       - 'ELECTRO-CITY - CompletedWorkorder.esp'
       - 'ELECTRO-CITY - CompletedWorkorder.esm'
   - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
     msg: [ *obsolete ]
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'ELECTRO-CITY - Highways and Byways.esp'
     msg: [ *obsolete ]
   - name: 'BIS - ELECTRO-CITY Extended Cateye.esp'
@@ -5122,17 +4593,9 @@ plugins:
       - type: say
         content: 'This patch will work with the latest version of Electro-City but it won''t be updated any further.'
   - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
-    inc:
-      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+    inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
   - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
-    inc:
-      - 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp'
-  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
-    inc:
-      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
-  - name: 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp'
-    inc:
-      - 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
+    inc: [ 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp' ]
   - name: 'ACF Brighter Days and Darker Nights v5 - Medium'
     msg:
       - type: say
@@ -5152,22 +4615,12 @@ plugins:
       - 'fnvrwl FNV only.esp'
   - name: 'fnvrwlo - brighter nights.esp'
     inc:
-      - 'fnvrwlo - original.esp'
       - 'fnvrwl FNV only - brighter nights.esp'
       - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only - brighter nights.esp'
-    inc:
-      - 'fnvrwlo - original.esp'
-      - 'fnvrwlo - brighter nights.esp'
-      - 'fnvrwl FNV only.esp'
-  - name: 'fnvrwl FNV only.esp'
-    inc:
-      - 'fnvrwlo - original.esp'
-      - 'fnvrwlo - brighter nights.esp'
-      - 'fnvrwl FNV only - brighter nights.esp'
+    inc: [ 'fnvrwl FNV only.esp' ]
   - name: 'friendofnightforfellout.esp'
-    req:
-      - 'Fellout.esp'
+    req: [ 'Fellout.esp' ]
   - name: 'night_and_day.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
@@ -5236,16 +4689,13 @@ plugins:
   - name: 'Interior Lighting Overhaul-Realistic.esp'
     group: *lightingGroup
     msg: [ *obsolete ]
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
     group: *lightingGroup
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
     group: *lightingGroup
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
@@ -5254,8 +4704,7 @@ plugins:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
     clean:
       - crc: 0x393BF52E
         util: 'FNVEdit v4.0.2f'
@@ -5264,30 +4713,18 @@ plugins:
     inc:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'Interior Lighting Overhaul.esp'
     group: *lightingGroup
     msg: [ *obsolete ]
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Fallout New Vegas.esp'
     group: *lightingGroup
-    inc:
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    inc: [ 'ILO - Fallout New Vegas - No Lucky38.esp' ]
+    tag: [ C.Light ]
   - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
     group: *lightingGroup
-    inc:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - GS Shack.esp'
     group: *lightingGroup
     after:
@@ -5295,8 +4732,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Original Lucky38 Suite.esp'
     group: *lightingGroup
     after:
@@ -5304,8 +4740,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Dead Money.esp'
     group: *lightingGroup
     inc:
@@ -5314,8 +4749,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Dead Money.esp'
     group: *lightingGroup
     inc:
@@ -5324,8 +4758,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Honest Hearts.esp'
     group: *lightingGroup
     inc:
@@ -5334,8 +4767,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Honest Hearts.esp'
     group: *lightingGroup
     inc:
@@ -5344,8 +4776,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Old World Blues.esp'
     group: *lightingGroup
     inc:
@@ -5354,8 +4785,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Old World Blues.esp'
     group: *lightingGroup
     inc:
@@ -5364,8 +4794,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Lonesome Road.esp'
     group: *lightingGroup
     inc:
@@ -5374,8 +4803,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Lonesome Road.esp'
     group: *lightingGroup
     inc:
@@ -5384,8 +4812,7 @@ plugins:
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO-RI-Rust Town.esp'
     group: *lightingGroup
     after:
@@ -5393,8 +4820,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - NVInteriors Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
     group: *lightingGroup
@@ -5419,8 +4845,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Project Reality Patch.esp'
     group: *lightingGroup
     after:
@@ -5428,8 +4853,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Climate
+    tag: [ C.Climate ]
   - name: 'Interior Lighting Overhaul-Darker.esp'
     group: *lightingGroup
     msg: [ *obsolete ]
@@ -5440,8 +4864,7 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'ILO - Tale of Two Wastelands.esp'
     group: *lightingGroup
     after:
@@ -5449,42 +4872,24 @@ plugins:
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'TTW - Realistic Interior Lighting.esp'
     group: *lightingGroup
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'DYNAVISION - Dynamic Lens Effect.esp'
-    inc:
-      - 'Field Depth.esp'
+    inc: [ 'Field Depth.esp' ]
     msg: [ *obsolete ]
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
     inc:
       - 'DYNAVISION - Dynamic Lens Effect.esp'
       - 'Field Depth.esp'
-  - name: 'Field Depth.esp'
-    inc:
-      - 'DYNAVISION - Dynamic Lens Effect.esp'
   - name: 'RadiationEffects-greenNV.esp'
-    inc:
-      - 'RadiationEffects-whiteNV.esp'
-  - name: 'RadiationEffects-whiteNV.esp'
-    inc:
-      - 'RadiationEffects-greenNV.esp'
+    inc: [ 'RadiationEffects-whiteNV.esp' ]
   - name: 'SneakNV.esp'
-    inc:
-      - 'Sneak - less saturated version NV.esp'
-  - name: 'Sneak - less saturated version NV.esp'
-    inc:
-      - SneakNV.esp"
+    inc: [ 'Sneak - less saturated version NV.esp' ]
   - name: 'ELECTRO-CITY - Emittance.esp'
-    inc:
-      - 'ELECTRO-CITY - Imaginator.esp'
+    inc: [ 'ELECTRO-CITY - Imaginator.esp' ]
     msg: [ *obsolete ]
-  - name: 'ELECTRO-CITY - Imaginator.esp'
-    inc:
-      - 'ELECTRO-CITY - Emittance.esp'
   - name: 'CustomLighting-I DoF Blur.esp'
     msg: [ *obsolete ]
   - name: 'CustomLighting-IE DoF Blur.esp'
@@ -5548,8 +4953,7 @@ plugins:
   - name: 'nVamp - Game Fixes.esp'
     msg: [ *obsolete ]
   - name: 'nVamp - Core.esp'
-    req:
-      - 'nVamp - Core.esm'
+    req: [ 'nVamp - Core.esm' ]
   - name: 'nVamp - VVV - Bosses.esp'
     msg:
       - type: say
@@ -5567,23 +4971,11 @@ plugins:
       - type: say
         content: 'Optional to increase game performance for those with older computers.'
   - name: 'nVamp - HalfSpeed.esp'
-    inc:
-      - 'nVamp - VanillaSpeed.esp'
-  - name: 'nVamp - VanillaSpeed.esp'
-    inc:
-      - 'nVamp - HalfSpeed.esp'
+    inc: [ 'nVamp - VanillaSpeed.esp' ]
   - name: 'nVamp - EasierAI.esp'
-    inc:
-      - 'nVamp - HarderAI.esp'
-  - name: 'nVamp - HarderAI.esp'
-    inc:
-      - 'nVamp - EasierAI.esp'
+    inc: [ 'nVamp - HarderAI.esp' ]
   - name: 'nVamp - VVV - Low Spawns.esp'
-    inc:
-      - 'nVamp - VVV - Med Spawns.esp'
-  - name: 'nVamp - VVV - Med Spawns.esp'
-    inc:
-      - 'nVamp - VVV - Low Spawns.esp'
+    inc: [ 'nVamp - VVV - Med Spawns.esp' ]
   - name: 'nVamp - Hardcore nVamped.esp'
     msg:
       - type: say
@@ -5605,8 +4997,7 @@ plugins:
         content: '"Requires: [Lings compatibility patch](https://www.nexusmods.com/newvegas/mods/41548)."'
         condition: 'file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)'
   - name: 'EwwGhoulyBody.esp'
-    tag:
-      - Body-F
+    tag: [ Body-F ]
   - name: 'tkEyelashesFNV.esp'
     msg:
       - type: say
@@ -5625,33 +5016,17 @@ plugins:
       - Invent
       - Graphics
   - name: 'ammoingredientsloot.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'More Perks for Old World Blues Update.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'More Perks for Honest Hearts Update.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'More Perks for Dead Money Update.esp'
     tag:
       - Invent
       - Actors.ACBS
-  - name: 'CCO - FT DM Patch.esp'
-    inc:
-      - 'CCO - FT All DLC Patch.esp'
-  - name: 'CCO - FT HH Patch.esp'
-    inc:
-      - 'CCO - FT All DLC Patch.esp'
-  - name: 'CCO - FT OWB Patch.esp'
-    inc:
-      - 'CCO - FT All DLC Patch.esp'
-  - name: 'CCO - FT LR Patch.esp'
-    inc:
-      - 'CCO - FT All DLC Patch.esp'
   - name: 'CCO - FT All DLC Patch.esp'
     inc:
       - 'CCO - FT DM Patch.esp'
@@ -5659,32 +5034,25 @@ plugins:
       - 'CCO - FT OWB Patch.esp'
       - 'CCO - FT LR Patch.esp'
   - name: 'Lucky 38 Lights.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'MadScience02.esp'
-    tag:
-      - Actors.DeathItem
+    tag: [ Actors.DeathItem ]
   - name: '1nivPNSLPatch.esp'
     tag:
       - Names
       - Stats
   - name: 'DLC Weapon Integration.esp'
-    inc:
-      - 'DLC Weapon Integration - WMX.esp'
+    inc: [ 'DLC Weapon Integration - WMX.esp' ]
   - name: 'OldWorldBlues - Keep Big MT Active.esp'
-    inc:
-      - 'OldWorldBlues - Keep Big MT Active No Announcements.esp'
+    inc: [ 'OldWorldBlues - Keep Big MT Active No Announcements.esp' ]
   - name: 'OldWorldBlues - Improved Transportalponder.esp'
-    inc:
-      - 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp'
+    inc: [ 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp' ]
   - name: 'Shotgun Commando Redone.esp'
-    inc:
-      - 'Shotgun Commando.esp'
+    inc: [ 'Shotgun Commando.esp' ]
   - name: 'NewVegasBountiesII.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41184' ]
     after: [ NewVegasBounties.esp ]
-    tag:
-      - Relations
+    tag: [ Relations ]
     dirty:
       # v1.47
       - <<: *reqManualFix
@@ -5696,8 +5064,7 @@ plugins:
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
-    tag:
-      - Relations
+    tag: [ Relations ]
     dirty:
       # v1.29
       - <<: *reqManualFix
@@ -5774,9 +5141,7 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
   - name: 'NewVegasUncut - New Vegas Bounties.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5789,9 +5154,7 @@ plugins:
       - 'TheBetterAngels.esp'
       - 'CheckpointGary.esp'
   - name: 'NewVegasUncut - New Vegas Bounties II.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5805,9 +5168,7 @@ plugins:
       - 'CheckpointGary.esp'
       - 'NewVegasUncut - New Vegas Bounties.esp'
   - name: 'NewVegasUncut - Inheritance.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5822,9 +5183,7 @@ plugins:
       - 'NewVegasUncut - New Vegas Bounties.esp'
       - 'NewVegasUncut - New Vegas Bounties II.esp'
   - name: 'NewVegasUncut - Russell.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5840,9 +5199,7 @@ plugins:
       - 'NewVegasUncut - New Vegas Bounties II.esp'
       - 'NewVegasUncut - Inheritance.esp'
   - name: 'NewVegasUncut - NewVegasKiller.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5859,9 +5216,7 @@ plugins:
       - 'NewVegasUncut - Inheritance.esp'
       - 'NewVegasUncut - Russell.esp'
   - name: 'NewVegasUncut - NewVegasBountiesIII.esp'
-    url: []
-    inc:
-      - 'NewVegasUncut - Someguy Series.esp'
+    inc: [ 'NewVegasUncut - Someguy Series.esp' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -5879,7 +5234,6 @@ plugins:
       - 'NewVegasUncut - Russell.esp'
       - 'NewVegasUncut - NewVegasKiller.esp'
   - name: 'NewVegasUncut - Someguy Series.esp'
-    url: []
     inc:
       - 'NewVegasUncut - New Vegas Bounties.esp'
       - 'NewVegasUncut - New Vegas Bounties II.esp'
@@ -5899,16 +5253,14 @@ plugins:
       - 'TheBetterAngels.esp'
       - 'CheckpointGary.esp'
   - name: 'KFE - Refill Water Bottles.esp'
-    tag:
-      - Scripts
+    tag: [ Scripts ]
   - name: 'PN-Refill Water Bottles Patch.esp'
     msg:
       - type: error
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
         content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
   - name: 'Project Nevada - Med-X Fix.esp'
-    tag:
-      - Names
+    tag: [ Names ]
   - name: 'vault22FloralOverhaul.esp'
     msg:
       - type: say
@@ -5917,10 +5269,9 @@ plugins:
     tag:
       - Factions
       - Names
-  - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
+  - name: 'Weapons\.of\.the\.New\.Millenia\.Store\.LITE\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
-    tag:
-      - C.Light
+    tag: [ C.Light ]
     after: [ 'GRARG.esp' ]
     dirty:
       - <<: *quickClean
@@ -5931,8 +5282,7 @@ plugins:
       - crc: 0xCB44400D
         util: 'FNVEdit v4.0.2f'
   - name: 'AnimatedFan.esp'
-    tag:
-      - Destructible
+    tag: [ Destructible ]
   - name: 'Tales from the Burning Sands.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37172' ]
     tag:
@@ -5953,8 +5303,7 @@ plugins:
         nav: 1
   - name: 'avangraffscorned.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45991' ]
-    tag:
-      - Actors.AIPackages
+    tag: [ Actors.AIPackages ]
     dirty:
       - <<: *quickClean
         crc: 0x026AB27D
@@ -5968,8 +5317,7 @@ plugins:
       - Actors.ACBS
       - Factions
   - name: 'DeadMoneyFemaleTuxedo.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Roberts_NewVegas.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54731' ]
     tag:
@@ -5981,8 +5329,7 @@ plugins:
   - name: 'RobCo Certified.esm'
     req: [ *NVSE ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
-    tag:
-      - Factions
+    tag: [ Factions ]
     dirty:
       - crc: 0x3B28B2FE
         util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
@@ -6002,11 +5349,9 @@ plugins:
       - 'RaestlozFactionArmorEnhancement.esp'
       - 'TrooperOverhaul-Dragbody.esp'
   - name: 'Alternative Blood Spout.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'Armor Replacer Child NPC Fix.esp'
-    tag:
-      - Invent
+    tag: [ Invent ]
   - name: 'athornysituation.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46048' ]
     tag:
@@ -6034,8 +5379,7 @@ plugins:
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
     inc: [ *TTWv320 ]
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'ILO - D.E.I.M.O.S.esp'
     group: *lightingGroup
     after:
@@ -6049,8 +5393,7 @@ plugins:
       - C.LTemplate
       - C.Owner
   - name: 'Improved Sounds FX.esp'
-    tag:
-      - Sound
+    tag: [ Sound ]
   - name: 'Integration - Couriers Stash+WMX.esp'
     tag:
       - Graphics
@@ -6074,8 +5417,7 @@ plugins:
       - crc: 0x4DBECCE2
         util: 'FNVEdit v4.0.2f'
   - name: 'New Vegas Bounties II.esp'
-    tag:
-      - C.Light
+    tag: [ C.Light ]
   - name: 'TrooperOverhaul-Dragbody.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54978' ]
     tag:
@@ -6148,8 +5490,7 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
-    inc:
-      - 'originalintro.esp'
+    inc: [ 'originalintro.esp' ]
     tag:
       - Actors.AIPackages
       - Invent
@@ -6164,8 +5505,6 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'originalintro.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
-    inc:
-      - 'originalintroExtended.esp'
     tag:
       - Actors.AIPackages
       - Invent
@@ -6185,8 +5524,7 @@ plugins:
         content: 'Contains wild edits to records 00116185 and 00116187. These two records should be removed, as they will overwrite any changes made to Benny or the Tops dialogue.'
         condition: 'checksum("Wasteland Defense.esp", D9241E23)'
   - name: 'RaestlozFactionArmorEnhancement.esp'
-    tag:
-      - Scripts
+    tag: [ Scripts ]
   - name: 'Tutorial Killer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746' ]
     clean:
@@ -6265,8 +5603,7 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'New Vegas Redesigned 3.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
-    after:
-      - 'Project Beauty.esm'
+    after: [ 'Project Beauty.esm' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
@@ -6332,8 +5669,7 @@ plugins:
     inc: [ *TTWv320 ]
 
   - name: 'Boacombat2glove.esp'
-    tag:
-      - Graphics
+    tag: [ Graphics ]
   - name: 'boa ncrpahelmet.esp'
     tag:
       - Delev
@@ -6421,7 +5757,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - Enhanced.esp'
-    url: []
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -6479,7 +5814,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - Enhanced.esp'
-    url: []
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -6519,7 +5853,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
   - name: 'FNV TTW RWLE - NVBII Patch.esp'
-    url: []
     after:
       - 'FNV Realistic Wasteland Lighting - Enhanced.esp'
       - 'TTW Realistic Wasteland Lighting - Enhanced.esp'
@@ -6544,33 +5877,27 @@ plugins:
   - name: '47 ENB Weather - TTW Patch.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
     group: *weatherGroup
-    after:
-      - '47 ENB Weather.esp'
+    after: [ '47 ENB Weather.esp' ]
     tag:
       - C.ImageSpace
       - C.Water
       - Sound
   - name: 'MergedPatch.esp'
     group: *dynamicPatchGroup
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'FNVMerged.esp'
     group: *dynamicPatchGroup
-    tag:
-      - NoMerge
+    tag: [ NoMerge ]
   - name: 'Smashed Patch.esp'
     group: *dynamicPatchGroup
-    after:
-      - TES5Merged.esp
-    tag:
-      - NoMerge
+    after: [ 'TES5Merged.esp' ]
+    tag: [ NoMerge ]
   - name: 'Bashed Patch, 0.esp'
     group: *dynamicPatchGroup
     after:
       - 'MergedPatch.esp'
       - 'FNVMerged.esp'
   - name: 'Fix the lights and Crap be gone.esp'
-    url: []
     dirty:
       - <<: *quickClean
         crc: 0xB5671CA9
@@ -6579,7 +5906,6 @@ plugins:
         udr: 54166
     msg: [ *corrupt ]
   - name: 'SupahWeapons.esp'
-    url: []
     dirty:
       - <<: *quickClean
         crc: 0xEC7F4960
