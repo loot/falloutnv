@@ -1086,16 +1086,7 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
-  - name: 'Community Bugfix Compilation Patch.esm'
-    msg: [ *useInsteadYUP ]
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Invent
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
+
   - name: 'UWHNV-Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36121' ]
     req: [ *NVSE ]
