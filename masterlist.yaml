@@ -1149,6 +1149,17 @@ plugins:
       - <<: *useInstead
         subs: [ '[Unofficial Patch NVSE Plus](https://www.nexusmods.com/newvegas/mods/71239/)' ]
 
+  - name: 'Unofficial Patch NVSE Plus.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
+    group: *fixesGroup
+    after: [ 'YUP - Base Game + All DLC.esm' ]
+    req:
+      - *JIPNVSE
+      - name: 'NVSE/Plugins/johnnyguitar.dll'
+        display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
+      - *MCM
+    inc: [ *TTWv320 ]
+
   - name: 'Unofficial Patch Plus( - Addendum)\.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953/']
     msg:
