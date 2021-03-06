@@ -1142,25 +1142,12 @@ plugins:
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
     inc: [ *TTWv320 ]
+
   - name: 'Unofficial Patch NVSE.esp'
-    req:
-      - *NVSE
-      - *JIPNVSE
-    url: ['https://www.nexusmods.com/newvegas/mods/65412']
-    group: *fixesGroup
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
-      - 'YUP - Base Game + All DLC.esm'
-    inc: [ *TTWv320 ]
-    tag: [ Scripts ]
+    url: ['https://www.nexusmods.com/newvegas/mods/65412/']
+    msg:
+      - <<: *useInstead
+        subs: [ '[Unofficial Patch NVSE Plus](https://www.nexusmods.com/newvegas/mods/71239/)' ]
 
   - name: 'Unofficial Patch Plus( - Addendum)\.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/62953/']
