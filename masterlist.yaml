@@ -1162,18 +1162,11 @@ plugins:
     inc: [ *TTWv320 ]
     tag: [ Scripts ]
 
-  - name: 'Unofficial Patch Plus.esp'
-    url: ['https://www.nexusmods.com/newvegas/mods/62953']
-    group: *fixesGroup
-    after: [ 'YUP - Base Game + All DLC.esm' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'Unofficial Patch Plus - Addendum.esp'
-    url: ['https://www.nexusmods.com/newvegas/mods/62953']
-    group: *fixesGroup
-    after:
-      - 'YUP - Base Game + All DLC.esm'
-      - 'Unofficial Patch Plus.esp'
+  - name: 'Unofficial Patch Plus( - Addendum)\.esp'
+    url: ['https://www.nexusmods.com/newvegas/mods/62953/']
+    msg:
+      - <<: *useInstead
+        subs: [ '[Unofficial Patch NVSE Plus](https://www.nexusmods.com/newvegas/mods/71239/)' ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
