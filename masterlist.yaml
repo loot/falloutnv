@@ -1628,7 +1628,7 @@ plugins:
       # v1.34
       - crc: 0xF61652C7
         util: 'FNVEdit v4.0.2f'
-  - name: 'Project Nevada - Old World Blues \(No Cyberware\)\.esp'
+  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
     clean:
       # v1.34
@@ -3508,12 +3508,12 @@ plugins:
     tag: [ Graphics ]
   - name: 'Classic Plasma Grenade.esp'
     tag: [ Graphics ]
-  - name: 'Classic Pulse Grenade \(classic sound\)\.esp'
+  - name: 'Classic Pulse Grenade (classic sound).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
     tag:
       - Graphics
       - Sounds
-  - name: 'Classic Pulse Grenade \(vanilla sound\)\.esp'
+  - name: 'Classic Pulse Grenade (vanilla sound).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
     tag: [ Graphics ]
   - name: 'DWM4A1.esp'
@@ -3553,7 +3553,7 @@ plugins:
     inc: [ 'ScientistPackWMX.esp' ]
   - name: 'Shotgun Commando.esp'
     tag: [ Stats ]
-  - name: 'Shotgun Commando 1\.2 Caravan\.esp'
+  - name: 'Shotgun Commando 1.2 Caravan.esp'
     tag: [ Stats ]
   - name: 'Stalker Weapons Pack.esp'
     msg: [ *obsolete ]
@@ -3876,7 +3876,7 @@ plugins:
       - Actors.CombatStyle
   - name: 'LilyFawkes.esp'
     inc: [ 'LilyArmored.esp' ]
-  - name: 'My essential friends \(animals\)\.esp'
+  - name: 'My essential friends (animals).esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -3924,9 +3924,9 @@ plugins:
   - name: 'T3T_MiscItemIconsNV.esp'
     msg: [ *obsolete ]
     tag: [ Graphics ]
-  - name: 'BIS - T3T_MiscItemIconsNV 0\.7\.esp'
+  - name: 'BIS - T3T_MiscItemIconsNV 0.7.esp'
     tag: [ Names ]
-  - name: 'BIS - MiscItemIconsNV 0\.9\.esp'
+  - name: 'BIS - MiscItemIconsNV 0.9.esp'
     tag: [ Names ]
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
@@ -3979,7 +3979,7 @@ plugins:
     msg:
       - type: say
         content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
-  - name: 'Delay DLC - DM \+ HH \+ OWB\.esp'
+  - name: 'Delay DLC - DM + HH + OWB.esp'
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
     req: [ *NVSE ]
@@ -4514,7 +4514,7 @@ plugins:
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
-  - name: 'Vurt''s WFO \[Lite\]\.esp'
+  - name: 'Vurt''s WFO [Lite].esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     inc: [ 'Vurt''s WFO.esp' ]
   - name: 'DN More Lights.esp'
@@ -5100,7 +5100,7 @@ plugins:
     tag:
       - Factions
       - Names
-  - name: 'Weapons\.of\.the\.New\.Millenia\.Store\.LITE\.esp'
+  - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag: [ C.Light ]
     after: [ 'GRARG.esp' ]
