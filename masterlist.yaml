@@ -1102,16 +1102,6 @@ plugins:
   - name: 'YUP - Base Game + All DLC.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *fixesGroup
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
     inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
