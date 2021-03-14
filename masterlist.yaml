@@ -669,6 +669,38 @@ globals:
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
+# NVSE plugins - Requirements
+  - type: error
+    content:
+      - lang: en
+        text: 'You have installed an %1% Plugin but %1% was not found! See %1% download page: %2%.'
+      - lang: da
+        text: 'Du har installeret an %1% Plugin men %1% blev ikke fundet! Se %1%-downloadsiden: %2%.'
+      - lang: de
+        text: 'Sie haben an %1% Plugin installiert, aber %1% wurde nicht gefunden! %1% kann hier heruntergeladen werden: %2%.'
+      - lang: es
+        text: 'Tienes an %1% Plugin instalado pero %1% no se pudo encontrar! Por favor descarga %1%: %2%.'
+      - lang: ja
+        text: 'an %1% Pluginはインストールされていますが、%1%が見つかりません！%1%のダウンロードページを確認してください。%2%'
+      - lang: ko
+        text: 'an %1% Plugin가 설치되었지만 %1%를 찾을 수 없습니다! %1% 다운로드 페이지를 참조하십시오: %2%.'
+      - lang: pl
+        text: 'Zainstalowałeś an %1% Plugin ale nie odnaleziono %1%! Odwiedź stronę pobierania %1%: %2%.'
+      - lang: pt
+        text: 'Você instalou an %1% Plugin mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+      - lang: pt_BR
+        text: 'Você tem an %1% Plugin instalado mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+      - lang: ru
+        text: 'У вас установлен an %1% Plugin, но %1% не найден! Смотрите страницу загрузки %2%.'
+      - lang: sv
+        text: 'Du har installerat an %1% Plugin men %1% kunde inte hittas! Läs mer på %1%:s nedladdningssisda: %2%.'
+      - lang: zh_CN
+        text: '你已经安装了an %1% Plugin，但是未发现%1%！请查看%1%的下载页面：%2%。'
+    subs:
+      - 'NVSE'
+      - '[NVSE](http://nvse.silverlock.org)'
+    condition: 'file("NVSE/Plugins/([^\.]+\.dll)") and not file("../nvse_loader.exe")'
+
 groups:
   - name: &dlcGroup DLC
     description: 'A group for official downloadable content.'
