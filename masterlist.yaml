@@ -44,7 +44,7 @@ common:
       - lang: pt
         text: 'Apagar. Já incluído em %1%.'
       - lang: pt_BR
-        text: 'Delete. Já icluído em %1%'
+        text: 'Apague. Já incluído em %1%'
       - lang: ru
         text: 'Удалите. Уже включено в %1%.'
       - lang: sv
@@ -65,6 +65,8 @@ common:
         text: '削除してください。%1%にすでに含まれているか修正されています。'
       - lang: pl
         text: 'Usuń. Już zawarte lub naprawione w %1%'
+      - lang: pt_BR
+        text: 'Apague. Já incluído ou consertado em %1%.'
       - lang: ru
         text: 'Удалите. Уже включено в %1% или исправлено иным образом.'
       - lang: sv
@@ -81,6 +83,8 @@ common:
         text: '%1%の併用を強く推奨します。'
       - lang: pl
         text: 'Jest wysoce wskazane abyś używał także %1%.'
+      - lang: pt_BR
+        text: 'É altamente recomendado que você também use %1%.'
       - lang: sv
         text: 'Det är rekommenderat att du också använder %1%.'
 
@@ -143,6 +147,8 @@ common:
         text: '%1%を削除するか非アクティブにしてください。'
       - lang: pl
         text: 'Usuń lub dezaktywuj. %1%'
+      - lang: pt_BR
+        text: 'Apague ou desative. %1%'
       - lang: ru
         text: 'Не забудьте отключить или удалить. %1%'
       - lang: sv
@@ -165,7 +171,7 @@ common:
       - lang: pt
         text: 'Ao utilizar **%1%**, é recomendado que você desative ou apage este ficheiro ESP, mas mantenha os recursos (ex. meshes, texturas) instalados por este mod.'
       - lang: pt_BR
-        text: 'Quando se usa **%1%**, é recomendado que você desative ou delete este arquivo ESP, mas que mantenha os recursos (ex. meshes, texturas) que vieram com esse mod.'
+        text: 'Quando se usa **%1%**, é recomendado que você desative ou apague este arquivo ESP mas que mantenha os recursos (por ex. meshes, textures) instalados com esse mod.'
       - lang: ru
         text: 'Пока используется **%1%**, рекомендуется отключить или удалить esp этого мода, но оставить установленные ресурсы (meshes, textures).'
       - lang: sv
@@ -178,6 +184,8 @@ common:
         text: 'Incompatible with Other mods that change the max level.'
       - lang: de
         text: 'Inkompatible mit anderen Mods, die das maximale Level verändern.'
+      - lang: pt_BR
+        text: 'Incompatível com outros mods que mudam o nível máximo.'
 
   - &incWeatherImageSpace
     type: say
@@ -186,6 +194,8 @@ common:
         text: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
       - lang: de
         text: 'Hinweis: Wird mit jeder anderen Modifikation Konflikte haben, die das Wetter, Image Space oder Image Space-Modifikatoren ändert.'
+      - lang: pt_BR
+        text: 'Aviso: Irá conflitar com quaisquer outros mods que modifiquem clima, image space, e modificadores de image space.'
 
   - &obsolete
     type: warn
@@ -204,6 +214,8 @@ common:
         text: '폐기된 플러그인입니다. 최신 버전으로 업데이트하십시오. %1%'
       - lang: pl
         text: 'Przestarzały. Uaktualnij do ostatniej wersji. %1%'
+      - lang: pt_BR
+        text: 'Obsoleto. Atualize para a última versão %1%.'
       - lang: ru
         text: 'Устарело. Обновите до последней версии. %1%'
       - lang: sv
@@ -293,6 +305,8 @@ common:
         text: '필요모드: %1%'
       - lang: pl
         text: 'Wymaga: %1%'
+      - lang: pt_BR
+        text: 'Requer: %1%'
       - lang: ru
         text: 'Требуется: %1%'
       - lang: sv
@@ -331,6 +345,8 @@ common:
         text: 'Nutzen Sie %1% stattdessen.'
       - lang: ja
         text: '代わりに%1%を使用してください。'
+      - lang: pt_BR
+        text: 'Use %1% ao invés disso.'
       - lang: sv
         text: 'Använd %1% istället.'
   - &useInsteadYUP
@@ -378,6 +394,8 @@ common:
         text: '%1%バージョンを使用してください。'
       - lang: pl
         text: 'Użyj wersji %1%'
+      - lang: pt_BR
+        text: 'Use a versão %1%.'
       - lang: ru
         text: 'Используйте версию для %1%'
       - lang: sv
@@ -430,6 +448,8 @@ common:
         text: '%1%バージョン以外を使用してください。'
       - lang: pl
         text: 'Użyj wersji innej niż %1%.'
+      - lang: pt_BR
+        text: 'Use a versão não-%1%.'
       - lang: sv
         text: 'Använd en icke-%1% version.'
   - &useVersionNonDeadMoney
@@ -511,7 +531,7 @@ common:
       - lang: pt
         text: 'Este plugin contém edições selvagens (Wild Edits) para além dos registros ITM e UDR, e Navmeshes apagadas. Pode requerer limpeza manual adicional de forma a não interferir com outros mods. %1%'
       - lang: pt_BR
-        text: 'Este plugin contém edições não-intencionais (Wild Edits) além dos registros ITM e UDR e Navmeshes deletadas e pode requerer limpeza manual adicional de forma que não interfira com outros mods. %1%'
+        text: 'Este plugin contém edições não-intencionais (Wild Edits) além dos registros ITM e UDR e Navmeshes deletadas e pode requerer limpeza manual adicional para que não interfira com outros mods. %1%'
       - lang: ru
         text: 'Плагин содержит дикие правки, кроме ITM, UDR записей и удаленных навмешей и может потребовать дополнительной ручной чистки, чтобы не пересекаться с другими модами. %1%'
       - lang: sv
@@ -533,7 +553,7 @@ common:
       - lang: pt
         text: 'Um guia para limpar plugins utilizando xEdit pode ser encontrado [aqui](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)'
       - lang: pt_BR
-        text: 'Um guia para limpar plugins utilizando xEdit pode ser encontrado [aqui](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)'
+        text: 'Um guia para limpar plugins utilizando o xEdit pode ser encontrado [aqui](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)'
       - lang: ru
         text: 'Гид по очистке с помощью xEdit можно найти [здесь](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: sv
@@ -554,7 +574,7 @@ common:
       - lang: pt
         text: 'É fortemente recomandado não utilizar mods que contenham **Navmeshes apagados** sendo que são conhecidos por causar falhas. **Navmeshes apagados** devem ser corrigidos manualmente(Um processo complexo que deve ser feito pelo autor do mod). Mais informação sobre **Navmeshes apagados** está disponível em inglês [aqui] (https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: pt_BR
-        text: 'É fortemente recomendade que você não utilize mods que contenham **Navmeshes deletados** pois eles são conhecidos por causar crashes. **Navmeshes deletados devem ser corrigos manualmente (Um processo complexo que deve ser feito pelo autor do mod). Mais informações em **Navmeshes deletadas** está disponível [aqui](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+        text: 'É altamente recomendado que você não utilize mods que contenham **Navmeshes deletados**, pois eles são conhecidos por causar problemas. **Navmeshes deletados devem ser corrigos manualmente (Um processo complexo que deve ser feito pelo autor do mod). Mais informações em **Navmeshes deletadas** está disponível [aqui](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: ru
         text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: sv
@@ -663,6 +683,8 @@ globals:
         text: '[Ostatni wątek LOOT](%1%).'
       - lang: pt
         text: '[Postagem mais recente do LOOT](%1%).'
+      - lang: pt_BR
+        text: '[Thread mais recento do LOOT](%1%).'
       - lang: ru
         text: '[Обсуждение LOOT "(Eng)"](%1%).'
       - lang: sv
@@ -691,7 +713,7 @@ globals:
       - lang: pt
         text: 'Você instalou an %1% Plugin mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
       - lang: pt_BR
-        text: 'Você tem an %1% Plugin instalado mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+        text: 'Você tem um plugin do %1% instalado mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
       - lang: ru
         text: 'У вас установлен an %1% Plugin, но %1% не найден! Смотрите страницу загрузки %2%.'
       - lang: sv
