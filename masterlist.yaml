@@ -151,6 +151,8 @@ common:
     content:
       - lang: en
         text: 'Delete or deactivate. %1%'
+      - lang: bg
+        text: 'За изтриване или деактивиране. %1%'
       - lang: de
         text: 'Lösche oder deaktiviere. %1%'
       - lang: ja
@@ -194,6 +196,8 @@ common:
     content:
       - lang: en
         text: 'Incompatible with Other mods that change the max level.'
+      - lang: bg
+        text: 'Не е съвместима с други модове, които променят максималното ниво.'
       - lang: de
         text: 'Inkompatible mit anderen Mods, die das maximale Level verändern.'
       - lang: pt_BR
@@ -204,6 +208,8 @@ common:
     content:
       - lang: en
         text: 'Notice: Will conflict with any other mod that changes weather, image space, and image space modifiers.'
+      - lang: bg
+        text: 'Забележка: Не е съвместима с модовете, които променят метеорологичното време.'
       - lang: de
         text: 'Hinweis: Wird mit jeder anderen Modifikation Konflikte haben, die das Wetter, Image Space oder Image Space-Modifikatoren ändert.'
       - lang: pt_BR
@@ -472,6 +478,8 @@ common:
     content:
       - lang: en
         text: 'Use non-%1% version.'
+      - lang: bg
+        text: 'Използвайте версията, която не е за %1%.'
       - lang: de
         text: 'Benutzen Sie die Nicht-%1% Version.'
       - lang: ja
