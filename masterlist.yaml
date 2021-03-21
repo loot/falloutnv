@@ -4031,21 +4031,15 @@ plugins:
     tag: [ Names ]
   - name: 'FeelingIrradiated-IS.esp'
     tag: [ Names ]
-  - name: 'Max Level 50.esp'
+
+  - name: 'Max Level (50|60|75|100|255)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39906/' ]
     req: [ *NVSE ]
-    msg: [ *incMaxLevelMods ]
-  - name: 'Max Level 60.esp'
-    req: [ *NVSE ]
-    msg: [ *incMaxLevelMods ]
-  - name: 'Max Level 75.esp'
-    req: [ *NVSE ]
-    msg: [ *incMaxLevelMods ]
-  - name: 'Max Level 100.esp'
-    req: [ *NVSE ]
-    msg: [ *incMaxLevelMods ]
-  - name: 'Max Level 255.esp'
-    req: [ *NVSE ]
-    msg: [ *incMaxLevelMods ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Max Level ESP' ]
+        condition: 'many("Max Level (50|60|75|100|255)\.esp")'
+
   - name: 'CCC - weaker weapons.esp'
     msg:
       - type: say
