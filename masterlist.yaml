@@ -191,18 +191,6 @@ common:
       - lang: sv
         text: 'När du använder **%1%** är det rekommenderat att du avaktiverar eller tar bort denna ESP-fil, men behåll resurserna (meshar och texturer) installerade med denna mod.'
 
-  - &incMaxLevelMods
-    type: say
-    content:
-      - lang: en
-        text: 'Incompatible with Other mods that change the max level.'
-      - lang: bg
-        text: 'Не е съвместима с други модове, които променят максималното ниво.'
-      - lang: de
-        text: 'Inkompatible mit anderen Mods, die das maximale Level verändern.'
-      - lang: pt_BR
-        text: 'Incompatível com outros mods que mudam o nível máximo.'
-
   - &incWeatherImageSpace
     type: say
     content:
