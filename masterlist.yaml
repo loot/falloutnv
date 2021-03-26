@@ -4642,7 +4642,30 @@ plugins:
       - 'Western Sky.esp'
 
   - name: 'Fellout.esp'
-    msg: [ *incWeatherImageSpace ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34888/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A606ABC
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 442
+  - name: 'Fellout-OWB.esp'
+    req: [ 'Fellout.esp' ]
+  - name: 'friendofnightforfellout.esp'
+    req: [ 'Fellout.esp' ]
+
   - name: 'fnvrwlo - original.esp'
     inc:
       - 'fnvrwlo - brighter nights.esp'
@@ -4654,8 +4677,6 @@ plugins:
       - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only - brighter nights.esp'
     inc: [ 'fnvrwl FNV only.esp' ]
-  - name: 'friendofnightforfellout.esp'
-    req: [ 'Fellout.esp' ]
   - name: 'night_and_day.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'URWLNV.esp'
