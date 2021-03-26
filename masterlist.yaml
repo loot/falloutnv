@@ -4678,8 +4678,37 @@ plugins:
   - name: 'fnvrwl FNV only - brighter nights.esp'
     inc: [ 'fnvrwl FNV only.esp' ]
 
+  - name: 'Western Sky( - Darker Nights)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35497/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Western Sky ESP' ]
+        condition: 'many("Western Sky( - Darker Nights)?\.esp")'
   - name: 'Western Sky.esp'
-    msg: [ *incWeatherImageSpace ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6007BFA5
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+  - name: 'Western Sky - Darker Nights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6267D10B
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
