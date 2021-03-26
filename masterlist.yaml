@@ -4623,8 +4623,24 @@ plugins:
     msg:
       - type: say
         content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
+
   - name: 'Emperical Weather.esp'
-    msg: [ *incWeatherImageSpace ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35260/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+
   - name: 'Fellout.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'fnvrwlo - original.esp'
