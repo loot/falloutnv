@@ -4678,8 +4678,6 @@ plugins:
   - name: 'fnvrwl FNV only - brighter nights.esp'
     inc: [ 'fnvrwl FNV only.esp' ]
 
-  - name: 'URWLNV.esp'
-    msg: [ *incWeatherImageSpace ]
   - name: 'Western Sky.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
