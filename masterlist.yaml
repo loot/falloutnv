@@ -4677,8 +4677,7 @@ plugins:
       - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only - brighter nights.esp'
     inc: [ 'fnvrwl FNV only.esp' ]
-  - name: 'night_and_day.esp'
-    msg: [ *incWeatherImageSpace ]
+
   - name: 'URWLNV.esp'
     msg: [ *incWeatherImageSpace ]
   - name: 'Western Sky.esp'
