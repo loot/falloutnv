@@ -197,20 +197,6 @@ common:
       - lang: sv
         text: 'När du använder **%1%** är det rekommenderat att du avaktiverar eller tar bort denna ESP-fil, men behåll resurserna (meshar och texturer) installerade med denna mod.'
 
-  - &incWeatherImageSpace
-    type: say
-    content:
-      - lang: en
-        text: 'Notice: will conflict with any other mod that changes weather, image space, and image space modifiers.'
-      - lang: bg
-        text: 'Забележка: Не е съвместима с модовете, които променят метеорологичното време.'
-      - lang: de
-        text: 'Hinweis: Wird mit jeder anderen Modifikation Konflikte haben, die das Wetter, Image Space oder Image Space-Modifikatoren ändert.'
-      - lang: ko
-        text: '알림: 날씨, 이미지 스페이스 및 이미지 스페이스 수정자를 변경하는 다른 모드와 충돌합니다.'
-      - lang: pt_BR
-        text: 'Aviso: Irá conflitar com quaisquer outros mods que modifiquem clima, image space, e modificadores de image space.'
-
   - &obsolete
     type: warn
     content:
