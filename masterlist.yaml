@@ -197,20 +197,6 @@ common:
       - lang: sv
         text: 'När du använder **%1%** är det rekommenderat att du avaktiverar eller tar bort denna ESP-fil, men behåll resurserna (meshar och texturer) installerade med denna mod.'
 
-  - &incWeatherImageSpace
-    type: say
-    content:
-      - lang: en
-        text: 'Notice: will conflict with any other mod that changes weather, image space, and image space modifiers.'
-      - lang: bg
-        text: 'Забележка: Не е съвместима с модовете, които променят метеорологичното време.'
-      - lang: de
-        text: 'Hinweis: Wird mit jeder anderen Modifikation Konflikte haben, die das Wetter, Image Space oder Image Space-Modifikatoren ändert.'
-      - lang: ko
-        text: '알림: 날씨, 이미지 스페이스 및 이미지 스페이스 수정자를 변경하는 다른 모드와 충돌합니다.'
-      - lang: pt_BR
-        text: 'Aviso: Irá conflitar com quaisquer outros mods que modifiquem clima, image space, e modificadores de image space.'
-
   - &obsolete
     type: warn
     content:
@@ -4615,18 +4601,71 @@ plugins:
     inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
   - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
     inc: [ 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp' ]
-  - name: 'ACF Brighter Days and Darker Nights v5 - Medium'
+
+  - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Emperical Weather.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
     msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
-  - name: 'ACF Brighter Days and Darker Nights v5 - Dark'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
+      - <<: *useOnlyOneX
+        subs: [ 'ACF Brighter Days and Darker Nights ESP' ]
+        condtion: 'many("ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp")'
+
   - name: 'Emperical Weather.esp'
-    msg: [ *incWeatherImageSpace ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35260/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+
   - name: 'Fellout.esp'
-    msg: [ *incWeatherImageSpace ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34888/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A606ABC
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 442
+  - name: 'Fellout-OWB.esp'
+    req: [ 'Fellout.esp' ]
+  - name: 'friendofnightforfellout.esp'
+    req: [ 'Fellout.esp' ]
+
   - name: 'fnvrwlo - original.esp'
     inc:
       - 'fnvrwlo - brighter nights.esp'
@@ -4638,14 +4677,38 @@ plugins:
       - 'fnvrwl FNV only.esp'
   - name: 'fnvrwl FNV only - brighter nights.esp'
     inc: [ 'fnvrwl FNV only.esp' ]
-  - name: 'friendofnightforfellout.esp'
-    req: [ 'Fellout.esp' ]
-  - name: 'night_and_day.esp'
-    msg: [ *incWeatherImageSpace ]
-  - name: 'URWLNV.esp'
-    msg: [ *incWeatherImageSpace ]
+
+  - name: 'Western Sky( - Darker Nights)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35497/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Western Sky ESP' ]
+        condition: 'many("Western Sky( - Darker Nights)?\.esp")'
   - name: 'Western Sky.esp'
-    msg: [ *incWeatherImageSpace ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6007BFA5
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+  - name: 'Western Sky - Darker Nights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6267D10B
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
     msg: [ *obsolete ]
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
