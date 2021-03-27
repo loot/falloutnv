@@ -4601,14 +4601,28 @@ plugins:
     inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
   - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
     inc: [ 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp' ]
-  - name: 'ACF Brighter Days and Darker Nights v5 - Medium'
+
+  - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Emperical Weather.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
     msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
-  - name: 'ACF Brighter Days and Darker Nights v5 - Dark'
-    msg:
-      - type: say
-        content: '"Notice: Will conflict with any other mod that changes image space and image space modifiers."'
+      - <<: *useOnlyOneX
+        subs: [ 'ACF Brighter Days and Darker Nights ESP' ]
+        condtion: 'many("ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp")'
 
   - name: 'Emperical Weather.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35260/' ]
