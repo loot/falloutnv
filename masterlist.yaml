@@ -1,11 +1,16 @@
+# LOOT ignores anything that doesn't come under 'bash_tags', 'globals',
+# 'groups', or 'plugins', so a section like 'common' is useful for storing
+# data that gets re-used.
 common:
-# Files
+# File Anchors
   - &NVSE
     name: '../nvse_1_4.dll'
     display: '[NVSE](http://nvse.silverlock.org/)'
+
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
     display: '[MCM](https://www.nexusmods.com/newvegas/mods/42507)'
+
   - &JIPNVSE
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277)'
@@ -15,13 +20,14 @@ common:
     display: 'Tale Of Two Wastelands v3.2+'
     condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
-# Conditions
+# Condition Anchors
   - &condFileTTW
     file("TaleOfTwoWastelands.esm")
+
   - &condNotFileTTW
     not file("TaleOfTwoWastelands.esm")
 
-# Messages
+# Message Anchors
   - &alreadyInX
     type: error
     content:
@@ -608,7 +614,7 @@ common:
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
     subs: [ '' ]
 
-# Dirty Aliases
+# Cleaning Data Anchors
   - &quickClean
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
     info:
@@ -636,6 +642,7 @@ common:
         text: 'En guide till att rensa plugins med xEdit finns [här](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: zh_CN
         text: 'xEdit的清洁插件指南可以在[这里](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)找到。'
+
   - &reqManualFix
     util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
     info:
@@ -779,7 +786,7 @@ globals:
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
-# NVSE plugins - Requirements
+# NVSE Plugin Requirements
   - type: error
     content:
       - lang: en
