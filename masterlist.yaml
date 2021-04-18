@@ -615,7 +615,7 @@ common:
       - lang: fi
         text: 'Tämä liitännäinen sisältää villejä muokkauksia ITM- ja UDR-tietueiden sekä poistettujen navmeshien lisäksi. Manuaalinen lisäpuhdistaminen voi olla tarpeen yhteensopivuuden takaamiseksi. %1%'
       - lang: it
-        text: 'Questo plugin contiene pesanti modifiche tra i record ITM e UDR, navmesh cancellate potrebbe richiedere una pulizia manuale aggiuntiva, in modo da non interferire con altre mod. %1%'
+        text: 'Questo plugin contiene pesanti modifiche tra i record ITM e UDR, navmesh cancellate e potrebbe richiedere una pulizia manuale aggiuntiva, in modo da non interferire con altre mod. %1%'
       - lang: ja
         text: 'このプラグインにはITMおよびUDRレコード以外の誤った編集(Wild Edit)が含まれており、navmeshが削除されています。他のmodと干渉しないように、追加の手動クリーニングが必要になる場合があります。%1%'
       - lang: ko
