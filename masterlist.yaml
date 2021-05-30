@@ -40,7 +40,7 @@ common:
       - lang: de
         text: 'Löschen. Bereits in %1% enthalten.'
       - lang: es
-        text: 'Borrar. Esta incluido en %1%.'
+        text: 'Eliminar. Está incluido en %1%.'
       - lang: fi
         text: 'Poista. %1% sisältää jo tämän.'
       - lang: it
@@ -72,7 +72,7 @@ common:
       - lang: de
         text: 'Löschen. Bereits enthalten oder anderweitig korrigiert in %1%.'
       - lang: es
-        text: 'Borrar. Esta incluido, o de otra modo, arreglado en el %1%.'
+        text: 'Eliminar. Está incluido o arreglado en %1%.'
       - lang: it
         text: 'Cancella. Già incluso o corretto in %1%.'
       - lang: ja
@@ -101,6 +101,8 @@ common:
         text: 'Препоръчва се да използвате %1%.'
       - lang: de
         text: 'Es wird dringend empfohlen, dass Sie auch %1% benutzen.'
+      - lang: es
+        text: 'Se recomienda que también use %1%.'
       - lang: it
         text: 'Si consiglia vivamente di usare anche %1%.'
       - lang: ja
@@ -127,6 +129,8 @@ common:
         text: 'Препоръчва се да прочетете [бележките за съвместимост](%1%).'
       - lang: de
         text: 'Es wird empfohlen, dass Sie die [Kompatibilitäts-Notizen](%1%) dieses Mods lesen.'
+      - lang: es
+        text: 'Se recomienda que lea las [Notas de compatibilidad](%1%) de este mod.'
       - lang: fi
         text: 'On suotavaa lukea modin tiedot [yhteensopivuudesta](%1%).'
       - lang: it
@@ -158,7 +162,7 @@ common:
       - lang: de
         text: 'Diese Datei ist korrupt und sollte nicht benutzt werden.'
       - lang: es
-        text: 'Este archivo puede corromper tu juego y no debería ser utilizado.'
+        text: 'Este archivo está corrupto y no debería ser utilizado.'
       - lang: fi
         text: 'Tiedosto on vaurioitunut, eikä sitä tule käyttää.'
       - lang: it
@@ -189,6 +193,8 @@ common:
         text: 'За изтриване или деактивиране. %1%'
       - lang: de
         text: 'Lösche oder deaktiviere. %1%'
+      - lang: es
+        text: 'Eliminar o desactivar. %1%'
       - lang: it
         text: 'Elimina o disattiva. %1%'
       - lang: ja
@@ -218,6 +224,8 @@ common:
         text: 'Когато използвате приставката **%1%**, трябва да деактивирате или изтриете този ESP файл, но да запазите неговите ресурси (триизмерни модели, текстури и други).'
       - lang: de
         text: 'Beim Nutzen von **%1%** ist es empfohlen, dass Sie die ESP-Datei deaktivieren oder löschen, aber die mitgelieferten Ressourcen (z.B Meshes, Texturen) beibehalten die mit dieser Mod mitinstalliert wurden.'
+      - lang: es
+        text: 'Si usa **%1%**, se recomienda que desactive o elimine este archivo ESP pero que mantenga los recursos (ej. mallas, texturas) que se instalaron con él.'
       - lang: it
         text: 'Quando si utilizza **%1%**, è fortemente consigliato disattivare o eliminare questo file ESP ma mantenerne le risorse (ad es. mesh, texture) installate con questa mod.'
       - lang: ja
@@ -279,6 +287,8 @@ common:
         text: 'Използвате **%1%**, но се изисква кръпка за съвместимост. Тя е налична от: %2%'
       - lang: de
         text: 'Sie scheinen **%1%** zu nutzen, aber Sie haben keinen Kompatibilitätspatch für diese Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+      - lang: es
+        text: 'Parece que está usando **%1%**, pero no ha habilitado un parche de compatibilidad para este mod. Un parche de un tercero se encuentra disponible aquí: %2%'
       - lang: it
         text: 'Sembra che tu stia utilizzando **%1%**, ma non hai attivato la patch di compatibilità per questa mod. E'' disponibile una patch esterna qui: %2%'
       - lang: ja
@@ -307,6 +317,8 @@ common:
         text: 'Използвате **%1%**, но се изисква кръпка за съвместимост. Тя е налична от инсталационния файл на приставката.'
       - lang: de
         text: 'Sie scheinen **%1%** zu nutzen, aber Sie haben keinen Kompatibilitätspatch für diese Mod aktiviert. Ein Kompatibilitätspatch ist enthalten mit dem Installer dieses Plugins.'
+      - lang: es
+        text: 'Parece que está usando **%1%**, pero no ha habilitado un parche de compatibilidad para este mod. Un parche de compatibilidad está incluido en el instalador de este plugin.'
       - lang: it
         text: 'Sembra che tu stia utilizzando **%1%**, ma non hai attivato patch di compatibilità per questa mod. Una patch di compatibilità è inclusanell''installer di questo plugin.'
       - lang: ja
@@ -335,6 +347,8 @@ common:
         text: 'Използвате **%1%**, но се изисква кръпка за съвместимост. Тя е налична от Интернет страницата на приставката.'
       - lang: de
         text: 'Sie scheinen **%1%** zu nutzen, aber Sie haben keinen Kompatibilitätspatch für diese Mod aktiviert. Ein Kompatibilitätspatch wird auf dieser Plugins Mod-Seite zur Verfügung gestellt.'
+      - lang: es
+        text: 'Parece que está usando **%1%**, pero no ha habilitado un parche de compatibilidad para este mod. Un parche de compatibilidad está  disponible en la página del mod.'
       - lang: it
         text: 'Sembra che tu stia utilizzando **%1%**, ma non hai attivato patch di compatibilità per questa mod. Una patch di compatibilità è presente in questa pagina.'
       - lang: ja
@@ -393,6 +407,8 @@ common:
         text: 'Може да използвате %1%.'
       - lang: de
         text: 'Nutzen Sie %1% stattdessen.'
+      - lang: es
+        text: 'Use %1% en su lugar.'
       - lang: it
         text: 'Utilizza %1% invece.'
       - lang: ja
@@ -423,7 +439,7 @@ common:
       - lang: de
         text: 'Nutzen Sie nur einen %1%.'
       - lang: es
-        text: 'Utilizar solo un %1%.'
+        text: 'Utilice solo uno %1%.'
       - lang: fi
         text: 'Käytä vain yhtä: %1%.'
       - lang: it
@@ -454,6 +470,8 @@ common:
         text: 'Използвайте версията %1%.'
       - lang: de
         text: 'Benutzen Sie die %1% Version.'
+      - lang: es
+        text: 'Use la versión diseñada para %1%.'
       - lang: it
         text: 'Usa la versione %1%.'
       - lang: ja
@@ -518,6 +536,8 @@ common:
         text: 'Използвайте версията, която не е за %1%.'
       - lang: de
         text: 'Benutzen Sie die Nicht-%1% Version.'
+      - lang: es
+        text: 'Use la versión que fue diseñada para funcionar sin %1%.'
       - lang: it
         text: 'Non usare la versione-%1%.'
       - lang: ja
@@ -582,6 +602,8 @@ common:
         text: 'Din installerede version af %1% er ikke kompatibel med din version af %2%.'
       - lang: de
         text: 'Ihre installierte Version von %1% ist nicht kompatibel mit Ihrer Version von %2%.'
+      - lang: es
+        text: 'La versión instalada de %1% no es compatible con la versión de %2% que está utilizando.'
       - lang: it
         text: 'La tua versione installata di %1% non è compatibile con la tua versione di %2%.'
       - lang: ja
@@ -612,6 +634,8 @@ common:
         text: 'Dette plugin indeholder ukontrollerede redigeringer udover ITM- og UDR-poster og slettede navmesher og kan behøve yderligere manuel oprydning for ikke at forstyrre andre mods. %1%'
       - lang: de
         text: 'Dieses Plugin enthält wilde Modifikationen weit über ITM-, und UDR Einträge und entfernte Navmeshes hinaus und benötigt vermutlich mehr manuelle Säuberung um andere Mods nicht zu beeinträchtigen. %1%'
+      - lang: es
+        text: 'Este plugin contiene ediciones no intencionadas más allá de los registros asociados a ITM, UDR, así como navmeshes eliminadas y probablemente requiera de una limpieza manual adicional para que no interfiera con otros mods. %1%'
       - lang: fi
         text: 'Tämä liitännäinen sisältää villejä muokkauksia ITM- ja UDR-tietueiden sekä poistettujen navmeshien lisäksi. Manuaalinen lisäpuhdistaminen voi olla tarpeen yhteensopivuuden takaamiseksi. %1%'
       - lang: it
@@ -644,6 +668,8 @@ common:
         text: 'Информация за почистване на приставките в xEdit може да намерите [тук](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: de
         text: 'Eine Anleitung zum Säubern von Plugins mit xEdit finden Sie [hier](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
+      - lang: es
+        text: 'Una guía para limpiar plugins usando xEdit se encuentra disponible [aquí](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: fi
         text: 'Ohjeet liitännäisten puhdistamiseen xEditillä löytyvät [tästä linkistä](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: it
@@ -672,6 +698,8 @@ common:
         text: 'Препоръчва се да избягвате модове, които съдържат **изтрити navmesh-ове**, защото те могат да причинят проблеми. **Изтритите navmesh-ове** трябва да бъдат коригирани ръчно (това е сложен процес и не се препоръчва за начинаещи). Повече информация за **изтритите navmesh-ове** може да намерите [тук](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: de
         text: 'Es wird streng empfohlen, keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten, da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden (ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** werden [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
+      - lang: es
+        text: 'Es altamente recomendable que no se usen mods que contienen **navmeshes eliminadas** pues es común que causen cierres súbitos (crashes). Las **navmeshes eliminadas** deben ser corregidas manualmente (un proceso bien complejo que debe ser ejecutado por el autor del mod). Más información sobre las **navmeshes eliminadas** puede ser consltada [aquí](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: it
         text: 'Si raccomanda vivamente di non utilizzare mod che contengono **navmesh cancellate** che sono note come causa di Crash. **navmesh cancellate** devono essere corrette manualmente (un processo complesso che dovrebbe essere fatto dall''autore del mod). Puoi trovare maggiori informazioni su **deleted navmeshes** [qui](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: ja
@@ -820,7 +848,7 @@ globals:
       - lang: de
         text: 'Sie haben ein %1% Plugin installiert, aber %1% wurde nicht gefunden! %1% kann hier heruntergeladen werden: %2%.'
       - lang: es
-        text: 'Tienes an %1% plugin instalado pero %1% no se pudo encontrar! Por favor descarga %1%: %2%.'
+        text: '!Tiene un %1% plugin instalado pero %1% no se pudo encontrar! Véase %1% la página de descarga: %2%.'
       - lang: it
         text: 'Hai installato un plugin %1% ma %1% non è stato trovato! Consulta %1% nella pagina di download: %2%.'
       - lang: ja
