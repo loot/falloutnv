@@ -1083,6 +1083,37 @@ plugins:
       # version: 1.4.0.525
       - crc: 0x228740D1
         util: 'FNVEdit v4.0.2f'
+
+###### Unofficial Patches ######
+  - name: 'Mission Mojave - Ultimate Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
+    inc:
+      - *TTWv320
+      - 'Community Bugfix Compilation Patch.esp'
+      - 'Compiled Patch.esp'
+      - 'Compiled Patch All_DLCs.esp'
+    msg: [ *useInsteadYUP ]
+    tag:
+      - Actors.AIPackages
+      - NoMerge
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'MMUE-CP-AWOP+NVInteriors.esp'
+    inc: [ 'MMUE-CP-AWOP.esp' ]
+  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
+    inc: [ 'IWR.esm' ]
+  - name: 'MM-Main.esp'
+    msg: [ *useInsteadYUP ]
+  - name: 'MM-HonestHearts.esp'
+    msg: [ *useInsteadYUP ]
+  - name: 'MM-OldWorldBlues.esp'
+    msg: [ *useInsteadYUP ]
+  - name: 'MM-LonesomeRoad.esp'
+    msg: [ *useInsteadYUP ]
+
+###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     group: *addonsGroup
@@ -2520,28 +2551,6 @@ plugins:
     msg:
       - type: say
         content: 'Translation file.'
-  - name: 'MM-Main.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-HonestHearts.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-OldWorldBlues.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-LonesomeRoad.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Community Bugfix Compilation Patch.esp'
-      - *TTWv320
-    tag:
-      - Actors.AIPackages
-      - NoMerge
-      - Scripts
-      - Sound
-      - Stats
 
   - name: 'MMUE+.esp'
     msg: [ *useInsteadYUP ]
@@ -2553,9 +2562,7 @@ plugins:
     msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag: [ NoMerge ]
-  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-    inc: [ 'IWR.esm' ]
+
   - name: 'Community Bugfix Compilation Patch.esp'
     msg: [ *useInsteadYUP ]
     inc:
@@ -4017,8 +4024,7 @@ plugins:
     tag: [ Invent ]
   - name: 'AWOPCaliberXAmmoPatchLOW.esp'
     tag: [ Invent ]
-  - name: 'MMUE-CP-AWOP+NVInteriors.esp'
-    inc: [ 'MMUE-CP-AWOP.esp' ]
+
   - name: 'Companion Module Pack.esp'
     inc:
       - 'Companion Sandbox Mode.esp'
