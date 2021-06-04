@@ -1091,9 +1091,6 @@ plugins:
     group: *fixesGroup
     inc:
       - *TTWv320
-      - 'Community Bugfix Compilation Patch.esp'
-      - 'Compiled Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
     msg: [ *useInsteadYUP ]
     tag:
       - Actors.AIPackages
