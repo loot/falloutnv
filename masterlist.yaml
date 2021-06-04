@@ -4286,7 +4286,6 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
-    after: [ 'MMUE-CP-EVE.esp' ]
     dirty:
       # v1.1.4
       - <<: *quickClean
