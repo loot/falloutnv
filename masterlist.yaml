@@ -1091,6 +1091,10 @@ plugins:
     group: *fixesGroup
     inc:
       - *TTWv320
+      - 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
+      - 'New Vegas Error Corrections BugFixes - NO DLC.esm'
+      - 'New Vegas Error Corrections Complete - NO DLC.esm'
+      - 'NewCalifornia.esm'
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
     tag:
@@ -1129,7 +1133,6 @@ plugins:
       - 'Zeta.esm'
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
       - 'UnlimitedCompanionsFixed.esp'
       - 'LootEverything_ForDlcSupport.esp'
       - 'Simple DLC Delay.esp'
@@ -1618,14 +1621,7 @@ plugins:
     after: [ 'nVamp - Core.esm' ]
     inc: [ 'monsterrach.esp' ]
     tag: [ Relev ]
-  - name: 'New Vegas Error Corrections Complete - NO DLC.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - NO DLC.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
+
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
     tag:
