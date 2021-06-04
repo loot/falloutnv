@@ -1085,8 +1085,9 @@ plugins:
         util: 'FNVEdit v4.0.2f'
 
 ###### Unofficial Patches ######
-  - name: 'Mission Mojave - Ultimate Edition.esp'
+  - name: '(Mission Mojave - Ultimate Edition|MM-.*|MMUE-.*|MMUE .*)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
+  - name: 'Mission Mojave - Ultimate Edition.esp'
     inc:
       - *TTWv320
       - 'Community Bugfix Compilation Patch.esp'
@@ -1102,7 +1103,6 @@ plugins:
   - name: 'MMUE-CP-AWOP+NVInteriors.esp'
     inc: [ 'MMUE-CP-AWOP.esp' ]
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
     inc: [ 'IWR.esm' ]
   - name: 'MM-Main.esp'
     msg: [ *useInsteadYUP ]
