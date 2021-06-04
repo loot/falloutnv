@@ -1093,7 +1093,6 @@ plugins:
       - *TTWv320
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
-    msg: [ *useInsteadYUP ]
     tag:
       - Actors.AIPackages
       - NoMerge
@@ -1104,14 +1103,6 @@ plugins:
     inc: [ 'MMUE-CP-AWOP.esp' ]
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     inc: [ 'IWR.esm' ]
-  - name: 'MM-Main.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-HonestHearts.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-OldWorldBlues.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-LonesomeRoad.esp'
-    msg: [ *useInsteadYUP ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
