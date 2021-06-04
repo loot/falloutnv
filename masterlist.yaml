@@ -1095,7 +1095,6 @@ plugins:
       - 'YUP - Base Game + All DLC.esm'
     tag:
       - Actors.AIPackages
-      - NoMerge
       - Scripts
       - Sound
       - Stats
