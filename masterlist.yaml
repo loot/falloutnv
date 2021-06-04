@@ -1091,6 +1091,8 @@ plugins:
     group: *fixesGroup
     inc:
       - *TTWv320
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
     msg: [ *useInsteadYUP ]
     tag:
       - Actors.AIPackages
