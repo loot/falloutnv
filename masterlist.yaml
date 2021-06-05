@@ -1088,6 +1088,7 @@ plugins:
   - name: '(Mission Mojave - Ultimate Edition|MM-.*|MMUE-.*|MMUE .*)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
   - name: 'Mission Mojave - Ultimate Edition.esp'
+    group: *fixesGroup
     inc:
       - *TTWv320
       - 'Community Bugfix Compilation Patch.esp'
