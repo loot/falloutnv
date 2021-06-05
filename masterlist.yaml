@@ -1098,8 +1098,11 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'MMUE-CP-AWOP+NVInteriors.esp'
-    inc: [ 'MMUE-CP-AWOP.esp' ]
+  - name: 'MMUE-CP-AWOP.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'NVInteriors-AWOP - Compatibility Patch' ]
+        condition: 'file("MMUE-CP-AWOP+NVInteriors.esp")'
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     inc: [ 'IWR.esm' ]
 
