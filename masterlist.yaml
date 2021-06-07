@@ -2541,17 +2541,6 @@ plugins:
       - type: say
         content: 'Translation file.'
 
-  - name: 'MMUE+.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'Mission Mojave - Ultimate Edition Plus.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag: [ NoMerge ]
-  - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag: [ NoMerge ]
-
   - name: 'Community Bugfix Compilation Patch.esp'
     msg: [ *useInsteadYUP ]
     inc:
