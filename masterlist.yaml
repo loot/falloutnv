@@ -2541,22 +2541,6 @@ plugins:
       - type: say
         content: 'Translation file.'
 
-  - name: 'Compiled Patch.esp'
-    inc:
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'Compiled Patch All_DLCs.esp'
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *useInsteadYUP ]
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
@@ -2709,12 +2693,6 @@ plugins:
   - name: 'BIS - Primary Needs HUD.esp'
     tag: [ Names ]
   - name: 'BIS - More Cactus Water Recipes.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch - DeadMoney.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch - HonestHearts.esp'
     tag: [ Names ]
   - name: 'BIS - Bobblehunt Patch.esp'
     tag: [ Names ]
