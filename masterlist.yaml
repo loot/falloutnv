@@ -2541,25 +2541,8 @@ plugins:
       - type: say
         content: 'Translation file.'
 
-  - name: 'Community Bugfix Compilation Patch.esp'
-    msg: [ *useInsteadYUP ]
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Invent
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'CBC Dead Money Patch.esp'
-    inc: [ 'Compiled Patch - DeadMoney.esp' ]
   - name: 'Compiled Patch.esp'
     inc:
-      - 'Community Bugfix Compilation Patch.esp'
       - 'Compiled Patch All_DLCs.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
     tag:
@@ -2569,14 +2552,9 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'Compiled Patch - DeadMoney.esp'
-    inc:
-      - 'CBC Dead Money Patch.esm'
-      - 'CBC Dead Money Patch.esp'
   - name: 'Compiled Patch All_DLCs.esp'
     inc:
       - 'Compiled Patch.esp'
-      - 'Community Bugfix Compilation Patch.esp'
       - 'Mission Mojave - Ultimate Edition.esp'
     msg: [ *useInsteadYUP ]
   - name: 'CaravanCardFix.esp'
@@ -2715,16 +2693,6 @@ plugins:
   - name: 'BIS - Lonesome Road.esp'
     tag: [ Names ]
   - name: 'BIS - Gun Runners Arsenal.esp'
-    tag: [ Names ]
-  - name: 'BIS - Community Bugfix Comp ESM.esp'
-    inc: [ 'BIS - Community Bugfix Comp ESP.esp' ]
-    tag: [ Names ]
-  - name: 'BIS - CBC Dead Money Patch ESM.esp'
-    inc: [ 'BIS - CBC Dead Money Patch ESP.esp' ]
-    tag: [ Names ]
-  - name: 'BIS - Community Bugfix Comp ESP.esp'
-    tag: [ Names ]
-  - name: 'BIS - CBC Dead Money Patch ESP.esp'
     tag: [ Names ]
   - name: 'BIS - Promo DLC Caravan Pack.esp'
     tag: [ Names ]
