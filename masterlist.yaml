@@ -1083,6 +1083,34 @@ plugins:
       # version: 1.4.0.525
       - crc: 0x228740D1
         util: 'FNVEdit v4.0.2f'
+
+###### Unofficial Patches ######
+  - name: '(Mission Mojave - Ultimate Edition|MM-.*|MMUE-.*|MMUE .*)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
+  - name: 'Mission Mojave - Ultimate Edition.esp'
+    group: *fixesGroup
+    inc:
+      - *TTWv320
+      - 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
+      - 'New Vegas Error Corrections BugFixes - NO DLC.esm'
+      - 'New Vegas Error Corrections Complete - NO DLC.esm'
+      - 'NewCalifornia.esm'
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
+    tag:
+      - Actors.AIPackages
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'MMUE-CP-AWOP.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'NVInteriors-AWOP - Compatibility Patch' ]
+        condition: 'file("MMUE-CP-AWOP+NVInteriors.esp")'
+  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
+    inc: [ 'IWR.esm' ]
+
+###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     group: *addonsGroup
@@ -1105,7 +1133,6 @@ plugins:
       - 'Zeta.esm'
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
       - 'UnlimitedCompanionsFixed.esp'
       - 'LootEverything_ForDlcSupport.esp'
       - 'Simple DLC Delay.esp'
@@ -1594,14 +1621,7 @@ plugins:
     after: [ 'nVamp - Core.esm' ]
     inc: [ 'monsterrach.esp' ]
     tag: [ Relev ]
-  - name: 'New Vegas Error Corrections Complete - NO DLC.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - NO DLC.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
-  - name: 'New Vegas Error Corrections BugFixes - DLC + GRA + NVCE + MM.esm'
-    inc: [ 'Mission Mojave - Ultimate Edition.esp' ]
+
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
     tag:
@@ -2520,28 +2540,6 @@ plugins:
     msg:
       - type: say
         content: 'Translation file.'
-  - name: 'MM-Main.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-HonestHearts.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-OldWorldBlues.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'MM-LonesomeRoad.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Community Bugfix Compilation Patch.esp'
-      - *TTWv320
-    tag:
-      - Actors.AIPackages
-      - NoMerge
-      - Scripts
-      - Sound
-      - Stats
 
   - name: 'MMUE+.esp'
     msg: [ *useInsteadYUP ]
@@ -2553,9 +2551,7 @@ plugins:
     msg: [ *useInsteadYUP ]
     url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
     tag: [ NoMerge ]
-  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-    inc: [ 'IWR.esm' ]
+
   - name: 'Community Bugfix Compilation Patch.esp'
     msg: [ *useInsteadYUP ]
     inc:
@@ -4017,8 +4013,7 @@ plugins:
     tag: [ Invent ]
   - name: 'AWOPCaliberXAmmoPatchLOW.esp'
     tag: [ Invent ]
-  - name: 'MMUE-CP-AWOP+NVInteriors.esp'
-    inc: [ 'MMUE-CP-AWOP.esp' ]
+
   - name: 'Companion Module Pack.esp'
     inc:
       - 'Companion Sandbox Mode.esp'
@@ -4287,7 +4282,6 @@ plugins:
       - Relev
       - Stats
       - WeaponMods
-    after: [ 'MMUE-CP-EVE.esp' ]
     dirty:
       # v1.1.4
       - <<: *quickClean
