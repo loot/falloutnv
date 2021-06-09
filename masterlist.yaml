@@ -1473,53 +1473,17 @@ plugins:
       - Filter
       - NPC.Race
       - NpcFaces
-  - name: 'OFT_Merge_All.esm'
-    inc:
-      - 'OFT_Merge_Base.esm'
-      - 'OFT_Merge_HonestHearts.esm'
-      - 'OFT_Merge_HonestHearts.esp'
-      - 'OFT_HonestHearts_Interiors.esp'
-      - 'OFT_Merge_OldWorldBlues.esm'
-      - 'OFT_OldWorldBlues.esp'
-      - 'OFT_IWR_OldWorldBlues.esp'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_IWR_Base.esp'
-      - 'OFT_Coordinate_Finder.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'OFT_Merge_Base.esm'
-    inc:
-      - 'OFT_Merge_All.esm'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_IWR_Base.esp'
-      - 'OFT_Coordinate_Finder.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'OFT_Merge_HonestHearts.esm'
-    inc:
-      - 'OFT_Merge_All.esm'
-      - 'OFT_Merge_HonestHearts.esp'
-      - 'OFT_HonestHearts_Interiors.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'OFT_Merge_OldWorldBlues.esm'
-    inc:
-      - 'OFT_Merge_All.esm'
-      - 'OFT_OldWorldBlues.esp'
-      - 'OFT_IWR_OldWorldBlues.esp'
-    msg: [ *useInsteadYUP ]
+
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
   - name: 'Companion Core.esm'
     req: [ *NVSE ]
   - name: 'IWR.esm'
-    inc:
-      - "OWNB - Open World.esm"
-      - 'OFT_IWR_Base.esp'
+    inc: [ 'OWNB - Open World.esm' ]
   - name: 'IWS-Core.esm'
     tag: [ Delev ]
   - name: 'OWNB - Open World.esm'
-    inc:
-      - 'IWR.esm'
+    inc: [ 'IWR.esm' ]
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: 'AccuRifles.esm'
@@ -2541,55 +2505,6 @@ plugins:
       - type: say
         content: 'Translation file.'
 
-  - name: 'MMUE+.esp'
-    msg: [ *useInsteadYUP ]
-  - name: 'Mission Mojave - Ultimate Edition Plus.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag: [ NoMerge ]
-  - name: 'Mission Mojave - Ultimate Edition Plus Standalone.esp'
-    msg: [ *useInsteadYUP ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47014/' ]
-    tag: [ NoMerge ]
-
-  - name: 'Community Bugfix Compilation Patch.esp'
-    msg: [ *useInsteadYUP ]
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Invent
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'CBC Dead Money Patch.esp'
-    inc: [ 'Compiled Patch - DeadMoney.esp' ]
-  - name: 'Compiled Patch.esp'
-    inc:
-      - 'Community Bugfix Compilation Patch.esp'
-      - 'Compiled Patch All_DLCs.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'Compiled Patch - DeadMoney.esp'
-    inc:
-      - 'CBC Dead Money Patch.esm'
-      - 'CBC Dead Money Patch.esp'
-  - name: 'Compiled Patch All_DLCs.esp'
-    inc:
-      - 'Compiled Patch.esp'
-      - 'Community Bugfix Compilation Patch.esp'
-      - 'Mission Mojave - Ultimate Edition.esp'
-    msg: [ *useInsteadYUP ]
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
@@ -2630,85 +2545,7 @@ plugins:
         content: 'This fix does not currently work for custom weapon durability mods which increase the weapon''s health by anything other than 50%.'
   - name: 'VendorAmmo45-70Fix.esp'
     msg: [ *obsolete ]
-  - name: 'OFT_Merge_All.esp'
-    inc:
-      - 'OFT_Merge_Base.esp'
-      - 'OFT_Merge_HonestHearts.esp'
-      - 'OFT_Merge_OldWorldBlues.esp'
-      - 'OFT_NoIWR_Merge_All.esp'
-      - 'OFT_NoIWR_Merge_Base.esp'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_HonestHearts.esp'
-      - 'OFT_HonestHearts_Interiors.esp'
-      - 'OFT_OldWorldBlues.esp'
-      - 'OFT_IWR_Base.esp'
-      - 'OFT_IWR_OldWorldBlues.esp'
-      - 'OFT_Coordinate_Finder.esp'
-  - name: 'OFT_Merge_Base.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_IWR_Base.esp'
-      - 'OFT_Coordinate_Finder.esp'
-  - name: 'OFT_Merge_HonestHearts.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_HonestHearts.esp'
-      - 'OFT_HonestHearts_Interiors.esp'
-  - name: 'OFT_Merge_OldWorldBlues.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_OldWorldBlues.esp'
-      - 'OFT_IWR_OldWorldBlues.esp'
-  - name: 'OFT_NoIWR_Merge_All.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_HonestHearts.esp'
-      - 'OFT_HonestHearts_Interiors.esp'
-      - 'OFT_OldWorldBlues.esp'
-      - 'OFT_Coordinate_Finder.esp'
-  - name: 'OFT_NoIWR_Merge_Base.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Base.esp'
-      - 'OFT_Base_Interiors.esp'
-      - 'OFT_Coordinate_Finder.esp'
-  - name: 'OFT_Base.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_Base.esp'
-  - name: 'OFT_Base_Interiors.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_Base.esp'
-  - name: 'OFT_HonestHearts.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_HonestHearts.esp'
-  - name: 'OFT_HonestHearts_Interiors.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_HonestHearts.esp'
-  - name: 'OFT_OldWorldBlues.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_OldWorldBlues.esp'
-  - name: 'OFT_IWR_Base.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_Base.esp'
-  - name: 'OFT_IWR_OldWorldBlues.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_OldWorldBlues.esp'
-  - name: 'OFT_Coordinate_Finder.esp'
-    inc:
-      - 'OFT_Merge_All.esp'
-      - 'OFT_Merge_Base.esp'
+
   - name: 'AutoSaverNV.esp'
     inc:
       - 'RX-Auto Incremental Save.esp'
@@ -2727,16 +2564,6 @@ plugins:
     tag: [ Names ]
   - name: 'BIS - Gun Runners Arsenal.esp'
     tag: [ Names ]
-  - name: 'BIS - Community Bugfix Comp ESM.esp'
-    inc: [ 'BIS - Community Bugfix Comp ESP.esp' ]
-    tag: [ Names ]
-  - name: 'BIS - CBC Dead Money Patch ESM.esp'
-    inc: [ 'BIS - CBC Dead Money Patch ESP.esp' ]
-    tag: [ Names ]
-  - name: 'BIS - Community Bugfix Comp ESP.esp'
-    tag: [ Names ]
-  - name: 'BIS - CBC Dead Money Patch ESP.esp'
-    tag: [ Names ]
   - name: 'BIS - Promo DLC Caravan Pack.esp'
     tag: [ Names ]
   - name: 'BIS - Promo DLC Classic Pack.esp'
@@ -2752,12 +2579,6 @@ plugins:
   - name: 'BIS - Primary Needs HUD.esp'
     tag: [ Names ]
   - name: 'BIS - More Cactus Water Recipes.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch - DeadMoney.esp'
-    tag: [ Names ]
-  - name: 'BIS - Compiled Patch - HonestHearts.esp'
     tag: [ Names ]
   - name: 'BIS - Bobblehunt Patch.esp'
     tag: [ Names ]
@@ -2793,10 +2614,7 @@ plugins:
     inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
   - name: 'NVORganizedItems.esp'
     tag: [ Names ]
-  - name: 'OperationFixedTerrain.esp'
-    msg: [ *obsolete ]
-  - name: 'OFT_ElectroCity.esp'
-    msg: [ *obsolete ]
+
   - name: '188 Trading Post Revisited.esp'
     tag: [ NpcFaces ]
   - name: 'A Better Arcade.esp'
