@@ -59,6 +59,8 @@ common:
         text: 'Удалите. Уже включено в %1%.'
       - lang: sv
         text: 'Ta bort. Redan inkluderat i %1%.'
+      - lang: uk_UA
+        text: 'Видаліть. Уже додано у %1%.'
       - lang: zh_CN
         text: '删除。已包含在%1%中。'
 
@@ -89,6 +91,8 @@ common:
         text: 'Удалите. Уже включено в %1% или исправлено иным образом.'
       - lang: sv
         text: 'Ta bort. Redan inkluderat eller fixat i %1%.'
+      - lang: uk_UA
+        text: 'Видаліть. Уже включено або іншим чином виправлено у %1%.'
       - lang: zh_CN
         text: '删除。在%1%中已包含或修复。'
 
@@ -117,6 +121,8 @@ common:
         text: 'É altamente recomendado que você também use %1%.'
       - lang: sv
         text: 'Det är rekommenderat att du också använder %1%.'
+      - lang: uk_UA
+        text: 'Наполегливо рекомендуємо також використати %1%.'
       - lang: zh_CN
         text: '强烈建议您使用%1%。'
 
@@ -149,6 +155,8 @@ common:
         text: 'Рекомендуется прочесть [заметки о совместимости](%1%) мода.'
       - lang: sv
         text: 'Det är rekommenderat att du läser det här moddets [kompabilitetsanteckningar](%1%).'
+      - lang: uk_UA
+        text: 'Рекомендується прочитати [примітки щодо сумісності](%1%) моду.'
       - lang: zh_CN
         text: '建议您阅读这个mod的[兼容性说明](%1%)。'
 
@@ -181,6 +189,8 @@ common:
         text: 'Файл испорчен и не должен использоваться.'
       - lang: sv
         text: 'Denna fil är korrupt och borde inte användas.'
+      - lang: uk_UA
+        text: 'Файл зіпсований та не має використовуватися.'
       - lang: zh_CN
         text: '该文件已损坏，不应使用。'
 
@@ -211,6 +221,8 @@ common:
         text: 'Не забудьте отключить или удалить. %1%'
       - lang: sv
         text: 'Ta bort eller avaktivera. %1%'
+      - lang: uk_UA
+        text: 'Відключіть чи видаліть. %1%'
       - lang: zh_CN
         text: '删除或禁用。%1%'
     subs: [ '' ]
@@ -242,6 +254,8 @@ common:
         text: 'Пока используется **%1%**, рекомендуется отключить или удалить esp этого мода, но оставить установленные ресурсы (meshes, textures).'
       - lang: sv
         text: 'När du använder **%1%** är det rekommenderat att du avaktiverar eller tar bort denna ESP-fil, men behåll resurserna (meshar och texturer) installerade med denna mod.'
+      - lang: uk_UA
+        text: 'Поки використовується **%1%**, рекомендується відключити чи деактивувати esp цього моду, але залишити встановлені ресурси (меші, текстури і тп).'
       - lang: zh_CN
         text: '当使用**%1%**时，建议您禁用或删除这个ESP文件，但保留与此mod一起安装的资源(如网格，纹理等)。'
 
@@ -274,6 +288,8 @@ common:
         text: 'Устарело. Обновите до последней версии. %1%'
       - lang: sv
         text: 'Utdaterad. Uppdatera till den senaste versionen. %1%'
+      - lang: uk_UA
+        text: 'Застаріло. Оновіть до останньої версії. %1%'
       - lang: zh_CN
         text: '已过时。请升级到最新版本。 %1%'
     subs: [ '' ]
@@ -305,6 +321,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти здесь: %2%'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En patch från en tredje part finns här: %2%.'
+      - lang: uk_UA
+        text: 'Схоже, що ви використовуєте **%1%**, але його патч сумісності не було ввімкнено. Сторонній патч можна знайти тут: %2%'
       - lang: zh_CN
         text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。第三方补丁可以在这里找到:%2%'
 
@@ -335,6 +353,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch är inkluderad i denna plugins installationsprogram.'
+      - lang: uk_UA
+        text: 'Схоже, що ви використовуєте **%1%**, але його патч сумісності не було ввімкнено. Патч сумісності можна знайти в установнику плагіна.'
       - lang: zh_CN
         text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。这个插件的安装程序中包含了该补丁。'
 
@@ -365,6 +385,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти на странице плагина.'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch finns på denna plugins modsida.'
+      - lang: uk_UA
+        text: 'Схоже, що ви використовуєте **%1%**, але його патч сумісності не було ввімкнено. Патч сумісності можна знайти на сторінці плагіну.'
       - lang: zh_CN
         text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。这个插件的mod页面提供了该补丁。'
 
@@ -395,6 +417,8 @@ common:
         text: 'Требуется: %1%'
       - lang: sv
         text: 'Kräver: %1%'
+      - lang: uk_UA
+        text: 'Потрібно: %1%'
       - lang: zh_CN
         text: '需要:%1%'
 
@@ -421,6 +445,8 @@ common:
         text: 'Use %1% ao invés disto.'
       - lang: sv
         text: 'Använd %1% istället.'
+      - lang: uk_UA
+        text: 'Замість цього використовуйте: %1%.'
       - lang: zh_CN
         text: '使用%1%代替。'
   - &useInsteadYUP
@@ -458,6 +484,8 @@ common:
         text: 'Используйте только один %1%.'
       - lang: sv
         text: 'Använd endast en %1%.'
+      - lang: uk_UA
+        text: 'Використовуйте лише один %1%.'
       - lang: zh_CN
         text: '只使用一个%1%。'
 
@@ -488,6 +516,8 @@ common:
         text: 'Используйте версию для %1%.'
       - lang: sv
         text: 'Använd version %1%.'
+      - lang: uk_UA
+        text: 'Використовуйте версію %1%.'
       - lang: zh_CN
         text: '使用%1%版本。'
   - &useVersionDeadMoney
@@ -552,6 +582,8 @@ common:
         text: 'Use a versão não-%1%.'
       - lang: sv
         text: 'Använd en icke-%1% version.'
+      - lang: uk_UA
+        text: 'Використовуйте не-%1% версію.'
       - lang: zh_CN
         text: '使用%1%以外的版本。'
   - &useVersionNonDeadMoney
@@ -620,6 +652,8 @@ common:
         text: 'Установленная у вас версия %1% несовместима с версией %2%.'
       - lang: sv
         text: 'Din installerade version av %1% är inte kombatibel med din version av %2%.'
+      - lang: uk_UA
+        text: 'Встановлена ​​у вас версія %1% несумісна з вашою версією %2%.'
       - lang: zh_CN
         text: '您安装的%1%版本与%2%版本不兼容。'
 
@@ -654,6 +688,8 @@ common:
         text: 'Плагин содержит дикие правки, кроме ITM, UDR записей и удаленных навмешей и может потребовать дополнительной ручной чистки, чтобы не пересекаться с другими модами. %1%'
       - lang: sv
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
+      - lang: uk_UA
+        text: 'Плагін містить дикі правки, крім ITM, UDR записів та видалених навмешів і може вимагати додаткової ручної чистки, щоб не конфліктувати з іншими модами. %1%'
       - lang: zh_CN
         text: '这个插件包含随意编辑的ITM和UDR记录以及已删除的navmeshes，可能需要额外的手动清理，以免干扰其他mod。%1%'
     subs: [ '' ]
@@ -686,6 +722,8 @@ common:
         text: 'Гид по очистке с помощью xEdit можно найти [здесь](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: sv
         text: 'En guide till att rensa plugins med xEdit finns [här](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
+      - lang: uk_UA
+        text: 'Посібник з очищення модів за допомогою xEdit можна знайти [тут](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: zh_CN
         text: 'xEdit的清洁插件指南可以在[这里](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)找到。'
 
@@ -716,6 +754,8 @@ common:
         text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: sv
         text: 'Det är starkt rekommenderat att inte använda mods som innehåller **Borttagna navmeshes** eftersom de kan orsaka krascher. **Borttagna navmeshes** måste korrigeras manuellt (en komplex process som borde göras av modskaparen). Mer information om **Borttagna navmeshes** hittar du [här](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+      - lang: uk_UA
+        text: 'Наполегливо не рекомендується використовувати моди з **видаленими навмешами** бо відомо, що вони викликають збої. **Видалені навмеші** повинні бути виправлені вручну (складний процес, який повинен бути виконаний автором моду). Більше інформації про **видалені навмеші** можна знайти [тут](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: zh_CN
         text: '强烈建议不要使用包含已删除navmeshes的mod，因为它们会导致崩溃。**已删除navmeshes**必须手动修正(一个复杂的过程，应该由mod作者完成)。更多关于**已删除navmeshes**的信息已提供[这里](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)。'
 
@@ -832,6 +872,8 @@ globals:
         text: '[Обсуждение LOOT "(Eng)"](%1%).'
       - lang: sv
         text: '[Senaste LOOT-tråd](%1%).'
+      - lang: uk_UA
+        text: '[Обговорення LOOT "(Eng)"](%1%).'
       - lang: zh_CN
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
@@ -865,6 +907,8 @@ globals:
         text: 'У вас установлен an %1% plugin, но %1% не найден! Смотрите страницу загрузки %2%.'
       - lang: sv
         text: 'Du har installerat an %1% plugin men %1% kunde inte hittas! Läs mer på %1%:s nedladdningssisda: %2%.'
+      - lang: uk_UA
+        text: 'У вас встановлено %1% плагін, але %1% не знайдено! Дивіться сторінку завантаження: %2%.'
       - lang: zh_CN
         text: '您已经安装了%1%插件，但是未发现%1%！请查看%1%的下载页面:%2%。'
     subs:
