@@ -453,9 +453,6 @@ common:
         text: 'Замість цього використовуйте: %1%.'
       - lang: zh_CN
         text: '使用%1%代替。'
-  - &useInsteadYUP
-    <<: *useInstead
-    subs: [ '[Yukichigai Unofficial Patch - YUP](https://www.nexusmods.com/newvegas/mods/51664/)' ]
 
   - &useOnlyOneX
     type: error
