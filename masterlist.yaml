@@ -1176,6 +1176,10 @@ plugins:
   - name: 'EVE FNV.esp'
     msg: [ *obsolete ]
 
+###### Gameplay - Skills & Perks ######
+  - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
