@@ -1179,6 +1179,8 @@ plugins:
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
+  - name: 'More Perks( for Companions)?\.esm'
+    inc: [ *TTWv320 ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
