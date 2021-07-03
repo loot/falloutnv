@@ -4344,9 +4344,7 @@ plugins:
   - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
     tag: [ Names ]
   - name: 'EVE FNV.esp'
-    tag:
-      - Graphics
-      - Sound
+    msg: [ *obsolete ]
   - name: 'EVE FNV - ALL DLC.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42666' ]
     inc: [ *TTWv320 ]
