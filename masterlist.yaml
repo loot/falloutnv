@@ -4362,14 +4362,10 @@ plugins:
       - WeaponMods
     after: [ 'Improved Sound FX.esp' ]
     dirty:
-      # v1.18
       - <<: *quickClean
-        crc: 0x6C17EC3E
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0x36B55774
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
-    clean:
-      - crc: 0xB79DCBAF
-        util: 'FNVEdit v4.0.2f'
   - name: 'Improved Sound FX - EVE.esp'
     tag: [ Sound ]
   - name: 'WMX-EVE.esp'
