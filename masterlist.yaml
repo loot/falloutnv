@@ -1153,6 +1153,29 @@ plugins:
   - name: 'MMUE-Tools-InvisibleWallRemover.esp'
     inc: [ 'IWR.esm' ]
 
+###### AudioVisual ######
+  - name: 'EVE FNV - ALL DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42666/' ]
+    after: [ 'Improved Sound FX.esp' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Delev
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x36B55774
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'EVE FNV.esp'
+    msg: [ *obsolete ]
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
@@ -4343,27 +4366,7 @@ plugins:
     tag: [ Names ]
   - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
     tag: [ Names ]
-  - name: 'EVE FNV.esp'
-    msg: [ *obsolete ]
-  - name: 'EVE FNV - ALL DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42666' ]
-    inc: [ *TTWv320 ]
-    tag:
-      - Delev
-      - Destructible
-      - Graphics
-      - Invent
-      - Names
-      - Scripts
-      - Sound
-      - Stats
-      - WeaponMods
-    after: [ 'Improved Sound FX.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x36B55774
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
+
   - name: 'Improved Sound FX - EVE.esp'
     tag: [ Sound ]
   - name: 'WMX-EVE.esp'
