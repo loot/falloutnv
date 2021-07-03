@@ -4360,10 +4360,7 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
-    after:
-      - 'Improved Sound FX.esp'
-      - 'Project Nevada - Gun Runners'' Arsenal.esp'
-      - 'dD - Enhanced Blood Main NV.esp'
+    after: [ 'Improved Sound FX.esp' ]
     dirty:
       # v1.18
       - <<: *quickClean
