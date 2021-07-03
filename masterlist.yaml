@@ -4526,19 +4526,15 @@ plugins:
   - name: 'Vurt''s WFO.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     after: [ 'Flora Overhaul.esp' ]
-    dirty:
-      # v3.2b
-      - <<: *quickClean
-        crc: 0xA22C920D
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 25
-    clean:
-      # v3.2b - after QAC
-      - crc: 0xF2DC4792
-        util: 'FNVEdit v4.0.2f'
+    msg: [ *obsolete ]
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    msg: [ *obsolete ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE0A866E9
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 32
+        udr: 4040
   - name: 'Vurt''s WFO [Lite].esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     inc: [ 'Vurt''s WFO.esp' ]
