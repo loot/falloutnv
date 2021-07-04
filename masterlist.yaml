@@ -1271,6 +1271,10 @@ plugins:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
 
+###### Locations - New Structures & Landmarks ######
+  - name: 'Wasteland Defense.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
