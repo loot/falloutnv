@@ -1176,6 +1176,33 @@ plugins:
   - name: 'EVE FNV.esp'
     msg: [ *obsolete ]
 
+###### Encounters - Allies ######
+  - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+  - name: 'RobCo Certified.esm'
+    req: [ *NVSE ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
+        condition: 'checksum("RobCo Certified.esm", 4BFBB411) or checksum("RobCo Certified.esm", 46411E63) or checksum("RobCo Certified.esm", 3B28B2FE) or checksum("RobCo Certified.esm", CA37D0CB)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4BFBB411
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 10
+      - <<: *quickClean
+        crc: 0x3B28B2FE
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+  - name: 'Companion Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+    req: [ *NVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF5E979C
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
@@ -1605,8 +1632,7 @@ plugins:
 
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
-  - name: 'Companion Core.esm'
-    req: [ *NVSE ]
+
   - name: 'IWR.esm'
     inc: [ 'OWNB - Open World.esm' ]
   - name: 'IWS-Core.esm'
@@ -5271,18 +5297,7 @@ plugins:
     clean:
       - crc: 0xA3ACB207
         util: 'FNVEdit v4.0.2f'
-  - name: 'RobCo Certified.esm'
-    req: [ *NVSE ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
-    tag: [ Factions ]
-    dirty:
-      - crc: 0x3B28B2FE
-        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 9
-        info: 'Contains wild edits to records 0x00094684 (DLC01TrogFaction) and 0x00137622 (FortCaesarScript).'
-    clean:
-      - crc: 0x591A61FC
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+
   - name: 'ADAM Complete.esp'
     tag:
       - Delev
