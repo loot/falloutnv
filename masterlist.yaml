@@ -1179,8 +1179,11 @@ plugins:
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+  - name: 'RobCo Certified.esm'
+    req: [ *NVSE ]
   - name: 'Companion Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+    req: [ *NVSE ]
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
