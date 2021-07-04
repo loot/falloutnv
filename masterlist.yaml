@@ -1274,6 +1274,7 @@ plugins:
 ###### Locations - New Structures & Landmarks ######
   - name: 'Wasteland Defense.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
+    req: [ *NVSE ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
