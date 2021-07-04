@@ -1275,6 +1275,15 @@ plugins:
   - name: 'Wasteland Defense.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
     req: [ *NVSE ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **001161B5** & **001161B7** in **Wasteland Defense.esp**.' ]
+        condition: 'checksum("Wasteland Defense.esp", D8ABD903) or checksum("Wasteland Defense.esp", 5CC37AE6) or checksum("Wasteland Defense.esp", 90EFE7F6)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD8ABD903
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 27
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
