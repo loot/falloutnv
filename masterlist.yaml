@@ -1605,8 +1605,7 @@ plugins:
 
   - name: 'AmmoSpreadEffectFixer.esm'
     req: [ *NVSE ]
-  - name: 'Companion Core.esm'
-    req: [ *NVSE ]
+
   - name: 'IWR.esm'
     inc: [ 'OWNB - Open World.esm' ]
   - name: 'IWS-Core.esm'
@@ -5271,18 +5270,7 @@ plugins:
     clean:
       - crc: 0xA3ACB207
         util: 'FNVEdit v4.0.2f'
-  - name: 'RobCo Certified.esm'
-    req: [ *NVSE ]
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43331' ]
-    tag: [ Factions ]
-    dirty:
-      - crc: 0x3B28B2FE
-        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 9
-        info: 'Contains wild edits to records 0x00094684 (DLC01TrogFaction) and 0x00137622 (FortCaesarScript).'
-    clean:
-      - crc: 0x591A61FC
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
+
   - name: 'ADAM Complete.esp'
     tag:
       - Delev
