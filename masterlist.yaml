@@ -1176,6 +1176,74 @@ plugins:
   - name: 'EVE FNV.esp'
     msg: [ *obsolete ]
 
+###### Gameplay - Skills & Perks ######
+  - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
+  - name: 'More Perks( for Companions)?\.esm'
+    inc: [ *TTWv320 ]
+  - name: 'More Perks.esm'
+    clean:
+      - crc: 0x28CE3B92
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB6C3123B
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+        udr: 1
+  - name: 'More Perks for Companions.esm'
+    clean:
+      - crc: 0xD88B1E14
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks for Companions Update.esp'
+    clean:
+      - crc: 0x3321EC32
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Traits.esm'
+    clean:
+      - crc: 0x820E087D
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Traits Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x62C8F5A5
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'More Perks for Dead Money.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x129204A2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 301
+  - name: 'More Perks for Dead Money Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5CC6B9FD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'More Perks for Honest Hearts.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x25B6073B
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+  - name: 'More Perks for Honest Hearts Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF1527F2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+        udr: 1
+  - name: 'More Perks for Old World Blues.esm'
+    clean:
+      - crc: 0xB980D0D2
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks for Old World Blues Update.esp'
+    clean:
+      - crc: 0x7E701274
+        util: 'FNVEdit v4.0.3g'
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
@@ -2238,32 +2306,7 @@ plugins:
   - name: 'NV GameStabilizerA8.esm'
     msg: [ *obsolete ]
     tag: [ NoMerge ]
-  - name: 'More Perks.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
-    tag: [ Names ]
-    inc: [ *TTWv320 ]
-  - name: 'More Perks for Companions.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35979' ]
-    inc: [ *TTWv320 ]
-  - name: 'More Perks for Dead Money.esm'
-    dirty:
-      - crc: 0x129204A2
-        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 301
-        info: "Contains wild edits to records 0x00160BFA(TreeJoshANV) and 0x010117C6(Placed Object 'Scotch'). Contains multiple ITPO records, use xEdit's Remove Identitical to Previous Override records script to remove them."
-    clean:
-      - crc: 0x6A5738CA
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
 
-  - name: 'More Perks for Honest Hearts.esm'
-    dirty:
-      - crc: 0x25B6073B
-        util: '[FNVEdit v4.0.1i EXPERIMENTAL](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 13
-        info: 'Contains wild edits to records 0x0100A66E(NVDLC02ZionToMojaveDoorREF).'
-    clean:
-      - crc: 0xF5C9A63A
-        util: 'FNVEdit v4.0.1i EXPERIMENTAL'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *fixesGroup
@@ -3336,12 +3379,7 @@ plugins:
     inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
   - name: 'FourEyesDynamic.esp'
     inc: [ 'FourEyesBetter.esp' ]
-  - name: 'More Perks Update.esp'
-    tag:
-      - Actors.ACBS
-      - Invent
-  - name: 'More Traits Update.esp'
-    tag: [ Actors.ACBS ]
+
   - name: 'ZZZZ--APB_By_Nokturnihs.esp'
     msg: [ *obsolete ]
   - name: 'AutoLoot.esp'
@@ -5044,14 +5082,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
     tag: [ Graphics ]
-  - name: 'More Perks for Old World Blues Update.esp'
-    tag: [ Names ]
-  - name: 'More Perks for Honest Hearts Update.esp'
-    tag: [ Graphics ]
-  - name: 'More Perks for Dead Money Update.esp'
-    tag:
-      - Invent
-      - Actors.ACBS
+
   - name: 'CCO - FT All DLC Patch.esp'
     inc:
       - 'CCO - FT DM Patch.esp'
