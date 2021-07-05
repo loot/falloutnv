@@ -1179,6 +1179,8 @@ plugins:
 ###### AudioVisual - Interface ######
   - name: 'BIS - .*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
+  - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
+    tag: [ Names ]
 
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
