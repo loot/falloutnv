@@ -1284,8 +1284,11 @@ plugins:
       - Invent.Add
       - Invent.Change
       - Invent.Remove
-  - name: 'AWOPLowRobots.esp'
-    inc: [ 'AWOPVeryLowRobots.esp' ]
+  - name: 'AWOP(Very)?LowRobots\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Low Robots ESP' ]
+        condition: 'many("AWOP(Very)?LowRobots\.esp")'
 
 ###### Locations - New Structures & Landmarks ######
   - name: 'Wasteland Defense.esp'
