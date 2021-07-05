@@ -1271,6 +1271,25 @@ plugins:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
 
+###### Locations - New Lands ######
+  - name: 'AWorldOfPain(Preview).esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
+    after: [ 'nVamp - Core.esm' ]
+    tag:
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+  - name: 'AWOPCaliberXAmmoPatch.esp'
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+  - name: 'AWOP(Very)?LowRobots\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Low Robots ESP' ]
+        condition: 'many("AWOP(Very)?LowRobots\.esp")'
+
 ###### Locations - New Structures & Landmarks ######
   - name: 'Wasteland Defense.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
@@ -1742,14 +1761,7 @@ plugins:
   - name: 'Moddable Unique Weps.esm'
     inc: [ 'Moddable Unique Weps.esp' ]
     tag: [ WeaponMods ]
-  - name: 'AWorldOfPain(Preview).esm'
-    after: [ 'nVamp - Core.esm' ]
-    tag:
-      - Deflst
-      - Invent
-  - name: 'AWorldOfPain(LowLoot).esm'
-    after: [ 'nVamp - Core.esm' ]
-    msg: [ *obsolete ]
+
   - name: 'MoMod.esm'
     after: [ 'nVamp - Core.esm' ]
     inc: [ 'monsterrach.esp' ]
@@ -3914,15 +3926,6 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'AWOPLowRobots.esp'
-    inc: [ 'AWOPVeryLowRobots.esp' ]
-  - name: 'AWOP-AhztekWeaponPatch.esp'
-    tag: [ Invent ]
-  - name: 'AWOPCaliberXAmmoPatch.esp'
-    inc: [ 'AWOPCaliberXAmmoPatchLOW.esp' ]
-    tag: [ Invent ]
-  - name: 'AWOPCaliberXAmmoPatchLOW.esp'
-    tag: [ Invent ]
 
   - name: 'Companion Module Pack.esp'
     inc:
