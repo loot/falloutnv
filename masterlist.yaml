@@ -1277,9 +1277,13 @@ plugins:
     after: [ 'nVamp - Core.esm' ]
     tag:
       - Deflst
-      - Invent
+      - Invent.Add
+      - Invent.Remove
   - name: 'AWOPCaliberXAmmoPatch.esp'
-    tag: [ Invent ]
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
   - name: 'AWOPLowRobots.esp'
     inc: [ 'AWOPVeryLowRobots.esp' ]
 
