@@ -1203,6 +1203,13 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+###### Gameplay ######
+  - name: 'BetterGamePerformanceV4.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
+
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
@@ -4846,11 +4853,6 @@ plugins:
     req: [ *NVSE ]
   - name: 'UnderwaterFX.esp'
     req: [ *NVSE ]
-
-  - name: 'BetterGamePerformanceV4.esp'
-    msg:
-      - type: say
-        content: 'Loaded last so that deleted references stay deleted.'
 
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg: [ *obsolete ]
