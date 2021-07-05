@@ -1181,6 +1181,11 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
   - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
     tag: [ Names ]
+  - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ELECTRO-CITY patch' ]
+        condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
