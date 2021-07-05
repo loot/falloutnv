@@ -1205,6 +1205,7 @@ plugins:
 
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
     msg:
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
