@@ -1176,6 +1176,10 @@ plugins:
   - name: 'EVE FNV.esp'
     msg: [ *obsolete ]
 
+###### AudioVisual - Interface ######
+  - name: 'BIS - .*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
+
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
