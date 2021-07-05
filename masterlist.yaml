@@ -1182,6 +1182,9 @@ plugins:
   - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
     tag: [ Names ]
   - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
+    inc:
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'ELECTRO-CITY patch' ]
