@@ -1176,6 +1176,20 @@ plugins:
   - name: 'EVE FNV.esp'
     msg: [ *obsolete ]
 
+###### AudioVisual - Interface ######
+  - name: 'BIS - .*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
+  - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
+    tag: [ Names ]
+  - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
+    inc:
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ELECTRO-CITY patch' ]
+        condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
+
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
@@ -2709,36 +2723,7 @@ plugins:
       - 'CASM.esp'
   - name: 'RX-Auto Incremental Save.esp'
     inc: [ 'CASM.esp' ]
-  - name: 'BIS - Brumbek''s Inventory Sorting.esp'
-    tag: [ Names ]
-  - name: 'BIS - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'BIS - Honest Hearts.esp'
-    tag: [ Names ]
-  - name: 'BIS - Old World Blues.esp'
-    tag: [ Names ]
-  - name: 'BIS - Lonesome Road.esp'
-    tag: [ Names ]
-  - name: 'BIS - Gun Runners Arsenal.esp'
-    tag: [ Names ]
-  - name: 'BIS - Promo DLC Caravan Pack.esp'
-    tag: [ Names ]
-  - name: 'BIS - Promo DLC Classic Pack.esp'
-    tag: [ Names ]
-  - name: 'BIS - Promo DLC Mercenary Pack.esp'
-    tag: [ Names ]
-  - name: 'BIS - Promo DLC Tribal Pack.esp'
-    tag: [ Names ]
-  - name: 'BIS - CFWNV.esp'
-    tag: [ Names ]
-  - name: 'BIS - CFWNV-DLC.esp'
-    tag: [ Names ]
-  - name: 'BIS - Primary Needs HUD.esp'
-    tag: [ Names ]
-  - name: 'BIS - More Cactus Water Recipes.esp'
-    tag: [ Names ]
-  - name: 'BIS - Bobblehunt Patch.esp'
-    tag: [ Names ]
+
   - name: 'NewCalifornia DLC Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     inc: [ 'Simple DLC Delay.esp' ]
@@ -3070,10 +3055,7 @@ plugins:
       - Scripts
       - Sound
       - Stats
-  - name: 'BIS - FOOK - New Vegas.esp'
-    tag: [ Names ]
-  - name: 'BIS - FOOK - New Vegas DLCs.esp'
-    tag: [ Names ]
+
   - name: 'LinkesAuge - Bug fixing compilation.esp'
     tag:
       - Deflst
@@ -3209,20 +3191,7 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp low.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp med.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 2aa - Armor - DR+DT - revamp high.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple low.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple med.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 2ba - Armor - DR+DT - simple high.esp'
-    tag: [ Names ]
-  - name: 'BIS - XFO - 6aa - Epic Skills.esp'
-    tag: [ Names ]
+
   - name: 'Adventurers_New_Vegas-V0.1.esp'
     msg:
       - type: say
@@ -3236,16 +3205,6 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'BIS - Project Nevada - Core.esp'
-    tag: [ Names ]
-  - name: 'BIS - Project Nevada - Equipment.esp'
-    tag:
-      - Invent
-      - Names
-  - name: 'BIS - Project Nevada - Cyberware.esp'
-    tag:
-      - Names
-      - Invent
 
   - name: 'Project Brazil Project Nevada Patch.esp'
     tag: [ Invent ]
@@ -3512,8 +3471,7 @@ plugins:
       - 'Mail Order Catalogs DLC PopUp.esp'
       - 'Mail Order Catalogs XFO DLC.esp'
     msg: [ *obsolete ]
-  - name: 'BIS - Sprint Mod.esp'
-    tag: [ Names ]
+
   - name: 'ACS-DeadMoney.esp'
     tag: [ Invent ]
   - name: 'ACS-HonestHearts.esp'
@@ -3584,24 +3542,15 @@ plugins:
       - 'Better Binoculars Medium.esp'
       - 'Better Binoculars High.esp'
       - 'Better Binoculars Max.esp'
-  - name: 'BIS - Kobu Better Binoculars Low.esp'
-    req: [ 'Better Binoculars Low.esp' ]
-    tag: [ Names ]
+
   - name: 'Better Binoculars Medium.esp'
     inc:
       - 'Better Binoculars High.esp'
       - 'Better Binoculars Max.esp'
-  - name: 'BIS - Kobu Better Binoculars Medium.esp'
-    req: [ 'Better Binoculars Medium.esp' ]
-    tag: [ Names ]
+
   - name: 'Better Binoculars High.esp'
     inc: [ 'Better Binoculars Max.esp' ]
-  - name: 'BIS - Kobu Better Binoculars High.esp'
-    req: [ 'Better Binoculars High.esp' ]
-    tag: [ Names ]
-  - name: 'BIS - Kobu Better Binoculars Max.esp'
-    req: [ 'Better Binoculars Max.esp' ]
-    tag: [ Names ]
+
   - name: 'better that gun 223.esp'
     tag:
       - Names
@@ -4004,8 +3953,7 @@ plugins:
   - name: 'T3T_MiscItemIconsNV.esp'
     msg: [ *obsolete ]
     tag: [ Graphics ]
-  - name: 'BIS - MiscItemIconsNV 0.9.esp'
-    tag: [ Names ]
+
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
   - name: 'Sorter - Combined.esp'
@@ -4051,8 +3999,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
     req: [ *NVSE ]
-  - name: 'BIS - Grenade Hotkey.esp'
-    tag: [ Names ]
+
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg: [ *obsolete ]
     tag: [ Names ]
@@ -4090,10 +4037,7 @@ plugins:
   - name: 'NVDLC04 Allegiance w Duster.esp'
     inc: [ 'NVDLC04 Allegiance.esp' ]
     tag: [ Scripts ]
-  - name: 'BIS - Project Nevada - Rebalance.esp'
-    tag:
-      - Names
-      - Invent
+
   - name: 'Permanent_Weapon_Shells_Heavy.esp'
     inc:
       - 'Permanent_Weapon_Shells_Light.esp'
@@ -4158,8 +4102,7 @@ plugins:
     tag: [ Stats ]
   - name: 'Weight_Rebalance_v10.esp.'
     tag: [ Stats ]
-  - name: 'BIS - Weight_Balance_v10.esp'
-    tag: [ Names ]
+
   - name: 'WeaponModsExpanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
     inc:
@@ -4359,18 +4302,9 @@ plugins:
       - Names
       - Stats
       - WeaponMods
-  - name: 'BIS - Weapon Mod Expansion.esp'
-    tag: [ Names ]
-  - name: 'BIS - WME - Dead Money.esp'
-    tag: [ Names ]
+
   - name: 'WME - FOOK - Dead Money.esp'
     msg: [ *obsolete ]
-  - name: 'BIS - WME - Honest Hearts.esp'
-    tag: [ Names ]
-  - name: 'BIS - WME - Dead Money Arenovalis Retex.esp'
-    tag: [ Names ]
-  - name: 'BIS - WME - Honest Hearts Arenovalis Retex.esp'
-    tag: [ Names ]
 
   - name: 'Improved Sound FX - EVE.esp'
     tag: [ Sound ]
@@ -4470,13 +4404,9 @@ plugins:
     tag: [ Names ]
   - name: 'ELECTRO-CITY - Highways and Byways.esp'
     msg: [ *obsolete ]
-  - name: 'BIS - ELECTRO-CITY Extended Cateye.esp'
-    msg: [ *obsolete ]
 
   - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
     inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
-  - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
-    inc: [ 'BIS - ELECTRO-CITY RegularCATEYEvalue.esp' ]
 
   - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
