@@ -1926,9 +1926,6 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Dead Money.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
     clean:
       # v1.3
       - crc: 0x4D7923AF
@@ -1941,9 +1938,6 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Honest Hearts.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
-    inc:
-      - 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-      - 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
     clean:
       # v1.3
       - crc: 0xE6D45D29
@@ -2833,11 +2827,7 @@ plugins:
       - NpcFaces
   - name: 'Mutant Eyes.esp'
     tag: [ Eyes ]
-  - name: 'NiceCass.esp'
-    inc: [ 'NiceCass - C.esp' ]
-    tag: [ NpcFaces ]
-  - name: 'NiceCass - C.esp'
-    tag: [ NpcFaces ]
+
   - name: 'NPC Project - Aero Office Park.esp'
     tag: [ NpcFaces ]
   - name: 'Raul - Danny Trejo.esp'
@@ -2868,10 +2858,7 @@ plugins:
     tag: [ C.Owner ]
   - name: 'KillableKids_E.esp'
     inc: [ 'KillableKids_NE.esp' ]
-  - name: 'monsterranch.esp'
-    inc: [ 'MoMod.esm' ]
-    msg: [ *obsolete ]
-    tag: [ Relev ]
+
   - name: 'Alpha''s MoMod Overhaul.esp'
     msg: [ *obsolete ]
   - name: 'Monster Mod Wasteland Edition.esp'
@@ -2997,9 +2984,6 @@ plugins:
   - name: 'SierraMadrev2.1.esp'
     msg: [ *obsolete ]
   - name: 'UHNV-Performance-Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'UHNV-IncreasedLighting.esp'
-    inc: [ 'UHNV-Brighter Lighting.esp' ]
     msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
     req: [ *NVSE ]
@@ -3243,20 +3227,7 @@ plugins:
     tag:
       - Names
       - Invent
-  - name: 'Project Nevada - Dead Money + Honest Heart Patch.esp'
-    inc:
-      - 'Project Nevada - Dead Money.esp'
-      - 'Project Nevada - Honest Hearts.esp'
-    msg:
-      - type: say
-        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
-  - name: 'Project Nevada - Dead Money SF + Honest Hearts Patch.esp'
-    inc:
-      - 'Project Nevada - Dead Money.esp'
-      - 'Project Nevada - Honest Hearts.esp'
-    msg:
-      - type: say
-        content: 'Recommended that you use the official Project Nevada Patches. You can find them [here](https://www.nexusmods.com/newvegas/mods/42363).'
+
   - name: 'Project Brazil Project Nevada Patch.esp'
     tag: [ Invent ]
   - name: 'OWB Big Empty Overhaul.esp'
@@ -3424,9 +3395,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'AutoLoot.esp'
     req: [ *NVSE ]
-  - name: 'Detect Traps - Dead Money.esp'
-    req: [ 'DeadMoney.esm' ]
-    inc: [ 'Detect Traps - DLC.esp' ]
+
   - name: 'Detect Traps - DLC.esp'
     req:
       - 'DeadMoney.esm'
@@ -3577,12 +3546,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
     msg: [ *obsolete ]
-  - name: 'Ahzteks Weapon Overhaul.esp'
-    inc: [ 'Ahzteks Weapon Overhaul NO xCALIBER.esp' ]
-    tag:
-      - Deflst
-      - Delev
-      - Invent
+
   - name: 'Ahzteks Pistol and SMG Replacements.esp'
     tag:
       - Graphics
@@ -3641,14 +3605,7 @@ plugins:
   - name: 'Classic Pulse Grenade (vanilla sound).esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
     tag: [ Graphics ]
-  - name: 'DWM4A1.esp'
-    inc: [ 'DWM4A1V18Personal.esp' ]
-  - name: 'DWM4A1V18Personal.esp'
-    inc: [ 'DWM4A1.esp' ]
-  - name: 'DWUSP45.esp'
-    inc: [ 'DWUSP_V18.esp' ]
-  - name: 'DWUSP_V18.esp'
-    inc: [ 'DWUSP45.esp' ]
+
   - name: 'EnergyBoost.esp'
     tag: [ Stats ]
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
@@ -3657,8 +3614,7 @@ plugins:
         content: 'User needs to move wav files from fallout 3 sound.bsa to use.'
   - name: 'ImmaSightinMahLazor.esp'
     tag: [ Stats ]
-  - name: 'ironsightsnozoom.esp'
-    inc: [ 'ironsightsnozoom-wmx.esp' ]
+
   - name: 'm110.esp'
     req: [ *NVSE ]
   - name: 'Moddable Anti-Materiel Rifle.esp'
@@ -3777,10 +3733,7 @@ plugins:
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     inc: [ 'BlackWolf Backpack.esp' ]
     tag: [ Invent ]
-  - name: 'ReworkStuff.esp'
-    msg:
-      - type: say
-        content: '"Requires: Type 3 Body Replacer"'
+
   - name: 'Rivens Costume Mod.esp'
     msg:
       - type: say
@@ -3984,10 +3937,7 @@ plugins:
       - 'Companions Relax.esp'
   - name: 'Companion Weapons - Special Ammo.esp'
     inc: [ 'Companion Weapons - Special Ammo - Dead Money.esp' ]
-  - name: 'CompanionLevel30Cap.esp'
-    inc: [ 'HigherCompanionLevelCap.esp' ]
-    msg: [ *obsolete ]
-    tag: [ Actors.ACBS ]
+
   - name: 'Correction - Passive 2 Option.esp'
     inc: [ 'Correction - Passive.esp' ]
   - name: 'Cass Passive Fix.esp'
@@ -4040,16 +3990,10 @@ plugins:
     tag: [ Names ]
   - name: 'Real Weapon Names - Project Nevada.esp'
     tag: [ Names ]
-  - name: 'MiscItemIconsNV.esp'
-    inc: [ 'T3T_MiscItemIconsNV.esp' ]
-    tag:
-      - Graphics
-      - NoMerge
+
   - name: 'T3T_MiscItemIconsNV.esp'
     msg: [ *obsolete ]
     tag: [ Graphics ]
-  - name: 'BIS - T3T_MiscItemIconsNV 0.7.esp'
-    tag: [ Names ]
   - name: 'BIS - MiscItemIconsNV 0.9.esp'
     tag: [ Names ]
   - name: 'repairkitsexpanded.esp'
@@ -4089,10 +4033,6 @@ plugins:
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
 
-  - name: 'CCC - weaker weapons.esp'
-    msg:
-      - type: say
-        content: 'Does not require CCC to work.'
   - name: 'Couriers Stash - Package Selection Menu.esp'
     msg:
       - type: say
@@ -4179,9 +4119,7 @@ plugins:
     tag:
       - NoMerge
       - Stats
-  - name: 'RealisticWeaponRecoil.esp'
-    inc: [ 'RealisticWeaponRecoilDM.esp' ]
-    req: [ *NVSE ]
+
   - name: 'Real Time Entry Skills.esp'
     req: [ *NVSE ]
   - name: 'Recharge Low.esp'
@@ -4201,18 +4139,7 @@ plugins:
     inc: [ 'SpecialEveryTwoLevels.esp' ]
   - name: 'SubtitlesHotkeyNV.esp'
     req: [ *NVSE ]
-  - name: 'UltimateRecoil.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'RealisticWeaponRecoil.esp'
-      - 'RealisticWeaponRecoilDM.esp'
-  - name: 'UltimateRecoilPN.esp'
-    req:
-      - *NVSE
-      - 'Project Nevada - Core.esm'
-    inc: [ 'UltimateRecoil.esp' ]
-  - name: 'VarmintRifle22LR.esp'
-    inc: [ 'WMX-VarmintRifle22LR.esp' ]
+
   - name: 'Weight_Balance.esp'
     tag: [ Stats ]
   - name: 'Weight_Balance_v07.esp'
@@ -4328,14 +4255,6 @@ plugins:
       - WeaponMods
   - name: 'WMX - Sorted.esp'
     msg: [ *obsolete ]
-  - name: 'WMXArenovalisRiotShottieCompat.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.'
-  - name: 'WMXMilleniaThatGunRetexCompat.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Download the Arenovalis Compatability Patch from the WMX Main Page.'
   - name: 'WMXTemporaryPatch.esp'
     msg: [ *obsolete ]
   - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
@@ -4356,12 +4275,10 @@ plugins:
       - WeaponMods
   - name: 'Frequency - PN+WMX Patch.esp'
     tag: [ Graphics ]
-  - name: 'ironsightsnozoom-wmx.esp'
-    inc: [ 'ironsightsnozoom.esp' ]
+
   - name: 'Real Weapon Names - WMX.esp'
     tag: [ Names ]
-  - name: 'WMX-VarmintRifle22LR.esp'
-    inc: [ 'VarmintRifle22LR.esp' ]
+
   - name: 'WMX-ModernWeapons.esp'
     tag:
       - Delev
@@ -4453,41 +4370,6 @@ plugins:
       - WeaponMods
   - name: 'Mail Order Catalogs.esp'
     req: [ *NVSE ]
-  - name: 'Mail Order Catalogs WMX PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod.'
-      - *obsolete
-  - name: 'Mail Order Catalogs XFO WMX.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - *obsolete
-  - name: 'Mail Order Catalogs XFO WMX PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - *obsolete
-  - name: 'Mail Order Catalogs WMX DLC.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod.'
-      - *obsolete
-  - name: 'Mail Order Catalogs WMX DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod.'
-      - *obsolete
-  - name: 'Mail Order Catalogs XFO WMX DLC.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - *obsolete
-  - name: 'Mail Order Catalogs XFO WMX DLC PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-      - *obsolete
   - name: 'Mail Order Catalogs WME.esp'
     msg:
       - type: say
@@ -4545,37 +4427,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
     inc: [ *TTWv320 ]
 
-  - name: 'NV Game Stabilizer.esp'
-    inc: [ 'NV GameStabilizerA.esp' ]
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA1.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA2.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA4.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA5.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA5F.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA6.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA7.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA7b.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
   - name: 'NV GameStabilizerA8.esp'
     msg: [ *obsolete ]
     tag: [ NoMerge ]
@@ -4601,10 +4452,7 @@ plugins:
   - name: 'Vurt''s WFO [Lite].esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     inc: [ 'Vurt''s WFO.esp' ]
-  - name: 'DN More Lights.esp'
-    inc:
-      - 'ELECTRO-CITY - CompletedWorkorder.esp'
-      - 'ELECTRO-CITY - CompletedWorkorder.esm'
+
   - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
     tag: [ Names ]
   - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
@@ -4614,10 +4462,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'BIS - ELECTRO-CITY Extended Cateye.esp'
     msg: [ *obsolete ]
-  - name: 'ELECTRO-CITY - IncreasedWastelandSpawnCOMPATIBILITYPatch.esp'
-    msg:
-      - type: say
-        content: 'This patch will work with the latest version of Electro-City but it won''t be updated any further.'
+
   - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
     inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
   - name: 'BIS - ELECTRO-CITY ElectroCityCATEYEvalue.esp'
@@ -4789,10 +4634,7 @@ plugins:
     msg:
       - type: say
         content: 'No longer supported by the mod. Can still be used.'
-  - name: 'Interior Lighting Overhaul-Realistic.esp'
-    group: *lightingGroup
-    msg: [ *obsolete ]
-    tag: [ C.Light ]
+
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
     group: *lightingGroup
     tag: [ C.Light ]
@@ -4817,10 +4659,7 @@ plugins:
       - 'ILO - Fallout New Vegas.esp'
       - 'ILO - Fallout New Vegas - No Lucky38.esp'
     tag: [ C.Light ]
-  - name: 'Interior Lighting Overhaul.esp'
-    group: *lightingGroup
-    msg: [ *obsolete ]
-    tag: [ C.Light ]
+
   - name: 'ILO - Fallout New Vegas.esp'
     group: *lightingGroup
     inc: [ 'ILO - Fallout New Vegas - No Lucky38.esp' ]
@@ -4986,10 +4825,7 @@ plugins:
     inc:
       - 'DYNAVISION - Dynamic Lens Effect.esp'
       - 'Field Depth.esp'
-  - name: 'RadiationEffects-greenNV.esp'
-    inc: [ 'RadiationEffects-whiteNV.esp' ]
-  - name: 'SneakNV.esp'
-    inc: [ 'Sneak - less saturated version NV.esp' ]
+
   - name: 'ELECTRO-CITY - Emittance.esp'
     inc: [ 'ELECTRO-CITY - Imaginator.esp' ]
     msg: [ *obsolete ]
@@ -5007,29 +4843,12 @@ plugins:
     req: [ *NVSE ]
   - name: 'UnderwaterFX.esp'
     req: [ *NVSE ]
-  - name: 'BetterGamePerformanceV1.esp'
-    msg:
-      - *obsolete
-      - type: say
-        content: 'Loaded last so that deleted references stay deleted.'
-  - name: 'BetterGamePerformanceV2.esp'
-    msg:
-      - *obsolete
-      - type: say
-        content: 'Loaded last so that deleted references stay deleted.'
-  - name: 'BetterGamePerformanceV3.esp'
-    msg:
-      - *obsolete
-      - type: say
-        content: 'Loaded last so that deleted references stay deleted.'
+
   - name: 'BetterGamePerformanceV4.esp'
     msg:
       - type: say
         content: 'Loaded last so that deleted references stay deleted.'
-  - name: 'Clean Up New Vegas.esp'
-    msg:
-      - type: say
-        content: 'Loaded last so that deleted references stay deleted.'
+
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg: [ *obsolete ]
   - name: 'nVamp - A World of Pain.esp'
