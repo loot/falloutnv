@@ -1248,6 +1248,231 @@ plugins:
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
+###### AudioVisual - Lighting ######
+  ### Interior Lighting Overhaul ###
+  # Core #
+  - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
+    group: *lightingGroup
+    inc:
+      - *TTWv320
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+    clean:
+      - crc: 0x393BF52E
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - Fallout New Vegas.esp'
+    group: *lightingGroup
+    inc: [ 'ILO - Fallout New Vegas - No Lucky38.esp' ]
+    tag: [ C.Light ]
+  # DLC Add-Ons #
+  - name: 'ILO - Dead Money.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Honest Hearts.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Old World Blues.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Lonesome Road.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  # Patches #
+  - name: 'ILO - A World of Pain.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - D.E.I.M.O.S.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.Owner
+  - name: 'ILO - GS Shack.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - New Vegas Bounties.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+    dirty:
+      - <<: *quickClean
+        crc: 0xD7D915C3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x64784791
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - New Vegas Bounties II.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+    clean:
+      - crc: 0x81D4AE7C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - NVInteriors Project.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.Owner
+    clean:
+      - crc: 0xF3439EA3
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - NVInteriors Project - AWOP.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Project Reality Patch.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Climate ]
+  - name: 'ILO - Tale of Two Wastelands.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  # Obsolete Plugins #
+  - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
+    group: *lightingGroup
+    tag: [ C.Light ]
+  - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
+    group: *lightingGroup
+    tag: [ C.Light ]
+  - name: 'ILO-RI-Original Lucky38 Suite.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO-RI-Dead Money.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO-RI-Honest Hearts.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO-RI-Old World Blues.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO-RI-Lonesome Road.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    inc:
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'Interior Lighting Overhaul-Darker.esp'
+    group: *lightingGroup
+    msg: [ *obsolete ]
+  - name: 'ILO-RI-Rust Town.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    group: *lightingGroup
+    inc:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'ILO - Fallout New Vegas - No Lucky38.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
+    group: *lightingGroup
+    tag: [ C.Light ]
+
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
@@ -4653,186 +4878,6 @@ plugins:
       - C.Climate
       - C.Light
 
-  - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
-    group: *lightingGroup
-    tag: [ C.Light ]
-  - name: 'Interior Lighting Overhaul-Realistic Interiors-Combined.esp'
-    group: *lightingGroup
-    tag: [ C.Light ]
-  - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
-    group: *lightingGroup
-    inc:
-      - *TTWv320
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-    clean:
-      - crc: 0x393BF52E
-        util: 'FNVEdit v4.0.2f'
-  - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    group: *lightingGroup
-    inc:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-
-  - name: 'ILO - Fallout New Vegas.esp'
-    group: *lightingGroup
-    inc: [ 'ILO - Fallout New Vegas - No Lucky38.esp' ]
-    tag: [ C.Light ]
-  - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
-    group: *lightingGroup
-    tag: [ C.Light ]
-  - name: 'ILO - GS Shack.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Original Lucky38 Suite.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Dead Money.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Dead Money.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Honest Hearts.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Honest Hearts.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Old World Blues.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Old World Blues.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Lonesome Road.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Lonesome Road.esp'
-    group: *lightingGroup
-    inc:
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO-RI-Rust Town.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - NVInteriors Project.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-      - C.Owner
-    clean:
-      # v6.9
-      - crc: 0xF3439EA3
-        util: 'FNVEdit v4.0.2f'
-  - name: 'ILO - NVInteriors Project - AWOP.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Project Reality Patch.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Climate ]
-  - name: 'Interior Lighting Overhaul-Darker.esp'
-    group: *lightingGroup
-    msg: [ *obsolete ]
-  - name: 'ILO - A World of Pain.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
-  - name: 'ILO - Tale of Two Wastelands.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag: [ C.Light ]
   - name: 'TTW - Realistic Interior Lighting.esp'
     group: *lightingGroup
     tag: [ C.Light ]
@@ -5186,18 +5231,7 @@ plugins:
     inc: [ *TTWv320 ]
   - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
     tag: [ Graphics ]
-  - name: 'ILO - D.E.I.M.O.S.esp'
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-      - C.Owner
+
   - name: 'Improved Sounds FX.esp'
     tag: [ Sound ]
   - name: 'Integration - Couriers Stash+WMX.esp'
@@ -5367,41 +5401,7 @@ plugins:
       - Actors.AIPackages
       - Factions
       - Scripts
-  - name: 'ILO - New Vegas Bounties.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-    dirty:
-      - <<: *quickClean
-        crc: 0xD7D915C3
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-    clean:
-      - crc: 0x64784791
-        util: 'FNVEdit v4.0.2f'
-  - name: 'ILO - New Vegas Bounties II.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
-    group: *lightingGroup
-    after:
-      - 'ILO - Fallout New Vegas.esp'
-      - 'ILO - Fallout New Vegas - No Lucky38.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
-      - 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
-    tag:
-      - C.ImageSpace
-      - C.Light
-      - C.LTemplate
-    clean:
-      - crc: 0x81D4AE7C
-        util: 'FNVEdit v4.0.2f'
+
   - name: 'New Vegas Redesigned 3.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
     after: [ 'Project Beauty.esm' ]
