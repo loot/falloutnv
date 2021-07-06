@@ -3727,9 +3727,6 @@ plugins:
         content: 'Designed for the Type3 Female Body Replacer variants.'
   - name: 'Powered Power Armor.esp'
     tag: [ Deflst ]
-  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
-    inc: [ 'BlackWolf Backpack.esp' ]
-    tag: [ Invent ]
 
   - name: 'Rivens Costume Mod.esp'
     msg:
