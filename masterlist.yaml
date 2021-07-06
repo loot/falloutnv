@@ -1325,6 +1325,10 @@ plugins:
 ###### Items ######
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
+    req:
+      - name: 'QS_Blackwolf_NV_Backpackmod.bsa'
+        display: 'Blackwolf Backpacks resources'
+        condition: 'not file("BlackWolf Backpack.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif")'
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
