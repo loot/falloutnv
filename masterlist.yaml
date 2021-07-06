@@ -1262,7 +1262,6 @@ plugins:
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
-    inc: [ 'Project Nevada - FlashlightNVSE.esp' ]
 
 ###### Gameplay - Combat ######
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
