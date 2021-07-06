@@ -1387,6 +1387,10 @@ plugins:
 
   - name: 'ghostbodysuitcamo.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34985/' ]
+    msg:
+      - <<: *requiresResources
+        type: say
+        subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
