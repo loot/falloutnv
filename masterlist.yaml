@@ -1350,6 +1350,9 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
 ###### Items ######
+  - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41657/' ]
+
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
     req:
