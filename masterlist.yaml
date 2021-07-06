@@ -1254,6 +1254,10 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
+###### Gameplay - Combat ######
+  - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
+
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
