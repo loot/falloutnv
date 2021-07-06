@@ -3657,8 +3657,7 @@ plugins:
       - NpcFaces
   - name: 'LDFemalePowerArmorPack.esp'
     inc: [ 'LDFemalePowerArmorPack.esm' ]
-  - name: 'BlackWolf Backpack.esp'
-    inc: [ 'QS_Blackwolf_NV_Backpackmod.esp' ]
+
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
     req: [ 'BlackWolf Backpack.esp' ]
   - name: 'epock.esp'
