@@ -1352,6 +1352,10 @@ plugins:
 ###### Items ######
   - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41657/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Ghost Variants ESP' ]
+        condition: 'many("Ghost Variants( Safe| Adjutant)?\.esp")'
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
