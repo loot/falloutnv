@@ -1254,6 +1254,15 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
+  - name: 'FlashlightNVSE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
+    after:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+
 ###### Gameplay - Combat ######
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
@@ -3704,15 +3713,7 @@ plugins:
       - type: say
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'file("nVamp.*\.esp")'
-  - name: 'FlashlightNVSE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39968' ]
-    inc: [ 'Project Nevada - FlashlightNVSE.esp' ]
-    after:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
+
   - name: 'ghostbodysuitcamo.esp'
     msg:
       - type: say
