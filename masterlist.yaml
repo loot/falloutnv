@@ -1330,6 +1330,12 @@ plugins:
         display: 'Blackwolf Backpacks resources'
         condition: 'not file("BlackWolf Backpack.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif")'
     inc: [ 'BlackWolf Backpack.esp' ]
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - 'BlackWolf Backpack.bsa'
+          - 'QS_Blackwolf_NV_Backpackmod.bsa'
+        condition: 'file("BlackWolf Backpack.bsa") and not file("QS_Blackwolf_NV_Backpackmod.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif") and not file("BlackWolf Backpack.esp")'
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
