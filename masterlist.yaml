@@ -1336,6 +1336,9 @@ plugins:
           - 'BlackWolf Backpack.bsa'
           - 'QS_Blackwolf_NV_Backpackmod.bsa'
         condition: 'file("BlackWolf Backpack.bsa") and not file("QS_Blackwolf_NV_Backpackmod.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif") and not file("BlackWolf Backpack.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
