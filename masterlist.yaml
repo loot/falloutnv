@@ -1257,6 +1257,10 @@ plugins:
 ###### Gameplay - Combat ######
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Companion Weapons - Use Special Ammo ESP' ]
+        condition: 'many("Companion Weapons - Special Ammo( - Dead Money)?\.esp")'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
