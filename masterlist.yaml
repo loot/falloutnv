@@ -1821,11 +1821,7 @@ plugins:
     req:
       - *NVSE
       - *MCM
-  - name: 'Eve.esm'
-    msg:
-      - type: say
-        content: 'it is recommended that you upgrade to the official EVE FNV mod.'
-        condition: 'checksum("Eve.esm", A4084FA6)'
+
   - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
     msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
