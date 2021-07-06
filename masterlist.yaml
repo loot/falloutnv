@@ -3718,18 +3718,7 @@ plugins:
     msg:
       - type: say
         content: '"Requires: Type 3 Body Replacer"'
-  - name: 'Ghost Variants.esp'
-    inc:
-      - 'Ghost Variants Safe.esp'
-      - 'Ghost Variants Adjutant.esp'
-  - name: 'Ghost Variants Adjutant.esp'
-    inc:
-      - 'Ghost Variants.esp'
-      - 'Ghost Variants Safe.esp'
-  - name: 'Ghost Variants Safe.esp'
-    inc:
-      - 'Ghost Variants.esp'
-      - 'Ghost Variants Adjutant.esp'
+
   - name: 'Hereticus Faction Armors Fading.esp'
     tag: [ Names ]
   - name: 'HHType3tribalhands.esp'
