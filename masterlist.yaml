@@ -1263,8 +1263,14 @@ plugins:
         condition: 'many("Companion Weapons - Special Ammo( - Dead Money)?\.esp")'
   - name: 'Companion Weapons - Special Ammo.esp'
     msg: [ *useVersionDeadMoney ]
+    clean:
+      - crc: 0x7D889702
+        util: 'FNVEdit v4.0.3g'
   - name: 'Companion Weapons - Special Ammo - Dead Money.esp'
     msg: [ *useVersionNonDeadMoney ]
+    clean:
+      - crc: 0x23857A09
+        util: 'FNVEdit v4.0.3g'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
