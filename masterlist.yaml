@@ -1339,6 +1339,9 @@ plugins:
     tag:
       - Invent.Add
       - Invent.Remove
+    clean:
+      - crc: 0x5DF9D6E4
+        util: 'FNVEdit v4.0.3g'
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
