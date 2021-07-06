@@ -3549,29 +3549,7 @@ plugins:
   - name: 'TTW-WEP.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
     tag: [ Graphics ]
-  - name: 'Improved Sound FX.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - HH Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - OWB Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - LR Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - GRA.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Merged Major DLCs.esp'
-    inc:
-      - 'Improved Sound FX - DM.esp'
-      - 'Improved Sound FX - HH.esp'
-      - 'Improved Sound FX - HH Sharing Fix.esp'
-      - 'Improved Sound FX - OWB Sharing Fix.esp'
-      - 'Improved Sound FX - LR Sharing Fix.esp'
-      - 'Improved Sound FX - WMX - Merged Major DLCs.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Project Nevada.esp'
-    tag: [ Sound ]
+
   - name: 'LouderGuns.esp'
     tag: [ Sound ]
   - name: 'awilderwasteland.esp'
@@ -4418,8 +4396,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'WMXTemporaryPatch.esp'
     msg: [ *obsolete ]
-  - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
-    tag: [ Sound ]
+
   - name: 'WMX-AWOP Patch.esp'
     tag: [ WeaponMods ]
   - name: 'WMX-AWOP-Overhaul.esp'
@@ -4449,17 +4426,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Real Weapon Names - WMX - Dead Money.esp'
     tag: [ Names ]
-  - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
-    inc:
-      - 'Improved Sound FX - DM.esp'
-      - 'Improved Sound FX - HH.esp'
-      - 'Improved Sound FX - HH Sharing Fix.esp'
-      - 'Improved Sound FX - OWB Sharing Fix.esp'
-      - 'Improved Sound FX - LR Sharing Fix.esp'
-      - 'Improved Sound FX - Merged Major DLCs.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - WMX - GRA Sharing Fix.esp'
-    tag: [ Sound ]
+
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
   - name: 'RH_IronSights_NV_Vanilla.esp'
@@ -4514,8 +4481,6 @@ plugins:
   - name: 'WME - FOOK - Dead Money.esp'
     msg: [ *obsolete ]
 
-  - name: 'Improved Sound FX - EVE.esp'
-    tag: [ Sound ]
   - name: 'WMX-EVE.esp'
     tag:
       - Graphics
