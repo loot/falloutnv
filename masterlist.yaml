@@ -1385,6 +1385,13 @@ plugins:
         subs: [ 'Ghost Variants ESP' ]
         condition: 'many("Ghost Variants( Safe| Adjutant)?\.esp")'
 
+  - name: 'ghostbodysuitcamo.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34985/' ]
+    msg:
+      - <<: *requiresResources
+        type: say
+        subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
     req:
@@ -3748,11 +3755,6 @@ plugins:
       - type: say
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'file("nVamp.*\.esp")'
-
-  - name: 'ghostbodysuitcamo.esp'
-    msg:
-      - type: say
-        content: '"Requires: Type 3 Body Replacer"'
 
   - name: 'Hereticus Faction Armors Fading.esp'
     tag: [ Names ]
