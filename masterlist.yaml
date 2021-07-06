@@ -1261,6 +1261,8 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Companion Weapons - Use Special Ammo ESP' ]
         condition: 'many("Companion Weapons - Special Ammo( - Dead Money)?\.esp")'
+  - name: 'Companion Weapons - Special Ammo.esp'
+    msg: [ *useVersionDeadMoney ]
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
