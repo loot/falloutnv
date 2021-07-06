@@ -3749,11 +3749,6 @@ plugins:
         content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
         condition: 'file("nVamp.*\.esp")'
 
-  - name: 'ghostbodysuitcamo.esp'
-    msg:
-      - type: say
-        content: '"Requires: Type 3 Body Replacer"'
-
   - name: 'Hereticus Faction Armors Fading.esp'
     tag: [ Names ]
   - name: 'HHType3tribalhands.esp'
