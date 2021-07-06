@@ -4629,10 +4629,6 @@ plugins:
     tag:
       - C.Climate
       - C.Light
-  - name: 'ELECTRO-CITY - Darker Nights.esp'
-    msg:
-      - type: say
-        content: 'No longer supported by the mod. Can still be used.'
 
   - name: 'Interior Lighting Overhaul-Realistic Interiors-Full.esp'
     group: *lightingGroup
