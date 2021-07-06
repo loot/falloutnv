@@ -1263,6 +1263,8 @@ plugins:
         condition: 'many("Companion Weapons - Special Ammo( - Dead Money)?\.esp")'
   - name: 'Companion Weapons - Special Ammo.esp'
     msg: [ *useVersionDeadMoney ]
+  - name: 'Companion Weapons - Special Ammo - Dead Money.esp'
+    msg: [ *useVersionNonDeadMoney ]
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
