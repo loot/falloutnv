@@ -1322,6 +1322,10 @@ plugins:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
 
+###### Items ######
+  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
+
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
