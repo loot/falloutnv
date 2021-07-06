@@ -1322,6 +1322,27 @@ plugins:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
 
+###### Items ######
+  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
+    req:
+      - name: 'QS_Blackwolf_NV_Backpackmod.bsa'
+        display: 'Blackwolf Backpacks resources'
+        condition: 'not file("BlackWolf Backpack.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif")'
+    inc: [ 'BlackWolf Backpack.esp' ]
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - 'BlackWolf Backpack.bsa'
+          - 'QS_Blackwolf_NV_Backpackmod.bsa'
+        condition: 'file("BlackWolf Backpack.bsa") and not file("QS_Blackwolf_NV_Backpackmod.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif") and not file("BlackWolf Backpack.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x5DF9D6E4
+        util: 'FNVEdit v4.0.3g'
+
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
@@ -3657,8 +3678,7 @@ plugins:
       - NpcFaces
   - name: 'LDFemalePowerArmorPack.esp'
     inc: [ 'LDFemalePowerArmorPack.esm' ]
-  - name: 'BlackWolf Backpack.esp'
-    inc: [ 'QS_Blackwolf_NV_Backpackmod.esp' ]
+
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
     req: [ 'BlackWolf Backpack.esp' ]
   - name: 'epock.esp'
@@ -3728,9 +3748,6 @@ plugins:
         content: 'Designed for the Type3 Female Body Replacer variants.'
   - name: 'Powered Power Armor.esp'
     tag: [ Deflst ]
-  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
-    inc: [ 'BlackWolf Backpack.esp' ]
-    tag: [ Invent ]
 
   - name: 'Rivens Costume Mod.esp'
     msg:
