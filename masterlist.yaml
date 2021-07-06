@@ -3941,8 +3941,6 @@ plugins:
       - 'AllCompanionsEssential 2.0b.esp'
       - 'Comp_Idles_NV.esp'
       - 'Companions Relax.esp'
-  - name: 'Companion Weapons - Special Ammo.esp'
-    inc: [ 'Companion Weapons - Special Ammo - Dead Money.esp' ]
 
   - name: 'Correction - Passive 2 Option.esp'
     inc: [ 'Correction - Passive.esp' ]
