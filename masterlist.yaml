@@ -3443,10 +3443,6 @@ plugins:
   - name: 'AutoLoot.esp'
     req: [ *NVSE ]
 
-  - name: 'Detect Traps - DLC.esp'
-    req:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
   - name: 'IWS-AS-HighSpawns.esp'
     req: [ *NVSE ]
     inc:
