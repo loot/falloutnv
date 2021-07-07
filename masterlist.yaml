@@ -1594,6 +1594,16 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
 
+  - name: 'Moddable Anti-Materiel Rifle 2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36846/' ]
+    tag:
+      - Graphics
+      - Invent.Add
+      - Stats
+      - WeaponMods
+  - name: 'Moddable Anti-Materiel Rifle.esp'
+    msg: [ *obsolete ]
+
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
     msg:
@@ -3826,10 +3836,7 @@ plugins:
 
   - name: 'm110.esp'
     req: [ *NVSE ]
-  - name: 'Moddable Anti-Materiel Rifle.esp'
-    tag: [ WeaponMods ]
-  - name: 'Moddable Anti-Materiel Rifle 2.esp'
-    tag: [ WeaponMods ]
+
   - name: 'Moddable Unique Weps.esp'
     inc: [ 'Moddable Unique Weps.esm' ]
     tag: [ WeaponMods ]
