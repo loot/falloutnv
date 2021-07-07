@@ -3324,8 +3324,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'GunRunnersExpanded-LoreFriendly.esp'
     msg: [ *obsolete ]
-  - name: 'Novac Hotel Suite Upgrade.esp'
-    inc: [ 'NEVADA SKIES COMPATABLE Novac Hotel Suite Upgrade.esp' ]
+
   - name: 'NVInteriors_WastelandEditon.esp'
     msg: [ *obsolete ]
   - name: 'NVInteriors_Urban_Edition_v1.0.esp'
