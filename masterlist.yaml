@@ -1452,6 +1452,11 @@ plugins:
       - Delev
       - Relations.Add
       - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x1EBEBDFF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
 
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
