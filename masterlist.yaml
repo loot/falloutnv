@@ -1558,12 +1558,23 @@ plugins:
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x616CB2B3
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
   - name: 'Recharge (High|Low)\.esp'
     req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Recharge ESP' ]
         condition: 'many("Recharge (High|Low)\.esp")'
+  - name: 'Recharge High.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC8611FBD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
 
   - name: 'Mail Order Catalogs.esp'
     url:
