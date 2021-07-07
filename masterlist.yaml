@@ -4241,8 +4241,7 @@ plugins:
     inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
   - name: 'Invisibility for No Reputation.esp'
     req: [ *NVSE ]
-  - name: 'lexx-no-dialog-tags-English.esp'
-    inc: [ 'lexx-no-dialog-tags-Deutsch.esp' ]
+
   - name: 'LFox Bottle That Water.esp'
     tag:
       - Names
