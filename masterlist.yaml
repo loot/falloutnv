@@ -1492,6 +1492,20 @@ plugins:
       - crc: 0x23857A09
         util: 'FNVEdit v4.0.3g'
 
+  - name: 'Moddable Unique Weps.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35009/' ]
+    tag:
+      - Graphics
+      - Stats
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x27DBB6E9
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'Moddable Unique Weps.esm'
+    msg: [ *obsolete ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
     url:
@@ -2131,9 +2145,6 @@ plugins:
     msg:
       - type: say
         content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
-  - name: 'Moddable Unique Weps.esm'
-    inc: [ 'Moddable Unique Weps.esp' ]
-    tag: [ WeaponMods ]
 
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
@@ -3837,9 +3848,6 @@ plugins:
   - name: 'm110.esp'
     req: [ *NVSE ]
 
-  - name: 'Moddable Unique Weps.esp'
-    inc: [ 'Moddable Unique Weps.esm' ]
-    tag: [ WeaponMods ]
   - name: 'OWB HQ Textures Fix.esp'
     tag: [ Graphics ]
   - name: 'PlasmaRifleAwesomefied.esp'
