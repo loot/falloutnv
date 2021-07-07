@@ -1601,6 +1601,8 @@ plugins:
       - Invent.Add
       - Stats
       - WeaponMods
+  - name: 'Moddable Anti-Materiel Rifle.esp'
+    msg: [ *obsolete ]
 
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
