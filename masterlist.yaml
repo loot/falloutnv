@@ -3884,11 +3884,7 @@ plugins:
     tag: [ Names ]
   - name: 'HHType3tribalhands.esp'
     tag: [ Body-F ]
-  - name: 'JillBSAA Multicolor.esp'
-    msg:
-      - type: say
-        content: '"Requires: Type 3 Body Replacer"'
-    tag: [ Invent ]
+
   - name: 'JNinjasNinjasComeBack.esp'
     inc:
       - 'JNinjasStealthFieldStops.esp'
