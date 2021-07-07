@@ -1560,8 +1560,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
   - name: 'Recharge (High|Low)\.esp'
     req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
-  - name: 'Recharge Low.esp'
-    inc: [ 'Recharge High.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Recharge ESP' ]
+        condition: 'many("Recharge (High|Low)\.esp")'
 
   - name: 'Mail Order Catalogs.esp'
     url:
