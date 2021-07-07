@@ -1404,6 +1404,11 @@ plugins:
     tag:
       - NPC.Race
       - NpcFacesForceFullImport
+    dirty:
+      - <<: *quickClean
+        crc: 0x6926C970
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
 
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
