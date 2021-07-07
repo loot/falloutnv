@@ -1398,6 +1398,18 @@ plugins:
         subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
+###### Character Appearance - NPCs ######
+  - name: 'ReElijahfied.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
+    tag:
+      - NPC.Race
+      - NpcFacesForceFullImport
+    dirty:
+      - <<: *quickClean
+        crc: 0x6926C970
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
@@ -3265,8 +3277,7 @@ plugins:
     tag:
       - NoMerge
       - NpcFaces
-  - name: 'ReElijahfied.esp'
-    tag: [ NpcFaces ]
+
   - name: 'RivensEyescapesNV.esp'
     tag: [ Eyes ]
   - name: 'Mikotos_REyescapesNV.esp'
