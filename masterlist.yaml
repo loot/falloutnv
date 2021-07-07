@@ -1506,6 +1506,9 @@ plugins:
   - name: 'Moddable Unique Weps.esm'
     msg: [ *obsolete ]
 
+  - name: 'NPCsUseAmmo(-More Ammo)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35462/' ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
     url:
