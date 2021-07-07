@@ -3875,8 +3875,6 @@ plugins:
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
 
-  - name: 'NCR Rearmament v1.5.esp'
-    inc: [ 'NCR Rearmament v1.5 (Lore).esp' ]
   - name: 'Nidaoutfitv1.esp'
     msg:
       - type: say
