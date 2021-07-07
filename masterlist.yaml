@@ -4124,8 +4124,7 @@ plugins:
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
-  - name: 'LilyFawkes.esp'
-    inc: [ 'LilyArmored.esp' ]
+
   - name: 'My essential friends (animals).esp'
     tag:
       - Actors.ACBS
