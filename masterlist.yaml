@@ -1374,6 +1374,26 @@ plugins:
   - name: 'Interior Lighting Overhaul-Darker.esp'
     msg: [ *obsolete ]
 
+###### AudioVisual - Sound & Music ######
+  - name: 'Improved Sound FX.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
+    tag: [ Sound ]
+  - name: 'Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - Merged Major DLCs.esp") and file("Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp")'
+  - name: 'Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and file("Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp")'
+  - name: 'Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
+
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
@@ -3549,29 +3569,7 @@ plugins:
   - name: 'TTW-WEP.esp'
     url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
     tag: [ Graphics ]
-  - name: 'Improved Sound FX.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Weapon Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - HH Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - OWB Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - LR Sharing Fix.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - GRA.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Merged Major DLCs.esp'
-    inc:
-      - 'Improved Sound FX - DM.esp'
-      - 'Improved Sound FX - HH.esp'
-      - 'Improved Sound FX - HH Sharing Fix.esp'
-      - 'Improved Sound FX - OWB Sharing Fix.esp'
-      - 'Improved Sound FX - LR Sharing Fix.esp'
-      - 'Improved Sound FX - WMX - Merged Major DLCs.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - Project Nevada.esp'
-    tag: [ Sound ]
+
   - name: 'LouderGuns.esp'
     tag: [ Sound ]
   - name: 'awilderwasteland.esp'
@@ -4418,8 +4416,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'WMXTemporaryPatch.esp'
     msg: [ *obsolete ]
-  - name: 'Improved Sound FX - WMX - Weapon Sharing Fix.esp'
-    tag: [ Sound ]
+
   - name: 'WMX-AWOP Patch.esp'
     tag: [ WeaponMods ]
   - name: 'WMX-AWOP-Overhaul.esp'
@@ -4449,17 +4446,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Real Weapon Names - WMX - Dead Money.esp'
     tag: [ Names ]
-  - name: 'Improved Sound FX - WMX - Merged Major DLCs.esp'
-    inc:
-      - 'Improved Sound FX - DM.esp'
-      - 'Improved Sound FX - HH.esp'
-      - 'Improved Sound FX - HH Sharing Fix.esp'
-      - 'Improved Sound FX - OWB Sharing Fix.esp'
-      - 'Improved Sound FX - LR Sharing Fix.esp'
-      - 'Improved Sound FX - Merged Major DLCs.esp'
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - WMX - GRA Sharing Fix.esp'
-    tag: [ Sound ]
+
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
   - name: 'RH_IronSights_NV_Vanilla.esp'
@@ -4514,8 +4501,6 @@ plugins:
   - name: 'WME - FOOK - Dead Money.esp'
     msg: [ *obsolete ]
 
-  - name: 'Improved Sound FX - EVE.esp'
-    tag: [ Sound ]
   - name: 'WMX-EVE.esp'
     tag:
       - Graphics
