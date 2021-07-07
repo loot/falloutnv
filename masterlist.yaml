@@ -4157,16 +4157,6 @@ plugins:
     req:
       - 'GunSmith.esm'
       - 'GunSmith Guns Upgrade.esp'
-  - name: 'Real Weapon Names.esp'
-    tag: [ Names ]
-  - name: 'Real Weapon Names - NPC Compnaion Weapons.esp'
-    tag: [ Names ]
-  - name: 'Real Weapon Names - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'Real Weapon Names - Honest Hearts.esp'
-    tag: [ Names ]
-  - name: 'Real Weapon Names - Project Nevada.esp'
-    tag: [ Names ]
 
   - name: 'T3T_MiscItemIconsNV.esp'
     msg: [ *obsolete ]
@@ -4445,9 +4435,6 @@ plugins:
   - name: 'Frequency - PN+WMX Patch.esp'
     tag: [ Graphics ]
 
-  - name: 'Real Weapon Names - WMX.esp'
-    tag: [ Names ]
-
   - name: 'WMX-ModernWeapons.esp'
     tag:
       - Delev
@@ -4455,8 +4442,6 @@ plugins:
       - Relev
   - name: 'ACS-WMXModernWeapons.esp'
     tag: [ Invent ]
-  - name: 'Real Weapon Names - WMX - Dead Money.esp'
-    tag: [ Names ]
 
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
