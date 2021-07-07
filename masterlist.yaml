@@ -1503,6 +1503,8 @@ plugins:
         crc: 0x27DBB6E9
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 3
+  - name: 'Moddable Unique Weps.esm'
+    msg: [ *obsolete ]
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
