@@ -1508,6 +1508,10 @@ plugins:
 
   - name: 'NPCsUseAmmo(-More Ammo)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35462/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NPCs Use Ammo ESP' ]
+        condition: 'many("NPCsUseAmmo(-More Ammo)?\.esp")'
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
