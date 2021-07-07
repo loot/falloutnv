@@ -3874,10 +3874,7 @@ plugins:
     inc: [ 'JNinjasStealthFieldStopsNinjasComeBack.esp' ]
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
-  - name: 'NCR Black Ops Stealth Armor.esp'
-    msg:
-      - type: say
-        content: 'Due to a master issue this plugin requires ClassicPack.esm and can be fixed manually using FNVEdit.'
+
   - name: 'NCR Rearmament v1.5.esp'
     inc: [ 'NCR Rearmament v1.5 (Lore).esp' ]
   - name: 'Nidaoutfitv1.esp'
