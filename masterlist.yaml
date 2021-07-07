@@ -1556,6 +1556,8 @@ plugins:
         itm: 2
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
   - name: 'Recharge (High|Low)\.esp'
     req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
   - name: 'Recharge Low.esp'
