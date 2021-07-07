@@ -1405,6 +1405,18 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Fawkes Is Back ESP' ]
         condition: 'many("Lily(Fawkes|Armored)\.esp")'
+  - name: 'LilyFawkes.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBDA8E6FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'LilyArmored.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B9A5AB6
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
 
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
