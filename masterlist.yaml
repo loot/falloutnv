@@ -1478,6 +1478,14 @@ plugins:
       - crc: 0x23857A09
         util: 'FNVEdit v4.0.3g'
 
+###### Gameplay - Economy & Item Balance ######
+  - name: 'Mail Order Catalogs.esp'
+    url:
+      - 'https://www.nexusmods.com/newvegas/mods/39490/'
+      - link: 'https://www.nexusmods.com/newvegas/mods/47712/'
+        name: 'Mail Order Catalogs - Updated'
+    req: [ *NVSE ]
+
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
@@ -3671,76 +3679,6 @@ plugins:
     inc: [ 'More Weight.esp' ]
   - name: 'Isul-MagExchange.esp'
     req: [ *NVSE ]
-  - name: 'Mail Order Catalogs PopUp.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs XFO.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs XFO PopUp.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs DLC.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs DLC PopUp.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs XFO DLC.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC PopUp.esp'
-    msg: [ *obsolete ]
-  - name: 'Mail Order Catalogs XFO DLC PopUp.esp'
-    req: [ *NVSE ]
-    inc:
-      - 'Mail Order Catalogs PopUp.esp'
-      - 'Mail Order Catalogs XFO.esp'
-      - 'Mail Order Catalogs XFO PopUp.esp'
-      - 'Mail Order Catalogs DLC.esp'
-      - 'Mail Order Catalogs DLC PopUp.esp'
-      - 'Mail Order Catalogs XFO DLC.esp'
-    msg: [ *obsolete ]
 
   - name: 'ACS-DeadMoney.esp'
     tag: [ Invent ]
@@ -4533,24 +4471,6 @@ plugins:
     tag:
       - Graphics
       - WeaponMods
-  - name: 'Mail Order Catalogs.esp'
-    req: [ *NVSE ]
-  - name: 'Mail Order Catalogs WME.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod.'
-  - name: 'Mail Order Catalogs WME PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod.'
-  - name: 'Mail Order Catalogs XFO WME.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
-  - name: 'Mail Order Catalogs XFO WME PopUp.esp'
-    msg:
-      - type: say
-        content: 'Select only ONE .esp when installing this mod. Does not require XFO.'
 
   - name: 'GRA Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44170' ]
