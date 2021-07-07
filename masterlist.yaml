@@ -1461,11 +1461,12 @@ plugins:
 ###### Encounters - Neutrals ######
   - name: 'populatedcasino(-light|-medium)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Populated Casinos ESP' ]
+        condition: 'many("populatedcasino(-light|-medium)?\.esp")'
     tag: [ Actors.AIPackages ]
   - name: 'populatedcasino.esp'
-    inc:
-      - 'populatedcasino-medium.esp'
-      - 'populatedcasino-light.esp'
     dirty:
       - <<: *quickClean
         crc: 0x9EAE96FF
@@ -1476,9 +1477,6 @@ plugins:
       - crc: 0x499083D4
         util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-medium.esp'
-    inc:
-      - 'populatedcasino.esp'
-      - 'populatedcasino-light.esp'
     dirty:
       - <<: *quickClean
         crc: 0x39574E5A
@@ -1489,9 +1487,6 @@ plugins:
       - crc: 0x9DCD85B4
         util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-light.esp'
-    inc:
-      - 'populatedcasino.esp'
-      - 'populatedcasino-medium.esp'
     dirty:
       - <<: *quickClean
         crc: 0xFAB23559
