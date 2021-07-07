@@ -445,6 +445,10 @@ common:
         text: 'Потрібні ресурси (наприклад: меші, текстури; не плагіни) від %1%.'
       - lang: zh_CN
         text: '需要%1%的资源(如网格，纹理;非插件)。'
+  - &requiresResourcesType3
+    <<: *requiresResources
+    type: say
+    subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
 
   - &requiresX
     type: warn
@@ -1533,10 +1537,7 @@ plugins:
 
   - name: 'ghostbodysuitcamo.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34985/' ]
-    msg:
-      - <<: *requiresResources
-        type: say
-        subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+    msg: [ *requiresResourcesType3 ]
 
   - name: 'JillBSAA Multicolor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36511/' ]
