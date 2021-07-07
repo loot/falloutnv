@@ -3674,7 +3674,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
     inc: [ 'awilderwastelandnobenny.esp' ]
     tag:
-      - AI.Packages
+      - Actors.AIPackages
       - Stats
     dirty:
       - <<: *quickClean
