@@ -1541,8 +1541,17 @@ plugins:
 
   - name: 'JillBSAA Multicolor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36511/' ]
-    msg: [ *requiresResourcesType3 ]
+    msg:
+      - *requiresResourcesType3
+      - <<: *wildEdits
+        subs: [ 'Remove **0007C109** from **JillBSAA Multicolor.esp**.' ]
+        condition: 'checksum("JillBSAA Multicolor.esp", A9E3000E) or checksum("JillBSAA Multicolor.esp", D25A3439)'
     tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA9E3000E
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
