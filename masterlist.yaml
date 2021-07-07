@@ -1596,6 +1596,10 @@ plugins:
 
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NCR Rearmament ESP' ]
+        condition: 'many("NCR Rearmament v1.5( \(Lore\))?\.esp")'
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
