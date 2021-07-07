@@ -445,6 +445,10 @@ common:
         text: 'Потрібні ресурси (наприклад: меші, текстури; не плагіни) від %1%.'
       - lang: zh_CN
         text: '需要%1%的资源(如网格，纹理;非插件)。'
+  - &requiresResourcesType3
+    <<: *requiresResources
+    type: say
+    subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
 
   - &requiresX
     type: warn
@@ -1533,10 +1537,21 @@ plugins:
 
   - name: 'ghostbodysuitcamo.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34985/' ]
+    msg: [ *requiresResourcesType3 ]
+
+  - name: 'JillBSAA Multicolor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36511/' ]
     msg:
-      - <<: *requiresResources
-        type: say
-        subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+      - *requiresResourcesType3
+      - <<: *wildEdits
+        subs: [ 'Remove **0007C109** from **JillBSAA Multicolor.esp**.' ]
+        condition: 'checksum("JillBSAA Multicolor.esp", A9E3000E) or checksum("JillBSAA Multicolor.esp", D25A3439)'
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA9E3000E
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
@@ -3884,11 +3899,7 @@ plugins:
     tag: [ Names ]
   - name: 'HHType3tribalhands.esp'
     tag: [ Body-F ]
-  - name: 'JillBSAA Multicolor.esp'
-    msg:
-      - type: say
-        content: '"Requires: Type 3 Body Replacer"'
-    tag: [ Invent ]
+
   - name: 'JNinjasNinjasComeBack.esp'
     inc:
       - 'JNinjasStealthFieldStops.esp'
