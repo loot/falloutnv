@@ -1399,6 +1399,9 @@ plugins:
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### Encounters - Allies ######
+  - name: 'Lily(Fawkes|Armored)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
+
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
   - name: 'RobCo Certified.esm'
