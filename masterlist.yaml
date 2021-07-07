@@ -1594,6 +1594,30 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
 
+  - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NCR Rearmament ESP' ]
+        condition: 'many("NCR Rearmament v1.5( \(Lore\))?\.esp")'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Names
+      - Stats
+  - name: 'NCR Rearmament v1.5.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6AF919F2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 18
+  - name: 'NCR Rearmament v1.5 (Lore).esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3278C7B8
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 18
+
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
     req:
@@ -3875,8 +3899,6 @@ plugins:
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
 
-  - name: 'NCR Rearmament v1.5.esp'
-    inc: [ 'NCR Rearmament v1.5 (Lore).esp' ]
   - name: 'Nidaoutfitv1.esp'
     msg:
       - type: say
