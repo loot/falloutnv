@@ -1378,6 +1378,11 @@ plugins:
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
+  - name: 'Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - Merged Major DLCs.esp") and file("Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp")'
 
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
