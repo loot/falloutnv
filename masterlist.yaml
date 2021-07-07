@@ -3826,10 +3826,7 @@ plugins:
 
   - name: 'm110.esp'
     req: [ *NVSE ]
-  - name: 'Moddable Anti-Materiel Rifle.esp'
-    tag: [ WeaponMods ]
-  - name: 'Moddable Anti-Materiel Rifle 2.esp'
-    tag: [ WeaponMods ]
+
   - name: 'Moddable Unique Weps.esp'
     inc: [ 'Moddable Unique Weps.esm' ]
     tag: [ WeaponMods ]
