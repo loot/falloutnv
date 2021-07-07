@@ -1556,6 +1556,11 @@ plugins:
         itm: 2
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: 'Recharge (High|Low)\.esp'
+    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
+  - name: 'Recharge Low.esp'
+    inc: [ 'Recharge High.esp' ]
+
   - name: 'Mail Order Catalogs.esp'
     url:
       - 'https://www.nexusmods.com/newvegas/mods/39490/'
@@ -4283,11 +4288,7 @@ plugins:
 
   - name: 'Real Time Entry Skills.esp'
     req: [ *NVSE ]
-  - name: 'Recharge Low.esp'
-    inc: [ 'Recharge High.esp' ]
-    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
-  - name: 'Recharge High.esp'
-    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
+
   - name: 'RRDynamicXPonly.esp'
     req: [ *NVSE ]
   - name: 'Runner.esp'
