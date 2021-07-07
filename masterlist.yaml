@@ -1480,6 +1480,10 @@ plugins:
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
+    url:
+      - 'https://www.nexusmods.com/newvegas/mods/39490/'
+      - link: 'https://www.nexusmods.com/newvegas/mods/47712/'
+        name: 'Mail Order Catalogs - Updated'
     req: [ *NVSE ]
 
 ###### Gameplay - Skills & Perks ######
