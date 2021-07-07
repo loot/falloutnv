@@ -1492,6 +1492,9 @@ plugins:
       - crc: 0x23857A09
         util: 'FNVEdit v4.0.3g'
 
+  - name: 'Moddable Unique Weps.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35009/' ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
     url:
