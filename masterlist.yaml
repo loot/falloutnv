@@ -3249,8 +3249,7 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'NPCsUseAmmo.esp'
-    inc: [ 'NPCsUseAmmo-More Ammo.esp' ]
+
   - name: 'populatedcasino.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369' ]
     tag: [ AI.Packages ]
