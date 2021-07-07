@@ -1470,32 +1470,23 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0x9EAE96FF
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 48
         udr: 2
-    clean:
-      - crc: 0x499083D4
-        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-medium.esp'
     dirty:
       - <<: *quickClean
         crc: 0x39574E5A
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 47
         udr: 8
-    clean:
-      - crc: 0x9DCD85B4
-        util: 'FNVEdit v4.0.2f'
   - name: 'populatedcasino-light.esp'
     dirty:
       - <<: *quickClean
         crc: 0xFAB23559
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 46
         udr: 16
-    clean:
-      - crc: 0x72F47F2E
-        util: 'FNVEdit v4.0.2f'
 
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
