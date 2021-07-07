@@ -1447,6 +1447,11 @@ plugins:
 ###### Encounters - Enemies ######
   - name: 'Momod.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41361/' ]
+    tag:
+      - Deflst
+      - Delev
+      - Relations.Add
+      - Relev
 
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
