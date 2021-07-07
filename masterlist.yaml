@@ -1444,6 +1444,10 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+###### Encounters - Enemies ######
+  - name: 'Momod.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41361/' ]
+
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
