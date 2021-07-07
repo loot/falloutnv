@@ -1541,6 +1541,7 @@ plugins:
 
   - name: 'JillBSAA Multicolor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36511/' ]
+    msg: [ *requiresResourcesType3 ]
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
