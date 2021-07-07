@@ -1401,7 +1401,6 @@ plugins:
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
-    tag: [ NpcFaces ]
 
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
