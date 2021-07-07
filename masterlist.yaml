@@ -1399,6 +1399,25 @@ plugins:
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### Encounters - Allies ######
+  - name: 'Lily(Fawkes|Armored)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Fawkes Is Back ESP' ]
+        condition: 'many("Lily(Fawkes|Armored)\.esp")'
+  - name: 'LilyFawkes.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBDA8E6FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'LilyArmored.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B9A5AB6
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
   - name: 'RobCo Certified.esm'
@@ -4124,8 +4143,7 @@ plugins:
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
-  - name: 'LilyFawkes.esp'
-    inc: [ 'LilyArmored.esp' ]
+
   - name: 'My essential friends (animals).esp'
     tag:
       - Actors.ACBS
