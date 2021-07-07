@@ -2087,11 +2087,6 @@ plugins:
     inc: [ 'Moddable Unique Weps.esp' ]
     tag: [ WeaponMods ]
 
-  - name: 'MoMod.esm'
-    after: [ 'nVamp - Core.esm' ]
-    inc: [ 'monsterrach.esp' ]
-    tag: [ Relev ]
-
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
     tag:
