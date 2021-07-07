@@ -1494,6 +1494,10 @@ plugins:
 
   - name: 'Moddable Unique Weps.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35009/' ]
+    tag:
+      - Graphics
+      - Stats
+      - WeaponMods
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'Mail Order Catalogs.esp'
