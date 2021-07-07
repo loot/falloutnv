@@ -1374,6 +1374,10 @@ plugins:
   - name: 'Interior Lighting Overhaul-Darker.esp'
     msg: [ *obsolete ]
 
+###### AudioVisual - Sound & Music ######
+  - name: 'Improved Sound FX.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
+
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
