@@ -1377,6 +1377,7 @@ plugins:
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
+    tag: [ Sound ]
 
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
