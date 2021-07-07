@@ -1401,6 +1401,10 @@ plugins:
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Fawkes Is Back ESP' ]
+        condition: 'many("Lily(Fawkes|Armored)\.esp")'
 
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
