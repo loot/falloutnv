@@ -2131,9 +2131,6 @@ plugins:
     msg:
       - type: say
         content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
-  - name: 'Moddable Unique Weps.esm'
-    inc: [ 'Moddable Unique Weps.esp' ]
-    tag: [ WeaponMods ]
 
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
@@ -3837,9 +3834,6 @@ plugins:
   - name: 'm110.esp'
     req: [ *NVSE ]
 
-  - name: 'Moddable Unique Weps.esp'
-    inc: [ 'Moddable Unique Weps.esm' ]
-    tag: [ WeaponMods ]
   - name: 'OWB HQ Textures Fix.esp'
     tag: [ Graphics ]
   - name: 'PlasmaRifleAwesomefied.esp'
