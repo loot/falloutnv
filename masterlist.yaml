@@ -1596,6 +1596,11 @@ plugins:
 
   - name: 'Moddable Anti-Materiel Rifle 2.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36846/' ]
+    tag:
+      - Graphics
+      - Invent.Add
+      - Stats
+      - WeaponMods
 
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
