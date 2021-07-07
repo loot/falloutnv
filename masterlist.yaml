@@ -1388,6 +1388,11 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and file("Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp")'
+  - name: 'Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### Encounters - Allies ######
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
