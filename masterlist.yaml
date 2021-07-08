@@ -1254,6 +1254,7 @@ plugins:
 
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
+    tag: [ Names ]
 
 ###### AudioVisual - Lighting ######
   ### Interior Lighting Overhaul ###
