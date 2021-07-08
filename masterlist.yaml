@@ -1772,6 +1772,11 @@ plugins:
       - Deflst
       - Invent.Add
       - Text
+  # Patches #
+  - name: 'WMX-EVE-(NoDLC|NoGRA|AllDLC(Merged)?)\.esp'
+    tag:
+      - Graphics
+      - WeaponMods
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
