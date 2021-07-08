@@ -1709,6 +1709,11 @@ plugins:
       - Relev
       - Sound
       - Stats
+  - name: 'WMX-(DeadMoney|HonestHearts|OldWorldBlues|LonesomeRoad|GunRunnersArsenal)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-DLCMerged.esp**' ]
+        condition: 'file("WMX-DLCMerged.esp")'
   - name: 'WMX-DeadMoney.esp'
     tag:
       - Deflst
@@ -1741,6 +1746,11 @@ plugins:
       - Graphics
       - Scripts
       - Stats
+  - name: 'WMX-PreOrderPack(Classic|Mercenary|Tribal|Caravan)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-POPMerged.esp**' ]
+        condition: 'file("WMX-POPMerged.esp")'
   - name: 'WMX-PreOrderPackClassic.esp'
     tag:
       - Deflst
