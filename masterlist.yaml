@@ -1612,6 +1612,61 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35161/' ]
     tag: [ Graphics ]
 
+  ### WME - Weapon Mod Expansion ###
+  - name: '(Weapon Mod Expansion|WME - .*)\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576/' ]
+  - name: 'Weapon Mod Expansion.esm'
+    inc: [ *TTWv320 ]
+    tag: [ Names ]
+    clean:
+      - crc: 0x2CBA5914
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Weapon Mod Expansion.esp'
+    inc: [ 'WeaponModsExpanded.esp' ]
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x685F6957
+        util: 'FNVEdit v4.0.2f'
+  - name: 'WME - DLCs.esp'
+    inc: [ 'WME - DLCs Arenovalis.esp' ]
+  # Patches #
+  - name: 'WME - 00 Commando.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - Arwen Core.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - FOOK.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Sound
+      - Stats
+  - name: 'WME - that gun 223.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - that gun 44 mag.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  # Obsolete Plugins #
+  - name: 'WME - (Dead Money|Honest Hearts|Old World Blues).esm'
+    msg: [ *obsolete ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
@@ -2618,108 +2673,7 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.AIPackages
-  - name: 'Weapon Mod Expansion.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc: [ *TTWv320 ]
-    tag: [ Names ]
-    clean:
-      # v1.101
-      - crc: 0x2CBA5914
-        util: 'FNVEdit v4.0.2f'
-  - name: 'Weapon Mod Expansion.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc: [ 'WeaponModsExpanded.esp' ]
-    tag:
-      - Graphics
-      - Names
-      - Stats
-      - WeaponMods
-    clean:
-      - crc: 0x685F6957
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - Dead Money.esm'
-    after: [ 'nVamp - Core.esm' ]
-    msg: [ *obsolete ]
-  - name: 'WME - Honest Hearts.esm'
-    after: [ 'nVamp - Core.esm' ]
-    msg: [ *obsolete ]
-  - name: 'WME - Old World Blues.esm'
-    after: [ 'nVamp - Core.esm' ]
-    msg: [ *obsolete ]
-  - name: 'WME - GRA.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after: [ 'nVamp - Core.esm' ]
-    clean:
-      - crc: 0x9CEED987
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA Light.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after: [ 'nVamp - Core.esm' ]
-  - name: 'WME - DLCs.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    after: [ 'nVamp - Core.esm' ]
-    inc:
-      - 'WME - Dead Money.esm'
-      - 'WME - Honest Hearts.esm'
-      - 'WME - Old World Blues.esm'
-    clean:
-      - crc: 0x5092BAC5
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - DLCs.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc:
-      - 'WME - Dead Money.esp'
-      - 'WME - Honest Hearts.esp'
-      - 'WME - Old World Blues.esp'
-      - 'WME - DLCs Arenovalis.esp'
-    clean:
-      - crc: 0xD06CE844
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - DLCs Arenovalis.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    inc:
-      - 'WME - Dead Money.esp'
-      - 'WME - Honest Hearts.esp'
-      - 'WME - Old World Blues.esp'
-      - 'WME - DLCs.esp'
-    clean:
-      - crc: 0xDBCBAD04
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - All Weapons.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0x831711EA
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Arenovalis.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0x3BE2184E
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Complete.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0x5E6F4D4E
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Just Guns.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0xEC0FFB95
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Unique Integration.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0xD1938579
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Vendor Reform.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0xE7E8379C
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WME - GRA - Weapon Integration.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37576' ]
-    clean:
-      - crc: 0x14C4625C
-        util: 'FNVEdit v4.0.2f'
+
   - name: 'Clean-Deluxe FNV.esm'
     inc: [ 'Performance of the Gods.esp' ]
   - name: 'aHUD.esm'
@@ -4493,55 +4447,6 @@ plugins:
 
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
-
-  - name: 'WME - 00 Commando.esp'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-      - WeaponMods
-  - name: 'WME - Arwen Core.esp'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-      - WeaponMods
-  - name: 'WME - RH Ironsights.esp'
-    tag:
-      - Graphics
-      - WeaponMods
-  - name: 'WME - FOOK.esp'
-    tag:
-      - Delev
-      - Graphics
-      - Names
-      - Sound
-      - Stats
-  - name: 'WME Replacer - FOOK.esp'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-      - WeaponMods
-  - name: 'WME - that gun 223.esp'
-    tag:
-      - Names
-      - Stats
-      - WeaponMods
-  - name: 'WME - that gun 44 mag.esp'
-    tag:
-      - Names
-      - Stats
-      - WeaponMods
-  - name: 'WME - that gun 556.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Names
-      - Stats
-      - WeaponMods
-
-  - name: 'WME - FOOK - Dead Money.esp'
-    msg: [ *obsolete ]
 
   - name: 'WMX-EVE.esp'
     tag:
