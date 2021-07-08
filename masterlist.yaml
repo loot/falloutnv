@@ -1519,6 +1519,18 @@ plugins:
         itm: 46
         udr: 16
 
+###### Environment, Landscape & Flora ######
+  - name: 'Vurt''s WFO.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE0A866E9
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 32
+        udr: 4040
+  - name: 'Vurt''s WFO.esm'
+    msg: [ *obsolete ]
+
 ###### Gameplay ######
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
@@ -4574,25 +4586,6 @@ plugins:
     tag: [ NoMerge ]
   - name: 'NV GameStabilizerA9.esp'
     tag: [ NoMerge ]
-
-  - name: 'Vurt''s Trees & Grass.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    msg: [ *obsolete ]
-  - name: 'Vurt''s WFO.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    after: [ 'Flora Overhaul.esp' ]
-    msg: [ *obsolete ]
-  - name: 'Vurt''s WFO.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xE0A866E9
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 32
-        udr: 4040
-  - name: 'Vurt''s WFO [Lite].esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
-    inc: [ 'Vurt''s WFO.esp' ]
 
   - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
     tag: [ Names ]
