@@ -1380,8 +1380,10 @@ plugins:
 
   - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
     url: [ 'http://modsreloaded.com/simple-street-lights/' ]
-  - name: 'SimpleStreetLights.esp'
-    inc: [ 'SimpleStreetLights (Extra Lights).esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Simple Street Lights ESP' ]
+        condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
