@@ -1695,6 +1695,67 @@ plugins:
         crc: 0x92A9B6AD
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 6
+  # DLC Add-Ons #
+  - name: 'WMX-(DLCMerged|DeadMoney|HonestHearts|OldWorldBlues|LonesomeRoad|GunRunnersArsenal)\.esp'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Text
+      - WeaponMods
+  - name: 'WMX-DLCMerged.esp'
+    tag:
+      - Deflst
+      - Names
+      - Relev
+      - Sound
+      - Stats
+  - name: 'WMX-DeadMoney.esp'
+    tag:
+      - Deflst
+      - Names
+      - Relev
+  - name: 'WMX-HonestHearts.esp'
+    tag:
+      - Deflst
+      - Stats
+  - name: 'WMX-OldWorldBlues.esp'
+    tag:
+      - Deflst
+      - Names
+      - Sound
+      - Stats
+  - name: 'WMX-LonesomeRoad.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'WMX-GunRunnersArsenal.esp'
+    tag:
+      - Names
+      - Sound
+      - Stats
+  - name: 'WMX-(POPMerged|PreOrderPack(Classic|Mercenary|Tribal|Caravan))\.esp'
+    tag: [ WeaponMods ]
+  - name: 'WMX-POPMerged.esp'
+    tag:
+      - Deflst
+      - Graphics
+      - Scripts
+      - Stats
+  - name: 'WMX-PreOrderPackClassic.esp'
+    tag:
+      - Deflst
+      - Scripts
+  - name: 'WMX-PreOrderPackMercenary.esp'
+    tag: [ Graphics ]
+  - name: 'WMX-PreOrderPackTribal.esp'
+    tag:
+      - Graphics
+      - Stats
+  - name: 'WMX-PreOrderPackCaravan.esp'
+    tag:
+      - Deflst
+      - Graphics
+      - Stats
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
