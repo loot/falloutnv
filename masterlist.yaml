@@ -1620,7 +1620,7 @@ plugins:
     tag: [ Names ]
     clean:
       - crc: 0x2CBA5914
-        util: 'FNVEdit v4.0.2f'
+        util: 'FNVEdit v4.0.3g'
   - name: 'Weapon Mod Expansion.esp'
     tag:
       - Graphics
@@ -1629,7 +1629,7 @@ plugins:
       - WeaponMods
     clean:
       - crc: 0x685F6957
-        util: 'FNVEdit v4.0.2f'
+        util: 'FNVEdit v4.0.3g'
   - name: 'WME - DLCs.esp'
     inc: [ 'WME - DLCs Arenovalis.esp' ]
   # Patches #
