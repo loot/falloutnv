@@ -1622,7 +1622,6 @@ plugins:
       - crc: 0x2CBA5914
         util: 'FNVEdit v4.0.2f'
   - name: 'Weapon Mod Expansion.esp'
-    inc: [ 'WeaponModsExpanded.esp' ]
     tag:
       - Graphics
       - Names
