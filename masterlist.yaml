@@ -1666,6 +1666,10 @@ plugins:
   - name: 'WME - (Dead Money|Honest Hearts|Old World Blues).esm'
     msg: [ *obsolete ]
 
+  ### WMX - Weapon Mods Expanded ###
+  - name: '(WeaponModsExpanded|WMX-.*)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651/' ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
