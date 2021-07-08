@@ -1792,6 +1792,8 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**WMX-EVE-NoGRA.esp**' ]
         condition: 'file("WMX-EVE-NoGRA.esp") and not file("WMX-EVE-AllDLC(Merged)?\.esp")'
+  - name: 'WMX-ArenovalisTextures.esp'
+    tag: [ Graphics ]
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
