@@ -1690,6 +1690,11 @@ plugins:
       - Stats
       - Text
       - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x92A9B6AD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
