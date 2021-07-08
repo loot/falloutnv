@@ -1252,6 +1252,9 @@ plugins:
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
+  - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
+
 ###### AudioVisual - Lighting ######
   ### Interior Lighting Overhaul ###
   # Core #
