@@ -1425,7 +1425,6 @@ plugins:
 
   - name: 'Veronica1.0.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
-    tag: [ NpcFaces ]
 
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
