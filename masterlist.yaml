@@ -1252,6 +1252,12 @@ plugins:
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
+  - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
+    tag: [ Names ]
+  - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
+    msg: [ *obsolete ]
+
 ###### AudioVisual - Lighting ######
   ### Interior Lighting Overhaul ###
   # Core #
@@ -4206,28 +4212,7 @@ plugins:
 
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
-  - name: 'Sorter - Combined.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Combined - T3T Icon Compatch.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'Sorter - Combined - Aid Crafting.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'Sorter - Books.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Magazines.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Combined - Weighted.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Empty Consumables.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Empty Consumables - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'Inventory Sorter - Moddable Unique Weps.esp'
-    tag: [ Names ]
+
   - name: 'DrugsAreBadMKay-IS.esp'
     tag: [ Names ]
   - name: 'FeelingIrradiated-IS.esp'
