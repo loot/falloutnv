@@ -1669,6 +1669,15 @@ plugins:
   ### WMX - Weapon Mods Expanded ###
   - name: '(WeaponModsExpanded|WMX-.*)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39651/' ]
+  - name: 'WeaponModsExpanded.esp'
+    inc:
+      - *TTWv320
+      - 'jsawyer.esp'
+      - 'RH_IRONSIGHTS_NV.esm'
+      - 'Weapon Mod Expansion.esm'
+      - name: 'Weapon Retexture Project.esp'
+        display: 'Weapon Retexture Project v2.0+'
+      - 'WMIMNV.esp'
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
