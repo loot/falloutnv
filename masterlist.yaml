@@ -2178,30 +2178,6 @@ plugins:
       - 'WME - GRA Light.esm'
       - 'WME - GRA Light Arenovalis.esp'
       - 'WME - GRA Light.esp'
-      - 'WeaponModsExpanded.esp'
-      - 'WMX-EVE-AllDLC.esp'
-      - 'WMX-EVE-AllDLCMerged.esp'
-      - 'WMX-EVE-NoDLC.esp'
-      - 'WMX-EVE-NoGRA.esp'
-      - 'WMX-ModernWeapons.esp'
-      - 'WMX-ArenovalisTextures.esp'
-      - 'WMX-Arwen_NV_Realism.esp'
-      - 'WMX-EnergyWeaponsNoTrueIronSightsFix.esp'
-      - 'WMX-FOOKNV CP.esp'
-      - 'WMX-FOOKNV-DLCMerged CP.esp'
-      - 'WMX-FOOKNV-DLCs CP.esp'
-      - 'WMX-ShotgunCommando.esp'
-      - 'WMX-DeadMoney.esp'
-      - 'WMX-DLCMerged.esp'
-      - 'WMX-GunRunnersArsenal.esp'
-      - 'WMX-HonestHearts.esp'
-      - 'WMX-LonesomeRoad.esp'
-      - 'WMX-OldWorldBlues.esp'
-      - 'WMX-POPMerged.esp'
-      - 'WMX-PreOrderPackCaravan.esp'
-      - 'WMX-PreOrderPackClassic.esp'
-      - 'WMX-PreOrderPackMercenary.esp'
-      - 'WMX-PreOrderPackTribal.esp'
     tag:
       - Stats
       - Sound
@@ -3013,7 +2989,6 @@ plugins:
   - name: 'jsawyer.esp'
     url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
-      - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
     tag:
@@ -3044,7 +3019,6 @@ plugins:
   - name: 'JSawyer - CE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
     inc:
-      - 'WeaponModsExpanded.esp'
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
     tag:
@@ -4311,146 +4285,22 @@ plugins:
   - name: 'Weight_Rebalance_v10.esp.'
     tag: [ Stats ]
 
-  - name: 'WeaponModsExpanded.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    inc:
-      - *TTWv320
-      - 'RH_IRONSIGHTS_NV.esm'
-      - 'Weapon Mod Expansion.esm'
-      - 'Weapon Mod Expansion.esp'
-    tag:
-      - Actors.AIData
-      - Delev
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Stats
-      - WeaponMods
-    dirty:
-      # v1.1.4
-      - <<: *quickClean
-        crc: 0x92A9B6AD
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 6
-    clean:
-      - crc: 0xF959C3B2
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WMX-ArenovalisTextures.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Graphics
-      - NoMerge
-    clean:
-      # v1.2.4
-      - crc: 0x2BB62550
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WMX-DeadMoney.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-HonestHearts.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-OldWorldBlues.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-LonesomeRoad.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-GunRunnersArsenal.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-DLCMerged.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Sound
-      - Stats
-      - WeaponMods
-    clean:
-      # v1.0.2
-      - crc: 0xB8E04023
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WMX-POPMerged.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    clean:
-      # v1.0.2
-      - crc: 0x852FA7C2
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WMX-EVE-AllDLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Invent
-      - WeaponMods
-  - name: 'WMX-EVE-AllDLCMerged.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39651' ]
-    tag:
-      - Graphics
-      - Stats
-      - WeaponMods
-    clean:
-      - crc: 0x4256050B
-        util: 'FNVEdit v4.0.2f'
-  - name: 'WMXUE.esp'
-    inc:
-      - 'RH_IRONSIGHTS_NV.esm'
-      - 'Weapon Mod Expansion.esm'
-      - 'Weapon Mod Expansion.esp'
-      - 'WeaponModsExpanded.esp'
-    tag:
-      - Delev
-      - Invent
-      - WeaponMods
   - name: 'WMX - Sorted.esp'
     msg: [ *obsolete ]
   - name: 'WMXTemporaryPatch.esp'
     msg: [ *obsolete ]
 
-  - name: 'WMX-AWOP Patch.esp'
-    tag: [ WeaponMods ]
-  - name: 'WMX-AWOP-Overhaul.esp'
-    tag: [ WeaponMods ]
   - name: 'Frequency - WMX Patch.esp'
     tag: [ Graphics ]
-  - name: 'WMX-ShotgunCommando.esp'
-    inc: [ 'WMX-Arwen_NV_Realism.esp' ]
-  - name: 'WMXUE-PN.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - WeaponMods
+
   - name: 'Frequency - PN+WMX Patch.esp'
     tag: [ Graphics ]
 
-  - name: 'WMX-ModernWeapons.esp'
-    tag:
-      - Delev
-      - Invent
-      - Relev
   - name: 'ACS-WMXModernWeapons.esp'
     tag: [ Invent ]
 
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
-
-  - name: 'WMX-EVE.esp'
-    tag:
-      - Graphics
-      - WeaponMods
 
   - name: 'GRA Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44170' ]
