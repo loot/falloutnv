@@ -1808,6 +1808,9 @@ plugins:
         condition: 'file("WMX-EVE-NoGRA.esp") and not file("WMX-EVE-AllDLC(Merged)?\.esp")'
   - name: 'WMX-ArenovalisTextures.esp'
     tag: [ Graphics ]
+  # Obsolete Plugins #
+  - name: 'WMXUE.*\.esp'
+    msg: [ *obsolete ]
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
