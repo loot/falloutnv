@@ -1569,7 +1569,6 @@ plugins:
 
   - name: 'RH_IronSights_NV_Vanilla.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35161/' ]
-    inc: [ 'WeaponModsExpanded.esp' ]
     tag: [ Graphics ]
 
 ###### Gameplay - Economy & Item Balance ######
