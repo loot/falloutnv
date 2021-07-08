@@ -1614,8 +1614,11 @@ plugins:
 
   - name: 'VendorGameTimeRestock(NoNVSE)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37344/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Variable Merchant Restock ESP' ]
+        condition: 'many("VendorGameTimeRestock(NoNVSE)?\.esp")'
   - name: 'VendorGameTimeRestock.esp'
-    inc: [ 'VendorGameTimeRestockNoNVSE.esp' ]
     req: [ *NVSE ]
   - name: 'VendorGameTimeRestockNoDefaultRestock.esp'
     msg:
