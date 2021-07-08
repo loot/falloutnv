@@ -1423,6 +1423,12 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'Veronica1.0.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
+    tag:
+      - Actors.ACBS
+      - NpcFacesForceFullImport
+
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
@@ -3308,8 +3314,7 @@ plugins:
     tag: [ Eyes ]
   - name: 'Mikotos_REyescapesNV.esp'
     tag: [ Eyes ]
-  - name: 'Veronica1.0.esp'
-    tag: [ NpcFaces ]
+
   - name: 'Veronica_nerdy.esp'
     tag: [ NpcFaces ]
   - name: 'VeronicaOlder.esp'
