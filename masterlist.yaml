@@ -1678,6 +1678,18 @@ plugins:
       - name: 'Weapon Retexture Project.esp'
         display: 'Weapon Retexture Project v2.0+'
       - 'WMIMNV.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Deflst
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Names
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
