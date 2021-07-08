@@ -1255,6 +1255,8 @@ plugins:
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
     tag: [ Names ]
+  - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
+    msg: [ *obsolete ]
 
 ###### AudioVisual - Lighting ######
   ### Interior Lighting Overhaul ###
