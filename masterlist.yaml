@@ -1620,10 +1620,6 @@ plugins:
         condition: 'many("VendorGameTimeRestock(NoNVSE)?\.esp")'
   - name: 'VendorGameTimeRestock.esp'
     req: [ *NVSE ]
-  - name: 'VendorGameTimeRestockNoDefaultRestock.esp'
-    msg:
-      - type: say
-        content: 'Recommended to be used with one of the main .esp''s'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
