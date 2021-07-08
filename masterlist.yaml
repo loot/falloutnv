@@ -1431,7 +1431,6 @@ plugins:
 
   - name: 'Vyntage(Cass|Veronica)02\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36588/' ]
-    tag: [ NpcFaces ]
 
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
