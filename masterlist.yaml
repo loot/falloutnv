@@ -4206,28 +4206,7 @@ plugins:
 
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
-  - name: 'Sorter - Combined.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Combined - T3T Icon Compatch.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'Sorter - Combined - Aid Crafting.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'Sorter - Books.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Magazines.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Combined - Weighted.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Empty Consumables.esp'
-    tag: [ Names ]
-  - name: 'Sorter - Empty Consumables - Dead Money.esp'
-    tag: [ Names ]
-  - name: 'Inventory Sorter - Moddable Unique Weps.esp'
-    tag: [ Names ]
+
   - name: 'DrugsAreBadMKay-IS.esp'
     tag: [ Names ]
   - name: 'FeelingIrradiated-IS.esp'
