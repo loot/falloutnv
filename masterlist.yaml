@@ -1568,6 +1568,7 @@ plugins:
         itm: 2
 
   - name: 'RH_IronSights_NV_Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35161/' ]
     inc: [ 'WeaponModsExpanded.esp' ]
     tag: [ Graphics ]
 
