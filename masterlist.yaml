@@ -1766,6 +1766,12 @@ plugins:
       - Deflst
       - Graphics
       - Stats
+  # Optional Add-Ons #
+  - name: 'WMX-ModernWeapons.esp'
+    tag:
+      - Deflst
+      - Invent.Add
+      - Text
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
