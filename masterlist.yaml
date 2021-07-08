@@ -1429,6 +1429,16 @@ plugins:
       - Actors.ACBS
       - NpcFacesForceFullImport
 
+  - name: 'Vyntage(Cass|Veronica)02\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36588/' ]
+    tag:
+      - Actors.ACBS
+      - NpcFacesForceFullImport
+  - name: 'VyntageCass02.esp'
+    tag:
+      - Invent.Remove
+      - Stats
+
 ###### Encounters - Allies ######
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
@@ -3331,10 +3341,7 @@ plugins:
     tag: [ NpcFaces ]
   - name: 'Vulpes Inculta.esp'
     tag: [ NpcFaces ]
-  - name: 'VyntageCass02.esp'
-    tag: [ NpcFaces ]
-  - name: 'VyntageVeronica02.esp'
-    tag: [ NpcFaces ]
+
   - name: '1st Recon Revised.esp'
     tag: [ Invent ]
   - name: 'Doc Mitchell''s House Owner.esp'
