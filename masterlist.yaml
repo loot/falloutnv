@@ -1378,6 +1378,8 @@ plugins:
   - name: 'Interior Lighting Overhaul-Darker.esp'
     msg: [ *obsolete ]
 
+  - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
+    url: [ 'http://modsreloaded.com/simple-street-lights/' ]
   - name: 'SimpleStreetLights.esp'
     inc: [ 'SimpleStreetLights (Extra Lights).esp' ]
 
