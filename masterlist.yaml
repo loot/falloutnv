@@ -1567,6 +1567,10 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'RH_IronSights_NV_Vanilla.esp'
+    inc: [ 'WeaponModsExpanded.esp' ]
+    tag: [ Graphics ]
+
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
@@ -4472,9 +4476,7 @@ plugins:
 
   - name: 'ScientistPackWMX.esp'
     inc: [ 'ScientistPack.esp' ]
-  - name: 'RH_IronSights_NV_Vanilla.esp'
-    inc: [ 'WeaponModsExpanded.esp' ]
-    tag: [ Graphics ]
+
   - name: 'WME - 00 Commando.esp'
     tag:
       - Graphics
