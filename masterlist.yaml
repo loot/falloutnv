@@ -3315,8 +3315,6 @@ plugins:
   - name: 'Mikotos_REyescapesNV.esp'
     tag: [ Eyes ]
 
-  - name: 'Veronica_nerdy.esp'
-    tag: [ NpcFaces ]
   - name: 'VeronicaOlder.esp'
     tag: [ NpcFaces ]
   - name: 'Vulpes Inculta.esp'
