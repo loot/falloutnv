@@ -1612,6 +1612,8 @@ plugins:
         name: 'Mail Order Catalogs - Updated'
     req: [ *NVSE ]
 
+  - name: 'VendorGameTimeRestock(NoNVSE)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37344/' ]
   - name: 'VendorGameTimeRestock.esp'
     inc: [ 'VendorGameTimeRestockNoNVSE.esp' ]
     req: [ *NVSE ]
