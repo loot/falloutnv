@@ -1612,6 +1612,15 @@ plugins:
         name: 'Mail Order Catalogs - Updated'
     req: [ *NVSE ]
 
+  - name: 'VendorGameTimeRestock(NoNVSE)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37344/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Variable Merchant Restock ESP' ]
+        condition: 'many("VendorGameTimeRestock(NoNVSE)?\.esp")'
+  - name: 'VendorGameTimeRestock.esp'
+    req: [ *NVSE ]
+
 ###### Gameplay - Skills & Perks ######
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
@@ -3352,13 +3361,7 @@ plugins:
       - Actors.AIPackages
       - Delev
       - Relev
-  - name: 'VendorGameTimeRestock.esp'
-    inc: [ 'VendorGameTimeRestockNoNVSE.esp' ]
-    req: [ *NVSE ]
-  - name: 'VendorGameTimeRestockNoDefaultRestock.esp'
-    msg:
-      - type: say
-        content: 'Recommended to be used with one of the main .esp''s'
+
   - name: 'IIWR 2.0.3.esp'
     msg: [ *obsolete ]
   - name: 'IIWR 2.0.7.esp'
