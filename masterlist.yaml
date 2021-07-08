@@ -1777,6 +1777,21 @@ plugins:
     tag:
       - Graphics
       - WeaponMods
+  - name: 'WMX-EVE-(NoDLC|NoGRA|AllDLC)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-AllDLCMerged.esp**' ]
+        condition: 'file("WMX-EVE-AllDLCMerged.esp")'
+  - name: 'WMX-EVE-(NoDLC|NoGRA)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-AllDLC.esp**' ]
+        condition: 'file("WMX-EVE-AllDLC.esp") and not file("WMX-EVE-AllDLCMerged.esp")'
+  - name: 'WMX-EVE-NoDLC.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-NoGRA.esp**' ]
+        condition: 'file("WMX-EVE-NoGRA.esp") and not file("WMX-EVE-AllDLC(Merged)?\.esp")'
 
 ###### Gameplay - Economy & Item Balance ######
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
