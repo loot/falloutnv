@@ -1378,6 +1378,9 @@ plugins:
   - name: 'Interior Lighting Overhaul-Darker.esp'
     msg: [ *obsolete ]
 
+  - name: 'SimpleStreetLights.esp'
+    inc: [ 'SimpleStreetLights (Extra Lights).esp' ]
+
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
@@ -4576,8 +4579,7 @@ plugins:
     tag: [ NoMerge ]
   - name: 'NV GameStabilizerA9.esp'
     tag: [ NoMerge ]
-  - name: 'SimpleStreetLights.esp'
-    inc: [ 'SimpleStreetLights (Extra Lights).esp' ]
+
   - name: 'Vurt''s Trees & Grass.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856' ]
     msg: [ *obsolete ]
