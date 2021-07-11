@@ -433,6 +433,8 @@ common:
         text: 'Richiede risorse (ad es. mesh, texture; non plugin) da %1%.'
       - lang: ja
         text: '%1%のリソース(プラグインではなくメッシュやテクスチャなど)が必要です。'
+      - lang: ko
+        text: '%1%의 리소스(플러그인이 아닌, 메쉬 및 질감 등)가 필요합니다.'
       - lang: pt_BR
         text: 'Requer recursos (ex: meshes, texturas; não plugins) vindos de %1%.'
       - lang: pt_PT
