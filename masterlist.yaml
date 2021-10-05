@@ -460,10 +460,6 @@ prelude:
           text: 'Потрібні ресурси (наприклад: меші, текстури; не плагіни) від %1%.'
         - lang: zh_CN
           text: '需要%1%的资源(如网格，纹理;非插件)。'
-    - &requiresResourcesType3
-      <<: *requiresResources
-      type: say
-      subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
 
     - &requiresX
       type: warn
@@ -602,42 +598,6 @@ prelude:
           text: 'Використовуйте версію %1%.'
         - lang: zh_CN
           text: '使用%1%版本。'
-    - &useVersionDeadMoney
-      <<: *useVersion
-      subs: [ 'Dead Money' ]
-      condition: 'active("DeadMoney.esm")'
-    - &useVersionHonestHearts
-      <<: *useVersion
-      subs: [ 'Honest Hearts' ]
-      condition: 'active("HonestHearts.esm")'
-    - &useVersionOldWorldBlues
-      <<: *useVersion
-      subs: [ 'Old World Blues' ]
-      condition: 'active("OldWorldBlues.esm")'
-    - &useVersionLonesomeRoad
-      <<: *useVersion
-      subs: [ 'Lonesome Road' ]
-      condition: 'active("LonesomeRoad.esm")'
-    - &useVersionClassicPack
-      <<: *useVersion
-      subs: [ 'Classic Pack' ]
-      condition: 'active("ClassicPack.esm")'
-    - &useVersionMercenaryPack
-      <<: *useVersion
-      subs: [ 'Mercenary Pack' ]
-      condition: 'active("MercenaryPack.esm")'
-    - &useVersionTribalPack
-      <<: *useVersion
-      subs: [ 'Tribal Pack' ]
-      condition: 'active("TribalPack.esm")'
-    - &useVersionCaravanPack
-      <<: *useVersion
-      subs: [ 'Caravan Pack' ]
-      condition: 'active("CaravanPack.esm")'
-    - &useVersionGunRunnersArsenal
-      <<: *useVersion
-      subs: [ 'Gun Runners Arsenal' ]
-      condition: 'active("GunRunnersArsenal.esm")'
 
     - &useVersionNon
       type: error
@@ -672,42 +632,6 @@ prelude:
           text: 'Використовуйте не-%1% версію.'
         - lang: zh_CN
           text: '使用%1%以外的版本。'
-    - &useVersionNonDeadMoney
-      <<: *useVersionNon
-      subs: [ 'Dead Money' ]
-      condition: 'not active("DeadMoney.esm")'
-    - &useVersionNonHonestHearts
-      <<: *useVersionNon
-      subs: [ 'Honest Hearts' ]
-      condition: 'not active("HonestHearts.esm")'
-    - &useVersionNonOldWorldBlues
-      <<: *useVersionNon
-      subs: [ 'Old World Blues' ]
-      condition: 'not active("OldWorldBlues.esm")'
-    - &useVersionNonLonesomeRoad
-      <<: *useVersionNon
-      subs: [ 'Lonesome Road' ]
-      condition: 'not active("LonesomeRoad.esm")'
-    - &useVersionNonClassicPack
-      <<: *useVersionNon
-      subs: [ 'Classic Pack' ]
-      condition: 'not active("ClassicPack.esm")'
-    - &useVersionNonMercenaryPack
-      <<: *useVersionNon
-      subs: [ 'Mercenary Pack' ]
-      condition: 'not active("MercenaryPack.esm")'
-    - &useVersionNonTribalPack
-      <<: *useVersionNon
-      subs: [ 'Tribal Pack' ]
-      condition: 'not active("TribalPack.esm")'
-    - &useVersionNonCaravanPack
-      <<: *useVersionNon
-      subs: [ 'Caravan Pack' ]
-      condition: 'not active("CaravanPack.esm")'
-    - &useVersionNonGunRunnersArsenal
-      <<: *useVersionNon
-      subs: [ 'Gun Runners Arsenal' ]
-      condition: 'not active("GunRunnersArsenal.esm")'
 
     - &versionXIncY
       type: error
@@ -945,6 +869,89 @@ common:
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.2+'
     condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+# Sub-Anchors
+  # &requiresResources
+  - &requiresResourcesType3
+    <<: *requiresResources
+    type: say
+    subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+
+  # &useVersion
+  - &useVersionDeadMoney
+    <<: *useVersion
+    subs: [ 'Dead Money' ]
+    condition: 'active("DeadMoney.esm")'
+  - &useVersionHonestHearts
+    <<: *useVersion
+    subs: [ 'Honest Hearts' ]
+    condition: 'active("HonestHearts.esm")'
+  - &useVersionOldWorldBlues
+    <<: *useVersion
+    subs: [ 'Old World Blues' ]
+    condition: 'active("OldWorldBlues.esm")'
+  - &useVersionLonesomeRoad
+    <<: *useVersion
+    subs: [ 'Lonesome Road' ]
+    condition: 'active("LonesomeRoad.esm")'
+  - &useVersionClassicPack
+    <<: *useVersion
+    subs: [ 'Classic Pack' ]
+    condition: 'active("ClassicPack.esm")'
+  - &useVersionMercenaryPack
+    <<: *useVersion
+    subs: [ 'Mercenary Pack' ]
+    condition: 'active("MercenaryPack.esm")'
+  - &useVersionTribalPack
+    <<: *useVersion
+    subs: [ 'Tribal Pack' ]
+    condition: 'active("TribalPack.esm")'
+  - &useVersionCaravanPack
+    <<: *useVersion
+    subs: [ 'Caravan Pack' ]
+    condition: 'active("CaravanPack.esm")'
+  - &useVersionGunRunnersArsenal
+    <<: *useVersion
+    subs: [ 'Gun Runners Arsenal' ]
+    condition: 'active("GunRunnersArsenal.esm")'
+
+  # &useVersionNon
+  - &useVersionNonDeadMoney
+    <<: *useVersionNon
+    subs: [ 'Dead Money' ]
+    condition: 'not active("DeadMoney.esm")'
+  - &useVersionNonHonestHearts
+    <<: *useVersionNon
+    subs: [ 'Honest Hearts' ]
+    condition: 'not active("HonestHearts.esm")'
+  - &useVersionNonOldWorldBlues
+    <<: *useVersionNon
+    subs: [ 'Old World Blues' ]
+    condition: 'not active("OldWorldBlues.esm")'
+  - &useVersionNonLonesomeRoad
+    <<: *useVersionNon
+    subs: [ 'Lonesome Road' ]
+    condition: 'not active("LonesomeRoad.esm")'
+  - &useVersionNonClassicPack
+    <<: *useVersionNon
+    subs: [ 'Classic Pack' ]
+    condition: 'not active("ClassicPack.esm")'
+  - &useVersionNonMercenaryPack
+    <<: *useVersionNon
+    subs: [ 'Mercenary Pack' ]
+    condition: 'not active("MercenaryPack.esm")'
+  - &useVersionNonTribalPack
+    <<: *useVersionNon
+    subs: [ 'Tribal Pack' ]
+    condition: 'not active("TribalPack.esm")'
+  - &useVersionNonCaravanPack
+    <<: *useVersionNon
+    subs: [ 'Caravan Pack' ]
+    condition: 'not active("CaravanPack.esm")'
+  - &useVersionNonGunRunnersArsenal
+    <<: *useVersionNon
+    subs: [ 'Gun Runners Arsenal' ]
+    condition: 'not active("GunRunnersArsenal.esm")'
 
 bash_tags:
   - 'Actors.ACBS'
