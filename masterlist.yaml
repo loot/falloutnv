@@ -3,13 +3,6 @@
 # data that gets re-used.
 prelude:
   common:
-  # Condition Anchors
-    - &condFileTTW
-      file("TaleOfTwoWastelands.esm")
-
-    - &condNotFileTTW
-      not file("TaleOfTwoWastelands.esm")
-
   # Message Anchors
     - &alreadyInX
       type: error
@@ -856,6 +849,13 @@ prelude:
       condition: 'file("NVSE/Plugins/([^\.]+\.dll)") and not file("../nvse_loader.exe")'
 
 common:
+# Condition Anchors
+  - &condFileTTW
+    file("TaleOfTwoWastelands.esm")
+
+  - &condNotFileTTW
+    not file("TaleOfTwoWastelands.esm")
+
 # File Anchors
   - &NVSE
     name: '../nvse_1_4.dll'
