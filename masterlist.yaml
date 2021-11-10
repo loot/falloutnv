@@ -1494,12 +1494,10 @@ plugins:
       - 'EVE FNV - NO DLC.esp'
       - 'EVE FNV - NO GRA.esp'
       - 'Weapon Mod Expansion.esm'
-    msg:
-      - type: say
-        content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
     tag:
       - Sound
       - Stats
+    # Do not clean
 
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
