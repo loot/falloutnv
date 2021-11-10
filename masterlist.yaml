@@ -1495,8 +1495,11 @@ plugins:
       - 'EVE FNV - NO GRA.esp'
       - 'Weapon Mod Expansion.esm'
     tag:
+      - Destructible
+      - Graphics
       - Sound
       - Stats
+      - WeaponMods
     # Do not clean
 
 ###### AudioVisual - Sound & Music ######
