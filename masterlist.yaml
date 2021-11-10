@@ -1482,7 +1482,7 @@ plugins:
 
 ###### AudioVisual - Models & Textures ######
   - name: 'WMIMNV.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65052/' ]
     inc:
       - *TTWv320
       - 'EVE FNV - ALL DLC.esp'
@@ -1491,8 +1491,8 @@ plugins:
       - 'Weapon Mod Expansion.esm'
       - 'Weapon Mod Expansion.esp'
       - 'WME - DLCs.esm'
-      - 'WME - DLCs Arenovalis.esp'
       - 'WME - DLCs.esp'
+      - 'WME - DLCs Arenovalis.esp'
       - 'WME - GRA.esm'
       - 'WME - GRA - All Weapons.esp'
       - 'WME - GRA - Arenovalis.esp'
@@ -1502,14 +1502,14 @@ plugins:
       - 'WME - GRA - Vendor Reform.esp'
       - 'WME - GRA - Weapon Integration.esp'
       - 'WME - GRA Light.esm'
-      - 'WME - GRA Light Arenovalis.esp'
       - 'WME - GRA Light.esp'
-    tag:
-      - Stats
-      - Sound
+      - 'WME - GRA Light Arenovalis.esp'
     msg:
       - type: say
         content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
+    tag:
+      - Sound
+      - Stats
 
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
