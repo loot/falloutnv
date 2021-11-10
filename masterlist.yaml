@@ -1481,6 +1481,35 @@ plugins:
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
 ###### AudioVisual - Models & Textures ######
+  - name: 'WMIMNV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
+    inc:
+      - *TTWv320
+      - 'EVE FNV - ALL DLC.esp'
+      - 'EVE FNV - NO DLC.esp'
+      - 'EVE FNV - NO GRA.esp'
+      - 'Weapon Mod Expansion.esm'
+      - 'Weapon Mod Expansion.esp'
+      - 'WME - DLCs.esm'
+      - 'WME - DLCs Arenovalis.esp'
+      - 'WME - DLCs.esp'
+      - 'WME - GRA.esm'
+      - 'WME - GRA - All Weapons.esp'
+      - 'WME - GRA - Arenovalis.esp'
+      - 'WME - GRA - Complete.esp'
+      - 'WME - GRA - Just Guns.esp'
+      - 'WME - GRA - Unique Integration.esp'
+      - 'WME - GRA - Vendor Reform.esp'
+      - 'WME - GRA - Weapon Integration.esp'
+      - 'WME - GRA Light.esm'
+      - 'WME - GRA Light Arenovalis.esp'
+      - 'WME - GRA Light.esp'
+    tag:
+      - Stats
+      - Sound
+    msg:
+      - type: say
+        content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
 
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
@@ -2378,35 +2407,7 @@ plugins:
     msg:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
-  - name: 'WMIMNV.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/65052' ]
-    inc:
-      - *TTWv320
-      - 'EVE FNV - ALL DLC.esp'
-      - 'EVE FNV - NO DLC.esp'
-      - 'EVE FNV - NO GRA.esp'
-      - 'Weapon Mod Expansion.esm'
-      - 'Weapon Mod Expansion.esp'
-      - 'WME - DLCs.esm'
-      - 'WME - DLCs Arenovalis.esp'
-      - 'WME - DLCs.esp'
-      - 'WME - GRA.esm'
-      - 'WME - GRA - All Weapons.esp'
-      - 'WME - GRA - Arenovalis.esp'
-      - 'WME - GRA - Complete.esp'
-      - 'WME - GRA - Just Guns.esp'
-      - 'WME - GRA - Unique Integration.esp'
-      - 'WME - GRA - Vendor Reform.esp'
-      - 'WME - GRA - Weapon Integration.esp'
-      - 'WME - GRA Light.esm'
-      - 'WME - GRA Light Arenovalis.esp'
-      - 'WME - GRA Light.esp'
-    tag:
-      - Stats
-      - Sound
-    msg:
-      - type: say
-        content: 'Do not clean, reverts forms to vanilla which other mods edit which is required for the 771 mesh changes to function correctly.'
+
   - name: 'ProjectBrazil.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
     msg: [ *obsolete ]
