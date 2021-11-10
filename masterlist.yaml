@@ -1480,6 +1480,8 @@ plugins:
         subs: [ 'Simple Street Lights ESP' ]
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
+###### AudioVisual - Models & Textures ######
+
 ###### AudioVisual - Sound & Music ######
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
