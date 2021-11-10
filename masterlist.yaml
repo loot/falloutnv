@@ -1482,7 +1482,11 @@ plugins:
 
 ###### AudioVisual - Models & Textures ######
   - name: 'WMIMNV.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/65052/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
+        name: 'Weapon Mesh Improvement Mod'
+      - link: 'https://github.com/VivaNewVegas/Viva-New-Vegas-Patch-Emporium/blob/main/WMIM%20ESP%20Replacer.7z'
+        name: 'Viva New Vegas WMIM Replacer'
     inc:
       - *TTWv320
       - 'EVE FNV - ALL DLC.esp'
