@@ -1090,7 +1090,7 @@ groups:
 
 plugins:
   - name: 'DeadMoney.esm'
-    url: [ 'https://store.steampowered.com/app/72730/']
+    url: [ 'https://store.steampowered.com/app/72730/' ]
     group: *dlcGroup
     tag:
       - Actors.Stats
@@ -1108,7 +1108,7 @@ plugins:
       - crc: 0x9AB468E5
         util: 'FNVEdit v4.0.4'
   - name: 'HonestHearts.esm'
-    url: [ 'https://store.steampowered.com/app/72740/']
+    url: [ 'https://store.steampowered.com/app/72740/' ]
     group: *dlcGroup
     after: [ 'DeadMoney.esm' ]
     tag:
@@ -1126,7 +1126,7 @@ plugins:
       - crc: 0xD1AB07F8
         util: 'FNVEdit v4.0.4'
   - name: 'OldWorldBlues.esm'
-    url: [ 'https://store.steampowered.com/app/72750/']
+    url: [ 'https://store.steampowered.com/app/72750/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1146,7 +1146,7 @@ plugins:
       - crc: 0x5B5B5B75
         util: 'FNVEdit v4.0.4'
   - name: 'LonesomeRoad.esm'
-    url: [ 'https://store.steampowered.com/app/72760/']
+    url: [ 'https://store.steampowered.com/app/72760/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1163,7 +1163,7 @@ plugins:
       - crc: 0x08010967
         util: 'FNVEdit v4.0.4'
   - name: 'GunRunnersArsenal.esm'
-    url: [ 'https://store.steampowered.com/app/72840/']
+    url: [ 'https://store.steampowered.com/app/72840/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1183,7 +1183,7 @@ plugins:
       - crc: 0x12426FF2
         util: 'FNVEdit v4.0.4'
   - name: 'ClassicPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1199,7 +1199,7 @@ plugins:
       - crc: 0x41F95714
         util: 'FNVEdit v4.0.4'
   - name: 'MercenaryPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1214,7 +1214,7 @@ plugins:
       - crc: 0xD377B2B9
         util: 'FNVEdit v4.0.4'
   - name: 'TribalPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1230,7 +1230,7 @@ plugins:
       - crc: 0x0DE09873
         util: 'FNVEdit v4.0.4'
   - name: 'CaravanPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
