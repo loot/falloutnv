@@ -1090,88 +1090,83 @@ groups:
 
 plugins:
   - name: 'DeadMoney.esm'
-    url: [ 'https://store.steampowered.com/app/72730/']
+    url: [ 'https://store.steampowered.com/app/72730/' ]
     group: *dlcGroup
     tag:
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+      - Sound
       - Stats
     dirty:
-      # version: 1.4.0.525
       - <<: *quickClean
         crc: 0xD70F165B
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 403
         udr: 51
     clean:
-      # version: 1.4.0.525
       - crc: 0x9AB468E5
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'HonestHearts.esm'
-    url: [ 'https://store.steampowered.com/app/72740/']
+    url: [ 'https://store.steampowered.com/app/72740/' ]
     group: *dlcGroup
     after: [ 'DeadMoney.esm' ]
     tag:
       - C.Light
       - Graphics
-      - Names
       - Sound
     dirty:
-      # version: 1.4.0.525
       - <<: *quickClean
         crc: 0x2352B189
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 121
         udr: 10
     clean:
-      # version: 1.4.0.525
       - crc: 0xD1AB07F8
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'OldWorldBlues.esm'
-    url: [ 'https://store.steampowered.com/app/72750/']
+    url: [ 'https://store.steampowered.com/app/72750/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
     tag:
-      - Invent
-      - Names
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
       - Relev
       - Sound
       - Stats
     dirty:
-      # version: 1.4.0.525
       - <<: *quickClean
         crc: 0x7F8F8225
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 124
     clean:
-      # version: 1.4.0.525
       - crc: 0x5B5B5B75
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'LonesomeRoad.esm'
-    url: [ 'https://store.steampowered.com/app/72760/']
+    url: [ 'https://store.steampowered.com/app/72760/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
-    tag: [ Stats ]
+    tag:
+      - EffectStats
+      - Sound
+      - Stats
     dirty:
-      # version: 1.4.0.525
       - <<: *quickClean
         crc: 0x30073D50
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 243
         udr: 6
     clean:
-      # version: 1.4.0.525
       - crc: 0x08010967
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'GunRunnersArsenal.esm'
-    url: [ 'https://store.steampowered.com/app/72840/']
+    url: [ 'https://store.steampowered.com/app/72840/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1181,19 +1176,18 @@ plugins:
     tag:
       - Destructible
       - Graphics
-      - Invent
+      - Invent.Add
+      - Sound
     dirty:
-      # version: 1.4.0.525
       - <<: *quickClean
         crc: 0x0AAC938D
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 97
     clean:
-      # version: 1.4.0.525
       - crc: 0x12426FF2
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'ClassicPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1206,11 +1200,10 @@ plugins:
       - name: 'CaravanPack.esm'
         condition: *condFileTTW
     clean:
-      # version: 1.4.0.525
       - crc: 0x41F95714
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'MercenaryPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1222,11 +1215,10 @@ plugins:
       - name: 'Zeta.esm'
         condition: *condFileTTW
     clean:
-      # version: 1.4.0.525
       - crc: 0xD377B2B9
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'TribalPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1239,11 +1231,10 @@ plugins:
       - name: 'Zeta.esm'
         condition: *condFileTTW
     clean:
-      # version: 1.4.0.525
       - crc: 0x0DE09873
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
   - name: 'CaravanPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/']
+    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -1260,9 +1251,8 @@ plugins:
       - name: 'Zeta.esm'
         condition: *condFileTTW
     clean:
-      # version: 1.4.0.525
       - crc: 0x228740D1
-        util: 'FNVEdit v4.0.3g'
+        util: 'FNVEdit v4.0.4'
 
 ###### Unofficial Patches ######
   - name: '(Mission Mojave - Ultimate Edition|MM-.*|MMUE-.*|MMUE .*)\.esp'
