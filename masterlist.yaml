@@ -1093,10 +1093,10 @@ plugins:
     url: [ 'https://store.steampowered.com/app/72730/' ]
     group: *dlcGroup
     tag:
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+      - Sound
       - Stats
     dirty:
       - <<: *quickClean
@@ -1114,7 +1114,6 @@ plugins:
     tag:
       - C.Light
       - Graphics
-      - Names
       - Sound
     dirty:
       - <<: *quickClean
@@ -1132,8 +1131,9 @@ plugins:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
     tag:
-      - Invent
-      - Names
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
       - Relev
       - Sound
       - Stats
@@ -1152,7 +1152,10 @@ plugins:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
       - 'OldWorldBlues.esm'
-    tag: [ Stats ]
+    tag:
+      - EffectStats
+      - Sound
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x30073D50
@@ -1173,7 +1176,8 @@ plugins:
     tag:
       - Destructible
       - Graphics
-      - Invent
+      - Invent.Add
+      - Sound
     dirty:
       - <<: *quickClean
         crc: 0x0AAC938D
