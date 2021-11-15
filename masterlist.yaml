@@ -1291,6 +1291,11 @@ plugins:
       - Scripts
       - Sound
       - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xF79B7896
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     group: *fixesGroup
     tag:
@@ -1304,6 +1309,11 @@ plugins:
       - Invent
       - NpcFaces
       - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x808524D0
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     group: *fixesGroup
     msg:
@@ -1316,8 +1326,35 @@ plugins:
     after: [ 'YUP - Honest Hearts.esm' ]
   - name: 'YUP - (Lonesome Road|Gun Runners Arsenal)\.esm'
     after: [ 'YUP - Old World Blues.esm' ]
+  - name: 'YUP - Base Game.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x30A9F611
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'YUP - Dead Money.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x40F11472
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'YUP - Honest Hearts.esm'
+    clean:
+      - crc: 0x09AC9E86
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - Old World Blues.esm'
+    clean:
+      - crc: 0x913C266F
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - Lonesome Road.esm'
+    clean:
+      - crc: 0xA92FB59A
+        util: 'FNVEdit v4.0.4'
   - name: 'YUP - Gun Runners Arsenal.esm'
     after: [ 'YUP - Lonesome Road.esm' ]
+    clean:
+      - crc: 0x87DAF978
+        util: 'FNVEdit v4.0.4'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
     msg:
@@ -1339,6 +1376,11 @@ plugins:
       - NPC.Class
       - NPC.Race
       - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x8F9361C3
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
 
 ###### AudioVisual ######
   - name: '357retex.esp'
