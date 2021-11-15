@@ -2349,12 +2349,6 @@ plugins:
       - *MCM
     inc: [ *TTWv320 ]
 
-  - name: 'Unofficial Patch Plus( - Addendum)\.esp'
-    url: ['https://www.nexusmods.com/newvegas/mods/62953/']
-    msg:
-      - <<: *useInstead
-        subs: [ '[Unofficial Patch NVSE Plus](https://www.nexusmods.com/newvegas/mods/71239/)' ]
-
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
     inc: [ *TTWv320 ]
