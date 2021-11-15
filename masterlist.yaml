@@ -1255,8 +1255,11 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
 ###### Unofficial Patches ######
+  - name: 'YUP .*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/51664/'
+        name: 'Yukichigai Unofficial Patch - YUP'
   - name: 'YUP - Base Game + All DLC.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *fixesGroup
     inc: [ *TTWv320 ]
     tag:
@@ -1287,7 +1290,6 @@ plugins:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *addonsPatchesGroup
     tag:
       - Actors.ACBS
@@ -1303,7 +1305,6 @@ plugins:
   - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
     inc: [ *TTWv320 ]
   - name: 'YUP - NPC Fixes (Base Game).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
     group: *fixesGroup
     tag:
       - Actors.ACBS
