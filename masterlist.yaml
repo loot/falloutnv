@@ -1286,9 +1286,6 @@ plugins:
       - Scripts
       - Sound
       - Stats
-    msg:
-      - type: say
-        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     group: *addonsPatchesGroup
     tag:
