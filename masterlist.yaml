@@ -1299,7 +1299,7 @@ plugins:
       - Invent
       - NpcFaces
       - Scripts
-  - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
+  - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     inc: [ *TTWv320 ]
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
