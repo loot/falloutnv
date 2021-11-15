@@ -1310,6 +1310,14 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**YUP - Base Game + All DLC.esm**' ]
         condition: 'active("YUP - Base Game + All DLC.esm")'
+  - name: 'YUP - (Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Dead Money.esm' ]
+  - name: 'YUP - (Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Honest Hearts.esm' ]
+  - name: 'YUP - (Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Old World Blues.esm' ]
+  - name: 'YUP - Gun Runners Arsenal.esm'
+    after: [ 'YUP - Lonesome Road.esm' ]
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
     msg:
