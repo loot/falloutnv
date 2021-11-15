@@ -1271,26 +1271,42 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.Anims
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
       - Actors.Stats
+      - Actors.Voice
       - C.Acoustic
+      - C.Encounter
+      - C.Light
       - C.Owner
+      - C.Regions
       - C.Water
+      - Creatures.Type
       - Deflst
       - Delev
       - Destructible
-      - Eyes
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
       - Factions
       - Graphics
-      - Hair
-      - Invent
+      - Invent.Add
+      - Invent.Remove
       - Names
-      - Relations
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - Relations.Add
       - Relev
       - Scripts
       - Sound
+      - SpellStats
       - Stats
+      - Text
+      - WeaponMods
     dirty:
       - <<: *quickClean
         crc: 0xF79B7896
