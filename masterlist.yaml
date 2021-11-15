@@ -1287,7 +1287,7 @@ plugins:
       - Sound
       - Stats
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
-    group: *addonsPatchesGroup
+    group: *fixesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1300,6 +1300,7 @@ plugins:
       - NpcFaces
       - Scripts
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    group: *fixesGroup
     inc: [ *TTWv320 ]
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
