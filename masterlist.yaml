@@ -1302,8 +1302,16 @@ plugins:
       - Scripts
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     group: *fixesGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - Base Game + All DLC.esm**' ]
+        condition: 'active("YUP - Base Game + All DLC.esm")'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - NPC Fixes (Base Game + All DLC).esp**' ]
+        condition: 'active("YUP - NPC Fixes (Base Game + All DLC).esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
