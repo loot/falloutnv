@@ -1318,12 +1318,23 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
       - Actors.Stats
-      - Delev
+      - Actors.Voice
       - Factions
-      - Invent
-      - NpcFaces
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
       - Scripts
     dirty:
       - <<: *quickClean
