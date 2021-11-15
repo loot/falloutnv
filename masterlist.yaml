@@ -1255,30 +1255,6 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
 ###### Unofficial Patches ######
-  - name: '(Mission Mojave - Ultimate Edition|MM-.*|MMUE-.*|MMUE .*)\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45104/' ]
-  - name: 'Mission Mojave - Ultimate Edition.esp'
-    group: *fixesGroup
-    inc:
-      - *TTWv320
-      - 'New Vegas Error Corrections BugFixes - DLC + GRA.esm'
-      - 'New Vegas Error Corrections BugFixes - NO DLC.esm'
-      - 'New Vegas Error Corrections Complete - NO DLC.esm'
-      - 'NewCalifornia.esm'
-      - 'YUP - Base Game.esm'
-      - 'YUP - Base Game + All DLC.esm'
-    tag:
-      - Actors.AIPackages
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'MMUE-CP-AWOP.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'NVInteriors-AWOP - Compatibility Patch' ]
-        condition: 'file("MMUE-CP-AWOP+NVInteriors.esp")'
-  - name: 'MMUE-Tools-InvisibleWallRemover.esp'
-    inc: [ 'IWR.esm' ]
 
 ###### AudioVisual ######
   - name: '357retex.esp'
