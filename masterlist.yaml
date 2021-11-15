@@ -1259,9 +1259,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/51664/'
         name: 'Yukichigai Unofficial Patch - YUP'
+  - name: 'YUP - Base Game( \+ All DLC)?\.esm'
+    inc: [ *TTWv320 ]
   - name: 'YUP - Base Game + All DLC.esm'
     group: *fixesGroup
-    inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1301,7 +1302,6 @@ plugins:
       - Scripts
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     group: *fixesGroup
-    inc: [ *TTWv320 ]
   - name: 'YUP - NPC Fixes (Base Game).esp'
     group: *fixesGroup
     tag:
