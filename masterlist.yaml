@@ -1354,6 +1354,46 @@ plugins:
   - name: 'YUP - (Lonesome Road|Gun Runners Arsenal)\.esm'
     after: [ 'YUP - Old World Blues.esm' ]
   - name: 'YUP - Base Game.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - C.Acoustic
+      - C.Encounter
+      - C.Light
+      - C.Owner
+      - C.Regions
+      - C.Water
+      - Creatures.Type
+      - Deflst
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Factions
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - Relations.Add
+      - Relev
+      - Scripts
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
     dirty:
       - <<: *quickClean
         crc: 0x30A9F611
