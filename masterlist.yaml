@@ -1513,6 +1513,15 @@ plugins:
         util: 'FNVEdit v4.0.4'
   - name: 'YUP - Gun Runners Arsenal.esm'
     after: [ 'YUP - Lonesome Road.esm' ]
+    tag:
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
     clean:
       - crc: 0x87DAF978
         util: 'FNVEdit v4.0.4'
