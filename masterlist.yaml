@@ -1255,6 +1255,247 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
 ###### Unofficial Patches ######
+  - name: 'YUP .*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/51664/'
+        name: 'Yukichigai Unofficial Patch - YUP'
+  - name: 'YUP - Base Game( \+ All DLC)?\.esm'
+    inc: [ *TTWv320 ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - C.Acoustic
+      - C.Encounter
+      - C.Light
+      - C.Owner
+      - C.Regions
+      - C.Water
+      - Creatures.Type
+      - Deflst
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Factions
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - Relations.Add
+      - Relev
+      - Scripts
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+  - name: 'YUP - Base Game + All DLC.esm'
+    group: *fixesGroup
+    msg:
+      - <<: *patchProvided
+        subs: [ 'New Vegas Uncut - Outside Bets' ]
+        condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF79B7896
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
+  - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
+    group: *fixesGroup
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Factions
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Scripts
+  - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x808524D0
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    group: *fixesGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - Base Game + All DLC.esm**' ]
+        condition: 'active("YUP - Base Game + All DLC.esm")'
+  - name: 'YUP - (Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Dead Money.esm' ]
+  - name: 'YUP - (Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Honest Hearts.esm' ]
+  - name: 'YUP - (Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Old World Blues.esm' ]
+  - name: 'YUP - Base Game.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x30A9F611
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'YUP - Dead Money.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.FaceGen
+      - NPC.Hair
+      - R.Hair
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x40F11472
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'YUP - Honest Hearts.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - R.Hair
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0x09AC9E86
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - Old World Blues.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - Creatures.Type
+      - Delev
+      - EffectStats
+      - Enchantments
+      - Factions
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Hair
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0x913C266F
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - Lonesome Road.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - C.Acoustic
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Eyes
+      - R.Hair
+      - Relations.Add
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0xA92FB59A
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - Gun Runners Arsenal.esm'
+    after: [ 'YUP - Lonesome Road.esm' ]
+    tag:
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x87DAF978
+        util: 'FNVEdit v4.0.4'
+  - name: 'YUP - NPC Fixes (Base Game).esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - NPC Fixes (Base Game + All DLC).esp**' ]
+        condition: 'active("YUP - NPC Fixes (Base Game + All DLC).esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8F9361C3
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
 
 ###### AudioVisual ######
   - name: '357retex.esp'
@@ -2303,39 +2544,6 @@ plugins:
   - name: 'UWHNV-Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36121' ]
     req: [ *NVSE ]
-  - name: 'YUP - Base Game + All DLC.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *fixesGroup
-    inc: [ *TTWv320 ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Acoustic
-      - C.Owner
-      - C.Water
-      - Deflst
-      - Delev
-      - Destructible
-      - Eyes
-      - Factions
-      - Graphics
-      - Hair
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-    msg:
-      - type: say
-        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
-  - name: 'YUP - (Base Game|Dead Money|Gun Runners Arsenal|Honest Hearts|Lonesome Road|Old World Blues).esm'
-    inc: [ *TTWv320 ]
 
   - name: 'Unofficial Patch NVSE Plus.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
@@ -2971,38 +3179,6 @@ plugins:
     msg: [ *obsolete ]
     tag: [ NoMerge ]
 
-  - name: 'YUP - NPC Fixes (Base Game).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *fixesGroup
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - NpcFaces
-      - NPC.Class
-      - NPC.Race
-      - Scripts
-  - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/51664' ]
-    group: *addonsPatchesGroup
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.DeathItem
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - NpcFaces
-      - Scripts
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
     group: *addonsPatchesGroup
