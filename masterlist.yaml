@@ -1451,6 +1451,32 @@ plugins:
       - crc: 0x09AC9E86
         util: 'FNVEdit v4.0.4'
   - name: 'YUP - Old World Blues.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - Creatures.Type
+      - Delev
+      - EffectStats
+      - Enchantments
+      - Factions
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Hair
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
     clean:
       - crc: 0x913C266F
         util: 'FNVEdit v4.0.4'
