@@ -1481,6 +1481,33 @@ plugins:
       - crc: 0x913C266F
         util: 'FNVEdit v4.0.4'
   - name: 'YUP - Lonesome Road.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - C.Acoustic
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Eyes
+      - R.Hair
+      - Relations.Add
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
     clean:
       - crc: 0xA92FB59A
         util: 'FNVEdit v4.0.4'
