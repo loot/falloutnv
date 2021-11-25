@@ -1426,6 +1426,27 @@ plugins:
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 3
   - name: 'YUP - Honest Hearts.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - R.Hair
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
     clean:
       - crc: 0x09AC9E86
         util: 'FNVEdit v4.0.4'
