@@ -1822,6 +1822,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
         name: 'New Vegas Uncut - Outside Bets'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Voice
+      - Factions
+      - Invent.Add
+      - Scripts
     clean:
       - crc: 0xE2ADCB31
         util: 'FNVEdit v4.0.4'
