@@ -1818,6 +1818,11 @@ plugins:
         itm: 1
 
 ###### Encounters - Neutrals ######
+  - name: 'outsidebets.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
+        name: 'New Vegas Uncut - Outside Bets'
+
   - name: 'populatedcasino(-light|-medium)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
     msg:
