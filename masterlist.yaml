@@ -1263,6 +1263,10 @@ plugins:
     inc: [ *TTWv320 ]
   - name: 'YUP - Base Game + All DLC.esm'
     group: *fixesGroup
+    msg:
+      - <<: *patchProvided
+        subs: [ 'New Vegas Uncut - Outside Bets' ]
+        condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
