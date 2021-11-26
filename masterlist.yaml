@@ -1265,6 +1265,10 @@ plugins:
       - name: 'NVSE/Plugins/johnnyguitar.dll'
         display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
     inc: [ *TTWv320 ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
+        condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
     tag:
       - EffectStats
       - Enchantments
