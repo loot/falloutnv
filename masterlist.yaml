@@ -1255,6 +1255,31 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
 ###### Unofficial Patches ######
+  - name: 'Unofficial Patch NVSE Plus.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
+    group: *fixesGroup
+    req:
+      - *NVSE
+      - name: 'NVSE/Plugins/jip_nvse.dll'
+        display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
+      - name: 'NVSE/Plugins/johnnyguitar.dll'
+        display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
+        condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
+    tag:
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Names
+      - Scripts
+      - Text
+    clean:
+      - crc: 0xCADA033D
+        util: 'FNVEdit v4.0.4'
+
   - name: 'YUP .*\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/51664/'
@@ -2560,18 +2585,6 @@ plugins:
   - name: 'UWHNV-Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36121' ]
     req: [ *NVSE ]
-
-  - name: 'Unofficial Patch NVSE Plus.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
-    group: *fixesGroup
-    after: [ 'YUP - Base Game + All DLC.esm' ]
-    req:
-      - name: 'NVSE/Plugins/jip_nvse.dll'
-        display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
-      - name: 'NVSE/Plugins/johnnyguitar.dll'
-        display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
-      - *MCM
-    inc: [ *TTWv320 ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
