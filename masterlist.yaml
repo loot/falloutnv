@@ -1263,7 +1263,6 @@ plugins:
         display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
       - name: 'NVSE/Plugins/johnnyguitar.dll'
         display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
-      - *MCM
     inc: [ *TTWv320 ]
     clean:
       - crc: 0xCADA033D
