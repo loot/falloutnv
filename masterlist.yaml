@@ -1265,6 +1265,13 @@ plugins:
       - name: 'NVSE/Plugins/johnnyguitar.dll'
         display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
     inc: [ *TTWv320 ]
+    tag:
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Names
+      - Scripts
+      - Text
     clean:
       - crc: 0xCADA033D
         util: 'FNVEdit v4.0.4'
