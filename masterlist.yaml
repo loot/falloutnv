@@ -1525,6 +1525,9 @@ plugins:
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
+    msg:
+      - <<: *obsolete
+        condition: 'checksum("The Mod Configuration Menu.esp", CCCC88E7)'
     clean:
       - crc: 0xACBFF898
         util: 'FNVEdit v4.0.4'
