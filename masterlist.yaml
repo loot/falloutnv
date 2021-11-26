@@ -1258,7 +1258,6 @@ plugins:
   - name: 'Unofficial Patch NVSE Plus.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
     group: *fixesGroup
-    after: [ 'YUP - Base Game + All DLC.esm' ]
     req:
       - name: 'NVSE/Plugins/jip_nvse.dll'
         display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
