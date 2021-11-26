@@ -1266,6 +1266,9 @@ plugins:
         display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
       - *MCM
     inc: [ *TTWv320 ]
+    clean:
+      - crc: 0xCADA033D
+        util: 'FNVEdit v4.0.4'
 
   - name: 'YUP .*\.es[mp]'
     url:
