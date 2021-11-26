@@ -1523,6 +1523,8 @@ plugins:
         itm: 1
 
 ###### Modding Tools - Resources ######
+  - name: 'The Mod Configuration Menu.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
 
 ###### AudioVisual ######
   - name: '357retex.esp'
