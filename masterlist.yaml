@@ -1527,6 +1527,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
     msg:
       - <<: *obsolete
+        subs: [ '[MCM BugFix 2](https://www.nexusmods.com/newvegas/mods/42507/)' ]
         condition: 'checksum("The Mod Configuration Menu.esp", CCCC88E7)'
     clean:
       - crc: 0xACBFF898
