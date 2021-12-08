@@ -16,6 +16,10 @@ prelude:
       type: say
       content: 'It''s highly recommended that you also use %1%.'
 
+    - &compatIssuesWithX
+      type: say
+      content: 'This plugin has compatibility issues with %1%. For more information, read this mod''s compatibility notes.'
+
     - &compatNotes
       type: say
       content: 'It is recommended that you read this mod''s [Compatibility Notes](%1%).'
@@ -33,26 +37,90 @@ prelude:
       type: warn
       content: 'When using **%1%**, it''s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
 
+    - &includesX
+      type: say
+      content: '%1% is included with this mod.'
+
+    - &languageX
+      type: say
+      content: 'Language: %1%'
+
+    - &mainQuestCompleted
+      type: say
+      content: 'Only use this plugin once the main quest of the game has been completed.'
+
+    - &masterReassign
+      type: say
+      content: 'The **%1%** master must be reassigned to **%2%**.'
+
+    - &missingRequirementXforY
+      type: warn
+      content: 'It appears you have installed **%2%**, but some of its requirements seem to be missing. Please ensure you have correctly installed **%1%**.'
+
+    - &missingRequirementXforPlugin
+      type: warn
+      content: 'Some of this plugins requirements seem to be missing. Please ensure you have correctly installed **%1%**.'
+
+    - &moddingPlugin
+      type: error
+      content: 'This plugin is a modding resource and should not be used in-game.'
+
+    - &moveXFromYToZ
+      type: say
+      content: 'Move %1% from %2% to %3%.'
+
     - &obsolete
       type: warn
       content: 'Obsolete. Update to the latest version. %1%'
       subs: [ '' ]
 
+    - &onlyUseSmashOrBash
+      type: say
+      content: 'Can be used with a %1% but would require additional work. A Smashed Patch or Bash Patch should be used independently of one another.'
+
+    - &optional
+      type: say
+      content: 'This plugin is optional.'
+
     - &patch3rdParty
       type: say
       content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+
+    - &patcherScriptAvailable
+      type: say
+      content: '%1% patcher script available here: %2%'
 
     - &patchIncluded
       type: say
       content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
 
+    - &patchOutdated
+      type: warn
+      content: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
+
     - &patchProvided
       type: say
       content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin''s mod page.'
 
+    - &patchUnavailable
+      type: warn
+      content: 'A patch is required to make this mod fully compatible with %1%. None is currently available for download.'
+
+    - &patchUpdateAvailable
+      type: say
+      content: 'Update Patch available: %1%'
+
+    - &renameFile
+      type: say
+      content: 'Rename this file to %1%.'
+
     - &renameXtoY
       type: warn
       content: 'You need to rename %1% to %2% or this mod won''t work.'
+
+    - &requiresMCM_X
+      type: warn
+      content: 'A **Mod Configuration Menu** is required for this mod to be fully functional. An **MCM** can be added by installing %1%.'
 
     - &requiresResources
       type: warn
@@ -61,6 +129,30 @@ prelude:
     - &requiresX
       type: warn
       content: 'Requires: %1%'
+
+    - &runAnimFramework
+      type: say
+      content: 'It appears you have **%1%** installed. Remember to run **%2%** every time you have installed or uninstalled %3%, or a %3%-based mod.'
+
+    - &runxLODGen
+      type: say
+      content: 'If you add, remove, or update plugins that alter WRLD/CELL records, remember to update this module with **xLODGen**.'
+
+    - &sortMasters
+      type: say
+      content: 'Plugin''s Masters require sorting. %1%'
+      subs: [ '[xEdit - Sort Masters](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#SortingMasterFileLoadOrders)' ]
+
+    - &useBashTweakInstead
+      type: say
+      content: 'A Bashed Patch tweak can be used instead of this plugin. %1%'
+      subs: [ '' ]
+      condition: 'file("Bashed Patch.*\.esp")'
+
+    - &useINITweakInstead
+      type: say
+      content: 'An INI tweak can be used instead of this plugin. %1%'
+      subs: [ '' ]
 
     - &useInstead
       type: warn
@@ -78,9 +170,21 @@ prelude:
       type: error
       content: 'Use non-%1% version.'
 
+    - &versionOldX
+      type: say
+      content: 'It appears you do not have the latest version of %1%. Some mods may require functionality added in the latest version of %1% to work.'
+
+    - &versionUpToDateX
+      type: say
+      content: 'Your %1% is up-to-date.'
+
     - &versionXIncY
       type: error
       content: 'Your installed version of %1% is not compatible with your version of %2%.'
+
+    - &versionXofYorGreaterRequired
+      type: error
+      content: 'Requires version **%1%** or greater of **%2%**.'
 
     - &wildEdits
       type: warn
