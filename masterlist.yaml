@@ -1319,6 +1319,7 @@ plugins:
       - R.Hair
       - R.Head
       - Relations.Add
+      - Relations.Remove
       - Relev
       - Scripts
       - Sound
