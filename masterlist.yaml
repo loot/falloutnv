@@ -1091,6 +1091,14 @@ plugins:
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
 ###### AudioVisual - Models & Textures ######
+  - name: 'MetalBoxes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x40F41790
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'WMIMNV.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
