@@ -1169,6 +1169,18 @@ plugins:
       - Stats
 
 ###### Encounters - Allies ######
+  - name: 'ARESproject.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xBC0620B7
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+      - <<: *reqManualFix
+        crc: 0xCA9BD0AA
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
     msg:
