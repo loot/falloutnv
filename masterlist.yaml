@@ -1748,6 +1748,14 @@ plugins:
         condition: 'many("AWOP(Very)?LowRobots\.esp")'
 
 ###### Locations - New Structures & Landmarks ######
+  - name: 'Cut Sewers Restored.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55956/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x62FBFB05
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
   - name: 'Wasteland Defense.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
     req: [ *NVSE ]
