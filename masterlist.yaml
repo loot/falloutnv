@@ -685,6 +685,7 @@ plugins:
       - R.Hair
       - R.Head
       - Relations.Add
+      - Relations.Remove
       - Relev
       - Scripts
       - Sound
@@ -700,8 +701,8 @@ plugins:
         condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
     dirty:
       - <<: *quickClean
-        crc: 0xF79B7896
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0x1CFD06DE
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
   - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
     group: *fixesGroup
@@ -730,9 +731,9 @@ plugins:
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
     dirty:
       - <<: *quickClean
-        crc: 0x808524D0
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
+        crc: 0x91BE5C53
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     group: *fixesGroup
     msg:
@@ -748,8 +749,8 @@ plugins:
   - name: 'YUP - Base Game.esm'
     dirty:
       - <<: *quickClean
-        crc: 0x30A9F611
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0xAE5905C9
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
   - name: 'YUP - Dead Money.esm'
     tag:
@@ -774,8 +775,8 @@ plugins:
       - WeaponMods
     dirty:
       - <<: *quickClean
-        crc: 0x40F11472
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0xAB893BAF
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 3
   - name: 'YUP - Honest Hearts.esm'
     tag:
@@ -800,8 +801,8 @@ plugins:
       - Text
       - WeaponMods
     clean:
-      - crc: 0x09AC9E86
-        util: 'FNVEdit v4.0.4'
+      - crc: 0x102B78E0
+        util: 'FNVEdit v4.0.4b'
   - name: 'YUP - Old World Blues.esm'
     tag:
       - Actors.ACBS
@@ -830,8 +831,8 @@ plugins:
       - Text
       - WeaponMods
     clean:
-      - crc: 0x913C266F
-        util: 'FNVEdit v4.0.4'
+      - crc: 0x80534E9C
+        util: 'FNVEdit v4.0.4b'
   - name: 'YUP - Lonesome Road.esm'
     tag:
       - Actors.ACBS
@@ -861,8 +862,8 @@ plugins:
       - Text
       - WeaponMods
     clean:
-      - crc: 0xA92FB59A
-        util: 'FNVEdit v4.0.4'
+      - crc: 0xD92D506A
+        util: 'FNVEdit v4.0.4b'
   - name: 'YUP - Gun Runners Arsenal.esm'
     after: [ 'YUP - Lonesome Road.esm' ]
     tag:
@@ -876,7 +877,7 @@ plugins:
       - WeaponMods
     clean:
       - crc: 0x87DAF978
-        util: 'FNVEdit v4.0.4'
+        util: 'FNVEdit v4.0.4b'
   - name: 'YUP - NPC Fixes (Base Game).esp'
     msg:
       - <<: *alreadyInX
@@ -884,8 +885,8 @@ plugins:
         condition: 'active("YUP - NPC Fixes (Base Game + All DLC).esp")'
     dirty:
       - <<: *quickClean
-        crc: 0x8F9361C3
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0x86DE5AB1
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
 ###### Modding Tools - Resources ######
