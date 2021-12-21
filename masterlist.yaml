@@ -1789,6 +1789,17 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 27
 
+  - name: 'ZionAntCaveRestored-HonestHearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74706' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDD0DE5B8
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        udr: 2
+    clean:
+      - crc: 0x74C8A02B
+        util: 'FNVEdit v4.0.4'
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
