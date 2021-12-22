@@ -1790,7 +1790,7 @@ plugins:
         itm: 27
 
   - name: 'ZionAntCaveRestored-HonestHearts.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/74706' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74706/' ]
     dirty:
       - <<: *quickClean
         crc: 0xDD0DE5B8
