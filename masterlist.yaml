@@ -5278,3 +5278,11 @@ plugins:
     clean:
       - crc: 0xE3EF6849
         util: 'FNVEdit v4.0.3f'
+
+  - name: 'Asterra''s Many Fixes.esp'
+    url: [ https://www.nexusmods.com/newvegas/mods/67070'/']
+    dirty:
+      - <<: *quickClean
+        crc: 0x82DAC22D
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
