@@ -1619,6 +1619,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/67853/'
         name: 'CANNIBALISM - A Crime Against Nature'
     after: [ 'Cannibal Reborn.esp' ]
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *NVSE
 
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
