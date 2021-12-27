@@ -228,6 +228,10 @@ common:
     name: '../nvse_1_4.dll'
     display: '[NVSE](http://nvse.silverlock.org/)'
 
+  - &JIPLN
+    name: 'NVSE/Plugins/jip_nvse.dll'
+    display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
+
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
     display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
@@ -632,9 +636,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
     group: *fixesGroup
     req:
+      - *JIPLN
       - *NVSE
-      - name: 'NVSE/Plugins/jip_nvse.dll'
-        display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
       - name: 'NVSE/Plugins/johnnyguitar.dll'
         display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
     inc: [ *TTWv320 ]
