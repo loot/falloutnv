@@ -238,6 +238,12 @@ common:
     condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
 # Sub-Anchors
+  # &requiresMCM_X
+  - &requiresMCM
+    <<: *requiresMCM_X
+    subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+    condition: 'not active("The Mod Configuration Menu.esp") and not file("NVSE/Plugins/MCM.dll")'
+
   # &requiresResources
   - &requiresResourcesType3
     <<: *requiresResources
