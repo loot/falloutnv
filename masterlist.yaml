@@ -118,6 +118,7 @@ prelude:
       type: warn
       content: 'You need to rename %1% to %2% or this mod won''t work.'
 
+    # Useful for when a plugin needs the MCM, but shouldn't load after it (e.g., when it's a master plugin).
     - &requiresMCM_X
       type: warn
       content: 'A **Mod Configuration Menu** is required for this mod to be fully functional. An **MCM** can be added by installing %1%.'
@@ -229,7 +230,7 @@ common:
 
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
-    display: '[MCM](https://www.nexusmods.com/newvegas/mods/42507)'
+    display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
 
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
@@ -237,6 +238,12 @@ common:
     condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
 # Sub-Anchors
+  # &requiresMCM_X
+  - &requiresMCM
+    <<: *requiresMCM_X
+    subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+    condition: 'not active("The Mod Configuration Menu.esp") and not file("NVSE/Plugins/MCM.dll")'
+
   # &requiresResources
   - &requiresResourcesType3
     <<: *requiresResources
