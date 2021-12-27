@@ -230,7 +230,7 @@ common:
 
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
-    display: '[MCM](https://www.nexusmods.com/newvegas/mods/42507)'
+    display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
 
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
