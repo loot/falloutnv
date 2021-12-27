@@ -118,6 +118,7 @@ prelude:
       type: warn
       content: 'You need to rename %1% to %2% or this mod won''t work.'
 
+    # Useful for when a plugin needs the MCM, but shouldn't load after it (e.g., when it's a master plugin).
     - &requiresMCM_X
       type: warn
       content: 'A **Mod Configuration Menu** is required for this mod to be fully functional. An **MCM** can be added by installing %1%.'
