@@ -1637,6 +1637,10 @@ plugins:
       - *JIPLN
       - *NVSE
     inc: [ 'LFox Cannibal Perk Improvements.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cannibal Reborn ESP' ]
+        condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
