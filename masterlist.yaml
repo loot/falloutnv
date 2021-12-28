@@ -1623,6 +1623,9 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *NVSE
+    inc:
+      - 'Cannibal Reborn (Default Dine and Dash).esp'
+      - 'Cannibal Reborn (No Rebalance).esp'
 
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
