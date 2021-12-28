@@ -1636,6 +1636,7 @@ plugins:
     req:
       - *JIPLN
       - *NVSE
+    inc: [ 'LFox Cannibal Perk Improvements.esp' ]
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
