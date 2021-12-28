@@ -1633,6 +1633,9 @@ plugins:
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
+    req:
+      - *JIPLN
+      - *NVSE
 
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
