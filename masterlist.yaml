@@ -1641,6 +1641,8 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Cannibal Reborn ESP' ]
         condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
+  - name: 'Cannibal Reborn.esp'
+    tag: [ Text ]
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
