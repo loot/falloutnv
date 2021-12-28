@@ -1824,6 +1824,8 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
 ###### Locations ######
+  - name: 'Better Strip View.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73261/' ]
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
