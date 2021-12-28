@@ -1633,6 +1633,9 @@ plugins:
 
   - name: 'Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/64789/' ]
+    req:
+      - *JIPLN
+      - *NVSE
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
