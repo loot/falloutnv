@@ -1631,6 +1631,9 @@ plugins:
       - crc: 0x0EEF05A3
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'Dark Craving NV( Incurable Edition)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
+
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
   - name: 'More Perks( for Companions)?\.esm'
