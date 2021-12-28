@@ -1112,6 +1112,7 @@ plugins:
   - name: 'Lucky 38 Lights Redone.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73273/' ]
     after: [ 'Strip Lights Region Fix.esp' ]
+    inc: [ 'lucky38lights.esp' ]
 
   - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
     url: [ 'http://modsreloaded.com/simple-street-lights/' ]
