@@ -463,8 +463,12 @@ groups:
   - name: &lodGroup LOD
     after: [ *lightingGroup ]
 
-  - name: &weatherGroup Weather & Lighting
+  - name: &cellSettingsGroup Cell Settings
+    description: 'A group for modules that only modify cell settings.'
     after: [ *lodGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *cellSettingsGroup ]
 
   - name: &dynamicPatchGroup Dynamic Patches
     after: [ *weatherGroup ]
