@@ -1636,6 +1636,13 @@ plugins:
     req:
       - *JIPLN
       - *NVSE
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**A Crime Against Nature.esp**' ]
+        condition: 'active("A Crime Against Nature.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Dark Craving ESP' ]
+        condition: 'many("Dark Craving NV( Incurable Edition)?\.esp")'
 
   - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
