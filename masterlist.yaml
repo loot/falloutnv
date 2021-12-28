@@ -1631,6 +1631,30 @@ plugins:
       - crc: 0x0EEF05A3
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64789/' ]
+    req:
+      - *JIPLN
+      - *NVSE
+    inc: [ 'LFox Cannibal Perk Improvements.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cannibal Reborn ESP' ]
+        condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
+  - name: 'Cannibal Reborn.esp'
+    tag: [ Text ]
+    clean:
+      - crc: 0x978297D7
+        util: 'FNVEdit v4.0.4b'
+  - name: 'Cannibal Reborn (Default Dine and Dash).esp'
+    clean:
+      - crc: 0xDC1C4688
+        util: 'FNVEdit v4.0.4b'
+  - name: 'Cannibal Reborn (No Rebalance).esp'
+    clean:
+      - crc: 0x8AEF9979
+        util: 'FNVEdit v4.0.4b'
+
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
     req:
