@@ -911,6 +911,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
     group: *cellSettingsGroup
     tag: [ C.Regions ]
+    clean:
+      - crc: 0xADA6FC4C
+        util: 'FNVEdit v4.0.4b'
 
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
