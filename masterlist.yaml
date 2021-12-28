@@ -909,6 +909,7 @@ plugins:
 ###### Fixes ######
   - name: 'Strip Lights Region Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
+    group: *cellSettingsGroup
 
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
