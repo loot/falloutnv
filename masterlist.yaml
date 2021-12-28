@@ -1823,6 +1823,8 @@ plugins:
       - crc: 0x5DF9D6E4
         util: 'FNVEdit v4.0.3g'
 
+###### Locations ######
+
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
