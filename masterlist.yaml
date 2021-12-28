@@ -463,8 +463,12 @@ groups:
   - name: &lodGroup LOD
     after: [ *lightingGroup ]
 
-  - name: &weatherGroup Weather & Lighting
+  - name: &cellSettingsGroup Cell Settings
+    description: 'A group for modules that only modify cell settings.'
     after: [ *lodGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *cellSettingsGroup ]
 
   - name: &dynamicPatchGroup Dynamic Patches
     after: [ *weatherGroup ]
@@ -901,6 +905,15 @@ plugins:
         crc: 0x86DE5AB1
         util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
+
+###### Fixes ######
+  - name: 'Strip Lights Region Fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
+    group: *cellSettingsGroup
+    tag: [ C.Regions ]
+    clean:
+      - crc: 0xADA6FC4C
+        util: 'FNVEdit v4.0.4b'
 
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
