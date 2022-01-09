@@ -440,6 +440,28 @@ globals:
   - <<: *versionUpToDateX
     subs: [ '**Fallout: New Vegas**' ]
     condition: 'product_version("../FalloutNV.exe", "1.4.0.525", >=)'
+  # NVSE
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.2.4", <)))'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.2.4", >=)'
+  # NVSE NoGore
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
+    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", "0.5.1.4", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender NoGore**' ]
+    condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
+
+# Version Compatibility
+  # NVSE - Game Runtime
+  - <<: *versionXIncY
+    subs:
+      - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
+      - '**Fallout: New Vegas**'
+    condition: 'product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
 
 groups:
   - name: &dlcGroup DLC
