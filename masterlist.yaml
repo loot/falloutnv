@@ -224,10 +224,6 @@ common:
     not file("TaleOfTwoWastelands.esm")
 
 # File Anchors
-  - &NVSE
-    name: '../nvse_1_4.dll'
-    display: '[NVSE](http://nvse.silverlock.org/)'
-
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
@@ -257,6 +253,13 @@ common:
     <<: *requiresResources
     type: say
     subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+
+  # &requiresX
+  - &requiresNVSE
+    <<: *requiresX
+    type: error
+    subs: [ '[New Vegas Script Extender](http://nvse.silverlock.org/)' ]
+    condition: 'not file("../nvse_1_\d(ng)?\.dll")'
 
   # &useVersion
   - &useVersionDeadMoney
@@ -646,12 +649,12 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - *NVSE
     inc: [ *TTWv320 ]
     msg:
       - <<: *alsoUseX
         subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
         condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
+      - *requiresNVSE
     tag:
       - EffectStats
       - Enchantments
@@ -1249,8 +1252,8 @@ plugins:
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
   - name: 'RobCo Certified.esm'
-    req: [ *NVSE ]
     msg:
+      - *requiresNVSE
       - <<: *wildEdits
         subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
         condition: 'checksum("RobCo Certified.esm", 4BFBB411) or checksum("RobCo Certified.esm", 46411E63) or checksum("RobCo Certified.esm", 3B28B2FE) or checksum("RobCo Certified.esm", CA37D0CB)'
@@ -1265,7 +1268,7 @@ plugins:
         itm: 9
   - name: 'Companion Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
     dirty:
       - <<: *quickClean
         crc: 0xCF5E979C
@@ -1635,7 +1638,7 @@ plugins:
       - 'https://www.nexusmods.com/newvegas/mods/39490/'
       - link: 'https://www.nexusmods.com/newvegas/mods/47712/'
         name: 'Mail Order Catalogs - Updated'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'VendorGameTimeRestock(NoNVSE)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37344/' ]
@@ -1644,7 +1647,7 @@ plugins:
         subs: [ 'Variable Merchant Restock ESP' ]
         condition: 'many("VendorGameTimeRestock(NoNVSE)?\.esp")'
   - name: 'VendorGameTimeRestock.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
@@ -1655,22 +1658,22 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - *NVSE
     inc:
       - 'Cannibal Reborn (Default Dine and Dash).esp'
       - 'Cannibal Reborn (No Rebalance).esp'
-    msg: [ *requiresMCM ]
+    msg:
+      - *requiresMCM
+      - *requiresNVSE
     clean:
       - crc: 0x0EEF05A3
         util: 'FNVEdit v4.0.4b'
 
   - name: 'Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/64789/' ]
-    req:
-      - *JIPLN
-      - *NVSE
+    req: [ *JIPLN ]
     inc: [ 'LFox Cannibal Perk Improvements.esp' ]
     msg:
+      - *requiresNVSE
       - <<: *useOnlyOneX
         subs: [ 'Cannibal Reborn ESP' ]
         condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
@@ -1690,13 +1693,12 @@ plugins:
 
   - name: 'Dark Craving NV( Incurable Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
-    req:
-      - *JIPLN
-      - *NVSE
+    req: [ *JIPLN ]
     msg:
       - <<: *alreadyInX
         subs: [ '**A Crime Against Nature.esp**' ]
         condition: 'active("A Crime Against Nature.esp")'
+      - *requiresNVSE
       - <<: *useOnlyOneX
         subs: [ 'Dark Craving ESP' ]
         condition: 'many("Dark Craving NV( Incurable Edition)?\.esp")'
@@ -1899,8 +1901,8 @@ plugins:
 
   - name: 'Wasteland Defense.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
-    req: [ *NVSE ]
     msg:
+      - *requiresNVSE
       - <<: *wildEdits
         subs: [ 'Delete **001161B5** & **001161B7** in **Wasteland Defense.esp**.' ]
         condition: 'checksum("Wasteland Defense.esp", D8ABD903) or checksum("Wasteland Defense.esp", 5CC37AE6) or checksum("Wasteland Defense.esp", 90EFE7F6)'
@@ -2127,7 +2129,7 @@ plugins:
 
   - name: 'UWHNV-Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36121' ]
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
     url: ['https://www.nexusmods.com/newvegas/mods/65041']
@@ -2175,7 +2177,7 @@ plugins:
       - NpcFaces
 
   - name: 'AmmoSpreadEffectFixer.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'IWR.esm'
     inc: [ 'OWNB - Open World.esm' ]
@@ -2186,7 +2188,7 @@ plugins:
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: 'AccuRifles.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Caliber.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
     tag:
@@ -2239,9 +2241,8 @@ plugins:
       - Scripts
       - Stats
   - name: 'CINEMATECH.esm'
-    req:
-      - *NVSE
-      - *MCM
+    req: [ *MCM ]
+    msg: [ *requiresNVSE ]
 
   - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
     msg: [ *obsolete ]
@@ -2392,7 +2393,7 @@ plugins:
 
   - name: 'Project Nevada - Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
     tag: [ Invent ]
     clean:
       # v2.5
@@ -2585,9 +2586,9 @@ plugins:
   - name: 'Psiclones.esm'
     tag: [ Names ]
   - name: 'SelectFire.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Selective Fire.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'SunnyCompanion.esm'
     msg: [ *obsolete ]
   - name: 'T6M Equipment Replacer NV.esm'
@@ -2607,15 +2608,15 @@ plugins:
   - name: 'Clean-Deluxe FNV.esm'
     inc: [ 'Performance of the Gods.esp' ]
   - name: 'aHUD.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'iHUD.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'oHUD.esm'
     inc:
       - 'aHUD.esm'
       - 'iHUD.esm'
       - 'Primary Needs HUD.esm'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'nVamp - Effects nVamped.esm'
     msg:
       - type: say
@@ -3052,7 +3053,7 @@ plugins:
   - name: 'ReloadBugFix.esp'
     msg: [ *obsolete ]
   - name: 'Reload Speed Game Start Fix.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'RepairKitFix.esp'
     msg:
       - type: say
@@ -3095,8 +3096,8 @@ plugins:
   - name: 'Centered 3rd Person Camera - Unraised.esp'
     inc: [ 'FOOK - New Vegas.esm' ]
   - name: 'ImplantGRX-NVSEHotkey.esp'
-    req: [ *NVSE ]
     inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
+    msg: [ *requiresNVSE ]
   - name: 'NVORganizedItems.esp'
     tag: [ Names ]
 
@@ -3273,8 +3274,9 @@ plugins:
   - name: 'UHNV-Performance-Patch.esp'
     msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
-    req: [ *NVSE ]
-    msg: [ *obsolete ]
+    msg:
+      - *obsolete
+      - *requiresNVSE
   - name: 'UWHNV-Addon-DLC.esp'
     tag: [ C.Light ]
   - name: 'UWHNV-Addon-GRA.esp'
@@ -3480,7 +3482,7 @@ plugins:
       - type: say
         content: 'Old'
   - name: 'Arwen_NV_Realism_Core.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
     tag: [ Stats ]
   - name: 'hardercore_combat.esp'
     tag: [ Stats ]
@@ -3633,23 +3635,23 @@ plugins:
   - name: 'ZZZZ--APB_By_Nokturnihs.esp'
     msg: [ *obsolete ]
   - name: 'AutoLoot.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'IWS-AS-HighSpawns.esp'
-    req: [ *NVSE ]
     inc:
       - 'IWS-AS-MedSpawns.esp'
       - 'IWS-AS-LowSpawns.esp'
+    msg: [ *requiresNVSE ]
   - name: 'IWS-AS-MedSpawns.esp'
-    req: [ *NVSE ]
     inc:
       - 'IWS-AS-HighSpawns.esp'
       - 'IWS-AS-LowSpawns.esp'
+    msg: [ *requiresNVSE ]
   - name: 'IWS-AS-LowSpawns.esp'
-    req: [ *NVSE ]
     inc:
       - 'IWS-AS-MedSpawns.esp'
       - 'IWS-AS-HighSpawns.esp'
+    msg: [ *requiresNVSE ]
   - name: 'IWS-MoreSpawns.esp'
     msg: [ *obsolete ]
   - name: 'IWS-UltraSpawns.esp'
@@ -3657,7 +3659,7 @@ plugins:
   - name: 'Less Weight.esp'
     inc: [ 'More Weight.esp' ]
   - name: 'Isul-MagExchange.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'ACS-DeadMoney.esp'
     tag: [ Invent ]
@@ -3674,7 +3676,7 @@ plugins:
       - Invent
       - Names
   - name: 'ArmourRepairKits.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Better Ammo Crafting.esp'
     tag: [ Names ]
   - name: 'BetterCraftingSorting.esp'
@@ -3719,7 +3721,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'A Load of Balls.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Assault Carbine mods.esp'
     tag: [ WeaponMods ]
   - name: 'Better Binoculars.esp'
@@ -3771,7 +3773,7 @@ plugins:
     tag: [ Stats ]
 
   - name: 'm110.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'OWB HQ Textures Fix.esp'
     tag: [ Graphics ]
@@ -4095,8 +4097,8 @@ plugins:
 
   - name: 'Max Level (50|60|75|100|255)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39906/' ]
-    req: [ *NVSE ]
     msg:
+      - *requiresNVSE
       - <<: *useOnlyOneX
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
@@ -4108,7 +4110,7 @@ plugins:
   - name: 'Delay DLC - DM + HH + OWB.esp'
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg: [ *obsolete ]
@@ -4133,14 +4135,14 @@ plugins:
   - name: 'Intelligence_And_Skill_Points_Normal.esp'
     inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
   - name: 'Invisibility for No Reputation.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'LFox Bottle That Water.esp'
     tag:
       - Names
       - Scripts
   - name: 'More Realistic Aiming.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'NoDegredation.esp'
     msg: [ *obsolete ]
   - name: 'NVDLC04 Allegiance w Duster.esp'
@@ -4173,7 +4175,7 @@ plugins:
   - name: 'Quick Trade - iHud.esp'
     msg: [ *obsolete ]
   - name: 'Reactive People - Ultimatum.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Realistic Weight.esp'
     tag:
       - NoMerge
@@ -4184,12 +4186,12 @@ plugins:
       - Stats
 
   - name: 'Real Time Entry Skills.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'RRDynamicXPonly.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'Runner.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'SpecialEveryFiveLevels.esp'
     inc:
       - 'SpecialEveryThreeLevels.esp'
@@ -4197,7 +4199,7 @@ plugins:
   - name: 'SpecialEveryThreeLevels.esp'
     inc: [ 'SpecialEveryTwoLevels.esp' ]
   - name: 'SubtitlesHotkeyNV.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'Weight_Balance.esp'
     tag: [ Stats ]
@@ -4470,9 +4472,9 @@ plugins:
   - name: 'CustomLighting-IE DoF.esp'
     msg: [ *obsolete ]
   - name: 'UWFXGodrays.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
   - name: 'UnderwaterFX.esp'
-    req: [ *NVSE ]
+    msg: [ *requiresNVSE ]
 
   - name: 'nVamp - Tales from the Burning Sands.esp'
     msg: [ *obsolete ]
