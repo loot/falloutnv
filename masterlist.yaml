@@ -419,14 +419,11 @@ bash_tags:
 
 globals:
 # Latest LOOT Thread
-  - &lootThread
-    <<: *latestLOOTThread
-    subs: [ 'https://loot.github.io/latest-thread/' ]
+  - *latestLOOTThread
 
 # NVSE
   # Missing
-  - &nvseMissing
-    <<: *scriptExtenderMissing
+  - <<: *scriptExtenderMissing
     subs:
       - 'NVSE'
       - '[New Vegas Script Extender](http://nvse.silverlock.org/)'
