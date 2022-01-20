@@ -936,6 +936,7 @@ plugins:
 ###### Fixes ######
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
+    group: *fixesGroup
 
   - name: 'Strip Lights Region Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
