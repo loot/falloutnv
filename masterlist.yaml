@@ -433,10 +433,10 @@ globals:
   # Fallout: New Vegas Game Runtime
   - <<: *versionOldX
     subs: [ '**Fallout: New Vegas**' ]
-    condition: 'product_version("../FalloutNV.exe", "1.4.0.525", <)'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", <)'
   - <<: *versionUpToDateX
     subs: [ '**Fallout: New Vegas**' ]
-    condition: 'product_version("../FalloutNV.exe", "1.4.0.525", >=)'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
   # NVSE
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
@@ -458,7 +458,7 @@ globals:
     subs:
       - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
       - '**Fallout: New Vegas**'
-    condition: 'product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
 
 groups:
   - name: &dlcGroup DLC
