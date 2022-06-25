@@ -727,6 +727,7 @@ plugins:
       - EnchantmentStats
       - Graphics
       - Invent.Add
+      - Invent.Change
       - Invent.Remove
       - Names
       - R.Eyes
