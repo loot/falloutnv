@@ -707,6 +707,7 @@ plugins:
       - Actors.Anims
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Spells
       - Actors.Stats
@@ -724,7 +725,6 @@ plugins:
       - EffectStats
       - Enchantments
       - EnchantmentStats
-      - Factions
       - Graphics
       - Invent.Add
       - Invent.Remove
@@ -760,12 +760,12 @@ plugins:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Skeleton
       - Actors.Spells
       - Actors.Stats
       - Actors.Voice
-      - Factions
       - Invent.Add
       - Invent.Change
       - Invent.Remove
@@ -858,6 +858,7 @@ plugins:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Spells
       - Actors.Voice
@@ -865,7 +866,6 @@ plugins:
       - Delev
       - EffectStats
       - Enchantments
-      - Factions
       - Graphics
       - Invent.Remove
       - Names
