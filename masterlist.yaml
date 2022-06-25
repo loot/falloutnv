@@ -748,11 +748,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'New Vegas Uncut - Outside Bets' ]
         condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x1CFD06DE
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 5
+    # Do not clean
   - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
     group: *fixesGroup
     tag:
