@@ -707,6 +707,7 @@ plugins:
       - Actors.Anims
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Spells
       - Actors.Stats
@@ -724,9 +725,9 @@ plugins:
       - EffectStats
       - Enchantments
       - EnchantmentStats
-      - Factions
       - Graphics
       - Invent.Add
+      - Invent.Change
       - Invent.Remove
       - Names
       - R.Eyes
@@ -747,11 +748,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'New Vegas Uncut - Outside Bets' ]
         condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x1CFD06DE
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 5
+    # Do not clean
   - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
     group: *fixesGroup
     tag:
@@ -760,12 +757,12 @@ plugins:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Skeleton
       - Actors.Spells
       - Actors.Stats
       - Actors.Voice
-      - Factions
       - Invent.Add
       - Invent.Change
       - Invent.Remove
@@ -777,11 +774,9 @@ plugins:
       - NPC.Race
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x91BE5C53
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 2
+    clean:
+      - crc: 0x16B71628
+        util: 'FNVEdit v4.0.4b'
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
     group: *fixesGroup
     msg:
@@ -858,6 +853,7 @@ plugins:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.RecordFlags
       - Actors.Spells
       - Actors.Voice
@@ -865,7 +861,6 @@ plugins:
       - Delev
       - EffectStats
       - Enchantments
-      - Factions
       - Graphics
       - Invent.Remove
       - Names
