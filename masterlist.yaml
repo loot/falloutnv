@@ -958,6 +958,9 @@ plugins:
 
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64580/'
+        name: 'Wrye Bash'
     group: *dynamicPatchGroup
     after:
       - 'FNVMerged.esp'
