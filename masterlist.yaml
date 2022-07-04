@@ -964,6 +964,9 @@ plugins:
       - 'FNVMerged.esp'
 
   - name: 'FNVMerged.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34703/'
+        name: 'FNVEdit'
     group: *dynamicPatchGroup
     tag: [ NoMerge ]
 
@@ -972,6 +975,9 @@ plugins:
     tag: [ NoMerge ]
 
   - name: 'Smashed Patch.esp'
+    url:
+      - link: 'https://github.com/matortheeternal/smash/'
+        name: 'Mator Smash'
     group: *dynamicPatchGroup
     after: [ 'TES5Merged.esp' ]
     tag: [ NoMerge ]
