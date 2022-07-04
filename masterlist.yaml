@@ -956,6 +956,8 @@ plugins:
       - crc: 0xACBFF898
         util: 'FNVEdit v4.0.4'
 
+###### Modding Tools - Generated Files ######
+
 ###### AudioVisual ######
   - name: '357retex.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
