@@ -957,11 +957,14 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
 ###### Modding Tools - Generated Files ######
-  - name: 'Bashed Patch, 0.esp'
+  - name: 'Bashed Patch.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64580/'
+        name: 'Wrye Bash'
     group: *dynamicPatchGroup
     after:
-      - 'MergedPatch.esp'
       - 'FNVMerged.esp'
+      - 'MergedPatch.esp'
 
   - name: 'FNVMerged.esp'
     url:
