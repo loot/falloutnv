@@ -956,6 +956,32 @@ plugins:
       - crc: 0xACBFF898
         util: 'FNVEdit v4.0.4'
 
+###### Modding Tools - Generated Files ######
+  - name: 'Bashed Patch, 0.esp'
+    group: *dynamicPatchGroup
+    after:
+      - 'MergedPatch.esp'
+      - 'FNVMerged.esp'
+
+  - name: 'FNVMerged.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34703/'
+        name: 'FNVEdit'
+    group: *dynamicPatchGroup
+    tag: [ NoMerge ]
+
+  - name: 'MergedPatch.esp'
+    group: *dynamicPatchGroup
+    tag: [ NoMerge ]
+
+  - name: 'Smashed Patch.esp'
+    url:
+      - link: 'https://github.com/matortheeternal/smash/'
+        name: 'Mator Smash'
+    group: *dynamicPatchGroup
+    after: [ 'TES5Merged.esp' ]
+    tag: [ NoMerge ]
+
 ###### AudioVisual ######
   - name: '357retex.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
@@ -5226,21 +5252,6 @@ plugins:
       - C.ImageSpace
       - C.Water
       - Sound
-  - name: 'MergedPatch.esp'
-    group: *dynamicPatchGroup
-    tag: [ NoMerge ]
-  - name: 'FNVMerged.esp'
-    group: *dynamicPatchGroup
-    tag: [ NoMerge ]
-  - name: 'Smashed Patch.esp'
-    group: *dynamicPatchGroup
-    after: [ 'TES5Merged.esp' ]
-    tag: [ NoMerge ]
-  - name: 'Bashed Patch, 0.esp'
-    group: *dynamicPatchGroup
-    after:
-      - 'MergedPatch.esp'
-      - 'FNVMerged.esp'
 
   - name: 'ExplosivesImmunityFix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60496' ]
