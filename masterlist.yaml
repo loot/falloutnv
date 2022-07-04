@@ -960,8 +960,8 @@ plugins:
   - name: 'Bashed Patch, 0.esp'
     group: *dynamicPatchGroup
     after:
-      - 'MergedPatch.esp'
       - 'FNVMerged.esp'
+      - 'MergedPatch.esp'
 
   - name: 'FNVMerged.esp'
     url:
