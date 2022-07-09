@@ -1969,6 +1969,9 @@ plugins:
         itm: 27
 
   - name: 'WastlandWrecks.esp' # sic
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67642/'
+        name: 'Wasteland Wreckage'
 
   - name: 'ZionAntCaveRestored-HonestHearts.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74706/' ]
