@@ -1976,6 +1976,13 @@ plugins:
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         udr: 2
 
+###### Location - Overhauls ######
+  - name: 'FreesideOpen.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46355'
+        name: 'New Vegas Uncut - Freeside Open'
+    inc: [ *TTWv320 ]
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
@@ -2422,12 +2429,6 @@ plugins:
 
   - name: 'DustSurvivalSimulator.es(m|p)'
     url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'FreesideOpen.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/46355'
-        name: 'New Vegas Uncut - Freeside Open'
     inc: [ *TTWv320 ]
 
   - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
