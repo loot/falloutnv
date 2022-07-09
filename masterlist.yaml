@@ -1983,7 +1983,18 @@ plugins:
         name: 'New Vegas Uncut - Freeside Open'
   - name: 'FreesideOpen.esm'
     inc: [ *TTWv320 ]
+    tag:
+      - C.Acoustic
+      - Graphics
   - name: 'FreesideOpenPatch.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Delev
+      - Invent.Add
+      - Names
+      - Scripts
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
