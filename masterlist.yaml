@@ -1972,6 +1972,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67642/'
         name: 'Wasteland Wreckage'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000E6062** & **001679F6** from **WastlandWrecks.esp**.' ]
+        condition: 'checksum("WastlandWrecks.esp", DDF993A6) or checksum("WastlandWrecks.esp", 89160A54)'
 
   - name: 'ZionAntCaveRestored-HonestHearts.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74706/' ]
