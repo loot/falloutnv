@@ -1978,10 +1978,10 @@ plugins:
 
 ###### Location - Overhauls ######
   - name: 'FreesideOpen(Patch)?\.es[mp]'
-  - name: 'FreesideOpen.esm'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/46355'
+      - link: 'https://www.nexusmods.com/newvegas/mods/46355/'
         name: 'New Vegas Uncut - Freeside Open'
+  - name: 'FreesideOpen.esm'
     inc: [ *TTWv320 ]
   - name: 'FreesideOpenPatch.esp'
 
