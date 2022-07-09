@@ -1986,6 +1986,11 @@ plugins:
     tag:
       - C.Acoustic
       - Graphics
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xB1E765B8
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 15
   - name: 'FreesideOpenPatch.esp'
     tag:
       - Actors.AIPackages
@@ -1995,6 +2000,9 @@ plugins:
       - Invent.Add
       - Names
       - Scripts
+    clean:
+      - crc: 0xAED90543
+        util: 'FNVEdit v4.0.4b'
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
