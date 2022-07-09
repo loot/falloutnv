@@ -1968,6 +1968,24 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 27
 
+  - name: 'WastlandWrecks.esp' # sic
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67642/'
+        name: 'Wasteland Wreckage'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000E6062** & **001679F6** from **WastlandWrecks.esp**.' ]
+        condition: 'checksum("WastlandWrecks.esp", DDF993A6) or checksum("WastlandWrecks.esp", 89160A54)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDDF993A6
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 119
+      - <<: *quickClean
+        crc: 0x0EB7ECF1
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 119
+
   - name: 'ZionAntCaveRestored-HonestHearts.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74706/' ]
     dirty:
