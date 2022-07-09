@@ -2024,7 +2024,7 @@ plugins:
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     group: *addonsGroup
     after:
       - 'DeadMoney.esm'
@@ -2066,7 +2066,7 @@ plugins:
       - 'fwv.esp'
       - 'FNC Overhaul Project.esp'
   - name: 'Afterschool Special.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43757' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
     tag: [ Invent ]
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
@@ -2230,27 +2230,27 @@ plugins:
       - WeaponMods
 
   - name: 'UWHNV-Core.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/36121' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36121/' ]
     msg: [ *requiresNVSE ]
 
   - name: 'HeroinZero Weapon Fixes.esp'
-    url: ['https://www.nexusmods.com/newvegas/mods/65041']
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65041/' ]
     inc: [ *TTWv320 ]
 
   - name: 'Uncut Skeletons.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56625' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56625/' ]
     msg:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
 
   - name: 'ProjectBrazil.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     msg: [ *obsolete ]
     after:
       - 'Project Nevada - Core.esm'
       - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     after: [ 'ProjectBrazil.esm' ]
     inc: [ *TTWv320 ]
     tag:
@@ -2263,7 +2263,7 @@ plugins:
       - crc: 0xD8252B38
         util: 'FNVEdit v4.0.2f'
   - name: 'NVCE Main.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39325' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39325/' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -2292,7 +2292,7 @@ plugins:
   - name: 'AccuRifles.esm'
     msg: [ *requiresNVSE ]
   - name: 'Caliber.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -2312,13 +2312,13 @@ plugins:
       - crc: 0x74A11A7D
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
     tag: [ Names ]
     clean:
       - crc: 0x303F8818
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXhonesthearts.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
     clean:
       - crc: 0xAE91AF06
         util: 'FNVEdit v4.0.2f'
@@ -2351,7 +2351,7 @@ plugins:
   - name: 'Fiends, With Style.esm'
     tag: [ Delev ]
   - name: 'FOOK - New Vegas.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
     inc: [ *TTWv320 ]
     tag:
       - Deflst
@@ -2380,13 +2380,13 @@ plugins:
       - C.Climate
       - C.Light
   - name: 'NVInteriors_Core.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
     clean:
       # v2.1.1
       - crc: 0x710F6308
         util: 'FNVEdit v4.0.2f'
   - name: 'NVInteriors_ComboEdition.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43534' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
     inc:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
@@ -2440,7 +2440,7 @@ plugins:
       - Invent
       - Names
   - name: 'Interior Lighting Overhaul - Core.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
     tag:
       - C.Climate
       - C.Light
@@ -2456,23 +2456,23 @@ plugins:
       - crc: 0xF135F5C1
         util: 'FNVEdit v4.0.2f'
   - name: 'Interior Lighting Overhaul - L38PS.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35794' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
     tag: [ C.Light ]
     clean:
       - crc: 0x60C4877D
         util: 'FNVEdit v4.0.2f'
 
   - name: 'After War Nevada.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/55455' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55455/' ]
     inc: [ *TTWv320 ]
 
   - name: 'DustSurvivalSimulator.es(m|p)'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/57927' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57927/' ]
     inc: [ *TTWv320 ]
 
   - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/58871'
+      - link: 'https://www.nexusmods.com/newvegas/mods/58871/'
         name: 'NVEC - New Vegas Enhanced Content'
   - name: 'NVEC Complete.esm'
     inc: [ *TTWv320 ]
@@ -2488,7 +2488,7 @@ plugins:
     inc: [ *TTWv320 ]
 
   - name: 'Project Nevada - Core.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
     msg: [ *requiresNVSE ]
     tag: [ Invent ]
     clean:
@@ -2496,7 +2496,7 @@ plugins:
       - crc: 0x2345512B
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Equipment.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
     after: [ 'nVamp - Core.esm' ]
     inc: [ *TTWv320 ]
     tag:
@@ -2513,7 +2513,7 @@ plugins:
       - crc: 0x2B4F3224
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
     inc: [ *TTWv320 ]
     tag:
       - Delev
@@ -2525,7 +2525,7 @@ plugins:
       - crc: 0xB4A87776
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/40040' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
     inc: [ *TTWv320 ]
     tag: [ Invent ]
     clean:
@@ -2533,25 +2533,25 @@ plugins:
       - crc: 0x2E724F8C
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Dead Money.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.3
       - crc: 0x4D7923AF
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Dead Money (Rebalance).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.3
       - crc: 0xA66A29E4
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Honest Hearts.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.3
       - crc: 0xE6D45D29
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Old World Blues.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     inc: [ 'Project Nevada - Old World Blues (No Cyberware).esp' ]
     tag: [ Invent ]
     clean:
@@ -2559,25 +2559,25 @@ plugins:
       - crc: 0xF61652C7
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.34
       - crc: 0xA2C10055
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Lonesome Road.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.3
       - crc: 0x833E810B
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Gun Runners'' Arsenal.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       # v1.3
       - crc: 0xB8B0388F
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Gun Runners'' Arsenal (Rebalance).esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     dirty:
       # v1.34
       - <<: *quickClean
@@ -2588,7 +2588,7 @@ plugins:
       - crc: 0xC0002069
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - WMX.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     tag:
       - Graphics
       - Invent
@@ -2599,7 +2599,7 @@ plugins:
       - crc: 0xC0DA6CFD
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - WME.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     tag:
       - Graphics
       - Invent
@@ -2609,26 +2609,26 @@ plugins:
       - crc: 0xBC51B676
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - EVE All DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/42363' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
     clean:
       - crc: 0x84EE1AF7
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Extra Options.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
     after: [ 'nVamp - Core.esm' ]
     clean:
       # v1.3
       - crc: 0xAB2F211D
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Rebalance Complete.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
     tag: [ Relev ]
     clean:
       # v1.3
       - crc: 0x5A9BCC6D
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - All DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
     tag:
       - Actors.DeathItem
       - Invent
@@ -2643,7 +2643,7 @@ plugins:
       - crc: 0xF1A74B56
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Cyberware Additions.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47285' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
     clean:
       # v1.3
       - crc: 0xBBFBAFD5
@@ -2658,19 +2658,19 @@ plugins:
       - Relev
 
   - name: 'XFO -.*\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37871' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37871/' ]
     inc: [ *TTWv320 ]
 
   - name: 'Weapons of the Wasteland.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/66115' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66115/' ]
     inc: [ *TTWv320 ]
 
   - name: 'UnlimitedCompanions.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/34870' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34870/' ]
     inc: [ *TTWv320 ]
 
   - name: 'UnlimitedCompanionsFixed.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/66030' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66030/' ]
     inc: [ *TTWv320 ]
 
   - name: 'KillableKids.esp'
@@ -2753,7 +2753,7 @@ plugins:
       - Names
       - Relev
   - name: 'New Vegas Redesigned.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned II.esm'
       - 'New Vegas Redesigned 3.esm'
@@ -2766,7 +2766,7 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'New Vegas Redesigned II.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned 3.esm'
@@ -3037,7 +3037,7 @@ plugins:
       - 'TTW_WildWasteland.esp'
       - 'TTWOptions.esp'
   - name: 'JSawyer - CE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
     inc:
       - 'Weapon Mod Expansion.esp'
       - 'Weapon Mod Expansion.esm'
@@ -3056,7 +3056,7 @@ plugins:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
   - name: 'JSawyer - EVE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
     after: [ 'EVE FNV - ALL DLC.esp' ]
     tag:
       - Graphics
@@ -3065,7 +3065,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'JSawyer - IMPACT.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
     after:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
@@ -3076,7 +3076,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'JSawyer - Project Nevada.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
     after:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
@@ -3087,7 +3087,7 @@ plugins:
       - Relev
       - Stats
   - name: 'JSawyer - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60665' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
     tag:
       - Deflst
       - Graphics
@@ -3096,7 +3096,7 @@ plugins:
       - Scripts
       - Stats
   - name: 'JSawyer Ultimate.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
     tag:
       - Delev
       - Factions
@@ -3104,7 +3104,7 @@ plugins:
       - Names
       - Relev
   - name: 'JSawyer Ultimate - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
     tag:
       - Delev
       - Invent
@@ -3165,12 +3165,12 @@ plugins:
     inc: [ 'CASM.esp' ]
 
   - name: 'NewCalifornia DLC Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     inc: [ 'Simple DLC Delay.esp' ]
   - name: 'NewCalifornia Courier Stash Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
   - name: 'FNC Overhaul Project.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/70735' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70735/' ]
     msg:
       - type: warning
         content:
@@ -3425,7 +3425,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'FOOK - New Vegas.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/34684' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
     inc: [ *TTWv320 ]
     tag:
       - Deflst
@@ -3597,13 +3597,13 @@ plugins:
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
   - name: 'Book of Steel.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
     tag: [ Graphics ]
   - name: 'Book of Steel - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
     tag: [ Graphics ]
   - name: 'Equipment Restoration Project.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
       - Actors.Stats
       - Delev
@@ -3630,17 +3630,17 @@ plugins:
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
   - name: 'Equipment Restoration Project - EVE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     after: [ 'EVE FNV - ALL DLC.esp' ]
   - name: 'Equipment Restoration Project - IMPACT.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     after:
       - 'IMPACT.esp'
       - 'IMPACT - ALLDLC.esp'
       - 'IMPACT-POPMerged.esp'
       - 'IMPACT - TTW.esp'
   - name: 'Equipment Restoration Project - JSawyer.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
       - Actors.ACBS
       - Delev
@@ -3651,7 +3651,7 @@ plugins:
       - 'jsawyer.esp'
       - 'JSawyer - CE.esp'
   - name: 'Equipment Restoration Project - Project Nevada.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
       - Actors.Stats
       - Delev
@@ -3665,7 +3665,7 @@ plugins:
       - 'Project Nevada - Cyberware Additions.esp'
       - 'Project Nevada - All DLC.esp'
   - name: 'Equipment Restoration Project - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -3675,7 +3675,7 @@ plugins:
       - C.Owner
       - Invent
   - name: 'Equipment Restoration Project - WRP.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43875' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag: [ Graphics ]
     after:
       - '357retex.esp'
@@ -3692,7 +3692,7 @@ plugins:
   - name: 'LouderGuns.esp'
     tag: [ Sound ]
   - name: 'awilderwasteland.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158/' ]
     inc: [ 'awilderwastelandnobenny.esp' ]
     tag:
       - Actors.AIPackages
@@ -3706,18 +3706,18 @@ plugins:
       - crc: 0x0FD4B374
         util: 'FNVEdit v4.0.2f'
   - name: 'awilderwastelandnobenny.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46158' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158/' ]
     clean:
       - crc: 0xEDF9A5A4
         util: 'FNVEdit v4.0.2f'
   - name: 'betsybrahmin.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46574/' ]
     inc: [ 'betsybrahminFSO.esp' ]
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
   - name: 'betsybrahminFSO.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46574' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46574/' ]
     after:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
@@ -4022,7 +4022,7 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'FCO - NPC Changes.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     tag:
       - Actors.ACBS
       - Eyes
@@ -4033,20 +4033,20 @@ plugins:
       - crc: 0x0FFAA819
         util: 'FNVEdit v4.0.2f'
   - name: 'FCO.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     msg: [ *obsolete ]
   - name: 'FCO - Roberts Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     after: [ 'Roberts_NewVegas.esp' ]
     tag: [ Body-M ]
     clean:
       - crc: 0xDA98F6B1
         util: 'FNVEdit v4.0.2f'
   - name: 'FCO - Playable Races + Roberts Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     msg: [ *obsolete ]
   - name: 'FCO - OWB.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     msg: [ *obsolete ]
   - name: 'FCO - Willow.esp'
     tag:
@@ -4058,23 +4058,23 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - GlowingOne.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     tag: [ Scripts ]
     clean:
       - crc: 0x0E746E1D
         util: 'FNVEdit v4.0.2f'
   - name: 'FCO - The New Bison Steve.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     tag:
       - NPC.Race
       - NpcFaces
   - name: 'FCO - Afterschool Special.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54460' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     tag:
       - NPC.Race
       - NpcFaces
   - name: 'NVR- Lore version.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'NVR- Recommended.esp'
       - 'New Vegas Redesigned.esm'
@@ -4085,7 +4085,7 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Recommended.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'NVR- Lore version.esp'
       - 'New Vegas Redesigned.esm'
@@ -4096,7 +4096,7 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'New Vegas redesigned- Honest Hearts.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned 3.esm'
@@ -4106,7 +4106,7 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'Voice dissonance fix.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned 3.esm'
@@ -4324,7 +4324,7 @@ plugins:
     inc: [ 'ScientistPack.esp' ]
 
   - name: 'GRA Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/44170' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44170/' ]
     inc:
       - 'GRA Overhaul - EVE.esp'
       - 'GRA Overhaul - WMX or WME.esp'
@@ -4348,19 +4348,19 @@ plugins:
       - Stats
 
   - name: '001 Project Weaponry.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/53689' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/53689/' ]
     inc: [ *TTWv320 ]
 
   - name: 'GunRunnerArsenalAdjust.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/44152' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44152/' ]
     inc: [ *TTWv320 ]
 
   - name: 'GunRunnersArsenal - BEGONE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/64249' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64249/' ]
     inc: [ *TTWv320 ]
 
   - name: 'GunRunnersArsenal Integration Mod.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/44587' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44587/' ]
     inc: [ *TTWv320 ]
 
   - name: 'NV GameStabilizerA8.esp'
@@ -4492,7 +4492,7 @@ plugins:
   - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
     msg: [ *obsolete ]
   - name: 'NevadaSkies.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherGroup
     tag:
       - C.Climate
@@ -4501,7 +4501,7 @@ plugins:
       - crc: 0x4494A10F
         util: 'FNVEdit v4.0.2f'
   - name: 'Nevada Skies - Ultimate DLC Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     msg: [ *obsolete ]
   - name: 'Nevada Skies - URWLified.esp'
     msg: [ *obsolete ]
@@ -4688,7 +4688,7 @@ plugins:
   - name: 'Shotgun Commando Redone.esp'
     inc: [ 'Shotgun Commando.esp' ]
   - name: 'NewVegasBountiesII.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/41184' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41184/' ]
     after: [ NewVegasBounties.esp ]
     tag: [ Relations ]
     dirty:
@@ -4698,7 +4698,7 @@ plugins:
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 2
   - name: 'TheInheritance.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/49012' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/49012/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4716,20 +4716,20 @@ plugins:
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
   - name: 'Russell.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/50107' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50107/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
       - 'TheInheritance.esp'
   - name: 'KingOfTheRing.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56353' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
       - 'TheInheritance.esp'
       - 'Russell.esp'
   - name: 'NewVegasKiller.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56408' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56408/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4737,7 +4737,7 @@ plugins:
       - 'Russell.esp'
       - 'KingOfTheRing.esp'
   - name: 'Badmothafucka.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56742' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56742/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4746,7 +4746,7 @@ plugins:
       - 'KingOfTheRing.esp'
       - 'NewVegasKiller.esp'
   - name: 'NewVegasBountiesIII.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/55744' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55744/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4756,7 +4756,7 @@ plugins:
       - 'NewVegasKiller.esp'
       - 'Badmothafucka.esp'
   - name: 'TheBetterAngels.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60837' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60837/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4767,7 +4767,7 @@ plugins:
       - 'Badmothafucka.esp'
       - 'NewVegasBountiesIII.esp'
   - name: 'CheckpointGary.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60877' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60877/' ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
@@ -4797,7 +4797,7 @@ plugins:
       - Factions
       - Names
   - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
     tag: [ C.Light ]
     after: [ 'GRARG.esp' ]
     dirty:
@@ -4811,7 +4811,7 @@ plugins:
   - name: 'AnimatedFan.esp'
     tag: [ Destructible ]
   - name: 'Tales from the Burning Sands.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37172' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37172/' ]
     tag:
       - Factions
       - Names
@@ -4829,7 +4829,7 @@ plugins:
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 1
   - name: 'avangraffscorned.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45991' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45991/' ]
     tag: [ Actors.AIPackages ]
     dirty:
       - <<: *quickClean
@@ -4846,7 +4846,7 @@ plugins:
   - name: 'DeadMoneyFemaleTuxedo.esp'
     tag: [ Graphics ]
   - name: 'Roberts_NewVegas.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54731' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54731/' ]
     tag:
       - Body-M
       - Graphics
@@ -4869,7 +4869,7 @@ plugins:
   - name: 'Armor Replacer Child NPC Fix.esp'
     tag: [ Invent ]
   - name: 'athornysituation.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46048' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46048/' ]
     tag:
       - Relations
       - Scripts
@@ -4883,7 +4883,7 @@ plugins:
       - crc: 0x55936DD2
         util: 'FNVEdit v4.0.2f'
   - name: 'GRA - The Right to Bear Arms.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46138' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46138/' ]
     tag:
       - Delev
       - Relev
@@ -4906,7 +4906,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'NCRTrooperOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52721' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52721/' ]
     tag:
       - Graphics
       - Invent
@@ -4924,7 +4924,7 @@ plugins:
   - name: 'New Vegas Bounties II.esp'
     tag: [ C.Light ]
   - name: 'TrooperOverhaul-Dragbody.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/54978' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54978/' ]
     tag:
       - Actors.ACBS
       - Deflst
@@ -4945,7 +4945,7 @@ plugins:
       - crc: 0x4A0CAB7E
         util: 'FNVEdit v4.0.2f'
   - name: 'Pacersgambit.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46584' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46584/' ]
     tag:
       - Actors.AIPackages
       - Scripts
@@ -4959,42 +4959,42 @@ plugins:
       - crc: 0x2763D9AD
         util: 'FNVEdit v4.0.2f'
   - name: 'Pip-Boy Light - Amber.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
     inc:
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Blue.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Green.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - White.esp'
   - name: 'Pip-Boy Light - White.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
     inc:
       - 'Pip-Boy Light - Amber.esp'
       - 'Pip-Boy Light - Blue.esp'
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintroExtended.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
     inc: [ 'originalintro.esp' ]
     tag:
       - Actors.AIPackages
@@ -5009,7 +5009,7 @@ plugins:
       - crc: 0x746FE533
         util: 'FNVEdit v4.0.2f'
   - name: 'originalintro.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46585' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
     tag:
       - Actors.AIPackages
       - Invent
@@ -5026,16 +5026,16 @@ plugins:
   - name: 'RaestlozFactionArmorEnhancement.esp'
     tag: [ Scripts ]
   - name: 'Tutorial Killer.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47746' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
     clean:
       # v1.52
       - crc: 0x4FEB2B60
         util: 'FNVEdit v4.0.2f'
   - name: 'Tutorial Killer - Alternate Start.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47746' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
     msg: [ *obsolete ]
   - name: 'Weapons.of.the.New.Millenia.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/55008' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55008/' ]
     inc: [ *TTWv320 ]
     dirty:
       - <<: *quickClean
@@ -5046,7 +5046,7 @@ plugins:
       - crc: 0xAF85969D
         util: 'FNVEdit v4.0.2f'
   - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
     tag:
       - Delev
       - Graphics
@@ -5060,7 +5060,7 @@ plugins:
       - crc: 0x695E7A34
         util: 'FNVEdit v4.0.2f'
   - name: 'REPCONN Test Site Fixes.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/41114']
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41114/' ]
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -5068,7 +5068,7 @@ plugins:
       - Scripts
 
   - name: 'New Vegas Redesigned 3.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
     after: [ 'Project Beauty.esm' ]
     inc:
       - 'New Vegas Redesigned.esm'
@@ -5092,7 +5092,7 @@ plugins:
         itm: 94
         udr: 73
   - name: 'New Vegas Redesigned 3.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
@@ -5115,14 +5115,14 @@ plugins:
         itm: 1001
         udr: 74
   - name: 'Gomorrah Redesigned v2.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
     dirty:
       - <<: *quickClean
         crc: 0x54E5F3EE
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         udr: 3
   - name: 'Bitter Springs Redesigned.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
     dirty:
       - <<: *quickClean
         crc: 0x0F5F3084
@@ -5131,7 +5131,7 @@ plugins:
         udr: 5
 
   - name: 'Wasteland Gals.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/67079' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
     inc: [ *TTWv320 ]
 
   - name: 'Boacombat2glove.esp'
@@ -5141,37 +5141,37 @@ plugins:
       - Delev
       - Graphics
   - name: 'FNVLODGen.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/58562' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58562/' ]
     group: *lodGroup
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
     group: *lodGroup
   - name: 'tmzLODadditions.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/58562' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58562/' ]
     group: *lodGroup
     after:
       - 'FNVLODGen.esp'
       - 'TTWLODGen.esp'
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherGroup
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - Basic Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherGroup
     inc:
       - 'NevadaSkies - Ultimate DLC Edition.esp'
       - 'NevadaSkies - TTW Edition.esp'
   - name: 'NevadaSkies - TTW Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherGroup
     inc:
       - 'NevadaSkies - Basic Edition.esp'
       - 'NevadaSkies - Ultimate DLC Edition.esp'
   - name: 'FNV Realistic Wasteland Lighting - Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -5181,7 +5181,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
@@ -5191,7 +5191,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -5203,7 +5203,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -5215,7 +5215,7 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV RWL Darker Nights.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -5228,7 +5228,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
     msg: [ *obsolete ]
   - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV RWL Darker Nights.esp'
@@ -5297,7 +5297,7 @@ plugins:
       - Sound
 
   - name: 'ExplosivesImmunityFix.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60496' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60496/' ]
     dirty:
       - <<: *quickClean
         crc: 0xEC0F1920
@@ -5307,7 +5307,7 @@ plugins:
       - crc: 0xFFF2EB3D
         util: 'FNVEdit v4.0.2f'
   - name: 'lexx_brahmin-variant.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/58871' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58871/' ]
     dirty:
       - <<: *quickClean
         crc: 0xB596767C
@@ -5380,9 +5380,9 @@ plugins:
 
   - name: 'IMPACT.esp'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/57113'
+      - link: 'https://www.nexusmods.com/newvegas/mods/57113/'
         name: 'IMPACT'
-      - link: 'https://www.nexusmods.com/newvegas/mods/62050'
+      - link: 'https://www.nexusmods.com/newvegas/mods/62050/'
         name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
     inc:
       - <<: *TTWv320
@@ -5394,7 +5394,7 @@ plugins:
 
   - name: 'CAGE 1.9.3.2.esp'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/42428'
+      - link: 'https://www.nexusmods.com/newvegas/mods/42428/'
         name: 'CAGE: Continue After Games Ending'
     inc: [ *TTWv320 ]
     msg:
