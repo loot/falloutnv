@@ -345,6 +345,7 @@ bash_tags:
   - 'Actors.Anims'
   - 'Actors.CombatStyle'
   - 'Actors.DeathItem'
+  - 'Actors.Factions'
   - 'Actors.RecordFlags'
   - 'Actors.Skeleton'
   - 'Actors.Spells'
@@ -370,8 +371,8 @@ bash_tags:
   - 'Delev'
   - 'Destructible'
   - 'EffectStats'
+  - 'Enchantments'
   - 'EnchantmentStats'
-  - 'Factions'
   - 'Filter'
   - 'Graphics'
   - 'Invent.Add'
@@ -414,12 +415,6 @@ bash_tags:
   - 'Stats'
   - 'Text'
   - 'WeaponMods'
-  ## Removed & Deprecated Bash Tags ##
-  - 'Invent'
-  - 'NpcFaces'
-  - 'Npc.EyesOnly'
-  - 'Npc.HairOnly'
-  - 'Relations'
 
 globals:
 # Latest LOOT Thread
