@@ -1301,7 +1301,9 @@ plugins:
         itm: 1
 
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
   - name: 'RobCo Certified.esm'
     msg:
       - *requiresNVSE
@@ -1319,7 +1321,9 @@ plugins:
         itm: 9
   - name: 'RobCo Certified Friendly Hit Fixer.esp'
   - name: 'Companion Core.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
     msg: [ *requiresNVSE ]
     dirty:
       - <<: *quickClean
