@@ -1312,12 +1312,12 @@ plugins:
         condition: 'checksum("RobCo Certified.esm", 3B386B25) or checksum("RobCo Certified.esm", 5417FDBA)'
     dirty:
       - <<: *quickClean
-        crc: 0x4BFBB411
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 10
+        crc: 0x3B386B25
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
       - <<: *quickClean
-        crc: 0x3B28B2FE
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0x81401EEC
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
   - name: 'RobCo Certified Friendly Hit Fixer.esp'
     msg:
@@ -1335,7 +1335,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xCF5E979C
-        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
   - name: 'VanessaFollowerNV.esm'
