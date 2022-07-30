@@ -1309,7 +1309,7 @@ plugins:
       - *requiresNVSE
       - <<: *wildEdits
         subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
-        condition: 'checksum("RobCo Certified.esm", 4BFBB411) or checksum("RobCo Certified.esm", 46411E63) or checksum("RobCo Certified.esm", 3B28B2FE) or checksum("RobCo Certified.esm", CA37D0CB)'
+        condition: 'checksum("RobCo Certified.esm", 3B386B25) or checksum("RobCo Certified.esm", 5417FDBA)'
     dirty:
       - <<: *quickClean
         crc: 0x4BFBB411
