@@ -1320,6 +1320,13 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
   - name: 'RobCo Certified Friendly Hit Fixer.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
+            - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
   - name: 'Companion Core.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
