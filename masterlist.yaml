@@ -1317,6 +1317,7 @@ plugins:
         crc: 0x3B28B2FE
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 9
+  - name: 'RobCo Certified Friendly Hit Fixer.esp'
   - name: 'Companion Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43331/' ]
     msg: [ *requiresNVSE ]
