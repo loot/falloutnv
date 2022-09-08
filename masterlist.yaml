@@ -1937,7 +1937,6 @@ plugins:
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
-    after: [ 'nVamp - Core.esm' ]
     tag:
       - Deflst
       - Invent.Add
@@ -2504,7 +2503,6 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Equipment.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
-    after: [ 'nVamp - Core.esm' ]
     inc: [ *TTWv320 ]
     tag:
       - Actors.ACBS
@@ -2622,7 +2620,6 @@ plugins:
         util: 'FNVEdit v4.0.2f'
   - name: 'Project Nevada - Extra Options.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
-    after: [ 'nVamp - Core.esm' ]
     clean:
       # v1.3
       - crc: 0xAB2F211D
@@ -2684,8 +2681,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'CFWNV-DLC.esm'
-    after: [ 'nVamp - Core.esm' ]
   - name: 'Psiclones.esm'
     tag: [ Names ]
   - name: 'SelectFire.esm'
@@ -2720,34 +2715,8 @@ plugins:
       - 'iHUD.esm'
       - 'Primary Needs HUD.esm'
     msg: [ *requiresNVSE ]
-  - name: 'nVamp - Effects nVamped.esm'
-    msg:
-      - type: say
-        content: 'Optional for the nVamp graphics effects.'
-  - name: 'nVamp - Hardcore nVamped.esm'
-    msg:
-      - type: say
-        content: 'Requires: Separate resource files.'
-      - type: say
-        content: 'Optional for a more difficult experience.'
-  - name: 'nVamp - Hardcore Really nVamped.esm'
-    msg:
-      - type: say
-        content: 'Optional for a more difficult experience.'
-  - name: 'nVamp - Performance nVamped.esm'
-    msg:
-      - type: say
-        content: 'Optional file designed to increase game performance for those with older computers.'
-  - name: 'nVamp - Vaernus''s Voracious Vermin.esm'
-    msg: [ *obsolete ]
-  - name: 'BoulderCityFaceliftProject.esm'
-    after: [ 'nVamp - Core.esm' ]
-  - name: 'The Roost.esm'
-    after: [ 'nVamp - Core.esm' ]
-  - name: 'dangame.esm'
-    after: [ 'nVamp - Core.esm' ]
+
   - name: 'HonestHearts-CaliberX.esm'
-    after: [ 'nVamp - Core.esm' ]
     tag: [ Names ]
   - name: 'CFWTTW.esm'
     url: [ 'https://taleoftwowastelands.com/content/classic-fallout-weapons-ttw' ]
@@ -3899,11 +3868,7 @@ plugins:
       - Names
       - Relev
       - Stats
-  - name: 'Advanced Recon Tech - Fiendish Power Armor.esp'
-    msg:
-      - type: say
-        content: 'Merged into nVamp - Advanced Mod Project. Do not use both at the same time.'
-        condition: 'file("nVamp - Core.esm")'
+
   - name: 'Armored PA Gloves.esp'
     tag: [ Deflst ]
   - name: 'AsharasLightningItems_ForNV.esp'
@@ -3924,11 +3889,6 @@ plugins:
     inc: [ 'ERCA.esp' ]
   - name: 'ERCAFACTLESS.esp'
     inc: [ 'ERCA.esp' ]
-  - name: 'Fiendish Power Armor - Project Nevada.esp'
-    msg:
-      - type: say
-        content: 'Merged into nVamp - New Vegas Mod Project. Do not use together.'
-        condition: 'file("nVamp.*\.esp")'
 
   - name: 'Hereticus Faction Armors Fading.esp'
     tag: [ Names ]
@@ -3951,10 +3911,6 @@ plugins:
   - name: 'Powered Power Armor.esp'
     tag: [ Deflst ]
 
-  - name: 'Rivens Costume Mod.esp'
-    msg:
-      - type: say
-        content: 'Designed for Robert''s Male Body and Type3 Female Body variants.'
   - name: 'Seeker Veronica.esp'
     tag: [ Invent ]
   - name: 'sexysleepwear.esp'
@@ -3996,18 +3952,7 @@ plugins:
       - R.Mouth
       - R.Teeth
       - Voice-F
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC01.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC02.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC03.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
+
   - name: 'NVCE DLC01.esp'
     tag:
       - Actors.ACBS
@@ -4579,70 +4524,6 @@ plugins:
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'nVamp - Tales from the Burning Sands.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - A World of Pain.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Classic Fallout Weapons.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - New Vegas Bounties.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Caesars Legion Overhaul.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - More Perks.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Increased Wasteland Spawns.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Effects and Graphics.esp'
-    msg:
-      - type: say
-        content: 'OPTIONAL FOR GRAPHICAL OVERHAUL'
-      - *obsolete
-  - name: 'nVamp - Superior Firepower.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Combat Enhancement.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Game Fixes.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - Core.esp'
-    req: [ 'nVamp - Core.esm' ]
-  - name: 'nVamp - VVV - Bosses.esp'
-    msg:
-      - type: say
-        content: 'Optional component of nVamp.'
-  - name: 'nVamp - VVV - Glowy Creatures.esp'
-    msg:
-      - type: say
-        content: 'Optional component of nVamp.'
-  - name: 'nVamp - Effects nVamped.esp'
-    msg:
-      - type: say
-        content: 'Optional for nVamp''s graphics overhaul.'
-  - name: 'nVamp - Performance nVamped.esp'
-    msg:
-      - type: say
-        content: 'Optional to increase game performance for those with older computers.'
-  - name: 'nVamp - HalfSpeed.esp'
-    inc: [ 'nVamp - VanillaSpeed.esp' ]
-  - name: 'nVamp - EasierAI.esp'
-    inc: [ 'nVamp - HarderAI.esp' ]
-  - name: 'nVamp - VVV - Low Spawns.esp'
-    inc: [ 'nVamp - VVV - Med Spawns.esp' ]
-  - name: 'nVamp - Hardcore nVamped.esp'
-    msg:
-      - type: say
-        content: 'Optional for a more difficult experience.'
-  - name: 'nVamp - Hardcore Really nVamped.esp'
-    msg:
-      - type: say
-        content: 'Optional for a more difficult experience.'
-  - name: 'nVamp - Vaernus''s Voracious Vermin.esp'
-    msg: [ *obsolete ]
-  - name: 'nVamp - More Hardcore.esp'
-    msg:
-      - type: say
-        content: 'Optional for a more difficult experience.'
-      - *obsolete
   - name: 'DK Caucasians.esp'
     msg:
       - type: say
