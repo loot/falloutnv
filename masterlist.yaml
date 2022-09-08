@@ -3992,18 +3992,7 @@ plugins:
       - R.Mouth
       - R.Teeth
       - Voice-F
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC01.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC02.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
-  - name: 'Machienzo - NPC Cosmetic Fixes DLC03.esp'
-    msg:
-      - type: say
-        content: 'Old, update to NVCE.'
+
   - name: 'NVCE DLC01.esp'
     tag:
       - Actors.ACBS
