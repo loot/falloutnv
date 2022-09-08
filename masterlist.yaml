@@ -3951,10 +3951,6 @@ plugins:
   - name: 'Powered Power Armor.esp'
     tag: [ Deflst ]
 
-  - name: 'Rivens Costume Mod.esp'
-    msg:
-      - type: say
-        content: 'Designed for Robert''s Male Body and Type3 Female Body variants.'
   - name: 'Seeker Veronica.esp'
     tag: [ Invent ]
   - name: 'sexysleepwear.esp'
