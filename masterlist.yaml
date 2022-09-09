@@ -3087,11 +3087,6 @@ plugins:
       - Names
       - Relev
 
-  - name: 'FalloutNV_lang.esp'
-    msg:
-      - type: say
-        content: 'Translation file.'
-
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
   - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
