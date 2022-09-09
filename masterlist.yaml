@@ -933,6 +933,9 @@ plugins:
     group: *fixesGroup
 
   - name: 'RepairKitFix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40224/'
+        name: 'Weapon Repair Kit Fix'
     msg:
       - type: say
         content: 'This fix does not currently work for custom weapon durability mods which increase the weapon''s health by anything other than 50%.'
