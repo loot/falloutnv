@@ -936,6 +936,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40224/'
         name: 'Weapon Repair Kit Fix'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Yukichigai Unofficial Patch' ]
+        condition: 'active("YUP - Base Game( \+ All DLC)?\.esm")'
 
   - name: 'Strip Lights Region Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
