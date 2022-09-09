@@ -932,6 +932,15 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
     group: *fixesGroup
 
+  - name: 'RepairKitFix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40224/'
+        name: 'Weapon Repair Kit Fix'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Yukichigai Unofficial Patch' ]
+        condition: 'active("YUP - Base Game( \+ All DLC)?\.esm")'
+
   - name: 'Strip Lights Region Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
     group: *cellSettingsGroup
@@ -3121,10 +3130,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Reload Speed Game Start Fix.esp'
     msg: [ *requiresNVSE ]
-  - name: 'RepairKitFix.esp'
-    msg:
-      - type: say
-        content: 'This fix does not currently work for custom weapon durability mods which increase the weapon''s health by anything other than 50%.'
+
   - name: 'VendorAmmo45-70Fix.esp'
     msg: [ *obsolete ]
 
