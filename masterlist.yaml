@@ -1439,7 +1439,13 @@ plugins:
       - Invent.Remove
       - Relev
       - Stats
+    clean:
+      - crc: 0x803BB3FF
+        util: 'FNVEdit v4.0.4c'
   - name: 'Adventurers_New_Vegas-gameplay-and-combat-V02.esp'
+    clean:
+      - crc: 0x8C1ABEFC
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
