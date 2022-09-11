@@ -3550,10 +3550,6 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'Adventurers_New_Vegas-V0.1.esp'
-    msg:
-      - type: say
-        content: 'Old'
   - name: 'Arwen_NV_Realism_Core.esp'
     msg: [ *requiresNVSE ]
     tag: [ Stats ]
