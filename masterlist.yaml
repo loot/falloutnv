@@ -1416,6 +1416,20 @@ plugins:
         udr: 16
 
 ###### Environment, Landscape & Flora ######
+  - name: 'vault22FloralOverhaul.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
+        name: 'Vault 22 Flora Overhaul Remastered'
+    tag:
+      - C.Acoustic
+      - Graphics
+      - Invent.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0x113C1E94
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 14
+
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
     dirty:
