@@ -4692,10 +4692,7 @@ plugins:
         content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
   - name: 'Project Nevada - Med-X Fix.esp'
     tag: [ Names ]
-  - name: 'vault22FloralOverhaul.esp'
-    msg:
-      - type: say
-        content: 'Do not clean, otherwise, the game will crash on startup.'
+
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
