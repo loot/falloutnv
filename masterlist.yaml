@@ -1429,6 +1429,9 @@ plugins:
 
 ###### Gameplay ######
   - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34890/'
+        name: 'Adventurer''s New Vegas'
   - name: 'Adventurers_New_Vegas-econ-and-items-V02.esp'
   - name: 'Adventurers_New_Vegas-gameplay-and-combat-V02.esp'
 
