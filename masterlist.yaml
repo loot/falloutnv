@@ -1428,6 +1428,10 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay ######
+  - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
+  - name: 'Adventurers_New_Vegas-econ-and-items-V02.esp'
+  - name: 'Adventurers_New_Vegas-gameplay-and-combat-V02.esp'
+
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
     msg:
