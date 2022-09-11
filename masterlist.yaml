@@ -1416,6 +1416,8 @@ plugins:
         udr: 16
 
 ###### Environment, Landscape & Flora ######
+  - name: 'vault22FloralOverhaul.esm'
+
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
     dirty:
