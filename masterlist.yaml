@@ -1420,6 +1420,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
         name: 'Vault 22 Flora Overhaul Remastered'
+    tag:
+      - C.Acoustic
+      - Graphics
+      - Invent.Add
 
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
