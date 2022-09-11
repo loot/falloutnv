@@ -1428,6 +1428,25 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay ######
+  - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34890/'
+        name: 'Adventurer''s New Vegas'
+  - name: 'Adventurers_New_Vegas-econ-and-items-V02.esp'
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Relev
+      - Stats
+    clean:
+      - crc: 0x803BB3FF
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Adventurers_New_Vegas-gameplay-and-combat-V02.esp'
+    clean:
+      - crc: 0x8C1ABEFC
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
     msg:
@@ -3550,10 +3569,6 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'Adventurers_New_Vegas-V0.1.esp'
-    msg:
-      - type: say
-        content: 'Old'
   - name: 'Arwen_NV_Realism_Core.esp'
     msg: [ *requiresNVSE ]
     tag: [ Stats ]
