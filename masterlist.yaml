@@ -1897,6 +1897,14 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Remove **001543E3** from **FO3WeaponsRestoration.esp**.' ]
         condition: 'checksum("FO3WeaponsRestoration.esp", 2594F51D) or checksum("FO3WeaponsRestoration.esp", 7AAC79D3)'
+    tag:
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Sound
+      - Stats
+      - Text
   - name: 'FO3WeaponsRestorationRILForceOverride.esp'
     group: *lateChangesGroup
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
@@ -1904,6 +1912,7 @@ plugins:
       - <<: *requiresResources
         subs: [ 'Fallout 3' ]
         condition: 'not file("sound\fx\wpn\rifleassault\wpn_rifleassault_fire_lp.wav")'
+    tag: [ Sound ]
 
   - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41657/' ]
