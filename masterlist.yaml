@@ -1887,6 +1887,9 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
 ###### Items ######
+  - name: '.*FO3WeaponsRestoration.*\.esp'
+  - name: 'FO3WeaponsRestoration.esp'
+  - name: 'FO3WeaponsRestorationRILForceOverride.esp'
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
     msg:
       - type: say
