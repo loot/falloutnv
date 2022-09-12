@@ -1905,8 +1905,22 @@ plugins:
       - Sound
       - Stats
       - Text
+    dirty:
+      - <<: *quickClean
+        crc: 0x2594F51D
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x716C7DB0
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
   - name: 'FO3WeaponsRestorationRILForceOverride.esp'
     group: *lateChangesGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A21A2AB
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
     msg:
       - <<: *requiresResources
