@@ -1888,6 +1888,9 @@ plugins:
 
 ###### Items ######
   - name: '.*FO3WeaponsRestoration.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40007/'
+        name: 'Fallout 3 Weapons Restoration'
   - name: 'FO3WeaponsRestoration.esp'
   - name: 'FO3WeaponsRestorationRILForceOverride.esp'
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
