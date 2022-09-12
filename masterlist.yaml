@@ -496,6 +496,9 @@ groups:
   - name: &weatherGroup Weather & Lighting
     after: [ *cellSettingsGroup ]
 
+  - name: &lateChangesGroup Late Fixes & Changes
+    after: [ *weatherGroup ]
+
   - name: &dynamicPatchGroup Dynamic Patches
     after: [ *weatherGroup ]
 
