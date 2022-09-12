@@ -1893,6 +1893,10 @@ plugins:
         name: 'Fallout 3 Weapons Restoration'
   - name: 'FO3WeaponsRestoration.esp'
     inc: [ 'F03weaponpack_v1_14.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **001543E3** from **FO3WeaponsRestoration.esp**.' ]
+        condition: 'checksum("FO3WeaponsRestoration.esp", 2594F51D) or checksum("FO3WeaponsRestoration.esp", 7AAC79D3)'
   - name: 'FO3WeaponsRestorationRILForceOverride.esp'
     group: *lateChangesGroup
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
