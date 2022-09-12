@@ -1893,6 +1893,7 @@ plugins:
         name: 'Fallout 3 Weapons Restoration'
   - name: 'FO3WeaponsRestoration.esp'
   - name: 'FO3WeaponsRestorationRILForceOverride.esp'
+    group: *lateChangesGroup
   - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
     msg:
       - type: say
