@@ -1887,6 +1887,11 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
 ###### Items ######
+  - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
+    msg:
+      - type: say
+        content: 'User needs to move wav files from fallout 3 sound.bsa to use.'
+
   - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/41657/' ]
     msg:
@@ -3870,10 +3875,7 @@ plugins:
 
   - name: 'EnergyBoost.esp'
     tag: [ Stats ]
-  - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
-    msg:
-      - type: say
-        content: 'User needs to move wav files from fallout 3 sound.bsa to use.'
+
   - name: 'ImmaSightinMahLazor.esp'
     tag: [ Stats ]
 
