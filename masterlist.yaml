@@ -2025,6 +2025,11 @@ plugins:
         name: 'New Vegas Type3 Leather Armors'
     msg: [ *requiresResourcesType3 ]
 
+  - name: 'Type3 Leather Armors-lvld.esp'
+    msg:
+      - type: say
+        content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
+
 ###### Locations ######
   - name: 'Better Strip View.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73261/' ]
@@ -4007,10 +4012,6 @@ plugins:
       - Stats
       - Invent
 
-  - name: 'Type3 Leather Armors-lvld.esp'
-    msg:
-      - type: say
-        content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
   - name: 'w44Satchels - Full.esp'
     inc: [ 'w44Satchels - Lite.esp' ]
   - name: 'XVEnclaveBunker.esp'
