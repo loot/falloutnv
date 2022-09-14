@@ -2023,7 +2023,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39598/'
         name: 'New Vegas Type3 Leather Armors'
-    msg: [ *requiresResourcesType3 ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Type3 Leather Armors-lvld.esp**' ]
+        condition: 'active("Type3 Leather Armors-lvld.esp")'
+      - *requiresResourcesType3
 
   - name: 'Type3 Leather Armors-lvld.esp'
     url:
