@@ -1887,6 +1887,11 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
 ###### Items ######
+  - name: 'epock.esp'
+    msg:
+      - type: say
+        content: 'Meshes based off of the Type 3 Female Body.'
+
   - name: '.*FO3WeaponsRestoration.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40007/'
@@ -1987,6 +1992,11 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 18
 
+  - name: 'Nidaoutfitv1.esp'
+    msg:
+      - type: say
+        content: 'Designed for the Type3 Female Body Replacer variants.'
+
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
     req:
@@ -2006,6 +2016,11 @@ plugins:
     clean:
       - crc: 0x5DF9D6E4
         util: 'FNVEdit v4.0.3g'
+
+  - name: 'Type3 Leather Armors.esp'
+    msg:
+      - type: say
+        content: 'Designed for the Type3 Female Body Replacer.'
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
@@ -3952,10 +3967,7 @@ plugins:
 
   - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
     req: [ 'BlackWolf Backpack.esp' ]
-  - name: 'epock.esp'
-    msg:
-      - type: say
-        content: 'Meshes based off of the Type 3 Female Body.'
+
   - name: 'ERCA FACTLESS.esp'
     inc: [ 'ERCA.esp' ]
   - name: 'ERCAFACTLESS.esp'
@@ -3975,10 +3987,6 @@ plugins:
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
 
-  - name: 'Nidaoutfitv1.esp'
-    msg:
-      - type: say
-        content: 'Designed for the Type3 Female Body Replacer variants.'
   - name: 'Powered Power Armor.esp'
     tag: [ Deflst ]
 
@@ -3995,10 +4003,7 @@ plugins:
       - Graphics
       - Stats
       - Invent
-  - name: 'Type3 Leather Armors.esp'
-    msg:
-      - type: say
-        content: 'Designed for the Type3 Female Body Replacer.'
+
   - name: 'Type3 Leather Armors-lvld.esp'
     msg:
       - type: say
