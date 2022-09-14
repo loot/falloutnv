@@ -1891,9 +1891,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39972/'
         name: 'Tactical Clothing'
-    msg:
-      - type: say
-        content: 'Meshes based off of the Type 3 Female Body.'
+    msg: [ *requiresResourcesType3 ]
 
   - name: '.*FO3WeaponsRestoration.*\.esp'
     url:
@@ -1999,9 +1997,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40065/'
         name: 'Nida Schuetlich outfit for Type3'
-    msg:
-      - type: say
-        content: 'Designed for the Type3 Female Body Replacer variants.'
+    msg: [ *requiresResourcesType3 ]
 
   - name: 'QS_Blackwolf_NV_Backpackmod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
@@ -2027,9 +2023,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39598/'
         name: 'New Vegas Type3 Leather Armors'
-    msg:
-      - type: say
-        content: 'Designed for the Type3 Female Body Replacer.'
+    msg: [ *requiresResourcesType3 ]
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
