@@ -1776,6 +1776,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/35786/'
         name: 'FNV Respawn Timer'
   - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FNV Respawn Timer ESP' ]
+        condition: 'many("Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp")'
   - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?\.esp'
     msg:
       - <<: *useBashTweakInstead
