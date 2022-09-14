@@ -1722,6 +1722,9 @@ plugins:
 
 ###### Gameplay - Economy & Item Balance ######
   - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44171/'
+        name: 'Couriers Stash Pre-order pack selector'
   - name: 'Couriers Stash - Package Selection Menu.esp'
     msg:
       - type: say
