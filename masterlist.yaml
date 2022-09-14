@@ -2034,6 +2034,10 @@ plugins:
       - <<: *requiresResources
         subs: [ '[New Vegas Type3 Leather Armors](https://www.nexusmods.com/newvegas/mods/39598/)' ]
         condition: 'not file("meshes/Exeter/leather") or not file("textures/Exeter/Leather")'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
