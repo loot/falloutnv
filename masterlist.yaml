@@ -1726,7 +1726,13 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/44171/'
         name: 'Couriers Stash Pre-order pack selector'
   - name: 'Couriers Stash - Package Selection Menu.esp'
+    clean:
+      - crc: 0x3483C57F
+        util: 'FNVEdit v4.0.4c'
   - name: 'Disable Couriers Stash.esp'
+    clean:
+      - crc: 0x414F2AF8
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
