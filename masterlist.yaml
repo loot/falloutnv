@@ -1888,6 +1888,9 @@ plugins:
 
 ###### Items ######
   - name: 'epock.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39972/'
+        name: 'Tactical Clothing'
     msg:
       - type: say
         content: 'Meshes based off of the Type 3 Female Body.'
@@ -1993,6 +1996,9 @@ plugins:
         itm: 18
 
   - name: 'Nidaoutfitv1.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40065/'
+        name: 'Nida Schuetlich outfit for Type3'
     msg:
       - type: say
         content: 'Designed for the Type3 Female Body Replacer variants.'
@@ -2018,6 +2024,9 @@ plugins:
         util: 'FNVEdit v4.0.3g'
 
   - name: 'Type3 Leather Armors.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39598/'
+        name: 'New Vegas Type3 Leather Armors'
     msg:
       - type: say
         content: 'Designed for the Type3 Female Body Replacer.'
