@@ -1721,6 +1721,19 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44171/'
+        name: 'Couriers Stash Pre-order pack selector'
+  - name: 'Couriers Stash - Package Selection Menu.esp'
+    clean:
+      - crc: 0x3483C57F
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Disable Couriers Stash.esp'
+    clean:
+      - crc: 0x414F2AF8
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
     dirty:
@@ -4249,10 +4262,6 @@ plugins:
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
 
-  - name: 'Couriers Stash - Package Selection Menu.esp'
-    msg:
-      - type: say
-        content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
   - name: 'Delay DLC - DM + HH + OWB.esp'
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
