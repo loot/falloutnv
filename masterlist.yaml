@@ -1771,6 +1771,9 @@ plugins:
     msg: [ *requiresNVSE ]
 
 ###### Gameplay - NPC Balance & Distribution ######
+  - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
+  - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp'
+  - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?\.esp'
   - name: 'RespawnerImprovedEx.esp'
     msg:
       - type: say
