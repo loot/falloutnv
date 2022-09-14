@@ -2026,6 +2026,9 @@ plugins:
     msg: [ *requiresResourcesType3 ]
 
   - name: 'Type3 Leather Armors-lvld.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40109/'
+        name: 'New Vegas Type3 Leather Armors suppliment'
     msg:
       - type: say
         content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
