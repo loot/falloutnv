@@ -2023,7 +2023,30 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39598/'
         name: 'New Vegas Type3 Leather Armors'
-    msg: [ *requiresResourcesType3 ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Type3 Leather Armors-lvld.esp**' ]
+        condition: 'active("Type3 Leather Armors-lvld.esp")'
+      - *requiresResourcesType3
+
+  - name: 'Type3 Leather Armors-lvld.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40109/'
+        name: 'New Vegas Type3 Leather Armors suppliment'
+    msg:
+      - *requiresResourcesType3
+      - <<: *requiresResources
+        subs: [ '[New Vegas Type3 Leather Armors](https://www.nexusmods.com/newvegas/mods/39598/)' ]
+        condition: 'not file("meshes/Exeter/leather") or not file("textures/Exeter/Leather")'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xB88FA7AE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
@@ -4007,10 +4030,6 @@ plugins:
       - Stats
       - Invent
 
-  - name: 'Type3 Leather Armors-lvld.esp'
-    msg:
-      - type: say
-        content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
   - name: 'w44Satchels - Full.esp'
     inc: [ 'w44Satchels - Lite.esp' ]
   - name: 'XVEnclaveBunker.esp'
