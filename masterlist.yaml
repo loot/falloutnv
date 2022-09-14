@@ -1792,6 +1792,11 @@ plugins:
       - <<: *wildEdits
         condition: 'checksum("RespawnerImprovedEx.esp", 73B93095) or checksum("RespawnerImprovedEx.esp", 327F5573)'
     tag: [ Actors.ACBS ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x73B93095
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 29
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
