@@ -2038,6 +2038,11 @@ plugins:
       - Delev
       - Invent.Add
       - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xB88FA7AE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
