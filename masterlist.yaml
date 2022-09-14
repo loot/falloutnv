@@ -1777,6 +1777,9 @@ plugins:
         name: 'FNV Respawn Timer'
   - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp'
   - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
   - name: 'RespawnerImprovedEx.esp'
     msg:
       - <<: *requiresX
