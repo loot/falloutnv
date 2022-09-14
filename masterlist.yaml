@@ -2030,8 +2030,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/40109/'
         name: 'New Vegas Type3 Leather Armors suppliment'
     msg:
-      - type: say
-        content: '"Requires: meshes and textures from New Vegas Type3 Leather Armors."'
+      - <<: *requiresResources
+        subs: [ '[New Vegas Type3 Leather Armors](https://www.nexusmods.com/newvegas/mods/39598/)' ]
+        condition: 'not file("meshes/Exeter/leather") or not file("textures/Exeter/Leather")'
 
 ###### Locations ######
   - name: 'Better Strip View.esp'
