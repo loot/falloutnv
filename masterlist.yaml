@@ -1789,6 +1789,8 @@ plugins:
       - <<: *requiresX
         subs: [ 'FNV Respawn Timer Default ESP' ]
         condition: 'not active("Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp") and not active("Bashed Patch.*\.esp")'
+      - <<: *wildEdits
+        condition: 'checksum("RespawnerImprovedEx.esp", 73B93095) or checksum("RespawnerImprovedEx.esp", 327F5573)'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
