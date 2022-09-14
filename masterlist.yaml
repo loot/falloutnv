@@ -1770,6 +1770,8 @@ plugins:
   - name: 'VendorGameTimeRestock.esp'
     msg: [ *requiresNVSE ]
 
+###### Gameplay - NPC Balance & Distribution ######
+
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
     url:
