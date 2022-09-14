@@ -1771,6 +1771,10 @@ plugins:
     msg: [ *requiresNVSE ]
 
 ###### Gameplay - NPC Balance & Distribution ######
+  - name: 'RespawnerImprovedEx.esp'
+    msg:
+      - type: say
+        content: '"Requires: Respawn Timer (Any Version)"'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
@@ -4323,10 +4327,7 @@ plugins:
       - 'Permanent_Weapon_Shells_Very_Light.esp'
   - name: 'Permanent_Weapon_Shells_Very_Heavy.esp'
     inc: [ 'Permanent_Weapon_Shells_Very_Light.esp' ]
-  - name: 'RespawnerImprovedEx.esp'
-    msg:
-      - type: say
-        content: '"Requires: Respawn Timer (Any Version)"'
+
   - name: 'Quick Trade.esp'
     req: [ *MCM ]
   - name: 'Quick Trade - iHud.esp'
