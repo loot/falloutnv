@@ -2030,6 +2030,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/40109/'
         name: 'New Vegas Type3 Leather Armors suppliment'
     msg:
+      - *requiresResourcesType3
       - <<: *requiresResources
         subs: [ '[New Vegas Type3 Leather Armors](https://www.nexusmods.com/newvegas/mods/39598/)' ]
         condition: 'not file("meshes/Exeter/leather") or not file("textures/Exeter/Leather")'
