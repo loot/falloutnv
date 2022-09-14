@@ -1779,8 +1779,9 @@ plugins:
   - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?\.esp'
   - name: 'RespawnerImprovedEx.esp'
     msg:
-      - type: say
-        content: '"Requires: Respawn Timer (Any Version)"'
+      - <<: *requiresX
+        subs: [ 'FNV Respawn Timer Default ESP' ]
+        condition: 'not active("Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp") and not active("Bashed Patch.*\.esp")'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
