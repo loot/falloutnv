@@ -1721,10 +1721,12 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
   - name: 'Couriers Stash - Package Selection Menu.esp'
     msg:
       - type: say
         content: 'Does not require all the Courier''s Stash/Pre-order packs to work.'
+  - name: 'Disable Couriers Stash.esp'
 
   - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
