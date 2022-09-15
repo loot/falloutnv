@@ -1252,6 +1252,26 @@ plugins:
         subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
+###### Character Appearance - Body, Face & Hair ######
+  - name: 'DK Caucasians.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38788/'
+        name: 'DK Female Face Textures'
+    msg:
+      - <<: *useVersion
+        type: say
+        subs: [ '[Lings compatible](https://www.nexusmods.com/newvegas/mods/41548/)' ]
+        condition: 'active("Lings.esm") and not checksum("DK Caucasians.esp", C1254A5A)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB67B57E2
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      # Lings compatible
+      - crc: 0xC1254A5A
+        util: 'FNVEdit v4.0.4c'
+
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
@@ -4656,11 +4676,6 @@ plugins:
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'DK Caucasians.esp'
-    msg:
-      - type: say
-        content: '"Requires: [Lings compatibility patch](https://www.nexusmods.com/newvegas/mods/41548)."'
-        condition: 'file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)'
   - name: 'EwwGhoulyBody.esp'
     tag: [ Body-F ]
   - name: 'tkEyelashesFNV.esp'
