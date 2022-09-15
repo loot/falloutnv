@@ -1258,9 +1258,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/38788/'
         name: 'DK Female Face Textures'
     msg:
-      - type: say
-        content: '"Requires: [Lings compatibility patch](https://www.nexusmods.com/newvegas/mods/41548)."'
-        condition: 'file("Lings.esm") and checksum("DK Caucasians.esp", B67B57E2)'
+      - <<: *useVersion
+        type: say
+        subs: [ '[Lings compatible](https://www.nexusmods.com/newvegas/mods/41548/)' ]
+        condition: 'active("Lings.esm") and not checksum("DK Caucasians.esp", C1254A5A)'
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
