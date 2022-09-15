@@ -1380,6 +1380,9 @@ plugins:
         itm: 1
 
   - name: 'LW Companion.*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
+        name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
   - name: 'LW Companion.esm'
     msg:
       - type: say
