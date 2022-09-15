@@ -1311,7 +1311,13 @@ plugins:
       - R.Mouth
       - R.Teeth
   - name: 'tkEyelashesFNV.esp'
+    clean:
+      - crc: 0x6F963FDD
+        util: 'FNVEdit v4.0.4c'
   - name: 'tkEyelashesFNV_FemalesOnly.esp'
+    clean:
+      - crc: 0x19F63CB3
+        util: 'FNVEdit v4.0.4c'
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
