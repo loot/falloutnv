@@ -1272,6 +1272,7 @@ plugins:
       - crc: 0xC1254A5A
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Lings(PrettyThings)?\.es[mp]'
   - name: 'Lings.esm'
     tag:
       - Eyes
