@@ -1284,20 +1284,8 @@ plugins:
       - NpcFaces
   - name: 'LingsPrettyThings.esp'
     tag:
-      - Eyes
-      - Hair
-      - Invent
-      - Names
-      - NPC.Class
       - NPC.Race
       - NpcFaces
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.Description
-      - R.Head
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
