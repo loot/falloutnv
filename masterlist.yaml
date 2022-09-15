@@ -1273,6 +1273,9 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
   - name: 'Lings(PrettyThings)?\.es[mp]'
+    url:
+      - link: 'https://www.moddb.com/mods/lings-coiffure-nv/'
+        name: 'Lings Coiffure NV'
   - name: 'Lings.esm'
     tag:
       - Eyes
