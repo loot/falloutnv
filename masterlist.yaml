@@ -1865,6 +1865,11 @@ plugins:
       - Invent.Add
       - Invent.Remove
       - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B9B57BE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 8
 
 ###### Gameplay - NPC Balance & Distribution ######
   - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
