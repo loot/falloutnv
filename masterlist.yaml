@@ -1305,6 +1305,11 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Eyelashes ESP' ]
         condition: 'many("tkEyelashesFNV(_FemalesOnly)?\.esp")'
+    tag:
+      - Deactivate
+      - NoMerge
+      - R.Mouth
+      - R.Teeth
   - name: 'tkEyelashesFNV.esp'
   - name: 'tkEyelashesFNV_FemalesOnly.esp'
 
