@@ -1858,7 +1858,12 @@ plugins:
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
+      - Actors.Factions
+      - C.Encounter
       - C.Owner
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
       - Scripts
 
 ###### Gameplay - NPC Balance & Distribution ######
