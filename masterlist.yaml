@@ -1848,6 +1848,9 @@ plugins:
 
 ###### Gameplay - Follower Managers ######
   - name: 'NVPhalanx.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
+        name: 'Phalanx for New Vegas'
     msg:
       - type: say
         content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
