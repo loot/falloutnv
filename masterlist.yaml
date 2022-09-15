@@ -1297,6 +1297,7 @@ plugins:
       - crc: 0x024829C1
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'tkEyelashesFNV(_FemalesOnly)?\.esp'
   - name: 'tkEyelashesFNV.esp'
     msg:
       - type: say
