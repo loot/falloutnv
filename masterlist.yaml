@@ -1254,6 +1254,9 @@ plugins:
 
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38788/'
+        name: 'DK Female Face Textures'
     msg:
       - type: say
         content: '"Requires: [Lings compatibility patch](https://www.nexusmods.com/newvegas/mods/41548)."'
