@@ -1847,6 +1847,15 @@ plugins:
     msg: [ *requiresNVSE ]
 
 ###### Gameplay - Follower Managers ######
+  - name: 'NVPhalanx.esp'
+    msg:
+      - type: say
+        content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - C.Owner
+      - Scripts
 
 ###### Gameplay - NPC Balance & Distribution ######
   - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
@@ -4296,15 +4305,7 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.AIPackages
-  - name: 'NVPhalanx.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
-    tag:
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - C.Owner
-      - Scripts
+
   - name: 'RexReplacerEss.esp'
     tag: [ Graphics ]
   - name: 'RHKGilbertCompanion-Mikoto.esp'
