@@ -1379,6 +1379,7 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'LW Companion.*\.es[mp]'
   - name: 'LW Companion.esm'
     msg:
       - type: say
