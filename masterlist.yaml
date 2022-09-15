@@ -1272,6 +1272,29 @@ plugins:
       - crc: 0xC1254A5A
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Lings.esm'
+    tag:
+      - Eyes
+      - Hair
+      - Graphics
+      - NpcFaces
+  - name: 'LingsPrettyThings.esp'
+    tag:
+      - Eyes
+      - Hair
+      - Invent
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - NpcFaces
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.Description
+      - R.Head
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
@@ -2996,12 +3019,7 @@ plugins:
       - Actors.DeathItem
       - Graphics
       - Scripts
-  - name: 'Lings.esm'
-    tag:
-      - Eyes
-      - Hair
-      - Graphics
-      - NpcFaces
+
   - name: 'MikotoBeauty.esm'
     tag:
       - Eyes
@@ -4095,22 +4113,6 @@ plugins:
     inc: [ 'w44Satchels - Lite.esp' ]
   - name: 'XVEnclaveBunker.esp'
     tag: [ Invent ]
-  - name: 'LingsPrettyThings.esp'
-    tag:
-      - Eyes
-      - Hair
-      - Invent
-      - Names
-      - NPC.Class
-      - NPC.Race
-      - NpcFaces
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.Description
-      - R.Head
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
 
   - name: 'NVCE DLC01.esp'
     tag:
