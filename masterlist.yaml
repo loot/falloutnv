@@ -1276,16 +1276,17 @@ plugins:
     url:
       - link: 'https://www.moddb.com/mods/lings-coiffure-nv/'
         name: 'Lings Coiffure NV'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
   - name: 'Lings.esm'
     tag:
-      - Eyes
-      - Hair
       - Graphics
-      - NpcFaces
+      - R.Eyes
+      - R.Hair
   - name: 'LingsPrettyThings.esp'
-    tag:
-      - NPC.Race
-      - NpcFaces
+    tag: [ NPC.Race ]
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
