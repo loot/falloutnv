@@ -1379,6 +1379,15 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'LW Companion.*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
+        name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
+  - name: 'LW Companion.esm'
+    clean:
+      - crc: 0x758572C9
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
@@ -2605,10 +2614,6 @@ plugins:
       - Stats
   - name: 'LDFemalePowerArmorPack.esm'
     inc: [ 'LDFemalePowerArmorPack.esp' ]
-  - name: 'LW Companion.esm'
-    msg:
-      - type: say
-        content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
 
   - name: 'NSkies - Vanilla Edition.esm'
     inc: [ 'NSkies URWLified.esm' ]
