@@ -1285,6 +1285,9 @@ plugins:
       - Graphics
       - R.Eyes
       - R.Hair
+      - R.Mouth
+      - R.Teeth
+      - Stats
   - name: 'LingsPrettyThings.esp'
     tag: [ NPC.Race ]
 
