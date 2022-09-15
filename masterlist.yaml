@@ -1288,8 +1288,14 @@ plugins:
       - R.Mouth
       - R.Teeth
       - Stats
+    clean:
+      - crc: 0xAED0BCAF
+        util: 'FNVEdit v4.0.4c'
   - name: 'LingsPrettyThings.esp'
     tag: [ NPC.Race ]
+    clean:
+      - crc: 0x024829C1
+        util: 'FNVEdit v4.0.4c'
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
