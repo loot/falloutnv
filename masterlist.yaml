@@ -1846,6 +1846,8 @@ plugins:
   - name: 'VendorGameTimeRestock.esp'
     msg: [ *requiresNVSE ]
 
+###### Gameplay - Follower Managers ######
+
 ###### Gameplay - NPC Balance & Distribution ######
   - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
     url:
