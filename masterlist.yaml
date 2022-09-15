@@ -1384,6 +1384,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
         name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
   - name: 'LW Companion.esm'
+    clean:
+      - crc: 0x758572C9
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
     url:
