@@ -1384,9 +1384,6 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
         name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
   - name: 'LW Companion.esm'
-    msg:
-      - type: say
-        content: 'The custom esp file that is created by this mod needs to be sorted manually. Place after any beauty pack or hair mods.'
 
   - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
     url:
