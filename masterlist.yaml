@@ -1851,9 +1851,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
         name: 'Phalanx for New Vegas'
-    msg:
-      - type: say
-        content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
+    inc:
+      - 'DLCCompanions_1_3.esp'
+      - 'JIP Companions Command & Control.esp'
+      - 'UnlimitedCompanions.esp'
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
