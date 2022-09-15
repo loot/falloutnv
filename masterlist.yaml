@@ -1301,6 +1301,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/34790/'
         name: 'Eyelashes New Vegas'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Eyelashes ESP' ]
+        condition: 'many("tkEyelashesFNV(_FemalesOnly)?\.esp")'
   - name: 'tkEyelashesFNV.esp'
   - name: 'tkEyelashesFNV_FemalesOnly.esp'
 
