@@ -1262,6 +1262,15 @@ plugins:
         type: say
         subs: [ '[Lings compatible](https://www.nexusmods.com/newvegas/mods/41548/)' ]
         condition: 'active("Lings.esm") and not checksum("DK Caucasians.esp", C1254A5A)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB67B57E2
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      # Lings compatible
+      - crc: 0xC1254A5A
+        util: 'FNVEdit v4.0.4c'
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
