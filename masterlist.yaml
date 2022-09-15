@@ -1846,6 +1846,31 @@ plugins:
   - name: 'VendorGameTimeRestock.esp'
     msg: [ *requiresNVSE ]
 
+###### Gameplay - Follower Managers ######
+  - name: 'NVPhalanx.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
+        name: 'Phalanx for New Vegas'
+    inc:
+      - 'DLCCompanions_1_3.esp'
+      - 'JIP Companions Command & Control.esp'
+      - 'UnlimitedCompanions.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Factions
+      - C.Encounter
+      - C.Owner
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B9B57BE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 8
+
 ###### Gameplay - NPC Balance & Distribution ######
   - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
     url:
@@ -4294,15 +4319,7 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.AIPackages
-  - name: 'NVPhalanx.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with a majority of other companion mods. Be aware when installing."'
-    tag:
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - C.Owner
-      - Scripts
+
   - name: 'RexReplacerEss.esp'
     tag: [ Graphics ]
   - name: 'RHKGilbertCompanion-Mikoto.esp'
