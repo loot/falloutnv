@@ -1511,6 +1511,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Uncut Wasteland' ]
         condition: 'active("Uncut Wasteland( FSO)?( OB)?\.esp")'
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Yukichigai Unofficial Patch' ]
+        condition: 'active("YUP - (Base Game + All DLC|Old World Blues)\.esm")'
 
   - name: 'vault22FloralOverhaul.esm'
     url:
