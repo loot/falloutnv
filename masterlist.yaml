@@ -1560,6 +1560,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/55569/'
         name: 'KFE - Refill Water Bottles'
   - name: 'KFE - Refill Water Bottles.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Project Nevada - Rebalance' ]
+        condition: 'active("Project Nevada - Rebalance.esp") and not file("PN-Refill Water Bottles Patch.esp") and checksum("KFE - Refill Water Bottles.esp", 3349D934)'
     tag: [ Scripts ]
   - name: 'PN-Refill Water Bottles Patch.esp'
     msg:
