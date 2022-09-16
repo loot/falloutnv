@@ -1565,6 +1565,12 @@ plugins:
         subs: [ 'Project Nevada - Rebalance' ]
         condition: 'active("Project Nevada - Rebalance.esp") and not file("PN-Refill Water Bottles Patch.esp") and checksum("KFE - Refill Water Bottles.esp", 3349D934)'
     tag: [ Scripts ]
+    clean:
+      - crc: 0x3349D934
+        util: 'FNVEdit v4.0.4c'
+      # Project Nevada Patch
+      - crc: 0xB85EF60C
+        util: 'FNVEdit v4.0.4c'
   - name: 'PN-Refill Water Bottles Patch.esp'
     msg:
       - <<: *alreadyInX
