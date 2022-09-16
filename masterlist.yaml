@@ -1495,6 +1495,12 @@ plugins:
         udr: 16
 
 ###### Environment, Landscape & Flora ######
+  - name: 'Uncut Skeletons.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56625/' ]
+    msg:
+      - type: say
+        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
+
   - name: 'vault22FloralOverhaul.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
@@ -2533,12 +2539,6 @@ plugins:
   - name: 'HeroinZero Weapon Fixes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65041/' ]
     inc: [ *TTWv320 ]
-
-  - name: 'Uncut Skeletons.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56625/' ]
-    msg:
-      - type: say
-        content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
 
   - name: 'ProjectBrazil.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
