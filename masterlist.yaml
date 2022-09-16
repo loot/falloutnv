@@ -1555,6 +1555,28 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: '(KFE - |PN-)Refill Water Bottles( Patch| - Unbreakable Bottles)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55569/'
+        name: 'KFE - Refill Water Bottles'
+  - name: 'KFE - Refill Water Bottles.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Project Nevada - Rebalance' ]
+        condition: 'active("Project Nevada - Rebalance.esp") and not file("PN-Refill Water Bottles Patch.esp") and checksum("KFE - Refill Water Bottles.esp", 3349D934)'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x3349D934
+        util: 'FNVEdit v4.0.4c'
+      # Project Nevada Patch
+      - crc: 0xB85EF60C
+        util: 'FNVEdit v4.0.4c'
+  - name: 'PN-Refill Water Bottles Patch.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**KFE - Refill Water Bottles.esp**' ]
+        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
+
 ###### Gameplay - Combat ######
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
@@ -4855,13 +4877,6 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
 
-  - name: 'KFE - Refill Water Bottles.esp'
-    tag: [ Scripts ]
-  - name: 'PN-Refill Water Bottles Patch.esp'
-    msg:
-      - type: error
-        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
-        content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
   - name: 'Project Nevada - Med-X Fix.esp'
     tag: [ Names ]
 
