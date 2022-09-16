@@ -1555,6 +1555,7 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: '(KFE - |PN-)Refill Water Bottles( Patch| - Unbreakable Bottles)?\.esp'
   - name: 'KFE - Refill Water Bottles.esp'
     tag: [ Scripts ]
   - name: 'PN-Refill Water Bottles Patch.esp'
