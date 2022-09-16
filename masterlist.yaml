@@ -1555,6 +1555,14 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'KFE - Refill Water Bottles.esp'
+    tag: [ Scripts ]
+  - name: 'PN-Refill Water Bottles Patch.esp'
+    msg:
+      - type: error
+        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
+        content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
+
 ###### Gameplay - Combat ######
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
@@ -4855,13 +4863,6 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
 
-  - name: 'KFE - Refill Water Bottles.esp'
-    tag: [ Scripts ]
-  - name: 'PN-Refill Water Bottles Patch.esp'
-    msg:
-      - type: error
-        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
-        content: 'Deactivate. The main file already contains the proper edits for Project Nevada compatibility.'
   - name: 'Project Nevada - Med-X Fix.esp'
     tag: [ Names ]
 
