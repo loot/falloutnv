@@ -1496,11 +1496,13 @@ plugins:
 
 ###### Environment, Landscape & Flora ######
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56625/'
+        name: 'Uncut Wasteland'
   - name: 'Uncut Wasteland( FSO)?( OB)?\.esp'
   - name: 'Uncut Extra Collection( FSO)?\.esp'
   - name: 'Uncut Greenhouses.esp'
   - name: 'Uncut Skeletons.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56625/' ]
     msg:
       - type: say
         content: 'Do not clean, restores skeletons that Old World Blues erroneously changed.'
