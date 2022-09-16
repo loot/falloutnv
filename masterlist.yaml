@@ -1500,6 +1500,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/56625/'
         name: 'Uncut Wasteland'
   - name: 'Uncut Wasteland( FSO)?( OB)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Uncut Wasteland ESP' ]
+        condition: 'many("Uncut Wasteland( FSO)?( OB)?\.esp")'
   - name: 'Uncut Extra Collection( FSO)?\.esp'
   - name: 'Uncut Greenhouses.esp'
     msg:
