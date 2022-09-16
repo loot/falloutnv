@@ -3419,24 +3419,7 @@ plugins:
     inc: [ 'Simple DLC Delay.esp' ]
   - name: 'NewCalifornia Courier Stash Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-  - name: 'FNC Overhaul Project.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/70735/' ]
-    msg:
-      - type: warning
-        content:
-          - lang: en
-            text: 'The mod modifies New California to an extent causing weird bugs while playing the game.'
-    dirty:
-      - <<: *reqManualFix
-        crc: 0x82A778A9
-        util: '[FNVEdit v4.0.3](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 2640
-        udr: 2978
-        nav: 6
-      - <<: *reqManualFix
-        crc: 0x84906997
-        util: '[FNVEdit v4.0.3](https://www.nexusmods.com/newvegas/mods/34703)'
-        nav: 6
+
   - name: 'Centered 3rd Person Camera.esp'
     inc: [ 'FOOK - New Vegas.esm' ]
   - name: 'Centered 3rd Person Camera - Unraised.esp'
