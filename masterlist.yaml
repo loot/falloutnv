@@ -1556,6 +1556,9 @@ plugins:
       - 'Pip-Boy Light - White.esp'
 
   - name: '(KFE - |PN-)Refill Water Bottles( Patch| - Unbreakable Bottles)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55569/'
+        name: 'KFE - Refill Water Bottles'
   - name: 'KFE - Refill Water Bottles.esp'
     tag: [ Scripts ]
   - name: 'PN-Refill Water Bottles Patch.esp'
