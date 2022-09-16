@@ -1502,6 +1502,10 @@ plugins:
   - name: 'Uncut Wasteland( FSO)?( OB)?\.esp'
   - name: 'Uncut Extra Collection( FSO)?\.esp'
   - name: 'Uncut Greenhouses.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Uncut Extra Collection' ]
+        condition: 'active("Uncut Extra Collection( FSO)?\.esp")'
   - name: 'Uncut Skeletons.esp'
 
   - name: 'vault22FloralOverhaul.esm'
