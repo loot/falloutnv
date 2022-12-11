@@ -935,6 +935,23 @@ plugins:
         itm: 1
 
 ###### Fixes ######
+  - name: 'AmmoScriptFixes.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/63997/'
+        name: 'Ammo Script Fixes'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - name: 'nvse/plugins/ShowOffNVSE.dll'
+        display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
+    msg: [ *requiresNVSE ]
+    tag:
+      - ObjectBounds
+      - Scripts
+    clean:
+      - crc: 0xD4796EBA
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
     group: *fixesGroup
