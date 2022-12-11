@@ -936,6 +936,9 @@ plugins:
 
 ###### Fixes ######
   - name: 'AmmoScriptFixes.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/63997/'
+        name: 'Ammo Script Fixes'
 
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
