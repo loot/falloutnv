@@ -945,6 +945,9 @@ plugins:
       - name: 'nvse/plugins/ShowOffNVSE.dll'
         display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
     msg: [ *requiresNVSE ]
+    tag:
+      - ObjectBounds
+      - Scripts
 
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
