@@ -935,6 +935,8 @@ plugins:
         itm: 1
 
 ###### Fixes ######
+  - name: 'AmmoScriptFixes.esp'
+
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
     group: *fixesGroup
