@@ -948,6 +948,9 @@ plugins:
     tag:
       - ObjectBounds
       - Scripts
+    clean:
+      - crc: 0xD4796EBA
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
