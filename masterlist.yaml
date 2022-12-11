@@ -939,6 +939,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/63997/'
         name: 'Ammo Script Fixes'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - name: 'nvse/plugins/ShowOffNVSE.dll'
+        display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
 
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
