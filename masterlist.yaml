@@ -673,7 +673,9 @@ plugins:
 
 ###### Unofficial Patches ######
   - name: 'Unofficial Patch NVSE Plus.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
+        name: 'Unofficial Patch NVSE Plus'
     group: *fixesGroup
     req:
       - *JIPLN
