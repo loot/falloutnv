@@ -673,7 +673,9 @@ plugins:
 
 ###### Unofficial Patches ######
   - name: 'Unofficial Patch NVSE Plus.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/71239/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
+        name: 'Unofficial Patch NVSE Plus'
     group: *fixesGroup
     req:
       - *JIPLN
@@ -692,8 +694,8 @@ plugins:
       - Scripts
       - Text
     clean:
-      - crc: 0xCADA033D
-        util: 'FNVEdit v4.0.4'
+      - crc: 0x894F29EC
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'YUP .*\.es[mp]'
     url:
