@@ -694,8 +694,8 @@ plugins:
       - Scripts
       - Text
     clean:
-      - crc: 0xCADA033D
-        util: 'FNVEdit v4.0.4'
+      - crc: 0x894F29EC
+        util: 'FNVEdit v4.0.4c'
 
   - name: 'YUP .*\.es[mp]'
     url:
