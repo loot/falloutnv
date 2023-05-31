@@ -1173,6 +1173,13 @@ plugins:
       - 'Western Sky.esp'
       - 'Western Sky - Darker Nights.esp'
       - 'YellowGoodbye.esp'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Dusty Distance Redone' ]
+        condition: 'file("nvse/plugins/scripts/gr_DustyDistance.txt") or active("Dusty Distance Redone.esp")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: 'active("The Frontier.esm")'
 
   ### Interior Lighting Overhaul ###
   # Core #
