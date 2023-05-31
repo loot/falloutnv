@@ -507,7 +507,7 @@ groups:
     after: [ *weatherGroup ]
 
   - name: &dynamicPatchGroup Dynamic Patches
-    after: [ *weatherGroup ]
+    after: [ *lateChangesGroup ]
 
 plugins:
   - name: 'DeadMoney.esm'
