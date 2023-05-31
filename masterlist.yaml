@@ -1187,6 +1187,9 @@ plugins:
       - C.Light
       - C.Regions
       - Sound
+    clean:
+      - crc: 0xC196BC98
+        util: 'FNVEdit v4.0.4c'
 
   ### Interior Lighting Overhaul ###
   # Core #
