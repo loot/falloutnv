@@ -978,6 +978,15 @@ plugins:
       - crc: 0xADA6FC4C
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'zion_lod_water.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73376/'
+        name: 'Honest Hearts Zion LOD Water Height Fix'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DNWeathers.esp**' ]
+        condition: 'active("DNWeathers.esp")'
+
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
@@ -1126,6 +1135,80 @@ plugins:
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### AudioVisual - Weather & Lighting ######
+  - name: 'Cut_HD_Battle_Climate.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71812/'
+        name: 'Cut Hoover Dam Battle Weathers'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DNWeathers.esp**' ]
+        condition: 'active("DNWeathers.esp")'
+
+  - name: 'DNWeathers.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75437/'
+        name: 'Desert Natural Weathers'
+    group: *weatherGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    inc:
+      - 'Altitude.esp'
+      - 'BlueMoonImagespace.esp'
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - TTW.esp'
+      - 'Clarity - TTW - DarkNights.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'DUSTyWeather.esp'
+      - 'DynamicWeather.esp'
+      - 'EnhancedSkies_TTW.esp'
+      - 'EnhancedSkies_TTWRain.esp'
+      - 'EnhancedSkies_TTWRainBLUESKY.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'HDR Weather And Color.esp'
+      - 'Lucky38 Climate Fixed.esp'
+      - 'Lucky38 Climate FixedESMVersion.ESM'
+      - 'M0rk''s Lighting.esp'
+      - 'NevadaSkies.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Rain Fix.esp'
+      - 'Rain Fix only recalculation.esp'
+      - 'RainTweaks.esp'
+      - 'SSTAtmospheresWeather.esp'
+      - 'Supreme Weather.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+      - 'URWLNV-001-Weather.esm'
+      - 'URWLTTW-001-Weather.esm'
+      - 'Western Sky.esp'
+      - 'Western Sky - Darker Nights.esp'
+      - 'YellowGoodbye.esp'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Dusty Distance Redone' ]
+        condition: 'file("nvse/plugins/scripts/gr_DustyDistance.txt") or active("Dusty Distance Redone.esp")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: 'active("The Frontier.esm")'
+      - *requiresNVSE
+    tag:
+      - C.Climate
+      - C.ImageSpace
+      - C.Light
+      - C.Regions
+      - Sound
+    clean:
+      - crc: 0xC196BC98
+        util: 'FNVEdit v4.0.4c'
+
   ### Interior Lighting Overhaul ###
   # Core #
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1277,6 +1360,12 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Simple Street Lights ESP' ]
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
+
+  - name: 'True Weathers TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76244/'
+        name: 'True Weathers TTW'
+    after: [ 'DNWeathers.esp' ]
 
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
