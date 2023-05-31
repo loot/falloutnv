@@ -1127,6 +1127,9 @@ plugins:
 
 ###### AudioVisual - Weather & Lighting ######
   - name: 'DNWeathers.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75437/'
+        name: 'Desert Natural Weathers'
 
   ### Interior Lighting Overhaul ###
   # Core #
