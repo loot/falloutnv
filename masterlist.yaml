@@ -979,6 +979,9 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
   - name: 'zion_lod_water.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73376/'
+        name: 'Honest Hearts Zion LOD Water Height Fix'
 
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
