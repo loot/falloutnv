@@ -1181,6 +1181,12 @@ plugins:
         subs: [ 'Fallout - The Frontier' ]
         condition: 'active("The Frontier.esm")'
       - *requiresNVSE
+    tag:
+      - C.Climate
+      - C.ImageSpace
+      - C.Light
+      - C.Regions
+      - Sound
 
   ### Interior Lighting Overhaul ###
   # Core #
