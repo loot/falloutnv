@@ -1131,6 +1131,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/75437/'
         name: 'Desert Natural Weathers'
     group: *weatherGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
 
   ### Interior Lighting Overhaul ###
   # Core #
