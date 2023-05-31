@@ -1362,6 +1362,9 @@ plugins:
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
   - name: 'True Weathers TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76244/'
+        name: 'True Weathers TTW'
 
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
