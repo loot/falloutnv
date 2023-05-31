@@ -1365,6 +1365,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76244/'
         name: 'True Weathers TTW'
+    after: [ 'DNWeathers.esp' ]
 
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
