@@ -1361,6 +1361,8 @@ plugins:
         subs: [ 'Simple Street Lights ESP' ]
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
+  - name: 'True Weathers TTW.esp'
+
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
     url:
