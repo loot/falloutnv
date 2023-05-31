@@ -1180,6 +1180,7 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Fallout - The Frontier' ]
         condition: 'active("The Frontier.esm")'
+      - *requiresNVSE
 
   ### Interior Lighting Overhaul ###
   # Core #
