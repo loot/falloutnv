@@ -982,6 +982,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73376/'
         name: 'Honest Hearts Zion LOD Water Height Fix'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DNWeathers.esp**' ]
+        condition: 'active("DNWeathers.esp")'
 
 ###### Modding Tools - Resources ######
   - name: 'The Mod Configuration Menu.esp'
