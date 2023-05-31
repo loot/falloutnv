@@ -1136,6 +1136,9 @@ plugins:
 
 ###### AudioVisual - Weather & Lighting ######
   - name: 'Cut_HD_Battle_Climate.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71812/'
+        name: 'Cut Hoover Dam Battle Weathers'
 
   - name: 'DNWeathers.esp'
     url:
