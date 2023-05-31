@@ -1075,7 +1075,57 @@ plugins:
   - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
     msg: [ *obsolete ]
 
-###### AudioVisual - Lighting ######
+###### AudioVisual - Models & Textures ######
+  - name: 'MetalBoxes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x40F41790
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'WMIMNV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
+        name: 'Weapon Mesh Improvement Mod'
+      - link: 'https://github.com/VivaNewVegas/Viva-New-Vegas-Patch-Emporium/blob/main/WMIM%20ESP%20Replacer.7z'
+        name: 'Viva New Vegas WMIM Replacer'
+    group: *fixesGroup
+    inc:
+      - *TTWv320
+      - 'EVE FNV - ALL DLC.esp'
+      - 'EVE FNV - NO DLC.esp'
+      - 'EVE FNV - NO GRA.esp'
+      - 'Weapon Mod Expansion.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Sound
+      - Stats
+      - WeaponMods
+    # Do not clean
+
+###### AudioVisual - Sound & Music ######
+  - name: 'Improved Sound FX.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
+    tag: [ Sound ]
+  - name: 'Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - Merged Major DLCs.esp") and file("Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp")'
+  - name: 'Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and file("Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp")'
+  - name: 'Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
+
+###### AudioVisual - Weather & Lighting ######
   ### Interior Lighting Overhaul ###
   # Core #
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1227,56 +1277,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Simple Street Lights ESP' ]
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
-
-###### AudioVisual - Models & Textures ######
-  - name: 'MetalBoxes.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x40F41790
-        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
-
-  - name: 'WMIMNV.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
-        name: 'Weapon Mesh Improvement Mod'
-      - link: 'https://github.com/VivaNewVegas/Viva-New-Vegas-Patch-Emporium/blob/main/WMIM%20ESP%20Replacer.7z'
-        name: 'Viva New Vegas WMIM Replacer'
-    group: *fixesGroup
-    inc:
-      - *TTWv320
-      - 'EVE FNV - ALL DLC.esp'
-      - 'EVE FNV - NO DLC.esp'
-      - 'EVE FNV - NO GRA.esp'
-      - 'Weapon Mod Expansion.esm'
-    tag:
-      - Destructible
-      - Graphics
-      - Sound
-      - Stats
-      - WeaponMods
-    # Do not clean
-
-###### AudioVisual - Sound & Music ######
-  - name: 'Improved Sound FX.*\.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
-    tag: [ Sound ]
-  - name: 'Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ '**Improved Sound FX - Merged Major DLCs.esp**' ]
-        condition: 'active("Improved Sound FX - Merged Major DLCs.esp") and file("Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp")'
-  - name: 'Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ '**Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
-        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and file("Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp")'
-  - name: 'Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
-        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### Character Appearance - Body, Face & Hair ######
   - name: 'DK Caucasians.esp'
