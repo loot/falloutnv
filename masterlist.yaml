@@ -5516,12 +5516,32 @@ plugins:
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
     group: *lodGroup
+
   - name: 'tmzLODadditions.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/58562' ]
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
+      name: 'LOD additions and improvements'
     group: *lodGroup
-    after:
-      - 'FNVLODGen.esp'
-      - 'TTWLODGen.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Vish''s Patch Hub (FNV-TTW)'
+          - '[ LOD Additions - TTW Patch ](https://www.nexusmods.com/newvegas/mods/77945/)'
+        condition: 'active("tmzLODadditions.esp") and active("TaleOfTwoWastelands.esm") and not active("LOD Additions - TTW Patch.esp")'
+    clean:
+      - crc: 0x0A2432B9
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
+  - name: 'LOD Additions - TTW Patch.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
+      name: 'Vish''s Patch Hub (FNV-TTW)'
+    group: *lodGroup
+    after:  [ 'tmzLODadditions.esp' ]
+    clean:
+      - crc: 0x5BD687F8
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
   - name: 'NevadaSkies - Ultimate DLC Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
     group: *weatherGroup
