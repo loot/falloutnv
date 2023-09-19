@@ -5397,7 +5397,7 @@ plugins:
     - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
       name: 'Wasted LOD - Cliffs of DC'
     group: *lodGroup
-    req: *TTWv320
+    req: [ *TTWv320 ]
     clean:
       - crc: 0x8D74EB63
         util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
