@@ -5392,24 +5392,6 @@ plugins:
       - crc: 0x5BD687F8
         util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
 
-  - name: 'NevadaSkies - Ultimate DLC Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    group: *weatherGroup
-    inc:
-      - 'NevadaSkies - Basic Edition.esp'
-      - 'NevadaSkies - TTW Edition.esp'
-  - name: 'NevadaSkies - Basic Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    group: *weatherGroup
-    inc:
-      - 'NevadaSkies - Ultimate DLC Edition.esp'
-      - 'NevadaSkies - TTW Edition.esp'
-  - name: 'NevadaSkies - TTW Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998' ]
-    group: *weatherGroup
-    inc:
-      - 'NevadaSkies - Basic Edition.esp'
-      - 'NevadaSkies - Ultimate DLC Edition.esp'
   - name: 'FNV Realistic Wasteland Lighting - Full.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
