@@ -3517,6 +3517,22 @@ plugins:
       - Invent
       - Names
       - Relev
+  - name: 'sawyerbatty.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
+      name: 'SawyerBatty TTW'
+    inc:
+    - 'jsawyer.esp'
+    - 'Project Nevada - Rebalance.esp'
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - Relev
+    clean:
+      - crc: 0xDB8803A1
+        util: 'FNVEdit v4.0.4'
 
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
