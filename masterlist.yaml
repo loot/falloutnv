@@ -2204,6 +2204,15 @@ plugins:
     clean:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
+  - name: 'S6S Perks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73438/'
+        name: 'Sweet 6 Shooter Perks - TTW - NV'
+    clean:
+      - crc: 0xC95D69CA
+        util: 'FNVEdit v4.0.4'
+      - crc: 0x8EA841DD
+        util: 'FNVEdit v4.0.4'
 
 ###### Items ######
   - name: 'epock.esp'
