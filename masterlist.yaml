@@ -1676,6 +1676,14 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay ######
+  - name: 'Acquired_Immunity.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71170/'
+        name: 'Acquired Immunity - TTW 3.3'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0xDD2CD26F
+        util: 'FNVEdit v4.0.4'
   - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/34890/'
