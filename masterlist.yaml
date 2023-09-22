@@ -1701,6 +1701,19 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
+  - name: 'SD_Fatigue.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
+        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BDF8423
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
+
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
     after:
