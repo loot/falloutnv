@@ -1710,6 +1710,18 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'Ricks HardCore Fixer & Optimizer.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
+      name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
+    inc:
+      - 'jsawyer.esp'
+      - 'Project Nevada - Rebalance.esp'
+      - 'sawyerbatty.esp'
+    clean:
+      - crc: 0xB13B07BB
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
   - name: '(KFE - |PN-)Refill Water Bottles( Patch| - Unbreakable Bottles)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/55569/'
