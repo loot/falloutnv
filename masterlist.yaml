@@ -1718,6 +1718,27 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
+  - name: 'SD_Capture( TTW Additions)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
+        name: 'Subjugation - Slavery and Capture Mechanics'
+  - name: 'SD_Capture.esp'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - 'SD_Fatigue.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC6734AE1
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 20
+  - name: 'SD_Capture TTW Additions.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2CFC37E7
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
   - name: 'SD_Fatigue.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
