@@ -2242,6 +2242,28 @@ plugins:
         name: 'Tactical Clothing'
     msg: [ *requiresResourcesType3 ]
 
+  - name: 'FafnirUniqueTTWOverhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/62577/'
+        name: 'Fallout 3 Unique items Overhaul TTW 3.3'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Fallout 3 Unique Items Overhaul Patch](https://www.nexusmods.com/newvegas/mods/83014/)' ]
+        condition: 'checksum("meshes\Weapons\Uniques\CaptainsSideArm\CaptainSideArm.nif", 3541108F)'
+      - <<: *wildEdits
+        subs: [ 'Remove **Cell/Block 2/Sublock 9** & **0A010989** & **060CB364** from **FafnirUniqueTTWOverhaul.esp**.' ]
+        condition: 'checksum("FafnirUniqueTTWOverhaul.esp", B81F7FDB) or checksum("FafnirUniqueTTWOverhaul.esp", 00DAC91F)'
+    tag:
+      - Deflst
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xB81F7FDB
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+
   - name: '.*FO3WeaponsRestoration.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40007/'
