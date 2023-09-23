@@ -2217,12 +2217,12 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/62577/'
         name: 'Fallout 3 Unique items Overhaul TTW 3.3'
     msg:
-      - <<: *wildEdits
-        subs: [ 'Remove **Cell/Block 2/Sublock 9** & **0A010989** & **060CB364** from **FafnirUniqueTTWOverhaul.esp**.' ]
-        condition: 'checksum("FafnirUniqueTTWOverhaul.esp", B81F7FDB) or checksum("FafnirUniqueTTWOverhaul.esp", 00DAC91F)'
       - <<: *patchUpdateAvailable
         subs: [ '[Fallout 3 Unique Items Overhaul Patch](https://www.nexusmods.com/newvegas/mods/83014/)' ]
         condition: 'checksum("meshes\Weapons\Uniques\CaptainsSideArm\CaptainSideArm.nif", 3541108F)'
+      - <<: *wildEdits
+        subs: [ 'Remove **Cell/Block 2/Sublock 9** & **0A010989** & **060CB364** from **FafnirUniqueTTWOverhaul.esp**.' ]
+        condition: 'checksum("FafnirUniqueTTWOverhaul.esp", B81F7FDB) or checksum("FafnirUniqueTTWOverhaul.esp", 00DAC91F)'
     tag:
       - Deflst
       - Graphics
