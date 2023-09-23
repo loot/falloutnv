@@ -2936,6 +2936,15 @@ plugins:
       - 'TTWInteriorsProject_Combo.esm'
       - 'TTWInteriorsProject_Combo_AWOP.esm'
   - name: 'TTWInteriorsProject_Combo.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66449/'
+        name: 'The TTW Interiors Project'
+    req:
+      - *TTWv320
+      - 'TTWInteriors_Core.esm'
+    after:
+      - 'AWorldOfPainFO3.esm'
+      - 'MothershipZetaRehaul.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
       - 'NVInteriors_WastelandEditonAWOP.esm'
@@ -2943,8 +2952,17 @@ plugins:
       - 'NVInteriors_ComboEdition_AWOP.esm'
       - 'TTWInteriorsProject_Combo_AWOP.esm'
     tag:
-      - Invent
+      - Actors.AIPackages
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
       - Names
+      - ObjectBounds
+      - Scripts
+      - Text
+    clean:
+      - crc: 0xE300827D
+        util: 'FNVEdit v4.0.4'
   - name: 'TTWInteriorsProject_Combo_AWOP.esm'
     inc:
       - 'NVInteriors_WastelandEdition.esm'
