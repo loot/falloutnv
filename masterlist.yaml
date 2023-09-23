@@ -5285,10 +5285,10 @@ plugins:
     tag: [ Scripts ]
   - name: 'Tutorial Killer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
+    req: [ *johnnyGuitar ]
     clean:
-      # v1.52
-      - crc: 0x4FEB2B60
-        util: 'FNVEdit v4.0.2f'
+      - crc: 0x8324E796
+        util: 'FNVEdit v4.0.4'
   - name: 'Tutorial Killer - Alternate Start.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
     msg: [ *obsolete ]
