@@ -2204,6 +2204,7 @@ plugins:
     clean:
       - crc: 0x7E701274
         util: 'FNVEdit v4.0.3g'
+
   - name: 'S6S Perks.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73438/'
