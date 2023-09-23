@@ -1684,6 +1684,7 @@ plugins:
     clean:
       - crc: 0xDD2CD26F
         util: 'FNVEdit v4.0.4'
+
   - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/34890/'
