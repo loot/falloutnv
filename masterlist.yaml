@@ -243,6 +243,10 @@ common:
     not file("TaleOfTwoWastelands.esm")
 
 # File Anchors
+  - &anhNVSE
+    name: 'NVSE/Plugins/AnhNVSE.dll'
+    display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
+
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
