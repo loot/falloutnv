@@ -259,6 +259,10 @@ common:
     name: 'NVSE/Plugins/MCM.dll'
     display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
 
+  - &ShowOff
+    name: 'NVSE/Plugins/ShowOffNVSE.dll'
+    display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
+
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.2+'
