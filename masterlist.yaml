@@ -2454,6 +2454,34 @@ plugins:
       - crc: 0xEBAC2B12
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'Big Town Extensions.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74825/'
+        name: 'Big Town Extensions'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *TTWv320
+    after: ['AWorldOfPainFO3.esm']
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - Big Town Extensions](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW Reputations.esm") and not active("TTW Reputations - Big Town Extensions.esp")'
+      - <<: *wildEdits
+        subs: [ 'Delete **0602D934** & **06058B9E** from **Big Town Extensions.esm**.' ]
+        condition: 'checksum("Big Town Extensions.esm", A99EFA1E) or checksum("Big Town Extensions.esm", 39F84E9C)'
+    tag:
+      - C.Owner
+      - Names
+    dirty:
+      # 5.01
+      - <<: *quickClean
+        crc: 0xA99EFA1E
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 10
+
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
