@@ -1164,6 +1164,29 @@ plugins:
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### AudioVisual - Weather & Lighting ######
+  - name: 'CC - (Rain|3D Rain)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79661/'
+        name: 'Climate Control - Rain'
+  - name: 'CC - Rain.esp'
+    group: *weatherGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x639200CA
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'CC - 3D Rain.esp'
+    group: *weatherGroup
+    msg:
+      - <<: *missingRequirementXforY
+        subs:
+          - '[3D Rain](https://www.nexusmods.com/newvegas/mods/79652/)'
+          - 'Climate Control - 3D Rain'
+        condition: 'not file("meshes/nvdlc02/sky/nvdlc02rain.nif")'
+    clean:
+      - crc: 0xAE32851F
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Cut_HD_Battle_Climate.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71812/'
