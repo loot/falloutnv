@@ -2149,6 +2149,17 @@ plugins:
         itm: 29
 
 ###### Gameplay - Quests ######
+  - name: 'NewVegasBounties.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
+        name: 'New Vegas Bounties I'
+    req: [ 'SomeguySeries.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'NewVegasBounties.esm' ]
+        condition: 'active("NewVegasBounties.esm")'
+      - <<: *useInstead
+        subs: [ '[New Vegas Bounties 1 LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
