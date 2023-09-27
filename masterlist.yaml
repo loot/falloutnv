@@ -2161,6 +2161,26 @@ plugins:
       - <<: *useInstead
         subs: [ '[New Vegas Bounties 1 LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
 
+  - name: 'NewVegasBounties(\.esm|TTW\.esp)'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77108/'
+        name: 'New Vegas Bounties I LE'
+  - name: 'NewVegasBounties.esm'
+    req: [ 'SomeguySeries.esm' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("NewVegasBountiesTTW.esp")'
+    clean:
+      # 1.4
+      - crc: 0x4ABA5574
+        util: 'FNVEdit v4.0.4c'
+  - name: 'NewVegasBountiesTTW.esp'
+    clean:
+      - crc: 0x84DC295A
+        util: 'FNVEdit v4.0.4c'
+
+
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
     url:
