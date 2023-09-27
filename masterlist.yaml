@@ -297,6 +297,12 @@ common:
     subs: [ '[New Vegas Script Extender](http://nvse.silverlock.org/)' ]
     condition: 'not file("../nvse_1_\d(ng)?\.dll")'
 
+  - &requires_xNVSE
+    <<: *requiresX
+    type: error
+    subs: [ '[New Vegas Script Extender (xNVSE)](https://github.com/xNVSE/NVSE/releases)' ]
+    condition: 'version("../nvse_1_4.dll", "0.6.0.0", <)'
+
   # &useVersion
   - &useVersionDeadMoney
     <<: *useVersion
