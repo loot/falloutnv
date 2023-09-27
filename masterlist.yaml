@@ -2287,11 +2287,24 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73438/'
         name: 'Sweet 6 Shooter Perks - TTW - NV'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+    msg:
+      - <<: *patchProvided
+        subs: [ 'JSawyer Ultimate Edition' ]
+        condition: 'active("sawyerbatty.esp") or active("jsawyer.esp") and not file("nvse/plugins/scripts/gr_S6SPerksJSUEPatch.txt")'
+      - <<: *patchProvided
+        subs: [ 'New Vegas Bounties I LE' ]
+        condition: 'active("NewVegasBounties.esm") and not file("nvse/plugins/scripts/gr_S6SPerksNVB1Patch.txt")'
     clean:
-      - crc: 0xC95D69CA
-        util: 'FNVEdit v4.0.4'
-      - crc: 0x8EA841DD
-        util: 'FNVEdit v4.0.4'
+    # 16.16 NV
+      - crc: 0xD0DD1B41
+        util: 'FNVEdit v4.0.4c'
+    # 16.16 TTW
+      - crc: 0x2EA38DC1
+        util: 'FNVEdit v4.0.4c'
 
 ###### Items ######
   - name: 'epock.esp'
