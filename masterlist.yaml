@@ -3706,11 +3706,18 @@ plugins:
     inc:
     - 'jsawyer.esp'
     - 'Project Nevada - Rebalance.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Fallout 3 Unique items Overhaul TTW 3.3'
+          - '[Literally Who''s Patch Emporium](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("sawyerbatty-FafnirUniqueTTWOverhaul.esp")'
     tag:
       - Actors.ACBS
       - Delev
       - Invent.Add
       - Invent.Remove
+      - Stats
       - Relev
     clean:
       - crc: 0xDB8803A1
