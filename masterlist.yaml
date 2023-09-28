@@ -251,6 +251,10 @@ common:
     name: 'NVSE/Plugins/ClimateControl.dll'
     display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
 
+  - &UIO
+    name: 'NVSE/Plugins/ui_organizer.dll'
+    display: '[UIO - User Interface Organizer](https://www.nexusmods.com/newvegas/mods/57174/)'
+
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
