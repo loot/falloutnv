@@ -285,6 +285,10 @@ common:
     display: 'Tale Of Two Wastelands v3.3+'
     condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
 
+  - &yGTM
+    name: 'NVSE/Plugins/yGTM.dll'
+    display: '[yGTM - Gameplay Tweaks and Madness](https://www.nexusmods.com/newvegas/mods/72784/)'
+
 # Sub-Anchors
   # &requiresMCM_X
   - &requiresMCM
