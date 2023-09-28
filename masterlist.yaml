@@ -1742,6 +1742,15 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - 'SD_Fatigue.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xC6734AE1
