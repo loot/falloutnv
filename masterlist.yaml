@@ -263,6 +263,10 @@ common:
     name: 'NVSE/Plugins/johnnyguitar.dll'
     display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
 
+  - &lStewieAlTweaks
+    name: 'NVSE/Plugins/Tweaks/nvse_stewie_tweaks.dll'
+    display: '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
+
   - &MCM
     name: 'NVSE/Plugins/MCM.dll'
     display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
