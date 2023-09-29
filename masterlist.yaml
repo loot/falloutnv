@@ -1078,6 +1078,12 @@ plugins:
         subs: [ 'WMX-WRP patch' ]
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
+  - name: '..\enbhost.exe'
+    url:
+      - link: 'http://enbdev.com/mod_falloutnv_v0451.htm/'
+        name: 'ENBSeries'
+    msg: [*obsolete]
+
   - name: 'EVE FNV - ALL DLC.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42666/' ]
     after: [ 'Improved Sound FX.esp' ]
