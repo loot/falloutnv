@@ -263,6 +263,10 @@ common:
     name: 'NVSE/Plugins/johnnyguitar.dll'
     display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
 
+  - &KEYWORDS
+    name: 'NVSE/Plugins/Scripts/gr_0KEYWORDS.txt'
+    display: '[KEYWORDS](https://www.nexusmods.com/newvegas/mods/83088/)'
+
   - &lStewieAlTweaks
     name: 'NVSE/Plugins/Tweaks/nvse_stewie_tweaks.dll'
     display: '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
