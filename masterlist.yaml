@@ -1853,6 +1853,19 @@ plugins:
       - crc: 0x23857A09
         util: 'FNVEdit v4.0.3g'
 
+  - name: 'JIP Realistic Weapon Overheating.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/49892/'
+        name: 'JIP Realistic Weapon Overheating'
+    msg: [ *requiresNVSE ]
+    req:
+      - *MCM
+      - *UIO
+    clean:
+    # 0.90
+      - crc: 0x201FA486
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Moddable Unique Weps.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35009/' ]
     tag:
