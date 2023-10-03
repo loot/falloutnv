@@ -1464,15 +1464,22 @@ plugins:
       - Graphics
       - R.Eyes
       - R.Hair
+      - R.Head
       - R.Mouth
       - R.Teeth
       - Stats
     clean:
+    # v4.2
       - crc: 0xAED0BCAF
         util: 'FNVEdit v4.0.4c'
   - name: 'LingsPrettyThings.esp'
-    tag: [ NPC.Race ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
     clean:
+    # v4.2
       - crc: 0x024829C1
         util: 'FNVEdit v4.0.4c'
 
