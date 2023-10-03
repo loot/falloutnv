@@ -1539,6 +1539,25 @@ plugins:
         util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 5
 
+  - name: 'BittercupRedux.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80781/'
+        name: 'Bittercup Companion - Redux'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackagesForceAdd
+      - Actors.Factions
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Scripts
+    clean:
+    # 1.4.2
+      - crc: 0x96986F62
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Lily(Fawkes|Armored)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
     msg:
