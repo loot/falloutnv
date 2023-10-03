@@ -2856,7 +2856,51 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'YUPTTW.esm'
-    url: [ 'http://taleoftwowastelands.com/']
+    url: [ 'http://taleoftwowastelands.com/' ]
+    inc: [ 'YUP - Base Game + All DLC.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Creatures.Type
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Race
+      - ObjectBounds
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
+      - Relev
+      - R.Hair
+      - R.Head
+      - Scripts
+      - Sound
+      - Stats
+      - Text
     group: *fixesGroup
     # doNotClean
   - name: 'TTWfixes.esm'
