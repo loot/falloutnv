@@ -1498,6 +1498,20 @@ plugins:
       - crc: 0x19F63CB3
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Shojo Race Vegas.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35097/'
+        name: 'Shojo Race Vegas 09s'
+    req: [ 'Lings.esm' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Shojo Race Vegas 09s update](https://www.nexusmods.com/newvegas/mods/35097/)' ]
+        condition: 'checksum("Shojo Race Vegas.esm", 4711347F)'
+    clean:
+    # v0.9s
+      - crc: 0x335DAD2A
+        util: 'FNVEdit v4.0.4c'
+
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
