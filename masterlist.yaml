@@ -490,6 +490,23 @@ globals:
       - '[New Vegas Script Extender](http://nvse.silverlock.org/)'
     condition: 'file("NVSE/Plugins/([^\.]+\.dll)") and not file("../nvse_1_\d(ng)?\.dll")'
 
+# NVSR
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[NVTF - New Vegas Tick Fix](https://www.nexusmods.com/newvegas/mods/66537/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVSE/Plugins/NVTF.dll")'
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[New Vegas Heap Replacer](https://www.nexusmods.com/newvegas/mods/69779/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVHR/nvhr_avx.dll")'
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVSE/Plugins/nvse_stewie_tweaks.dll")'
+
 # Latest Version
   # Fallout: New Vegas Game Runtime
   - <<: *versionOldX
