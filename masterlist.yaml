@@ -2636,6 +2636,27 @@ plugins:
         subs: [ 'Low Robots ESP' ]
         condition: 'many("AWOP(Very)?LowRobots\.esp")'
 
+  - name: 'ZionTrail(-NV)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61939/'
+        name: 'Zion Trail'
+  - name: 'ZionTrail.esm'
+    msg:
+      - <<: *obsolete
+        condition: 'checksum("ZionTrail.esm", 914129FC)'
+    clean:
+    # 1.11
+      - crc: 0xF7CF87B4
+        util: 'FNVEdit v4.0.4c'
+  - name: 'ZionTrail-NV.esp'
+    msg:
+      - <<: *obsolete
+        condition: 'checksum("ZionTrail-NV.esp", B04CEAA2)'
+    clean:
+    # 1.11
+      - crc: 0xDAD61D5D
+        util: 'FNVEdit v4.0.4c'
+
 ###### Locations - New Structures & Landmarks ######
   - name: 'Cut Sewers Restored.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55956/' ]
