@@ -5887,6 +5887,52 @@ plugins:
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
+  - name: 'Functional Post Game Ending( - (AWOP|TTW|YUP) Patch)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66726/'
+        name: "FPGE - Functional Post Game Ending"
+  - name: 'Functional Post Game Ending.esm'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    msg:
+      - <<: *patchProvided
+        subs: [ 'A World Of Pain' ]
+        condition: 'active("AWorldOfPain(Preview).esm") and not active("Functional Post Game Ending - AWOP Patch.esm")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("Functional Post Game Ending - TTW Patch.esm")'
+      - <<: *patchProvided
+        subs: [ 'Yukichigai Unofficial Patch - YUP' ]
+        condition: 'active("YUP - Base Game + All DLC.esm") and not active("Functional Post Game Ending - YUP Patch.esm")'
+      - *requires_xNVSE
+    inc:
+      - 'ContinueAfterEnding.esp'
+      - 'CAGE 1.9.3.2.esp'
+    tag:
+      - Actors.AIPackagesForceAdd
+      - Graphics
+    clean:
+    # 6.4
+      - crc: 0x8B474C15
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - AWOP Patch.esm'
+    clean:
+    # 6.4
+      - crc: 0x423465ED
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - TTW Patch.esm'
+    req: [ *TTWv330 ]
+    clean:
+    # 6.4
+      - crc: 0x0B4E5CFF
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - YUP Patch.esm'
+    clean:
+    # 6.4
+      - crc: 0x12391AB4
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'pipboy2500_edisleado.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/38844/'
