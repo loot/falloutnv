@@ -1060,6 +1060,15 @@ plugins:
         condition: 'active("DNWeathers.esp")'
 
 ###### Modding Tools - Resources ######
+  - name: 'Sortomatic.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/41142/'
+        name: 'Sortomatic - Modders Resource'
+    clean:
+    # 1.3
+      - crc: 0xFFF00ED5
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'The Mod Configuration Menu.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
     msg:
