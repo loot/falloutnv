@@ -1016,17 +1016,20 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/63997/'
         name: 'Ammo Script Fixes'
+    group: *fixesGroup
     req:
       - *JIPLN
       - *johnnyGuitar
-      - name: 'nvse/plugins/ShowOffNVSE.dll'
-        display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
-    msg: [ *requiresNVSE ]
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
     tag:
+      - Graphics
       - ObjectBounds
       - Scripts
+      - Stats
     clean:
-      - crc: 0xD4796EBA
+    # 5.4
+      - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
 
   - name: 'fixy crap ue.esp'
