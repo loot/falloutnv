@@ -1707,6 +1707,20 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'WARZONES - Misanthropy Pure.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40980/'
+        name: 'WARZONES - now with ADJUSTABLE SPAWNS'
+    tag:
+      - C.Regions
+      - Text
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xE34DE281
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+        nav: 84
+
 ###### Encounters - Neutrals ######
   - name: 'outsidebets.esp'
     url:
