@@ -4841,6 +4841,43 @@ plugins:
   - name: 'Dynamic Quantity Prompt.esp'
     msg: [ *requiresNVSE ]
 
+# Delay DLC Redux
+  - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75851/'
+        name: 'Delay DLC Redux'
+  - name: 'DelayDLCRedux.esp'
+    clean:
+    # FNV 2.1
+      - crc: 0x5932B828
+        util: 'FNVEdit v4.0.4c'
+    # TTW 2.0
+      - crc: 0xDCEBC8F8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCRedux - Delay CG04 Level Up.esp'
+    clean:
+    # 1.6
+      - crc: 0x0209CDB3
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCRedux - Hardcore Zeta Patch.esp'
+    clean:
+    # 2.0
+      - crc: 0xD5E6589F
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPLNote.esp'
+    clean:
+    # 1.5
+      - crc: 0x4EB6E9B8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPOPP.esp'
+    clean:
+    # FNV 1.5
+      - crc: 0x84F02CD6
+        util: 'FNVEdit v4.0.4c'
+    # TTW 1.5
+      - crc: 0xE38D7BA9
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg: [ *obsolete ]
     tag: [ Names ]
