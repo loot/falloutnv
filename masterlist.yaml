@@ -2774,7 +2774,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77243/'
         name: 'The Megaton Walkway - TTW'
-    after: ['Expanded Megaton House - TTW.esp']
+    after: [ 'Expanded Megaton House - TTW.esp' ]
     clean:
       - crc: 0x3A25C9C6
         util: 'FNVEdit v4.0.4c'
