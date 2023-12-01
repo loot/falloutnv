@@ -5784,8 +5784,15 @@ plugins:
       - Delev
       - Graphics
   - name: 'FNVLODGen.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/58562/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
+        name: 'FNVLODGen'
     group: *lodGroup
+    after:
+      - 'LOD Additions - TTW Patch.esp'
+      - 'tmzLODadditions.esp'
+      - 'Wasted LOD rocks.esp'
+
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
     group: *lodGroup
