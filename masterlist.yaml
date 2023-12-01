@@ -1767,6 +1767,14 @@ plugins:
         nav: 84
 
 ###### Encounters - Neutrals ######
+  - name: '(Creature)_Mojave_Straycats.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/70220/'
+        name: 'Mojave Straycats'
+    clean:
+      - crc: 0x71BA701E
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'outsidebets.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
@@ -1782,14 +1790,6 @@ plugins:
     clean:
       - crc: 0xE2ADCB31
         util: 'FNVEdit v4.0.4'
-
-  - name: '(Creature)_Mojave_Straycats.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/70220/'
-        name: 'Mojave Straycats'
-    clean:
-      - crc: 0x71BA701E
-        util: 'FNVEdit v4.0.4c'
 
   - name: 'populatedcasino(-light|-medium)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
