@@ -61,6 +61,10 @@ prelude:
       type: warn
       content: 'Another mod seems to be overwriting one of this mod''s essential files. Please ensure you''re using this mod''s version of {0} or a compatible version if available.'
 
+    - &flagESM
+      type: warn
+      content: 'This plugin isn''t an ESM, but it appears to contain navmeshes. This can lead to problems with NPC pathfinding. It is recommended to flag this plugin as **ESM** to avoid these problems. It might also be necessary to ensure that all references called by scripts in this plugin are flagged as **persistent**.'
+
     - &includesX
       type: say
       content: '{0} is included with this mod.'
