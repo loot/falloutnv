@@ -2007,6 +2007,21 @@ plugins:
         condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
 
 ###### Gameplay - Combat ######
+  - name: 'BLEED.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61141/'
+        name: 'BLEED TTW'
+    req:
+      - *JIPLN
+    msg: [ *requires_xNVSE ]
+    tag:
+      - Enchantments
+      - EnchantmentStats
+    clean:
+      # 1.8.7
+      - crc: 0xCB35A8AF
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
     msg:
