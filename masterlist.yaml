@@ -2915,6 +2915,12 @@ plugins:
       - 'fwv.esm'
       - 'fwv.esp'
       - 'FNC Overhaul Project.esp'
+    msg:
+      - <<: *compatNotes
+        subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: file("NVSE/Plugins/frontier_tweaks.dll")
   - name: 'Afterschool Special.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
     tag: [ Invent ]
