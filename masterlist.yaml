@@ -751,7 +751,7 @@ plugins:
       - crc: 0x228740D1
         util: 'FNVEdit v4.0.4'
 
-###### Unofficial Patches ######
+###### Base Game Patches ######
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
