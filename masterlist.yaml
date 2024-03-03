@@ -2462,7 +2462,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *TTWv320
-    after: ['AWorldOfPainFO3.esm']
+    after: [ 'AWorldOfPainFO3.esm' ]
     msg:
       - <<: *patch3rdParty
         subs:
