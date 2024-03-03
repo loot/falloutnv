@@ -2476,7 +2476,6 @@ plugins:
       - C.Owner
       - Names
     dirty:
-      # 5.01
       - <<: *quickClean
         crc: 0xA99EFA1E
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
