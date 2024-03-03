@@ -4412,6 +4412,10 @@ plugins:
   - name: 'Book of Steel - TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
     tag: [ Graphics ]
+  - name: 'PAVE_NV_TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
+    after: [ 'fixy crap ttw.esp' ]
+    tag: [ Graphics ]
   - name: 'Equipment Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
@@ -4456,11 +4460,7 @@ plugins:
       - Delev
       - Names
       - NPC.Class
-      - Stats  
- - name: 'PAVE_NV_TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
-    after: [ 'fixy crap ttw.esp' ]
-    tag: [ Graphics ]
+      - Stats
       
     after:
       - 'jsawyer.esp'
