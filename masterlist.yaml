@@ -6018,6 +6018,35 @@ plugins:
         itm: 36
         udr: 5
 
+  - name: 'New Vegas Redesigned 3.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+  - name: 'NVR3_1nivVSLArmors Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Delev
+      - Relev
+  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - Graphics
+  - name: 'NVR3_LegionQuestsExpanded Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - Actors.Factions
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
     inc: [ *TTWv320 ]
