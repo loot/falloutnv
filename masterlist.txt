@@ -1,0 +1,6411 @@
+# LOOT ignores anything that doesn't come under 'bash_tags', 'globals',
+# 'groups', or 'plugins', so a section like 'common' is useful for storing
+# data that gets re-used.
+prelude:
+  common:
+  # Message Anchors
+    - &alreadyInX
+      type: error
+      content: 'Delete. Already included in {0}.'
+
+    - &alreadyInOrFixedByX
+      type: error
+      content: 'Delete. Already included or otherwise fixed in {0}.'
+
+    - &alsoUseX
+      type: say
+      content: 'It''s highly recommended that you also use {0}.'
+
+    - &compatIssuesWithX
+      type: say
+      content: 'This plugin has compatibility issues with {0}. For more information, read this mod''s compatibility notes.'
+
+    - &compatNotes
+      type: say
+      content: 'It is recommended that you read this mod''s [Compatibility Notes]({0}).'
+
+    - &compatPatch
+      type: say
+      content: 'It is recommended that you check the following compatibility patch compilation for this mod: {0}'
+
+    - &compatPatchForX
+      type: say
+      content: 'It is recommended that you check the following compatibility patch compilation for {0}: {1}'
+
+    - &corrupt
+      type: warn
+      content: 'This file is corrupt and should not be used.'
+
+    - &deactivateAfterCharacterCreation
+      type: say
+      content: 'Deactivate and/or uninstall this mod after character creation.'
+
+    - &deleteOrDeactivateX
+      type: error
+      content: 'Delete or deactivate. {0}'
+      subs: [ '' ]
+
+    - &deletePlugin
+      type: warn
+      content: 'When using **{0}**, it''s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
+
+    - &deprecated
+      type: warn
+      content: 'This file is deprecated and should no longer be used.'
+
+    - &disableAfterGeneratingXwithY
+      type: say
+      content: 'This plugin may be disabled after generating **{0}** with **{1}**.'
+
+    - &essentialFiles
+      type: warn
+      content: 'Another mod seems to be overwriting one of this mod''s essential files. Please ensure you''re using this mod''s version of {0} or a compatible version if available.'
+
+    - &flagESM
+      type: warn
+      content: 'This plugin isn''t an ESM, but it appears to contain navmeshes. This can lead to problems with NPC pathfinding. It is recommended to flag this plugin as **ESM** to avoid these problems. It might also be necessary to ensure that all references called by scripts in this plugin are flagged as **persistent**.'
+
+    - &includesX
+      type: say
+      content: '{0} is included with this mod.'
+
+    - &languageX
+      type: say
+      content: 'Language: {0}'
+
+    - &mainQuestCompleted
+      type: say
+      content: 'Only use this plugin once the main quest of the game has been completed.'
+
+    - &masterReassign
+      type: say
+      content: 'The **{0}** master must be reassigned to **{1}**.'
+
+    - &missingRequirementXforY
+      type: warn
+      content: 'It appears you have installed **{1}**, but some of its requirements seem to be missing. Please ensure you have correctly installed **{0}**.'
+
+    - &missingRequirementXforPlugin
+      type: warn
+      content: 'Some of this plugin''s requirements seem to be missing. Please ensure you have correctly installed **{0}**.'
+
+    - &moddingPlugin
+      type: error
+      content: 'This plugin is a modding resource and should not be used in-game.'
+
+    - &moveXFromYToZ
+      type: say
+      content: 'Move {0} from {1} to {2}.'
+
+    - &obsolete
+      type: warn
+      content: 'Obsolete. Update to the latest version. {0}'
+      subs: [ '' ]
+
+    - &onlyUseSmashOrBash
+      type: say
+      content: 'Can be used with a {0} but would require additional work. A Smashed Patch or Bash Patch should be used independently of one another.'
+
+    - &optional
+      type: say
+      content: 'This plugin is optional.'
+
+    - &patch3rdParty
+      type: say
+      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: {1}'
+
+    - &patcherScriptAvailable
+      type: say
+      content: '{0} patcher script available here: {1}'
+
+    - &patchIncluded
+      type: say
+      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
+
+    - &patchOutdated
+      type: warn
+      content: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
+
+    - &patchProvided
+      type: say
+      content: 'You seem to be using **{0}**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin''s mod page.'
+
+    - &patchUnavailable
+      type: warn
+      content: 'A patch is required to make this mod fully compatible with {0}. None is currently available for download.'
+
+    - &patchUpdateAvailable
+      type: say
+      content: 'Update Patch available: {0}'
+
+    - &renameFile
+      type: say
+      content: 'Rename this file to {0}.'
+
+    - &renameXtoY
+      type: warn
+      content: 'You need to rename {0} to {1} or this mod won''t work.'
+
+    # Useful for when a plugin needs the MCM, but shouldn't load after it (e.g., when it's a master plugin).
+    - &requiresMCM_X
+      type: warn
+      content: 'A **Mod Configuration Menu** is required for this mod to be fully functional. An **MCM** can be added by installing {0}.'
+
+    - &requiresResources
+      type: warn
+      content: 'Requires resources (e.g. meshes, textures; not plugins) from {0}.'
+
+    - &requiresX
+      type: warn
+      content: 'Requires: {0}'
+
+    - &runAnimFramework
+      type: say
+      content: 'It appears you have **{0}** installed. Remember to run **{1}** every time you have installed or uninstalled {2}, or a {2}-based mod.'
+
+    - &runxLODGen
+      type: say
+      content: 'If you add, remove, or update plugins that alter WRLD/CELL records, remember to update this module with **xLODGen**.'
+
+    - &supersede
+      type: warn
+      content: 'You seem to be using **{0}**, but it has been superseded. It is recommended that you use **{1}** instead.'
+
+    - &useBashTweakInstead
+      type: say
+      content: 'A Bashed Patch tweak can be used instead of this plugin. {0}'
+      subs: [ '' ]
+      condition: 'file("Bashed Patch.*\.esp")'
+
+    - &useINITweakInstead
+      type: say
+      content: 'An INI tweak can be used instead of this plugin. {0}'
+      subs: [ '' ]
+
+    - &useInstead
+      type: warn
+      content: 'Use {0} instead.'
+
+    - &useOnlyOneX
+      type: error
+      content: 'Use only one {0}.'
+
+    - &useVersion
+      type: error
+      content: 'Use {0} version.'
+
+    - &useVersionNon
+      type: error
+      content: 'Use non-{0} version.'
+
+    - &versionOldX
+      type: say
+      content: 'It appears you do not have the latest version of {0}. Some mods may require functionality added in the latest version of {0} to work.'
+
+    - &versionPrecedence
+      type: error
+      content: 'Delete {0} from {1}. {2}''s version must take precedence.'
+
+    - &versionUpToDateX
+      type: say
+      content: 'Your {0} is up-to-date.'
+
+    - &versionXIncY
+      type: error
+      content: 'Your installed version of {0} is not compatible with your version of {1}.'
+
+    - &versionXofYorGreaterRequired
+      type: error
+      content: 'Requires version **{0}** or greater of **{1}**.'
+
+    - &wildEdits
+      type: warn
+      content: 'This plugin contains [wild edits](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#WildEdits) and may require additional manual cleaning to not interfere with other mods. {0}'
+      subs: [ '' ]
+
+  # Cleaning Data Anchors
+    - &quickClean
+      util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
+      detail: 'A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
+
+    - &reqManualFix
+      util: '[FNVEdit](https://www.nexusmods.com/newvegas/mods/34703)'
+      detail: 'It is strongly recommended not to use mods that contain **deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually (a complex process that should be done by the mod author). More information on **deleted navmeshes** is provided [here](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+
+  # Global Anchors
+    - &latestLOOTThread
+      type: say
+      content: '[Latest LOOT thread]({0}).'
+      subs: [ 'https://loot.github.io/latest-thread/' ]
+
+    - &scriptExtenderMissing
+      type: error
+      content: 'You have installed an {0} plugin but {0} was not found! See {0} download page: {1}.'
+
+common:
+# Condition Anchors
+  - &condFileTTW
+    file("TaleOfTwoWastelands.esm")
+
+  - &condNotFileTTW
+    not file("TaleOfTwoWastelands.esm")
+
+# File Anchors
+  - &anhNVSE
+    name: 'NVSE/Plugins/AnhNVSE.dll'
+    display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
+
+  - &ClimateControl
+    name: 'NVSE/Plugins/ClimateControl.dll'
+    display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
+
+  - &UIO
+    name: 'NVSE/Plugins/ui_organizer.dll'
+    display: '[UIO - User Interface Organizer](https://www.nexusmods.com/newvegas/mods/57174/)'
+
+  - &JIPLN
+    name: 'NVSE/Plugins/jip_nvse.dll'
+    display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
+
+  - &johnnyGuitar
+    name: 'NVSE/Plugins/johnnyguitar.dll'
+    display: '[JohnnyGuitar NVSE](https://www.nexusmods.com/newvegas/mods/66927/)'
+
+  - &KEYWORDS
+    name: 'NVSE/Plugins/Scripts/gr_0KEYWORDS.txt'
+    display: '[KEYWORDS](https://www.nexusmods.com/newvegas/mods/83088/)'
+
+  - &lStewieAlTweaks
+    name: 'NVSE/Plugins/Tweaks/nvse_stewie_tweaks.dll'
+    display: '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
+
+  - &MCM
+    name: 'NVSE/Plugins/MCM.dll'
+    display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
+
+  - &ShowOff
+    name: 'NVSE/Plugins/ShowOffNVSE.dll'
+    display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
+
+  - &TTWv320
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.2+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - &TTWv330
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.3+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+
+  - &yGTM
+    name: 'NVSE/Plugins/yGTM.dll'
+    display: '[yGTM - Gameplay Tweaks and Madness](https://www.nexusmods.com/newvegas/mods/72784/)'
+
+# Sub-Anchors
+  # &requiresMCM_X
+  - &requiresMCM
+    <<: *requiresMCM_X
+    subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+    condition: 'not active("The Mod Configuration Menu.esp") and not file("NVSE/Plugins/MCM.dll")'
+
+  # &requiresResources
+  - &requiresResourcesType3
+    <<: *requiresResources
+    type: say
+    subs: [ '[BEWARE OF GIRL Type 3 Replacer](https://www.nexusmods.com/newvegas/mods/34702/)' ]
+
+  # &requiresX
+  - &requiresNVSE
+    <<: *requiresX
+    type: error
+    subs: [ '[New Vegas Script Extender](http://nvse.silverlock.org/)' ]
+    condition: 'not file("../nvse_1_\d(ng)?\.dll")'
+
+  - &requires_xNVSE
+    <<: *requiresX
+    type: error
+    subs: [ '[New Vegas Script Extender (xNVSE)](https://github.com/xNVSE/NVSE/releases)' ]
+    condition: 'version("../nvse_1_4.dll", "0.6.0.0", <)'
+
+  # &useVersion
+  - &useVersionDeadMoney
+    <<: *useVersion
+    subs: [ 'Dead Money' ]
+    condition: 'active("DeadMoney.esm")'
+  - &useVersionHonestHearts
+    <<: *useVersion
+    subs: [ 'Honest Hearts' ]
+    condition: 'active("HonestHearts.esm")'
+  - &useVersionOldWorldBlues
+    <<: *useVersion
+    subs: [ 'Old World Blues' ]
+    condition: 'active("OldWorldBlues.esm")'
+  - &useVersionLonesomeRoad
+    <<: *useVersion
+    subs: [ 'Lonesome Road' ]
+    condition: 'active("LonesomeRoad.esm")'
+  - &useVersionClassicPack
+    <<: *useVersion
+    subs: [ 'Classic Pack' ]
+    condition: 'active("ClassicPack.esm")'
+  - &useVersionMercenaryPack
+    <<: *useVersion
+    subs: [ 'Mercenary Pack' ]
+    condition: 'active("MercenaryPack.esm")'
+  - &useVersionTribalPack
+    <<: *useVersion
+    subs: [ 'Tribal Pack' ]
+    condition: 'active("TribalPack.esm")'
+  - &useVersionCaravanPack
+    <<: *useVersion
+    subs: [ 'Caravan Pack' ]
+    condition: 'active("CaravanPack.esm")'
+  - &useVersionGunRunnersArsenal
+    <<: *useVersion
+    subs: [ 'Gun Runners Arsenal' ]
+    condition: 'active("GunRunnersArsenal.esm")'
+
+  # &useVersionNon
+  - &useVersionNonDeadMoney
+    <<: *useVersionNon
+    subs: [ 'Dead Money' ]
+    condition: 'not active("DeadMoney.esm")'
+  - &useVersionNonHonestHearts
+    <<: *useVersionNon
+    subs: [ 'Honest Hearts' ]
+    condition: 'not active("HonestHearts.esm")'
+  - &useVersionNonOldWorldBlues
+    <<: *useVersionNon
+    subs: [ 'Old World Blues' ]
+    condition: 'not active("OldWorldBlues.esm")'
+  - &useVersionNonLonesomeRoad
+    <<: *useVersionNon
+    subs: [ 'Lonesome Road' ]
+    condition: 'not active("LonesomeRoad.esm")'
+  - &useVersionNonClassicPack
+    <<: *useVersionNon
+    subs: [ 'Classic Pack' ]
+    condition: 'not active("ClassicPack.esm")'
+  - &useVersionNonMercenaryPack
+    <<: *useVersionNon
+    subs: [ 'Mercenary Pack' ]
+    condition: 'not active("MercenaryPack.esm")'
+  - &useVersionNonTribalPack
+    <<: *useVersionNon
+    subs: [ 'Tribal Pack' ]
+    condition: 'not active("TribalPack.esm")'
+  - &useVersionNonCaravanPack
+    <<: *useVersionNon
+    subs: [ 'Caravan Pack' ]
+    condition: 'not active("CaravanPack.esm")'
+  - &useVersionNonGunRunnersArsenal
+    <<: *useVersionNon
+    subs: [ 'Gun Runners Arsenal' ]
+    condition: 'not active("GunRunnersArsenal.esm")'
+
+bash_tags:
+  - 'Actors.ACBS'
+  - 'Actors.AIData'
+  - 'Actors.AIPackages'
+  - 'Actors.AIPackagesForceAdd'
+  - 'Actors.Anims'
+  - 'Actors.CombatStyle'
+  - 'Actors.DeathItem'
+  - 'Actors.Factions'
+  - 'Actors.RecordFlags'
+  - 'Actors.Skeleton'
+  - 'Actors.Spells'
+  - 'Actors.SpellsForceAdd'
+  - 'Actors.Stats'
+  - 'C.Acoustic'
+  - 'C.Climate'
+  - 'C.Encounter'
+  - 'C.ForceHideLand'
+  - 'C.ImageSpace'
+  - 'C.Light'
+  - 'C.MiscFlags'
+  - 'C.Music'
+  - 'C.Name'
+  - 'C.Owner'
+  - 'C.RecordFlags'
+  - 'C.Regions'
+  - 'C.Water'
+  - 'Creatures.Blood'
+  - 'Creatures.Type'
+  - 'Deactivate'
+  - 'Deflst'
+  - 'Delev'
+  - 'Destructible'
+  - 'EffectStats'
+  - 'Enchantments'
+  - 'EnchantmentStats'
+  - 'Filter'
+  - 'Graphics'
+  - 'Invent.Add'
+  - 'Invent.Change'
+  - 'Invent.Remove'
+  - 'MustBeActiveIfImported'
+  - 'Names'
+  - 'NoMerge'
+  - 'NPC.Class'
+  - 'NPC.Eyes'
+  - 'NPC.FaceGen'
+  - 'NPC.Hair'
+  - 'NPC.Race'
+  - 'NpcFacesForceFullImport'
+  - 'ObjectBounds'
+  - 'R.Body-F'
+  - 'R.Body-M'
+  - 'R.Body-Size-F'
+  - 'R.Body-Size-M'
+  - 'R.Description'
+  - 'R.Ears'
+  - 'R.Eyes'
+  - 'R.Hair'
+  - 'R.Head'
+  - 'R.Mouth'
+  - 'R.Relations.Add'
+  - 'R.Relations.Change'
+  - 'R.Relations.Remove'
+  - 'R.Skills'
+  - 'R.Teeth'
+  - 'R.Voice-F'
+  - 'R.Voice-M'
+  - 'Relations.Add'
+  - 'Relations.Change'
+  - 'Relations.Remove'
+  - 'Relev'
+  - 'Scripts'
+  - 'Sound'
+  - 'SpellStats'
+  - 'Stats'
+  - 'Text'
+  - 'WeaponMods'
+
+globals:
+# Latest LOOT Thread
+  - *latestLOOTThread
+
+# NVSE
+  # Missing
+  - <<: *scriptExtenderMissing
+    subs:
+      - 'NVSE'
+      - '[New Vegas Script Extender](http://nvse.silverlock.org/)'
+    condition: 'file("NVSE/Plugins/([^\.]+\.dll)") and not file("../nvse_1_\d(ng)?\.dll")'
+
+# NVSR
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[NVTF - New Vegas Tick Fix](https://www.nexusmods.com/newvegas/mods/66537/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVSE/Plugins/NVTF.dll")'
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[New Vegas Heap Replacer](https://www.nexusmods.com/newvegas/mods/69779/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVHR/nvhr_avx.dll")'
+  - <<: *supersede
+    subs:
+      - '[New Vegas Stutter Remover](https://www.nexusmods.com/newvegas/mods/34832/)'
+      - '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
+    condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVSE/Plugins/nvse_stewie_tweaks.dll")'
+
+# Latest Version
+  # Fallout: New Vegas Game Runtime
+  - <<: *versionOldX
+    subs: [ '**Fallout: New Vegas**' ]
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**Fallout: New Vegas**' ]
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
+  # NVSE
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.3.4", <)))'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.3.4", >=)'
+  # NVSE NoGore
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
+    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", "0.5.1.4", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender NoGore**' ]
+    condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
+
+# Version Compatibility
+  # NVSE - Game Runtime
+  - <<: *versionXIncY
+    subs:
+      - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
+      - '**Fallout: New Vegas**'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
+
+groups:
+  - name: &dlcGroup DLC
+    description: 'A group for official downloadable content.'
+
+  - name: &fixesGroup Fixes & Resources
+    description: 'A group for modules that fix issues and bugs or add resources for other mods.'
+    after: [ *dlcGroup ]
+
+  - name: &addonsPatchesGroup Add-ons & Expansions (Patches)
+    description: 'A group for patches of modules in Add-ons & Expansions.'
+
+  - name: &addonsGroup Add-ons & Expansions
+    description: 'A group for modules that add new content or expand the vanilla game.'
+    after:
+      - *addonsPatchesGroup
+      - *fixesGroup
+
+  - name: &earlyLoadersGroup Early Loaders
+    description: 'A group for modules that should load early before most other mods.'
+    after: [ *addonsGroup ]
+
+  - name: default
+    after: [ *earlyLoadersGroup ]
+
+  - name: &lightingGroup Interior Lighting Overhaul
+    after: [ default ]
+
+  - name: &lodGroup LOD
+    after: [ *lightingGroup ]
+
+  - name: &cellSettingsGroup Cell Settings
+    description: 'A group for modules that only modify cell settings.'
+    after: [ *lodGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *cellSettingsGroup ]
+
+  - name: &lateChangesGroup Late Fixes & Changes
+    after: [ *weatherGroup ]
+
+  - name: &dynamicPatchGroup Dynamic Patches
+    after: [ *lateChangesGroup ]
+
+plugins:
+  - name: 'DeadMoney.esm'
+    url: [ 'https://store.steampowered.com/app/72730/' ]
+    group: *dlcGroup
+    tag:
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+      - Sound
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xD70F165B
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 403
+        udr: 51
+    clean:
+      - crc: 0x9AB468E5
+        util: 'FNVEdit v4.0.4'
+  - name: 'HonestHearts.esm'
+    url: [ 'https://store.steampowered.com/app/72740/' ]
+    group: *dlcGroup
+    after: [ 'DeadMoney.esm' ]
+    tag:
+      - C.Light
+      - Graphics
+      - Sound
+    dirty:
+      - <<: *quickClean
+        crc: 0x2352B189
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 121
+        udr: 10
+    clean:
+      - crc: 0xD1AB07F8
+        util: 'FNVEdit v4.0.4'
+  - name: 'OldWorldBlues.esm'
+    url: [ 'https://store.steampowered.com/app/72750/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Relev
+      - Sound
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x7F8F8225
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 124
+    clean:
+      - crc: 0x5B5B5B75
+        util: 'FNVEdit v4.0.4'
+  - name: 'LonesomeRoad.esm'
+    url: [ 'https://store.steampowered.com/app/72760/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+    tag:
+      - EffectStats
+      - Sound
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x30073D50
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 243
+        udr: 6
+    clean:
+      - crc: 0x08010967
+        util: 'FNVEdit v4.0.4'
+  - name: 'GunRunnersArsenal.esm'
+    url: [ 'https://store.steampowered.com/app/72840/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Invent.Add
+      - Sound
+    dirty:
+      - <<: *quickClean
+        crc: 0x0AAC938D
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 97
+    clean:
+      - crc: 0x12426FF2
+        util: 'FNVEdit v4.0.4'
+  - name: 'ClassicPack.esm'
+    url: [ 'https://store.steampowered.com/app/901778/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - name: 'Zeta.esm'
+        condition: *condFileTTW
+      - name: 'CaravanPack.esm'
+        condition: *condFileTTW
+    clean:
+      - crc: 0x41F95714
+        util: 'FNVEdit v4.0.4'
+  - name: 'MercenaryPack.esm'
+    url: [ 'https://store.steampowered.com/app/901778/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'ClassicPack.esm'
+      - name: 'Zeta.esm'
+        condition: *condFileTTW
+    clean:
+      - crc: 0xD377B2B9
+        util: 'FNVEdit v4.0.4'
+  - name: 'TribalPack.esm'
+    url: [ 'https://store.steampowered.com/app/901778/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - name: 'Zeta.esm'
+        condition: *condFileTTW
+    clean:
+      - crc: 0x0DE09873
+        util: 'FNVEdit v4.0.4'
+  - name: 'CaravanPack.esm'
+    url: [ 'https://store.steampowered.com/app/901778/' ]
+    group: *dlcGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - name: 'ClassicPack.esm'
+        condition: *condNotFileTTW
+      - name: 'MercenaryPack.esm'
+        condition: *condNotFileTTW
+      - name: 'TribalPack.esm'
+        condition: *condNotFileTTW
+      - name: 'Zeta.esm'
+        condition: *condFileTTW
+    clean:
+      - crc: 0x228740D1
+        util: 'FNVEdit v4.0.4'
+
+###### Base Game Patches ######
+  - name: 'Unofficial Patch NVSE Plus.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
+        name: 'Unofficial Patch NVSE Plus'
+    group: *fixesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
+        condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
+      - *requiresNVSE
+    tag:
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Names
+      - Scripts
+      - Text
+    clean:
+      - crc: 0x894F29EC
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'YUP .*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/51664/'
+        name: 'Yukichigai Unofficial Patch - YUP'
+  - name: 'YUP - Base Game( \+ All DLC)?\.esm'
+    inc: [ *TTWv320 ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - C.Acoustic
+      - C.Encounter
+      - C.Light
+      - C.Owner
+      - C.Regions
+      - C.Water
+      - Creatures.Type
+      - Deflst
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - Relations.Add
+      - Relations.Remove
+      - Relev
+      - Scripts
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+  - name: 'YUP - Base Game + All DLC.esm'
+    group: *fixesGroup
+    msg:
+      - <<: *patchProvided
+        subs: [ 'New Vegas Uncut - Outside Bets' ]
+        condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
+    # Do not clean
+  - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
+    group: *fixesGroup
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Scripts
+  - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    clean:
+      - crc: 0xEC108C63
+        util: 'FNVEdit v4.0.4c'
+  - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    group: *fixesGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - Base Game + All DLC.esm**' ]
+        condition: 'active("YUP - Base Game + All DLC.esm")'
+  - name: 'YUP - (Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Dead Money.esm' ]
+  - name: 'YUP - (Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Honest Hearts.esm' ]
+  - name: 'YUP - (Lonesome Road|Gun Runners Arsenal)\.esm'
+    after: [ 'YUP - Old World Blues.esm' ]
+  - name: 'YUP - Base Game.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0xAE5905C9
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'YUP - Dead Money.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.FaceGen
+      - NPC.Hair
+      - R.Hair
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0xAB893BAF
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'YUP - Honest Hearts.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - R.Hair
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0x102B78E0
+        util: 'FNVEdit v4.0.4b'
+  - name: 'YUP - Old World Blues.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - Creatures.Type
+      - Delev
+      - EffectStats
+      - Enchantments
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Hair
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0x80534E9C
+        util: 'FNVEdit v4.0.4b'
+  - name: 'YUP - Lonesome Road.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Voice
+      - C.Acoustic
+      - Delev
+      - Destructible
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - R.Eyes
+      - R.Hair
+      - Relations.Add
+      - Sound
+      - SpellStats
+      - Stats
+      - Text
+      - WeaponMods
+    clean:
+      - crc: 0xD92D506A
+        util: 'FNVEdit v4.0.4b'
+  - name: 'YUP - Gun Runners Arsenal.esm'
+    after: [ 'YUP - Lonesome Road.esm' ]
+    tag:
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x87DAF978
+        util: 'FNVEdit v4.0.4b'
+  - name: 'YUP - NPC Fixes (Base Game).esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUP - NPC Fixes (Base Game + All DLC).esp**' ]
+        condition: 'active("YUP - NPC Fixes (Base Game + All DLC).esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x86DE5AB1
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+###### Fixes ######
+  - name: 'AmmoScriptFixes.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/63997/'
+        name: 'Ammo Script Fixes'
+    group: *fixesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
+    tag:
+      - Graphics
+      - ObjectBounds
+      - Scripts
+      - Stats
+    clean:
+    # 5.4
+      - crc: 0xF89DC21D
+        util: 'FNVEdit v4.0.4c'
+  - name: 'fixy crap (ttw|ue)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
+        name: 'skinned mesh improvement mod'
+    group: *fixesGroup
+    tag: [ Graphics ]
+  - name: 'fixy crap ue.esp'
+    clean:
+      - crc: 0xCD8AEB60
+        util: 'FNVEdit v4.0.4c'
+  - name: 'fixy crap ttw.esp'
+    tag: [ Text ]
+    clean:
+      - crc: 0xA4457FA7
+        util: 'FNVEdit v4.1.5 EXPERIMENTAL'
+
+  - name: 'Navmesh Fixes and Improvements.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
+    group: *fixesGroup
+
+  - name: 'RepairKitFix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40224/'
+        name: 'Weapon Repair Kit Fix'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Yukichigai Unofficial Patch' ]
+        condition: 'active("YUP - Base Game( \+ All DLC)?\.esm")'
+
+  - name: 'Strip Lights Region Fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73596/' ]
+    group: *cellSettingsGroup
+    tag: [ C.Regions ]
+    clean:
+      - crc: 0xADA6FC4C
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'zion_lod_water.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73376/'
+        name: 'Honest Hearts Zion LOD Water Height Fix'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DNWeathers.esp**' ]
+        condition: 'active("DNWeathers.esp")'
+
+###### Modding Tools - Resources ######
+  - name: 'Sortomatic.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/41142/'
+        name: 'Sortomatic - Modders Resource'
+    clean:
+    # 1.3
+      - crc: 0xFFF00ED5
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'The Mod Configuration Menu.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42507/' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[MCM BugFix 2](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+        condition: 'checksum("The Mod Configuration Menu.esp", CCCC88E7)'
+    clean:
+      - crc: 0xACBFF898
+        util: 'FNVEdit v4.0.4'
+
+###### Modding Tools - Generated Files ######
+  - name: 'Bashed Patch.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64580/'
+        name: 'Wrye Bash'
+    group: *dynamicPatchGroup
+    after:
+      - 'FNVMerged.esp'
+      - 'MergedPatch.esp'
+
+  - name: 'FNVMerged.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34703/'
+        name: 'FNVEdit'
+    group: *dynamicPatchGroup
+    tag: [ NoMerge ]
+
+  - name: 'MergedPatch.esp'
+    group: *dynamicPatchGroup
+    tag: [ NoMerge ]
+
+  - name: 'Smashed Patch.esp'
+    url:
+      - link: 'https://github.com/matortheeternal/smash/'
+        name: 'Mator Smash'
+    group: *dynamicPatchGroup
+    after: [ 'TES5Merged.esp' ]
+    tag: [ NoMerge ]
+
+###### AudioVisual ######
+  - name: '357retex.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'WMX-WRP patch' ]
+        condition: 'file("WMX-ArenovalisTextures.esp")'
+
+  - name: 'EVE FNV - ALL DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42666/' ]
+    after: [ 'Improved Sound FX.esp' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Delev
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x36B55774
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'EVE FNV.esp'
+    msg: [ *obsolete ]
+
+  - name: 'singleshot_retex.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/48049/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'WMX-WRP patch' ]
+        condition: 'file("WMX-ArenovalisTextures.esp")'
+
+###### AudioVisual - Interface ######
+  - name: 'BIS - .*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38604/' ]
+  - name: 'BIS - (Brumbek''s Inventory Sorting|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal|Promo DLC (Classic|Mercenary|Tribal|Caravan) Pack)\.esp'
+    tag: [ Names ]
+  - name: 'BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp'
+    inc:
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp'
+      - 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ELECTRO-CITY patch' ]
+        condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
+
+  - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
+    tag: [ Names ]
+  - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
+    msg: [ *obsolete ]
+
+###### AudioVisual - Models & Textures ######
+  - name: 'MetalBoxes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x40F41790
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78688/'
+        name: 'Titans of The New West 2.0'
+  - name: 'Titans of The New West.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Armed to the Teeth Redux' ]
+        condition: 'active("ArmedToTheTeethNV-Redux.esp") and checksum("Meshes\characters\_male\ATTT\LH\1hpequip.kf", 23040D5E)'
+      - <<: *patchProvided
+        subs: [ 'Just Assorted Mods' ]
+        condition: 'active("JustAssortedMods.esp") and not file("Titans of The New West - Power Armor Sprint JAM.esp")'
+      - <<: *patchProvided
+        subs: [ 'Just Vanilla Sprint' ]
+        condition: 'active("JustVanillaSprint.esp") and not file("Titans of The New West - Power Armor Sprint JVS.esp")'
+    clean:
+    # 2.1.03
+      - crc: 0x98CACFE9
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Titans of The New West - Power Armor Sprint JAM.esp'
+    clean:
+    # 2.1.03
+      - crc: 0xA73A2776
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Titans of The New West - Power Armor Sprint JVS.esp'
+    clean:
+    # 2.1.03
+      - crc: 0x89BC24A8
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'WMIMNV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
+        name: 'Weapon Mesh Improvement Mod'
+      - link: 'https://github.com/VivaNewVegas/Viva-New-Vegas-Patch-Emporium/blob/main/WMIM%20ESP%20Replacer.7z'
+        name: 'Viva New Vegas WMIM Replacer'
+    group: *fixesGroup
+    inc:
+      - *TTWv320
+      - 'EVE FNV - ALL DLC.esp'
+      - 'EVE FNV - NO DLC.esp'
+      - 'EVE FNV - NO GRA.esp'
+      - 'Weapon Mod Expansion.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Sound
+      - Stats
+      - WeaponMods
+    # Do not clean
+
+###### AudioVisual - Sound & Music ######
+  - name: 'Improved Sound FX.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
+    tag: [ Sound ]
+  - name: 'Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - Merged Major DLCs.esp") and file("Improved Sound FX - (DM|HH|OWB|LR)( Sharing Fix)?\.esp")'
+  - name: 'Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and file("Improved Sound FX - (WMX - )?(Weapon|HH|OWB|LR) Sharing Fix\.esp")'
+  - name: 'Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'updated **Improved Sound FX - WMX - Merged Major DLCs.esp**' ]
+        condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
+
+###### AudioVisual - Weather & Lighting ######
+  - name: 'CC - (Rain|3D Rain)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79661/'
+        name: 'Climate Control - Rain'
+  - name: 'CC - Rain.esp'
+    group: *weatherGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x639200CA
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'CC - 3D Rain.esp'
+    group: *weatherGroup
+    msg:
+      - <<: *missingRequirementXforY
+        subs:
+          - '[3D Rain](https://www.nexusmods.com/newvegas/mods/79652/)'
+          - 'Climate Control - 3D Rain'
+        condition: 'not file("meshes/nvdlc02/sky/nvdlc02rain.nif")'
+    clean:
+      - crc: 0xAE32851F
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Cut_HD_Battle_Climate.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71812/'
+        name: 'Cut Hoover Dam Battle Weathers'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DNWeathers.esp**' ]
+        condition: 'active("DNWeathers.esp")'
+
+  - name: 'DNWeathers.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75437/'
+        name: 'Desert Natural Weathers'
+    group: *weatherGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    inc:
+      - 'Altitude.esp'
+      - 'BlueMoonImagespace.esp'
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - TTW.esp'
+      - 'Clarity - TTW - DarkNights.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'DUSTyWeather.esp'
+      - 'DynamicWeather.esp'
+      - 'EnhancedSkies_TTW.esp'
+      - 'EnhancedSkies_TTWRain.esp'
+      - 'EnhancedSkies_TTWRainBLUESKY.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'HDR Weather And Color.esp'
+      - 'Lucky38 Climate Fixed.esp'
+      - 'Lucky38 Climate FixedESMVersion.ESM'
+      - 'M0rk''s Lighting.esp'
+      - 'NevadaSkies.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Rain Fix.esp'
+      - 'Rain Fix only recalculation.esp'
+      - 'RainTweaks.esp'
+      - 'SSTAtmospheresWeather.esp'
+      - 'Supreme Weather.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+      - 'URWLNV-001-Weather.esm'
+      - 'URWLTTW-001-Weather.esm'
+      - 'Western Sky.esp'
+      - 'Western Sky - Darker Nights.esp'
+      - 'YellowGoodbye.esp'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Dusty Distance Redone' ]
+        condition: 'file("nvse/plugins/scripts/gr_DustyDistance.txt") or active("Dusty Distance Redone.esp")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: 'active("The Frontier.esm")'
+      - *requiresNVSE
+    tag:
+      - C.Climate
+      - C.ImageSpace
+      - C.Light
+      - C.Regions
+      - Sound
+    clean:
+      - crc: 0xC196BC98
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Longer Weather Transitions.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
+        name: 'Climate Control NVSE'
+    group: *weatherGroup
+    clean:
+      - crc: 0x93FA8202
+        util: 'FNVEdit v4.0.4c'
+
+  ### Interior Lighting Overhaul ###
+  # Core #
+  - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
+    group: *lightingGroup
+    inc:
+      - *TTWv320
+      - 'ILO - Fallout New Vegas.esp'
+    tag: [ C.Light ]
+    clean:
+      - crc: 0x393BF52E
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - Fallout New Vegas.esp'
+    group: *lightingGroup
+    tag: [ C.Light ]
+  # DLC Add-Ons #
+  - name: 'ILO - Dead Money.esp'
+    group: *lightingGroup
+    after: [ 'ILO - Fallout New Vegas.esp' ]
+    inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
+    tag: [ C.Light ]
+  - name: 'ILO - Honest Hearts.esp'
+    group: *lightingGroup
+    after: [ 'ILO - Fallout New Vegas.esp' ]
+    inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
+    tag: [ C.Light ]
+  - name: 'ILO - Old World Blues.esp'
+    group: *lightingGroup
+    after: [ 'ILO - Fallout New Vegas.esp' ]
+    inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
+    tag: [ C.Light ]
+  - name: 'ILO - Lonesome Road.esp'
+    group: *lightingGroup
+    after: [ 'ILO - Fallout New Vegas.esp' ]
+    inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
+    tag: [ C.Light ]
+  # Patches #
+  - name: 'ILO - A World of Pain.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - D.E.I.M.O.S.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.Owner
+  - name: 'ILO - GS Shack.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - New Vegas Bounties.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+    dirty:
+      - <<: *quickClean
+        crc: 0xD7D915C3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x64784791
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - New Vegas Bounties II.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+    clean:
+      - crc: 0x81D4AE7C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - NVInteriors Project.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.Owner
+    clean:
+      - crc: 0xF3439EA3
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ILO - NVInteriors Project - AWOP.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag: [ C.Light ]
+  - name: 'ILO - Project Reality Patch.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag: [ C.Climate ]
+  - name: 'ILO - Tale of Two Wastelands.esp'
+    group: *lightingGroup
+    after:
+      - 'ILO - Fallout New Vegas.esp'
+      - 'Interior Lighting Overhaul - Ultimate Edition.esp'
+    tag: [ C.Light ]
+  # Obsolete Plugins #
+  - name: '(ILO-RI|Interior Lighting Overhaul-Realistic Interiors)-.*\.esp'
+    msg: [ *obsolete ]
+  - name: 'ILO - Fallout New Vegas - No Lucky38.esp'
+    msg: [ *obsolete ]
+  - name: 'Interior Lighting Overhaul - Ultimate Edition - No Lucky38.esp'
+    msg: [ *obsolete ]
+  - name: 'Interior Lighting Overhaul-Darker.esp'
+    msg: [ *obsolete ]
+
+  - name: 'Lucky 38 Lights Redone.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73273/' ]
+    after: [ 'Strip Lights Region Fix.esp' ]
+    inc: [ 'lucky38lights.esp' ]
+    tag:
+      - Graphics
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x6EB78E38
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+    clean:
+      - crc: 0x1E461F84
+        util: 'FNVEdit v4.0.4b'
+      - crc: 0x86699A23
+        util: 'FNVEdit v4.0.4b'
+      - crc: 0x89C66422
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
+    url: [ 'http://modsreloaded.com/simple-street-lights/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Simple Street Lights ESP' ]
+        condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
+
+  - name: 'True Weathers TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76244/'
+        name: 'True Weathers TTW'
+    after: [ 'DNWeathers.esp' ]
+
+###### Character Appearance - Body, Face & Hair ######
+  - name: 'DK Caucasians.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38788/'
+        name: 'DK Female Face Textures'
+    msg:
+      - <<: *useVersion
+        type: say
+        subs: [ '[Lings compatible](https://www.nexusmods.com/newvegas/mods/41548/)' ]
+        condition: 'active("Lings.esm") and not checksum("DK Caucasians.esp", C1254A5A)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB67B57E2
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      # Lings compatible
+      - crc: 0xC1254A5A
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Lings(PrettyThings)?\.es[mp]'
+    url:
+      - link: 'https://www.moddb.com/mods/lings-coiffure-nv/'
+        name: 'Lings Coiffure NV'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+  - name: 'Lings.esm'
+    tag:
+      - Graphics
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - R.Mouth
+      - R.Teeth
+      - Stats
+    clean:
+    # v4.2
+      - crc: 0xAED0BCAF
+        util: 'FNVEdit v4.0.4c'
+  - name: 'LingsPrettyThings.esp'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    clean:
+    # v4.2
+      - crc: 0x024829C1
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'tkEyelashesFNV(_FemalesOnly)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34790/'
+        name: 'Eyelashes New Vegas'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Eyelashes ESP' ]
+        condition: 'many("tkEyelashesFNV(_FemalesOnly)?\.esp")'
+    tag:
+      - Deactivate
+      - NoMerge
+      - R.Mouth
+      - R.Teeth
+  - name: 'tkEyelashesFNV.esp'
+    clean:
+      - crc: 0x6F963FDD
+        util: 'FNVEdit v4.0.4c'
+  - name: 'tkEyelashesFNV_FemalesOnly.esp'
+    clean:
+      - crc: 0x19F63CB3
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Shojo Race Vegas.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35097/'
+        name: 'Shojo Race Vegas 09s'
+    req: [ 'Lings.esm' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Shojo Race Vegas 09s update](https://www.nexusmods.com/newvegas/mods/35097/)' ]
+        condition: 'checksum("Shojo Race Vegas.esm", 4711347F)'
+    clean:
+    # v0.9s
+      - crc: 0x335DAD2A
+        util: 'FNVEdit v4.0.4c'
+
+###### Character Appearance - NPCs ######
+  - name: 'ReElijahfied.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
+    tag:
+      - NPC.Race
+      - NpcFacesForceFullImport
+    dirty:
+      - <<: *quickClean
+        crc: 0x6926C970
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
+  - name: 'Veronica1.0.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
+    tag:
+      - Actors.ACBS
+      - NpcFacesForceFullImport
+
+  - name: 'Vyntage(Cass|Veronica)02\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36588/' ]
+    tag:
+      - Actors.ACBS
+      - NpcFacesForceFullImport
+  - name: 'VyntageCass02.esp'
+    tag:
+      - Invent.Remove
+      - Stats
+
+###### Encounters - Allies ######
+  - name: 'ARESproject.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xBC0620B7
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+      - <<: *reqManualFix
+        crc: 0xCA9BD0AA
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 5
+
+  - name: 'BittercupRedux.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80781/'
+        name: 'Bittercup Companion - Redux'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackagesForceAdd
+      - Actors.Factions
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Scripts
+    clean:
+    # 1.4.2
+      - crc: 0x96986F62
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Lily(Fawkes|Armored)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36564/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Fawkes Is Back ESP' ]
+        condition: 'many("Lily(Fawkes|Armored)\.esp")'
+  - name: 'LilyFawkes.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBDA8E6FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'LilyArmored.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B9A5AB6
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'LW Companion.*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37649/'
+        name: 'Fallout 3 Save Import Utility and Lone Wanderer Companion'
+  - name: 'LW Companion.esm'
+    clean:
+      - crc: 0x758572C9
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'RobCo Certified( Friendly Hit Fixer)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
+  - name: 'RobCo Certified.esm'
+    msg:
+      - *requiresNVSE
+      - <<: *wildEdits
+        subs: [ 'Delete **00094684** & **00137622** in **RobCo Certified.esm**.' ]
+        condition: 'checksum("RobCo Certified.esm", 3B386B25) or checksum("RobCo Certified.esm", 5417FDBA)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B386B25
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+      - <<: *quickClean
+        crc: 0x81401EEC
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+  - name: 'RobCo Certified Friendly Hit Fixer.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
+            - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
+  - name: 'Companion Core.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43331/'
+        name: 'RobCo Certified - New Vegas'
+    msg: [ *requiresNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF5E979C
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'VanessaFollowerNV.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56270/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0AD51D00
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 80
+
+###### Encounters - Enemies ######
+  - name: 'Momod.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41361/' ]
+    tag:
+      - Deflst
+      - Delev
+      - Relations.Add
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x1EBEBDFF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'WARZONES - Misanthropy Pure.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40980/'
+        name: 'WARZONES - now with ADJUSTABLE SPAWNS'
+    tag:
+      - C.Regions
+      - Text
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xE34DE281
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+        nav: 84
+
+###### Encounters - Neutrals ######
+  - name: '(Creature)_Mojave_Straycats.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/70220/'
+        name: 'Mojave Straycats'
+    clean:
+      - crc: 0x71BA701E
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'outsidebets.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
+        name: 'New Vegas Uncut - Outside Bets'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Voice
+      - Factions
+      - Invent.Add
+      - Scripts
+    clean:
+      - crc: 0xE2ADCB31
+        util: 'FNVEdit v4.0.4'
+
+  - name: 'populatedcasino(-light|-medium)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35369/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Populated Casinos ESP' ]
+        condition: 'many("populatedcasino(-light|-medium)?\.esp")'
+    tag: [ Actors.AIPackages ]
+  - name: 'populatedcasino.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9EAE96FF
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 48
+        udr: 2
+  - name: 'populatedcasino-medium.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x39574E5A
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 47
+        udr: 8
+  - name: 'populatedcasino-light.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFAB23559
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 46
+        udr: 16
+
+###### Environment, Landscape & Flora ######
+  - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56625/'
+        name: 'Uncut Wasteland'
+  - name: 'Uncut Wasteland( FSO)?( OB)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Uncut Wasteland ESP' ]
+        condition: 'many("Uncut Wasteland( FSO)?( OB)?\.esp")'
+  - name: 'Uncut Extra Collection( FSO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Uncut Extra Collection ESP' ]
+        condition: 'many("Uncut Extra Collection( FSO)?\.esp")'
+  - name: 'Uncut Greenhouses.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Uncut Extra Collection' ]
+        condition: 'active("Uncut Extra Collection( FSO)?\.esp")'
+  - name: 'Uncut Skeletons.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Uncut Wasteland' ]
+        condition: 'active("Uncut Wasteland( FSO)?( OB)?\.esp")'
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Yukichigai Unofficial Patch' ]
+        condition: 'active("YUP - (Base Game + All DLC|Old World Blues)\.esm")'
+
+  - name: 'vault22FloralOverhaul.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
+        name: 'Vault 22 Flora Overhaul Remastered'
+    tag:
+      - C.Acoustic
+      - Graphics
+      - Invent.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0x113C1E94
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 14
+
+  - name: 'Vurt''s WFO.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE0A866E9
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 32
+        udr: 4040
+  - name: 'Vurt''s WFO.esm'
+    msg: [ *obsolete ]
+
+###### Gameplay ######
+  - name: 'Acquired_Immunity.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71170/'
+        name: 'Acquired Immunity - TTW 3.3'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0xDD2CD26F
+        util: 'FNVEdit v4.0.4'
+
+  - name: 'Adventurers_New_Vegas-(econ-and-items|gameplay-and-combat)-V02.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/34890/'
+        name: 'Adventurer''s New Vegas'
+  - name: 'Adventurers_New_Vegas-econ-and-items-V02.esp'
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Relev
+      - Stats
+    clean:
+      - crc: 0x803BB3FF
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Adventurers_New_Vegas-gameplay-and-combat-V02.esp'
+    clean:
+      - crc: 0x8C1ABEFC
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'BetterGamePerformanceV4.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
+
+  - name: 'SD_Capture( TTW Additions)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
+        name: 'Subjugation - Slavery and Capture Mechanics'
+  - name: 'SD_Capture.esp'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - 'SD_Fatigue.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC6734AE1
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 20
+  - name: 'SD_Capture TTW Additions.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2CFC37E7
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'SD_Fatigue.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
+        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BDF8423
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
+
+  - name: 'FlashlightNVSE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
+    after:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+
+  - name: 'Ricks HardCore Fixer & Optimizer.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
+      name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
+    inc:
+      - 'jsawyer.esp'
+      - 'Project Nevada - Rebalance.esp'
+      - 'sawyerbatty.esp'
+    clean:
+      - crc: 0xB13B07BB
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
+  - name: '(KFE - |PN-)Refill Water Bottles( Patch| - Unbreakable Bottles)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55569/'
+        name: 'KFE - Refill Water Bottles'
+  - name: 'KFE - Refill Water Bottles.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Project Nevada - Rebalance' ]
+        condition: 'active("Project Nevada - Rebalance.esp") and not file("PN-Refill Water Bottles Patch.esp") and checksum("KFE - Refill Water Bottles.esp", 3349D934)'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x3349D934
+        util: 'FNVEdit v4.0.4c'
+      # Project Nevada Patch
+      - crc: 0xB85EF60C
+        util: 'FNVEdit v4.0.4c'
+  - name: 'PN-Refill Water Bottles Patch.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**KFE - Refill Water Bottles.esp**' ]
+        condition: 'checksum("KFE - Refill Water Bottles.esp", B85EF60C)'
+
+###### Gameplay - Combat ######
+  - name: 'BLEED.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61141/'
+        name: 'BLEED TTW'
+    req:
+      - *JIPLN
+    msg: [ *requires_xNVSE ]
+    tag:
+      - Enchantments
+      - EnchantmentStats
+    clean:
+      # 1.8.7
+      - crc: 0xCB35A8AF
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Companion Weapons - Special Ammo( - Dead Money)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37109/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Companion Weapons - Use Special Ammo ESP' ]
+        condition: 'many("Companion Weapons - Special Ammo( - Dead Money)?\.esp")'
+  - name: 'Companion Weapons - Special Ammo.esp'
+    msg: [ *useVersionDeadMoney ]
+    clean:
+      - crc: 0x7D889702
+        util: 'FNVEdit v4.0.3g'
+  - name: 'Companion Weapons - Special Ammo - Dead Money.esp'
+    msg: [ *useVersionNonDeadMoney ]
+    clean:
+      - crc: 0x23857A09
+        util: 'FNVEdit v4.0.3g'
+
+  - name: 'JIP Realistic Weapon Overheating.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/49892/'
+        name: 'JIP Realistic Weapon Overheating'
+    msg: [ *requiresNVSE ]
+    req:
+      - *MCM
+      - *UIO
+    clean:
+    # 0.90
+      - crc: 0x201FA486
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Moddable Unique Weps.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35009/' ]
+    tag:
+      - Graphics
+      - Stats
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x27DBB6E9
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'Moddable Unique Weps.esm'
+    msg: [ *obsolete ]
+
+  - name: 'NPCsUseAmmo(-More Ammo)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35462/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NPCs Use Ammo ESP' ]
+        condition: 'many("NPCsUseAmmo(-More Ammo)?\.esp")'
+  - name: 'NPCsUseAmmo.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD7897DDE
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'NPCsUseAmmo-More Ammo.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0197EB05
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
+  - name: 'RH_IronSights_NV_Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35161/' ]
+    tag: [ Graphics ]
+
+  ### WME - Weapon Mod Expansion ###
+  - name: '(Weapon Mod Expansion|WME - .*)\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37576/' ]
+  - name: 'Weapon Mod Expansion.esm'
+    inc: [ *TTWv320 ]
+    tag: [ Names ]
+    clean:
+      - crc: 0x2CBA5914
+        util: 'FNVEdit v4.0.3g'
+  - name: 'Weapon Mod Expansion.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+    clean:
+      - crc: 0x685F6957
+        util: 'FNVEdit v4.0.3g'
+  - name: 'WME - DLCs.esp'
+    inc: [ 'WME - DLCs Arenovalis.esp' ]
+  # Patches #
+  - name: 'WME - 00 Commando.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - Arwen Core.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - FOOK.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Sound
+      - Stats
+  - name: 'WME - that gun 223.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'WME - that gun 44 mag.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  # Obsolete Plugins #
+  - name: 'WME - (Dead Money|Honest Hearts|Old World Blues).esm'
+    msg: [ *obsolete ]
+
+  ### WMX - Weapon Mods Expanded ###
+  - name: '(WeaponModsExpanded|WMX-.*)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39651/' ]
+  - name: 'WeaponModsExpanded.esp'
+    inc:
+      - *TTWv320
+      - 'jsawyer.esp'
+      - 'RH_IRONSIGHTS_NV.esm'
+      - 'Weapon Mod Expansion.esm'
+      - name: 'Weapon Retexture Project.esp'
+        display: 'Weapon Retexture Project v2.0+'
+      - 'WMIMNV.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Deflst
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Names
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0x92A9B6AD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+  # DLC Add-Ons #
+  - name: 'WMX-(DLCMerged|DeadMoney|HonestHearts|OldWorldBlues|LonesomeRoad|GunRunnersArsenal)\.esp'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Text
+      - WeaponMods
+  - name: 'WMX-DLCMerged.esp'
+    tag:
+      - Deflst
+      - Names
+      - Relev
+      - Sound
+      - Stats
+  - name: 'WMX-(DeadMoney|HonestHearts|OldWorldBlues|LonesomeRoad|GunRunnersArsenal)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-DLCMerged.esp**' ]
+        condition: 'file("WMX-DLCMerged.esp")'
+  - name: 'WMX-DeadMoney.esp'
+    tag:
+      - Deflst
+      - Names
+      - Relev
+  - name: 'WMX-HonestHearts.esp'
+    tag:
+      - Deflst
+      - Stats
+  - name: 'WMX-OldWorldBlues.esp'
+    tag:
+      - Deflst
+      - Names
+      - Sound
+      - Stats
+  - name: 'WMX-LonesomeRoad.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'WMX-GunRunnersArsenal.esp'
+    tag:
+      - Names
+      - Sound
+      - Stats
+  - name: 'WMX-(POPMerged|PreOrderPack(Classic|Mercenary|Tribal|Caravan))\.esp'
+    tag: [ WeaponMods ]
+  - name: 'WMX-POPMerged.esp'
+    tag:
+      - Deflst
+      - Graphics
+      - Scripts
+      - Stats
+  - name: 'WMX-PreOrderPack(Classic|Mercenary|Tribal|Caravan)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-POPMerged.esp**' ]
+        condition: 'file("WMX-POPMerged.esp")'
+  - name: 'WMX-PreOrderPackClassic.esp'
+    tag:
+      - Deflst
+      - Scripts
+  - name: 'WMX-PreOrderPackMercenary.esp'
+    tag: [ Graphics ]
+  - name: 'WMX-PreOrderPackTribal.esp'
+    tag:
+      - Graphics
+      - Stats
+  - name: 'WMX-PreOrderPackCaravan.esp'
+    tag:
+      - Deflst
+      - Graphics
+      - Stats
+  # Optional Add-Ons #
+  - name: 'WMX-ModernWeapons.esp'
+    tag:
+      - Deflst
+      - Invent.Add
+      - Text
+  # Patches #
+  - name: 'WMX-EVE-(NoDLC|NoGRA|AllDLC(Merged)?)\.esp'
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: 'WMX-EVE-(NoDLC|NoGRA|AllDLC)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-AllDLCMerged.esp**' ]
+        condition: 'file("WMX-EVE-AllDLCMerged.esp")'
+  - name: 'WMX-EVE-(NoDLC|NoGRA)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-AllDLC.esp**' ]
+        condition: 'file("WMX-EVE-AllDLC.esp") and not file("WMX-EVE-AllDLCMerged.esp")'
+  - name: 'WMX-EVE-NoDLC.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**WMX-EVE-NoGRA.esp**' ]
+        condition: 'file("WMX-EVE-NoGRA.esp") and not file("WMX-EVE-AllDLC(Merged)?\.esp")'
+  - name: 'WMX-ArenovalisTextures.esp'
+    tag: [ Graphics ]
+  # Obsolete Plugins #
+  - name: 'WMXUE.*\.esp'
+    msg: [ *obsolete ]
+
+###### Gameplay - Economy & Item Balance ######
+  - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44171/'
+        name: 'Couriers Stash Pre-order pack selector'
+  - name: 'Couriers Stash - Package Selection Menu.esp'
+    clean:
+      - crc: 0x3483C57F
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Disable Couriers Stash.esp'
+    clean:
+      - crc: 0x414F2AF8
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'E.C.K.O. Energy Cell Killer Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36426/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x616CB2B3
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'Recharge (High|Low)\.esp'
+    req: [ 'E.C.K.O. Energy Cell Killer Overhaul.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Recharge ESP' ]
+        condition: 'many("Recharge (High|Low)\.esp")'
+  - name: 'Recharge High.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC8611FBD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
+  - name: 'Mail Order Catalogs.esp'
+    url:
+      - 'https://www.nexusmods.com/newvegas/mods/39490/'
+      - link: 'https://www.nexusmods.com/newvegas/mods/47712/'
+        name: 'Mail Order Catalogs - Updated'
+    msg: [ *requiresNVSE ]
+
+  - name: 'VendorGameTimeRestock(NoNVSE)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37344/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Variable Merchant Restock ESP' ]
+        condition: 'many("VendorGameTimeRestock(NoNVSE)?\.esp")'
+  - name: 'VendorGameTimeRestock.esp'
+    msg: [ *requiresNVSE ]
+
+###### Gameplay - Follower Managers ######
+  - name: 'NVPhalanx.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
+        name: 'Phalanx for New Vegas'
+    inc:
+      - 'DLCCompanions_1_3.esp'
+      - 'JIP Companions Command & Control.esp'
+      - 'UnlimitedCompanions.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Factions
+      - C.Encounter
+      - C.Owner
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B9B57BE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 8
+
+###### Gameplay - NPC Balance & Distribution ######
+  - name: 'Respawn(\d{1,2}(Hour|Month|Week|Year)s?(Improved)?|erImprovedEx)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35786/'
+        name: 'FNV Respawn Timer'
+  - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FNV Respawn Timer ESP' ]
+        condition: 'many("Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp")'
+  - name: 'Respawn\d{1,2}(Hour|Month|Week|Year)s?\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
+  - name: 'RespawnerImprovedEx.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ 'FNV Respawn Timer Default ESP' ]
+        condition: 'not active("Respawn\d{1,2}(Hour|Month|Week|Year)s?(Improved)?\.esp") and not active("Bashed Patch.*\.esp")'
+      - <<: *wildEdits
+        condition: 'checksum("RespawnerImprovedEx.esp", 73B93095) or checksum("RespawnerImprovedEx.esp", 327F5573)'
+    tag: [ Actors.ACBS ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x73B93095
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 29
+
+###### Gameplay - Quests ######
+  - name: 'NewVegasBounties.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
+        name: 'New Vegas Bounties I'
+    req: [ 'SomeguySeries.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'NewVegasBounties.esm' ]
+        condition: 'active("NewVegasBounties.esm")'
+      - <<: *useInstead
+        subs: [ '[New Vegas Bounties 1 LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
+
+  - name: 'NewVegasBounties(\.esm|TTW\.esp)'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77108/'
+        name: 'New Vegas Bounties I LE'
+  - name: 'NewVegasBounties.esm'
+    req: [ 'SomeguySeries.esm' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("NewVegasBountiesTTW.esp")'
+    clean:
+      # 1.4
+      - crc: 0x4ABA5574
+        util: 'FNVEdit v4.0.4c'
+  - name: 'NewVegasBountiesTTW.esp'
+    clean:
+      - crc: 0x84DC295A
+        util: 'FNVEdit v4.0.4c'
+
+
+###### Gameplay - Skills & Perks ######
+  - name: 'A Crime Against Nature.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67853/'
+        name: 'CANNIBALISM - A Crime Against Nature'
+    after: [ 'Cannibal Reborn.esp' ]
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    inc:
+      - 'Cannibal Reborn (Default Dine and Dash).esp'
+      - 'Cannibal Reborn (No Rebalance).esp'
+    msg:
+      - *requiresMCM
+      - *requiresNVSE
+    clean:
+      - crc: 0x0EEF05A3
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64789/' ]
+    req: [ *JIPLN ]
+    inc: [ 'LFox Cannibal Perk Improvements.esp' ]
+    msg:
+      - *requiresNVSE
+      - <<: *useOnlyOneX
+        subs: [ 'Cannibal Reborn ESP' ]
+        condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
+  - name: 'Cannibal Reborn.esp'
+    tag: [ Text ]
+    clean:
+      - crc: 0x978297D7
+        util: 'FNVEdit v4.0.4b'
+  - name: 'Cannibal Reborn (Default Dine and Dash).esp'
+    clean:
+      - crc: 0xDC1C4688
+        util: 'FNVEdit v4.0.4b'
+  - name: 'Cannibal Reborn (No Rebalance).esp'
+    clean:
+      - crc: 0x8AEF9979
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'Dark Craving NV( Incurable Edition)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62452/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**A Crime Against Nature.esp**' ]
+        condition: 'active("A Crime Against Nature.esp")'
+      - *requiresNVSE
+      - <<: *useOnlyOneX
+        subs: [ 'Dark Craving ESP' ]
+        condition: 'many("Dark Craving NV( Incurable Edition)?\.esp")'
+  - name: 'Dark Craving NV.esp'
+    clean:
+      - crc: 0xD0855AD5
+        util: 'FNVEdit v4.0.4b'
+  - name: 'Dark Craving NV Incurable Edition.esp'
+    clean:
+      - crc: 0x5E6CD6E5
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'More Perks( for Companions| for Dead Money| for Honest Hearts| for Old World Blues)?( Update)?\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35979/' ]
+  - name: 'More Perks( for Companions)?\.esm'
+    inc: [ *TTWv320 ]
+  - name: 'More Perks.esm'
+    clean:
+      - crc: 0x28CE3B92
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB6C3123B
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+        udr: 1
+  - name: 'More Perks for Companions.esm'
+    clean:
+      - crc: 0xD88B1E14
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks for Companions Update.esp'
+    clean:
+      - crc: 0x3321EC32
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Traits.esm'
+    clean:
+      - crc: 0x820E087D
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Traits Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x62C8F5A5
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'More Perks for Dead Money.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x129204A2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 301
+  - name: 'More Perks for Dead Money Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5CC6B9FD
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'More Perks for Honest Hearts.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x25B6073B
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+  - name: 'More Perks for Honest Hearts Update.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF1527F2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+        udr: 1
+  - name: 'More Perks for Old World Blues.esm'
+    clean:
+      - crc: 0xB980D0D2
+        util: 'FNVEdit v4.0.3g'
+  - name: 'More Perks for Old World Blues Update.esp'
+    clean:
+      - crc: 0x7E701274
+        util: 'FNVEdit v4.0.3g'
+
+  - name: 'S6S Perks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73438/'
+        name: 'Sweet 6 Shooter Perks - TTW - NV'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+    msg:
+      - <<: *patchProvided
+        subs: [ 'JSawyer Ultimate Edition' ]
+        condition: 'active("sawyerbatty.esp") or active("jsawyer.esp") and not file("nvse/plugins/scripts/gr_S6SPerksJSUEPatch.txt")'
+      - <<: *patchProvided
+        subs: [ 'New Vegas Bounties I LE' ]
+        condition: 'active("NewVegasBounties.esm") and not file("nvse/plugins/scripts/gr_S6SPerksNVB1Patch.txt")'
+    clean:
+    # 16.16 NV
+      - crc: 0xD0DD1B41
+        util: 'FNVEdit v4.0.4c'
+    # 16.16 TTW
+      - crc: 0x2EA38DC1
+        util: 'FNVEdit v4.0.4c'
+
+###### Items ######
+  - name: 'epock.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39972/'
+        name: 'Tactical Clothing'
+    msg: [ *requiresResourcesType3 ]
+
+  - name: 'FafnirUniqueTTWOverhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/62577/'
+        name: 'Fallout 3 Unique items Overhaul TTW 3.3'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Fallout 3 Unique Items Overhaul Patch](https://www.nexusmods.com/newvegas/mods/83014/)' ]
+        condition: 'checksum("meshes\Weapons\Uniques\CaptainsSideArm\CaptainSideArm.nif", 3541108F)'
+      - <<: *wildEdits
+        subs: [ 'Remove **Cell/Block 2/Sublock 9** & **0A010989** & **060CB364** from **FafnirUniqueTTWOverhaul.esp**.' ]
+        condition: 'checksum("FafnirUniqueTTWOverhaul.esp", B81F7FDB) or checksum("FafnirUniqueTTWOverhaul.esp", 00DAC91F)'
+    tag:
+      - Deflst
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xB81F7FDB
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+
+  - name: '.*FO3WeaponsRestoration.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40007/'
+        name: 'Fallout 3 Weapons Restoration'
+  - name: 'FO3WeaponsRestoration.esp'
+    inc: [ 'F03weaponpack_v1_14.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **001543E3** from **FO3WeaponsRestoration.esp**.' ]
+        condition: 'checksum("FO3WeaponsRestoration.esp", 2594F51D) or checksum("FO3WeaponsRestoration.esp", 7AAC79D3)'
+    tag:
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Sound
+      - Stats
+      - Text
+    dirty:
+      - <<: *quickClean
+        crc: 0x2594F51D
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x716C7DB0
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'FO3WeaponsRestorationRILForceOverride.esp'
+    group: *lateChangesGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A21A2AB
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'FO3WeaponsRestoration_SoundRestoration.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ 'Fallout 3' ]
+        condition: 'not file("sound\fx\wpn\rifleassault\wpn_rifleassault_fire_lp.wav")'
+    tag: [ Sound ]
+
+  - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41657/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Ghost Variants ESP' ]
+        condition: 'many("Ghost Variants( Safe| Adjutant)?\.esp")'
+
+  - name: 'ghostbodysuitcamo.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34985/' ]
+    msg: [ *requiresResourcesType3 ]
+
+  - name: 'JillBSAA Multicolor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36511/' ]
+    msg:
+      - *requiresResourcesType3
+      - <<: *wildEdits
+        subs: [ 'Remove **0007C109** from **JillBSAA Multicolor.esp**.' ]
+        condition: 'checksum("JillBSAA Multicolor.esp", A9E3000E) or checksum("JillBSAA Multicolor.esp", D25A3439)'
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA9E3000E
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'Moddable Anti-Materiel Rifle 2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36846/' ]
+    tag:
+      - Graphics
+      - Invent.Add
+      - Stats
+      - WeaponMods
+  - name: 'Moddable Anti-Materiel Rifle.esp'
+    msg: [ *obsolete ]
+
+  - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NCR Rearmament ESP' ]
+        condition: 'many("NCR Rearmament v1.5( \(Lore\))?\.esp")'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Names
+      - Stats
+  - name: 'NCR Rearmament v1.5.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6AF919F2
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 18
+  - name: 'NCR Rearmament v1.5 (Lore).esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3278C7B8
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 18
+
+  - name: 'Nidaoutfitv1.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40065/'
+        name: 'Nida Schuetlich outfit for Type3'
+    msg: [ *requiresResourcesType3 ]
+
+  - name: 'QS_Blackwolf_NV_Backpackmod.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35034/' ]
+    req:
+      - name: 'QS_Blackwolf_NV_Backpackmod.bsa'
+        display: 'Blackwolf Backpacks resources'
+        condition: 'not file("BlackWolf Backpack.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif")'
+    inc: [ 'BlackWolf Backpack.esp' ]
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - 'BlackWolf Backpack.bsa'
+          - 'QS_Blackwolf_NV_Backpackmod.bsa'
+        condition: 'file("BlackWolf Backpack.bsa") and not file("QS_Blackwolf_NV_Backpackmod.bsa") and not file("meshes/armor/blackwolf/backpack_15wgf.nif") and not file("BlackWolf Backpack.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x5DF9D6E4
+        util: 'FNVEdit v4.0.3g'
+
+  - name: 'Type3 Leather Armors.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39598/'
+        name: 'New Vegas Type3 Leather Armors'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Type3 Leather Armors-lvld.esp**' ]
+        condition: 'active("Type3 Leather Armors-lvld.esp")'
+      - *requiresResourcesType3
+
+  - name: 'Type3 Leather Armors-lvld.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40109/'
+        name: 'New Vegas Type3 Leather Armors suppliment'
+    msg:
+      - *requiresResourcesType3
+      - <<: *requiresResources
+        subs: [ '[New Vegas Type3 Leather Armors](https://www.nexusmods.com/newvegas/mods/39598/)' ]
+        condition: 'not file("meshes/Exeter/leather") or not file("textures/Exeter/Leather")'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xB88FA7AE
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+###### Locations ######
+  - name: 'AnotherInteriorMod.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66611/'
+        name: 'TTW Another Interior Mod'
+    req: [ *TTWv320 ]
+    clean:
+      - crc: 0xE186744F
+        util: 'FNVEdit v4.0.4'
+
+  - name: 'Better Strip View.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73261/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4A07E0E3
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 14
+        udr: 21
+    clean:
+      - crc: 0xEBAC2B12
+        util: 'FNVEdit v4.0.4b'
+
+  - name: 'Big Town Extensions.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74825/'
+        name: 'Big Town Extensions'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *TTWv320
+    after: [ 'AWorldOfPainFO3.esm' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - Big Town Extensions](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW Reputations.esm") and not active("TTW Reputations - Big Town Extensions.esp")'
+      - <<: *wildEdits
+        subs: [ 'Delete **0602D934** & **06058B9E** from **Big Town Extensions.esm**.' ]
+        condition: 'checksum("Big Town Extensions.esm", A99EFA1E) or checksum("Big Town Extensions.esm", 39F84E9C)'
+    tag:
+      - C.Owner
+      - Names
+    dirty:
+      - <<: *quickClean
+        crc: 0xA99EFA1E
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 10
+
+###### Locations - New Lands ######
+  - name: 'AWorldOfPain(Preview).esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
+    tag:
+      - Deflst
+      - Invent.Add
+      - Invent.Remove
+  - name: 'AWOPCaliberXAmmoPatch.esp'
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+  - name: 'AWOP(Very)?LowRobots\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Low Robots ESP' ]
+        condition: 'many("AWOP(Very)?LowRobots\.esp")'
+
+  - name: 'AWorldOfPainFO3.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66265/'
+        name: 'TTW A World of Pain for Fallout 3'
+    req: [ *TTWv320 ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[AWorldOfPainFO3 - FafnirUniqueTTWOverhaul Patch](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("AWorldOfPainFO3-FafnirUniqueTTWOverhaul.esp")'
+      - <<: *patchProvided
+        subs: [ 'JIP Companions Command and Control' ]
+        condition: 'active("JIP Companions Command & Control.esp") and not file("textures/jazzisparis/ccc/avatar_the_warden.dds")'
+    tag:
+      - C.Light
+      - Faction
+    clean:
+      - crc: 0xC0E2EF21
+        util: 'FNVEdit v4.0.4c'
+
+###### Locations - New Structures & Landmarks ######
+  - name: 'Cut Sewers Restored.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55956/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x62FBFB05
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'The Megaton Walkway - TTW.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77243/'
+        name: 'The Megaton Walkway - TTW'
+    after: [ 'Expanded Megaton House - TTW.esp' ]
+    clean:
+      - crc: 0x3A25C9C6
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Wasteland Defense.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38049/' ]
+    msg:
+      - *requiresNVSE
+      - <<: *wildEdits
+        subs: [ 'Delete **001161B5** & **001161B7** in **Wasteland Defense.esp**.' ]
+        condition: 'checksum("Wasteland Defense.esp", D8ABD903) or checksum("Wasteland Defense.esp", 5CC37AE6) or checksum("Wasteland Defense.esp", 90EFE7F6)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD8ABD903
+        util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 27
+
+  - name: 'WastlandWrecks.esp' # sic
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67642/'
+        name: 'Wasteland Wreckage'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000E6062** & **001679F6** from **WastlandWrecks.esp**.' ]
+        condition: 'checksum("WastlandWrecks.esp", DDF993A6) or checksum("WastlandWrecks.esp", 89160A54)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDDF993A6
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 119
+      - <<: *quickClean
+        crc: 0x0EB7ECF1
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 119
+
+  - name: 'ZionAntCaveRestored-HonestHearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74706/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDD0DE5B8
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        udr: 2
+
+###### Location - Overhauls ######
+  - name: 'FreesideOpen(Patch)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46355/'
+        name: 'New Vegas Uncut - Freeside Open'
+  - name: 'FreesideOpen.esm'
+    inc: [ *TTWv320 ]
+    tag:
+      - C.Acoustic
+      - Graphics
+    dirty:
+      - <<: *reqManualFix
+        crc: 0xB1E765B8
+        util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 15
+  - name: 'FreesideOpenPatch.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Delev
+      - Invent.Add
+      - Names
+      - Scripts
+    clean:
+      - crc: 0xAED90543
+        util: 'FNVEdit v4.0.4b'
+
+###### Locations - Player Homes ######
+  - name: 'Expanded Megaton House - TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69953/'
+        name: 'Expanded Megaton House - TTW'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **060C71DA** from **Expanded Megaton House - TTW.esp**. Change FormID of **0D0067A4** to **060C71DA** in **Expanded Megaton House - TTW.esp**.' ]
+        condition: 'checksum("Expanded Megaton House - TTW.esp", 47236A33)'
+    dirty:
+      - <<: *reqManualFix
+        crc: 0x47236A33
+        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 1
+
+###### Anything new can go after this (If you're not sure where to put it) ######
+  - name: 'NewCalifornia.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+    group: *addonsGroup
+    after:
+      - 'DeadMoney.esm'
+      - 'HonestHearts.esm'
+      - 'OldWorldBlues.esm'
+      - 'LonesomeRoad.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    inc:
+      - 'Fallout3.esm'
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
+      - 'Zeta.esm'
+      - 'TaleOfTwoWastelands.esm'
+      - 'Alternative Start.esp'
+      - 'UnlimitedCompanionsFixed.esp'
+      - 'LootEverything_ForDlcSupport.esp'
+      - 'Simple DLC Delay.esp'
+      - 'True Wasteland Economy.esp'
+      - 'HumanPlaguePerk.esp'
+      - 'HumanPlaguePerkReduced.esp'
+      - 'BoostedSkills.esp'
+      - 'Delay Level Up.esp'
+      - 'Delay Level Up - Stealth Suit Fix.esp'
+      - 'Enhanced NPC Awareness.esp'
+      - 'Vanilla Intro Plus.esp'
+      - 'HonestHearts2.esp'
+      - 'HonestHearts2b.esp'
+      - 'Threshold.esp'
+      - 'Awesome Crippling Effects v1.8.esp'
+      - 'Ghoulified.esp'
+      - 'BellevueBillRegalRises.esp'
+      - 'fwv.esm'
+      - 'fwv.esp'
+      - 'FNC Overhaul Project.esp'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
+      - <<: *compatNotes
+        subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
+  - name: 'Afterschool Special.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
+    tag: [ Invent ]
+  - name: 'Fallout3.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    after: [ 'GunRunnersArsenal.esm' ]
+    # doNotClean
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Invent
+      - Names
+      - NPC.Class
+      - NpcFaces
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: 'Anchorage.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    # doNotClean
+  - name: 'ThePitt.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    after: [ 'Anchorage.esm' ]
+    # doNotClean
+    tag:
+      - Actors.DeathItem
+      - Graphics
+      - Relations
+  - name: 'BrokenSteel.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+    # doNotClean
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'PointLookout.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
+    # doNotClean
+    tag:
+      - Graphics
+      - Names
+      - Stats
+  - name: 'Zeta.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *dlcGroup
+    after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
+    # doNotClean
+  - name: 'TaleOfTwoWastelands.esm'
+    url: [ 'http://taleoftwowastelands.com/']
+    group: *addonsGroup
+    after:
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    inc:
+      - name: 'Point Lookout Reborn.esm'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      # doNotClean
+      - <<: *compatNotes
+        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
+      - <<: *requiresX
+        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
+        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Music
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: 'YUPTTW.esm'
+    url: [ 'http://taleoftwowastelands.com/' ]
+    inc: [ 'YUP - Base Game + All DLC.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Creatures.Type
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Enchantments
+      - EnchantmentStats
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Race
+      - ObjectBounds
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
+      - Relev
+      - R.Hair
+      - R.Head
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+    group: *fixesGroup
+    # doNotClean
+  - name: 'TTWfixes.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
+    group: *fixesGroup
+    inc: [ 'YUP - Base Game + All DLC.esm' ]
+    after: [ 'TaleOfTwoWastelands.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Stats
+      - C.Light
+      - C.Owner
+      - C.Water
+      - Deflst
+      - Delev
+      - Destructible
+      - Eyes
+      - Factions
+      - Graphics
+      - Hair
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+
+  - name: 'UWHNV-Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36121/' ]
+    msg: [ *requiresNVSE ]
+
+  - name: 'HeroinZero Weapon Fixes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65041/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'ProjectBrazil.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+    msg: [ *obsolete ]
+    after:
+      - 'Project Nevada - Core.esm'
+      - 'Project Nevada - Equipment.esm'
+  - name: 'FCOMaster.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    after: [ 'ProjectBrazil.esm' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Actors.ACBS
+      - Eyes
+      - Names
+      - NPC.Race
+      - NpcFaces
+    clean:
+      - crc: 0xD8252B38
+        util: 'FNVEdit v4.0.2f'
+  - name: 'NVCE Main.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39325/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: 'NVCE Main (Faces Only).esm'
+    tag:
+      - Actors.ACBS
+      - Deactivate
+      - Filter
+      - NPC.Race
+      - NpcFaces
+
+  - name: 'AmmoSpreadEffectFixer.esm'
+    msg: [ *requiresNVSE ]
+
+  - name: 'IWR.esm'
+    inc: [ 'OWNB - Open World.esm' ]
+  - name: 'IWS-Core.esm'
+    tag: [ Delev ]
+  - name: 'OWNB - Open World.esm'
+    inc: [ 'IWR.esm' ]
+#  - name: 'RBX.esm'
+# Needs to be before any mod using a reloading bench including a lot of house mods.
+  - name: 'AccuRifles.esm'
+    msg: [ *requiresNVSE ]
+  - name: 'Caliber.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+    dirty:
+      # 4.017
+      - <<: *quickClean
+        crc: 0x38C75B04
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
+    clean:
+      - crc: 0x74A11A7D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXgunrunners.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag: [ Names ]
+    clean:
+      - crc: 0x303F8818
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXhonesthearts.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    clean:
+      - crc: 0xAE91AF06
+        util: 'FNVEdit v4.0.2f'
+  - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Destructible
+      - Invent
+      - Names
+      - NpcFaces
+      - Stats
+  - name: 'StreetLights.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-street-lights' ]
+    inc:
+      - 'ELECTRO-CITY - CompletedWorkorders.esm'
+      - 'SimpleStreetLights.esp'
+      - 'SimpleStreetLights (Extra Lights).esp'
+    tag:
+      - Graphics
+      - Scripts
+      - Stats
+  - name: 'CINEMATECH.esm'
+    req: [ *MCM ]
+    msg: [ *requiresNVSE ]
+
+  - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
+    msg: [ *obsolete ]
+  - name: 'Fiends, With Style.esm'
+    tag: [ Delev ]
+  - name: 'FOOK - New Vegas.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'LDFemalePowerArmorPack.esm'
+    inc: [ 'LDFemalePowerArmorPack.esp' ]
+
+  - name: 'NSkies - Vanilla Edition.esm'
+    inc: [ 'NSkies URWLified.esm' ]
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'NSkies URWLified.esm'
+    inc: [ 'NSkies - Vanilla Edition.esm' ]
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'NVInteriors_Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
+    clean:
+      # v2.1.1
+      - crc: 0x710F6308
+        util: 'FNVEdit v4.0.2f'
+  - name: 'NVInteriors_ComboEdition.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+    tag: [ Graphics ]
+    dirty:
+      # v1.3.4
+      - <<: *reqManualFix
+        crc: 0x70381CEB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 4
+  - name: 'NVInteriors_WastelandEditon.esm'
+    inc:
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+  - name: 'NVInteriors_WastelandEditonAWOP.esm'
+    inc:
+      - 'NVInteriors_WastelandEditon.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+  - name: 'NVInteriors_ComboEdition_AWOP.esm'
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+  - name: 'TTWInteriorsProject_Combo.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66449/'
+        name: 'The TTW Interiors Project'
+    req:
+      - *TTWv320
+      - 'TTWInteriors_Core.esm'
+    after:
+      - 'AWorldOfPainFO3.esm'
+      - 'MothershipZetaRehaul.esm'
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo_AWOP.esm'
+    tag:
+      - Actors.AIPackages
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - ObjectBounds
+      - Scripts
+      - Text
+    clean:
+      - crc: 0xE300827D
+        util: 'FNVEdit v4.0.4'
+  - name: 'TTWInteriorsProject_Combo_AWOP.esm'
+    inc:
+      - 'NVInteriors_WastelandEdition.esm'
+      - 'NVInteriors_WastelandEditonAWOP.esm'
+      - 'NVInteriors_ComboEdition.esm'
+      - 'NVInteriors_ComboEdition_AWOP.esm'
+      - 'TTWInteriorsProject_Combo.esm'
+    tag:
+      - Invent
+      - Names
+  - name: 'Interior Lighting Overhaul - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
+    tag:
+      - C.Climate
+      - C.Light
+      - C.Owner
+      - Destructible
+    dirty:
+      # v6.9
+      - <<: *quickClean
+        crc: 0x2B1102F9
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      - crc: 0xF135F5C1
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Interior Lighting Overhaul - L38PS.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
+    tag: [ C.Light ]
+    clean:
+      - crc: 0x60C4877D
+        util: 'FNVEdit v4.0.2f'
+
+  - name: 'After War Nevada.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55455/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'DustSurvivalSimulator.es(m|p)'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57927/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'NVEC (Complete|BugFixes|Enhancements|Reduce CTD).*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58871/'
+        name: 'NVEC - New Vegas Enhanced Content'
+  - name: 'NVEC Complete.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Complete + NVCE.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC BugFixes.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC BugFixes + NVCE.esm'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Enhancements.esp'
+    inc: [ *TTWv320 ]
+  - name: 'NVEC Reduce CTD.esp'
+    inc: [ *TTWv320 ]
+
+  - name: 'Project Nevada - Core.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
+    msg: [ *requiresNVSE ]
+    tag: [ Invent ]
+    clean:
+      # v2.5
+      - crc: 0x2345512B
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Equipment.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+    clean:
+      # v2.5
+      - crc: 0x2B4F3224
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Rebalance.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Stats
+    clean:
+      # v2.5
+      - crc: 0xB4A87776
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Cyberware.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40040/' ]
+    inc: [ *TTWv320 ]
+    tag: [ Invent ]
+    clean:
+      # v2.5
+      - crc: 0x2E724F8C
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.3
+      - crc: 0x4D7923AF
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Dead Money (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.3
+      - crc: 0xA66A29E4
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Honest Hearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.3
+      - crc: 0xE6D45D29
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    inc: [ 'Project Nevada - Old World Blues (No Cyberware).esp' ]
+    tag: [ Invent ]
+    clean:
+      # v1.34
+      - crc: 0xF61652C7
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Old World Blues (No Cyberware).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.34
+      - crc: 0xA2C10055
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Lonesome Road.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.3
+      - crc: 0x833E810B
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      # v1.3
+      - crc: 0xB8B0388F
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Gun Runners'' Arsenal (Rebalance).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    dirty:
+      # v1.34
+      - <<: *quickClean
+        crc: 0xA0368AA6
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0xC0002069
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - WMX.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+    clean:
+      # v1.3
+      - crc: 0xC0DA6CFD
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - WME.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - WeaponMods
+    clean:
+      - crc: 0xBC51B676
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - EVE All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42363/' ]
+    clean:
+      - crc: 0x84EE1AF7
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Extra Options.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
+    clean:
+      # v1.3
+      - crc: 0xAB2F211D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Rebalance Complete.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
+    tag: [ Relev ]
+    clean:
+      # v1.3
+      - crc: 0x5A9BCC6D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - All DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
+    tag:
+      - Actors.DeathItem
+      - Invent
+      - Relev
+    dirty:
+      # v1.3
+      - <<: *quickClean
+        crc: 0xB68CE3C4
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0xF1A74B56
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - Cyberware Additions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47285/' ]
+    clean:
+      # v1.3
+      - crc: 0xBBFBAFD5
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Project Nevada - TTW.esp'
+    url: [ 'https://taleoftwowastelands.com/content/project-nevada-w-extra-options-ttw-patch' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+
+  - name: 'XFO -.*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37871/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Weapons of the Wasteland.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66115/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'UnlimitedCompanions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34870/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'UnlimitedCompanionsFixed.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66030/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'KillableKids.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52162/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Psiclones.esm'
+    tag: [ Names ]
+  - name: 'SelectFire.esm'
+    msg: [ *requiresNVSE ]
+  - name: 'Selective Fire.esm'
+    msg: [ *requiresNVSE ]
+  - name: 'SunnyCompanion.esm'
+    msg: [ *obsolete ]
+  - name: 'T6M Equipment Replacer NV.esm'
+    tag:
+      - Graphics
+      - Names
+      - Invent
+  - name: 'WARZONES Respawner.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+  - name: 'WARZONES RespawnerLITE.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+
+  - name: 'Clean-Deluxe FNV.esm'
+    inc: [ 'Performance of the Gods.esp' ]
+  - name: 'aHUD.esm'
+    msg: [ *requiresNVSE ]
+  - name: 'iHUD.esm'
+    msg: [ *requiresNVSE ]
+  - name: 'oHUD.esm'
+    inc:
+      - 'aHUD.esm'
+      - 'iHUD.esm'
+      - 'Primary Needs HUD.esm'
+    msg: [ *requiresNVSE ]
+
+  - name: 'HonestHearts-CaliberX.esm'
+    tag: [ Names ]
+  - name: 'CFWTTW.esm'
+    url: [ 'https://taleoftwowastelands.com/content/classic-fallout-weapons-ttw' ]
+    inc:
+      - 'CFWNV.esp'
+      - 'CFWNV-DLC.esp'
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Relev
+  - name: 'New Vegas Redesigned.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'New Vegas Redesigned II.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: 'New Vegas Redesigned II.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: 'TTW Redesigned.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
+    inc:
+      - 'Project Beauty.esm'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned II.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+    tag:
+      - Factions
+      - Invent
+      - Names
+  - name: 'Project Beauty.esm'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
+    inc: [ 'TTW Redesigned.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Body-F
+      - Body-M
+      - Eyes
+      - Hair
+      - NPC.Race
+      - NpcFaces
+      - R.Mouth
+      - R.Teeth
+      - Voice-F
+      - Voice-M
+  - name: 'Mart''s Mutant Mod.esm'
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'MMM_NV.esp'
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
+    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
+    group: *addonsGroup
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.DeathItem
+      - Graphics
+      - Scripts
+
+  - name: 'MikotoBeauty.esm'
+    tag:
+      - Eyes
+      - Graphics
+      - Hair
+      - Names
+  - name: 'NV GameStabilizerA8.esm'
+    msg: [ *obsolete ]
+    tag: [ NoMerge ]
+
+  - name: 'TTW Perks and Home Markers.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+  - name: 'TTW_AnchorageCustomization.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag: [ Names ]
+    after: [ 'YUP - NPC Fixes (Base Game + All DLC).esp' ]
+  - name: 'TTW_NoKarmaDCFollowers.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+  - name: 'TTW_OutcastTrading.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag:
+      - Actors.AIData
+      - Actors.Stats
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+  - name: 'TTW_Reputation.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag:
+      - Actors.Stats
+      - Factions
+      - Names
+      - Relations
+      - Stats
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+  - name: 'TTW_SpeechChecks.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag: [ Names ]
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+  - name: 'TTW Anchorage Customization - Speech Checks.esp'
+    url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
+    group: *addonsPatchesGroup
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+  - name: 'TTW_StartupMenu.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag: [ Names ]
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+  - name: 'TTW_StashPackOptions.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+  - name: 'TTW_WildWasteland.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+  - name: 'TTWOptions.esp'
+    url: [ 'http://taleoftwowastelands.com' ]
+    group: *addonsPatchesGroup
+    tag: [ Names ]
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+      - 'TTW_WildWasteland.esp'
+  - name: 'ttwadvertitronradioshownfix.esp'
+    group: *addonsPatchesGroup
+  - name: 'ttw_-_cut_item_stats.esp'
+    group: *addonsPatchesGroup
+    tag: [ Stats ]
+  - name: 'YUP - Gameplay Tweaks.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
+    group: *earlyLoadersGroup
+    after:
+      - 'TTW Perks and Home Markers.esp'
+      - 'TTWOptions.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Owner
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'YUP - Gameplay Tweaks - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
+    group: *earlyLoadersGroup
+    after:
+      - 'TTW Perks and Home Markers.esp'
+      - 'TTWOptions.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Stats
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+  - name: 'jsawyer.esp'
+    url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
+    inc:
+      - 'Weapon Mod Expansion.esp'
+      - 'Weapon Mod Expansion.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Deflst
+      - Delev
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+      - Relev
+      - Stats
+      - WeaponMods
+    after:
+      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
+      - 'TTW_AnchorageCustomization.esp'
+      - 'TTW_NoKarmaDCFollowers.esp'
+      - 'TTW_OutcastTrading.esp'
+      - 'TTW_Reputation.esp'
+      - 'TTW_SpeechChecks.esp'
+      - 'TTW Anchorage Customization - Speech Checks.esp'
+      - 'TTW_StartupMenu.esp'
+      - 'TTW_StashPackOptions.esp'
+      - 'TTW_WildWasteland.esp'
+      - 'TTWOptions.esp'
+  - name: 'JSawyer - CE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
+    inc:
+      - 'Weapon Mod Expansion.esp'
+      - 'Weapon Mod Expansion.esm'
+    tag:
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Stats
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+  - name: 'JSawyer - EVE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
+    after: [ 'EVE FNV - ALL DLC.esp' ]
+    tag:
+      - Graphics
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
+  - name: 'JSawyer - IMPACT.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
+    after:
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
+    tag:
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'JSawyer - Project Nevada.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
+    after:
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Stats
+  - name: 'JSawyer - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60665/' ]
+    tag:
+      - Deflst
+      - Graphics
+      - Names
+      - NpcFaces
+      - Scripts
+      - Stats
+  - name: 'JSawyer Ultimate.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'JSawyer Ultimate - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Relev
+  - name: 'sawyerbatty.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
+      name: 'SawyerBatty TTW'
+    inc:
+    - 'jsawyer.esp'
+    - 'Project Nevada - Rebalance.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Fallout 3 Unique items Overhaul TTW 3.3'
+          - '[Literally Who''s Patch Emporium](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("sawyerbatty-FafnirUniqueTTWOverhaul.esp")'
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - Stats
+      - Relev
+    clean:
+      - crc: 0xDB8803A1
+        util: 'FNVEdit v4.0.4'
+
+  - name: 'CaravanCardFix.esp'
+    msg: [ *obsolete ]
+  - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
+    msg: [ *obsolete ]
+  - name: 'DLM_QuestItemsFix_1.3b-DLC_DM.esp'
+    msg: [ *obsolete ]
+  - name: 'ED-EUpgradeInventoryFix.esp'
+    msg: [ *obsolete ]
+  - name: 'JacknDianeFix.esp'
+    tag: [ Invent ]
+  - name: 'MarcusInvFix.esp'
+    tag: [ Invent ]
+  - name: 'MushroomCloudFix.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Fixes DLCs 1.0.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Fixes FNV 1.1.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Fixes FNV 1.1 - FOOK Patch.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Fixes Merged 1.1.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Corrections FNV.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Corrections FNV - FOOK Patch.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Corrections Merged.esp'
+    msg: [ *obsolete ]
+  - name: 'NV Error Corrections Merged - FOOK Patch.esp'
+    msg: [ *obsolete ]
+  - name: 'ReloadBugFix.esp'
+    msg: [ *obsolete ]
+  - name: 'Reload Speed Game Start Fix.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'VendorAmmo45-70Fix.esp'
+    msg: [ *obsolete ]
+
+  - name: 'AutoSaverNV.esp'
+    inc:
+      - 'RX-Auto Incremental Save.esp'
+      - 'CASM.esp'
+  - name: 'RX-Auto Incremental Save.esp'
+    inc: [ 'CASM.esp' ]
+
+  - name: 'NewCalifornia DLC Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+    inc: [ 'Simple DLC Delay.esp' ]
+  - name: 'NewCalifornia Courier Stash Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+
+  - name: 'Centered 3rd Person Camera.esp'
+    inc: [ 'FOOK - New Vegas.esm' ]
+  - name: 'Centered 3rd Person Camera - Unraised.esp'
+    inc: [ 'FOOK - New Vegas.esm' ]
+  - name: 'ImplantGRX-NVSEHotkey.esp'
+    inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
+    msg: [ *requiresNVSE ]
+  - name: 'NVORganizedItems.esp'
+    tag: [ Names ]
+
+  - name: '188 Trading Post Revisited.esp'
+    tag: [ NpcFaces ]
+  - name: 'A Better Arcade.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'A Better Boone.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'A Better Cass.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'A Better Cass - Rearmed SG.esp'
+    tag:
+      - Graphics
+      - Sound
+      - Stats
+  - name: 'A Better Cass - Rearmed M1911.esp'
+    tag:
+      - Graphics
+      - Sound
+      - Stats
+  - name: 'A Better Veronica.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'Bitter Springs Revisited.esp'
+    tag: [ NpcFaces ]
+  - name: 'Cass and Veronica.esp'
+    tag:
+      - Invent
+      - NpcFaces
+  - name: 'Cuter Boone.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Cuter Boone NEW.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Cuter Veronica Felicia Day.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Cuter Veronica Felicia Day-Essential.esp'
+    tag: [ NpcFaces ]
+  - name: 'Hanlon the badass 4.esp'
+    tag: [ NpcFaces ]
+  - name: 'Lore version.esp'
+    tag: [ NpcFaces ]
+  - name: 'MikotoBPCCArcade.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'MikotoBPCCBoone.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'MikotoBPCCCass.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'MikotoBPWastersOverhaul.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'MikotoBPCCFull.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mutant Eyes.esp'
+    tag: [ Eyes ]
+
+  - name: 'NPC Project - Aero Office Park.esp'
+    tag: [ NpcFaces ]
+  - name: 'Raul - Danny Trejo.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+
+  - name: 'RivensEyescapesNV.esp'
+    tag: [ Eyes ]
+  - name: 'Mikotos_REyescapesNV.esp'
+    tag: [ Eyes ]
+
+  - name: 'VeronicaOlder.esp'
+    tag: [ NpcFaces ]
+  - name: 'Vulpes Inculta.esp'
+    tag: [ NpcFaces ]
+
+  - name: '1st Recon Revised.esp'
+    tag: [ Invent ]
+  - name: 'Doc Mitchell''s House Owner.esp'
+    tag: [ C.Owner ]
+  - name: 'KillableKids_E.esp'
+    inc: [ 'KillableKids_NE.esp' ]
+
+  - name: 'Alpha''s MoMod Overhaul.esp'
+    msg: [ *obsolete ]
+  - name: 'Monster Mod Wasteland Edition.esp'
+    tag: [ Relev ]
+  - name: 'MMWE-No Oblivion.esp'
+    tag: [ Delev ]
+  - name: 'MMWE-Claw Beast B Gone.esp'
+    tag: [ Delev ]
+  - name: 'MMWE-LoreOut.esp'
+    tag: [ Delev ]
+  - name: 'MMWE-No Werewolves.esp'
+    tag: [ Delev ]
+  - name: 'MMWE - Rebalanced Leveled Lists.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'MMWE - Vanilla Spawn Chance.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'MMWE-LoreOut-Rebalanced.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'MMWE-LoreOut-VanillaSpawnChance.esp'
+    tag:
+      - Delev
+      - Relev
+
+  - name: 'Project13 - Populated Wasteland.esp'
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Relev
+
+  - name: 'IIWR 2.0.3.esp'
+    msg: [ *obsolete ]
+  - name: 'IIWR 2.0.7.esp'
+    msg: [ *obsolete ]
+  - name: 'IIWR 2.0.9.esp'
+    msg: [ *obsolete ]
+  - name: 'IIWR 2.1.0.esp'
+    msg: [ *obsolete ]
+  - name: 'GunRunnersExpandedV3.3.esp'
+    msg: [ *obsolete ]
+  - name: 'GunRunnersExpandedV3.4.esp'
+    msg: [ *obsolete ]
+  - name: 'GunRunnersExpandedV3.5.esp'
+    msg: [ *obsolete ]
+  - name: 'GunRunnersExpanded-LoreFriendly.esp'
+    msg: [ *obsolete ]
+
+  - name: 'NVInteriors_WastelandEditon.esp'
+    msg: [ *obsolete ]
+  - name: 'NVInteriors_Urban_Edition_v1.0.esp'
+    msg: [ *obsolete ]
+  - name: 'return_deadmoney.esp'
+    inc: [ 'SierraMadreEXIT.esp' ]
+  - name: 'RustTownAdditions3.esp'
+    tag:
+      - Factions
+      - Invent
+      - Names
+  - name: 'Schoolhouse Base.esp'
+    msg: [ *obsolete ]
+  - name: 'Seachlight Airport NCR.esp'
+    msg: [ *obsolete ]
+  - name: 'SierraMadrev2.0.esp'
+    msg: [ *obsolete ]
+  - name: 'SierraMadrev2.1.esp'
+    msg: [ *obsolete ]
+  - name: 'UHNV-Performance-Patch.esp'
+    msg: [ *obsolete ]
+  - name: 'UWHNV-Core.esp'
+    msg:
+      - *obsolete
+      - *requiresNVSE
+  - name: 'UWHNV-Addon-DLC.esp'
+    tag: [ C.Light ]
+  - name: 'UWHNV-Addon-GRA.esp'
+    tag: [ C.Light ]
+  - name: 'UWHNV-Addon-FollowerHome.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - NpcFaces
+  - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
+    inc: [ 'UWHNV-Addon-Follower.esp' ]
+  - name: 'YangtzeBunkerPlayerHome.esp'
+    msg: [ *obsolete ]
+  - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
+    msg: [ *obsolete ]
+  - name: 'YangtzeBunkerPlayerHomeV1_3.esp'
+    msg: [ *obsolete ]
+  - name: 'YangtzeBunkerPlayerHomeV1_4.esp'
+    msg: [ *obsolete ]
+  - name: 'HighlyPopulatedFreeside.esp'
+    inc:
+      - 'MediumPopulatedFreeside.esp'
+      - 'LowPopulatedFreeside.esp'
+  - name: 'MediumPopulatedFreeside.esp'
+    inc:
+      - 'HighlyPopulatedFreeside.esp'
+      - 'LowPopulatedFreeside.esp'
+  - name: 'LowPopulatedFreeside.esp'
+    inc:
+      - 'HighlyPopulatedFreeside.esp'
+      - 'MediumPopulatedFreeside.esp'
+  - name: 'NVR-Version_9.esp'
+    msg: [ *obsolete ]
+  - name: 'NVFR-Version 1.esp'
+    msg: [ *obsolete ]
+  - name: 'NVHarderCore.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'NVWastelandUnlocked.esp'
+    tag:
+      - Delev
+      - Names
+      - Relations
+      - Relev
+      - Stats
+      - WeaponMods
+  - name: 'NVWeaponAmmoTweaks.esp'
+    tag:
+      - Stats
+      - WeaponMods
+  - name: 'FOOK - New Vegas.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
+    inc: [ *TTWv320 ]
+    tag:
+      - Deflst
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+
+  - name: 'LinkesAuge - Bug fixing compilation.esp'
+    tag:
+      - Deflst
+      - Names
+      - Scripts
+      - Stats
+  - name: 'LinkesAuge - Retexture edits.esp'
+    tag: [ Graphics ]
+  - name: 'NoWeaponZoom.esp'
+    tag: [ Stats ]
+  - name: 'ImprovedBinocs.esp'
+    tag: [ Invent ]
+  - name: 'HeadWearShaderFX.esp'
+    tag:
+      - Scripts
+      - Stats
+  - name: 'LootOverhaul.esp'
+    tag: [ Invent ]
+  - name: 'Food&DrinkDontHeal.esp'
+    tag: [ Stats ]
+  - name: 'CompanionsImproved.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'Npc&CreatureRespawn.esp'
+    tag: [ Relev ]
+  - name: 'M.M.A.T - Companion Module.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'M.M.A.T - Ingestible Module.esp'
+    tag: [ Stats ]
+  - name: 'M.M.A.T - Shader Module.esp'
+    tag: [ Stats ]
+  - name: 'M.M.A.T Loot Module.esp'
+    tag: [ Invent ]
+  - name: 'M.M.A.T - Loot Module.esp'
+    tag: [ Invent ]
+  - name: 'M.M.A.T - Weapon Module.esp'
+    tag: [ Stats ]
+  - name: 'M.M.A.T - Spawn Module.esp'
+    tag: [ Relev ]
+  - name: 'NEVAX - BEAUTYPACK.esp'
+    tag:
+      - Body-F
+      - Body-M
+      - NPCFaces
+  - name: 'NEVAX - FUNDE.esp'
+    tag:
+      - Deflst
+      - Relev
+  - name: 'NEVAX - ITEMBALANCINGS.esp'
+    tag: [ Stats ]
+  - name: 'NEVAX - KAUFINHALTE.esp'
+    tag:
+      - Deflst
+      - Invent
+      - Relev
+  - name: 'NEVAX - MEHR MONSTER.esp'
+    tag:
+      - Relev
+      - Scripts
+  - name: 'NEVAX - MONSTER.esp'
+    tag:
+      - Deflst
+      - Relev
+  - name: 'NEVAX - NPC BALANCING.esp'
+    tag:
+      - Deflst
+      - Relev
+      - Scripts
+  - name: 'NEVAX - RAIDER u NPC.esp'
+    tag:
+      - Deflst
+      - Relev
+      - Scripts
+  - name: 'NEVAX - RUESTUNGEN.esp'
+    tag:
+      - Deflst
+      - Relev
+  - name: 'NEVAX - WAFFEN.esp'
+    tag:
+      - Deflst
+      - Relev
+  - name: 'PMT - XPadjust.esp'
+    tag: [ Invent ]
+  - name: 'PMT - Tougher XPadjust.esp'
+    tag: [ Invent ]
+  - name: 'PMT - Slower Reloading.esp'
+    inc: [ 'PMT - Slower Reloading No Visible Perk.esp' ]
+    tag: [ Stats ]
+  - name: 'PMT - Slower Reloading No Visible Perk.esp'
+    inc: [ 'PMT - Slower Reloading.esp' ]
+    tag: [ Stats ]
+  - name: 'PMT - Reduced Ammo and Chems.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'PMT - Reduced Caps and Item Value.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'PMT - More Demanding Hardcore.esp'
+    tag: [ Stats ]
+  - name: 'PMT - Destructible Ordnance.esp'
+    tag: [ Destructible ]
+  - name: 'PMT - Deadlier Combat.esp'
+    tag: [ Stats ]
+  - name: 'PMT - Deadlier Combat Mk II.esp'
+    tag: [ Stats ]
+  - name: 'PMT - Faint Heartbeat.esp'
+    inc: [ 'PMT - Silent Heartbeat.esp' ]
+  - name: 'PMT - Total Challenge Remover.esp'
+    inc: [ 'PMT - Reduced Challenge Notifications.esp' ]
+  - name: 'Reload.esp'
+    tag:
+      - Delev
+      - Names
+      - Relev
+  - name: 'Rebalance.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'Rearm.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'RebalanceRearm.esp'
+    tag: [ Stats ]
+  - name: 'RearmRebalance.esp'
+    tag: [ Stats ]
+  - name: 'ReSort.esp'
+    tag: [ Names ]
+  - name: 'Superior Firepower - Unique Weaponry.esp'
+    tag: [ Stats ]
+  - name: 'Superior Firepower - Factional Changes.esp'
+    tag:
+      - Delev
+      - Relev
+
+  - name: 'Arwen_NV_Realism_Core.esp'
+    msg: [ *requiresNVSE ]
+    tag: [ Stats ]
+  - name: 'hardercore_combat.esp'
+    tag: [ Stats ]
+  - name: 'hardercore_wealth.esp'
+    tag:
+      - Delev
+      - Relev
+
+  - name: 'Project Brazil Project Nevada Patch.esp'
+    tag: [ Invent ]
+  - name: 'OWB Big Empty Overhaul.esp'
+    tag:
+      - Invent
+      - Names
+      - Stats
+  - name: 'Flight of the ValkED-E.esp'
+    tag: [ Sound ]
+  - name: 'Book of Steel.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
+    tag: [ Graphics ]
+  - name: 'Book of Steel - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
+    tag: [ Graphics ]
+  - name: 'PAVE_NV_TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
+    after: [ 'fixy crap ttw.esp' ]
+    tag: [ Graphics ]
+  - name: 'Equipment Restoration Project.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
+    after:
+      - 'EVE FNV - ALL DLC.esp'
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
+  - name: 'Equipment Restoration Project - EVE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    after: [ 'EVE FNV - ALL DLC.esp' ]
+  - name: 'Equipment Restoration Project - IMPACT.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    after:
+      - 'IMPACT.esp'
+      - 'IMPACT - ALLDLC.esp'
+      - 'IMPACT-POPMerged.esp'
+      - 'IMPACT - TTW.esp'
+  - name: 'Equipment Restoration Project - JSawyer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    tag:
+      - Actors.ACBS
+      - Delev
+      - Names
+      - NPC.Class
+      - Stats
+    after:
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+  - name: 'Equipment Restoration Project - Project Nevada.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Stats
+      - WeaponMods
+    after:
+      - 'Project Nevada - Cyberware Additions.esp'
+      - 'Project Nevada - All DLC.esp'
+  - name: 'Equipment Restoration Project - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - C.Music
+      - C.Owner
+      - Invent
+  - name: 'Equipment Restoration Project - WRP.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
+    tag: [ Graphics ]
+    after:
+      - '357retex.esp'
+      - 'christinecos.esp'
+      - 'GRA WRP Compatibility Patch.esp'
+      - 'GRA WRP Compatibility Patch no Brush Gun.esp'
+      - 'GRA-WRP-Patch-Two_Unofficial.esp'
+      - 'singleshot_retex.esp'
+
+  - name: 'TTW-WEP.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
+    tag: [ Graphics ]
+
+  - name: 'LouderGuns.esp'
+    tag: [ Sound ]
+  - name: 'awilderwasteland.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158/' ]
+    inc: [ 'awilderwastelandnobenny.esp' ]
+    tag:
+      - Actors.AIPackages
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xED3D7BB3
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 9
+    clean:
+      - crc: 0x0FD4B374
+        util: 'FNVEdit v4.0.2f'
+  - name: 'awilderwastelandnobenny.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46158/' ]
+    clean:
+      - crc: 0xEDF9A5A4
+        util: 'FNVEdit v4.0.2f'
+  - name: 'betsybrahmin.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46574/' ]
+    inc: [ 'betsybrahminFSO.esp' ]
+    after:
+      - 'kochandbohr.esp'
+      - 'rotfacetoriches.esp'
+  - name: 'betsybrahminFSO.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46574/' ]
+    after:
+      - 'kochandbohr.esp'
+      - 'rotfacetoriches.esp'
+  - name: 'wsex_workgirl.esp'
+    inc: [ 'wsex_workgirl_tryout.esp' ]
+  - name: 'BrainPerkBugfix.esp'
+    inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
+  - name: 'FourEyesDynamic.esp'
+    inc: [ 'FourEyesBetter.esp' ]
+
+  - name: 'ZZZZ--APB_By_Nokturnihs.esp'
+    msg: [ *obsolete ]
+  - name: 'AutoLoot.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'IWS-AS-HighSpawns.esp'
+    inc:
+      - 'IWS-AS-MedSpawns.esp'
+      - 'IWS-AS-LowSpawns.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'IWS-AS-MedSpawns.esp'
+    inc:
+      - 'IWS-AS-HighSpawns.esp'
+      - 'IWS-AS-LowSpawns.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'IWS-AS-LowSpawns.esp'
+    inc:
+      - 'IWS-AS-MedSpawns.esp'
+      - 'IWS-AS-HighSpawns.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'IWS-MoreSpawns.esp'
+    msg: [ *obsolete ]
+  - name: 'IWS-UltraSpawns.esp'
+    msg: [ *obsolete ]
+  - name: 'Less Weight.esp'
+    inc: [ 'More Weight.esp' ]
+  - name: 'Isul-MagExchange.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'ACS-DeadMoney.esp'
+    tag: [ Invent ]
+  - name: 'ACS-HonestHearts.esp'
+    tag: [ Invent ]
+  - name: 'ACS-LonesomeRoad.esp'
+    tag: [ Names ]
+  - name: 'ACS-GunRunnersArsenal.esp'
+    tag:
+      - Invent
+      - Names
+  - name: 'ACS-DLCMerged.esp'
+    tag:
+      - Invent
+      - Names
+  - name: 'ArmourRepairKits.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'Better Ammo Crafting.esp'
+    tag: [ Names ]
+  - name: 'BetterCraftingSorting.esp'
+    tag: [ Names ]
+  - name: 'Bountiful Harvest.esp'
+    inc: [ 'Dynamic Herbalism.esp' ]
+  - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
+    msg: [ *obsolete ]
+  - name: 'AEVegas.esp'
+    msg: [ *obsolete ]
+  - name: 'AG Shell Casing Fixes-All Five.esp'
+    tag: [ Graphics ]
+  - name: 'AG Shell Casing Fixes Repeater-Service-ThatGun.esp'
+    tag: [ Graphics ]
+  - name: 'AG Shell Casing Fixes - OWB.esp'
+    tag: [ Graphics ]
+  - name: 'AG Supplementary Uniques.esp'
+    inc: [ 'AG Supplementary Uniques WME.esp' ]
+  - name: 'AG Supplementary Uniques-Dead Money.esp'
+    inc: [ 'AG Supplementary Uniques-Dead Money WME.esp' ]
+  - name: 'AG Supplementary Uniques-Honest Hearts.esp'
+    inc: [ 'AG Supplementary Uniques-Honest Hearts WME.esp' ]
+  - name: 'AG Supplementary Uniques-Lonesome Road.esp'
+    inc: [ 'AG Supplementary Uniques-Lonesome Road WME.esp' ]
+  - name: 'AG Supplementary Uniques-AllInOne.esp'
+    inc:
+      - 'AG Supplementary Uniques.esp'
+      - 'AG Supplementary Uniques-Dead Money.esp'
+      - 'AG Supplementary Uniques-Honest Hearts.esp'
+      - 'AG Supplementary Uniques-Old World Blues.esp'
+      - 'AG Supplementary Uniques-Lonesome Road.esp'
+  - name: 'Ahzteks Weapon Replacements.esp'
+    msg: [ *obsolete ]
+  - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
+    msg: [ *obsolete ]
+
+  - name: 'Ahzteks Pistol and SMG Replacements.esp'
+    tag:
+      - Graphics
+      - Names
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: 'A Load of Balls.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'Assault Carbine mods.esp'
+    tag: [ WeaponMods ]
+  - name: 'Better Binoculars.esp'
+    msg: [ *obsolete ]
+  - name: 'Better Binoculars Low.esp'
+    inc:
+      - 'Better Binoculars Medium.esp'
+      - 'Better Binoculars High.esp'
+      - 'Better Binoculars Max.esp'
+
+  - name: 'Better Binoculars Medium.esp'
+    inc:
+      - 'Better Binoculars High.esp'
+      - 'Better Binoculars Max.esp'
+
+  - name: 'Better Binoculars High.esp'
+    inc: [ 'Better Binoculars Max.esp' ]
+
+  - name: 'better that gun 223.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'better that gun 44mag.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'christinecos.esp'
+    tag: [ Graphics ]
+  - name: 'GRA WRP Compatibility Patch.esp'
+    tag: [ Graphics ]
+  - name: 'Classic Plasma Grenade.esp'
+    tag: [ Graphics ]
+  - name: 'Classic Pulse Grenade (classic sound).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
+    tag:
+      - Graphics
+      - Sounds
+  - name: 'Classic Pulse Grenade (vanilla sound).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
+    tag: [ Graphics ]
+
+  - name: 'EnergyBoost.esp'
+    tag: [ Stats ]
+
+  - name: 'ImmaSightinMahLazor.esp'
+    tag: [ Stats ]
+
+  - name: 'm110.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'OWB HQ Textures Fix.esp'
+    tag: [ Graphics ]
+  - name: 'PlasmaRifleAwesomefied.esp'
+    tag:
+      - Sound
+      - Stats
+  - name: 'ScientistPack.esp'
+    inc: [ 'ScientistPackWMX.esp' ]
+  - name: 'Shotgun Commando.esp'
+    tag: [ Stats ]
+  - name: 'Shotgun Commando 1.2 Caravan.esp'
+    tag: [ Stats ]
+  - name: 'Stalker Weapons Pack.esp'
+    msg: [ *obsolete ]
+  - name: '1nivVSLArmors.esp'
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Stats
+
+  - name: 'Armored PA Gloves.esp'
+    tag: [ Deflst ]
+  - name: 'AsharasLightningItems_ForNV.esp'
+    tag:
+      - Actors.AIData
+      - Invent
+      - NpcFaces
+  - name: 'LDFemalePowerArmorPack.esp'
+    inc: [ 'LDFemalePowerArmorPack.esm' ]
+
+  - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
+    req: [ 'BlackWolf Backpack.esp' ]
+
+  - name: 'ERCA FACTLESS.esp'
+    inc: [ 'ERCA.esp' ]
+  - name: 'ERCAFACTLESS.esp'
+    inc: [ 'ERCA.esp' ]
+
+  - name: 'Hereticus Faction Armors Fading.esp'
+    tag: [ Names ]
+  - name: 'HHType3tribalhands.esp'
+    tag: [ Body-F ]
+
+  - name: 'JNinjasNinjasComeBack.esp'
+    inc:
+      - 'JNinjasStealthFieldStops.esp'
+      - 'JNinjasStealthFieldStopsNinjasComeBack.esp'
+  - name: 'JNinjasStealthFieldStops.esp'
+    inc: [ 'JNinjasStealthFieldStopsNinjasComeBack.esp' ]
+  - name: 'KDS Wearable Backpacks.esp'
+    tag: [ Invent ]
+
+  - name: 'Powered Power Armor.esp'
+    tag: [ Deflst ]
+
+  - name: 'Seeker Veronica.esp'
+    tag: [ Invent ]
+  - name: 'sexysleepwear.esp'
+    inc: [ 'sexysleepwearnr.esp' ]
+  - name: 'T6M Equipment Replacer NV.esp'
+    tag:
+      - Graphics
+      - Stats
+  - name: 'Type 6.esp'
+    tag:
+      - Graphics
+      - Stats
+      - Invent
+
+  - name: 'w44Satchels - Full.esp'
+    inc: [ 'w44Satchels - Lite.esp' ]
+  - name: 'XVEnclaveBunker.esp'
+    tag: [ Invent ]
+
+  - name: 'NVCE DLC01.esp'
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
+  - name: 'NVCE DLC02.esp'
+    tag:
+      - Actors.ACBS
+      - Invent
+      - NPC.Race
+      - NpcFaces
+  - name: 'NVCE DLC03.esp'
+    tag:
+      - Actors.ACBS
+      - Body-M
+      - NpcFaces
+  - name: 'NVCE DLC04.esp'
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: 'FCO - NPC Changes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    tag:
+      - Actors.ACBS
+      - Eyes
+      - Names
+      - NPC.Race
+      - NpcFaces
+    clean:
+      - crc: 0x0FFAA819
+        util: 'FNVEdit v4.0.2f'
+  - name: 'FCO.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    msg: [ *obsolete ]
+  - name: 'FCO - Roberts Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    after: [ 'Roberts_NewVegas.esp' ]
+    tag: [ Body-M ]
+    clean:
+      - crc: 0xDA98F6B1
+        util: 'FNVEdit v4.0.2f'
+  - name: 'FCO - Playable Races + Roberts Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    msg: [ *obsolete ]
+  - name: 'FCO - OWB.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    msg: [ *obsolete ]
+  - name: 'FCO - Willow.esp'
+    tag:
+      - Actors.ACBS
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Willow (Cazy).esp'
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - GlowingOne.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x0E746E1D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'FCO - The New Bison Steve.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'FCO - Afterschool Special.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
+    tag:
+      - NPC.Race
+      - NpcFaces
+  - name: 'NVR- Lore version.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'NVR- Recommended.esp'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: 'NVR- Recommended.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'NVR- Lore version.esp'
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: 'New Vegas redesigned- Honest Hearts.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Actors.ACBS
+      - NpcFaces
+  - name: 'Voice dissonance fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned 3.esm'
+      - 'New Vegas Redesigned 3.esp'
+      - 'TTW Redesigned.esm'
+    tag: [ NpcFaces ]
+  - name: 'Destruction.esm'
+    url: [ 'https://taleoftwowastelands.com/content/destruction' ]
+    tag:
+      - C.Owner
+      - Destructible
+      - Graphics
+      - Invent
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+
+  - name: 'Companion Module Pack.esp'
+    inc:
+      - 'Companion Sandbox Mode.esp'
+      - 'UnlimitedCompanions.esp'
+      - 'dressup.esp'
+      - 'AllCompanionsEssential 2.0.esp'
+      - 'AllCompanionsEssential 2.0 DLC1.esp'
+      - 'AllCompanionsEssential 2.0 DLC2.esp'
+      - 'AllCompanionsEssential 2.0b.esp'
+      - 'Comp_Idles_NV.esp'
+      - 'Companions Relax.esp'
+
+  - name: 'Correction - Passive 2 Option.esp'
+    inc: [ 'Correction - Passive.esp' ]
+  - name: 'Cass Passive Fix.esp'
+    inc: [ 'Cass Passive Fix 2 Option.esp' ]
+  - name: 'CCC - Save Cass.esp'
+    req: [ 'SaveCass.esp' ]
+  - name: 'EZ_VanillaFollowers.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+
+  - name: 'My essential friends (animals).esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+
+  - name: 'RexReplacerEss.esp'
+    tag: [ Graphics ]
+  - name: 'RHKGilbertCompanion-Mikoto.esp'
+    tag:
+      - R.Mouth
+      - R.Teeth
+      - Hair
+      - Graphics
+      - NpcFaces
+  - name: 'BetterRepairKits.esp'
+    msg: [ *obsolete ]
+  - name: 'BetterRepairKits2.esp'
+    msg: [ *obsolete ]
+  - name: 'Cowboy Repeater with Vanilla Name.esp'
+    req:
+      - 'GunSmith.esm'
+      - 'GunSmith Guns Upgrade.esp'
+
+  - name: 'T3T_MiscItemIconsNV.esp'
+    msg: [ *obsolete ]
+    tag: [ Graphics ]
+
+  - name: 'repairkitsexpanded.esp'
+    tag: [ Names ]
+
+  - name: 'DrugsAreBadMKay-IS.esp'
+    tag: [ Names ]
+  - name: 'FeelingIrradiated-IS.esp'
+    tag: [ Names ]
+
+  - name: 'Max Level (50|60|75|100|255)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39906/' ]
+    msg:
+      - *requiresNVSE
+      - <<: *useOnlyOneX
+        subs: [ 'Max Level ESP' ]
+        condition: 'many("Max Level (50|60|75|100|255)\.esp")'
+
+  - name: 'Delay DLC - DM + HH + OWB.esp'
+    msg: [ *obsolete ]
+  - name: 'Dynamic Quantity Prompt.esp'
+    msg: [ *requiresNVSE ]
+
+# Delay DLC Redux
+  - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75851/'
+        name: 'Delay DLC Redux'
+  - name: 'DelayDLCRedux.esp'
+    clean:
+    # FNV 2.1
+      - crc: 0x5932B828
+        util: 'FNVEdit v4.0.4c'
+    # TTW 2.0
+      - crc: 0xDCEBC8F8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCRedux - Delay CG04 Level Up.esp'
+    clean:
+    # 1.6
+      - crc: 0x0209CDB3
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCRedux - Hardcore Zeta Patch.esp'
+    clean:
+    # 2.0
+      - crc: 0xD5E6589F
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPLNote.esp'
+    clean:
+    # 1.5
+      - crc: 0x4EB6E9B8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPOPP.esp'
+    clean:
+    # FNV 1.5
+      - crc: 0x84F02CD6
+        util: 'FNVEdit v4.0.4c'
+    # TTW 1.5
+      - crc: 0xE38D7BA9
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
+    msg: [ *obsolete ]
+    tag: [ Names ]
+  - name: 'IMCNNV - Sorted.esp'
+    tag: [ Names ]
+  - name: 'Intelligence_And_Skill_Points_Hardcore.esp'
+    inc:
+      - 'Intelligence_And_Skill_Points_High.esp'
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_High.esp'
+    inc:
+      - 'Intelligence_And_Skill_Points_Increased.esp'
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_Increased.esp'
+    inc:
+      - 'Intelligence_And_Skill_Points_Normal.esp'
+      - 'Intelligence_And_Skill_Points_Very_High.esp'
+  - name: 'Intelligence_And_Skill_Points_Normal.esp'
+    inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
+  - name: 'Invisibility for No Reputation.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'LFox Bottle That Water.esp'
+    tag:
+      - Names
+      - Scripts
+  - name: 'More Realistic Aiming.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'NoDegredation.esp'
+    msg: [ *obsolete ]
+  - name: 'NVDLC04 Allegiance w Duster.esp'
+    inc: [ 'NVDLC04 Allegiance.esp' ]
+    tag: [ Scripts ]
+
+  - name: 'Permanent_Weapon_Shells_Heavy.esp'
+    inc:
+      - 'Permanent_Weapon_Shells_Light.esp'
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Light.esp'
+    inc:
+      - 'Permanent_Weapon_Shells_Medium.esp'
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Medium.esp'
+    inc:
+      - 'Permanent_Weapon_Shells_Very_Heavy.esp'
+      - 'Permanent_Weapon_Shells_Very_Light.esp'
+  - name: 'Permanent_Weapon_Shells_Very_Heavy.esp'
+    inc: [ 'Permanent_Weapon_Shells_Very_Light.esp' ]
+
+  - name: 'Quick Trade.esp'
+    req: [ *MCM ]
+  - name: 'Quick Trade - iHud.esp'
+    msg: [ *obsolete ]
+  - name: 'Reactive People - Ultimatum.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'Realistic Weight.esp'
+    tag:
+      - NoMerge
+      - Stats
+  - name: 'Realistic Weight Overhaul.esp'
+    tag:
+      - NoMerge
+      - Stats
+
+  - name: 'Real Time Entry Skills.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'RRDynamicXPonly.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'Runner.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'SpecialEveryFiveLevels.esp'
+    inc:
+      - 'SpecialEveryThreeLevels.esp'
+      - 'SpecialEveryTwoLevels.esp'
+  - name: 'SpecialEveryThreeLevels.esp'
+    inc: [ 'SpecialEveryTwoLevels.esp' ]
+  - name: 'SubtitlesHotkeyNV.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'Weight_Balance.esp'
+    tag: [ Stats ]
+  - name: 'Weight_Balance_v07.esp'
+    tag: [ Stats ]
+  - name: 'Weight_Balance_v10.esp'
+    tag: [ Stats ]
+  - name: 'Weight_Rebalance_v10.esp.'
+    tag: [ Stats ]
+
+  - name: 'WMX - Sorted.esp'
+    msg: [ *obsolete ]
+  - name: 'WMXTemporaryPatch.esp'
+    msg: [ *obsolete ]
+
+  - name: 'Frequency - WMX Patch.esp'
+    tag: [ Graphics ]
+
+  - name: 'Frequency - PN+WMX Patch.esp'
+    tag: [ Graphics ]
+
+  - name: 'ACS-WMXModernWeapons.esp'
+    tag: [ Invent ]
+
+  - name: 'ScientistPackWMX.esp'
+    inc: [ 'ScientistPack.esp' ]
+
+  - name: 'GRA Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44170/' ]
+    inc:
+      - 'GRA Overhaul - EVE.esp'
+      - 'GRA Overhaul - WMX or WME.esp'
+      - *TTWv320
+    tag:
+      - Names
+      - Stats
+  - name: 'GRA Overhaul - EVE.esp'
+    inc:
+      - 'GRA Overhaul.esp'
+      - 'GRA Overhaul - WMX or WME.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'GRA Overhaul - WMX or WME.esp'
+    inc:
+      - 'GRA Overhaul - EVE.esp'
+      - 'GRA Overhaul.esp'
+    tag:
+      - Names
+      - Stats
+
+  - name: '001 Project Weaponry.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/53689/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnerArsenalAdjust.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44152/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnersArsenal - BEGONE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64249/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'GunRunnersArsenal Integration Mod.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/44587/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'NV GameStabilizerA8.esp'
+    msg: [ *obsolete ]
+    tag: [ NoMerge ]
+  - name: 'NV GameStabilizerA9.esp'
+    tag: [ NoMerge ]
+
+  - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
+    tag: [ Names ]
+  - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
+    msg: [ *obsolete ]
+    tag: [ Names ]
+  - name: 'ELECTRO-CITY - Highways and Byways.esp'
+    msg: [ *obsolete ]
+
+  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
+    inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
+
+  - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Emperical Weather.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ACF Brighter Days and Darker Nights ESP' ]
+        condtion: 'many("ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp")'
+
+  - name: 'Emperical Weather.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35260/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'Fellout.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+
+  - name: 'Fellout.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34888/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Western Sky.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A606ABC
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 442
+  - name: 'Fellout-OWB.esp'
+    req: [ 'Fellout.esp' ]
+  - name: 'friendofnightforfellout.esp'
+    req: [ 'Fellout.esp' ]
+
+  - name: 'fnvrwlo - original.esp'
+    inc:
+      - 'fnvrwlo - brighter nights.esp'
+      - 'fnvrwl FNV only - brighter nights.esp'
+      - 'fnvrwl FNV only.esp'
+  - name: 'fnvrwlo - brighter nights.esp'
+    inc:
+      - 'fnvrwl FNV only - brighter nights.esp'
+      - 'fnvrwl FNV only.esp'
+  - name: 'fnvrwl FNV only - brighter nights.esp'
+    inc: [ 'fnvrwl FNV only.esp' ]
+
+  - name: 'Western Sky( - Darker Nights)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35497/' ]
+    inc:
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'NevadaSkies.esp'
+      - 'Nights are Darker - Fallout New Vegas.esp'
+      - 'Nights are Darker - Fallout New Vegas - TS.esp'
+      - 'Nights are Darker - Ultimate Edition.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Western Sky ESP' ]
+        condition: 'many("Western Sky( - Darker Nights)?\.esp")'
+  - name: 'Western Sky.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6007BFA5
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+  - name: 'Western Sky - Darker Nights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6267D10B
+        util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
+    msg: [ *obsolete ]
+  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
+    msg: [ *obsolete ]
+  - name: 'NevadaSkies.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
+    group: *weatherGroup
+    tag:
+      - C.Climate
+      - C.Light
+    clean:
+      - crc: 0x4494A10F
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Nevada Skies - Ultimate DLC Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
+    msg: [ *obsolete ]
+  - name: 'Nevada Skies - URWLified.esp'
+    msg: [ *obsolete ]
+  - name: 'Nevada Skies - URWLHH.esp'
+    msg: [ *obsolete ]
+  - name: 'NSkies - URWLNV.esp'
+    msg: [ *obsolete ]
+  - name: 'NSkies URWLifiedOWB.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'NSkies URWLifiedHH.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'NSkies URWLifiedDM.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'Project Westland vision.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'Project Westland vision-ZionHH.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'F3NVProjectRealityMkIv3.esp'
+    msg: [ *obsolete ]
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'F3NVProjectRealityMkIv4.2.esp'
+    tag:
+      - C.Climate
+      - C.Light
+  - name: 'ProjectRealityMkIv5HDR.esp'
+    tag:
+      - C.Climate
+      - C.Light
+
+  - name: 'TTW - Realistic Interior Lighting.esp'
+    group: *lightingGroup
+    tag: [ C.Light ]
+  - name: 'DYNAVISION - Dynamic Lens Effect.esp'
+    inc: [ 'Field Depth.esp' ]
+    msg: [ *obsolete ]
+  - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
+    inc:
+      - 'DYNAVISION - Dynamic Lens Effect.esp'
+      - 'Field Depth.esp'
+
+  - name: 'ELECTRO-CITY - Emittance.esp'
+    inc: [ 'ELECTRO-CITY - Imaginator.esp' ]
+    msg: [ *obsolete ]
+  - name: 'CustomLighting-I DoF Blur.esp'
+    msg: [ *obsolete ]
+  - name: 'CustomLighting-IE DoF Blur.esp'
+    msg: [ *obsolete ]
+  - name: 'CustomLighting-IE DOF Clear.esp'
+    msg: [ *obsolete ]
+  - name: 'CustomLighting-IE Clear.esp'
+    msg: [ *obsolete ]
+  - name: 'CustomLighting-IE DoF.esp'
+    msg: [ *obsolete ]
+  - name: 'UWFXGodrays.esp'
+    msg: [ *requiresNVSE ]
+  - name: 'UnderwaterFX.esp'
+    msg: [ *requiresNVSE ]
+
+  - name: 'EwwGhoulyBody.esp'
+    tag: [ Body-F ]
+
+  - name: 'MikotoBeauty.esp'
+    tag:
+      - Eyes
+      - Hair
+      - Names
+  - name: 'CFW-DLC.esp'
+    tag:
+      - Invent
+      - Graphics
+  - name: 'ammoingredientsloot.esp'
+    tag: [ Invent ]
+  - name: 'Alternative Repairing - Breakdown Item Icons.esp'
+    tag: [ Graphics ]
+
+  - name: 'CCO - FT All DLC Patch.esp'
+    inc:
+      - 'CCO - FT DM Patch.esp'
+      - 'CCO - FT HH Patch.esp'
+      - 'CCO - FT OWB Patch.esp'
+      - 'CCO - FT LR Patch.esp'
+  - name: 'Lucky 38 Lights.esp'
+    tag: [ C.Light ]
+  - name: 'MadScience02.esp'
+    tag: [ Actors.DeathItem ]
+  - name: '1nivPNSLPatch.esp'
+    tag:
+      - Names
+      - Stats
+  - name: 'DLC Weapon Integration.esp'
+    inc: [ 'DLC Weapon Integration - WMX.esp' ]
+  - name: 'OldWorldBlues - Keep Big MT Active.esp'
+    inc: [ 'OldWorldBlues - Keep Big MT Active No Announcements.esp' ]
+  - name: 'OldWorldBlues - Improved Transportalponder.esp'
+    inc: [ 'OldWorldBlues - Improved Transportalponder Use Anywhere.esp' ]
+  - name: 'Shotgun Commando Redone.esp'
+    inc: [ 'Shotgun Commando.esp' ]
+  - name: 'NewVegasBountiesII.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41184/' ]
+    after: [ NewVegasBounties.esp ]
+    tag: [ Relations ]
+    dirty:
+      # v1.47
+      - <<: *reqManualFix
+        crc: 0x11D6AFEA
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 2
+  - name: 'TheInheritance.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/49012/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+    tag: [ Relations ]
+    dirty:
+      # v1.29
+      - <<: *reqManualFix
+        crc: 0x71715D56
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        udr: 2
+        nav: 4
+      # v1.29 - after first QAC
+      - <<: *reqManualFix
+        crc: 0x456E6B31
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 4
+  - name: 'Russell.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50107/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+  - name: 'KingOfTheRing.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+  - name: 'NewVegasKiller.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56408/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+  - name: 'Badmothafucka.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56742/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+  - name: 'NewVegasBountiesIII.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55744/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+  - name: 'TheBetterAngels.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60837/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+  - name: 'CheckpointGary.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60877/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+      - 'NewVegasBountiesIII.esp'
+      - 'TheBetterAngels.esp'
+
+  - name: '(MothershipZetaRehaul|ZetaRehaul(BiWastelands|DelayDLCRedux|HardcoreZeta(DelayDLCRedux)?|NVSpeechChecks)Patch)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77340/'
+        name: 'TTW - Mothership Zeta Rehaul'
+  - name: 'MothershipZetaRehaul.esm'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Delay DLC Redux TTW' ]
+        condition: 'active("DelayDLCRedux.esp") and not active("HardcoreZeta.esp") and not active("ZetaRehaulDelayDLCReduxPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Bi Wastelands TTW' ]
+        condition: 'active("Tale of Bi Wastelands.esm") and not active("ZetaRehaulBiWastelandsPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW Hardcore Zeta' ]
+        condition: 'active("HardcoreZeta.esp") and not active("DelayDLCRedux.esp") and not active("ZetaRehaulHardcoreZetaPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW Hardcore Zeta & Delay DLC Redux' ]
+        condition: 'active("HardcoreZeta.esp") and active("DelayDLCRedux.esp") and not active("ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW New Vegas Speech Checks' ]
+        condition: 'active("TTW New Vegas Speech Checks.esm") and not active("ZetaRehaulNVSpeechChecksPatch.esp")'
+      - <<: *wildEdits
+        subs: [ 'Remove **0B0039B5** & **0B00DBAA** & **0B00DBAB** & **0B00DBAC** & **0B00DBAF** & **0B00B42C** & **0B007D26** from **MothershipZetaRehaul.esm**' ]
+        condition: 'checksum("MothershipZetaRehaul.esm", 782D858F) or checksum("MothershipZetaRehaul.esm", 22F03D62)'
+    tag:
+      - Delev
+      - Enchantments
+      - Faction
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Scripts
+    inc: [ 'TTWZetaRewards.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x782D858F
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'ZetaRehaulBiWastelandsPatch.esp'
+    clean:
+      - crc: 0x1D82AD4C
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaul(DelayDLCRedux|HardcoreZeta)Patch\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'TTW Hardcore Zeta & Delay DLC Redux Patch' ]
+        condition: 'active("ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp") and active("HardcoreZeta.esp") and active("DelayDLCRedux.esp")'
+  - name: 'ZetaRehaulDelayDLCReduxPatch.esp'
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x10027F2F
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'ZetaRehaulHardcoreZetaPatch.esp'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0xEE019D4D
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp'
+    tag: [ Scripts ]
+    inc: [ 'DelayDLCRedux - Hardcore Zeta Patch.esp' ]
+    clean:
+      - crc: 0x2A5D8E6C
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaulNVSpeechChecksPatch.esp'
+    clean:
+      - crc: 0x4FE536B4
+        util: 'FNVEdit v4.0.4'
+
+  - name: 'Project Nevada - Med-X Fix.esp'
+    tag: [ Names ]
+
+  - name: 'rotfacetoriches.esp'
+    tag:
+      - Factions
+      - Names
+  - name: 'Weapons.of.the.New.Millenia.Store.LITE.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag: [ C.Light ]
+    after: [ 'GRARG.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB5824C7A
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 8
+    clean:
+      - crc: 0xCB44400D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'AnimatedFan.esp'
+    tag: [ Destructible ]
+  - name: 'Tales from the Burning Sands.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37172/' ]
+    tag:
+      - Factions
+      - Names
+      - Relev
+      - Scripts
+    dirty:
+      # v1.31b
+      - <<: *reqManualFix
+        crc: 0x35F7BAE7
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 17
+        nav: 1
+      - <<: *reqManualFix
+        crc: 0x95F3592D
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 1
+  - name: 'avangraffscorned.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45991/' ]
+    tag: [ Actors.AIPackages ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x026AB27D
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x90A9F4AF
+        util: 'FNVEdit v4.0.2f'
+  - name: 'kochandbohr.esp'
+    tag:
+      - Actors.ACBS
+      - Factions
+  - name: 'DeadMoneyFemaleTuxedo.esp'
+    tag: [ Graphics ]
+  - name: 'Roberts_NewVegas.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54731/' ]
+    tag:
+      - Body-M
+      - Graphics
+    clean:
+      - crc: 0xA3ACB207
+        util: 'FNVEdit v4.0.2f'
+
+  - name: 'ADAM Complete.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Stats
+    after:
+      - 'RaestlozFactionArmorEnhancement.esp'
+      - 'TrooperOverhaul-Dragbody.esp'
+  - name: 'Alternative Blood Spout.esp'
+    tag: [ Graphics ]
+  - name: 'Armor Replacer Child NPC Fix.esp'
+    tag: [ Invent ]
+  - name: 'athornysituation.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46048/' ]
+    tag:
+      - Relations
+      - Scripts
+    dirty:
+      # v1.0
+      - <<: *quickClean
+        crc: 0xCC32F754
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 10
+    clean:
+      - crc: 0x55936DD2
+        util: 'FNVEdit v4.0.2f'
+  - name: 'GRA - The Right to Bear Arms.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46138/' ]
+    tag:
+      - Delev
+      - Relev
+      - Stats
+    after:
+      - '1nivVSLArmors.esp'
+      - 'Delay DLC - DM + HH + OWB + LR + GRA.esp'
+      - 'TrooperOverhaul-Dragbody.esp'
+      - 'DragonskinNCRPersonnelWearingOutfits.esp'
+    inc: [ *TTWv320 ]
+  - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
+    tag: [ Graphics ]
+
+  - name: 'Improved Sounds FX.esp'
+    tag: [ Sound ]
+  - name: 'Integration - Couriers Stash+WMX.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+      - WeaponMods
+  - name: 'NCRTrooperOverhaul.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52721/' ]
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Stats
+    dirty:
+      # v7.2
+      - <<: *quickClean
+        crc: 0xBDDF839B
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+    clean:
+      - crc: 0x4DBECCE2
+        util: 'FNVEdit v4.0.2f'
+  - name: 'New Vegas Bounties II.esp'
+    tag: [ C.Light ]
+  - name: 'TrooperOverhaul-Dragbody.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/54978/' ]
+    tag:
+      - Actors.ACBS
+      - Deflst
+      - Delev
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Sound
+      - Stats
+    dirty:
+      # v1.0
+      - <<: *quickClean
+        crc: 0x40B5E4BC
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+    clean:
+      - crc: 0x4A0CAB7E
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Pacersgambit.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46584/' ]
+    tag:
+      - Actors.AIPackages
+      - Scripts
+    dirty:
+      # v1.0
+      - <<: *quickClean
+        crc: 0x793D7342
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x2763D9AD
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Pip-Boy Light - Amber.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Blue.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Green.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - White.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+  - name: 'originalintroExtended.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
+    inc: [ 'originalintro.esp' ]
+    tag:
+      - Actors.AIPackages
+      - Invent
+    dirty:
+      # v1.0
+      - <<: *quickClean
+        crc: 0x3ABE494E
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+    clean:
+      - crc: 0x746FE533
+        util: 'FNVEdit v4.0.2f'
+  - name: 'originalintro.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
+    tag:
+      - Actors.AIPackages
+      - Invent
+    dirty:
+      # v1.1
+      - <<: *quickClean
+        crc: 0xB0A1B1BB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+    clean:
+      - crc: 0xCF8922DB
+        util: 'FNVEdit v4.0.2f'
+
+  - name: 'RaestlozFactionArmorEnhancement.esp'
+    tag: [ Scripts ]
+  - name: 'Tutorial Killer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
+    req: [ *johnnyGuitar ]
+    clean:
+      - crc: 0x8324E796
+        util: 'FNVEdit v4.0.4'
+  - name: 'Tutorial Killer - Alternate Start.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
+    msg: [ *obsolete ]
+  - name: 'Weapons.of.the.New.Millenia.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55008/' ]
+    inc: [ *TTWv320 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1E04D898
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 10
+    clean:
+      - crc: 0xAF85969D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Weapons.of.the.New.Millenia.CaliberX4+.Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag:
+      - Delev
+      - Graphics
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x718FD4CB
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+    clean:
+      - crc: 0x695E7A34
+        util: 'FNVEdit v4.0.2f'
+  - name: 'REPCONN Test Site Fixes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/41114/' ]
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Factions
+      - Scripts
+
+  - name: 'New Vegas Redesigned 3.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    after: [ 'Project Beauty.esm' ]
+    inc:
+      - 'New Vegas Redesigned.esm'
+      - 'New Vegas Redesigned II.esm'
+      - 'TTW Redesigned.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - Relev
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+  - name: 'Gomorrah Redesigned v2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+  - name: 'Bitter Springs Redesigned.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+  - name: 'NVR3_1nivVSLArmors Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Delev
+      - Relev
+  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - Graphics
+  - name: 'NVR3_LegionQuestsExpanded Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - Actors.Factions
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+
+  - name: 'Wasteland Gals.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Boacombat2glove.esp'
+    tag: [ Graphics ]
+  - name: 'boa ncrpahelmet.esp'
+    tag:
+      - Delev
+      - Graphics
+  - name: 'FNVLODGen.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
+        name: 'FNVLODGen'
+    group: *lodGroup
+    after:
+      - 'LOD Additions - TTW Patch.esp'
+      - 'tmzLODadditions.esp'
+      - 'Wasted LOD rocks.esp'
+
+  - name: 'TTWLODGen.esp'
+    url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
+    group: *lodGroup
+
+  - name: 'tmzLODadditions.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
+      name: 'LOD additions and improvements'
+    group: *lodGroup
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Vish''s Patch Hub (FNV-TTW)'
+          - '[ LOD Additions - TTW Patch ](https://www.nexusmods.com/newvegas/mods/77945/)'
+        condition: 'active("tmzLODadditions.esp") and active("TaleOfTwoWastelands.esm") and not active("LOD Additions - TTW Patch.esp")'
+    clean:
+      - crc: 0x0A2432B9
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
+  - name: 'LOD Additions - TTW Patch.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
+      name: 'Vish''s Patch Hub (FNV-TTW)'
+    group: *lodGroup
+    after:  [ 'tmzLODadditions.esp' ]
+    clean:
+      - crc: 0x5BD687F8
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
+  - name: 'Wasted LOD rocks.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
+      name: 'Wasted LOD - Cliffs of DC'
+    group: *lodGroup
+    req: [ *TTWv320 ]
+    clean:
+      - crc: 0x8D74EB63
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
+  - name: 'FNV Realistic Wasteland Lighting - Full.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    after:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+  - name: 'TTW Realistic Wasteland Lighting.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+  - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
+    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+  - name: '47 ENB Weather.esp'
+    url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'Nevada Skies.esp'
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
+  - name: '47 ENB Weather - TTW Patch.esp'
+    url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
+    group: *weatherGroup
+    after: [ '47 ENB Weather.esp' ]
+    tag:
+      - C.ImageSpace
+      - C.Water
+      - Sound
+
+  - name: 'ExplosivesImmunityFix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60496/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEC0F1920
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+    clean:
+      - crc: 0xFFF2EB3D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'lexx_brahmin-variant.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58871/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB596767C
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 16
+        udr: 1
+    clean:
+      - crc: 0x7CC8AB9D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'lexx_brahmin-betsy.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0BA26C46
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+    clean:
+      - crc: 0xB5E6F991
+        util: 'FNVEdit v4.0.2f'
+  - name: 'Static Battery Replacer.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'YUPTTW.esm' ]
+        condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", "3.2.2", >=)'
+
+  - name: 'GameSettings.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39157/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'ClearCacheKey.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56390/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'PCB Hotkey.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/52428/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Purge Cell Buffers.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'fwv.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/50363/'
+        name: 'Fallout Who Vegas - Complete'
+    inc: [ *TTWv320 ]
+
+  - name: 'Enhanced NPC Awareness.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63425/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'FuckableCompanions.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66274/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Leave Conversation NV - (Normal|Lite).esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/62531/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'The Storyteller.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'CFWNV.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'IMPACT.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/57113/'
+        name: 'IMPACT'
+      - link: 'https://www.nexusmods.com/newvegas/mods/62050/'
+        name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
+    inc:
+      - <<: *TTWv320
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      - <<: *useInstead
+        subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
+        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'CAGE 1.9.3.2.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42428/'
+        name: 'CAGE: Continue After Games Ending'
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'ContinueAfterEnding.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/57922/' ]
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Functional Post Game Ending( - (AWOP|TTW|YUP) Patch)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66726/'
+        name: "FPGE - Functional Post Game Ending"
+  - name: 'Functional Post Game Ending.esm'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    msg:
+      - <<: *patchProvided
+        subs: [ 'A World Of Pain' ]
+        condition: 'active("AWorldOfPain(Preview).esm") and not active("Functional Post Game Ending - AWOP Patch.esm")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("Functional Post Game Ending - TTW Patch.esm")'
+      - <<: *patchProvided
+        subs: [ 'Yukichigai Unofficial Patch - YUP' ]
+        condition: 'active("YUP - Base Game + All DLC.esm") and not active("Functional Post Game Ending - YUP Patch.esm")'
+      - *requires_xNVSE
+    inc:
+      - 'ContinueAfterEnding.esp'
+      - 'CAGE 1.9.3.2.esp'
+    tag:
+      - Actors.AIPackagesForceAdd
+      - Graphics
+    clean:
+    # 6.4
+      - crc: 0x8B474C15
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - AWOP Patch.esm'
+    clean:
+    # 6.4
+      - crc: 0x423465ED
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - TTW Patch.esm'
+    req: [ *TTWv330 ]
+    clean:
+    # 6.4
+      - crc: 0x0B4E5CFF
+        util: 'FNVEdit v4.0.4c'
+  - name: 'Functional Post Game Ending - YUP Patch.esm'
+    clean:
+    # 6.4
+      - crc: 0x12391AB4
+        util: 'FNVEdit v4.0.4c'
+
+  - name: 'pipboy2500_edisleado.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38844/'
+        name: 'A Familiar Friend: Pip-Boy 2500 Handheld Pipboy'
+    inc: [ *TTWv320 ]
+    msg:
+      - <<: *useInstead
+        subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - name: 'Readius_NV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/36646/'
+        name: 'Official Pipboy Readius - New Vegas Edition'
+    inc: [ *TTWv320 ]
+
+  - name: 'Alternative Start.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Alternate Start - Roleplayers.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/59943/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'AlternateStart-TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50173/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Kobu''s New Game Quick Start and Better Rebuild.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36035/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Roleplay Start 1.2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39526/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Asurah_reanimation.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64339/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Reload Sounds.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61501/'
+        name: '1st Person Weapon Animation Overhaul'
+    inc: [ *TTWv320 ]
+
+  - name: 'DynamicTimeScale.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37536/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Imp''s Timescale Adjuster.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34718/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'MOD\.Time\..*\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/34859/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Timescale Pacemaker.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/63880/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'VariousTimescaleSystem.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36196/' ]
+    inc: [ *TTWv320 ]
+
+  - name: 'Altitude.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71404/' ]
+    group: *weatherGroup
+    clean:
+      - crc: 0xE3EF6849
+        util: 'FNVEdit v4.0.3f'
+
+  - name: 'Asterra''s Many Fixes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/67070/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x82DAC22D
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
