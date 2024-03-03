@@ -4440,13 +4440,6 @@ plugins:
       - 'GRA WRP Compatibility Patch no Brush Gun.esp'
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
-      
-        - name: 'PAVE_NV_TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/74786' ]
-    tag: [ Graphics ]
-    after:
-      - 'fixy crap ttw.esp'
-
   - name: 'Equipment Restoration Project - EVE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     after: [ 'EVE FNV - ALL DLC.esp' ]
