@@ -2568,6 +2568,15 @@ plugins:
       - crc: 0x2EA38DC1
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Tree New Perks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79005/'
+        name: 'TTW - Wasteland Supplements'
+    after: [ 'TTW Reputations.esm' ]
+    clean:
+      - crc: 0x69A64A6A
+        util: 'FNVEdit v4.0.4c'
+
 ###### Items ######
   - name: 'epock.esp'
     url:
