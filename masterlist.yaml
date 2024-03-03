@@ -2659,7 +2659,7 @@ plugins:
 ###### Locations - Player Homes ######
   - name: 'Expanded Megaton House - TTW.esp'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/69953'
+      - link: 'https://www.nexusmods.com/newvegas/mods/69953/'
         name: 'Expanded Megaton House - TTW'
     msg:
       - <<: *wildEdits
