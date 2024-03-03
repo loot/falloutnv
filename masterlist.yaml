@@ -1054,6 +1054,27 @@ plugins:
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
     group: *fixesGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**NavmeshOverhaul.esm**' ]
+        condition: 'active("NavmeshOverhaul.esm")'
+
+  - name: 'NavmeshOverhaul.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/81003' ]
+    group: *fixesGroup
+
+  - name: 'YUPNavmeshPatch.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/81003' ]
+    group: *fixesGroup
+    inc:
+      - name: 'Uncut Wasteland.esm'
+        detail: &checkScript "It is incompatible according to the author's error check script. Follow [the guide](https://www.nexusmods.com/newvegas/mods/81003)."
+      - name: "Vanilla Enhancements.esm"
+        detail: *checkScript
+      - name: "TLD_Travelers.esm"
+        detail: *checkScript
+      - name: "Functional Post Game Ending.esm"
+        detail: *checkScript
 
   - name: 'RepairKitFix.esp'
     url:
