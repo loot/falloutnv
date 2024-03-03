@@ -2792,6 +2792,27 @@ plugins:
         subs: [ 'Low Robots ESP' ]
         condition: 'many("AWOP(Very)?LowRobots\.esp")'
 
+  - name: 'AWorldOfPainFO3.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66265/'
+        name: 'TTW A World of Pain for Fallout 3'
+    req: [ *TTWv320 ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[AWorldOfPainFO3 - FafnirUniqueTTWOverhaul Patch](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("AWorldOfPainFO3-FafnirUniqueTTWOverhaul.esp")'
+      - <<: *patchProvided
+        subs: [ 'JIP Companions Command and Control' ]
+        condition: 'active("JIP Companions Command & Control.esp") and not file("textures/jazzisparis/ccc/avatar_the_warden.dds")'
+    tag:
+      - C.Light
+      - Faction
+    clean:
+      - crc: 0xC0E2EF21
+        util: 'FNVEdit v4.0.4c'
+
 ###### Locations - New Structures & Landmarks ######
   - name: 'Cut Sewers Restored.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55956/' ]
