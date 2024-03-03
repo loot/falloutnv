@@ -1035,25 +1035,19 @@ plugins:
     # 5.4
       - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
-
-  - name: 'fixy crap ue.esp'
+        
+  - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
         name: 'skinned mesh improvement mod'
-    tag: [ Graphics ]
     group: *fixesGroup
+    tag: [ Graphics ]
+  - name: 'fixy crap ue.esp'
     clean:
       - crc: 0xCD8AEB60
         util: 'FNVEdit v4.0.4c'
-
   - name: 'fixy crap ttw.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
-        name: 'skinned mesh improvement mod'
-    tag:
-      - Graphics
-      - Text
-    group: *fixesGroup
+    tag: [ Text ]
     clean:
       - crc: 0xA4457FA7
         util: 'FNVEdit v4.1.5 EXPERIMENTAL'
@@ -4446,6 +4440,13 @@ plugins:
       - 'GRA WRP Compatibility Patch no Brush Gun.esp'
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
+      
+        - name: 'PAVE_NV_TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74786' ]
+    tag: [ Graphics ]
+    after:
+      - 'fixy crap ttw.esp'
+
   - name: 'Equipment Restoration Project - EVE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     after: [ 'EVE FNV - ALL DLC.esp' ]
