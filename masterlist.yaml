@@ -1035,16 +1035,21 @@ plugins:
     # 5.4
       - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
-
-  - name: 'fixy crap ue.esp'
+  - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
         name: 'skinned mesh improvement mod'
-    tag: [ Graphics ]
     group: *fixesGroup
+    tag: [ Graphics ]
+  - name: 'fixy crap ue.esp'
     clean:
       - crc: 0xCD8AEB60
         util: 'FNVEdit v4.0.4c'
+  - name: 'fixy crap ttw.esp'
+    tag: [ Text ]
+    clean:
+      - crc: 0xA4457FA7
+        util: 'FNVEdit v4.1.5 EXPERIMENTAL'
 
   - name: 'Navmesh Fixes and Improvements.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/62041/' ]
