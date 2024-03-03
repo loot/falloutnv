@@ -5009,10 +5009,6 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
 
-  - name: 'Project Nevada - Med-X Fix.esp'
-    tag: [ Names ]
-
-# Mothership Zeta Rehaul
   - name: '(MothershipZetaRehaul|ZetaRehaul(BiWastelands|DelayDLCRedux|HardcoreZeta(DelayDLCRedux)?|NVSpeechChecks)Patch)\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77340/'
@@ -5047,7 +5043,6 @@ plugins:
       - Scripts
     inc: [ 'TTWZetaRewards.esp' ]
     dirty:
-      # Ver 3.5
       - <<: *quickClean
         crc: 0x782D858F
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
@@ -5083,6 +5078,9 @@ plugins:
     clean:
       - crc: 0x4FE536B4
         util: 'FNVEdit v4.0.4'
+
+  - name: 'Project Nevada - Med-X Fix.esp'
+    tag: [ Names ]
 
   - name: 'rotfacetoriches.esp'
     tag:
