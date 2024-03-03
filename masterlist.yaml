@@ -4461,7 +4461,6 @@ plugins:
       - Names
       - NPC.Class
       - Stats
-      
     after:
       - 'jsawyer.esp'
       - 'JSawyer - CE.esp'
