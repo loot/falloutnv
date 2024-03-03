@@ -5482,6 +5482,76 @@ plugins:
       - 'NewVegasBountiesIII.esp'
       - 'TheBetterAngels.esp'
 
+  - name: '(MothershipZetaRehaul|ZetaRehaul(BiWastelands|DelayDLCRedux|HardcoreZeta(DelayDLCRedux)?|NVSpeechChecks)Patch)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77340/'
+        name: 'TTW - Mothership Zeta Rehaul'
+  - name: 'MothershipZetaRehaul.esm'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Delay DLC Redux TTW' ]
+        condition: 'active("DelayDLCRedux.esp") and not active("HardcoreZeta.esp") and not active("ZetaRehaulDelayDLCReduxPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Bi Wastelands TTW' ]
+        condition: 'active("Tale of Bi Wastelands.esm") and not active("ZetaRehaulBiWastelandsPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW Hardcore Zeta' ]
+        condition: 'active("HardcoreZeta.esp") and not active("DelayDLCRedux.esp") and not active("ZetaRehaulHardcoreZetaPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW Hardcore Zeta & Delay DLC Redux' ]
+        condition: 'active("HardcoreZeta.esp") and active("DelayDLCRedux.esp") and not active("ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp")'
+      - <<: *patchProvided
+        subs: [ 'TTW New Vegas Speech Checks' ]
+        condition: 'active("TTW New Vegas Speech Checks.esm") and not active("ZetaRehaulNVSpeechChecksPatch.esp")'
+      - <<: *wildEdits
+        subs: [ 'Remove **0B0039B5** & **0B00DBAA** & **0B00DBAB** & **0B00DBAC** & **0B00DBAF** & **0B00B42C** & **0B007D26** from **MothershipZetaRehaul.esm**' ]
+        condition: 'checksum("MothershipZetaRehaul.esm", 782D858F) or checksum("MothershipZetaRehaul.esm", 22F03D62)'
+    tag:
+      - Delev
+      - Enchantments
+      - Faction
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Scripts
+    inc: [ 'TTWZetaRewards.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x782D858F
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'ZetaRehaulBiWastelandsPatch.esp'
+    clean:
+      - crc: 0x1D82AD4C
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaul(DelayDLCRedux|HardcoreZeta)Patch\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'TTW Hardcore Zeta & Delay DLC Redux Patch' ]
+        condition: 'active("ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp") and active("HardcoreZeta.esp") and active("DelayDLCRedux.esp")'
+  - name: 'ZetaRehaulDelayDLCReduxPatch.esp'
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x10027F2F
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'ZetaRehaulHardcoreZetaPatch.esp'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0xEE019D4D
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaulHardcoreZetaDelayDLCReduxPatch.esp'
+    tag: [ Scripts ]
+    inc: [ 'DelayDLCRedux - Hardcore Zeta Patch.esp' ]
+    clean:
+      - crc: 0x2A5D8E6C
+        util: 'FNVEdit v4.0.4'
+  - name: 'ZetaRehaulNVSpeechChecksPatch.esp'
+    clean:
+      - crc: 0x4FE536B4
+        util: 'FNVEdit v4.0.4'
+
   - name: 'Project Nevada - Med-X Fix.esp'
     tag: [ Names ]
 
