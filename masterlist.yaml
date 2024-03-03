@@ -1045,7 +1045,6 @@ plugins:
     clean:
       - crc: 0xCD8AEB60
         util: 'FNVEdit v4.0.4c'
-
   - name: 'fixy crap ttw.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
