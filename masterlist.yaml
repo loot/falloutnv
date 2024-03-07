@@ -5991,14 +5991,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     tag:
       - Graphics
-  - name: 'NVR3_LegionQuestsExpanded Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
-    tag:
-      - Actors.Factions
-      - NPC.Eyes
-      - NPC.FaceGen
-      - NPC.Hair
-      - NPC.Race
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
