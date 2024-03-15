@@ -5956,7 +5956,7 @@ plugins:
       - Scripts
 
   - name: 'New Vegas Redesigned 3.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     after: [ 'Project Beauty.esm' ]
     inc:
       - 'New Vegas Redesigned.esm'
@@ -5969,54 +5969,28 @@ plugins:
       - Delev
       - Graphics
       - Invent
-      - NpcFaces
-      - NPC.Race
       - Relev
-    dirty:
-      # v4.4
-      - <<: *quickClean
-        crc: 0xF789959A
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 94
-        udr: 73
-  - name: 'New Vegas Redesigned 3.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    inc:
-      - 'New Vegas Redesigned.esm'
-      - 'New Vegas Redesigned II.esm'
-      - 'TTW Redesigned.esm'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Delev
-      - Graphics
-      - Invent
-      - NpcFaces
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
       - NPC.Race
-      - Relev
-    dirty:
-      # v4.4
-      - <<: *quickClean
-        crc: 0xA49C36C8
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1001
-        udr: 74
   - name: 'Gomorrah Redesigned v2.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x54E5F3EE
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        udr: 3
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
   - name: 'Bitter Springs Redesigned.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56312/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x0F5F3084
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 36
-        udr: 5
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+  - name: 'NVR3_1nivVSLArmors Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Delev
+      - Relev
+  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag:
+      - Graphics
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
