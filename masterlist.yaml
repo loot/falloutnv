@@ -1274,11 +1274,7 @@ plugins:
         name: 'Climate Control - Rain'
   - name: 'CC - Rain.esp'
     group: *weatherGroup
-    dirty:
-      - <<: *quickClean
-        crc: 0x639200CA
-        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 1
+    # doNotClean - Intentional ITM, to turn on rain in TTW.
   - name: 'CC - 3D Rain.esp'
     group: *weatherGroup
     msg:
