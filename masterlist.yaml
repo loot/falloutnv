@@ -1814,7 +1814,6 @@ plugins:
     tag:
       - C.Encounter
       - Names
-      - Scripts
       - Stats
     clean:
       - crc: 0xB1614D75
