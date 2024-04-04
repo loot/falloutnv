@@ -1810,9 +1810,7 @@ plugins:
         name: 'ROOG FNV'
     req:
       - *JIPLN
-      - 'YUP - Base Game + All DLC.esm'
       - 'WeaponRepairKitRepaired.esp'
-      - 'WMIMNV.esp'
     tag:
       - C.Encounter
       - Names
