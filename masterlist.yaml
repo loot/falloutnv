@@ -2906,6 +2906,8 @@ plugins:
         util: 'FNVEdit v4.0.4c'
   - name: 'ZionTrail-NV.esp'
     msg:
+      - <<: *flagESM
+        condition: 'not is_master("ZionTrail-NV.esp")'
       - <<: *obsolete
         condition: 'checksum("ZionTrail-NV.esp", B04CEAA2)'
     clean:
