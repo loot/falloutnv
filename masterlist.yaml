@@ -6071,8 +6071,10 @@ plugins:
       - crc: 0x37768291
         util: 'FNVEdit v4.1.5d'
   ### NVR3 - Patches ###
+  # Adam Reborn
   - name: 'NVR3_ADAMTrooperGloves Patch.esp'
     tag: [ Graphics ]
+  # Spice of Life
   - name: 'NVR3_1nivVSLArmors Patch.esp'
     tag:
       - Delev
