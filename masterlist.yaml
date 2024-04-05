@@ -2616,6 +2616,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79005/'
         name: 'TTW - Wasteland Supplements'
+    tag: [ Text ]
     clean:
       - crc: 0x69A64A6A
         util: 'FNVEdit v4.0.4c'
