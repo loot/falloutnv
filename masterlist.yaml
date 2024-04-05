@@ -2909,7 +2909,6 @@ plugins:
       - <<: *obsolete
         condition: 'checksum("ZionTrail-NV.esp", B04CEAA2)'
     clean:
-    # 1.11
       - crc: 0xDAD61D5D
         util: 'FNVEdit v4.0.4c'
 
