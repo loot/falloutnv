@@ -6054,10 +6054,25 @@ plugins:
       - NPC.FaceGen
       - NPC.Hair
       - NPC.Race
+    dirty:
+      - <<: *quickClean
+        crc: 0xDB577951
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
+      - <<: *quickClean
+        crc: 0x8DEBD601
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 8
   - name: 'Gomorrah Redesigned v2.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    clean:
+      - crc: 0x37768291
+        util: 'FNVEdit v4.1.5d'
   - name: 'Bitter Springs Redesigned.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    clean:
+      - crc: 0x2DC687C4
+        util: 'FNVEdit v4.1.5d'
   - name: 'NVR3_1nivVSLArmors Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     tag:
