@@ -6075,11 +6075,11 @@ plugins:
     tag: [ Graphics ]
   - name: 'NVR3_1nivVSLArmors Patch.esp'
     tag:
+      - Delev
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
       - NPC.Race
-      - Delev
       - Relev
 
   - name: 'Wasteland Gals.esp'
