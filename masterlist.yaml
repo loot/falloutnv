@@ -6030,7 +6030,11 @@ plugins:
       - Scripts
 
   - name: 'New Vegas Redesigned 3.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56312/'
+        name: 'Fallout New Vegas Redesigned 3 - Open Source'
+      - link: 'https://www.nexusmods.com/newvegas/mods/72951/'
+        name: 'NVR3R - New Vegas Redesigned 3 Revised'
     after: [ 'Project Beauty.esm' ]
     inc:
       - 'New Vegas Redesigned.esm'
