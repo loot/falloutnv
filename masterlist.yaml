@@ -6066,17 +6066,20 @@ plugins:
   ### NVR3 - Legacy Files ###
   - name: 'New Vegas Redesigned 3.esp'
     msg: [ *obsolete ]
-  - name: 'Gomorrah Redesigned v2.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
-    clean:
-      - crc: 0x37768291
-        util: 'FNVEdit v4.1.5d'
   - name: 'Bitter Springs Redesigned.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     clean:
       - crc: 0x2DC687C4
         util: 'FNVEdit v4.1.5d'
+  - name: 'Gomorrah Redesigned v2.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    clean:
+      - crc: 0x37768291
+        util: 'FNVEdit v4.1.5d'
   ### NVR3 - Patches ###
+  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
+    tag: [ Graphics ]
   - name: 'NVR3_1nivVSLArmors Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     tag:
@@ -6086,9 +6089,6 @@ plugins:
       - NPC.Race
       - Delev
       - Relev
-  - name: 'NVR3_ADAMTrooperGloves Patch.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
-    tag: [ Graphics ]
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
