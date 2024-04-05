@@ -6069,8 +6069,7 @@ plugins:
       - Relev
   - name: 'NVR3_ADAMTrooperGloves Patch.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
-    tag:
-      - Graphics
+    tag: [ Graphics ]
 
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
