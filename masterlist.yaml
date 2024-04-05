@@ -6064,6 +6064,8 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 8
   ### NVR3 - Legacy Files ###
+  - name: 'New Vegas Redesigned 3.esp'
+    msg: [ *obsolete ]
   - name: 'Gomorrah Redesigned v2.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72951' ]
     clean:
