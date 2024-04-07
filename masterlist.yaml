@@ -2627,10 +2627,6 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/44757/'
         name: 'One HUD - oHUD'
     req: [ *UIO ]
-    inc:
-      - 'aHUD.esm'
-      - 'iHUD.esm'
-      - 'Primary Needs HUD.esm'
     msg:
       - *requiresMCM
       - *requiresNVSE
