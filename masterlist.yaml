@@ -2623,6 +2623,9 @@ plugins:
 
 ###### Gameplay - User Interface ######
   - name: 'oHUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44757/'
+        name: 'One HUD - oHUD'
     inc:
       - 'aHUD.esm'
       - 'iHUD.esm'
