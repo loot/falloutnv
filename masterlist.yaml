@@ -2630,6 +2630,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
         condition: 'active("oHUD.esm")'
+      - *requiresMCM
       - *requiresNVSE
 
   - name: 'iHUD.esm'
@@ -2640,6 +2641,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
         condition: 'active("oHUD.esm")'
+      - *requiresMCM
       - *requiresNVSE
 
   - name: 'oHUD.esm'
@@ -2655,10 +2657,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/38538/'
         name: 'Primary Needs HUD - pHUD'
+    req: [ *UIO ]
     msg:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
         condition: 'active("oHUD.esm")'
+      - *requiresMCM
       - *requiresNVSE
 
 ###### Items ######
