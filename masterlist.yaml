@@ -2535,6 +2535,9 @@ plugins:
       - *johnnyGuitar
       - *ShowOff
       - *UIO
+    inc:
+      - 'oHUD.esm'
+      - 'TheHUDEditor.esm'
     msg:
       - <<: *requiresX
         subs: [ '[Vanilla UI Plus](https://www.moddb.com/mods/vanilla-ui-plus/downloads/vanilla-ui-plus-nv)' ]
