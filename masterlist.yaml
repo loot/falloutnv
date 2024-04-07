@@ -2623,6 +2623,9 @@ plugins:
 
 ###### Gameplay - User Interface ######
   - name: 'aHUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40858/'
+        name: 'Adjustable HUD - aHUD'
     msg:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
@@ -2630,6 +2633,9 @@ plugins:
       - *requiresNVSE
 
   - name: 'iHUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40340/'
+        name: 'Immersive HUD - iHUD'
     msg:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
@@ -2646,6 +2652,9 @@ plugins:
       - *requiresNVSE
 
   - name: 'Primary Needs HUD.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38538/'
+        name: 'Primary Needs HUD - pHUD'
     msg:
       - <<: *alreadyInX
         subs: [ '**oHUD.esm**' ]
