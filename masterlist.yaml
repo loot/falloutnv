@@ -2623,10 +2623,18 @@ plugins:
 
 ###### Gameplay - User Interface ######
   - name: 'aHUD.esm'
-    msg: [ *requiresNVSE ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
+      - *requiresNVSE
 
   - name: 'iHUD.esm'
-    msg: [ *requiresNVSE ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
+      - *requiresNVSE
 
   - name: 'oHUD.esm'
     url:
@@ -2638,7 +2646,11 @@ plugins:
       - *requiresNVSE
 
   - name: 'Primary Needs HUD.esm'
-    msg: [ *requiresNVSE ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**oHUD.esm**' ]
+        condition: 'active("oHUD.esm")'
+      - *requiresNVSE
 
 ###### Items ######
   - name: 'epock.esp'
