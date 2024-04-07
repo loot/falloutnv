@@ -2520,10 +2520,26 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80642/'
         name: 'M.U.X. Series - Interface Overhaul'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Vanilla UI Extension](https://www.moddb.com/mods/vanilla-ui-extension/downloads/vanilla-ui-extension-10)' ]
+        condition: 'not file("textures/VUIE")'
   - name: 'M.U.X. Series - Lite Edition.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83275/'
         name: 'M.U.X. Series - Lite Edition'
+  - name: 'M.U.X. Series - (Interface Overhaul|Lite Edition)\.esp'
+    req:
+      - *anhNVSE
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+      - *UIO
+    msg:
+      - <<: *requiresX
+        subs: [ '[Vanilla UI Plus](https://www.moddb.com/mods/vanilla-ui-plus/downloads/vanilla-ui-plus-nv)' ]
+        condition: 'not file("Vanilla UI Plus.esp")'
+      - *requires_xNVSE
 
   - name: 'Main And Pause Menus Overhaul.esm'
     url:
