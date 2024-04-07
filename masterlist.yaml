@@ -1115,6 +1115,8 @@ plugins:
     clean:
       - crc: 0xADA6FC4C
         util: 'FNVEdit v4.0.4b'
+  - name: 'Strip Lights Region Fix - .*\.esp'
+    after: [ 'Strip Lights Region Fix.esp' ]
 
   - name: 'zion_lod_water.esp'
     url:
