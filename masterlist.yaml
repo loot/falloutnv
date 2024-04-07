@@ -1213,6 +1213,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74295/'
         name: 'New Vegas Mesh Improvement Mod - NVMIM'
+    clean:
+      - crc: 0xEEB54964
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
     url:
