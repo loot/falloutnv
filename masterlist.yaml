@@ -1213,6 +1213,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74295/'
         name: 'New Vegas Mesh Improvement Mod - NVMIM'
+    group: *fixesGroup
     clean:
       - crc: 0xEEB54964
         util: 'FNVEdit v4.1.5d'
