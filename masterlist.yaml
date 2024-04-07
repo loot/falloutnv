@@ -2637,6 +2637,9 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'Primary Needs HUD.esm'
+    msg: [ *requiresNVSE ]
+
 ###### Items ######
   - name: 'epock.esp'
     url:
