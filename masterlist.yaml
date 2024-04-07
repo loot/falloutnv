@@ -2622,6 +2622,12 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
 ###### Gameplay - User Interface ######
+  - name: 'oHUD.esm'
+    inc:
+      - 'aHUD.esm'
+      - 'iHUD.esm'
+      - 'Primary Needs HUD.esm'
+    msg: [ *requiresNVSE ]
 
 ###### Items ######
   - name: 'epock.esp'
@@ -3754,12 +3760,6 @@ plugins:
   - name: 'aHUD.esm'
     msg: [ *requiresNVSE ]
   - name: 'iHUD.esm'
-    msg: [ *requiresNVSE ]
-  - name: 'oHUD.esm'
-    inc:
-      - 'aHUD.esm'
-      - 'iHUD.esm'
-      - 'Primary Needs HUD.esm'
     msg: [ *requiresNVSE ]
 
   - name: 'HonestHearts-CaliberX.esm'
