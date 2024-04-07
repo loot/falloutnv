@@ -2622,6 +2622,12 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
 ###### Gameplay - User Interface ######
+  - name: 'aHUD.esm'
+    msg: [ *requiresNVSE ]
+
+  - name: 'iHUD.esm'
+    msg: [ *requiresNVSE ]
+
   - name: 'oHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/44757/'
@@ -3759,10 +3765,6 @@ plugins:
 
   - name: 'Clean-Deluxe FNV.esm'
     inc: [ 'Performance of the Gods.esp' ]
-  - name: 'aHUD.esm'
-    msg: [ *requiresNVSE ]
-  - name: 'iHUD.esm'
-    msg: [ *requiresNVSE ]
 
   - name: 'HonestHearts-CaliberX.esm'
     tag: [ Names ]
