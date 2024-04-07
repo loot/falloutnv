@@ -1053,6 +1053,7 @@ plugins:
 
   - name: 'Impostors and LOD Flicker Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83691/' ]
+    group: *fixesGroup
     clean:
       - crc: 0x0D8ED6DB
         util: 'FNVEdit v4.1.5d'
