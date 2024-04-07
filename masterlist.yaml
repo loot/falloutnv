@@ -2516,6 +2516,15 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'M.U.X. Series - Interface Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80642/'
+        name: 'M.U.X. Series - Interface Overhaul'
+  - name: 'M.U.X. Series - Lite Edition.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/83275/'
+        name: 'M.U.X. Series - Lite Edition'
+
   - name: 'Main And Pause Menus Overhaul.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74365/'
