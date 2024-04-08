@@ -2714,6 +2714,7 @@ plugins:
       - *ShowOff
       - *supNVSE
       - *UIO
+      # Req: yUI & ySI - Version: 2.2+ CRC: 2.2.0 C23B2A4B, 2.2.1 2E13D445
       - name: 'NVSE/Plugins/yUI.dll'
         display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
         condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
