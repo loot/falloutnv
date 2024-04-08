@@ -1156,16 +1156,6 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
-  - name: 'DarNifiedUINV.esp'
-    url:
-      - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
-        name: 'Unofficial DarNified UI Update'
-    req: [ *UIO ]
-    msg: [ *requiresNVSE ]
-    clean:
-      - crc: 0xE14D27CD
-        util: 'FNVEdit v4.1.5d'
-
   - name: 'Sortomatic.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/41142/'
@@ -1690,6 +1680,15 @@ plugins:
     after: ['TribalFixes.esp']
     clean:
       - crc: 0xD01056A7
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'T4-modest.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69642' ]
+    tag: [Graphics]
+    after:
+      - 'TribalFixes.esp'
+    clean:
+      - crc: 0xDEBC1A3C
         util: 'FNVEdit v4.1.5d'
 
 ###### Character Appearance - NPCs ######
