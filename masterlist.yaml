@@ -287,6 +287,10 @@ common:
     name: 'NVSE/Plugins/ShowOffNVSE.dll'
     display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
 
+  - &supNVSE
+    name: 'NVSE/Plugins/supNVSE.dll'
+    display: '[SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160/)'
+
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.2+'
