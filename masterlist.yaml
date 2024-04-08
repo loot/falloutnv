@@ -1185,6 +1185,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *UIO
+    inc: [ 'DarNifiedUINV.esp' ]
     msg: [ *requires_xNVSE ]
 
 ###### AudioVisual ######
