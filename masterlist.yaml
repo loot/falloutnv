@@ -2295,10 +2295,10 @@ plugins:
         name: 'Delay DLC Redux'
   - name: 'DelayDLCRedux.esp'
     clean:
-      - crc: 0x5932B828
-        util: 'FNVEdit v4.0.4c'
-      - crc: 0xDCEBC8F8
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0x39A7DB52
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x9C9EA888
+        util: 'FNVEdit v4.1.5d'
   - name: 'DelayDLCRedux - Delay CG04 Level Up.esp'
     clean:
       - crc: 0x0209CDB3
