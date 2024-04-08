@@ -1884,6 +1884,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
         name: 'JAM - Just Assorted Mods'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+      - *UIO
+    msg: [ *requires_xNVSE ]
     tag: [ Text ]
     clean:
       - crc: 0x6EAC1F92
