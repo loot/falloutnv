@@ -5232,10 +5232,6 @@ plugins:
     clean:
       - crc: 0x0209CDB3
         util: 'FNVEdit v4.0.4c'
-  - name: 'DelayDLCRedux - Hardcore Zeta Patch.esp'
-    clean:
-      - crc: 0xD5E6589F
-        util: 'FNVEdit v4.0.4c'
   - name: 'DelayDLCReduxPLNote.esp'
     clean:
       - crc: 0x4EB6E9B8
