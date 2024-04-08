@@ -1180,6 +1180,12 @@ plugins:
     url:
       - link: 'https://www.moddb.com/mods/vanilla-ui-plus/'
         name: 'Vanilla UI Plus'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *UIO
+    msg: [ *requires_xNVSE ]
 
 ###### AudioVisual ######
   - name: '357retex.esp'
