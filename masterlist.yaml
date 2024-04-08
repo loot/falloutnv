@@ -1884,6 +1884,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
         name: 'JAM - Just Assorted Mods'
+    tag: [ Text ]
 
   - name: 'outsidebets.esp'
     url:
