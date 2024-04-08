@@ -2692,6 +2692,11 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'PipBoyUITweaks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85343/'
+        name: 'Pip-Boy UI Tweaks'
+
   - name: 'Primary Needs HUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/38538/'
