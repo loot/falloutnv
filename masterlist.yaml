@@ -2328,6 +2328,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/50468/'
         name: 'JIP Companions Command and Control'
+    req: [ *JIPLN ]
+    msg:
+      - *requiresMCM
+      - *requires_xNVSE
 
   - name: 'NVPhalanx.esp'
     url:
