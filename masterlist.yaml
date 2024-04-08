@@ -5879,6 +5879,12 @@ plugins:
       - Factions
   - name: 'DeadMoneyFemaleTuxedo.esp'
     tag: [ Graphics ]
+  - name: 'TribalFixes.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/75352' ]
+    tag: [ Body-F ]
+    clean:
+      - crc: 0x77D39D0F
+        util: 'FNVEdit v4.1.5d'
   - name: 'Roberts_NewVegas.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54731/' ]
     tag:
