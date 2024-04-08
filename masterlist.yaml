@@ -1160,6 +1160,9 @@ plugins:
     url:
       - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
         name: 'Unofficial DarNified UI Update'
+    clean:
+      - crc: 0xE14D27CD
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Sortomatic.esm'
     url:
