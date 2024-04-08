@@ -1156,6 +1156,11 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'DarNifiedUINV.esp'
+    url:
+      - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
+        name: 'Unofficial DarNified UI Update'
+
   - name: 'Sortomatic.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/41142/'
