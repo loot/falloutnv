@@ -2704,6 +2704,11 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'QuickSelect.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82249/'
+        name: 'Quick Select - A Zelda BOTW Style Quick Menu'
+
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
     tag: [ Names ]
