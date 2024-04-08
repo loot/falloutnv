@@ -2696,6 +2696,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85343/'
         name: 'Pip-Boy UI Tweaks'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *lStewieAlTweaks
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
 
   - name: 'Primary Needs HUD.esm'
     url:
