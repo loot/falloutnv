@@ -1175,6 +1175,8 @@ plugins:
     after: [ 'TES5Merged.esp' ]
     tag: [ NoMerge ]
 
+###### Resources & Frameworks ######
+
 ###### AudioVisual ######
   - name: '357retex.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
