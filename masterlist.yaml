@@ -1885,6 +1885,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
         name: 'JAM - Just Assorted Mods'
     tag: [ Text ]
+    clean:
+      - crc: 0x6EAC1F92
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'outsidebets.esp'
     url:
