@@ -1671,6 +1671,16 @@ plugins:
     clean:
       - crc: 0x77D39D0F
         util: 'FNVEdit v4.1.5d'
+        
+  - name: 'T4-plugin.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/66903/' ]
+    tag:
+      - Body-F
+      - Graphics
+    after: ['TribalFixes.esp']
+    clean:
+      - crc: 0xD01056A7
+        util: 'FNVEdit v4.1.5d'
 
 ###### Character Appearance - NPCs ######
   - name: 'ReElijahfied.esp'
