@@ -2289,6 +2289,31 @@ plugins:
         itm: 29
 
 ###### Gameplay - Quests ######
+  - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75851/'
+        name: 'Delay DLC Redux'
+  - name: 'DelayDLCRedux.esp'
+    clean:
+      - crc: 0x5932B828
+        util: 'FNVEdit v4.0.4c'
+      - crc: 0xDCEBC8F8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCRedux - Delay CG04 Level Up.esp'
+    clean:
+      - crc: 0x0209CDB3
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPLNote.esp'
+    clean:
+      - crc: 0x4EB6E9B8
+        util: 'FNVEdit v4.0.4c'
+  - name: 'DelayDLCReduxPOPP.esp'
+    clean:
+      - crc: 0x84F02CD6
+        util: 'FNVEdit v4.0.4c'
+      - crc: 0xE38D7BA9
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'NewVegasBounties.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
@@ -5217,31 +5242,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Dynamic Quantity Prompt.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/75851/'
-        name: 'Delay DLC Redux'
-  - name: 'DelayDLCRedux.esp'
-    clean:
-      - crc: 0x5932B828
-        util: 'FNVEdit v4.0.4c'
-      - crc: 0xDCEBC8F8
-        util: 'FNVEdit v4.0.4c'
-  - name: 'DelayDLCRedux - Delay CG04 Level Up.esp'
-    clean:
-      - crc: 0x0209CDB3
-        util: 'FNVEdit v4.0.4c'
-  - name: 'DelayDLCReduxPLNote.esp'
-    clean:
-      - crc: 0x4EB6E9B8
-        util: 'FNVEdit v4.0.4c'
-  - name: 'DelayDLCReduxPOPP.esp'
-    clean:
-      - crc: 0x84F02CD6
-        util: 'FNVEdit v4.0.4c'
-      - crc: 0xE38D7BA9
-        util: 'FNVEdit v4.0.4c'
 
   - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
     msg: [ *obsolete ]
