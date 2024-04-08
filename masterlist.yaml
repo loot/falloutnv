@@ -1681,7 +1681,7 @@ plugins:
     clean:
       - crc: 0x77D39D0F
         util: 'FNVEdit v4.1.5d'
-        
+
   - name: 'T4-plugin.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/66903/' ]
     tag:
@@ -1690,6 +1690,13 @@ plugins:
     after: ['TribalFixes.esp']
     clean:
       - crc: 0xD01056A7
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'T4-modest.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69642/' ]
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xDEBC1A3C
         util: 'FNVEdit v4.1.5d'
 
 ###### Character Appearance - NPCs ######
