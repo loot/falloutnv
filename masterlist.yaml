@@ -255,6 +255,10 @@ common:
     name: 'NVSE/Plugins/AnhNVSE.dll'
     display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
 
+  - &BaseObjectSwapper
+    name: 'NVSE/Plugins/BaseObjectSwapper.dll'
+    display: '[Base Object Swapper](https://www.nexusmods.com/newvegas/mods/83934/)'
+
   - &ClimateControl
     name: 'NVSE/Plugins/ClimateControl.dll'
     display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
