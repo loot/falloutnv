@@ -1880,6 +1880,11 @@ plugins:
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
 
+  - name: 'JustAssortedMods.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
+        name: 'JAM - Just Assorted Mods'
+
   - name: 'outsidebets.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
