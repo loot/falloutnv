@@ -2708,6 +2708,19 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82249/'
         name: 'Quick Select - A Zelda BOTW Style Quick Menu'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+      - *supNVSE
+      - *UIO
+      - name: 'NVSE/Plugins/yUI.dll'
+        display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
+      - name: 'menus/ySI/ySI.ini'
+        display: '[ySI - Sorting Ycons](https://www.nexusmods.com/newvegas/mods/74358/)'
+        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
+    msg: [ *requires_xNVSE ]
 
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
