@@ -1890,6 +1890,17 @@ plugins:
       - *johnnyGuitar
       - *kNVSE_Animation
       - *UIO
+    inc:
+      # ToDo: Built in mods. Replace with alreayInX.
+      - 'JustBulletTime.esp'
+      - 'JustDynamicCrosshair.esp'
+      - 'JustHitIndicator.esp'
+      - 'JustHitMarker.esp'
+      - 'JustHoldBreath.esp'
+      - 'JustLootMenu.esp'
+      - 'JustVanillaSprint.esp'
+      - 'JustVisualObjectives.esp'
+      - 'JustWeaponHweel.esp'
     msg: [ *requires_xNVSE ]
     tag: [ Text ]
     clean:
