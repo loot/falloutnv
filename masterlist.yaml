@@ -1926,6 +1926,7 @@ plugins:
       - *JIPLN
       - *kNVSE_Animation
     msg: [ *requires_xNVSE ]
+    tag: [ Text ]
 
   - name: 'outsidebets.esp'
     url:
