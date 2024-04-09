@@ -3208,6 +3208,11 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/43757/'
         name: 'Afterschool Special'
     tag: [ Invent ]
+    clean:
+      - crc: 0x1ACF273A
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x6949B4F5
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Expanded Megaton House - TTW.esp'
     url:
