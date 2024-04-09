@@ -2632,6 +2632,11 @@ plugins:
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
 
+  - name: 'FOVSlider.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55085/'
+        name: 'FOV Slider'
+
   - name: 'iHUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40340/'
