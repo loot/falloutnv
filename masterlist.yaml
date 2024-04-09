@@ -2637,6 +2637,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/55085/'
         name: 'FOV Slider'
     req: [ *JIPLN ]
+    inc:
+      - 'CombatTrainingEngine.esp'
+      - 'Powered Power Armor.esp'
     msg:
       - *requiresMCM
       - *requiresNVSE
