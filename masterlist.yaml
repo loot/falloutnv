@@ -3203,6 +3203,10 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
 ###### Locations - Player Homes ######
+  - name: 'Afterschool Special.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
+    tag: [ Invent ]
+
   - name: 'Expanded Megaton House - TTW.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/69953/'
@@ -3399,9 +3403,7 @@ plugins:
         condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
-  - name: 'Afterschool Special.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
-    tag: [ Invent ]
+
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
