@@ -2015,6 +2015,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75599/'
         name: 'ROOG TTW'
+    req: [ *JIPLN ]
+    msg: [ *requires_xNVSE ]
     tag:
       - Actors.Stats
       - C.Encounter
