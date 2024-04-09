@@ -3204,7 +3204,9 @@ plugins:
 
 ###### Locations - Player Homes ######
   - name: 'Afterschool Special.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43757/'
+        name: 'Afterschool Special'
     tag: [ Invent ]
 
   - name: 'Expanded Megaton House - TTW.esp'
