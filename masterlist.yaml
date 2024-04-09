@@ -2636,6 +2636,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/55085/'
         name: 'FOV Slider'
+    req: [ *JIPLN ]
+    msg:
+      - *requiresMCM
+      - *requiresNVSE
 
   - name: 'iHUD.esm'
     url:
