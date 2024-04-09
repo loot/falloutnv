@@ -1925,6 +1925,7 @@ plugins:
     req:
       - *JIPLN
       - *kNVSE_Animation
+    inc: [ 'DbpSprintMod.esp' ]
     msg:
       - <<: *alreadyInX
         subs: [ '**JustAssortedMods.esp**' ]
