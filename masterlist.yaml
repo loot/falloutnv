@@ -2057,11 +2057,17 @@ plugins:
         condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("sawyerbatty-FafnirUniqueTTWOverhaul.esp")'
     tag:
       - Actors.ACBS
+      - Actors.Stats
       - Delev
+      - Destructible
+      - Enchantments
+      - Graphics
       - Invent.Add
       - Invent.Remove
-      - Stats
       - Relev
+      - Scripts
+      - Stats
+      - Text
     clean:
       - crc: 0xDB8803A1
         util: 'FNVEdit v4.0.4'
