@@ -1922,6 +1922,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66960/'
         name: 'JVS - Just Vanilla Sprint'
+    req:
+      - *JIPLN
+      - *kNVSE_Animation
+    msg: [ *requires_xNVSE ]
 
   - name: 'outsidebets.esp'
     url:
