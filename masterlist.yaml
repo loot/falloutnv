@@ -3232,6 +3232,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40433/'
         name: 'The New Bison Steve Hotel and Lucky Casino'
+  - name: 'The New Bison Steve Hotel.esm'
+    clean:
+      - crc: 0x7D80DE01
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x68F3F1BC
+        util: 'FNVEdit v4.1.5d'
 
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
