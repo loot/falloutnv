@@ -3232,12 +3232,23 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40433/'
         name: 'The New Bison Steve Hotel and Lucky Casino'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The New Bison Steve Hotel' ]
+        condition: 'many("The New Bison Steve Hotel\.es[mp]")'
   - name: 'The New Bison Steve Hotel.esm'
     clean:
       - crc: 0x7D80DE01
         util: 'FNVEdit v4.1.5d'
       - crc: 0x68F3F1BC
         util: 'FNVEdit v4.1.5d'
+  - name: 'The New Bison Steve Hotel.esp'
+    msg:
+      - <<: *flagESM
+        condition: 'not is_master("The New Bison Steve Hotel.esp")'
+      - <<: *useInstead
+        subs: [ '**The New Bison Steve Hotel.esm**' ]
+        condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
