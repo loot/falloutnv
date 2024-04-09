@@ -1918,6 +1918,11 @@ plugins:
       - crc: 0x6EAC1F92
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'JustVanillaSprint.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66960/'
+        name: 'JVS - Just Vanilla Sprint'
+
   - name: 'outsidebets.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46648/'
