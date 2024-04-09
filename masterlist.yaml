@@ -2015,6 +2015,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75599/'
         name: 'ROOG TTW'
+    tag:
+      - Actors.Stats
+      - C.Encounter
+      - Stats
+  - name: 'sawyerbattyROOG.esp'
+    tag:
+      - Actors.Stats
+      - Stats
 
   - name: 'ROOGNV.esp'
     url:
