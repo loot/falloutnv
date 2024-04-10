@@ -255,13 +255,13 @@ common:
     name: 'NVSE/Plugins/AnhNVSE.dll'
     display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
 
+  - &BaseObjectSwapper
+    name: 'NVSE/Plugins/BaseObjectSwapper.dll'
+    display: '[Base Object Swapper](https://www.nexusmods.com/newvegas/mods/83934/)'
+
   - &ClimateControl
     name: 'NVSE/Plugins/ClimateControl.dll'
     display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
-
-  - &UIO
-    name: 'NVSE/Plugins/ui_organizer.dll'
-    display: '[UIO - User Interface Organizer](https://www.nexusmods.com/newvegas/mods/57174/)'
 
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
@@ -275,8 +275,12 @@ common:
     name: 'NVSE/Plugins/Scripts/gr_0KEYWORDS.txt'
     display: '[KEYWORDS](https://www.nexusmods.com/newvegas/mods/83088/)'
 
+  - &kNVSE_Animation
+    name: 'NVSE/Plugins/kNVSE.dll'
+    display: '[kNVSE Animation Plugin](https://www.nexusmods.com/newvegas/mods/71336/)'
+
   - &lStewieAlTweaks
-    name: 'NVSE/Plugins/Tweaks/nvse_stewie_tweaks.dll'
+    name: 'NVSE/Plugins/nvse_stewie_tweaks.dll'
     display: '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
 
   - &MCM
@@ -287,6 +291,10 @@ common:
     name: 'NVSE/Plugins/ShowOffNVSE.dll'
     display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
 
+  - &supNVSE
+    name: 'NVSE/Plugins/supNVSE.dll'
+    display: '[SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160/)'
+
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.2+'
@@ -296,6 +304,10 @@ common:
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.3+'
     condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+
+  - &UIO
+    name: 'NVSE/Plugins/ui_organizer.dll'
+    display: '[UIO - User Interface Organizer](https://www.nexusmods.com/newvegas/mods/57174/)'
 
   - &yGTM
     name: 'NVSE/Plugins/yGTM.dll'
@@ -417,6 +429,7 @@ bash_tags:
   - 'Actors.Spells'
   - 'Actors.SpellsForceAdd'
   - 'Actors.Stats'
+  - 'Actors.Voice'
   - 'C.Acoustic'
   - 'C.Climate'
   - 'C.Encounter'
@@ -764,7 +777,7 @@ plugins:
       - <<: *alsoUseX
         subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
         condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
-      - *requiresNVSE
+      - *requires_xNVSE
     tag:
       - EffectStats
       - Enchantments
@@ -1409,7 +1422,7 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Fallout - The Frontier' ]
         condition: 'active("The Frontier.esm")'
-      - *requiresNVSE
+      - *requires_xNVSE
     tag:
       - C.Climate
       - C.ImageSpace
@@ -1834,6 +1847,7 @@ plugins:
           - 'Literally Who''s Patch Emporium'
           - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
         condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
+      - *requires_xNVSE
     dirty:
       - <<: *quickClean
         crc: 0xC6734AE1
@@ -1853,6 +1867,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
+    msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
         crc: 0x5BDF8423
@@ -1867,6 +1882,57 @@ plugins:
       - 'Pip-Boy Light - Green.esp'
       - 'Pip-Boy Light - Vanilla.esp'
       - 'Pip-Boy Light - White.esp'
+
+  - name: 'ImmersiveRecoil.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61973/'
+        name: 'Immersive Recoil 2.0'
+    req: [ *JIPLN ]
+    msg:
+      - *requiresMCM
+      - *requires_xNVSE
+
+  - name: 'JustAssortedMods.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
+        name: 'JAM - Just Assorted Mods'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+      - *UIO
+    inc:
+      # ToDo: Built in mods. Replace with alreayInX.
+      - 'JustBulletTime.esp'
+      - 'JustDynamicCrosshair.esp'
+      - 'JustHitIndicator.esp'
+      - 'JustHitMarker.esp'
+      - 'JustHoldBreath.esp'
+      - 'JustLootMenu.esp'
+      - 'JustVanillaSprint.esp'
+      - 'JustVisualObjectives.esp'
+      - 'JustWeaponHweel.esp'
+    msg: [ *requires_xNVSE ]
+    tag: [ Text ]
+    clean:
+      - crc: 0x6EAC1F92
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'JustVanillaSprint.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66960/'
+        name: 'JVS - Just Vanilla Sprint'
+    req:
+      - *JIPLN
+      - *kNVSE_Animation
+    inc: [ 'DbpSprintMod.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**JustAssortedMods.esp**' ]
+        condition: 'active("JustAssortedMods.esp")'
+      - *requires_xNVSE
+    tag: [ Text ]
 
   - name: 'outsidebets.esp'
     url:
@@ -1946,6 +2012,21 @@ plugins:
             - Tweak Settings -> Combat: Max Ally Hits In Combat [Unlimited] &
             - Tweak Settings -> Combat: Max Ally Hits Out Of Combat [Unlimited]
 
+  - name: 'ROOG.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75599/'
+        name: 'ROOG TTW'
+    req: [ *JIPLN ]
+    msg: [ *requires_xNVSE ]
+    tag:
+      - Actors.Stats
+      - C.Encounter
+      - Stats
+  - name: 'sawyerbattyROOG.esp'
+    tag:
+      - Actors.Stats
+      - Stats
+
   - name: 'ROOGNV.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76452/'
@@ -1953,6 +2034,7 @@ plugins:
     req:
       - *JIPLN
       - 'WeaponRepairKitRepaired.esp'
+    msg: [ *requires_xNVSE ]
     tag:
       - C.Encounter
       - Names
@@ -1960,6 +2042,36 @@ plugins:
     clean:
       - crc: 0xB1614D75
         util: 'FNVEdit v4.0.4c'
+
+  - name: 'sawyerbatty.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
+      name: 'SawyerBatty TTW'
+    inc:
+    - 'jsawyer.esp'
+    - 'Project Nevada - Rebalance.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Fallout 3 Unique items Overhaul TTW 3.3'
+          - '[Literally Who''s Patch Emporium](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("sawyerbatty-FafnirUniqueTTWOverhaul.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Delev
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Relev
+      - Scripts
+      - Stats
+      - Text
+    clean:
+      - crc: 0xDB8803A1
+        util: 'FNVEdit v4.0.4'
 
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
@@ -2285,6 +2397,15 @@ plugins:
         util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'JIP Companions Command & Control.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/50468/'
+        name: 'JIP Companions Command and Control'
+    req: [ *JIPLN ]
+    msg:
+      - *requiresMCM
+      - *requires_xNVSE
+
   - name: 'NVPhalanx.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/35155/'
@@ -2412,7 +2533,7 @@ plugins:
       - 'Cannibal Reborn (No Rebalance).esp'
     msg:
       - *requiresMCM
-      - *requiresNVSE
+      - *requires_xNVSE
     clean:
       - crc: 0x0EEF05A3
         util: 'FNVEdit v4.0.4b'
@@ -2422,7 +2543,7 @@ plugins:
     req: [ *JIPLN ]
     inc: [ 'LFox Cannibal Perk Improvements.esp' ]
     msg:
-      - *requiresNVSE
+      - *requires_xNVSE
       - <<: *useOnlyOneX
         subs: [ 'Cannibal Reborn ESP' ]
         condition: 'many("Cannibal Reborn( \((Default Dine and Dash|No Rebalance)\))?\.esp")'
@@ -2447,7 +2568,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ '**A Crime Against Nature.esp**' ]
         condition: 'active("A Crime Against Nature.esp")'
-      - *requiresNVSE
+      - *requires_xNVSE
       - <<: *useOnlyOneX
         subs: [ 'Dark Craving ESP' ]
         condition: 'many("Dark Craving NV( Incurable Edition)?\.esp")'
@@ -2542,6 +2663,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'New Vegas Bounties I LE' ]
         condition: 'active("NewVegasBounties.esm") and not file("nvse/plugins/scripts/gr_S6SPerksNVB1Patch.txt")'
+      - *requires_xNVSE
     clean:
     # 16.16 NV
       - crc: 0xD0DD1B41
@@ -2583,6 +2705,18 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'ELECTRO-CITY patch' ]
         condition: 'many("BIS - ELECTRO-CITY (Regular|ElectroCity)CATEYEvalue\.esp")'
+
+  - name: 'FOVSlider.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55085/'
+        name: 'FOV Slider'
+    req: [ *JIPLN ]
+    inc:
+      - 'CombatTrainingEngine.esp'
+      - 'Powered Power Armor.esp'
+    msg:
+      - *requiresMCM
+      - *requires_xNVSE
 
   - name: 'iHUD.esm'
     url:
@@ -2644,6 +2778,17 @@ plugins:
       - *requiresMCM
       - *requiresNVSE
 
+  - name: 'PipBoyUITweaks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85343/'
+        name: 'Pip-Boy UI Tweaks'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *lStewieAlTweaks
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
+
   - name: 'Primary Needs HUD.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/38538/'
@@ -2655,6 +2800,25 @@ plugins:
         condition: 'active("oHUD.esm")'
       - *requiresMCM
       - *requiresNVSE
+
+  - name: 'QuickSelect.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82249/'
+        name: 'Quick Select - A Zelda BOTW Style Quick Menu'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+      - *supNVSE
+      - *UIO
+      # Req: yUI & ySI - Version: 2.2+ CRC: 2.2.0 C23B2A4B, 2.2.1 2E13D445
+      - name: 'NVSE/Plugins/yUI.dll'
+        display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
+      - name: 'menus/ySI/ySI.ini'
+        display: '[ySI - Sorting Ycons](https://www.nexusmods.com/newvegas/mods/74358/)'
+        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
+    msg: [ *requires_xNVSE ]
 
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
@@ -2882,6 +3046,7 @@ plugins:
           - 'Literally Who''s Patch Emporium'
           - '[TTW Reputations - Big Town Extensions](https://www.nexusmods.com/newvegas/mods/83169/)'
         condition: 'active("TTW Reputations.esm") and not active("TTW Reputations - Big Town Extensions.esp")'
+      - *requires_xNVSE
       - <<: *wildEdits
         subs: [ 'Delete **0602D934** & **06058B9E** from **Big Town Extensions.esm**.' ]
         condition: 'checksum("Big Town Extensions.esm", A99EFA1E) or checksum("Big Town Extensions.esm", 39F84E9C)'
@@ -3039,6 +3204,17 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
 ###### Locations - Player Homes ######
+  - name: 'Afterschool Special.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43757/'
+        name: 'Afterschool Special'
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0x1ACF273A
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x6949B4F5
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Expanded Megaton House - TTW.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/69953/'
@@ -3052,6 +3228,28 @@ plugins:
         crc: 0x47236A33
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 1
+
+  - name: 'The New Bison Steve Hotel\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40433/'
+        name: 'The New Bison Steve Hotel and Lucky Casino'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The New Bison Steve Hotel' ]
+        condition: 'many("The New Bison Steve Hotel\.es[mp]")'
+  - name: 'The New Bison Steve Hotel.esm'
+    clean:
+      - crc: 0x7D80DE01
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x68F3F1BC
+        util: 'FNVEdit v4.1.5d'
+  - name: 'The New Bison Steve Hotel.esp'
+    msg:
+      - <<: *flagESM
+        condition: 'not is_master("The New Bison Steve Hotel.esp")'
+      - <<: *useInstead
+        subs: [ '**The New Bison Steve Hotel.esm**' ]
+        condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
@@ -3235,9 +3433,7 @@ plugins:
         condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
-  - name: 'Afterschool Special.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/43757/' ]
-    tag: [ Invent ]
+
   - name: 'Fallout3.esm'
     url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
@@ -4279,29 +4475,6 @@ plugins:
       - Invent
       - Names
       - Relev
-  - name: 'sawyerbatty.esp'
-    url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
-      name: 'SawyerBatty TTW'
-    inc:
-    - 'jsawyer.esp'
-    - 'Project Nevada - Rebalance.esp'
-    msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Fallout 3 Unique items Overhaul TTW 3.3'
-          - '[Literally Who''s Patch Emporium](https://www.nexusmods.com/newvegas/mods/83169/)'
-        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("sawyerbatty-FafnirUniqueTTWOverhaul.esp")'
-    tag:
-      - Actors.ACBS
-      - Delev
-      - Invent.Add
-      - Invent.Remove
-      - Stats
-      - Relev
-    clean:
-      - crc: 0xDB8803A1
-        util: 'FNVEdit v4.0.4'
 
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
@@ -6095,6 +6268,7 @@ plugins:
   - name: 'Tutorial Killer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
     req: [ *johnnyGuitar ]
+    msg: [ *requires_xNVSE ]
     clean:
       - crc: 0x8324E796
         util: 'FNVEdit v4.0.4'
