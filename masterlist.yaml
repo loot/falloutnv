@@ -6373,7 +6373,7 @@ plugins:
       - NPC.Hair
       - NPC.Race
     clean:
-      - crc: 0x03F47422
+      - crc: 0xFAEE2D5F
         util: 'FNVEdit v4.1.5d'
   - name: 'BNW-Override-NVR3-Faces-Patch-place.esp'
     tag:
@@ -6383,7 +6383,7 @@ plugins:
       - NPC.Hair
       - NPC.Race
     clean:
-      - crc: 0xFAEE2D5F
+      - crc: 0x03F47422
         util: 'FNVEdit v4.1.5d'
 
   - name: 'BraveNewWorld.esm'
