@@ -6383,7 +6383,7 @@ plugins:
       - NPC.Hair
       - NPC.Race
     clean:
-      - crc: 0x03F47422
+      - crc: 0xF3F47422
         util: 'FNVEdit v4.1.5d'
 
   - name: 'BraveNewWorld.esm'
