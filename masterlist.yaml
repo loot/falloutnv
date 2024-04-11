@@ -6363,6 +6363,20 @@ plugins:
       - NPC.Race
       - Relev
 
+  - name: 'BraveNewWorld.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69562/' ]
+    tag:
+      - Actors.Voice
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    after:
+      - 'New Vegas Redesigned 3.esm'
+    clean:
+      - crc: 0x2AEE91EB
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Wasteland Gals.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
     inc: [ *TTWv320 ]
