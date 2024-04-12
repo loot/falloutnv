@@ -1433,6 +1433,48 @@ plugins:
       - crc: 0xC196BC98
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Weathers Revised.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
+    group: *weatherGroup
+    inc:
+      - 'Altitude.esp'
+      - 'BlueMoonImagespace.esp'
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - TTW.esp'
+      - 'Clarity - TTW - DarkNights.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'DNWeathers.esp'
+      - 'DUSTyWeather.esp'
+      - 'DynamicWeather.esp'
+      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'HDR Weather And Color.esp'
+      - 'M0rk''s Lighting.esp'
+      - 'NevadaSkies.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'SSTAtmospheresWeather.esp'
+      - 'Supreme Weather.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+      - 'URWLNV-001-Weather.esm'
+      - 'Western Sky.esp'
+      - 'Western Sky - Darker Nights.esp'
+      - 'YellowGoodbye.esp'
+    tag:
+      - C.Climate
+      - C.ImageSpace
+      - C.Regions
+    clean:
+      - crc: 0x85D9A58F
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Longer Weather Transitions.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
