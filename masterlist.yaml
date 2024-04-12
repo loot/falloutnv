@@ -6321,6 +6321,7 @@ plugins:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
       - 'TTW Redesigned.esm'
+      - 'Two Wastelands Redesigned.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6362,6 +6363,27 @@ plugins:
       - NPC.Hair
       - NPC.Race
       - Relev
+  # BNW-Override-NVR3-Faces
+  - name: 'BNW-Override-NVR3-Faces-Patch.esm'
+    tag:
+      - Actors.Voice
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    clean:
+      - crc: 0xFAEE2D5F
+        util: 'FNVEdit v4.1.5d'
+  - name: 'BNW-Override-NVR3-Faces-Patch-place.esp'
+    tag:
+      - Actors.Voice
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    clean:
+      - crc: 0xF3F47422
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'BraveNewWorld.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69562/' ]
