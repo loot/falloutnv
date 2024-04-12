@@ -6363,7 +6363,6 @@ plugins:
       - NPC.Hair
       - NPC.Race
       - Relev
-
   # BNW-Override-NVR3-Faces
   - name: 'BNW-Override-NVR3-Faces-Patch.esm'
     tag:
