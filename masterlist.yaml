@@ -1936,6 +1936,12 @@ plugins:
 
   - name: 'JSawyer Ultimate.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
+    inc:
+    - 'DelayDLCReduxPOPP.esp'
+    - 'jsawyer.esp'
+    - 'JSawyer - CE.esp'
+    - 'sawyerbatty.esp'
+    - 'Vigor.esp'
 
   - name: 'JustAssortedMods.esp'
     url:
