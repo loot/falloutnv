@@ -1049,6 +1049,7 @@ plugins:
 
   - name: 'Crafting Consistency Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/81130/' ]
+    group: *fixesGroup
     tag: [ Names ]
     clean:
       - crc: 0x335FAC04
