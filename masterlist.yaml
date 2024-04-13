@@ -1442,6 +1442,42 @@ plugins:
       - crc: 0x93FA8202
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Pip-Boy Light - Amber.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Blue.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Green.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - White.esp'
+  - name: 'Pip-Boy Light - White.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
+    inc:
+      - 'Pip-Boy Light - Amber.esp'
+      - 'Pip-Boy Light - Blue.esp'
+      - 'Pip-Boy Light - Green.esp'
+      - 'Pip-Boy Light - Vanilla.esp'
+
   - name: 'Weathers Revised.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
     group: *weatherGroup
@@ -6279,41 +6315,6 @@ plugins:
     clean:
       - crc: 0x2763D9AD
         util: 'FNVEdit v4.0.2f'
-  - name: 'Pip-Boy Light - Amber.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Blue.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Green.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - White.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
     inc: [ 'originalintro.esp' ]
