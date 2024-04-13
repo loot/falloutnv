@@ -2048,6 +2048,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
         name: 'Essential DLC Enhancements Merged'
+    clean:
+      - crc: 0xE709B604
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'SD_Fatigue.esp'
     url:
