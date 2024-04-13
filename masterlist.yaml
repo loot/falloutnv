@@ -1337,6 +1337,11 @@ plugins:
       - 'fixy crap ttw.esp'
     tag: [ Graphics ]
   - name: 'PAVE_NV.esp'
+    req:
+      - <<: *JIPLN
+        condition: 'checksum("PAVE_NV.esp", 66582BEC)'
+      - <<: *johnnyGuitar
+        condition: 'checksum("PAVE_NV.esp", 66582BEC)'
     clean:
       - crc: 0x8A0F176F
         util: 'FNVEdit v4.1.5d'
