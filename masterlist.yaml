@@ -1336,12 +1336,23 @@ plugins:
       - 'Book of Steel.esp'
       - 'fixy crap ttw.esp'
     tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Power Armor Visual Enhancement ESP' ]
+        condition: 'many("PAVE_NV(_TTW)?\.esp")'
   - name: 'PAVE_NV.esp'
     req:
       - <<: *JIPLN
         condition: 'checksum("PAVE_NV.esp", 66582BEC)'
       - <<: *johnnyGuitar
         condition: 'checksum("PAVE_NV.esp", 66582BEC)'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Tale Of TwoWastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm")'
     clean:
       - crc: 0x8A0F176F
         util: 'FNVEdit v4.1.5d'
