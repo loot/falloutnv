@@ -6667,6 +6667,9 @@ plugins:
         name: 'IMPACT'
       - link: 'https://www.nexusmods.com/newvegas/mods/62050/'
         name: 'IMPACT - Compatibility Edition'
+    req:
+      - <<: *JIPLN
+        condition: 'file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
     inc:
       - <<: *TTWv320
         condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
