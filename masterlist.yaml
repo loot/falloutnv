@@ -1299,9 +1299,6 @@ plugins:
   - name: 'Book of Steel.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
     tag: [ Graphics ]
-  - name: 'Book of Steel - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
-    tag: [ Graphics ]
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
