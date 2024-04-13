@@ -1336,6 +1336,20 @@ plugins:
       - 'Book of Steel.esp'
       - 'fixy crap ttw.esp'
     tag: [ Graphics ]
+  - name: 'PAVE_NV.esp'
+    clean:
+      - crc: 0x8A0F176F
+        util: 'FNVEdit v4.1.5d'
+      # v2.1 Compatibility Plugin
+      - crc: 0x66582BEC
+        util: 'FNVEdit v4.1.5d'
+  - name: 'PAVE_NV_TTW.esp'
+    clean:
+      - crc: 0x3FBE7989
+        util: 'FNVEdit v4.1.5d'
+      # v2.1 Compatibility Plugin
+      - crc: 0xF5394413
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
     url:
