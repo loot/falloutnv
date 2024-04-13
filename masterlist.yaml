@@ -6672,7 +6672,7 @@ plugins:
         condition: 'file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
     inc:
       - <<: *TTWv320
-        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
       - <<: *useInstead
         subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
