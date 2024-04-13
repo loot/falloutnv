@@ -1442,7 +1442,7 @@ plugins:
         subs: [ 'Pip-Boy Light Colours ESP' ]
         condition: 'many("Pip-Boy Light - (Amber|Blue|Green|Vanilla|White)\.esp")'
 
-  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Darker Nights|Full|No DLC)?)?.esp'
+  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Darker Nights|Full|No DLC)?)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/52037/'
         name: 'FNV Realistic Wasteland Lighting'
@@ -1456,12 +1456,12 @@ plugins:
       - 'Weathers Revised.esp'
       - 'Western Sky.esp'
       - 'Western Sky - Darker Nights.esp'
-  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?.esp'
+  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?\.esp'
     group: *weatherGroup
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Realistic Wasteland Lighting ESP' ]
-        condition: 'many("(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?.esp")'
+        condition: 'many("(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?\.esp")'
   - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
     inc:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
