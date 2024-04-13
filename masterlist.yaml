@@ -1934,8 +1934,11 @@ plugins:
       - *requiresMCM
       - *requires_xNVSE
 
+  - name: 'JSawyer Ultimate( - (GRA Merged|Menu Stimpak Variants|Push''s Tweaks))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61592/'
+        name: 'JSawyer Ultimate Edition'
   - name: 'JSawyer Ultimate.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
     inc:
     - 'DelayDLCReduxPOPP.esp'
     - 'jsawyer.esp'
