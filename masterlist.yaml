@@ -1946,6 +1946,14 @@ plugins:
     - 'Project Nevada - Rebalance.esp'
     - 'sawyerbatty.esp'
     - 'Vigor.esp'
+  - name: 'JSawyer Ultimate - GRA Merged.esp'
+    inc: [ 'Mojave Arsenal.esp' ]
+    msg:
+      - <<: *supersede
+        subs:
+          - 'JSawyer Ultimate - GRA Merged.esp'
+          - '[Mojave Arsenal](https://www.nexusmods.com/newvegas/mods/62941/)'
+        condition: 'not file("Mojave Arsenal.esp")'
 
   - name: 'JustAssortedMods.esp'
     url:
