@@ -1173,6 +1173,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39981/'
         name: 'CaliberX'
+    group: *fixesGroup
   - name: 'Caliber.esm'
     tag:
       - Actors.ACBS
