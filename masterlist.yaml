@@ -2076,6 +2076,7 @@ plugins:
     url:
     - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
       name: 'Vigor - A Vanilla JSawyer Fork'
+    after: [ 'DelayDLCRedux.esp' ]
 
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
