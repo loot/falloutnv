@@ -1446,36 +1446,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/56523/'
         name: 'Pip-Boy Light Colours'
-  - name: 'Pip-Boy Light - Amber.esp'
-    inc:
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Blue.esp'
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Green.esp'
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Vanilla.esp'
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - White.esp
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Pip-Boy Light Colours ESP' ]
+        condition: 'many("Pip-Boy Light - (Amber|Blue|Green|Vanilla|White)\.esp")'
 
   - name: 'Weathers Revised.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
