@@ -2077,6 +2077,12 @@ plugins:
     - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
       name: 'Vigor - A Vanilla JSawyer Fork'
     after: [ 'DelayDLCRedux.esp' ]
+    inc:
+    - 'DelayDLCReduxPOPP.esp'
+    - 'jsawyer.esp'
+    - 'JSawyer - CE.esp'
+    - 'JSawyer Ultimate.esp'
+    - 'sawyerbatty.esp'
     tag:
       - Actors.Stats
       - Delev
