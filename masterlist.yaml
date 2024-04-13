@@ -1285,6 +1285,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39873/'
         name: 'aMidianBorn NV Book Of Water'
+    tag: [ Graphics ]
     msg:
       - <<: *deletePlugin
         subs: [ 'Book of Steel.esp' ]
@@ -1292,12 +1293,8 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
-  - name: 'Boacombat2glove.esp'
-    tag: [ Graphics ]
   - name: 'boa ncrpahelmet.esp'
-    tag:
-      - Delev
-      - Graphics
+    tag: [ Delev ]
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
