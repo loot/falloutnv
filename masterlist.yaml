@@ -1281,6 +1281,10 @@ plugins:
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
 ###### AudioVisual - Models & Textures ######
+  - name: '(Boacombat2glove|boa ncrpahelmet)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39873/'
+        name: 'aMidianBorn NV Book Of Water'
   - name: 'Boacombat2glove.esp'
     tag: [ Graphics ]
   - name: 'boa ncrpahelmet.esp'
