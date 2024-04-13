@@ -1335,7 +1335,6 @@ plugins:
       - 'boa ncrpahelmet.esp'
       - 'Book of Steel.esp'
       - 'fixy crap ttw.esp'
-  - name: 'PAVE_NV_TTW.esp'
     tag: [ Graphics ]
 
   - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
