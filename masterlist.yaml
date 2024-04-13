@@ -1182,14 +1182,10 @@ plugins:
       - Relev
       - Stats
     dirty:
-      # 4.017
       - <<: *quickClean
         crc: 0x38C75B04
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 7
-    clean:
-      - crc: 0x74A11A7D
-        util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXgunrunners.esm'
     tag: [ Names ]
     clean:
