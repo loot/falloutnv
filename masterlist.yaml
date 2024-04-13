@@ -2072,10 +2072,11 @@ plugins:
       - crc: 0xDB8803A1
         util: 'FNVEdit v4.0.4'
 
-  - name: 'Vigor.esp'
+  - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
     url:
     - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
       name: 'Vigor - A Vanilla JSawyer Fork'
+  - name: 'Vigor.esp'
     after: [ 'DelayDLCRedux.esp' ]
     inc:
     - 'DelayDLCReduxPOPP.esp'
