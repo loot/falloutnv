@@ -1176,13 +1176,10 @@ plugins:
     group: *fixesGroup
   - name: 'Caliber.esm'
     tag:
-      - Actors.ACBS
-      - Actors.Stats
       - Graphics
-      - Invent
+      - Invent.Add
       - Names
       - Relev
-      - Scripts
       - Stats
     dirty:
       # 4.017
@@ -1199,6 +1196,10 @@ plugins:
       - crc: 0x303F8818
         util: 'FNVEdit v4.0.2f'
   - name: 'CaliberXhonesthearts.esm'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
     clean:
       - crc: 0xAE91AF06
         util: 'FNVEdit v4.0.2f'
