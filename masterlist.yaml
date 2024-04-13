@@ -1301,6 +1301,13 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/60666/'
         name: 'Book of Steel - Compatibility Edition'
     tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
+        condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
