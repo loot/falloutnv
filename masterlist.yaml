@@ -1936,12 +1936,6 @@ plugins:
 
   - name: 'JSawyer Ultimate.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
 
   - name: 'JustAssortedMods.esp'
     url:
