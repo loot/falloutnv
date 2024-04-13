@@ -1296,6 +1296,13 @@ plugins:
   - name: 'boa ncrpahelmet.esp'
     tag: [ Delev ]
 
+  - name: 'Book of Steel.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
+    tag: [ Graphics ]
+  - name: 'Book of Steel - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
+    tag: [ Graphics ]
+
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
     dirty:
@@ -5050,12 +5057,6 @@ plugins:
       - Stats
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
-  - name: 'Book of Steel.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
-    tag: [ Graphics ]
-  - name: 'Book of Steel - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
-    tag: [ Graphics ]
   - name: 'PAVE_NV_TTW.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
     after: [ 'fixy crap ttw.esp' ]
