@@ -1433,6 +1433,15 @@ plugins:
       - crc: 0xC196BC98
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Longer Weather Transitions.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
+        name: 'Climate Control NVSE'
+    group: *weatherGroup
+    clean:
+      - crc: 0x93FA8202
+        util: 'FNVEdit v4.0.4c'
+
   - name: 'Weathers Revised.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
     group: *weatherGroup
@@ -1474,15 +1483,6 @@ plugins:
     clean:
       - crc: 0x85D9A58F
         util: 'FNVEdit v4.1.5d'
-
-  - name: 'Longer Weather Transitions.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
-        name: 'Climate Control NVSE'
-    group: *weatherGroup
-    clean:
-      - crc: 0x93FA8202
-        util: 'FNVEdit v4.0.4c'
 
   ### Interior Lighting Overhaul ###
   # Core #
