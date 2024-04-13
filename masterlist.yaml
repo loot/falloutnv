@@ -1051,6 +1051,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/81130/' ]
     group: *fixesGroup
     tag: [ Names ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Alternative Repairing' ]
+        condition: 'active("Alternative Repairing.esp") and not file("CCF Alternative Repairing Patch.esp")'
     clean:
       - crc: 0x335FAC04
         util: 'FNVEdit v4.1.5d'
