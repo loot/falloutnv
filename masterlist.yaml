@@ -1047,6 +1047,9 @@ plugins:
       - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Crafting Consistency Fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/81130/' ]
+
   - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
