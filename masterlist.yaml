@@ -1451,8 +1451,11 @@ plugins:
         subs: [ 'Pip-Boy Light Colours ESP' ]
         condition: 'many("Pip-Boy Light - (Amber|Blue|Green|Vanilla|White)\.esp")'
 
+  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Darker Nights|Full|No DLC)?)?.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/52037/'
+        name: 'FNV Realistic Wasteland Lighting'
   - name: 'FNV Realistic Wasteland Lighting - Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -1462,7 +1465,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
@@ -1472,7 +1474,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -1483,7 +1484,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -1494,7 +1494,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -1506,7 +1505,6 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
   - name: 'TTW Realistic Wasteland Lighting.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -1516,7 +1514,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
@@ -1526,7 +1523,6 @@ plugins:
       - 'TTW Realistic Wasteland Lighting.esp'
       - 'TTW Realistic Wasteland Lighting - ENB.esp'
   - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
     group: *weatherGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
