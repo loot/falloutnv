@@ -1297,7 +1297,9 @@ plugins:
     tag: [ Delev ]
 
   - name: 'Book of Steel.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/60666/'
+        name: 'Book of Steel - Compatibility Edition'
     tag: [ Graphics ]
 
   - name: 'MetalBoxes.esp'
