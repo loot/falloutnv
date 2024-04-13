@@ -1458,6 +1458,15 @@ plugins:
     tag:
       - C.ImageSpace
       - C.Light
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Atmospheric Lighting Tweaks ESP' ]
+        condition: 'many("Atmospheric Lighting Tweaks( TTW)?\.esp")'
+  - name: 'Atmospheric Lighting Tweaks.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Tale Of TwoWastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm")'
 
   - name: 'CC - (Rain|3D Rain)\.esp'
     url:
