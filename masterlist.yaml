@@ -2072,6 +2072,11 @@ plugins:
       - crc: 0xDB8803A1
         util: 'FNVEdit v4.0.4'
 
+  - name: 'Vigor.esp'
+    url:
+    - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
+      name: 'Vigor - A Vanilla JSawyer Fork'
+
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
     url:
