@@ -1455,6 +1455,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79378/'
         name: 'Atmospheric Lighting Tweaks (Interior Lighting for FNV and TTW)'
+    group: *lightingGroup
     tag:
       - C.ImageSpace
       - C.Light
