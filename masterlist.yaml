@@ -1331,8 +1331,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74786/'
         name: 'Power Armor Visual Enhancement (PAVE)'
+    after:
+      - 'boa ncrpahelmet.esp'
+      - 'Book of Steel.esp'
+      - 'fixy crap ttw.esp'
   - name: 'PAVE_NV_TTW.esp'
-    after: [ 'fixy crap ttw.esp' ]
     tag: [ Graphics ]
 
   - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
