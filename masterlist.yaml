@@ -1942,13 +1942,6 @@ plugins:
       - Invent
       - Names
       - Relev
-  - name: 'JSawyer Ultimate - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Invent
-      - Names
-      - Relev
 
   - name: 'JustAssortedMods.esp'
     url:
