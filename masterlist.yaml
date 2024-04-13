@@ -1934,6 +1934,22 @@ plugins:
       - *requiresMCM
       - *requires_xNVSE
 
+  - name: 'JSawyer Ultimate.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
+    tag:
+      - Delev
+      - Factions
+      - Invent
+      - Names
+      - Relev
+  - name: 'JSawyer Ultimate - TTW.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
+    tag:
+      - Delev
+      - Invent
+      - Names
+      - Relev
+
   - name: 'JustAssortedMods.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66666/'
@@ -4535,21 +4551,6 @@ plugins:
       - NpcFaces
       - Scripts
       - Stats
-  - name: 'JSawyer Ultimate.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
-  - name: 'JSawyer Ultimate - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Invent
-      - Names
-      - Relev
 
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
