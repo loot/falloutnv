@@ -6677,6 +6677,8 @@ plugins:
       - <<: *requiresResources
         subs: [ '[IMPACT](https://www.nexusmods.com/newvegas/mods/57113/)' ]
         condition: 'not file("meshes/effects/impactballisticblood01.nif")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
       - <<: *useInstead
         subs: [ '[IMPACT - Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050/)' ]
         condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
