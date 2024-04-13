@@ -1169,6 +1169,38 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'Caliber.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+    dirty:
+      # 4.017
+      - <<: *quickClean
+        crc: 0x38C75B04
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
+    clean:
+      - crc: 0x74A11A7D
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXgunrunners.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    tag: [ Names ]
+    clean:
+      - crc: 0x303F8818
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXhonesthearts.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
+    clean:
+      - crc: 0xAE91AF06
+        util: 'FNVEdit v4.0.2f'
+
   - name: 'DarNifiedUINV.esp'
     url:
       - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
@@ -3817,37 +3849,6 @@ plugins:
 # Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: 'AccuRifles.esm'
     msg: [ *requiresNVSE ]
-  - name: 'Caliber.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Scripts
-      - Stats
-    dirty:
-      # 4.017
-      - <<: *quickClean
-        crc: 0x38C75B04
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 7
-    clean:
-      - crc: 0x74A11A7D
-        util: 'FNVEdit v4.0.2f'
-  - name: 'CaliberXgunrunners.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    tag: [ Names ]
-    clean:
-      - crc: 0x303F8818
-        util: 'FNVEdit v4.0.2f'
-  - name: 'CaliberXhonesthearts.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    clean:
-      - crc: 0xAE91AF06
-        util: 'FNVEdit v4.0.2f'
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
