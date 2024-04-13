@@ -1281,6 +1281,13 @@ plugins:
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
 ###### AudioVisual - Models & Textures ######
+  - name: 'Boacombat2glove.esp'
+    tag: [ Graphics ]
+  - name: 'boa ncrpahelmet.esp'
+    tag:
+      - Delev
+      - Graphics
+
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
     dirty:
@@ -6483,12 +6490,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'Boacombat2glove.esp'
-    tag: [ Graphics ]
-  - name: 'boa ncrpahelmet.esp'
-    tag:
-      - Delev
-      - Graphics
   - name: 'FNVLODGen.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
