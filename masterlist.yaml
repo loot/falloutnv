@@ -1327,8 +1327,11 @@ plugins:
       - crc: 0xEEB54964
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'PAVE_NV(_TTW)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74786/'
+        name: 'Power Armor Visual Enhancement (PAVE)'
   - name: 'PAVE_NV_TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
     after: [ 'fixy crap ttw.esp' ]
     tag: [ Graphics ]
 
