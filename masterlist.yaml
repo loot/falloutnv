@@ -3578,6 +3578,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
         name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
     req: [ *JIPLN ]
+    after: [ 'Functional Post Game Ending.esm' ]
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
