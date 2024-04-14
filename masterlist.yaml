@@ -3480,6 +3480,18 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
         name: 'Classic Fallout Metal Armor'
+  - name: 'MCMetalMK1Armor.esp'
+    clean:
+      - crc: 0x60C4E7D6
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1ArmorNonR.esp'
+    clean:
+      - crc: 0x676D7D7D
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1Helmet.esp'
+    clean:
+      - crc: 0x636CF197
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Nightstalker Outfit.esp'
     url:
