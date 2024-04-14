@@ -3801,10 +3801,10 @@ plugins:
         name: 'Tale of Two Wastelands'
       - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
         name: 'Tale of Two Wastelands (ModDB)'
+      # Do Not Clean This Mods Files
   - name: 'Fallout3.esm'
     group: *dlcGroup
     after: [ 'GunRunnersArsenal.esm' ]
-    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -3830,11 +3830,9 @@ plugins:
       - WeaponMods
   - name: 'Anchorage.esm'
     group: *dlcGroup
-    # doNotClean
   - name: 'ThePitt.esm'
     group: *dlcGroup
     after: [ 'Anchorage.esm' ]
-    # doNotClean
     tag:
       - Actors.DeathItem
       - Graphics
@@ -3844,7 +3842,6 @@ plugins:
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
-    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -3864,7 +3861,6 @@ plugins:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
-    # doNotClean
     tag:
       - Graphics
       - Names
@@ -3876,7 +3872,6 @@ plugins:
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
       - 'PointLookout.esm'
-    # doNotClean
   - name: 'TaleOfTwoWastelands.esm'
     group: *addonsGroup
     after:
@@ -3888,7 +3883,6 @@ plugins:
       - name: 'Point Lookout Reborn.esm'
         condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
-      # doNotClean
       - <<: *compatNotes
         subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
       - <<: *requiresX
@@ -3920,6 +3914,7 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'YUPTTW.esm'
+    group: *fixesGroup
     inc: [ 'YUP - Base Game + All DLC.esm' ]
     tag:
       - Actors.ACBS
@@ -3963,8 +3958,7 @@ plugins:
       - Sound
       - Stats
       - Text
-    group: *fixesGroup
-    # doNotClean
+
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
