@@ -3387,6 +3387,14 @@ plugins:
         itm: 4
 
 ###### New Items - Armor, Clothing, & Accessories ######
+  - name: '1nivVSLArmors.esp'
+    tag:
+      - Graphics
+      - Invent
+      - Names
+      - Relev
+      - Stats
+
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46278/'
@@ -5569,13 +5577,6 @@ plugins:
     tag: [ Stats ]
   - name: 'Stalker Weapons Pack.esp'
     msg: [ *obsolete ]
-  - name: '1nivVSLArmors.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Stats
 
   - name: 'Armored PA Gloves.esp'
   - name: 'AsharasLightningItems_ForNV.esp'
