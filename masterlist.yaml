@@ -1947,6 +1947,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
         name: 'Landscape Texture Improvements (FNV - TTW)'
+  - name: 'Landscape Texture Improvements( TTW| - YUP Patch)?\.esm'
+    group: *earlyLoadersGroup
 
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
