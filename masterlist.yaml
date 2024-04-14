@@ -3800,7 +3800,7 @@ plugins:
       - link: 'https://taleoftwowastelands.com//'
         name: 'Tale of Two Wastelands'
       - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
-        name: 'Tale of Two Wastelands (ModDB)'
+        name: 'Tale of Two Wastelands (MOD:PUB)'
       # Do Not Clean This Mods Files
   - name: 'TaleOfTwoWastelands.esm'
     group: *addonsGroup
