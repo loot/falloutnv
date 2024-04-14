@@ -3848,8 +3848,9 @@ plugins:
       - Stats
       - WeaponMods
   ### TTW - FO3 Files ###
-  - name: 'Fallout3.esm'
+  - name: '(Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     group: *dlcGroup
+  - name: 'Fallout3.esm'
     after: [ 'GunRunnersArsenal.esm' ]
     tag:
       - Actors.ACBS
@@ -3875,16 +3876,13 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'Anchorage.esm'
-    group: *dlcGroup
   - name: 'ThePitt.esm'
-    group: *dlcGroup
     after: [ 'Anchorage.esm' ]
     tag:
       - Actors.DeathItem
       - Graphics
       - Relations
   - name: 'BrokenSteel.esm'
-    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -3902,7 +3900,6 @@ plugins:
       - Scripts
       - Stats
   - name: 'PointLookout.esm'
-    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
@@ -3912,7 +3909,6 @@ plugins:
       - Names
       - Stats
   - name: 'Zeta.esm'
-    group: *dlcGroup
     after:
       - 'Anchorage.esm'
       - 'ThePitt.esm'
