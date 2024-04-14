@@ -3795,8 +3795,13 @@ plugins:
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
 
+  - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
+    url:
+      - link: 'https://taleoftwowastelands.com//'
+        name: 'Tale of Two Wastelands'
+      - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
+        name: 'Tale of Two Wastelands (ModDB)'
   - name: 'Fallout3.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after: [ 'GunRunnersArsenal.esm' ]
     # doNotClean
@@ -3824,11 +3829,9 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'Anchorage.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     # doNotClean
   - name: 'ThePitt.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after: [ 'Anchorage.esm' ]
     # doNotClean
@@ -3837,7 +3840,6 @@ plugins:
       - Graphics
       - Relations
   - name: 'BrokenSteel.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after:
       - 'Anchorage.esm'
@@ -3857,7 +3859,6 @@ plugins:
       - Scripts
       - Stats
   - name: 'PointLookout.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after:
       - 'Anchorage.esm'
@@ -3869,7 +3870,6 @@ plugins:
       - Names
       - Stats
   - name: 'Zeta.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *dlcGroup
     after:
       - 'Anchorage.esm'
@@ -3878,7 +3878,6 @@ plugins:
       - 'PointLookout.esm'
     # doNotClean
   - name: 'TaleOfTwoWastelands.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *addonsGroup
     after:
       - 'CaravanPack.esm'
@@ -3921,7 +3920,6 @@ plugins:
       - Stats
       - WeaponMods
   - name: 'YUPTTW.esm'
-    url: [ 'http://taleoftwowastelands.com/' ]
     inc: [ 'YUP - Base Game + All DLC.esm' ]
     tag:
       - Actors.ACBS
