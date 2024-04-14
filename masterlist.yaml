@@ -1947,13 +1947,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
         name: 'Landscape Texture Improvements (FNV - TTW)'
-  - name: 'Landscape Texture Improvements( TTW| - YUP Patch)?\.esm'
-    group: *earlyLoadersGroup
   - name: 'Landscape Texture Improvements.esm'
+    group: *earlyLoadersGroup
     clean:
       - crc: 0x994E51A6
         util: 'FNVEdit v4.1.5d'
   - name: 'Landscape Texture Improvements TTW.esm'
+    group: *earlyLoadersGroup
     clean:
       - crc: 0xB724D159
         util: 'FNVEdit v4.1.5d'
@@ -1962,6 +1962,8 @@ plugins:
     after: [ 'A World of Pain Revised.esm' ]
   - name: 'Landscape Texture Improvements - NVLORR Patch.esm'
     after: [ 'New Vegas Landscape Overhaul.esm' ]
+  - name: 'Landscape Texture Improvements - YUP Patch.esm'
+    group: *earlyLoadersGroup
 
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
