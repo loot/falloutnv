@@ -1047,6 +1047,18 @@ plugins:
       - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Crafting Consistency Fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/81130/' ]
+    group: *fixesGroup
+    tag: [ Names ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Alternative Repairing' ]
+        condition: 'active("Alternative Repairing.esp") and not file("CCF Alternative Repairing Patch.esp")'
+    clean:
+      - crc: 0x335FAC04
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
@@ -1169,6 +1181,37 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'Caliber(Xgunrunners|Xhonesthearts)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39981/'
+        name: 'CaliberX'
+    group: *fixesGroup
+  - name: 'Caliber.esm'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Names
+      - Relev
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x38C75B04
+        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
+  - name: 'CaliberXgunrunners.esm'
+    tag: [ Names ]
+    clean:
+      - crc: 0x303F8818
+        util: 'FNVEdit v4.0.2f'
+  - name: 'CaliberXhonesthearts.esm'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xAE91AF06
+        util: 'FNVEdit v4.0.2f'
+
   - name: 'DarNifiedUINV.esp'
     url:
       - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
@@ -1250,6 +1293,45 @@ plugins:
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
 ###### AudioVisual - Models & Textures ######
+  - name: '(Boacombat2glove|boa ncrpahelmet)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39873/'
+        name: 'aMidianBorn NV Book Of Water'
+    tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'Book of Steel.esp' ]
+        condition: 'file("Book of Steel.esp")'
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+  - name: 'boa ncrpahelmet.esp'
+    tag: [ Delev ]
+
+  - name: 'Book of Steel.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/60666/'
+        name: 'Book of Steel - Compatibility Edition'
+    after:
+      - 'Boacombat2glove'
+      - 'boa ncrpahelmet.esp'
+    tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
+        condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
+
+  - name: 'DogToothsEnclaveOfficer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
     dirty:
@@ -1266,6 +1348,47 @@ plugins:
     tag: [ Graphics ]
     clean:
       - crc: 0xEEB54964
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'PAVE_NV(_TTW)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74786/'
+        name: 'Power Armor Visual Enhancement (PAVE)'
+    after:
+      - 'boa ncrpahelmet.esp'
+      - 'Book of Steel.esp'
+      - 'fixy crap ttw.esp'
+      - 'fixy crap ue.esp'
+    tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Power Armor Visual Enhancement ESP' ]
+        condition: 'many("PAVE_NV(_TTW)?\.esp")'
+  - name: 'PAVE_NV.esp'
+    req:
+      - <<: *JIPLN
+        condition: 'checksum("PAVE_NV.esp", 66582BEC)'
+      - <<: *johnnyGuitar
+        condition: 'checksum("PAVE_NV.esp", 66582BEC)'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Tale Of TwoWastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm")'
+    clean:
+      - crc: 0x8A0F176F
+        util: 'FNVEdit v4.1.5d'
+      # v2.1 Compatibility Plugin
+      - crc: 0x66582BEC
+        util: 'FNVEdit v4.1.5d'
+  - name: 'PAVE_NV_TTW.esp'
+    clean:
+      - crc: 0x3FBE7989
+        util: 'FNVEdit v4.1.5d'
+      # v2.1 Compatibility Plugin
+      - crc: 0xF5394413
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
@@ -1340,6 +1463,24 @@ plugins:
         condition: 'active("Improved Sound FX - WMX - Merged Major DLCs.esp") and checksum("Improved Sound FX - WMX - Merged Major DLCs.esp", 002DBACD) and file("Improved Sound FX - (GRA|WMX - GRA Sharing Fix)\.esp")'
 
 ###### AudioVisual - Weather & Lighting ######
+  - name: 'Atmospheric Lighting Tweaks( TTW)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79378/'
+        name: 'Atmospheric Lighting Tweaks (Interior Lighting for FNV and TTW)'
+    group: *lightingGroup
+    tag:
+      - C.ImageSpace
+      - C.Light
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Atmospheric Lighting Tweaks ESP' ]
+        condition: 'many("Atmospheric Lighting Tweaks( TTW)?\.esp")'
+  - name: 'Atmospheric Lighting Tweaks.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Tale Of TwoWastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm")'
+
   - name: 'CC - (Rain|3D Rain)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79661/'
@@ -1390,12 +1531,6 @@ plugins:
       - 'EnhancedSkies_TTW.esp'
       - 'EnhancedSkies_TTWRain.esp'
       - 'EnhancedSkies_TTWRainBLUESKY.esp'
-      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'HDR Weather And Color.esp'
       - 'Lucky38 Climate Fixed.esp'
       - 'Lucky38 Climate FixedESMVersion.ESM'
@@ -1407,9 +1542,6 @@ plugins:
       - 'RainTweaks.esp'
       - 'SSTAtmospheresWeather.esp'
       - 'Supreme Weather.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
       - 'URWLNV-001-Weather.esm'
       - 'URWLTTW-001-Weather.esm'
       - 'Western Sky.esp'
@@ -1441,6 +1573,88 @@ plugins:
     clean:
       - crc: 0x93FA8202
         util: 'FNVEdit v4.0.4c'
+
+  - name: 'Pip-Boy Light - (Amber|Blue|Green|Vanilla|White)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56523/'
+        name: 'Pip-Boy Light Colours'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Pip-Boy Light Colours ESP' ]
+        condition: 'many("Pip-Boy Light - (Amber|Blue|Green|Vanilla|White)\.esp")'
+
+  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Darker Nights|Full|No DLC)?)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/52037/'
+        name: 'FNV Realistic Wasteland Lighting'
+    inc:
+      - '47 ENB Weather.esp'
+      - 'ACF Brighter Days and Darker Nights v5 - Dark.esp'
+      - 'ACF Brighter Days and Darker Nights v5 - Medium .esp'
+      - 'DNWeathers.esp'
+      - 'Emperical Weather.esp'
+      - 'Fellout.esp'
+      - 'Weathers Revised.esp'
+      - 'Western Sky.esp'
+      - 'Western Sky - Darker Nights.esp'
+  - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?\.esp'
+    group: *weatherGroup
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Realistic Wasteland Lighting ESP' ]
+        condition: 'many("(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?\.esp")'
+  - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
+    inc:
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+    after:
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+  - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
+    group: *weatherGroup
+    inc:
+      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
+      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
+      - 'FNV Realistic Wasteland Lighting - Full.esp'
+      - 'TTW Realistic Wasteland Lighting.esp'
+      - 'TTW Realistic Wasteland Lighting - ENB.esp'
+
+  - name: 'Weathers Revised.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
+    group: *weatherGroup
+    inc:
+      - 'Altitude.esp'
+      - 'BlueMoonImagespace.esp'
+      - 'Clarity.esp'
+      - 'Clarity - Dark Nights.esp'
+      - 'Clarity - No DLC.esp'
+      - 'Clarity - TTW.esp'
+      - 'Clarity - TTW - DarkNights.esp'
+      - 'Clarity - Vanilla Nights.esp'
+      - 'DNWeathers.esp'
+      - 'DUSTyWeather.esp'
+      - 'DynamicWeather.esp'
+      - 'HDR Weather And Color.esp'
+      - 'M0rk''s Lighting.esp'
+      - 'NevadaSkies.esp'
+      - 'ProjectRealityMkIv5HDR.esp'
+      - 'SSTAtmospheresWeather.esp'
+      - 'Supreme Weather.esp'
+      - 'URWLNV-001-Weather.esm'
+      - 'Western Sky.esp'
+      - 'Western Sky - Darker Nights.esp'
+      - 'YellowGoodbye.esp'
+    tag:
+      - C.Climate
+      - C.ImageSpace
+      - C.Regions
+    clean:
+      - crc: 0x85D9A58F
+        util: 'FNVEdit v4.1.5d'
 
   ### Interior Lighting Overhaul ###
   # Core #
@@ -1741,6 +1955,28 @@ plugins:
       - Stats
 
 ###### Environment, Landscape & Flora ######
+  - name: 'Landscape Texture Improvements( TTW| - (AWOLP|NVLORR|YUP) Patch)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
+        name: 'Landscape Texture Improvements (FNV - TTW)'
+  - name: 'Landscape Texture Improvements.esm'
+    group: *earlyLoadersGroup
+    clean:
+      - crc: 0x994E51A6
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Landscape Texture Improvements TTW.esm'
+    group: *earlyLoadersGroup
+    clean:
+      - crc: 0xB724D159
+        util: 'FNVEdit v4.1.5d'
+  ### LTI - Patches ###
+  - name: 'Landscape Texture Improvements - AWOLP Patch.esm'
+    after: [ 'A World of Pain Revised.esm' ]
+  - name: 'Landscape Texture Improvements - NVLORR Patch.esm'
+    after: [ 'New Vegas Landscape Overhaul.esm' ]
+  - name: 'Landscape Texture Improvements - YUP Patch.esm'
+    group: *earlyLoadersGroup
+
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/56625/'
@@ -1823,56 +2059,36 @@ plugins:
       - crc: 0x8C1ABEFC
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Better Character Creation.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70973/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Complete Respec' ]
+        condition: 'active("Complete Respec.esp") and not file("Better Character Creation - Complete Respec Patch.esp")'
+      - *requires_xNVSE
+    clean:
+      - crc: 0x0771764B
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
     msg:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
-  - name: 'SD_Capture( TTW Additions)?\.esp'
+  - name: 'DLC Enhancements.esp'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
-        name: 'Subjugation - Slavery and Capture Mechanics'
-  - name: 'SD_Capture.esp'
-    req:
-      - *JIPLN
-      - *johnnyGuitar
-      - 'SD_Fatigue.esp'
-    msg:
-      - <<: *patchProvided
-        subs: [ 'Tale of Two Wastelands' ]
-        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
-      - <<: *patch3rdParty
-        subs:
-          - 'Literally Who''s Patch Emporium'
-          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
-        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
-      - *requires_xNVSE
-    dirty:
-      - <<: *quickClean
-        crc: 0xC6734AE1
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 20
-  - name: 'SD_Capture TTW Additions.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2CFC37E7
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 4
-
-  - name: 'SD_Fatigue.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
-        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
-    req:
-      - *JIPLN
-      - *johnnyGuitar
-    msg: [ *requires_xNVSE ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x5BDF8423
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 5
+      - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
+        name: 'Essential DLC Enhancements Merged'
+    tag:
+      - Actors.CombatStyle
+      - Delev
+      - Relev
+      - Text
+    clean:
+      - crc: 0xE709B604
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
@@ -1891,6 +2107,27 @@ plugins:
     msg:
       - *requiresMCM
       - *requires_xNVSE
+
+  - name: 'JSawyer Ultimate( - (GRA Merged|Menu Stimpak Variants|Push''s Tweaks))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61592/'
+        name: 'JSawyer Ultimate Edition'
+  - name: 'JSawyer Ultimate.esp'
+    inc:
+      - 'DelayDLCReduxPOPP.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'Project Nevada - Rebalance.esp'
+      - 'sawyerbatty.esp'
+      - 'Vigor.esp'
+  - name: 'JSawyer Ultimate - GRA Merged.esp'
+    inc: [ 'Mojave Arsenal.esp' ]
+    msg:
+      - <<: *supersede
+        subs:
+          - 'JSawyer Ultimate - GRA Merged.esp'
+          - '[Mojave Arsenal](https://www.nexusmods.com/newvegas/mods/62941/)'
+        condition: 'not file("Mojave Arsenal.esp")'
 
   - name: 'JustAssortedMods.esp'
     url:
@@ -1952,8 +2189,8 @@ plugins:
 
   - name: 'Ricks HardCore Fixer & Optimizer.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
-      name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
+      - link: 'https://www.nexusmods.com/newvegas/mods/72432/'
+        name: 'MCM Hardcore Needs Fixer And Optionizer Plus More'
     inc:
       - 'jsawyer.esp'
       - 'Project Nevada - Rebalance.esp'
@@ -2045,11 +2282,11 @@ plugins:
 
   - name: 'sawyerbatty.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
-      name: 'SawyerBatty TTW'
+      - link: 'https://www.nexusmods.com/newvegas/mods/75598/'
+        name: 'SawyerBatty TTW'
     inc:
-    - 'jsawyer.esp'
-    - 'Project Nevada - Rebalance.esp'
+      - 'jsawyer.esp'
+      - 'Project Nevada - Rebalance.esp'
     msg:
       - <<: *patch3rdParty
         subs:
@@ -2072,6 +2309,106 @@ plugins:
     clean:
       - crc: 0xDB8803A1
         util: 'FNVEdit v4.0.4'
+
+  - name: 'SD_Capture( TTW Additions)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/82597/'
+        name: 'Subjugation - Slavery and Capture Mechanics'
+  - name: 'SD_Capture.esp'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - 'SD_Fatigue.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("SD_Capture TTW Additions.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Literally Who''s Patch Emporium'
+          - '[TTW Reputations - SD_Capture](https://www.nexusmods.com/newvegas/mods/83169/)'
+        condition: 'active("TTW_Reputation.esm") and active("SD_Capture TTW Additions.esp") and not active("TTW Reputations - SD_Capture.esp")'
+      - *requires_xNVSE
+    dirty:
+      - <<: *quickClean
+        crc: 0xC6734AE1
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 20
+  - name: 'SD_Capture TTW Additions.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2CFC37E7
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'SD_Fatigue.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78111/'
+        name: 'Fatigue Overhaul - Non-Lethal and Pacifism Redone'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BDF8423
+        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
+
+  - name: 'Vanilla Enhancements.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
+        name: 'Essential Vanilla Enhancements Merged'
+    group: *earlyLoadersGroup
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Destructible
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Scripts
+    clean:
+      - crc: 0xEE2B6324
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
+        name: 'Vigor - A Vanilla JSawyer Fork'
+  - name: 'Vigor.esp'
+    after: [ 'DelayDLCRedux.esp' ]
+    inc:
+      - 'DelayDLCReduxPOPP.esp'
+      - 'jsawyer.esp'
+      - 'JSawyer - CE.esp'
+      - 'JSawyer Ultimate.esp'
+      - 'sawyerbatty.esp'
+    tag:
+      - Actors.Stats
+      - Delev
+      - Destructible
+      - Enchantments
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+      - Text
+    clean:
+      - crc: 0x20DB866C
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Vigor - Armor Integration.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
 
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
@@ -2457,6 +2794,36 @@ plugins:
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 29
 
+###### Gameplay - NPC Behaviour & Dialogue ######
+  - name: 'Better Brotherhood.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75031/'
+        name: 'Better Brotherhood'
+    req:
+      - *JIPLN
+      - *ShowOff
+    tag:
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
+    msg: [ *requires_xNVSE ]
+    clean:
+      - crc: 0xB21276AD
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Better Brotherhood - TTW Patch.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'Better Brotherhood - YUP Patch.esp'
+    tag: [ Actors.Stats ]
+
 ###### Gameplay - Quests ######
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
     url:
@@ -2486,6 +2853,24 @@ plugins:
         util: 'FNVEdit v4.0.4c'
       - crc: 0xE38D7BA9
         util: 'FNVEdit v4.0.4c'
+
+  - name: 'Legion Quests Expanded.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
+    msg:
+      - <<: *flagESM
+        condition: 'not is_master("Legion Quests Expanded.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Stats
+      - C.Regions
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x230EF43F
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'NewVegasBounties.esp'
     url:
@@ -3009,6 +3394,87 @@ plugins:
         util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
 
+###### New Items - Armor, Clothing, & Accessories ######
+  - name: '1nivVSLArmors.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44476/'
+        name: 'Spice of Life - Variety Armor and Clothing'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Stats
+
+  - name: 'BlackjackPackULTIMATE(v\d)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/63745/'
+        name: 'The BLACKJACK pack - Tons of armors for VANILLA bodys'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'BLACKJACK pack ESP' ]
+        condition: 'many("BlackjackPackULTIMATE(v\d)?\.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'BlackjackPackULTIMATE.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x160315C4
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'BlackjackPackULTIMATEv2.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE8D22C1C
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+  - name: 'BlackjackPackULTIMATEv3.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x465C4147
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
+
+  - name: 'DeusSpecs.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5808E283
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 5
+
+  - name: 'Wasteland Soldier - NV Edition.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46278/'
+        name: 'Wasteland Soldier - NV Edition'
+      - link: 'https://www.nexusmods.com/newvegas/mods/74025/'
+        name: 'Wasteland Soldier Redux NV'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0x3242291C
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0xAAB6612E
+        util: 'FNVEdit v4.1.5d'
+
 ###### Locations ######
   - name: 'AnotherInteriorMod.esm'
     url:
@@ -3204,6 +3670,19 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
 ###### Locations - Player Homes ######
+  - name: 'ACGS - Novac Bungalow.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/72570/'
+        name: 'Novac Bungalow - Upgradeable Player Home'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
+    clean:
+      - crc: 0xAE1793AE
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Afterschool Special.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43757/'
@@ -3250,6 +3729,20 @@ plugins:
       - <<: *useInstead
         subs: [ '**The New Bison Steve Hotel.esm**' ]
         condition: 'not is_master("The New Bison Steve Hotel.esp")'
+
+###### New Characters ######
+  - name: 'TLD_Travelers.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
+        name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
+    req: [ *JIPLN ]
+    after: [ 'Functional Post Game Ending.esm' ]
+    msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA113E9C6
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
 
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
@@ -3434,106 +3927,30 @@ plugins:
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
 
-  - name: 'Fallout3.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after: [ 'GunRunnersArsenal.esm' ]
-    # doNotClean
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.Skeleton
-      - Actors.Stats
-      - C.Acoustic
-      - C.Light
-      - C.Owner
-      - Delev
-      - Destructible
-      - Factions
-      - Invent
-      - Names
-      - NPC.Class
-      - NpcFaces
-      - Relations
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-      - WeaponMods
-  - name: 'Anchorage.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    # doNotClean
-  - name: 'ThePitt.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after: [ 'Anchorage.esm' ]
-    # doNotClean
-    tag:
-      - Actors.DeathItem
-      - Graphics
-      - Relations
-  - name: 'BrokenSteel.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-    # doNotClean
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.DeathItem
-      - C.Water
-      - Delev
-      - Destructible
-      - Factions
-      - Graphics
-      - Invent
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'PointLookout.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-    # doNotClean
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Zeta.esm'
-    url: [ 'http://taleoftwowastelands.com/']
-    group: *dlcGroup
-    after:
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-      - 'PointLookout.esm'
-    # doNotClean
+  - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
+    url:
+      - link: 'https://taleoftwowastelands.com/'
+        name: 'Tale of Two Wastelands'
+      - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
+        name: 'Tale of Two Wastelands (MOD:PUB)'
+      # Do Not Clean This Mods Files
   - name: 'TaleOfTwoWastelands.esm'
-    url: [ 'http://taleoftwowastelands.com/']
     group: *addonsGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *lStewieAlTweaks
+      - name: 'NVSE/Plugins/ttw_nvse.dll'
+        display: '[ROOGNVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
-    inc:
-      - name: 'Point Lookout Reborn.esm'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
-      # doNotClean
       - <<: *compatNotes
-        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
-      - <<: *requiresX
-        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
-        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
+        subs: [ 'https://mod.pub/ttw/133/docs/' ]
+      - *requires_xNVSE
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -3559,8 +3976,75 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
+  ### TTW - FO3 Files ###
+  - name: '(Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
+    group: *dlcGroup
+  - name: 'Fallout3.esm'
+    after: [ 'GunRunnersArsenal.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Owner
+      - Delev
+      - Destructible
+      - Factions
+      - Invent
+      - Names
+      - NPC.Class
+      - NpcFaces
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+  - name: 'BrokenSteel.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'ThePitt.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - C.Water
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'PointLookout.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'BrokenSteel.esm'
+      - 'ThePitt.esm'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+  - name: 'ThePitt.esm'
+    after: [ 'Anchorage.esm' ]
+    tag:
+      - Actors.DeathItem
+      - Graphics
+      - Relations
+  - name: 'Zeta.esm'
+    after:
+      - 'Anchorage.esm'
+      - 'BrokenSteel.esm'
+      - 'PointLookout.esm'
+      - 'ThePitt.esm'
+  ### TTW - YUP ###
   - name: 'YUPTTW.esm'
-    url: [ 'http://taleoftwowastelands.com/' ]
+    group: *fixesGroup
     inc: [ 'YUP - Base Game + All DLC.esm' ]
     tag:
       - Actors.ACBS
@@ -3604,8 +4088,7 @@ plugins:
       - Sound
       - Stats
       - Text
-    group: *fixesGroup
-    # doNotClean
+
   - name: 'TTWfixes.esm'
     url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
     group: *fixesGroup
@@ -3690,37 +4173,6 @@ plugins:
 # Needs to be before any mod using a reloading bench including a lot of house mods.
   - name: 'AccuRifles.esm'
     msg: [ *requiresNVSE ]
-  - name: 'Caliber.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Scripts
-      - Stats
-    dirty:
-      # 4.017
-      - <<: *quickClean
-        crc: 0x38C75B04
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 7
-    clean:
-      - crc: 0x74A11A7D
-        util: 'FNVEdit v4.0.2f'
-  - name: 'CaliberXgunrunners.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    tag: [ Names ]
-    clean:
-      - crc: 0x303F8818
-        util: 'FNVEdit v4.0.2f'
-  - name: 'CaliberXhonesthearts.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39981/' ]
-    clean:
-      - crc: 0xAE91AF06
-        util: 'FNVEdit v4.0.2f'
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
@@ -4460,21 +4912,6 @@ plugins:
       - NpcFaces
       - Scripts
       - Stats
-  - name: 'JSawyer Ultimate.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
-  - name: 'JSawyer Ultimate - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61592/' ]
-    tag:
-      - Delev
-      - Invent
-      - Names
-      - Relev
 
   - name: 'CaravanCardFix.esp'
     msg: [ *obsolete ]
@@ -4923,16 +5360,6 @@ plugins:
       - Stats
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
-  - name: 'Book of Steel.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
-    tag: [ Graphics ]
-  - name: 'Book of Steel - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60666/' ]
-    tag: [ Graphics ]
-  - name: 'PAVE_NV_TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/74786/' ]
-    after: [ 'fixy crap ttw.esp' ]
-    tag: [ Graphics ]
   - name: 'Equipment Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
     tag:
@@ -5213,13 +5640,6 @@ plugins:
     tag: [ Stats ]
   - name: 'Stalker Weapons Pack.esp'
     msg: [ *obsolete ]
-  - name: '1nivVSLArmors.esp'
-    tag:
-      - Graphics
-      - Invent
-      - Names
-      - Relev
-      - Stats
 
   - name: 'Armored PA Gloves.esp'
   - name: 'AsharasLightningItems_ForNV.esp'
@@ -5646,8 +6066,6 @@ plugins:
       - 'Clarity - Vanilla Nights.esp'
       - 'Emperical Weather.esp'
       - 'Fellout.esp'
-      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'NevadaSkies.esp'
       - 'Nights are Darker - Fallout New Vegas.esp'
       - 'Nights are Darker - Fallout New Vegas - TS.esp'
@@ -5667,8 +6085,6 @@ plugins:
       - 'Clarity - No DLC.esp'
       - 'Clarity - Vanilla Nights.esp'
       - 'Fellout.esp'
-      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'NevadaSkies.esp'
       - 'Nights are Darker - Fallout New Vegas.esp'
       - 'Nights are Darker - Fallout New Vegas - TS.esp'
@@ -5683,8 +6099,6 @@ plugins:
       - 'Clarity - Dark Nights.esp'
       - 'Clarity - No DLC.esp'
       - 'Clarity - Vanilla Nights.esp'
-      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'NevadaSkies.esp'
       - 'Nights are Darker - Fallout New Vegas.esp'
       - 'Nights are Darker - Fallout New Vegas - TS.esp'
@@ -5720,8 +6134,6 @@ plugins:
       - 'Clarity - Dark Nights.esp'
       - 'Clarity - No DLC.esp'
       - 'Clarity - Vanilla Nights.esp'
-      - 'FNV Realistic Wasteland Lighting - All DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'NevadaSkies.esp'
       - 'Nights are Darker - Fallout New Vegas.esp'
       - 'Nights are Darker - Fallout New Vegas - TS.esp'
@@ -6198,41 +6610,6 @@ plugins:
     clean:
       - crc: 0x2763D9AD
         util: 'FNVEdit v4.0.2f'
-  - name: 'Pip-Boy Light - Amber.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Blue.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Green.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - White.esp'
-  - name: 'Pip-Boy Light - White.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56523/' ]
-    inc:
-      - 'Pip-Boy Light - Amber.esp'
-      - 'Pip-Boy Light - Blue.esp'
-      - 'Pip-Boy Light - Green.esp'
-      - 'Pip-Boy Light - Vanilla.esp'
   - name: 'originalintroExtended.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46585/' ]
     inc: [ 'originalintro.esp' ]
@@ -6414,12 +6791,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'Boacombat2glove.esp'
-    tag: [ Graphics ]
-  - name: 'boa ncrpahelmet.esp'
-    tag:
-      - Delev
-      - Graphics
   - name: 'FNVLODGen.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
@@ -6436,8 +6807,8 @@ plugins:
 
   - name: 'tmzLODadditions.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
-      name: 'LOD additions and improvements'
+      - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
+        name: 'LOD additions and improvements'
     group: *lodGroup
     msg:
       - <<: *patch3rdParty
@@ -6451,8 +6822,8 @@ plugins:
 
   - name: 'LOD Additions - TTW Patch.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
-      name: 'Vish''s Patch Hub (FNV-TTW)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
+        name: 'Vish''s Patch Hub (FNV-TTW)'
     group: *lodGroup
     after:  [ 'tmzLODadditions.esp' ]
     clean:
@@ -6461,109 +6832,18 @@ plugins:
 
   - name: 'Wasted LOD rocks.esp'
     url:
-    - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
-      name: 'Wasted LOD - Cliffs of DC'
+      - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
+        name: 'Wasted LOD - Cliffs of DC'
     group: *lodGroup
     req: [ *TTWv320 ]
     clean:
       - crc: 0x8D74EB63
         util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
 
-  - name: 'FNV Realistic Wasteland Lighting - Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'FNV Realistic Wasteland Lighting - No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'FNV Realistic Wasteland Lighting - Darker Nights.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/52037/' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-    after:
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-  - name: 'TTW Realistic Wasteland Lighting.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
-  - name: 'TTW Realistic Wasteland Lighting - ENB.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-realistic-wasteland-lighting' ]
-    group: *weatherGroup
-    inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
   - name: '47 ENB Weather.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
     group: *weatherGroup
     inc:
-      - 'FNV Realistic Wasteland Lighting - No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
-      - 'FNV Realistic Wasteland Lighting - ENB No DLC.esp'
-      - 'FNV Realistic Wasteland Lighting - Full.esp'
-      - 'TTW Realistic Wasteland Lighting.esp'
-      - 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-      - 'TTW Realistic Wasteland Lighting - ENB.esp'
       - 'ProjectRealityMkIv5HDR.esp'
       - 'Nevada Skies.esp'
     tag:
@@ -6666,14 +6946,22 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/57113/'
         name: 'IMPACT'
       - link: 'https://www.nexusmods.com/newvegas/mods/62050/'
-        name: 'IMPACT: Compatibility Edition (JIP LN) (DLC - TTW - All Mods)'
+        name: 'IMPACT - Compatibility Edition'
+    req:
+      - <<: *JIPLN
+        condition: 'file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
     inc:
       - <<: *TTWv320
-        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
+      - <<: *requiresResources
+        subs: [ '[IMPACT](https://www.nexusmods.com/newvegas/mods/57113/)' ]
+        condition: 'not file("meshes/effects/impactballisticblood01.nif")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
       - <<: *useInstead
-        subs: [ '[IMPACT: Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050)' ]
-        condition: 'not checksum("IMPACT.esp", DEC4FA71) and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        subs: [ '[IMPACT - Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050/)' ]
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
 
   - name: 'CAGE 1.9.3.2.esp'
     url:
