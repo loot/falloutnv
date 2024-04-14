@@ -1949,6 +1949,14 @@ plugins:
         name: 'Landscape Texture Improvements (FNV - TTW)'
   - name: 'Landscape Texture Improvements( TTW| - YUP Patch)?\.esm'
     group: *earlyLoadersGroup
+  - name: 'Landscape Texture Improvements.esm'
+    clean:
+      - crc: 0x994E51A6
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Landscape Texture Improvements TTW.esm'
+    clean:
+      - crc: 0xB724D159
+        util: 'FNVEdit v4.1.5d'
 
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
