@@ -3388,7 +3388,11 @@ plugins:
 
 ###### New Items - Armor, Clothing, & Accessories ######
   - name: 'Wasteland Soldier - NV Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/46278/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/46278/'
+        name: 'Wasteland Soldier - NV Edition'
+      - link: 'https://www.nexusmods.com/newvegas/mods/74025/'
+        name: 'Wasteland Soldier Redux NV'
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
