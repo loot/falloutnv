@@ -3388,6 +3388,9 @@ plugins:
 
 ###### New Items - Armor, Clothing, & Accessories ######
   - name: '1nivVSLArmors.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/44476/'
+        name: 'Spice of Life - Variety Armor and Clothing'
     tag:
       - Graphics
       - Invent
