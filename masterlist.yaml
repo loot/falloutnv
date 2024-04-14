@@ -3875,7 +3875,6 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
-  - name: 'Anchorage.esm'
   - name: 'ThePitt.esm'
     after: [ 'Anchorage.esm' ]
     tag:
