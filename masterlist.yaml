@@ -3815,9 +3815,6 @@ plugins:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
       - 'TribalPack.esm'
-    inc:
-      - name: 'Point Lookout Reborn.esm'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
     msg:
       - <<: *compatNotes
         subs: [ 'https://mod.pub/ttw/133/docs/' ]
