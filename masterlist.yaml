@@ -2731,6 +2731,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75031/'
         name: 'Better Brotherhood'
+    req:
+      - *JIPLN
+      - *ShowOff
     tag:
       - Actors.AIPackages
       - Actors.Stats
@@ -2742,6 +2745,7 @@ plugins:
       - Relev
       - Sound
       - Stats
+    msg: [ *requires_xNVSE ]
     clean:
       - crc: 0xB21276AD
         util: 'FNVEdit v4.1.5d'
