@@ -3797,7 +3797,7 @@ plugins:
 
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     url:
-      - link: 'https://taleoftwowastelands.com//'
+      - link: 'https://taleoftwowastelands.com/'
         name: 'Tale of Two Wastelands'
       - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
         name: 'Tale of Two Wastelands (MOD:PUB)'
