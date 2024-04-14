@@ -2848,6 +2848,9 @@ plugins:
 
   - name: 'Legion Quests Expanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
+    msg:
+      - <<: *flagESM
+        condition: 'not is_master("Legion Quests Expanded.esp")'
     clean:
       - crc: 0x230EF43F
         util: 'FNVEdit v4.1.5d'
