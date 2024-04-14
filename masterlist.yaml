@@ -2051,6 +2051,9 @@ plugins:
       - crc: 0x8C1ABEFC
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Better Character Creation.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70973/' ]
+
   - name: 'BetterGamePerformanceV4.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40128/' ]
     msg:
