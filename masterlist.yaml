@@ -3389,6 +3389,10 @@ plugins:
 ###### New Items - Armor, Clothing, & Accessories ######
   - name: 'Wasteland Soldier - NV Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46278/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag: [ Invent.Add ]
     clean:
       - crc: 0x3242291C
