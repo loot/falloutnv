@@ -3480,6 +3480,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66399/'
         name: 'Unique Troublemaker Outfit-Nightstalker Set'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x39F742FE
