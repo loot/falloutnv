@@ -2314,6 +2314,19 @@ plugins:
     - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
       name: 'Essential Vanilla Enhancements Merged'
     group: *earlyLoadersGroup
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Destructible
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Scripts
     clean:
       - crc: 0xEE2B6324
         util: 'FNVEdit v4.1.5d'
