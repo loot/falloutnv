@@ -3391,6 +3391,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/44476/'
         name: 'Spice of Life - Variety Armor and Clothing'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag:
       - Graphics
       - Invent.Add
