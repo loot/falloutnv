@@ -3573,6 +3573,10 @@ plugins:
         condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
 ###### New Characters ######
+  - name: 'TLD_Travelers.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
+        name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
 
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
