@@ -2851,6 +2851,15 @@ plugins:
     msg:
       - <<: *flagESM
         condition: 'not is_master("Legion Quests Expanded.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Stats
+      - C.Regions
+      - Invent.Add
+      - Invent.Remove
     clean:
       - crc: 0x230EF43F
         util: 'FNVEdit v4.1.5d'
