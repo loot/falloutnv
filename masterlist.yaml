@@ -1327,6 +1327,10 @@ plugins:
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
     tag: [ Graphics ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
