@@ -3585,6 +3585,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/72570/'
         name: 'Novac Bungalow - Upgradeable Player Home'
+    clean:
+      - crc: 0xAE1793AE
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Afterschool Special.esm'
     url:
