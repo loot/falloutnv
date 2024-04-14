@@ -2731,6 +2731,23 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75031/'
         name: 'Better Brotherhood'
+    tag:
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
+  - name: 'Better Brotherhood - TTW Patch.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'Better Brotherhood - YUP Patch.esp'
+    tag: [ Actors.Stats ]
 
 ###### Gameplay - Quests ######
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
