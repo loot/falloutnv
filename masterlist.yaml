@@ -3480,6 +3480,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
         name: 'Classic Fallout 2 Metal armor Mk II'
+    clean:
+      # NVSE Replacer
+      - crc: 0x1DFFE0BF
+        util: 'FNVEdit v4.1.5d'
+      # Full Replacer
+      - crc: 0xCD20E4C8
+        util: 'FNVEdit v4.1.5d'
+      # Helmet voice modulation
+      - crc: 0x47D0EC5E
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp'
     url:
