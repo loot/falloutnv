@@ -1957,6 +1957,11 @@ plugins:
     clean:
       - crc: 0xB724D159
         util: 'FNVEdit v4.1.5d'
+  ### LTI - Patches ###
+  - name: 'Landscape Texture Improvements - AWOLP Patch.esm'
+    after: [ 'A World of Pain Revised.esm' ]
+  - name: 'Landscape Texture Improvements - NVLORR Patch.esm'
+    after: [ 'New Vegas Landscape Overhaul.esm' ]
 
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
