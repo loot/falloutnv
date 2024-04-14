@@ -3484,6 +3484,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Classic Fallout Metal Armor ESP' ]
+        condition: 'many("MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp")'
   - name: 'MCMetalMK1Armor.esp'
     inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
     tag: [ Graphics ]
