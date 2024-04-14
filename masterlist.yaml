@@ -1326,6 +1326,7 @@ plugins:
 
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    tag: [ Graphics ]
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
