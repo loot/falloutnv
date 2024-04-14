@@ -1943,6 +1943,11 @@ plugins:
       - Stats
 
 ###### Environment, Landscape & Flora ######
+  - name: 'Landscape Texture Improvements( TTW| - (AWOLP|NVLORR|YUP) Patch)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
+        name: 'Landscape Texture Improvements (FNV - TTW)'
+
   - name: '(Uncut (Wasteland|Bison|Cottonwood|Extra|Greenhouses|Road|Skeletons).*|Northern Passage Cave Entrance).es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/56625/'
