@@ -3572,6 +3572,8 @@ plugins:
         subs: [ '**The New Bison Steve Hotel.esm**' ]
         condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
+###### New Characters ######
+
 ###### New Characters - Allies ######
   - name: 'ARESproject.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/48621/' ]
