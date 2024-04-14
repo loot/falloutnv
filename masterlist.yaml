@@ -3403,6 +3403,9 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'DeusSpecs.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
+
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/46278/'
