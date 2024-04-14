@@ -3407,6 +3407,24 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/63745/'
         name: 'The BLACKJACK pack - Tons of armors for VANILLA bodys'
+  - name: 'BlackjackPackULTIMATE.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x160315C4
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+  - name: 'BlackjackPackULTIMATEv2.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE8D22C1C
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+  - name: 'BlackjackPackULTIMATEv3.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x465C4147
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 13
 
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
