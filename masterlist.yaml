@@ -2313,6 +2313,7 @@ plugins:
     url:
     - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
       name: 'Essential Vanilla Enhancements Merged'
+    group: *earlyLoadersGroup
 
   - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
     url:
