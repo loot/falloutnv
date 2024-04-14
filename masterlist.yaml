@@ -3405,6 +3405,10 @@ plugins:
 
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
