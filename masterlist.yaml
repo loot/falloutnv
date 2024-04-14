@@ -3411,6 +3411,9 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'BLACKJACK pack ESP' ]
         condition: 'many("BlackjackPackULTIMATE(v\d)?\.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
   - name: 'BlackjackPackULTIMATE.esp'
     dirty:
       - <<: *quickClean
