@@ -3480,6 +3480,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
         name: 'Classic Fallout Metal Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
   - name: 'MCMetalMK1Armor.esp'
     inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
     tag: [ Graphics ]
