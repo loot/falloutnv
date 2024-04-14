@@ -3403,6 +3403,11 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'BlackjackPackULTIMATE(v\d)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/63745/'
+        name: 'The BLACKJACK pack - Tons of armors for VANILLA bodys'
+
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
     msg:
