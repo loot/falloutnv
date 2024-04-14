@@ -2846,6 +2846,9 @@ plugins:
       - crc: 0xE38D7BA9
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Legion Quests Expanded.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
+
   - name: 'NewVegasBounties.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
