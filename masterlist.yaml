@@ -3875,12 +3875,6 @@ plugins:
       - Sound
       - Stats
       - WeaponMods
-  - name: 'ThePitt.esm'
-    after: [ 'Anchorage.esm' ]
-    tag:
-      - Actors.DeathItem
-      - Graphics
-      - Relations
   - name: 'BrokenSteel.esm'
     after:
       - 'Anchorage.esm'
@@ -3901,18 +3895,24 @@ plugins:
   - name: 'PointLookout.esm'
     after:
       - 'Anchorage.esm'
-      - 'ThePitt.esm'
       - 'BrokenSteel.esm'
+      - 'ThePitt.esm'
     tag:
       - Graphics
       - Names
       - Stats
+  - name: 'ThePitt.esm'
+    after: [ 'Anchorage.esm' ]
+    tag:
+      - Actors.DeathItem
+      - Graphics
+      - Relations
   - name: 'Zeta.esm'
     after:
       - 'Anchorage.esm'
-      - 'ThePitt.esm'
       - 'BrokenSteel.esm'
       - 'PointLookout.esm'
+      - 'ThePitt.esm'
   ### TTW - YUP ###
   - name: 'YUPTTW.esm'
     group: *fixesGroup
