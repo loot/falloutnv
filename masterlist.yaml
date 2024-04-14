@@ -3802,6 +3802,48 @@ plugins:
       - link: 'https://mod.pub/ttw/133-tale-of-two-wastelands/'
         name: 'Tale of Two Wastelands (ModDB)'
       # Do Not Clean This Mods Files
+  - name: 'TaleOfTwoWastelands.esm'
+    group: *addonsGroup
+    after:
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'MercenaryPack.esm'
+      - 'TribalPack.esm'
+    inc:
+      - name: 'Point Lookout Reborn.esm'
+        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    msg:
+      - <<: *compatNotes
+        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
+      - <<: *requiresX
+        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
+        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Skeleton
+      - Actors.Stats
+      - C.Acoustic
+      - C.Light
+      - C.Music
+      - C.Owner
+      - C.Water
+      - Delev
+      - Destructible
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - WeaponMods
+  ### TTW - FO3 Files ###
   - name: 'Fallout3.esm'
     group: *dlcGroup
     after: [ 'GunRunnersArsenal.esm' ]
@@ -3872,47 +3914,7 @@ plugins:
       - 'ThePitt.esm'
       - 'BrokenSteel.esm'
       - 'PointLookout.esm'
-  - name: 'TaleOfTwoWastelands.esm'
-    group: *addonsGroup
-    after:
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
-    inc:
-      - name: 'Point Lookout Reborn.esm'
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
-    msg:
-      - <<: *compatNotes
-        subs: [ 'https://taleoftwowastelands.com/viewtopic.php?f=50&t=6878/' ]
-      - <<: *requiresX
-        subs: [ '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277) v54.85+' ]
-        condition: 'file("NVSE/Plugins/jip_nvse.dll") and version("NVSE/Plugins/jip_nvse.dll", "54.85", <) and version("TaleOfTwoWastelands.esm", "3.2.2", ==)'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Skeleton
-      - Actors.Stats
-      - C.Acoustic
-      - C.Light
-      - C.Music
-      - C.Owner
-      - C.Water
-      - Delev
-      - Destructible
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-      - WeaponMods
+  ### TTW - YUP ###
   - name: 'YUPTTW.esm'
     group: *fixesGroup
     inc: [ 'YUP - Base Game + All DLC.esm' ]
