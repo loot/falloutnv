@@ -3393,7 +3393,8 @@ plugins:
         name: 'Spice of Life - Variety Armor and Clothing'
     tag:
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
       - Names
       - Relev
       - Stats
