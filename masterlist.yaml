@@ -2314,6 +2314,9 @@ plugins:
     - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
       name: 'Essential Vanilla Enhancements Merged'
     group: *earlyLoadersGroup
+    clean:
+      - crc: 0xEE2B6324
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
     url:
