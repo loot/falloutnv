@@ -3481,11 +3481,13 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
         name: 'Classic Fallout Metal Armor'
   - name: 'MCMetalMK1Armor.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
     tag: [ Graphics ]
     clean:
       - crc: 0x60C4E7D6
         util: 'FNVEdit v4.1.5d'
   - name: 'MCMetalMK1ArmorNonR.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
     clean:
       - crc: 0x676D7D7D
         util: 'FNVEdit v4.1.5d'
