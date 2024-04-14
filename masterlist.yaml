@@ -3387,6 +3387,8 @@ plugins:
         itm: 4
 
 ###### New Items - Armor, Clothing, & Accessories ######
+  - name: 'Wasteland Soldier - NV Edition.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46278/' ]
 
 ###### Locations ######
   - name: 'AnotherInteriorMod.esm'
