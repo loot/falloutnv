@@ -3577,6 +3577,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
         name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
+    req: [ *JIPLN ]
+    msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
         crc: 0xA113E9C6
