@@ -3476,6 +3476,11 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'MCMetalArmor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
+        name: 'Classic Fallout 2 Metal armor Mk II'
+
   - name: 'MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
