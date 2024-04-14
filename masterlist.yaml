@@ -3389,6 +3389,7 @@ plugins:
 ###### New Items - Armor, Clothing, & Accessories ######
   - name: 'Wasteland Soldier - NV Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46278/' ]
+    tag: [ Invent.Add ]
     clean:
       - crc: 0x3242291C
         util: 'FNVEdit v4.1.5d'
