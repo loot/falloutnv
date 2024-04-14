@@ -2742,6 +2742,9 @@ plugins:
       - Relev
       - Sound
       - Stats
+    clean:
+      - crc: 0xB21276AD
+        util: 'FNVEdit v4.1.5d'
   - name: 'Better Brotherhood - TTW Patch.esp'
     tag:
       - Delev
