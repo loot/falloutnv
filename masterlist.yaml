@@ -3391,6 +3391,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78343/'
         name: 'Classic Combat Armor Replacer Combined (TTW)'
+    after:
+      - '1nivVSLArmors.esp'
+      - 'Classic Combat Armor Replacer Redux TTW.esp'
+      - 'Enclave and BoS Classic Combat Armor .esp'
     tag:
       - Actors.Stats
       - Delev
