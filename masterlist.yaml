@@ -3675,6 +3675,11 @@ plugins:
       - crc: 0x636CF197
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'MCMetalTesla.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80372/'
+        name: 'Classic Fallout Tesla armor'
+
   - name: 'NCR Commando.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
     msg:
