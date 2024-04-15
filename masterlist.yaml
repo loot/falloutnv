@@ -3514,6 +3514,11 @@ plugins:
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF5533978
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
 
   - name: 'BlackjackPackULTIMATE(v\d)?\.esp'
     url:
