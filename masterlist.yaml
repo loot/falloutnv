@@ -3527,6 +3527,10 @@ plugins:
 
   - name: 'Arsthetiu''s Armoire.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
