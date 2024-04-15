@@ -1439,6 +1439,9 @@ plugins:
       - crc: 0x89BC24A8
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Veronica Outfit Replacer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
+
   - name: 'WMIMNV.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/65052/'
