@@ -3665,6 +3665,11 @@ plugins:
 
   - name: 'NCR Commando.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4E777EA0
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
 
   - name: 'Nightstalker Outfit.esp'
     url:
