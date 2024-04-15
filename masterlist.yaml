@@ -1441,6 +1441,10 @@ plugins:
 
   - name: 'Veronica Outfit Replacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag: [ Graphics ]
     clean:
       - crc: 0xA0F3223D
