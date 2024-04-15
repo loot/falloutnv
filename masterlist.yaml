@@ -3705,6 +3705,10 @@ plugins:
         crc: 0x7472F00E
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 3
+  - name: 'QwibNewBackpacksTTWAddon.esp'
+    clean:
+      - crc: 0x219D8992
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'QwibWasterBackpack.esp'
     url:
