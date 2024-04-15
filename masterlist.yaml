@@ -1344,6 +1344,9 @@ plugins:
 
   - name: 'Classic Combat Armor Replacer Redux FNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    clean:
+      - crc: 0xCF3A9586
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
