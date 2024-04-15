@@ -3584,6 +3584,9 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'DVA - Distributed Variety Armors.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
+
   - name: 'Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78947/'
