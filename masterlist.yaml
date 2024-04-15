@@ -3585,6 +3585,7 @@ plugins:
 
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
+    tag: [ Invent.Add ]
 
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
