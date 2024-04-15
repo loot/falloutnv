@@ -3659,6 +3659,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
 
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
