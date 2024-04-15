@@ -3480,6 +3480,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78947/'
         name: 'Classic Fallout 2 combat armor Mark 2 (remastered)'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Classic Fallout 2 Combat Armor MK2 ESP' ]
+        condition: 'many("Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp")'
   - name: 'Fallout 2 combat armor MK2 (remastered) nonreplacer.esp'
     clean:
       - crc: 0x568B9087
