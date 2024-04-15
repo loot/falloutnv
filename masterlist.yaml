@@ -3586,6 +3586,10 @@ plugins:
 
   - name: 'DVA - Distributed Variety Armors.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp'
     url:
