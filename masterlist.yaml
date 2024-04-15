@@ -3525,6 +3525,9 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'Arsthetiu''s Armoire.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
+
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
     msg:
