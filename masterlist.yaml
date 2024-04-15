@@ -3705,6 +3705,11 @@ plugins:
       - crc: 0x17CC697A
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'MercWanderer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
+        name: 'Mercenary Wanderer'
+
   - name: 'MCMetalArmor.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
