@@ -3586,10 +3586,12 @@ plugins:
 
   - name: 'DVA - Distributed Variety Armors.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
+    req: [ *JIPLN ]
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
     clean:
       - crc: 0x337EFBCF
         util: 'FNVEdit v4.1.5d'
