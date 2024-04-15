@@ -3689,10 +3689,11 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 16
 
-  - name: 'QwibNewBackpacks.esp'
+  - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
         name: 'Canvas Backpacks - FNV - TTW'
+  - name: 'QwibNewBackpacks.esp'
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
