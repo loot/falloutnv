@@ -3514,6 +3514,10 @@ plugins:
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xF5533978
