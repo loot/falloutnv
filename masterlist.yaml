@@ -3590,6 +3590,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x337EFBCF
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp'
     url:
