@@ -3636,6 +3636,11 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - name: 'Invent.Add'
+        condition: 'file("config/Odyssey Armors Config.ini")'
+      - name: 'Invent.Remove'
+        condition: 'file("config/Odyssey Armors Config.ini")'
     clean:
       - crc: 0x78B37214
         util: 'FNVEdit v4.1.5d'
