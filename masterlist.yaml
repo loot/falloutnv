@@ -3643,6 +3643,15 @@ plugins:
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requires_xNVSE
         condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Revelation Blues Armors Config.ini")'
+    dirty:
+      # LL Integrated
+      - <<: *quickClean
+        crc: 0xBA0944EE
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      - crc: 0x5E8C9DD4
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
