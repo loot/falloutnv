@@ -3697,6 +3697,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not file("QwibNewBackpacksTTWAddon.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x7472F00E
