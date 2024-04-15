@@ -3693,6 +3693,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
         name: 'The Lone Wanderer - TTW and NV'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Tribal Power Helmet.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
