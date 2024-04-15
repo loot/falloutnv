@@ -233,6 +233,10 @@ prelude:
       detail: 'It is strongly recommended not to use mods that contain **deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually (a complex process that should be done by the mod author). More information on **deleted navmeshes** is provided [here](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
 
   # Global Anchors
+    - &incompatible
+      type: error
+      content: '{0} is incompatible with {1}, but both are present.'
+
     - &latestLOOTThread
       type: say
       content: '[Latest LOOT thread]({0}).'
@@ -498,6 +502,20 @@ bash_tags:
 globals:
 # Latest LOOT Thread
   - *latestLOOTThread
+
+# ENBSeries - NVHR
+  - <<: *incompatible
+    subs:
+      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
+      - '[NVHR - New Vegas Heap Replacer](https://www.nexusmods.com/newvegas/mods/69779/)'
+    condition: 'file("NVHR/nvhr_avx.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
+
+# ENBSeries - NVTF
+  - <<: *incompatible
+    subs:
+      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
+      - '[NVTF - New Vegas Tick Fix](https://www.nexusmods.com/newvegas/mods/66537/)'
+    condition: 'file("NVSE/Plugins/NVTF.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
 
 # NVSE
   # Missing
@@ -1322,7 +1340,61 @@ plugins:
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requiresResources
         subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
-        condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
+        condition: 'not file("meshes/armor/advancedpowerarmor/adpowerarmor.nif")'
+
+  - name: 'Classic Combat Armor Replacer Redux FNV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/77658/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xCF3A9586
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Classic (Combat Armor|Leather Armor|Metal Armor|Mr Handy and Gutsy|Robobrian) (Replacer Redux TTW|Replacer TTW|TTW Replacer)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77858/'
+        name: 'Classic Replacers for TTW'
+    tag: [ Graphics ]
+  - name: 'Classic Combat Armor Replacer Redux TTW.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x724F63DF
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Leather Armor Replacer TTW.esp'
+    clean:
+      - crc: 0x26098E30
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Metal Armor Replacer TTW.esp'
+    clean:
+      - crc: 0x660D1C75
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Mr Handy and Gutsy TTW Replacer.esp'
+    clean:
+      - crc: 0x74BE5ACD
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Robobrian Replacer TTW.esp'
+    clean:
+      - crc: 0xFD68E107
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'CourierDusterReplacer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/75004/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Graphics
+      - Names
+    clean:
+      - crc: 0x5BBB2398
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
@@ -1420,6 +1492,19 @@ plugins:
     # 2.1.03
       - crc: 0x89BC24A8
         util: 'FNVEdit v4.0.4c'
+
+  - name: 'Veronica Outfit Replacer.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xA0F3223D
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x6C7D7344
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'WMIMNV.esp'
     url:
@@ -3277,7 +3362,7 @@ plugins:
     msg:
       - <<: *requiresResources
         subs: [ 'Fallout 3' ]
-        condition: 'not file("sound\fx\wpn\rifleassault\wpn_rifleassault_fire_lp.wav")'
+        condition: 'not file("sound/fx/wpn/rifleassault/wpn_rifleassault_fire_lp.wav")'
     tag: [ Sound ]
 
   - name: 'Ghost Variants( Safe| Adjutant)?\.esp'
@@ -3314,6 +3399,35 @@ plugins:
       - WeaponMods
   - name: 'Moddable Anti-Materiel Rifle.esp'
     msg: [ *obsolete ]
+
+  - name: 'MMM-CCARC-TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78343/'
+        name: 'Classic Combat Armor Replacer Combined (TTW)'
+    after:
+      - '1nivVSLArmors.esp'
+      - 'Classic Combat Armor Replacer Redux TTW.esp'
+      - 'Enclave and BoS Classic Combat Armor .esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Brotherhood of Steel and Enclave Classic Combat Armors](https://www.nexusmods.com/newvegas/mods/78216/)' ]
+        condition: 'not file("meshes/armor/BoS Combat Armor/combatHelmet_MK1.nif") or not file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Classic Replacers for TTW](https://www.nexusmods.com/newvegas/mods/77858/)' ]
+        condition: 'not file("meshes/armor/Mk2/combatArmor_MK1.nif")'
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
 
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
@@ -3411,6 +3525,30 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'Arsthetiu''s Armoire.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
+    clean:
+      - crc: 0xCB408957
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Ballistic Skull Mask.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF5533978
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 6
+
   - name: 'BlackjackPackULTIMATE(v\d)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/63745/'
@@ -3457,6 +3595,275 @@ plugins:
         crc: 0x5808E283
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
+
+  - name: 'DVA - Distributed Variety Armors.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
+    clean:
+      - crc: 0x337EFBCF
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78947/'
+        name: 'Classic Fallout 2 combat armor Mark 2 (remastered)'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Classic Fallout 2 Combat Armor MK2 ESP' ]
+        condition: 'many("Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp")'
+  - name: 'Fallout 2 combat armor MK2 (remastered) nonreplacer.esp'
+    msg: [ *requiresNVSE ]
+    clean:
+      - crc: 0x568B9087
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Fallout 2 combat armor MK2 (remastered) replacer.esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xAED9FB40
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Fallout Revelation Blues Mega Armor Pack.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79310/' ]
+    req:
+      - <<: *JIPLN
+        condition: 'file("config/Revelation Blues Armors Config.ini")'
+      - <<: *johnnyGuitar
+        condition: 'file("config/Revelation Blues Armors Config.ini")'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Revelation Blues Armors Config.ini")'
+    dirty:
+      # LL Integrated
+      - <<: *quickClean
+        crc: 0xBA0944EE
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+    clean:
+      - crc: 0x5E8C9DD4
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Fallout The Odyssey Mega Armor Pack.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
+    req:
+      - <<: *JIPLN
+        condition: 'file("config/Odyssey Armors Config.ini")'
+      - <<: *johnnyGuitar
+        condition: 'file("config/Odyssey Armors Config.ini")'
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Titans of The New West 2.0](https://www.nexusmods.com/newvegas/mods/78688/)' ]
+        condition: 'not active("Titans of The New West.esp") and not file("STAR TTW 2.esp")'
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requires_xNVSE
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Odyssey Armors Config.ini")'
+    tag:
+      - name: 'Invent.Add'
+        condition: 'file("config/Odyssey Armors Config.ini")'
+      - name: 'Invent.Remove'
+        condition: 'file("config/Odyssey Armors Config.ini")'
+    clean:
+      - crc: 0x78B37214
+        util: 'FNVEdit v4.1.5d'
+      # LL Integrated
+      - crc: 0x63B321E5
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'firefighter-uniform.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80915/'
+        name: 'Searchlight Firefighter Outfit'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x578871E9
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'GP-5 Gasmask.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x17CC697A
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'MercWanderer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
+        name: 'Mercenary Wanderer'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xA144C450
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'MCMetalArmor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
+        name: 'Classic Fallout 2 Metal armor Mk II'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      # NVSE Replacer
+      - crc: 0x1DFFE0BF
+        util: 'FNVEdit v4.1.5d'
+      # Full Replacer
+      - crc: 0xCD20E4C8
+        util: 'FNVEdit v4.1.5d'
+      # Helmet voice modulation
+      - crc: 0x47D0EC5E
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
+        name: 'Classic Fallout Metal Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Classic Fallout Metal Armor ESP' ]
+        condition: 'many("MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp")'
+  - name: 'MCMetalMK1Armor.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x60C4E7D6
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1ArmorNonR.esp'
+    inc: [ 'NVSE/Plugins/Scripts/gr_MCMetalMK1.txt' ]
+    clean:
+      - crc: 0x676D7D7D
+        util: 'FNVEdit v4.1.5d'
+  - name: 'MCMetalMK1Helmet.esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x636CF197
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'MCMetalTesla.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/80372/'
+        name: 'Classic Fallout Tesla armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x25C1D762
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'NCR Commando.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4E777EA0
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 4
+
+  - name: 'Nightstalker Outfit.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66399/'
+        name: 'Unique Troublemaker Outfit-Nightstalker Set'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x39F742FE
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 16
+
+  - name: 'PetalGasmask.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73963/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x37966E9C
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
+        name: 'Canvas Backpacks - FNV - TTW'
+  - name: 'QwibNewBackpacks.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *patchProvided
+        subs: [ 'Tale of Two Wastelands' ]
+        condition: 'active("TaleOfTwoWastelands.esm") and not active("QwibNewBackpacksTTWAddon.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7472F00E
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+  - name: 'QwibNewBackpacksTTWAddon.esp'
+    clean:
+      - crc: 0x219D8992
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'QwibWasterBackpack.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78845/'
+        name: 'Waster Gear - TTW - FNV'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+
+  - name: 'The Lone Wanderer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
+        name: 'The Lone Wanderer - TTW and NV'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+
+  - name: 'Tribal Power Helmet.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
+    inc: [ 'Tribal T-51b Helmet.esp' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xBE4FC61E
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x879413D1
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
