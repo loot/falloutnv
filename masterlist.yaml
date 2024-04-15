@@ -3630,6 +3630,9 @@ plugins:
       - crc: 0xAED9FB40
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Fallout The Odyssey Mega Armor Pack.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
+
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
     msg:
