@@ -3655,6 +3655,10 @@ plugins:
 
   - name: 'Fallout Tactics Brotherhood Armor Integration.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70112/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
