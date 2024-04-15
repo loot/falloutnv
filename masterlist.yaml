@@ -1342,6 +1342,9 @@ plugins:
         subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
         condition: 'not file("meshes\armor\advancedpowerarmor\adpowerarmor.nif")'
 
+  - name: 'Classic Combat Armor Replacer Redux FNV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
     tag: [ Graphics ]
