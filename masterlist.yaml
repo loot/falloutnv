@@ -3691,6 +3691,9 @@ plugins:
 
   - name: 'PetalGasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73963/' ]
+    clean:
+      - crc: 0x37966E9C
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
