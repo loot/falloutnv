@@ -3679,6 +3679,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80372/'
         name: 'Classic Fallout Tesla armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     clean:
       - crc: 0x25C1D762
         util: 'FNVEdit v4.1.5d'
