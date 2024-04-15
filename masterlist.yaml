@@ -1357,6 +1357,26 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77858/'
         name: 'Classic Replacers for TTW'
+  - name: 'Classic Combat Armor Replacer Redux TTW.esp'
+    clean:
+      - crc: 0x724F63DF
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Leather Armor Replacer TTW.esp'
+    clean:
+      - crc: 0x26098E30
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Metal Armor Replacer TTW.esp'
+    clean:
+      - crc: 0x660D1C75
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Mr Handy and Gutsy TTW Replacer.esp'
+    clean:
+      - crc: 0x74BE5ACD
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Robobrian Replacer TTW.esp'
+    clean:
+      - crc: 0xFD68E107
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
