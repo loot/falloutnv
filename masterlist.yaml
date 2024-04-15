@@ -3693,6 +3693,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78845/'
         name: 'Waster Gear - TTW - FNV'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'The Lone Wanderer.esp'
     url:
