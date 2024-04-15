@@ -3693,6 +3693,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
         name: 'Canvas Backpacks - FNV - TTW'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'QwibWasterBackpack.esp'
     url:
