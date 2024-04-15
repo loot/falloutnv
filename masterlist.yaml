@@ -3585,10 +3585,12 @@ plugins:
 
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
+    req: [ *JIPLN ]
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
