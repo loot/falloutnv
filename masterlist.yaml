@@ -3638,6 +3638,9 @@ plugins:
       - <<: *johnnyGuitar
         condition: 'file("config/Revelation Blues Armors Config.ini")'
     msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
       - <<: *requires_xNVSE
         condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Revelation Blues Armors Config.ini")'
 
