@@ -3583,6 +3583,9 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 13
 
+  - name: 'ClassicTeslaArmor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
+
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
     msg:
