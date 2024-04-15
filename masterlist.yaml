@@ -3391,6 +3391,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78343/'
         name: 'Classic Combat Armor Replacer Combined (TTW)'
+    tag:
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Sound
+      - Stats
 
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
