@@ -3665,6 +3665,10 @@ plugins:
 
   - name: 'NCR Commando.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x4E777EA0
