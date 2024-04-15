@@ -1359,6 +1359,10 @@ plugins:
         name: 'Classic Replacers for TTW'
     tag: [ Graphics ]
   - name: 'Classic Combat Armor Replacer Redux TTW.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     clean:
       - crc: 0x724F63DF
         util: 'FNVEdit v4.1.5d'
