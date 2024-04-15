@@ -3480,6 +3480,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
         name: 'Classic Fallout 2 Metal armor Mk II'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     clean:
       # NVSE Replacer
       - crc: 0x1DFFE0BF
