@@ -3709,6 +3709,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
         name: 'Mercenary Wanderer'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'MCMetalArmor.esp'
     url:
