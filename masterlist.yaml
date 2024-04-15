@@ -1357,6 +1357,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77858/'
         name: 'Classic Replacers for TTW'
+    tag: [ Graphics ]
   - name: 'Classic Combat Armor Replacer Redux TTW.esp'
     clean:
       - crc: 0x724F63DF
