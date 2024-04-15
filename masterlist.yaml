@@ -3640,12 +3640,12 @@ plugins:
     msg:
       - <<: *alsoUseX
         subs: [ '[Titans of The New West 2.0](https://www.nexusmods.com/newvegas/mods/78688/)' ]
-        condition: 'not active("Titans of The New West.esp") or not file("STAR TTW 2.esp")'
+        condition: 'not active("Titans of The New West.esp") and not file("STAR TTW 2.esp")'
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requires_xNVSE
-        condition: 'file("config/Odyssey Armors Config.ini")'
+        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Odyssey Armors Config.ini")'
     tag:
       - name: 'Invent.Add'
         condition: 'file("config/Odyssey Armors Config.ini")'
