@@ -3630,6 +3630,9 @@ plugins:
       - crc: 0xAED9FB40
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Fallout Revelation Blues Mega Armor Pack.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79310/' ]
+
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
     req:
