@@ -3492,6 +3492,7 @@ plugins:
       - crc: 0x568B9087
         util: 'FNVEdit v4.1.5d'
   - name: 'Fallout 2 combat armor MK2 (remastered) replacer.esp'
+    tag: [ Graphics ]
     clean:
       - crc: 0xAED9FB40
         util: 'FNVEdit v4.1.5d'
