@@ -3476,6 +3476,11 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78947/'
+        name: 'Classic Fallout 2 combat armor Mark 2 (remastered)'
+
   - name: 'MCMetalArmor.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
