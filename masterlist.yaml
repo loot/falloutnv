@@ -1344,6 +1344,10 @@ plugins:
 
   - name: 'Classic Combat Armor Replacer Redux FNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag: [ Graphics ]
     clean:
       - crc: 0xCF3A9586
