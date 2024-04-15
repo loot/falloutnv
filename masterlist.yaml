@@ -3644,6 +3644,11 @@ plugins:
 
   - name: 'Tribal Power Helmet.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
+    clean:
+      - crc: 0xBE4FC61E
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x879413D1
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
