@@ -3644,6 +3644,7 @@ plugins:
 
   - name: 'Tribal Power Helmet.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
+    inc: [ 'Tribal T-51b Helmet.esp' ]
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
