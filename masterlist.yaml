@@ -1385,6 +1385,10 @@ plugins:
 
   - name: 'CourierDusterReplacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75004/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag:
       - Graphics
       - Names
