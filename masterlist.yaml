@@ -3387,6 +3387,11 @@ plugins:
   - name: 'Moddable Anti-Materiel Rifle.esp'
     msg: [ *obsolete ]
 
+  - name: 'MMM-CCARC-TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78343/'
+        name: 'Classic Combat Armor Replacer Combined (TTW)'
+
   - name: 'NCR Rearmament v1.5( \(Lore\))?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40139/' ]
     msg:
