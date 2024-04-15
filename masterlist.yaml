@@ -3662,6 +3662,9 @@ plugins:
     tag:
       - Invent.Add
       - Invent.Remove
+    clean:
+      - crc: 0x85E376F6
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
