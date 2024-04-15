@@ -3512,6 +3512,9 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'Ballistic Skull Mask.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
+
   - name: 'BlackjackPackULTIMATE(v\d)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/63745/'
