@@ -4069,6 +4069,10 @@ plugins:
         name: 'Tammer's NIF-Bashed Armor Mega-Pack (Nexus Mods)'
       - link: 'http://fallout.firedrakecreative.com/doku.php?id=armor#tammer_s_nif-bashed_armor_mega-pack/'
         name: 'Tammer's NIF-Bashed Armor Mega-Pack'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'The Lone Wanderer.esp'
     url:
