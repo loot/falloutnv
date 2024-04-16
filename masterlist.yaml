@@ -3541,6 +3541,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75714/'
         name: 'Altyn Helmet - Retro Tactical Headgear'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
