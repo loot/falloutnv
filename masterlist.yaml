@@ -3607,6 +3607,11 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 13
 
+  - name: 'Blck_Fx NV-- Add Casque M1.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40091/'
+        name: 'WW2 M1 Helmets'
+
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
     req: [ *JIPLN ]
