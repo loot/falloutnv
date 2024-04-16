@@ -3707,6 +3707,13 @@ plugins:
 
   - name: 'KORs Pistol Harness( JG)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42333/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'KORs Pistol Harness ESP' ]
+        condition: 'many("KORs Pistol Harness( JG)?\.esp")'
     tag:
       - Invent.Add
       - Invent.Remove
