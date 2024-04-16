@@ -3928,6 +3928,11 @@ plugins:
       - crc: 0x37966E9C
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Psycho Gear.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58258/'
+        name: 'Psycho Armor and Mask'
+
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
