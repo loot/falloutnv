@@ -3623,6 +3623,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
         name: 'Metal Armor MkI'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
