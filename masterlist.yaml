@@ -3724,7 +3724,11 @@ plugins:
         itm: 1
 
   - name: 'Geonox_Riot_Armor.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/38887/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38887/'
+        name: 'Geonox Riot Armor'
+      - link: 'https://www.nexusmods.com/newvegas/mods/43844/'
+        name: 'Geonox Riot Armor - Female Version'
     msg:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
