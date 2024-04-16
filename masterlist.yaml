@@ -3936,6 +3936,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xDF8EA762
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
