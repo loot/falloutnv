@@ -3678,6 +3678,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/48848/'
         name: 'Modern Gunslinger Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'DVA - Distributed Variety Armors.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
