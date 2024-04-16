@@ -3733,6 +3733,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Geonox Riot Armor](https://www.nexusmods.com/newvegas/mods/38887/)' ]
+        condition: 'not file("textures/armor/Geonox_FNV/Geonoxriotarmor/jil01.dds")'
     clean:
       - crc: 0xA7EB41CF
         util: 'FNVEdit v4.1.5d'
