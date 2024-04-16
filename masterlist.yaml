@@ -3705,6 +3705,9 @@ plugins:
       - crc: 0x17CC697A
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'KORs Pistol Harness( JG)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42333/' ]
+
   - name: 'MercWanderer.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
