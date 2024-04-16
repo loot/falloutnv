@@ -3730,6 +3730,8 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
     clean:
+      - crc: 0xA7EB41CF
+        util: 'FNVEdit v4.1.5d'
       - crc: 0x40F8F7CC
         util: 'FNVEdit v4.1.5d'
 
