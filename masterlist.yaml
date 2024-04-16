@@ -3723,6 +3723,9 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'Geonox_Riot_Armor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/38887/' ]
+
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
     msg:
