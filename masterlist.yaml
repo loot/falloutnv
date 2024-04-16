@@ -3725,6 +3725,9 @@ plugins:
 
   - name: 'Geonox_Riot_Armor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/38887/' ]
+    clean:
+      - crc: 0x40F8F7CC
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
