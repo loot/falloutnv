@@ -1388,6 +1388,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/69594/'
         name: 'Classic Leather Armor Replacer for Leather Armor'
   - name: 'Classic Leather Armor Replacer.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     tag: [ Graphics ]
     clean:
       - crc: 0x7AF51C02
@@ -1398,6 +1402,10 @@ plugins:
       - crc: 0x42958BBA
         util: 'FNVEdit v4.1.5d'
   - name: 'Classic Lightweight Leather Armor Replacer.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
     clean:
       - crc: 0x09378564
         util: 'FNVEdit v4.1.5d'
