@@ -3545,6 +3545,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
     clean:
       - crc: 0xFA67D588
         util: 'FNVEdit v4.1.5d'
