@@ -4063,6 +4063,13 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'Tammer''s NIF-Bashed Armor Mega-Pack.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67398/'
+        name: 'Tammer's NIF-Bashed Armor Mega-Pack (Nexus Mods)'
+      - link: 'http://fallout.firedrakecreative.com/doku.php?id=armor#tammer_s_nif-bashed_armor_mega-pack/'
+        name: 'Tammer's NIF-Bashed Armor Mega-Pack'
+
   - name: 'The Lone Wanderer.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
