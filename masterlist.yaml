@@ -3911,6 +3911,11 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
 
+  - name: 'Seeker Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
+        name: 'Wasteland Seeker Armor'
+
   - name: 'The Lone Wanderer.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
