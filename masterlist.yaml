@@ -3707,6 +3707,9 @@ plugins:
 
   - name: 'KORs Pistol Harness( JG)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42333/' ]
+    tag:
+      - Invent.Add
+      - Invent.Remove
   - name: 'KORs Pistol Harness.esp'
     clean:
       - crc: 0x32F764BA
