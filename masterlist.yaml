@@ -2956,6 +2956,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/68604/'
         name: 'TTW Reputations'
+    clean:
+      - crc: 0x8F28B9BE
+        util: 'FNVEdit v4.1.5d'
 
 ###### Gameplay - Quests ######
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
