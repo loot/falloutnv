@@ -3627,6 +3627,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x86031BCF
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
