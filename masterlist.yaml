@@ -3537,6 +3537,11 @@ plugins:
       - crc: 0xC7DBA90B
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'ArMOAR BH Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69728/'
+        name: 'Bone Harvester - Tribal Cannibal'
+
   - name: 'Arsthetiu''s Armoire.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
     req: [ *JIPLN ]
