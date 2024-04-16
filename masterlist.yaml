@@ -3557,6 +3557,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x6709EE74
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
