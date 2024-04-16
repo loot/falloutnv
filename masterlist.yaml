@@ -3525,18 +3525,6 @@ plugins:
       - Relev
       - Stats
 
-  - name: 'Arsthetiu''s Armoire.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
-    req: [ *JIPLN ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
-      - *requires_xNVSE
-    clean:
-      - crc: 0xCB408957
-        util: 'FNVEdit v4.1.5d'
-
   - name: 'AltynHelmet.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75714/'
@@ -3547,6 +3535,18 @@ plugins:
         condition: 'file("STAR TTW 2.esp")'
     clean:
       - crc: 0xC7DBA90B
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Arsthetiu''s Armoire.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
+    clean:
+      - crc: 0xCB408957
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Ballistic Skull Mask.esp'
