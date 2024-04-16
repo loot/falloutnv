@@ -3619,6 +3619,11 @@ plugins:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'ClassicMetalArmorMkI.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
+        name: 'Metal Armor MkI'
+
   - name: 'ClassicTeslaArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
     req: [ *JIPLN ]
