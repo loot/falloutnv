@@ -4025,6 +4025,9 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x9616D67D
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
