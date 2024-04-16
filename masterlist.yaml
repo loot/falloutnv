@@ -3915,6 +3915,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
         name: 'Wasteland Seeker Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'The Lone Wanderer.esp'
     url:
