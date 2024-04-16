@@ -1383,6 +1383,33 @@ plugins:
       - crc: 0xFD68E107
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Classic (Lightweight )?Leather Armor Replacer( Honest Hearts)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69594/'
+        name: 'Classic Leather Armor Replacer for Leather Armor'
+  - name: 'Classic Leather Armor Replacer.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x7AF51C02
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Leather Armor Replacer Honest Hearts.esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x42958BBA
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Classic Lightweight Leather Armor Replacer.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x09378564
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'CourierDusterReplacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75004/' ]
     msg:
@@ -3525,6 +3552,33 @@ plugins:
       - Relev
       - Stats
 
+  - name: 'AltynHelmet.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75714/'
+        name: 'Altyn Helmet - Retro Tactical Headgear'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xC7DBA90B
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'ArMOAR BH Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69728/'
+        name: 'Bone Harvester - Tribal Cannibal'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xFA67D588
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Arsthetiu''s Armoire.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
     req: [ *JIPLN ]
@@ -3535,6 +3589,18 @@ plugins:
       - *requires_xNVSE
     clean:
       - crc: 0xCB408957
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Asurah_LeatherGloves.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67981/'
+        name: 'AKIRAMORI Tactical Gloves'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x6709EE74
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Ballistic Skull Mask.esp'
@@ -3583,6 +3649,45 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 13
 
+  - name: 'Blck_Fx NV-- Add Casque M1.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40091/'
+        name: 'WW2 M1 Helmets'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x2963032B
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'ClassicMetalArmorMkI.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
+        name: 'Metal Armor MkI'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x86031BCF
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'ClassicTeslaArmor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
+    req: [ *JIPLN ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - *requires_xNVSE
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEC6D5930
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 3
+
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
     msg:
@@ -3595,6 +3700,20 @@ plugins:
         crc: 0x5808E283
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
+
+  - name: 'DragsModernGunslinger.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/48848/'
+        name: 'Modern Gunslinger Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4E0E9F13
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
 
   - name: 'DVA - Distributed Variety Armors.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
@@ -3653,6 +3772,19 @@ plugins:
       - crc: 0x5E8C9DD4
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Fallout Tactics Brotherhood Armor Integration.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/70112/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x85E376F6
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Fallout The Odyssey Mega Armor Pack.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79313/' ]
     req:
@@ -3695,6 +3827,25 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
 
+  - name: 'Geonox_Riot_Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38887/'
+        name: 'Geonox Riot Armor'
+      - link: 'https://www.nexusmods.com/newvegas/mods/43844/'
+        name: 'Geonox Riot Armor - Female Version'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *requiresResources
+        subs: [ '[Geonox Riot Armor](https://www.nexusmods.com/newvegas/mods/38887/)' ]
+        condition: 'not file("textures/armor/Geonox_FNV/Geonoxriotarmor/jil01.dds")'
+    clean:
+      - crc: 0xA7EB41CF
+        util: 'FNVEdit v4.1.5d'
+      - crc: 0x40F8F7CC
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
     msg:
@@ -3703,6 +3854,27 @@ plugins:
         condition: 'file("STAR TTW 2.esp")'
     clean:
       - crc: 0x17CC697A
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'KORs Pistol Harness( JG)?\.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/42333/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'KORs Pistol Harness ESP' ]
+        condition: 'many("KORs Pistol Harness( JG)?\.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'KORs Pistol Harness.esp'
+    clean:
+      - crc: 0x32F764BA
+        util: 'FNVEdit v4.1.5d'
+  - name: 'KORs Pistol Harness JG.esp'
+    clean:
+      - crc: 0x6B7F8DDA
         util: 'FNVEdit v4.1.5d'
 
   - name: 'MercWanderer.esp'
@@ -3812,6 +3984,18 @@ plugins:
       - crc: 0x37966E9C
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Psycho Gear.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58258/'
+        name: 'Psycho Armor and Mask'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0xDF8EA762
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71510/'
@@ -3843,6 +4027,56 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
 
+  - name: 'Road Warrior''s Armor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE7334719
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'SalvageArmor.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/64296/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x4A3A0201
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Seeker Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
+        name: 'Wasteland Seeker Armor'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x89A01A68
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
+  - name: 'Tammer''s NIF-Bashed Armor Mega-Pack.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/67398/'
+        name: 'Tammer''s NIF-Bashed Armor Mega-Pack (Nexus Mods)'
+      - link: 'http://fallout.firedrakecreative.com/doku.php?id=armor#tammer_s_nif-bashed_armor_mega-pack/'
+        name: 'Tammer''s NIF-Bashed Armor Mega-Pack'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x7FA3D6F2
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'The Lone Wanderer.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
@@ -3863,6 +4097,16 @@ plugins:
       - crc: 0xBE4FC61E
         util: 'FNVEdit v4.1.5d'
       - crc: 0x879413D1
+        util: 'FNVEdit v4.1.5d'
+
+  - name: 'Wasteland Stealth Armor NV.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/59659/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
+    clean:
+      - crc: 0x9616D67D
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Soldier - NV Edition.esp'
