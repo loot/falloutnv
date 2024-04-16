@@ -1383,6 +1383,11 @@ plugins:
       - crc: 0xFD68E107
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Classic (Lightweight )?Leather Armor Replacer( Honest Hearts)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69594/'
+        name: 'Classic Leather Armor Replacer for Leather Armor'
+
   - name: 'CourierDusterReplacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75004/' ]
     msg:
