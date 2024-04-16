@@ -4021,6 +4021,10 @@ plugins:
 
   - name: 'Wasteland Stealth Armor NV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/59659/' ]
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'Wasteland Soldier - NV Edition.esp'
     url:
