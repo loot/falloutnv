@@ -3932,6 +3932,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58258/'
         name: 'Psycho Armor and Mask'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'STAR TTW 2.esp' ]
+        condition: 'file("STAR TTW 2.esp")'
 
   - name: 'QwibNewBackpacks(TTWAddon)?\.esp'
     url:
