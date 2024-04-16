@@ -3541,6 +3541,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/69728/'
         name: 'Bone Harvester - Tribal Cannibal'
+    clean:
+      - crc: 0xFA67D588
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'Arsthetiu''s Armoire.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
