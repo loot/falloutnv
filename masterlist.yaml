@@ -7346,7 +7346,6 @@ plugins:
         name: 'NVR3R - New Vegas Redesigned 3 Revised'
     after:
       - 'Project Beauty.esm'
-      - 'Two Wastelands Redesigned.esm'
     inc:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
