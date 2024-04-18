@@ -2050,6 +2050,17 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'Two Wastelands Redesigned.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/73667/' ]
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+    clean:
+      - crc: 0xE057DD77
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'Veronica1.0.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
     tag:
@@ -7448,17 +7459,6 @@ plugins:
       - 'New Vegas Redesigned 3.esm'
     clean:
       - crc: 0x2AEE91EB
-        util: 'FNVEdit v4.1.5d'
-
-  - name: 'Two Wastelands Redesigned.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/73667/' ]
-    tag:
-      - NPC.Eyes
-      - NPC.FaceGen
-      - NPC.Hair
-      - NPC.Race
-    clean:
-      - crc: 0xE057DD77
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Gals.esp'
