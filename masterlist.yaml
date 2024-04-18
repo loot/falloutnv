@@ -2787,6 +2787,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76175/'
         name: 'Supplemental Ammo Crafting'
+  - name: 'Supplemental Ammo Crafting.esp'
+    clean:
+      - crc: 0x9901274E
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Supplemental Ammo Crafting NV.esp'
+    clean:
+      - crc: 0x5BE7C14D
+        util: 'FNVEdit v4.1.5d'
 
 ###### Gameplay - Economy & Item Balance ######
   - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
