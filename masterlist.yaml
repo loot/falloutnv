@@ -2050,6 +2050,23 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'Two Wastelands Redesigned.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73667/'
+        name: 'Two Wastelands Redesigned - TTW - Project Beauty and NVR2'
+    tag:
+      - Actors.Factions
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - R.Hair
+    clean:
+      - crc: 0x8F28B9BE
+        util: 'FNVEdit v4.1.5d'
+  - name: 'TWR - YUP [MergeMe].esp'
+    group: *earlyLoadersGroup
+
   - name: 'Veronica1.0.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
     tag:
@@ -2782,6 +2799,22 @@ plugins:
   - name: 'WMXUE.*\.esp'
     msg: [ *obsolete ]
 
+###### Gameplay - Crafting & Harvesting ######
+  - name: 'Supplemental Ammo Crafting( NV)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76175/'
+        name: 'Supplemental Ammo Crafting'
+    inc: [ 'SPARE.esp' ]
+  - name: 'Supplemental Ammo Crafting.esp'
+    clean:
+      - crc: 0x9901274E
+        util: 'FNVEdit v4.1.5d'
+  - name: 'Supplemental Ammo Crafting NV.esp'
+    inc: [ 'TaleOfTwoWastelands.esm' ]
+    clean:
+      - crc: 0x5BE7C14D
+        util: 'FNVEdit v4.1.5d'
+
 ###### Gameplay - Economy & Item Balance ######
   - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
     url:
@@ -2935,6 +2968,14 @@ plugins:
       - Relev
   - name: 'Better Brotherhood - YUP Patch.esp'
     tag: [ Actors.Stats ]
+
+  - name: 'TTW Reputations.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/68604/'
+        name: 'TTW Reputations'
+    clean:
+      - crc: 0x8F28B9BE
+        util: 'FNVEdit v4.1.5d'
 
 ###### Gameplay - Quests ######
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
@@ -7349,7 +7390,6 @@ plugins:
       - 'New Vegas Redesigned.esm'
       - 'New Vegas Redesigned II.esm'
       - 'TTW Redesigned.esm'
-      - 'Two Wastelands Redesigned.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -7425,17 +7465,6 @@ plugins:
       - 'New Vegas Redesigned 3.esm'
     clean:
       - crc: 0x2AEE91EB
-        util: 'FNVEdit v4.1.5d'
-
-  - name: 'Two Wastelands Redesigned.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/73667/' ]
-    tag:
-      - NPC.Eyes
-      - NPC.FaceGen
-      - NPC.Hair
-      - NPC.Race
-    clean:
-      - crc: 0xE057DD77
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Wasteland Gals.esp'
