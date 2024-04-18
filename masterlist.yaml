@@ -2064,6 +2064,8 @@ plugins:
     clean:
       - crc: 0xE057DD77
         util: 'FNVEdit v4.1.5d'
+  - name: 'TWR - YUP [MergeMe].esp'
+    group: *earlyLoadersGroup
 
   - name: 'Veronica1.0.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36428/' ]
