@@ -2062,7 +2062,7 @@ plugins:
       - NPC.Race
       - R.Hair
     clean:
-      - crc: 0xE057DD77
+      - crc: 0x8F28B9BE
         util: 'FNVEdit v4.1.5d'
   - name: 'TWR - YUP [MergeMe].esp'
     group: *earlyLoadersGroup
