@@ -2783,6 +2783,10 @@ plugins:
     msg: [ *obsolete ]
 
 ###### Gameplay - Crafting & Harvesting ######
+  - name: 'Supplemental Ammo Crafting( NV)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/76175/'
+        name: 'Supplemental Ammo Crafting'
 
 ###### Gameplay - Economy & Item Balance ######
   - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
