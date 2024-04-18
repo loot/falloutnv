@@ -2782,6 +2782,8 @@ plugins:
   - name: 'WMXUE.*\.esp'
     msg: [ *obsolete ]
 
+###### Gameplay - Crafting & Harvesting ######
+
 ###### Gameplay - Economy & Item Balance ######
   - name: '(Disable )?Couriers Stash( - Package Selection Menu)?\.esp'
     url:
