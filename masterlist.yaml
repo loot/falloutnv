@@ -3711,6 +3711,10 @@ plugins:
       - 'Classic Fallout Weapons Remastered v1.2.esp'
       - 'Classic Fallout Weapons Replacer Pack.esp'
       - *TTWv320
+    msg:
+      - <<: *useInstead
+        subs: [ '[Classic Fallout Weapons Remastered](https://www.nexusmods.com/newvegas/mods/73805/)' ]
+        condition: 'file("DeadMoney.esm") and file("HonestHearts.esm") and file("OldWorldBlues.esm") and file("LonesomeRoad.esm") and file("GunRunnersArsenal.esm") and file("CaravanPack.esm") and file("ClassicPack.esm") and file("MercenaryPack.esm") and file("TribalPack.esm")'
     tag:
       - Delev
       - Invent.Add
