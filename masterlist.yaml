@@ -3748,6 +3748,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73805/'
         name: 'Classic Fallout Weapons Remastered'
+    req:
+      - name: 'NVSE/Plugins/scripts/ln_ISControl.txt'
+        display: '[ISControl Enabler and Ironsights adjuster](https://www.nexusmods.com/newvegas/mods/75417/)'
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+    msg: [ *requires_xNVSE ]
 
   - name: 'ClassicMetalArmorMkI.esp'
     url:
