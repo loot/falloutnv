@@ -3707,7 +3707,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/37002/'
         name: 'Classic Fallout Weapons - New Vegas'
   - name: 'CFWNV.esm'
-    inc: [ *TTWv320 ]
+    inc:
+      - 'Classic Fallout Weapons Remastered v1.2.esp'
+      - 'Classic Fallout Weapons Replacer Pack.esp'
+      - *TTWv320
     tag:
       - Delev
       - Invent.Add
