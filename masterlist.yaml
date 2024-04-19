@@ -3702,8 +3702,11 @@ plugins:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
 
+  - name: '(CFWNV|CFW-(DLC|DM|GRA|HH|LR|OWB))\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37002/'
+        name: 'Classic Fallout Weapons - New Vegas'
   - name: 'CFWNV.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
     inc: [ *TTWv320 ]
   - name: 'CFW-DLC.esp'
     tag:
