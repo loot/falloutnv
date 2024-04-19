@@ -3754,6 +3754,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *kNVSE_Animation
+    inc: [ 'Classic Fallout Weapons Replacer Pack.esp' ]
     msg: [ *requires_xNVSE ]
     clean:
       - crc: 0xAC023E39
