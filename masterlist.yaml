@@ -3708,10 +3708,34 @@ plugins:
         name: 'Classic Fallout Weapons - New Vegas'
   - name: 'CFWNV.esm'
     inc: [ *TTWv320 ]
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
   - name: 'CFW-DLC.esp'
     tag:
-      - Invent
+      - Delev
       - Graphics
+      - Invent.Add
+      - Relev
+      - WeaponMods
+  - name: 'CFW-DM.esp'
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-GRA.esp'
+    tag:
+      - Delev
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-HH.esp'
+    tag: [ Delev ]
+  - name: 'CFW-LR.esp'
+    tag:
+      - Delev
+      - Invent.Add
+  - name: 'CFW-OWB.esp'
+    tag: [ Relev ]
 
   - name: 'ClassicMetalArmorMkI.esp'
     url:
