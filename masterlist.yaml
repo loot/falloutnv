@@ -3744,6 +3744,11 @@ plugins:
   - name: 'CFW-OWB.esp'
     tag: [ Relev ]
 
+  - name: 'Classic Fallout Weapons Remastered v1.2.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73805/'
+        name: 'Classic Fallout Weapons Remastered'
+
   - name: 'ClassicMetalArmorMkI.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
