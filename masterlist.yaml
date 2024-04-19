@@ -3702,6 +3702,14 @@ plugins:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'CFWNV.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
+    inc: [ *TTWv320 ]
+  - name: 'CFW-DLC.esp'
+    tag:
+      - Invent
+      - Graphics
+
   - name: 'ClassicMetalArmorMkI.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
@@ -6941,10 +6949,6 @@ plugins:
       - Eyes
       - Hair
       - Names
-  - name: 'CFW-DLC.esp'
-    tag:
-      - Invent
-      - Graphics
   - name: 'ammoingredientsloot.esp'
     tag: [ Invent ]
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
@@ -7615,10 +7619,6 @@ plugins:
 
   - name: 'The Storyteller.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'CFWNV.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
     inc: [ *TTWv320 ]
 
   - name: 'IMPACT.esp'
