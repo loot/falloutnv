@@ -1559,6 +1559,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85939/'
         name: 'ATMOS Ambience Overhaul'
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?)\.esp'
+    tag:
+      - C.Acoustic
+      - Sound
   - name: 'ATMOS Ambient Overhaul.esp'
     dirty:
       - <<: *quickClean
