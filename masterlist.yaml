@@ -4425,6 +4425,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/66267/'
         name: 'TTW A Trail of Crumbs'
     tag: [ C.Light ]
+    clean:
+      - crc: 0xAC501C1C
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'ACGS - Novac Bungalow.esm'
     url:
