@@ -4424,6 +4424,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66267/'
         name: 'TTW A Trail of Crumbs'
+    tag: [ C.Light ]
 
   - name: 'ACGS - Novac Bungalow.esm'
     url:
