@@ -1555,6 +1555,11 @@ plugins:
     # Do not clean
 
 ###### AudioVisual - Sound & Music ######
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?|Music System)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85939/'
+        name: 'ATMOS Ambience Overhaul'
+
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
