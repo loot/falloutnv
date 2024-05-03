@@ -553,10 +553,10 @@ globals:
   # NVSE
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.3.4", <)))'
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.3.5", <)))'
   - <<: *versionUpToDateX
     subs: [ '**New Vegas Script Extender**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.3.4", >=)'
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.3.5", >=)'
   # NVSE NoGore
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
