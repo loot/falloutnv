@@ -553,10 +553,10 @@ globals:
   # NVSE
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.3.4", <)))'
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.3.5", <)))'
   - <<: *versionUpToDateX
     subs: [ '**New Vegas Script Extender**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.3.4", >=)'
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.3.5", >=)'
   # NVSE NoGore
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
@@ -1555,6 +1555,46 @@ plugins:
     # Do not clean
 
 ###### AudioVisual - Sound & Music ######
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?|Music System)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85939/'
+        name: 'ATMOS Ambience Overhaul'
+  - name: 'ATMOS (Ambient Overhaul( Intense| Subtle)?)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ATMOS Ambient Overhaul ESP' ]
+        condition: 'many("ATMOS (Ambient Overhaul( Intense| Subtle)?)\.esp")'
+    tag:
+      - C.Acoustic
+      - Sound
+  - name: 'ATMOS Ambient Overhaul.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x600DCAA8
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Ambient Overhaul Intense.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4B674E43
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Ambient Overhaul Subtle.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCB43BD2D
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+        udr: 2
+  - name: 'ATMOS Music System.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x486E31B7
+        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
+
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
@@ -3702,6 +3742,64 @@ plugins:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
 
+  - name: '(CFWNV|CFW-(DLC|DM|GRA|HH|LR|OWB))\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37002/'
+        name: 'Classic Fallout Weapons - New Vegas'
+  - name: 'CFWNV.esm'
+    inc:
+      - 'Classic Fallout Weapons Remastered v1.2.esp'
+      - 'Classic Fallout Weapons Replacer Pack.esp'
+      - *TTWv320
+    msg:
+      - <<: *useInstead
+        subs: [ '[Classic Fallout Weapons Remastered](https://www.nexusmods.com/newvegas/mods/73805/)' ]
+        condition: 'file("DeadMoney.esm") and file("HonestHearts.esm") and file("OldWorldBlues.esm") and file("LonesomeRoad.esm") and file("GunRunnersArsenal.esm") and file("CaravanPack.esm") and file("ClassicPack.esm") and file("MercenaryPack.esm") and file("TribalPack.esm")'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+  - name: 'CFW-DLC.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Relev
+      - WeaponMods
+  - name: 'CFW-DM.esp'
+    tag:
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-GRA.esp'
+    tag:
+      - Delev
+      - Graphics
+      - WeaponMods
+  - name: 'CFW-HH.esp'
+    tag: [ Delev ]
+  - name: 'CFW-LR.esp'
+    tag:
+      - Delev
+      - Invent.Add
+  - name: 'CFW-OWB.esp'
+    tag: [ Relev ]
+
+  - name: 'Classic Fallout Weapons Remastered v1.2.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73805/'
+        name: 'Classic Fallout Weapons Remastered'
+    req:
+      - name: 'NVSE/Plugins/scripts/ln_ISControl.txt'
+        display: '[ISControl Enabler and Ironsights adjuster](https://www.nexusmods.com/newvegas/mods/75417/)'
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+    inc: [ 'Classic Fallout Weapons Replacer Pack.esp' ]
+    msg: [ *requires_xNVSE ]
+    clean:
+      - crc: 0xAC023E39
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'ClassicMetalArmorMkI.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
@@ -4362,6 +4460,15 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
 ###### Locations - Player Homes ######
+  - name: 'A Trail of Crumbs.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/66267/'
+        name: 'TTW A Trail of Crumbs'
+    tag: [ C.Light ]
+    clean:
+      - crc: 0xAC501C1C
+        util: 'FNVEdit v4.1.5d'
+
   - name: 'ACGS - Novac Bungalow.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/72570/'
@@ -6941,10 +7048,6 @@ plugins:
       - Eyes
       - Hair
       - Names
-  - name: 'CFW-DLC.esp'
-    tag:
-      - Invent
-      - Graphics
   - name: 'ammoingredientsloot.esp'
     tag: [ Invent ]
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
@@ -7615,10 +7718,6 @@ plugins:
 
   - name: 'The Storyteller.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/58473/' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'CFWNV.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/37002/' ]
     inc: [ *TTWv320 ]
 
   - name: 'IMPACT.esp'
