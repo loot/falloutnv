@@ -2546,6 +2546,28 @@ plugins:
       - crc: 0xEE2B6324
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Vanilla SWEEP.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/81043/' ]
+    tag:
+      - Delev
+      - Destructible
+      - EnchantmentStats
+      - Enchantments
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
+    dirty:
+      - <<: *quickClean
+        crc: 0xFF693F51
+        util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 52
+
   - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
