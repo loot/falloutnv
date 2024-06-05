@@ -4360,6 +4360,13 @@ plugins:
       - crc: 0xC0E2EF21
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Nova ?Arizona( - Map Add-on)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85915/'
+        name: 'Nova Arizona - A Legion Lands Expansion'
+  - name: 'NovaArizona.esm'
+  - name: 'Nova Arizona - Map Add-on.esp'
+
   - name: 'ZionTrail(-NV)?\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/61939/'
