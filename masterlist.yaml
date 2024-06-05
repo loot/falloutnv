@@ -4366,6 +4366,7 @@ plugins:
         name: 'Nova Arizona - A Legion Lands Expansion'
   - name: 'NovaArizona.esm'
   - name: 'Nova Arizona - Map Add-on.esp'
+    group: *lateChangesGroup
 
   - name: 'ZionTrail(-NV)?\.es[mp]'
     url:
