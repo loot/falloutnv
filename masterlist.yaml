@@ -4367,6 +4367,10 @@ plugins:
   - name: 'NovaArizona.esm'
   - name: 'Nova Arizona - Map Add-on.esp'
     group: *lateChangesGroup
+    tag:
+      - C.Regions
+      - Deactivate
+      - NoMerge
 
   - name: 'ZionTrail(-NV)?\.es[mp]'
     url:
