@@ -2064,8 +2064,14 @@ plugins:
         util: 'FNVEdit v4.1.5d'
 
 ###### Character Appearance - NPCs ######
+  - name: '(New Vegas Redesigned( II|- Honest Hearts)|NVR- (Lore version|Recommended)|Voice dissonance fix)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39218/'
+        name: 'Fallout New Vegas Redesigned 2 - Open Source'
   - name: 'New Vegas Redesigned II.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
+        name: 'New Vegas Redesigned 2 Revised'
     inc:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
@@ -2076,9 +2082,12 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
+  - name: 'NVR2 - .+ Patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
+        name: 'New Vegas Redesigned 2 Revised'
   ### Open Source ###
   - name: 'New Vegas redesigned- Honest Hearts.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
@@ -2087,7 +2096,6 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Lore version.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'NVR- Recommended.esp'
       - 'New Vegas Redesigned 3.esm'
@@ -2097,7 +2105,6 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Recommended.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'NVR- Lore version.esp'
       - 'New Vegas Redesigned 3.esm'
@@ -2107,7 +2114,6 @@ plugins:
       - Actors.ACBS
       - NpcFaces
   - name: 'Voice dissonance fix.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39218/' ]
     inc:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
