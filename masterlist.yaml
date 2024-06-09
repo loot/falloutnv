@@ -2091,15 +2091,16 @@ plugins:
     tag:
       - Actors.ACBS
       - NpcFaces
+  - name: 'NVR- (Lore version|Recommended)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'New Vegas Redesigned version' ]
+        condition: 'many("NVR- (Lore version|Recommended)\.esp")'
   - name: 'NVR- Lore version.esp'
-    inc:
-      - 'NVR- Recommended.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Recommended.esp'
-    inc:
-      - 'NVR- Lore version.esp'
     tag:
       - Actors.ACBS
       - NpcFaces
