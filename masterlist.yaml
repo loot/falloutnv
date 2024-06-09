@@ -2085,6 +2085,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
         name: 'New Vegas Redesigned 2 Revised'
+  - name: 'NVR2 - YUP Patch.esp'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
   ### Open Source ###
   - name: 'New Vegas redesigned- Honest Hearts.esp'
     tag:
