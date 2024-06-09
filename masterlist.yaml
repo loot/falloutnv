@@ -2068,14 +2068,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39218/'
         name: 'Fallout New Vegas Redesigned 2 - Open Source'
-  - name: 'New Vegas Redesigned II.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
-        name: 'New Vegas Redesigned 2 Revised'
     inc:
       - 'New Vegas Redesigned 3.esm'
       - 'New Vegas Redesigned 3.esp'
       - 'TTW Redesigned.esm'
+  - name: 'New Vegas Redesigned II.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
+        name: 'New Vegas Redesigned 2 Revised'
     tag:
       - Body-F
       - Body-M
@@ -2088,36 +2088,22 @@ plugins:
         name: 'New Vegas Redesigned 2 Revised'
   ### Open Source ###
   - name: 'New Vegas redesigned- Honest Hearts.esp'
-    inc:
-      - 'New Vegas Redesigned 3.esm'
-      - 'New Vegas Redesigned 3.esp'
-      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Lore version.esp'
     inc:
       - 'NVR- Recommended.esp'
-      - 'New Vegas Redesigned 3.esm'
-      - 'New Vegas Redesigned 3.esp'
-      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'NVR- Recommended.esp'
     inc:
       - 'NVR- Lore version.esp'
-      - 'New Vegas Redesigned 3.esm'
-      - 'New Vegas Redesigned 3.esp'
-      - 'TTW Redesigned.esm'
     tag:
       - Actors.ACBS
       - NpcFaces
   - name: 'Voice dissonance fix.esp'
-    inc:
-      - 'New Vegas Redesigned 3.esm'
-      - 'New Vegas Redesigned 3.esp'
-      - 'TTW Redesigned.esm'
     tag: [ NpcFaces ]
 
   - name: 'ReElijahfied.esp'
