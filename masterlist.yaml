@@ -2077,11 +2077,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
         name: 'New Vegas Redesigned 2 Revised'
     tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NpcFaces
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
   - name: 'NVR2 - .+ Patch\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71556/'
@@ -2089,23 +2088,23 @@ plugins:
   ### Open Source ###
   - name: 'New Vegas redesigned- Honest Hearts.esp'
     tag:
-      - Actors.ACBS
-      - NpcFaces
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
   - name: 'NVR- (Lore version|Recommended)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'New Vegas Redesigned version' ]
         condition: 'many("NVR- (Lore version|Recommended)\.esp")'
-  - name: 'NVR- Lore version.esp'
     tag:
-      - Actors.ACBS
-      - NpcFaces
-  - name: 'NVR- Recommended.esp'
-    tag:
-      - Actors.ACBS
-      - NpcFaces
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
   - name: 'Voice dissonance fix.esp'
-    tag: [ NpcFaces ]
+    tag:
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
 
   - name: 'ReElijahfied.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42195/' ]
