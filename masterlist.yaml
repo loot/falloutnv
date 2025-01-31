@@ -7895,8 +7895,5 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xA2898CFC
-        util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/347003)'
+        util: 'FNVEdit v4.1.5k'
         itm: 13
-    clean:
-      - crc: 0x2EF0FD91
-        util: 'FNVEdit v4.0.4'
