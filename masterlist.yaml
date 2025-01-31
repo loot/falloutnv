@@ -7891,7 +7891,9 @@ plugins:
         itm: 1
 
   - name: 'HiddenValleyOverhauled.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/70859/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/70859/'
+        name: 'Hidden Valley Overhauled'
     dirty:
       - <<: *quickClean
         crc: 0xA2898CFC
