@@ -7889,3 +7889,13 @@ plugins:
         crc: 0x82DAC22D
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
+
+  - name: 'HiddenValleyOverhauled.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/70859/'
+        name: 'Hidden Valley Overhauled'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA2898CFC
+        util: 'FNVEdit v4.1.5k'
+        itm: 13
