@@ -1157,7 +1157,7 @@ plugins:
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/64580/'
+      - link: 'https://www.nexusmods.com/site/mods/591/'
         name: 'Wrye Bash'
     group: *dynamicPatchGroup
     after:
