@@ -2288,6 +2288,14 @@ plugins:
       - crc: 0xE709B604
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'DMT (_Dead Money Tweaks_|.+ Patch)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/72139/'
+        name: 'DMT - Dead Money Tweaks - Complete Overhaul'
+  - name: 'DMT _Dead Money Tweaks_.esm'
+  - name: 'DMT _Dead Money Tweaks_.esp'
+  - name: 'DMT DN Weathers Toxic Cloud Patch.esp'
+
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
     after:
