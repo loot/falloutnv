@@ -2295,6 +2295,7 @@ plugins:
   - name: 'DMT _Dead Money Tweaks_.esm'
   - name: 'DMT _Dead Money Tweaks_.esp'
   - name: 'DMT DN Weathers Toxic Cloud Patch.esp'
+    req: [ 'DNWeathers.esp' ]
 
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
