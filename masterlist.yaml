@@ -499,19 +499,36 @@ globals:
 # Latest LOOT Thread
   - *latestLOOTThread
 
-# ENBSeries - NVHR
-  - <<: *incompatible
-    subs:
-      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
-      - '[NVHR - New Vegas Heap Replacer](https://www.nexusmods.com/newvegas/mods/69779/)'
-    condition: 'file("NVHR/nvhr_avx.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
+# Latest Version
+  # Fallout: New Vegas
+  - <<: *versionOldX
+    subs: [ '**Fallout: New Vegas**' ]
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**Fallout: New Vegas**' ]
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
 
-# ENBSeries - NVTF
-  - <<: *incompatible
+  # NVSE
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.4.4", <)))'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender**' ]
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.4.4", >=)'
+  # NVSE NoGore
+  - <<: *versionOldX
+    subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
+    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", "0.5.1.4", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**New Vegas Script Extender NoGore**' ]
+    condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
+
+# NVSE - Runtime Compatibility
+  - <<: *versionXIncY
     subs:
-      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
-      - '[NVTF - New Vegas Tick Fix](https://www.nexusmods.com/newvegas/mods/66537/)'
-    condition: 'file("NVSE/Plugins/NVTF.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
+      - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
+      - '**Fallout: New Vegas**'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
 
 # NVSE
   # Missing
@@ -538,36 +555,19 @@ globals:
       - '[lStewieAl''s Tweaks and Engine Fixes](https://www.nexusmods.com/newvegas/mods/66347/)'
     condition: 'file("NVSE/Plugins/sr_New_Vegas_Stutter_Remover.dll") and not file("NVSE/Plugins/nvse_stewie_tweaks.dll")'
 
-# Latest Version
-  # Fallout: New Vegas Game Runtime
-  - <<: *versionOldX
-    subs: [ '**Fallout: New Vegas**' ]
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", <)'
-  - <<: *versionUpToDateX
-    subs: [ '**Fallout: New Vegas**' ]
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
-  # NVSE
-  - <<: *versionOldX
-    subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.4.4", <)))'
-  - <<: *versionUpToDateX
-    subs: [ '**New Vegas Script Extender**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.4.4", >=)'
-  # NVSE NoGore
-  - <<: *versionOldX
-    subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
-    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", "0.5.1.4", <)'
-  - <<: *versionUpToDateX
-    subs: [ '**New Vegas Script Extender NoGore**' ]
-    condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
-
-# Version Compatibility
-  # NVSE - Game Runtime
-  - <<: *versionXIncY
+# ENBSeries - NVHR
+  - <<: *incompatible
     subs:
-      - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
-      - '**Fallout: New Vegas**'
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
+      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
+      - '[NVHR - New Vegas Heap Replacer](https://www.nexusmods.com/newvegas/mods/69779/)'
+    condition: 'file("NVHR/nvhr_avx.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
+
+# ENBSeries - NVTF
+  - <<: *incompatible
+    subs:
+      - '[ENBSeries](http://enbdev.com/mod_falloutnv_v0451.htm)'
+      - '[NVTF - New Vegas Tick Fix](https://www.nexusmods.com/newvegas/mods/66537/)'
+    condition: 'file("NVSE/Plugins/NVTF.dll") and (file("../ENBInjector.exe") or file("../enbhost.exe"))'
 
 groups:
   - name: &dlcGroup DLC
