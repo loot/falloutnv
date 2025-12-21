@@ -523,8 +523,7 @@ globals:
     subs: [ '**New Vegas Script Extender NoGore**' ]
     condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
 
-# Version Compatibility
-  # NVSE - Game Runtime
+# NVSE - Runtime Compatibility
   - <<: *versionXIncY
     subs:
       - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
