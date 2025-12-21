@@ -507,6 +507,7 @@ globals:
   - <<: *versionUpToDateX
     subs: [ '**Fallout: New Vegas**' ]
     condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
+
   # NVSE
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
