@@ -337,7 +337,7 @@ common:
     <<: *requiresX
     type: error
     subs: [ '[New Vegas Script Extender (xNVSE)](https://github.com/xNVSE/NVSE/releases)' ]
-    condition: 'version("../nvse_1_4.dll", "0.6.0.0", <)'
+    condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=)'
 
   # &useVersion
   - &useVersionDeadMoney
@@ -3971,7 +3971,7 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requires_xNVSE
-        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Revelation Blues Armors Config.ini")'
+        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Revelation Blues Armors Config.ini")'
     dirty:
       # LL Integrated
       - <<: *quickClean
@@ -4010,7 +4010,7 @@ plugins:
         subs: [ 'STAR TTW 2.esp' ]
         condition: 'file("STAR TTW 2.esp")'
       - <<: *requires_xNVSE
-        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("config/Odyssey Armors Config.ini")'
+        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Odyssey Armors Config.ini")'
     tag:
       - name: 'Invent.Add'
         condition: 'file("config/Odyssey Armors Config.ini")'
@@ -7757,7 +7757,7 @@ plugins:
         subs: [ '[IMPACT](https://www.nexusmods.com/newvegas/mods/57113/)' ]
         condition: 'not file("meshes/effects/impactballisticblood01.nif")'
       - <<: *requires_xNVSE
-        condition: 'version("../nvse_1_4.dll", "0.6.0.0", <) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
+        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
       - <<: *useInstead
         subs: [ '[IMPACT - Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050/)' ]
         condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
