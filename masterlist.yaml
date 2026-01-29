@@ -773,6 +773,9 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *ShowOff
+    inc:
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
     msg: [ *requires_xNVSE ]
 
   - name: 'Unofficial Patch NVSE Plus.esp'
