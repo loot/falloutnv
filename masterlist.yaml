@@ -777,6 +777,12 @@ plugins:
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
     msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        # 1.0.0
+        crc: 0xABF17871
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 11
 
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
