@@ -794,11 +794,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
     inc: [ *TTWv320 ]
-    msg:
-      - <<: *alsoUseX
-        subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
-        condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
-      - *requires_xNVSE
+    msg: [ *requires_xNVSE ]
     tag:
       - EffectStats
       - Enchantments
