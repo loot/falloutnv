@@ -789,6 +789,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
         name: 'Unofficial Patch NVSE Plus'
     group: *fixesGroup
+    after: [ 'NOPE.esm' ]
     req:
       - *JIPLN
       - *johnnyGuitar
