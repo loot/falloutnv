@@ -764,6 +764,11 @@ plugins:
         util: 'FNVEdit v4.1.5f'
 
 ###### Base Game Patches ######
+  - name: 'NOPE.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96050/'
+        name: 'NOPE - NV Optimized Patching Endeavor'
+
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
