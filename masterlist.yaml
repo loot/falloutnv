@@ -764,20 +764,37 @@ plugins:
         util: 'FNVEdit v4.1.5f'
 
 ###### Base Game Patches ######
+  - name: 'NOPE.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96050/'
+        name: 'NOPE - NV Optimized Patching Endeavor'
+    group: *fixesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
+    inc:
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
+    msg: [ *requires_xNVSE ]
+    dirty:
+      - <<: *quickClean
+        # 1.0.0
+        crc: 0xABF17871
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 11
+
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
         name: 'Unofficial Patch NVSE Plus'
     group: *fixesGroup
+    after: [ 'NOPE.esm' ]
     req:
       - *JIPLN
       - *johnnyGuitar
     inc: [ *TTWv320 ]
-    msg:
-      - <<: *alsoUseX
-        subs: [ '[Yukichigai Unofficial Patch](https://www.nexusmods.com/newvegas/mods/51664/)' ]
-        condition: 'not active("YUP - Base Game( \+ All DLC)?\.esm")'
-      - *requires_xNVSE
+    msg: [ *requires_xNVSE ]
     tag:
       - EffectStats
       - Enchantments
