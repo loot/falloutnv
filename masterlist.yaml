@@ -768,6 +768,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96050/'
         name: 'NOPE - NV Optimized Patching Endeavor'
+    group: *fixesGroup
 
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
