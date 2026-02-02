@@ -583,18 +583,9 @@ groups:
     description: 'A group for modules that fix issues and bugs.'
     after: [ *unofficialPatchesGroup ]
 
-  - name: &addonsPatchesGroup Add-ons & Expansions (Patches)
-    description: 'A group for patches of modules in Add-ons & Expansions.'
-
-  - name: &addonsGroup Add-ons & Expansions
-    description: 'A group for modules that add new content or expand the vanilla game.'
-    after:
-      - *addonsPatchesGroup
-      - *fixesGroup
-
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early before most other mods.'
-    after: [ *addonsGroup ]
+    after: [ *fixesGroup ]
 
   - name: default
     after: [ *earlyLoadersGroup ]
