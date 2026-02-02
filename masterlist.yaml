@@ -573,9 +573,12 @@ groups:
   - name: &dlcGroup DLC
     description: 'A group for official downloadable content.'
 
+  - name: &unofficialPatchesGroup Unofficial Patches
+    after: [ *dlcGroup ]
+
   - name: &fixesGroup Fixes
     description: 'A group for modules that fix issues and bugs.'
-    after: [ *dlcGroup ]
+    after: [ *unofficialPatchesGroup ]
 
   - name: &addonsPatchesGroup Add-ons & Expansions (Patches)
     description: 'A group for patches of modules in Add-ons & Expansions.'
