@@ -617,8 +617,12 @@ groups:
     description: 'A group for modules that only modify cell settings.'
     after: [ *coreGroup ]
 
-  - name: &weatherGroup Weather & Lighting
+  - name: &cellLightingGroup Cell Weather & Lighting
+    description: 'A group for modules that modify cell weather & lighting.'
     after: [ *cellSettingsGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *cellLightingGroup ]
 
   - name: &highPriorityGroup High Priority Overrides
     after: [ *weatherGroup ]
