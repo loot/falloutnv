@@ -651,6 +651,12 @@ groups:
   - name: &lateChangesGroup Late Fixes & Changes
     after: [ *dynamicPatchesGroup ]
 
+  - name: &lodResGroup LOD Resources
+    after: [ *lateChangesGroup ]
+
+  - name: &lodGenGroup LOD Generation
+    after: [ *lodResGroup ]
+
 plugins:
   - name: 'DeadMoney.esm'
     url: [ 'https://store.steampowered.com/app/72730/' ]
