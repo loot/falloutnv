@@ -636,9 +636,15 @@ groups:
   - name: &bashFilterPatchesGroup Bash Filter Patches
     after: [ *latePatchesGroup ]
 
+  - name: &lodResGroup LOD Resources
+    after: [ *bashFilterPatchesGroup ]
+
+  - name: &lodGenGroup LOD Generation
+    after: [ *lodResGroup ]
+
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
-    after: [ *bashFilterPatchesGroup ]
+    after: [ *lodGenGroup ]
 
   - name: &conflictResPatchGroup Conflict Resolution Patches
     description: 'A group for patches that resolve conflicts.'
@@ -650,12 +656,6 @@ groups:
 
   - name: &lateChangesGroup Late Fixes & Changes
     after: [ *dynamicPatchesGroup ]
-
-  - name: &lodResGroup LOD Resources
-    after: [ *lateChangesGroup ]
-
-  - name: &lodGenGroup LOD Generation
-    after: [ *lodResGroup ]
 
 plugins:
   - name: 'DeadMoney.esm'
