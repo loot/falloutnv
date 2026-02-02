@@ -799,7 +799,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96050/'
         name: 'NOPE - NV Optimized Patching Endeavor'
-    group: *fixesGroup
+    group: *unofficialPatchesGroup
     req:
       - *JIPLN
       - *johnnyGuitar
@@ -819,8 +819,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
         name: 'Unofficial Patch NVSE Plus'
-    group: *fixesGroup
-    after: [ 'NOPE.esm' ]
+    group: *unofficialPatchesGroup
+    after:
+      - 'NOPE.esm'
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
+      - 'YUP - Dead Money.esm'
+      - 'YUP - Honest Hearts.esm'
+      - 'YUP - Old World Blues.esm'
+      - 'YUP - Lonesome Road.esm'
+      - 'YUP - Gun Runners Arsenal.esm'
     req:
       - *JIPLN
       - *johnnyGuitar
@@ -885,14 +893,14 @@ plugins:
       - Text
       - WeaponMods
   - name: 'YUP - Base Game + All DLC.esm'
-    group: *fixesGroup
+    group: *unofficialPatchesGroup
     msg:
       - <<: *patchProvided
         subs: [ 'New Vegas Uncut - Outside Bets' ]
         condition: 'active("outsidebets.esp") and not active("YUP - Outside Bets Patch.esp")'
     # Do not clean
   - name: 'YUP - NPC Fixes \(Base Game( \+ All DLC)?\)\.esp'
-    group: *fixesGroup
+    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -920,7 +928,7 @@ plugins:
       - crc: 0xEC108C63
         util: 'FNVEdit v4.0.4c'
   - name: 'YUP - (Base Game|Dead Money|Honest Hearts|Old World Blues|Lonesome Road|Gun Runners Arsenal)\.esm'
-    group: *fixesGroup
+    group: *unofficialPatchesGroup
     msg:
       - <<: *alreadyInX
         subs: [ '**YUP - Base Game + All DLC.esm**' ]
@@ -4979,7 +4987,7 @@ plugins:
       - 'ThePitt.esm'
   ### TTW - YUP ###
   - name: 'YUPTTW.esm'
-    group: *fixesGroup
+    group: *unofficialPatchesGroup
     inc: [ 'YUP - Base Game + All DLC.esm' ]
     tag:
       - Actors.ACBS
