@@ -573,8 +573,11 @@ groups:
   - name: &dlcGroup DLC
     description: 'A group for official downloadable content.'
 
-  - name: &unofficialPatchesGroup Unofficial Patches
+  - name: &veryEarlyGroup Very Early Loaders
     after: [ *dlcGroup ]
+
+  - name: &unofficialPatchesGroup Unofficial Patches
+    after: [ *veryEarlyGroup ]
 
   - name: &fixesGroup Fixes
     description: 'A group for modules that fix issues and bugs.'
