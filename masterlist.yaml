@@ -5107,6 +5107,9 @@ plugins:
       - Stats
 
   - name: 'LDFemalePowerArmorPack.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40899/'
+        name: 'Female Power Armor Pack'
     inc: [ 'LDFemalePowerArmorPack.esp' ]
 
   - name: 'NSkies - Vanilla Edition.esm'
