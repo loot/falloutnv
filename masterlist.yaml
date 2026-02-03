@@ -7445,18 +7445,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/52428/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'Purge Cell Buffers.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
-    inc: [ *TTWv320 ]
-
   - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'fwv.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/50363/'
-        name: 'Fallout Who Vegas - Complete'
     inc: [ *TTWv320 ]
 
   - name: 'Enhanced NPC Awareness.esp'
