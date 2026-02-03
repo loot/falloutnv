@@ -6045,9 +6045,6 @@ plugins:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
 
-  - name: 'wsex_workgirl.esp'
-    inc: [ 'wsex_workgirl_tryout.esp' ]
-
   - name: 'BrainPerkBugfix.esp'
     inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
 
