@@ -1672,7 +1672,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79378/'
         name: 'Atmospheric Lighting Tweaks (Interior Lighting for FNV and TTW)'
-    group: *lightingGroup
+    group: *cellLightingGroup
     tag:
       - C.ImageSpace
       - C.Light
@@ -1865,7 +1865,7 @@ plugins:
   # Core #
   - name: 'Interior Lighting Overhaul - Ultimate Edition.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35794/' ]
-    group: *lightingGroup
+    group: *cellLightingGroup
     inc:
       - *TTWv320
       - 'ILO - Fallout New Vegas.esp'
@@ -1874,38 +1874,32 @@ plugins:
       - crc: 0x393BF52E
         util: 'FNVEdit v4.0.2f'
   - name: 'ILO - Fallout New Vegas.esp'
-    group: *lightingGroup
+    group: *cellLightingGroup
     tag: [ C.Light ]
   # DLC Add-Ons #
   - name: 'ILO - Dead Money.esp'
-    group: *lightingGroup
     after: [ 'ILO - Fallout New Vegas.esp' ]
     inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
     tag: [ C.Light ]
   - name: 'ILO - Honest Hearts.esp'
-    group: *lightingGroup
     after: [ 'ILO - Fallout New Vegas.esp' ]
     inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
     tag: [ C.Light ]
   - name: 'ILO - Old World Blues.esp'
-    group: *lightingGroup
     after: [ 'ILO - Fallout New Vegas.esp' ]
     inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
     tag: [ C.Light ]
   - name: 'ILO - Lonesome Road.esp'
-    group: *lightingGroup
     after: [ 'ILO - Fallout New Vegas.esp' ]
     inc: [ 'Interior Lighting Overhaul - Ultimate Edition.esp' ]
     tag: [ C.Light ]
   # Patches #
   - name: 'ILO - A World of Pain.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag: [ C.Light ]
   - name: 'ILO - D.E.I.M.O.S.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1914,13 +1908,11 @@ plugins:
       - C.Light
       - C.Owner
   - name: 'ILO - GS Shack.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag: [ C.Light ]
   - name: 'ILO - New Vegas Bounties.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1936,7 +1928,6 @@ plugins:
       - crc: 0x64784791
         util: 'FNVEdit v4.0.2f'
   - name: 'ILO - New Vegas Bounties II.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1947,7 +1938,6 @@ plugins:
       - crc: 0x81D4AE7C
         util: 'FNVEdit v4.0.2f'
   - name: 'ILO - NVInteriors Project.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -1959,19 +1949,16 @@ plugins:
       - crc: 0xF3439EA3
         util: 'FNVEdit v4.0.2f'
   - name: 'ILO - NVInteriors Project - AWOP.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag: [ C.Light ]
   - name: 'ILO - Project Reality Patch.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
     tag: [ C.Climate ]
   - name: 'ILO - Tale of Two Wastelands.esp'
-    group: *lightingGroup
     after:
       - 'ILO - Fallout New Vegas.esp'
       - 'Interior Lighting Overhaul - Ultimate Edition.esp'
@@ -7104,7 +7091,7 @@ plugins:
       - C.Light
 
   - name: 'TTW - Realistic Interior Lighting.esp'
-    group: *lightingGroup
+    group: *cellLightingGroup
     tag: [ C.Light ]
   - name: 'DYNAVISION - Dynamic Lens Effect.esp'
     inc: [ 'Field Depth.esp' ]
