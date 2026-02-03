@@ -7130,8 +7130,7 @@ plugins:
     clean:
       - crc: 0x4DBECCE2
         util: 'FNVEdit v4.0.2f'
-  - name: 'New Vegas Bounties II.esp'
-    tag: [ C.Light ]
+
   - name: 'TrooperOverhaul-Dragbody.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54978/' ]
     tag:
