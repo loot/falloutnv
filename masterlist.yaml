@@ -6799,8 +6799,7 @@ plugins:
       - 'CCO - FT HH Patch.esp'
       - 'CCO - FT OWB Patch.esp'
       - 'CCO - FT LR Patch.esp'
-  - name: 'Lucky 38 Lights.esp'
-    tag: [ C.Light ]
+
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
   - name: '1nivPNSLPatch.esp'
