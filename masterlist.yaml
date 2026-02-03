@@ -6115,9 +6115,6 @@ plugins:
   - name: 'Bountiful Harvest.esp'
     inc: [ 'Dynamic Herbalism.esp' ]
 
-  - name: 'AEVegas.esp'
-    msg: [ *obsolete ]
-
   - name: 'AG Supplementary Uniques.esp'
     inc: [ 'AG Supplementary Uniques WME.esp' ]
   - name: 'AG Supplementary Uniques-Dead Money.esp'
