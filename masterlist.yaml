@@ -7193,6 +7193,7 @@ plugins:
       - 'TrooperOverhaul-Dragbody.esp'
 
   - name: 'Alternative Blood Spout.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/47343/' ]
     tag: [ Graphics ]
 
   - name: 'Armor Replacer Child NPC Fix.esp'
