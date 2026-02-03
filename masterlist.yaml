@@ -5076,10 +5076,6 @@ plugins:
       - NpcFaces
       - Stats
 
-  - name: 'CINEMATECH.esm'
-    req: [ *MCM ]
-    msg: [ *requiresNVSE ]
-
   - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
     msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
