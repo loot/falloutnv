@@ -621,11 +621,8 @@ groups:
     description: 'A group for modules that modify cell weather & lighting.'
     after: [ *cellSettingsGroup ]
 
-  - name: &weatherGroup Weather & Lighting
-    after: [ *cellLightingGroup ]
-
   - name: &highPriorityGroup High Priority Overrides
-    after: [ *weatherGroup ]
+    after: [ *cellLightingGroup ]
 
   - name: &lateLoadersGroup Late Loaders
     after: [ *highPriorityGroup ]
@@ -642,9 +639,12 @@ groups:
   - name: &lodGenGroup LOD Generation
     after: [ *lodResGroup ]
 
+  - name: &weatherGroup Weather & Lighting
+    after: [ *lodGenGroup ]
+
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
-    after: [ *lodGenGroup ]
+    after: [ *weatherGroup ]
 
   - name: &conflictResPatchGroup Conflict Resolution Patches
     description: 'A group for patches that resolve conflicts.'
