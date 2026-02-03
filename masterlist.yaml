@@ -6775,13 +6775,8 @@ plugins:
       - C.Climate
       - C.Light
 
-  - name: 'DYNAVISION - Dynamic Lens Effect.esp'
-    inc: [ 'Field Depth.esp' ]
-    msg: [ *obsolete ]
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
-    inc:
-      - 'DYNAVISION - Dynamic Lens Effect.esp'
-      - 'Field Depth.esp'
+    inc: [ 'Field Depth.esp' ]
 
   - name: 'UWFXGodrays.esp'
     msg: [ *requiresNVSE ]
