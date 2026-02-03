@@ -5579,23 +5579,6 @@ plugins:
   - name: 'MushroomCloudFix.esp'
     msg: [ *obsolete ]
 
-  - name: 'NV Error Fixes DLCs 1.0.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes FNV 1.1.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes FNV 1.1 - FOOK Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes Merged 1.1.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections FNV.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections FNV - FOOK Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections Merged.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections Merged - FOOK Patch.esp'
-    msg: [ *obsolete ]
-
   - name: 'ReloadBugFix.esp'
     msg: [ *obsolete ]
 
