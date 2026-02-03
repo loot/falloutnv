@@ -6802,10 +6802,7 @@ plugins:
 
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
-  - name: '1nivPNSLPatch.esp'
-    tag:
-      - Names
-      - Stats
+
   - name: 'DLC Weapon Integration.esp'
     inc: [ 'DLC Weapon Integration - WMX.esp' ]
   - name: 'OldWorldBlues - Keep Big MT Active.esp'
