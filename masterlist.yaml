@@ -5065,8 +5065,6 @@ plugins:
 
   - name: 'OWNB - Open World.esm'
     inc: [ 'IWR.esm' ]
-#  - name: 'RBX.esm'
-# Needs to be before any mod using a reloading bench including a lot of house mods.
 
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
