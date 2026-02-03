@@ -5587,21 +5587,17 @@ plugins:
 
   - name: 'TTW Perks and Home Markers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
   - name: 'TTW_AnchorageCustomization.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag: [ Names ]
     after: [ 'YUP - NPC Fixes (Base Game + All DLC).esp' ]
   - name: 'TTW_NoKarmaDCFollowers.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
   - name: 'TTW_OutcastTrading.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -5611,7 +5607,6 @@ plugins:
       - 'TTW_NoKarmaDCFollowers.esp'
   - name: 'TTW_Reputation.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag:
       - Actors.Stats
       - Factions
@@ -5625,7 +5620,6 @@ plugins:
       - 'TTW_OutcastTrading.esp'
   - name: 'TTW_SpeechChecks.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
@@ -5635,7 +5629,6 @@ plugins:
       - 'TTW_Reputation.esp'
   - name: 'TTW Anchorage Customization - Speech Checks.esp'
     url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
-    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -5645,7 +5638,6 @@ plugins:
       - 'TTW_SpeechChecks.esp'
   - name: 'TTW_StartupMenu.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
@@ -5657,7 +5649,6 @@ plugins:
       - 'TTW Anchorage Customization - Speech Checks.esp'
   - name: 'TTW_StashPackOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -5669,7 +5660,6 @@ plugins:
       - 'TTW_StartupMenu.esp'
   - name: 'TTW_WildWasteland.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
       - 'TTW_AnchorageCustomization.esp'
@@ -5682,7 +5672,6 @@ plugins:
       - 'TTW_StashPackOptions.esp'
   - name: 'TTWOptions.esp'
     url: [ 'http://taleoftwowastelands.com' ]
-    group: *addonsPatchesGroup
     tag: [ Names ]
     after:
       - 'YUP - NPC Fixes (Base Game + All DLC).esp'
@@ -5696,9 +5685,7 @@ plugins:
       - 'TTW_StashPackOptions.esp'
       - 'TTW_WildWasteland.esp'
   - name: 'ttwadvertitronradioshownfix.esp'
-    group: *addonsPatchesGroup
   - name: 'ttw_-_cut_item_stats.esp'
-    group: *addonsPatchesGroup
     tag: [ Stats ]
   - name: 'YUP - Gameplay Tweaks.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
