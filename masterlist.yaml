@@ -6051,9 +6051,6 @@ plugins:
   - name: 'FourEyesDynamic.esp'
     inc: [ 'FourEyesBetter.esp' ]
 
-  - name: 'ZZZZ--APB_By_Nokturnihs.esp'
-    msg: [ *obsolete ]
-
   - name: 'AutoLoot.esp'
     msg: [ *requiresNVSE ]
 
