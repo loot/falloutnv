@@ -6356,8 +6356,6 @@ plugins:
   - name: 'Stalker Weapons Pack.esp'
     msg: [ *obsolete ]
 
-  - name: 'Armored PA Gloves.esp'
-
   - name: 'AsharasLightningItems_ForNV.esp'
     tag:
       - Actors.AIData
@@ -6392,7 +6390,6 @@ plugins:
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
 
-  - name: 'Powered Power Armor.esp'
 
   - name: 'Seeker Veronica.esp'
     tag: [ Invent ]
