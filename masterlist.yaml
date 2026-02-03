@@ -5065,6 +5065,9 @@ plugins:
     inc: [ 'OWNB - Open World.esm' ]
 
   - name: 'IWS-Core.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38623/'
+        name: 'WS-Increased Wasteland Spawns'
     tag: [ Delev ]
 
   - name: 'OWNB - Open World.esm'
