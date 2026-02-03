@@ -7197,6 +7197,7 @@ plugins:
     tag: [ Graphics ]
 
   - name: 'Armor Replacer Child NPC Fix.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36175/' ]
     tag: [ Invent ]
 
   - name: 'athornysituation.esp'
