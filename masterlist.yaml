@@ -820,6 +820,27 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 11
 
+  - name: 'PUP(FNV|TTW)\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/90124/'
+        name: 'Piber''s Unofficial Patches ( PUPTTW PUPFNV )'
+  - name: 'PUPFNV.esm'
+    group: *unofficialPatchesGroup
+    after:
+      - 'NOPE.esm'
+      - 'Unofficial Patch NVSE Plus.esp'
+      - 'YUP - Base Game + All DLC.esm'
+      - 'YUPDate.esm'
+    inc: [ 'TaleOfTwoWastelands.esm' ]
+    clean:
+      - crc: 0x688752AA
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'PUPTTW.esm'
+    group: *unofficialPatchesGroup
+    clean:
+      - crc: 0x67C2D2F3
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+
   - name: 'Unofficial Patch NVSE Plus.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
