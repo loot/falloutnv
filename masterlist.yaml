@@ -6131,20 +6131,6 @@ plugins:
       - 'AG Supplementary Uniques-Old World Blues.esp'
       - 'AG Supplementary Uniques-Lonesome Road.esp'
 
-  - name: 'Ahzteks Weapon Replacements.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Ahzteks Pistol and SMG Replacements.esp'
-    tag:
-      - Graphics
-      - Names
-      - Sound
-      - Stats
-      - WeaponMods
-
   - name: 'A Load of Balls.esp'
     msg: [ *requiresNVSE ]
 
