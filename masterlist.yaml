@@ -7116,6 +7116,9 @@ plugins:
         util: 'FNVEdit v4.0.4'
 
   - name: 'rotfacetoriches.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/45799/'
+        name: 'New Vegas Uncut 1 - Rotface to Riches'
     tag:
       - Factions
       - Names
