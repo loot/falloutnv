@@ -5410,9 +5410,6 @@ plugins:
   - name: 'SelectFire.esm'
     msg: [ *requiresNVSE ]
 
-  - name: 'SunnyCompanion.esm'
-    msg: [ *obsolete ]
-
   - name: 'T6M Equipment Replacer NV.esm'
     tag:
       - Graphics
@@ -5437,10 +5434,6 @@ plugins:
       - Graphics
       - Hair
       - Names
-
-  - name: 'NV GameStabilizerA8.esm'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
 
   - name: 'jsawyer.esp'
     url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
@@ -5530,34 +5523,14 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'CaravanCardFix.esp'
-    msg: [ *obsolete ]
-
-  - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
-    msg: [ *obsolete ]
-  - name: 'DLM_QuestItemsFix_1.3b-DLC_DM.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ED-EUpgradeInventoryFix.esp'
-    msg: [ *obsolete ]
-
   - name: 'JacknDianeFix.esp'
     tag: [ Invent ]
 
   - name: 'MarcusInvFix.esp'
     tag: [ Invent ]
 
-  - name: 'MushroomCloudFix.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ReloadBugFix.esp'
-    msg: [ *obsolete ]
-
   - name: 'Reload Speed Game Start Fix.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'VendorAmmo45-70Fix.esp'
-    msg: [ *obsolete ]
 
   - name: 'AutoSaverNV.esp'
     inc:
@@ -5707,24 +5680,6 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'IIWR 2.0.3.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.0.7.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.0.9.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.1.0.esp'
-    msg: [ *obsolete ]
-
-  - name: 'GunRunnersExpandedV3.3.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpandedV3.4.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpandedV3.5.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpanded-LoreFriendly.esp'
-    msg: [ *obsolete ]
-
   - name: 'return_deadmoney.esp'
     inc: [ 'SierraMadreEXIT.esp' ]
 
@@ -5734,19 +5689,6 @@ plugins:
       - Invent
       - Names
 
-  - name: 'Schoolhouse Base.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Seachlight Airport NCR.esp'
-    msg: [ *obsolete ]
-
-  - name: 'SierraMadrev2.0.esp'
-    msg: [ *obsolete ]
-  - name: 'SierraMadrev2.1.esp'
-    msg: [ *obsolete ]
-
-  - name: 'UHNV-Performance-Patch.esp'
-    msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
     msg:
       - *obsolete
@@ -5775,12 +5717,6 @@ plugins:
     inc:
       - 'HighlyPopulatedFreeside.esp'
       - 'MediumPopulatedFreeside.esp'
-
-  - name: 'NVR-Version_9.esp'
-    msg: [ *obsolete ]
-
-  - name: 'NVFR-Version 1.esp'
-    msg: [ *obsolete ]
 
   - name: 'NVHarderCore.esp'
     tag:
@@ -6064,10 +6000,6 @@ plugins:
       - 'IWS-AS-MedSpawns.esp'
       - 'IWS-AS-HighSpawns.esp'
     msg: [ *requiresNVSE ]
-  - name: 'IWS-MoreSpawns.esp'
-    msg: [ *obsolete ]
-  - name: 'IWS-UltraSpawns.esp'
-    msg: [ *obsolete ]
 
   - name: 'Less Weight.esp'
     inc: [ 'More Weight.esp' ]
@@ -6123,9 +6055,6 @@ plugins:
 
   - name: 'Assault Carbine mods.esp'
     tag: [ WeaponMods ]
-
-  - name: 'Better Binoculars.esp'
-    msg: [ *obsolete ]
 
   - name: 'Better Binoculars Low.esp'
     inc:
@@ -6193,9 +6122,6 @@ plugins:
     tag: [ Stats ]
   - name: 'Shotgun Commando 1.2 Caravan.esp'
     tag: [ Stats ]
-
-  - name: 'Stalker Weapons Pack.esp'
-    msg: [ *obsolete ]
 
   - name: 'AsharasLightningItems_ForNV.esp'
     tag:
@@ -6349,19 +6275,10 @@ plugins:
       - Graphics
       - NpcFaces
 
-  - name: 'BetterRepairKits.esp'
-    msg: [ *obsolete ]
-  - name: 'BetterRepairKits2.esp'
-    msg: [ *obsolete ]
-
   - name: 'Cowboy Repeater with Vanilla Name.esp'
     req:
       - 'GunSmith.esm'
       - 'GunSmith Guns Upgrade.esp'
-
-  - name: 'T3T_MiscItemIconsNV.esp'
-    msg: [ *obsolete ]
-    tag: [ Graphics ]
 
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
@@ -6382,10 +6299,6 @@ plugins:
   - name: 'Dynamic Quantity Prompt.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-
   - name: 'IMCNNV - Sorted.esp'
     tag: [ Names ]
 
@@ -6399,9 +6312,6 @@ plugins:
 
   - name: 'More Realistic Aiming.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'NoDegredation.esp'
-    msg: [ *obsolete ]
 
   - name: 'NVDLC04 Allegiance w Duster.esp'
     inc: [ 'NVDLC04 Allegiance.esp' ]
@@ -6427,8 +6337,6 @@ plugins:
 
   - name: 'Quick Trade.esp'
     req: [ *MCM ]
-  - name: 'Quick Trade - iHud.esp'
-    msg: [ *obsolete ]
 
   - name: 'Reactive People - Ultimatum.esp'
     msg: [ *requiresNVSE ]
@@ -6522,24 +6430,6 @@ plugins:
   - name: 'GunRunnersArsenal Integration Mod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587/' ]
     inc: [ *TTWv320 ]
-
-  - name: 'NV GameStabilizerA8.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA9.esp'
-    tag: [ NoMerge ]
-
-  - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
-    tag: [ Names ]
-
-  - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'ELECTRO-CITY - Highways and Byways.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
-    inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
 
   - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
@@ -6640,11 +6530,6 @@ plugins:
         util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
 
-  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg: [ *obsolete ]
-  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-    msg: [ *obsolete ]
-
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherOverhaulsGroup
@@ -6660,20 +6545,6 @@ plugins:
       - C.Climate
       - C.Light
   - name: 'Project Westland vision-ZionHH.esp'
-    tag:
-      - C.Climate
-      - C.Light
-
-  - name: 'F3NVProjectRealityMkIv3.esp'
-    msg: [ *obsolete ]
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'F3NVProjectRealityMkIv4.2.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'ProjectRealityMkIv5HDR.esp'
     tag:
       - C.Climate
       - C.Light
