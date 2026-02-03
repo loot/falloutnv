@@ -5064,8 +5064,7 @@ plugins:
     inc: [ 'IWR.esm' ]
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
-  - name: 'AccuRifles.esm'
-    msg: [ *requiresNVSE ]
+
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
