@@ -6083,9 +6083,6 @@ plugins:
   - name: 'christinecos.esp'
     tag: [ Graphics ]
 
-  - name: 'GRA WRP Compatibility Patch.esp'
-    tag: [ Graphics ]
-
   - name: 'Classic Plasma Grenade.esp'
     tag: [ Graphics ]
 
@@ -6379,12 +6376,6 @@ plugins:
   - name: 'Weight_Rebalance_v10.esp.'
     tag: [ Stats ]
 
-  - name: 'Frequency - WMX Patch.esp'
-    tag: [ Graphics ]
-
-  - name: 'Frequency - PN+WMX Patch.esp'
-    tag: [ Graphics ]
-
   - name: 'ACS-WMXModernWeapons.esp'
     tag: [ Invent ]
 
@@ -6566,13 +6557,6 @@ plugins:
 
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
     tag: [ Graphics ]
-
-  - name: 'CCO - FT All DLC Patch.esp'
-    inc:
-      - 'CCO - FT DM Patch.esp'
-      - 'CCO - FT HH Patch.esp'
-      - 'CCO - FT OWB Patch.esp'
-      - 'CCO - FT LR Patch.esp'
 
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
