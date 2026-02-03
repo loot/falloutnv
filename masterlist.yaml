@@ -7227,6 +7227,7 @@ plugins:
     inc: [ *TTWv320 ]
 
   - name: 'Improved Sounds FX.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
 
   - name: 'Integration - Couriers Stash+WMX.esp'
