@@ -5091,6 +5091,7 @@ plugins:
       - Stats
 
   - name: 'Fiends, With Style.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/36307/' ]
     tag: [ Delev ]
 
   - name: 'FOOK - New Vegas.esm'
