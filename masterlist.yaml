@@ -7017,8 +7017,7 @@ plugins:
     clean:
       - crc: 0xCB44400D
         util: 'FNVEdit v4.0.2f'
-  - name: 'AnimatedFan.esp'
-    tag: [ Destructible ]
+
   - name: 'Tales from the Burning Sands.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37172/' ]
     tag:
