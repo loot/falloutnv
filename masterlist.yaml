@@ -7170,6 +7170,9 @@ plugins:
       - Factions
 
   - name: 'DeadMoneyFemaleTuxedo.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/40595/'
+        name: 'Dead Money Type3 Outfits'
     tag: [ Graphics ]
 
   - name: 'Roberts_NewVegas.esp'
