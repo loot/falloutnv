@@ -1194,6 +1194,11 @@ plugins:
       - 'NOPE.esm'
       - 'YUP - Base Game + All DLC.esm'
       - 'YUPTTW.esm'
+    clean:
+      - crc: 0x4FF11DA1
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+      - crc: 0xD7BE2EE4
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Strip Lights Region Fix.esp'
     group: *cellSettingsGroup
     tag: [ C.Regions ]
