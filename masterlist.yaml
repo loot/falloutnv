@@ -5071,6 +5071,9 @@ plugins:
     tag: [ Delev ]
 
   - name: 'OWNB - Open World.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/39130/'
+        name: 'An Open World - No Borders'
     inc: [ 'IWR.esm' ]
 
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
