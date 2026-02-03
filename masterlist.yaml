@@ -6783,19 +6783,6 @@ plugins:
       - 'DYNAVISION - Dynamic Lens Effect.esp'
       - 'Field Depth.esp'
 
-  - name: 'ELECTRO-CITY - Emittance.esp'
-    inc: [ 'ELECTRO-CITY - Imaginator.esp' ]
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-I DoF Blur.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DoF Blur.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DOF Clear.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE Clear.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DoF.esp'
-    msg: [ *obsolete ]
   - name: 'UWFXGodrays.esp'
     msg: [ *requiresNVSE ]
   - name: 'UnderwaterFX.esp'
