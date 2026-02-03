@@ -7182,6 +7182,9 @@ plugins:
         util: 'FNVEdit v4.0.2f'
 
   - name: 'ADAM Complete.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/61390/'
+        name: 'ADAM Reborn'
     tag:
       - Delev
       - Graphics
