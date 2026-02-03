@@ -6392,24 +6392,6 @@ plugins:
   - name: 'IMCNNV - Sorted.esp'
     tag: [ Names ]
 
-  - name: 'Intelligence_And_Skill_Points_Hardcore.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_High.esp'
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_High.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_Increased.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_Normal.esp'
-    inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
-
   - name: 'Invisibility for No Reputation.esp'
     msg: [ *requiresNVSE ]
 
