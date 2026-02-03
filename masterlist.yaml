@@ -5016,34 +5016,6 @@ plugins:
       - Stats
       - Text
 
-  - name: 'TTWfixes.esm'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-fixes-222-official-bugfix-pack-ttw' ]
-    group: *fixesGroup
-    inc: [ 'YUP - Base Game + All DLC.esm' ]
-    after: [ 'TaleOfTwoWastelands.esm' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Light
-      - C.Owner
-      - C.Water
-      - Delev
-      - Destructible
-      - Eyes
-      - Factions
-      - Graphics
-      - Hair
-      - Invent
-      - Names
-      - Relev
-      - Scripts
-      - Sound
-      - Stats
-      - WeaponMods
-
   - name: 'UWHNV-Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36121/' ]
     msg: [ *requiresNVSE ]
@@ -5052,12 +5024,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/65041/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'ProjectBrazil.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    msg: [ *obsolete ]
-    after:
-      - 'Project Nevada - Core.esm'
-      - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     after: [ 'ProjectBrazil.esm' ]
@@ -5098,8 +5064,7 @@ plugins:
     inc: [ 'IWR.esm' ]
 #  - name: 'RBX.esm'
 # Needs to be before any mod using a reloading bench including a lot of house mods.
-  - name: 'AccuRifles.esm'
-    msg: [ *requiresNVSE ]
+
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
     tag:
       - Actors.ACBS
@@ -5110,22 +5075,7 @@ plugins:
       - Names
       - NpcFaces
       - Stats
-  - name: 'StreetLights.esm'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-street-lights' ]
-    inc:
-      - 'ELECTRO-CITY - CompletedWorkorders.esm'
-      - 'SimpleStreetLights.esp'
-      - 'SimpleStreetLights (Extra Lights).esp'
-    tag:
-      - Graphics
-      - Scripts
-      - Stats
-  - name: 'CINEMATECH.esm'
-    req: [ *MCM ]
-    msg: [ *requiresNVSE ]
 
-  - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
-    msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
     tag: [ Delev ]
   - name: 'FOOK - New Vegas.esm'
@@ -5437,14 +5387,6 @@ plugins:
       # v1.3
       - crc: 0xBBFBAFD5
         util: 'FNVEdit v4.0.2f'
-  - name: 'Project Nevada - TTW.esp'
-    url: [ 'https://taleoftwowastelands.com/content/project-nevada-w-extra-options-ttw-patch' ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
 
   - name: 'XFO -.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37871/' ]
@@ -5491,71 +5433,6 @@ plugins:
   - name: 'Clean-Deluxe FNV.esm'
     inc: [ 'Performance of the Gods.esp' ]
 
-  - name: 'HonestHearts-CaliberX.esm'
-    tag: [ Names ]
-  - name: 'CFWTTW.esm'
-    url: [ 'https://taleoftwowastelands.com/content/classic-fallout-weapons-ttw' ]
-    inc:
-      - 'CFWNV.esp'
-      - 'CFWNV-DLC.esp'
-    tag:
-      - Delev
-      - Invent
-      - Names
-      - Relev
-  - name: 'TTW Redesigned.esm'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
-    inc:
-      - 'Project Beauty.esm'
-      - 'New Vegas Redesigned II.esm'
-      - 'New Vegas Redesigned 3.esm'
-      - 'New Vegas Redesigned 3.esp'
-    tag:
-      - Factions
-      - Invent
-      - Names
-  - name: 'Project Beauty.esm'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-fallout-3-new-vegas-redesigned' ]
-    inc: [ 'TTW Redesigned.esm' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Body-F
-      - Body-M
-      - Eyes
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Mouth
-      - R.Teeth
-      - Voice-F
-      - Voice-M
-  - name: 'Mart''s Mutant Mod.esm'
-    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-updated-mcm' ]
-    inc: [ *TTWv320 ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
-  - name: 'MMM_NV.esp'
-    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    tag:
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relev
-  - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
-    url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.DeathItem
-      - Graphics
-      - Scripts
-
   - name: 'MikotoBeauty.esm'
     tag:
       - Eyes
@@ -5566,151 +5443,6 @@ plugins:
     msg: [ *obsolete ]
     tag: [ NoMerge ]
 
-  - name: 'TTW Perks and Home Markers.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-  - name: 'TTW_AnchorageCustomization.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag: [ Names ]
-    after: [ 'YUP - NPC Fixes (Base Game + All DLC).esp' ]
-  - name: 'TTW_NoKarmaDCFollowers.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-  - name: 'TTW_OutcastTrading.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-  - name: 'TTW_Reputation.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag:
-      - Actors.Stats
-      - Factions
-      - Names
-      - Relations
-      - Stats
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-  - name: 'TTW_SpeechChecks.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag: [ Names ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-  - name: 'TTW Anchorage Customization - Speech Checks.esp'
-    url: [ 'https://taleoftwowastelands.com/content/compatibility-patch-thread' ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-      - 'TTW_SpeechChecks.esp'
-  - name: 'TTW_StartupMenu.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag: [ Names ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-      - 'TTW_SpeechChecks.esp'
-      - 'TTW Anchorage Customization - Speech Checks.esp'
-  - name: 'TTW_StashPackOptions.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-      - 'TTW_SpeechChecks.esp'
-      - 'TTW Anchorage Customization - Speech Checks.esp'
-      - 'TTW_StartupMenu.esp'
-  - name: 'TTW_WildWasteland.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-      - 'TTW_SpeechChecks.esp'
-      - 'TTW Anchorage Customization - Speech Checks.esp'
-      - 'TTW_StartupMenu.esp'
-      - 'TTW_StashPackOptions.esp'
-  - name: 'TTWOptions.esp'
-    url: [ 'http://taleoftwowastelands.com' ]
-    tag: [ Names ]
-    after:
-      - 'YUP - NPC Fixes (Base Game + All DLC).esp'
-      - 'TTW_AnchorageCustomization.esp'
-      - 'TTW_NoKarmaDCFollowers.esp'
-      - 'TTW_OutcastTrading.esp'
-      - 'TTW_Reputation.esp'
-      - 'TTW_SpeechChecks.esp'
-      - 'TTW Anchorage Customization - Speech Checks.esp'
-      - 'TTW_StartupMenu.esp'
-      - 'TTW_StashPackOptions.esp'
-      - 'TTW_WildWasteland.esp'
-  - name: 'ttwadvertitronradioshownfix.esp'
-  - name: 'ttw_-_cut_item_stats.esp'
-    tag: [ Stats ]
-  - name: 'YUP - Gameplay Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *earlyLoadersGroup
-    after:
-      - 'TTW Perks and Home Markers.esp'
-      - 'TTWOptions.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Skeleton
-      - Actors.Stats
-      - C.Owner
-      - Delev
-      - Destructible
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - NPC.Class
-      - Scripts
-      - Sound
-      - Stats
-  - name: 'YUP - Gameplay Tweaks - TTW.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *earlyLoadersGroup
-    after:
-      - 'TTW Perks and Home Markers.esp'
-      - 'TTWOptions.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.CombatStyle
-      - Actors.Skeleton
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
-      - Scripts
-      - Sound
-      - Stats
   - name: 'jsawyer.esp'
     url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
@@ -6237,13 +5969,6 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'Project Brazil Project Nevada Patch.esp'
-    tag: [ Invent ]
-  - name: 'OWB Big Empty Overhaul.esp'
-    tag:
-      - Invent
-      - Names
-      - Stats
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
   - name: 'Equipment Restoration Project.esp'
@@ -6328,10 +6053,6 @@ plugins:
       - 'GRA WRP Compatibility Patch no Brush Gun.esp'
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
-
-  - name: 'TTW-WEP.esp'
-    url: [ 'https://taleoftwowastelands.com/content/ttw-wep-eve' ]
-    tag: [ Graphics ]
 
   - name: 'LouderGuns.esp'
     tag: [ Sound ]
@@ -6651,17 +6372,6 @@ plugins:
     tag:
       - NPC.Race
       - NpcFaces
-  - name: 'Destruction.esm'
-    url: [ 'https://taleoftwowastelands.com/content/destruction' ]
-    tag:
-      - C.Owner
-      - Destructible
-      - Graphics
-      - Invent
-      - Names
-      - Scripts
-      - Sound
-      - Stats
 
   - name: 'Companion Module Pack.esp'
     inc:
@@ -7058,37 +6768,13 @@ plugins:
       - C.Climate
       - C.Light
 
-  - name: 'TTW - Realistic Interior Lighting.esp'
-    group: *cellLightingGroup
-    tag: [ C.Light ]
-  - name: 'DYNAVISION - Dynamic Lens Effect.esp'
-    inc: [ 'Field Depth.esp' ]
-    msg: [ *obsolete ]
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
-    inc:
-      - 'DYNAVISION - Dynamic Lens Effect.esp'
-      - 'Field Depth.esp'
+    inc: [ 'Field Depth.esp' ]
 
-  - name: 'ELECTRO-CITY - Emittance.esp'
-    inc: [ 'ELECTRO-CITY - Imaginator.esp' ]
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-I DoF Blur.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DoF Blur.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DOF Clear.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE Clear.esp'
-    msg: [ *obsolete ]
-  - name: 'CustomLighting-IE DoF.esp'
-    msg: [ *obsolete ]
   - name: 'UWFXGodrays.esp'
     msg: [ *requiresNVSE ]
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'EwwGhoulyBody.esp'
-    tag: [ Body-F ]
 
   - name: 'MikotoBeauty.esp'
     tag:
@@ -7106,14 +6792,10 @@ plugins:
       - 'CCO - FT HH Patch.esp'
       - 'CCO - FT OWB Patch.esp'
       - 'CCO - FT LR Patch.esp'
-  - name: 'Lucky 38 Lights.esp'
-    tag: [ C.Light ]
+
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
-  - name: '1nivPNSLPatch.esp'
-    tag:
-      - Names
-      - Stats
+
   - name: 'DLC Weapon Integration.esp'
     inc: [ 'DLC Weapon Integration - WMX.esp' ]
   - name: 'OldWorldBlues - Keep Big MT Active.esp'
@@ -7284,9 +6966,6 @@ plugins:
       - crc: 0x4FE536B4
         util: 'FNVEdit v4.0.4'
 
-  - name: 'Project Nevada - Med-X Fix.esp'
-    tag: [ Names ]
-
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
@@ -7303,8 +6982,7 @@ plugins:
     clean:
       - crc: 0xCB44400D
         util: 'FNVEdit v4.0.2f'
-  - name: 'AnimatedFan.esp'
-    tag: [ Destructible ]
+
   - name: 'Tales from the Burning Sands.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/37172/' ]
     tag:
@@ -7389,8 +7067,6 @@ plugins:
       - 'TrooperOverhaul-Dragbody.esp'
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
     inc: [ *TTWv320 ]
-  - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
-    tag: [ Graphics ]
 
   - name: 'Improved Sounds FX.esp'
     tag: [ Sound ]
@@ -7416,8 +7092,7 @@ plugins:
     clean:
       - crc: 0x4DBECCE2
         util: 'FNVEdit v4.0.2f'
-  - name: 'New Vegas Bounties II.esp'
-    tag: [ C.Light ]
+
   - name: 'TrooperOverhaul-Dragbody.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54978/' ]
     tag:
@@ -7616,10 +7291,6 @@ plugins:
       - crc: 0x2AEE91EB
         util: 'FNVEdit v4.1.5d'
 
-  - name: 'Wasteland Gals.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/67079/' ]
-    inc: [ *TTWv320 ]
-
   - name: 'FNVLODGen.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
@@ -7629,10 +7300,6 @@ plugins:
       - 'LOD Additions - TTW Patch.esp'
       - 'tmzLODadditions.esp'
       - 'Wasted LOD rocks.esp'
-
-  - name: 'TTWLODGen.esp'
-    url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
-    group: *lodGenGroup
 
   - name: 'tmzLODadditions.esp'
     url:
@@ -7735,18 +7402,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/52428/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'Purge Cell Buffers.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/50363/' ]
-    inc: [ *TTWv320 ]
-
   - name: 'Zan_AutoPurge_SmartAgro_NV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49319/' ]
-    inc: [ *TTWv320 ]
-
-  - name: 'fwv.esm'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/50363/'
-        name: 'Fallout Who Vegas - Complete'
     inc: [ *TTWv320 ]
 
   - name: 'Enhanced NPC Awareness.esp'
