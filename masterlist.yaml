@@ -1803,7 +1803,7 @@ plugins:
       - 'Western Sky.esp'
       - 'Western Sky - Darker Nights.esp'
   - name: '(FNV|TTW) Realistic Wasteland Lighting( - (ENB )?(Full|No DLC)?)?\.esp'
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Realistic Wasteland Lighting ESP' ]
@@ -1819,7 +1819,7 @@ plugins:
       - 'FNV Realistic Wasteland Lighting - Full.esp'
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
   - name: 'TTW Realistic Wasteland Lighting - Darker Nights.esp'
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     inc:
       - 'FNV Realistic Wasteland Lighting - No DLC.esp'
       - 'FNV Realistic Wasteland Lighting - ENB Full.esp'
@@ -1830,7 +1830,7 @@ plugins:
 
   - name: 'Weathers Revised.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     inc:
       - 'Altitude.esp'
       - 'BlueMoonImagespace.esp'
@@ -7053,7 +7053,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     tag:
       - C.Climate
       - C.Light
@@ -7669,7 +7669,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
         name: 'FNVLODGen'
-    group: *lodGroup
+    group: *lodGenGroup
     after:
       - 'LOD Additions - TTW Patch.esp'
       - 'tmzLODadditions.esp'
@@ -7677,13 +7677,13 @@ plugins:
 
   - name: 'TTWLODGen.esp'
     url: [ 'https://taleoftwowastelands.com/content/fnvlodgen' ]
-    group: *lodGroup
+    group: *lodGenGroup
 
   - name: 'tmzLODadditions.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/61206/'
         name: 'LOD additions and improvements'
-    group: *lodGroup
+    group: *lodResGroup
     msg:
       - <<: *patch3rdParty
         subs:
@@ -7698,7 +7698,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
         name: 'Vish''s Patch Hub (FNV-TTW)'
-    group: *lodGroup
+    group: *lodResGroup
     after:  [ 'tmzLODadditions.esp' ]
     clean:
       - crc: 0x5BD687F8
@@ -7708,7 +7708,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
         name: 'Wasted LOD - Cliffs of DC'
-    group: *lodGroup
+    group: *lodResGroup
     req: [ *TTWv320 ]
     clean:
       - crc: 0x8D74EB63
@@ -7716,7 +7716,7 @@ plugins:
 
   - name: '47 ENB Weather.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     inc:
       - 'ProjectRealityMkIv5HDR.esp'
       - 'Nevada Skies.esp'
@@ -7726,7 +7726,6 @@ plugins:
       - Sound
   - name: '47 ENB Weather - TTW Patch.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
-    group: *weatherGroup
     after: [ '47 ENB Weather.esp' ]
     tag:
       - C.ImageSpace
@@ -7965,7 +7964,7 @@ plugins:
 
   - name: 'Altitude.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71404/' ]
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     clean:
       - crc: 0xE3EF6849
         util: 'FNVEdit v4.0.3f'
