@@ -7103,8 +7103,6 @@ plugins:
       - 'TrooperOverhaul-Dragbody.esp'
       - 'DragonskinNCRPersonnelWearingOutfits.esp'
     inc: [ *TTWv320 ]
-  - name: 'GRA-WRP-Patch-Two_Unofficial.esp'
-    tag: [ Graphics ]
 
   - name: 'Improved Sounds FX.esp'
     tag: [ Sound ]
