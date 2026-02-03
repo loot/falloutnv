@@ -6998,9 +6998,6 @@ plugins:
       - crc: 0x4FE536B4
         util: 'FNVEdit v4.0.4'
 
-  - name: 'Project Nevada - Med-X Fix.esp'
-    tag: [ Names ]
-
   - name: 'rotfacetoriches.esp'
     tag:
       - Factions
