@@ -1183,10 +1183,11 @@ plugins:
         subs: [ 'Yukichigai Unofficial Patch' ]
         condition: 'active("YUP - Base Game( \+ All DLC)?\.esm")'
 
-  - name: 'Strip Lights Region Fix.*\.esp'
+  - name: 'Strip Lights Region Fix.*\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73596/'
         name: 'Strip Lights Region Fix'
+  - name: 'Strip Lights Region Fix.esm'
   - name: 'Strip Lights Region Fix.esp'
     group: *cellSettingsGroup
     tag: [ C.Regions ]
