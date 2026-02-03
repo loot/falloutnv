@@ -6707,8 +6707,6 @@ plugins:
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
     inc: [ 'Field Depth.esp' ]
 
-  - name: 'UWFXGodrays.esp'
-    msg: [ *requiresNVSE ]
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
