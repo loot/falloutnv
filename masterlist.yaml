@@ -587,18 +587,9 @@ groups:
     description: 'A group for mods that provide resources and/or a framework for other mods to use.'
     after: [ *fixesGroup ]
 
-  - name: &addonsPatchesGroup Add-ons & Expansions (Patches)
-    description: 'A group for patches of modules in Add-ons & Expansions.'
-
-  - name: &addonsGroup Add-ons & Expansions
-    description: 'A group for modules that add new content or expand the vanilla game.'
-    after:
-      - *addonsPatchesGroup
-      - *frameworksGroup
-
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early before most other mods.'
-    after: [ *addonsGroup ]
+    after: [ *frameworksGroup ]
 
   - name: &underridesGroup Underrides
     after: [ *earlyLoadersGroup ]
@@ -616,25 +607,16 @@ groups:
   - name: &coreGroup Core Mods
     after: [ *mediumPriorityGroup ]
 
-  - name: &lightingGroup Interior Lighting Overhaul
-    after: [ *coreGroup ]
-
-  - name: &lodGroup LOD
-    after: [ *lightingGroup ]
-
   - name: &cellSettingsGroup Cell Settings
     description: 'A group for modules that only modify cell settings.'
-    after: [ *lodGroup ]
+    after: [ *coreGroup ]
 
   - name: &cellLightingGroup Cell Weather & Lighting
     description: 'A group for modules that modify cell weather & lighting.'
     after: [ *cellSettingsGroup ]
 
-  - name: &weatherGroup Weather & Lighting
-    after: [ *cellLightingGroup ]
-
   - name: &highPriorityGroup High Priority Overrides
-    after: [ *weatherGroup ]
+    after: [ *cellLightingGroup ]
 
   - name: &lateLoadersGroup Late Loaders
     after: [ *highPriorityGroup ]
