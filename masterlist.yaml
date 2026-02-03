@@ -1718,7 +1718,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75437/'
         name: 'Desert Natural Weathers'
-    group: *weatherGroup
+    group: *weatherOverhaulsGroup
     req:
       - *JIPLN
       - *johnnyGuitar
@@ -1774,7 +1774,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
         name: 'Climate Control NVSE'
-    group: *weatherGroup
+    group: *lateChangesGroup
     clean:
       - crc: 0x93FA8202
         util: 'FNVEdit v4.0.4c'
