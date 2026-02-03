@@ -5703,36 +5703,6 @@ plugins:
   - name: 'KillableKids_E.esp'
     inc: [ 'KillableKids_NE.esp' ]
 
-  - name: 'Alpha''s MoMod Overhaul.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Monster Mod Wasteland Edition.esp'
-    tag: [ Relev ]
-  - name: 'MMWE-No Oblivion.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-Claw Beast B Gone.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-LoreOut.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-No Werewolves.esp'
-    tag: [ Delev ]
-  - name: 'MMWE - Rebalanced Leveled Lists.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE - Vanilla Spawn Chance.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE-LoreOut-Rebalanced.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE-LoreOut-VanillaSpawnChance.esp'
-    tag:
-      - Delev
-      - Relev
-
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
