@@ -5881,21 +5881,6 @@ plugins:
   - name: 'Npc&CreatureRespawn.esp'
     tag: [ Relev ]
 
-  - name: 'M.M.A.T - Companion Module.esp'
-    tag: [ Actors.AIPackages ]
-  - name: 'M.M.A.T - Ingestible Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T - Shader Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T Loot Module.esp'
-    tag: [ Invent ]
-  - name: 'M.M.A.T - Loot Module.esp'
-    tag: [ Invent ]
-  - name: 'M.M.A.T - Weapon Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T - Spawn Module.esp'
-    tag: [ Relev ]
-
   - name: 'PMT - XPadjust.esp'
     tag: [ Invent ]
   - name: 'PMT - Tougher XPadjust.esp'
