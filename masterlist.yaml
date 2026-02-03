@@ -923,6 +923,10 @@ plugins:
       - NPC.Race
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUPDate.esm**' ]
+        condition: 'active("YUPDate.esm")'
     clean:
       - crc: 0xEC108C63
         util: 'FNVEdit v4.0.4c'
@@ -1080,6 +1084,16 @@ plugins:
         crc: 0x86DE5AB1
         util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 1
+
+  - name: 'YUPDate.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/90824/'
+        name: 'YUPDate - YUP Tweaks and Fixes'
+    group: *unofficialPatchesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
 
 ###### Fixes ######
   - name: 'AmmoScriptFixes.esp'
