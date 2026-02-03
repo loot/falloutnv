@@ -923,6 +923,10 @@ plugins:
       - NPC.Race
       - Scripts
   - name: 'YUP - NPC Fixes (Base Game + All DLC).esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**YUPDate.esm**' ]
+        condition: 'active("YUPDate.esm")'
     clean:
       - crc: 0xEC108C63
         util: 'FNVEdit v4.0.4c'
