@@ -5450,32 +5450,6 @@ plugins:
     msg: [ *obsolete ]
     tag: [ NoMerge ]
 
-  - name: 'YUP - Gameplay Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/61639/?' ]
-    group: *earlyLoadersGroup
-    after:
-      - 'TTW Perks and Home Markers.esp'
-      - 'TTWOptions.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Skeleton
-      - Actors.Stats
-      - C.Owner
-      - Delev
-      - Destructible
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - NPC.Class
-      - Scripts
-      - Sound
-      - Stats
-
   - name: 'jsawyer.esp'
     url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
     inc:
