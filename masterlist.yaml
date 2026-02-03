@@ -600,11 +600,24 @@ groups:
     description: 'A group for modules that should load early before most other mods.'
     after: [ *addonsGroup ]
 
-  - name: default
+  - name: &underridesGroup Underrides
     after: [ *earlyLoadersGroup ]
 
-  - name: &lightingGroup Interior Lighting Overhaul
+  - name: default
+    after: [ *underridesGroup ]
+
+  - name: &lowPriorityGroup Low Priority Overrides
+    description: 'A group for modules that must load after most other mods.'
     after: [ default ]
+
+  - name: &mediumPriorityGroup Medium Priority Overrides
+    after: [ *lowPriorityGroup ]
+
+  - name: &coreGroup Core Mods
+    after: [ *mediumPriorityGroup ]
+
+  - name: &lightingGroup Interior Lighting Overhaul
+    after: [ *coreGroup ]
 
   - name: &lodGroup LOD
     after: [ *lightingGroup ]
@@ -613,12 +626,35 @@ groups:
     description: 'A group for modules that only modify cell settings.'
     after: [ *lodGroup ]
 
-  - name: &weatherGroup Weather & Lighting
+  - name: &cellLightingGroup Cell Weather & Lighting
+    description: 'A group for modules that modify cell weather & lighting.'
     after: [ *cellSettingsGroup ]
+
+  - name: &weatherGroup Weather & Lighting
+    after: [ *cellLightingGroup ]
+
+  - name: &highPriorityGroup High Priority Overrides
+    after: [ *weatherGroup ]
+
+  - name: &lateLoadersGroup Late Loaders
+    after: [ *highPriorityGroup ]
+
+  - name: &latePatchesGroup Late Patches
+    after: [ *lateLoadersGroup ]
+
+  - name: &lodResGroup LOD Resources
+    after: [ *latePatchesGroup ]
+
+  - name: &lodGenGroup LOD Generation
+    after: [ *lodResGroup ]
+
+  - name: &weatherOverhaulsGroup Weather Overhauls
+    description: 'A group for modules that modify climate, weather & lighting.'
+    after: [ *lodGenGroup ]
 
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
-    after: [ *weatherGroup ]
+    after: [ *weatherOverhaulsGroup ]
 
   - name: &conflictResPatchGroup Conflict Resolution Patches
     description: 'A group for patches that resolve conflicts.'
