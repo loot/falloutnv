@@ -7165,6 +7165,9 @@ plugins:
         util: 'FNVEdit v4.0.2f'
 
   - name: 'kochandbohr.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/45886/'
+        name: 'New Vegas Uncut 2 - A Koch and Bohr Story'
     tag:
       - Actors.ACBS
       - Factions
