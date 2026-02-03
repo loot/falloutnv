@@ -5076,8 +5076,6 @@ plugins:
       - NpcFaces
       - Stats
 
-  - name: 'EZ_CompanionNVSE_Killable_Normal.esm'
-    msg: [ *obsolete ]
   - name: 'Fiends, With Style.esm'
     tag: [ Delev ]
   - name: 'FOOK - New Vegas.esm'
