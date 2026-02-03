@@ -2377,7 +2377,6 @@ plugins:
       - 'JSawyer - CE.esp'
       - 'Project Nevada - Rebalance.esp'
       - 'sawyerbatty.esp'
-      - 'Vigor.esp'
   - name: 'JSawyer Ultimate - GRA Merged.esp'
     inc: [ 'Mojave Arsenal.esp' ]
     msg:
@@ -2656,39 +2655,6 @@ plugins:
         crc: 0xFF693F51
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 52
-
-  - name: 'Vigor( - (Armor Integration|Deranged Bright Followers Restored))?\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/83576/'
-        name: 'Vigor - A Vanilla JSawyer Fork'
-  - name: 'Vigor.esp'
-    after: [ 'DelayDLCRedux.esp' ]
-    inc:
-      - 'DelayDLCReduxPOPP.esp'
-      - 'jsawyer.esp'
-      - 'JSawyer - CE.esp'
-      - 'JSawyer Ultimate.esp'
-      - 'sawyerbatty.esp'
-    tag:
-      - Actors.Stats
-      - Delev
-      - Destructible
-      - Enchantments
-      - Invent.Add
-      - Invent.Remove
-      - Names
-      - Relev
-      - Scripts
-      - Stats
-      - Text
-    clean:
-      - crc: 0x20DB866C
-        util: 'FNVEdit v4.1.5d'
-  - name: 'Vigor - Armor Integration.esp'
-    tag:
-      - Graphics
-      - Names
-      - Stats
 
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
