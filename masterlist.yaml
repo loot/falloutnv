@@ -5827,15 +5827,6 @@ plugins:
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
     inc: [ 'UWHNV-Addon-Follower.esp' ]
 
-  - name: 'YangtzeBunkerPlayerHome.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_3.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_4.esp'
-    msg: [ *obsolete ]
-
   - name: 'HighlyPopulatedFreeside.esp'
     inc:
       - 'MediumPopulatedFreeside.esp'
