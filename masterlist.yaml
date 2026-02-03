@@ -5059,6 +5059,9 @@ plugins:
     msg: [ *requiresNVSE ]
 
   - name: 'IWR.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/42285/'
+        name: 'Invisible Wall Remover'
     inc: [ 'OWNB - Open World.esm' ]
 
   - name: 'IWS-Core.esm'
