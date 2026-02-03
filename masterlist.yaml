@@ -5038,22 +5038,6 @@ plugins:
       - crc: 0xD8252B38
         util: 'FNVEdit v4.0.2f'
 
-  - name: 'NVCE Main.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39325/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE Main (Faces Only).esm'
-    tag:
-      - Actors.ACBS
-      - Deactivate
-      - Filter
-      - NPC.Race
-      - NpcFaces
-
   - name: 'AmmoSpreadEffectFixer.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40290/' ]
     msg: [ *requiresNVSE ]
@@ -6366,27 +6350,6 @@ plugins:
 
   - name: 'XVEnclaveBunker.esp'
     tag: [ Invent ]
-
-  - name: 'NVCE DLC01.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE DLC02.esp'
-    tag:
-      - Actors.ACBS
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE DLC03.esp'
-    tag:
-      - Actors.ACBS
-      - Body-M
-      - NpcFaces
-  - name: 'NVCE DLC04.esp'
-    tag:
-      - Actors.ACBS
-      - NpcFaces
 
   - name: 'FCO - NPC Changes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
