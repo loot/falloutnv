@@ -6783,9 +6783,6 @@ plugins:
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'EwwGhoulyBody.esp'
-    tag: [ Body-F ]
-
   - name: 'MikotoBeauty.esp'
     tag:
       - Eyes
