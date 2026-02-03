@@ -6115,9 +6115,6 @@ plugins:
   - name: 'Bountiful Harvest.esp'
     inc: [ 'Dynamic Herbalism.esp' ]
 
-  - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
-    msg: [ *obsolete ]
-
   - name: 'AEVegas.esp'
     msg: [ *obsolete ]
 
