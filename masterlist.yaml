@@ -4825,7 +4825,7 @@ plugins:
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'NewCalifornia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    group: *addonsGroup
+    group: *veryEarlyGroup
     after:
       - 'DeadMoney.esm'
       - 'HonestHearts.esm'
@@ -4880,7 +4880,7 @@ plugins:
         name: 'Tale of Two Wastelands (MOD:PUB)'
       # Do Not Clean This Mods Files
   - name: 'TaleOfTwoWastelands.esm'
-    group: *addonsGroup
+    group: *veryEarlyGroup
     req:
       - *JIPLN
       - *johnnyGuitar
@@ -5567,7 +5567,6 @@ plugins:
       - Relev
   - name: 'Mart''s Mutant Mod Merged Patch Helper.esp'
     url: [ 'https://taleoftwowastelands.com/content/marts-mutant-mod-new-vegas-patch' ]
-    group: *addonsGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
