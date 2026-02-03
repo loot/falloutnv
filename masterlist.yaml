@@ -5725,11 +5725,6 @@ plugins:
   - name: 'GunRunnersExpanded-LoreFriendly.esp'
     msg: [ *obsolete ]
 
-  - name: 'NVInteriors_WastelandEditon.esp'
-    msg: [ *obsolete ]
-  - name: 'NVInteriors_Urban_Edition_v1.0.esp'
-    msg: [ *obsolete ]
-
   - name: 'return_deadmoney.esp'
     inc: [ 'SierraMadreEXIT.esp' ]
 
