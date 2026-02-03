@@ -6379,9 +6379,6 @@ plugins:
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
 
-  - name: 'Delay DLC - DM + HH + OWB.esp'
-    msg: [ *obsolete ]
-
   - name: 'Dynamic Quantity Prompt.esp'
     msg: [ *requiresNVSE ]
 
