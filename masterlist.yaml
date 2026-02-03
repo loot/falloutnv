@@ -1188,6 +1188,12 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/73596/'
         name: 'Strip Lights Region Fix'
   - name: 'Strip Lights Region Fix.esm'
+    group: *veryEarlyGroup
+    after:
+      - 'TaleOfTwoWastelands.esm'
+      - 'NOPE.esm'
+      - 'YUP - Base Game + All DLC.esm'
+      - 'YUPTTW.esm'
   - name: 'Strip Lights Region Fix.esp'
     group: *cellSettingsGroup
     tag: [ C.Regions ]
