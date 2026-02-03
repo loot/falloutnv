@@ -7231,6 +7231,7 @@ plugins:
     tag: [ Sound ]
 
   - name: 'Integration - Couriers Stash+WMX.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/46251/' ]
     tag:
       - Graphics
       - Names
