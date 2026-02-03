@@ -5096,17 +5096,6 @@ plugins:
         name: 'Female Power Armor Pack'
     inc: [ 'LDFemalePowerArmorPack.esp' ]
 
-  - name: 'NSkies - Vanilla Edition.esm'
-    inc: [ 'NSkies URWLified.esm' ]
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLified.esm'
-    inc: [ 'NSkies - Vanilla Edition.esm' ]
-    tag:
-      - C.Climate
-      - C.Light
-
   - name: 'NVInteriors_Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
     clean:
@@ -6776,27 +6765,6 @@ plugins:
     clean:
       - crc: 0x4494A10F
         util: 'FNVEdit v4.0.2f'
-  - name: 'Nevada Skies - Ultimate DLC Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
-    msg: [ *obsolete ]
-  - name: 'Nevada Skies - URWLified.esp'
-    msg: [ *obsolete ]
-  - name: 'Nevada Skies - URWLHH.esp'
-    msg: [ *obsolete ]
-  - name: 'NSkies - URWLNV.esp'
-    msg: [ *obsolete ]
-  - name: 'NSkies URWLifiedOWB.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLifiedHH.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLifiedDM.esp'
-    tag:
-      - C.Climate
-      - C.Light
 
   - name: 'Project Westland vision.esp'
     tag:
