@@ -5409,8 +5409,6 @@ plugins:
 
   - name: 'SelectFire.esm'
     msg: [ *requiresNVSE ]
-  - name: 'Selective Fire.esm'
-    msg: [ *requiresNVSE ]
 
   - name: 'SunnyCompanion.esm'
     msg: [ *obsolete ]
