@@ -1086,6 +1086,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/90824/'
         name: 'YUPDate - YUP Tweaks and Fixes'
     group: *unofficialPatchesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
 
 ###### Fixes ######
   - name: 'AmmoScriptFixes.esp'
