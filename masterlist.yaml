@@ -825,7 +825,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/71239/'
         name: 'Unofficial Patch NVSE Plus'
     group: *unofficialPatchesGroup
-    after: [ 'NOPE.esm' ]
+    after:
+      - 'NOPE.esm'
+      - 'YUP - Base Game + All DLC.esm'
     req:
       - *JIPLN
       - *johnnyGuitar
