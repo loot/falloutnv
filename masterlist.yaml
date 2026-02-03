@@ -5077,6 +5077,9 @@ plugins:
     inc: [ 'IWR.esm' ]
 
   - name: 'ELECTRO-CITY - CompletedWorkorders.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/37908/'
+        name: 'ELECTRO-CITY - Relighting the Wasteland'
     tag:
       - Actors.ACBS
       - Actors.AIData
