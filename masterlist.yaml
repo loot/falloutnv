@@ -5024,12 +5024,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/65041/' ]
     inc: [ *TTWv320 ]
 
-  - name: 'ProjectBrazil.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    msg: [ *obsolete ]
-    after:
-      - 'Project Nevada - Core.esm'
-      - 'Project Nevada - Equipment.esm'
   - name: 'FCOMaster.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
     after: [ 'ProjectBrazil.esm' ]
@@ -6008,13 +6002,6 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'Project Brazil Project Nevada Patch.esp'
-    tag: [ Invent ]
-  - name: 'OWB Big Empty Overhaul.esp'
-    tag:
-      - Invent
-      - Names
-      - Stats
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
   - name: 'Equipment Restoration Project.esp'
