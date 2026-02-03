@@ -6121,13 +6121,6 @@ plugins:
   - name: 'AEVegas.esp'
     msg: [ *obsolete ]
 
-  - name: 'AG Shell Casing Fixes-All Five.esp'
-    tag: [ Graphics ]
-  - name: 'AG Shell Casing Fixes Repeater-Service-ThatGun.esp'
-    tag: [ Graphics ]
-  - name: 'AG Shell Casing Fixes - OWB.esp'
-    tag: [ Graphics ]
-
   - name: 'AG Supplementary Uniques.esp'
     inc: [ 'AG Supplementary Uniques WME.esp' ]
   - name: 'AG Supplementary Uniques-Dead Money.esp'
