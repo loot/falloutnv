@@ -5038,22 +5038,6 @@ plugins:
       - crc: 0xD8252B38
         util: 'FNVEdit v4.0.2f'
 
-  - name: 'NVCE Main.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/39325/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE Main (Faces Only).esm'
-    tag:
-      - Actors.ACBS
-      - Deactivate
-      - Filter
-      - NPC.Race
-      - NpcFaces
-
   - name: 'AmmoSpreadEffectFixer.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/40290/' ]
     msg: [ *requiresNVSE ]
@@ -5111,17 +5095,6 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/40899/'
         name: 'Female Power Armor Pack'
     inc: [ 'LDFemalePowerArmorPack.esp' ]
-
-  - name: 'NSkies - Vanilla Edition.esm'
-    inc: [ 'NSkies URWLified.esm' ]
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLified.esm'
-    inc: [ 'NSkies - Vanilla Edition.esm' ]
-    tag:
-      - C.Climate
-      - C.Light
 
   - name: 'NVInteriors_Core.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43534/' ]
@@ -5436,11 +5409,6 @@ plugins:
 
   - name: 'SelectFire.esm'
     msg: [ *requiresNVSE ]
-  - name: 'Selective Fire.esm'
-    msg: [ *requiresNVSE ]
-
-  - name: 'SunnyCompanion.esm'
-    msg: [ *obsolete ]
 
   - name: 'T6M Equipment Replacer NV.esm'
     tag:
@@ -5466,10 +5434,6 @@ plugins:
       - Graphics
       - Hair
       - Names
-
-  - name: 'NV GameStabilizerA8.esm'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
 
   - name: 'jsawyer.esp'
     url: [ 'https://diogenes-lamp.info/jsawyer_fnv_mod.zip' ]
@@ -5559,51 +5523,14 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'CaravanCardFix.esp'
-    msg: [ *obsolete ]
-
-  - name: 'DLM_QuestItemsFix_1.3b_Eng.esp'
-    msg: [ *obsolete ]
-  - name: 'DLM_QuestItemsFix_1.3b-DLC_DM.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ED-EUpgradeInventoryFix.esp'
-    msg: [ *obsolete ]
-
   - name: 'JacknDianeFix.esp'
     tag: [ Invent ]
 
   - name: 'MarcusInvFix.esp'
     tag: [ Invent ]
 
-  - name: 'MushroomCloudFix.esp'
-    msg: [ *obsolete ]
-
-  - name: 'NV Error Fixes DLCs 1.0.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes FNV 1.1.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes FNV 1.1 - FOOK Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Fixes Merged 1.1.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections FNV.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections FNV - FOOK Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections Merged.esp'
-    msg: [ *obsolete ]
-  - name: 'NV Error Corrections Merged - FOOK Patch.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ReloadBugFix.esp'
-    msg: [ *obsolete ]
-
   - name: 'Reload Speed Game Start Fix.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'VendorAmmo45-70Fix.esp'
-    msg: [ *obsolete ]
 
   - name: 'AutoSaverNV.esp'
     inc:
@@ -5747,64 +5674,11 @@ plugins:
   - name: 'KillableKids_E.esp'
     inc: [ 'KillableKids_NE.esp' ]
 
-  - name: 'Alpha''s MoMod Overhaul.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Monster Mod Wasteland Edition.esp'
-    tag: [ Relev ]
-  - name: 'MMWE-No Oblivion.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-Claw Beast B Gone.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-LoreOut.esp'
-    tag: [ Delev ]
-  - name: 'MMWE-No Werewolves.esp'
-    tag: [ Delev ]
-  - name: 'MMWE - Rebalanced Leveled Lists.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE - Vanilla Spawn Chance.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE-LoreOut-Rebalanced.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'MMWE-LoreOut-VanillaSpawnChance.esp'
-    tag:
-      - Delev
-      - Relev
-
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
       - Actors.AIPackages
       - Delev
       - Relev
-
-  - name: 'IIWR 2.0.3.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.0.7.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.0.9.esp'
-    msg: [ *obsolete ]
-  - name: 'IIWR 2.1.0.esp'
-    msg: [ *obsolete ]
-
-  - name: 'GunRunnersExpandedV3.3.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpandedV3.4.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpandedV3.5.esp'
-    msg: [ *obsolete ]
-  - name: 'GunRunnersExpanded-LoreFriendly.esp'
-    msg: [ *obsolete ]
-
-  - name: 'NVInteriors_WastelandEditon.esp'
-    msg: [ *obsolete ]
-  - name: 'NVInteriors_Urban_Edition_v1.0.esp'
-    msg: [ *obsolete ]
 
   - name: 'return_deadmoney.esp'
     inc: [ 'SierraMadreEXIT.esp' ]
@@ -5815,19 +5689,6 @@ plugins:
       - Invent
       - Names
 
-  - name: 'Schoolhouse Base.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Seachlight Airport NCR.esp'
-    msg: [ *obsolete ]
-
-  - name: 'SierraMadrev2.0.esp'
-    msg: [ *obsolete ]
-  - name: 'SierraMadrev2.1.esp'
-    msg: [ *obsolete ]
-
-  - name: 'UHNV-Performance-Patch.esp'
-    msg: [ *obsolete ]
   - name: 'UWHNV-Core.esp'
     msg:
       - *obsolete
@@ -5844,15 +5705,6 @@ plugins:
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
     inc: [ 'UWHNV-Addon-Follower.esp' ]
 
-  - name: 'YangtzeBunkerPlayerHome.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_2.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_3.esp'
-    msg: [ *obsolete ]
-  - name: 'YangtzeBunkerPlayerHomeV1_4.esp'
-    msg: [ *obsolete ]
-
   - name: 'HighlyPopulatedFreeside.esp'
     inc:
       - 'MediumPopulatedFreeside.esp'
@@ -5865,12 +5717,6 @@ plugins:
     inc:
       - 'HighlyPopulatedFreeside.esp'
       - 'MediumPopulatedFreeside.esp'
-
-  - name: 'NVR-Version_9.esp'
-    msg: [ *obsolete ]
-
-  - name: 'NVFR-Version 1.esp'
-    msg: [ *obsolete ]
 
   - name: 'NVHarderCore.esp'
     tag:
@@ -5933,57 +5779,6 @@ plugins:
 
   - name: 'Npc&CreatureRespawn.esp'
     tag: [ Relev ]
-
-  - name: 'M.M.A.T - Companion Module.esp'
-    tag: [ Actors.AIPackages ]
-  - name: 'M.M.A.T - Ingestible Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T - Shader Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T Loot Module.esp'
-    tag: [ Invent ]
-  - name: 'M.M.A.T - Loot Module.esp'
-    tag: [ Invent ]
-  - name: 'M.M.A.T - Weapon Module.esp'
-    tag: [ Stats ]
-  - name: 'M.M.A.T - Spawn Module.esp'
-    tag: [ Relev ]
-
-  - name: 'NEVAX - BEAUTYPACK.esp'
-    tag:
-      - Body-F
-      - Body-M
-      - NPCFaces
-  - name: 'NEVAX - FUNDE.esp'
-    tag:
-      - Relev
-  - name: 'NEVAX - ITEMBALANCINGS.esp'
-    tag: [ Stats ]
-  - name: 'NEVAX - KAUFINHALTE.esp'
-    tag:
-      - Invent
-      - Relev
-  - name: 'NEVAX - MEHR MONSTER.esp'
-    tag:
-      - Relev
-      - Scripts
-  - name: 'NEVAX - MONSTER.esp'
-    tag:
-      - Relev
-  - name: 'NEVAX - NPC BALANCING.esp'
-    tag:
-      - Relev
-      - Scripts
-  - name: 'NEVAX - RAIDER u NPC.esp'
-    tag:
-      - Relev
-      - Scripts
-  - name: 'NEVAX - RUESTUNGEN.esp'
-    tag:
-      - Relev
-  - name: 'NEVAX - WAFFEN.esp'
-    tag:
-      - Relev
 
   - name: 'PMT - XPadjust.esp'
     tag: [ Invent ]
@@ -6181,17 +5976,11 @@ plugins:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
 
-  - name: 'wsex_workgirl.esp'
-    inc: [ 'wsex_workgirl_tryout.esp' ]
-
   - name: 'BrainPerkBugfix.esp'
     inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
 
   - name: 'FourEyesDynamic.esp'
     inc: [ 'FourEyesBetter.esp' ]
-
-  - name: 'ZZZZ--APB_By_Nokturnihs.esp'
-    msg: [ *obsolete ]
 
   - name: 'AutoLoot.esp'
     msg: [ *requiresNVSE ]
@@ -6211,10 +6000,6 @@ plugins:
       - 'IWS-AS-MedSpawns.esp'
       - 'IWS-AS-HighSpawns.esp'
     msg: [ *requiresNVSE ]
-  - name: 'IWS-MoreSpawns.esp'
-    msg: [ *obsolete ]
-  - name: 'IWS-UltraSpawns.esp'
-    msg: [ *obsolete ]
 
   - name: 'Less Weight.esp'
     inc: [ 'More Weight.esp' ]
@@ -6249,19 +6034,6 @@ plugins:
   - name: 'Bountiful Harvest.esp'
     inc: [ 'Dynamic Herbalism.esp' ]
 
-  - name: '1Camon Aks47 (In BUNKER HIDDEN VALLEY).esp'
-    msg: [ *obsolete ]
-
-  - name: 'AEVegas.esp'
-    msg: [ *obsolete ]
-
-  - name: 'AG Shell Casing Fixes-All Five.esp'
-    tag: [ Graphics ]
-  - name: 'AG Shell Casing Fixes Repeater-Service-ThatGun.esp'
-    tag: [ Graphics ]
-  - name: 'AG Shell Casing Fixes - OWB.esp'
-    tag: [ Graphics ]
-
   - name: 'AG Supplementary Uniques.esp'
     inc: [ 'AG Supplementary Uniques WME.esp' ]
   - name: 'AG Supplementary Uniques-Dead Money.esp'
@@ -6278,28 +6050,11 @@ plugins:
       - 'AG Supplementary Uniques-Old World Blues.esp'
       - 'AG Supplementary Uniques-Lonesome Road.esp'
 
-  - name: 'Ahzteks Weapon Replacements.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Selective Fire - Ahzteks NV Weapon Overhaul.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Ahzteks Pistol and SMG Replacements.esp'
-    tag:
-      - Graphics
-      - Names
-      - Sound
-      - Stats
-      - WeaponMods
-
   - name: 'A Load of Balls.esp'
     msg: [ *requiresNVSE ]
 
   - name: 'Assault Carbine mods.esp'
     tag: [ WeaponMods ]
-
-  - name: 'Better Binoculars.esp'
-    msg: [ *obsolete ]
 
   - name: 'Better Binoculars Low.esp'
     inc:
@@ -6326,9 +6081,6 @@ plugins:
       - Stats
 
   - name: 'christinecos.esp'
-    tag: [ Graphics ]
-
-  - name: 'GRA WRP Compatibility Patch.esp'
     tag: [ Graphics ]
 
   - name: 'Classic Plasma Grenade.esp'
@@ -6367,9 +6119,6 @@ plugins:
     tag: [ Stats ]
   - name: 'Shotgun Commando 1.2 Caravan.esp'
     tag: [ Stats ]
-
-  - name: 'Stalker Weapons Pack.esp'
-    msg: [ *obsolete ]
 
   - name: 'AsharasLightningItems_ForNV.esp'
     tag:
@@ -6428,27 +6177,6 @@ plugins:
 
   - name: 'XVEnclaveBunker.esp'
     tag: [ Invent ]
-
-  - name: 'NVCE DLC01.esp'
-    tag:
-      - Actors.ACBS
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE DLC02.esp'
-    tag:
-      - Actors.ACBS
-      - Invent
-      - NPC.Race
-      - NpcFaces
-  - name: 'NVCE DLC03.esp'
-    tag:
-      - Actors.ACBS
-      - Body-M
-      - NpcFaces
-  - name: 'NVCE DLC04.esp'
-    tag:
-      - Actors.ACBS
-      - NpcFaces
 
   - name: 'FCO - NPC Changes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/54460/' ]
@@ -6544,19 +6272,10 @@ plugins:
       - Graphics
       - NpcFaces
 
-  - name: 'BetterRepairKits.esp'
-    msg: [ *obsolete ]
-  - name: 'BetterRepairKits2.esp'
-    msg: [ *obsolete ]
-
   - name: 'Cowboy Repeater with Vanilla Name.esp'
     req:
       - 'GunSmith.esm'
       - 'GunSmith Guns Upgrade.esp'
-
-  - name: 'T3T_MiscItemIconsNV.esp'
-    msg: [ *obsolete ]
-    tag: [ Graphics ]
 
   - name: 'repairkitsexpanded.esp'
     tag: [ Names ]
@@ -6574,36 +6293,11 @@ plugins:
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
 
-  - name: 'Delay DLC - DM + HH + OWB.esp'
-    msg: [ *obsolete ]
-
   - name: 'Dynamic Quantity Prompt.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'Imp''s More Complex Needs - JA - SORTED.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-
   - name: 'IMCNNV - Sorted.esp'
     tag: [ Names ]
-
-  - name: 'Intelligence_And_Skill_Points_Hardcore.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_High.esp'
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_High.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Increased.esp'
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_Increased.esp'
-    inc:
-      - 'Intelligence_And_Skill_Points_Normal.esp'
-      - 'Intelligence_And_Skill_Points_Very_High.esp'
-  - name: 'Intelligence_And_Skill_Points_Normal.esp'
-    inc: [ 'Intelligence_And_Skill_Points_Very_High.esp' ]
 
   - name: 'Invisibility for No Reputation.esp'
     msg: [ *requiresNVSE ]
@@ -6615,9 +6309,6 @@ plugins:
 
   - name: 'More Realistic Aiming.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'NoDegredation.esp'
-    msg: [ *obsolete ]
 
   - name: 'NVDLC04 Allegiance w Duster.esp'
     inc: [ 'NVDLC04 Allegiance.esp' ]
@@ -6643,8 +6334,6 @@ plugins:
 
   - name: 'Quick Trade.esp'
     req: [ *MCM ]
-  - name: 'Quick Trade - iHud.esp'
-    msg: [ *obsolete ]
 
   - name: 'Reactive People - Ultimatum.esp'
     msg: [ *requiresNVSE ]
@@ -6686,17 +6375,6 @@ plugins:
     tag: [ Stats ]
   - name: 'Weight_Rebalance_v10.esp.'
     tag: [ Stats ]
-
-  - name: 'WMX - Sorted.esp'
-    msg: [ *obsolete ]
-  - name: 'WMXTemporaryPatch.esp'
-    msg: [ *obsolete ]
-
-  - name: 'Frequency - WMX Patch.esp'
-    tag: [ Graphics ]
-
-  - name: 'Frequency - PN+WMX Patch.esp'
-    tag: [ Graphics ]
 
   - name: 'ACS-WMXModernWeapons.esp'
     tag: [ Invent ]
@@ -6743,24 +6421,6 @@ plugins:
   - name: 'GunRunnersArsenal Integration Mod.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/44587/' ]
     inc: [ *TTWv320 ]
-
-  - name: 'NV GameStabilizerA8.esp'
-    msg: [ *obsolete ]
-    tag: [ NoMerge ]
-  - name: 'NV GameStabilizerA9.esp'
-    tag: [ NoMerge ]
-
-  - name: 'LUMENARIUM - Working Sunglasses ONLY.esp'
-    tag: [ Names ]
-
-  - name: 'ELECTRO-CITY - CompletedWorkorders.esp'
-    msg: [ *obsolete ]
-    tag: [ Names ]
-  - name: 'ELECTRO-CITY - Highways and Byways.esp'
-    msg: [ *obsolete ]
-
-  - name: 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - ElectroCityCATEYEvalue.esp'
-    inc: [ 'ELECTRO-CITY - Inventory Sorters Compatibility Patch - RegularCATEYEvalue.esp' ]
 
   - name: 'ACF Brighter Days and ( )?Darker Nights v5 - (Medium |Dark)\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/36418/' ]
@@ -6861,11 +6521,6 @@ plugins:
         util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
 
-  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies 061 Replacer.esp'
-    msg: [ *obsolete ]
-  - name: 'LUMENARIUMandELECTROCITY - Nevada Skies Replacer.esp'
-    msg: [ *obsolete ]
-
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherOverhaulsGroup
@@ -6875,27 +6530,6 @@ plugins:
     clean:
       - crc: 0x4494A10F
         util: 'FNVEdit v4.0.2f'
-  - name: 'Nevada Skies - Ultimate DLC Edition.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
-    msg: [ *obsolete ]
-  - name: 'Nevada Skies - URWLified.esp'
-    msg: [ *obsolete ]
-  - name: 'Nevada Skies - URWLHH.esp'
-    msg: [ *obsolete ]
-  - name: 'NSkies - URWLNV.esp'
-    msg: [ *obsolete ]
-  - name: 'NSkies URWLifiedOWB.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLifiedHH.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'NSkies URWLifiedDM.esp'
-    tag:
-      - C.Climate
-      - C.Light
 
   - name: 'Project Westland vision.esp'
     tag:
@@ -6906,25 +6540,9 @@ plugins:
       - C.Climate
       - C.Light
 
-  - name: 'F3NVProjectRealityMkIv3.esp'
-    msg: [ *obsolete ]
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'F3NVProjectRealityMkIv4.2.esp'
-    tag:
-      - C.Climate
-      - C.Light
-  - name: 'ProjectRealityMkIv5HDR.esp'
-    tag:
-      - C.Climate
-      - C.Light
-
   - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
     inc: [ 'Field Depth.esp' ]
 
-  - name: 'UWFXGodrays.esp'
-    msg: [ *requiresNVSE ]
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
@@ -6939,13 +6557,6 @@ plugins:
 
   - name: 'Alternative Repairing - Breakdown Item Icons.esp'
     tag: [ Graphics ]
-
-  - name: 'CCO - FT All DLC Patch.esp'
-    inc:
-      - 'CCO - FT DM Patch.esp'
-      - 'CCO - FT HH Patch.esp'
-      - 'CCO - FT OWB Patch.esp'
-      - 'CCO - FT LR Patch.esp'
 
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
