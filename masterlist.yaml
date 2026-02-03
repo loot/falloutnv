@@ -6497,11 +6497,6 @@ plugins:
   - name: 'Weight_Rebalance_v10.esp.'
     tag: [ Stats ]
 
-  - name: 'WMX - Sorted.esp'
-    msg: [ *obsolete ]
-  - name: 'WMXTemporaryPatch.esp'
-    msg: [ *obsolete ]
-
   - name: 'Frequency - WMX Patch.esp'
     tag: [ Graphics ]
 
