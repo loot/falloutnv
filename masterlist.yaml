@@ -5055,6 +5055,7 @@ plugins:
       - NpcFaces
 
   - name: 'AmmoSpreadEffectFixer.esm'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/40290/' ]
     msg: [ *requiresNVSE ]
 
   - name: 'IWR.esm'
