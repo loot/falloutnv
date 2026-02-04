@@ -1230,6 +1230,9 @@ plugins:
       - 'YUP - Base Game + All DLC.esm'
       - 'YUPTTW.esm'
     inc: [ 'Strip Lights Region Fix.esp' ]
+    req:
+      - name: 'NVSE/Plugins/hNVSE.dll'
+        display: '[hNVSE](https://www.nexusmods.com/newvegas/mods/85748/)'
     msg: [ *requiresNVSE ]
     clean:
       - crc: 0x4FF11DA1
