@@ -1165,6 +1165,11 @@ plugins:
       - crc: 0xA4457FA7
         util: 'FNVEdit v4.1.5 EXPERIMENTAL'
 
+  - name: '(FNV|TTW) FaceGen Fix\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/71577/'
+        name: 'Mostly Fixed FaceGen Tints (NV or TTW)'
+
   - name: 'Impostors and LOD Flicker Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83691/' ]
     group: *fixesGroup
