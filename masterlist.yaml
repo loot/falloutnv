@@ -1169,6 +1169,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71577/'
         name: 'Mostly Fixed FaceGen Tints (NV or TTW)'
+    group: *fixesGroup
 
   - name: 'Impostors and LOD Flicker Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83691/' ]
