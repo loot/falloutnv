@@ -1171,6 +1171,8 @@ plugins:
         name: 'Mostly Fixed FaceGen Tints (NV or TTW)'
     group: *fixesGroup
     req: [ *JIPLN ]
+  - name: 'FNV FaceGen Fix.esp'
+    inc: [ 'TaleOfTwoWastelands.esm' ]
 
   - name: 'Impostors and LOD Flicker Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83691/' ]
