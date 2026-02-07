@@ -307,6 +307,10 @@ common:
     name: 'NVSE/Plugins/supNVSE.dll'
     display: '[SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160/)'
 
+  - &ttwNVSE
+    name: 'NVSE/Plugins/ttw_nvse.dll'
+    display: '[TTW NVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
+
   - &UIO
     name: 'NVSE/Plugins/ui_organizer.dll'
     display: '[UIO - User Interface Organizer](https://www.nexusmods.com/newvegas/mods/57174/)'
@@ -4768,8 +4772,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *lStewieAlTweaks
-      - name: 'NVSE/Plugins/ttw_nvse.dll'
-        display: '[ROOGNVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
+      - *ttwNVSE
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
