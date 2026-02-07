@@ -1222,25 +1222,6 @@ plugins:
     clean:
       - crc: 0xD72C3602
         util: 'FNVEdit v4.1.5d'
-  - name: 'YUPNavmeshPatch.esm'
-    msg:
-      - <<: *compatIssuesWithX
-        subs: [ 'Essential Vanilla Enhancements Merged' ]
-        condition: 'active("Vanilla Enhancements.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'Functional Post Game Ending' ]
-        condition: 'active("Functional Post Game Ending.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'The Living Desert - Travelers Patrols Consequences' ]
-        condition: 'active("TLD_Travelers.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'Uncut Wasteland' ]
-        condition: 'active("Uncut Wasteland.esm")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x8D7FEFA6
-        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 3448
 
   - name: 'RepairKitFix.esp'
     url:
