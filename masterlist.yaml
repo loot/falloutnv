@@ -314,6 +314,12 @@ common:
     display: '[yGTM - Gameplay Tweaks and Madness](https://www.nexusmods.com/newvegas/mods/72784/)'
 
 # Sub-Anchors
+  # &deletePlugin
+  - &deletePluginStarTTW2
+    <<: *deletePlugin
+    subs: [ 'STAR TTW 2.esp' ]
+    condition: 'file("STAR TTW 2.esp")'
+
   # &requiresMCM_X
   - &requiresMCM
     <<: *requiresMCM_X
