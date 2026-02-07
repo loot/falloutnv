@@ -1353,7 +1353,9 @@ plugins:
   - name: 'DarNifiedUINV.esp'
     url:
       - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
-        name: 'Unofficial DarNified UI Update'
+        name: 'Unofficial DarNified UI Update (ModDB)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/93955/'
+        name: 'Unofficial DarNified UI Update (Nexus)'
     req: [ *UIO ]
     msg: [ *requiresNVSE ]
     clean:
