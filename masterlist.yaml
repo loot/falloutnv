@@ -323,6 +323,10 @@ common:
     name: 'NVSE/Plugins/yGTM.dll'
     display: '[yGTM - Gameplay Tweaks and Madness](https://www.nexusmods.com/newvegas/mods/72784/)'
 
+  - &yUI
+    name: 'NVSE/Plugins/yUI.dll'
+    display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+
 # Sub-Anchors
   # &deletePlugin
   - &deletePluginStarTTW2
@@ -3517,8 +3521,7 @@ plugins:
       - *supNVSE
       - *UIO
       # Req: yUI & ySI - Version: 2.2+ CRC: 2.2.0 C23B2A4B, 2.2.1 2E13D445
-      - name: 'NVSE/Plugins/yUI.dll'
-        display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+      - <<: *yUI
         condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
       - name: 'menus/ySI/ySI.ini'
         display: '[ySI - Sorting Ycons](https://www.nexusmods.com/newvegas/mods/74358/)'
