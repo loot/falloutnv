@@ -251,6 +251,18 @@ common:
     not file("TaleOfTwoWastelands.esm")
 
 # File Anchors
+  # TTW ESM
+  - &TTWv320
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.2+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - &TTWv330
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.3+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+
+  # NVSE Files
   - &anhNVSE
     name: 'NVSE/Plugins/AnhNVSE.dll'
     display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
@@ -294,16 +306,6 @@ common:
   - &supNVSE
     name: 'NVSE/Plugins/supNVSE.dll'
     display: '[SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160/)'
-
-  - &TTWv320
-    name: 'TaleOfTwoWastelands.esm'
-    display: 'Tale Of Two Wastelands v3.2+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
-
-  - &TTWv330
-    name: 'TaleOfTwoWastelands.esm'
-    display: 'Tale Of Two Wastelands v3.3+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
 
   - &UIO
     name: 'NVSE/Plugins/ui_organizer.dll'
