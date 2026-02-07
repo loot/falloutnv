@@ -275,6 +275,10 @@ common:
     name: 'NVSE/Plugins/ClimateControl.dll'
     display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
 
+  - &hNVSE
+    name: 'NVSE/Plugins/hNVSE.dll'
+    display: '[hNVSE](https://www.nexusmods.com/newvegas/mods/85748/)'
+
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
     display: '[JIP LN NVSE Plugin](https://www.nexusmods.com/newvegas/mods/58277/)'
@@ -1251,9 +1255,7 @@ plugins:
       - 'YUP - Base Game + All DLC.esm'
       - 'YUPTTW.esm'
     inc: [ 'Strip Lights Region Fix.esp' ]
-    req:
-      - name: 'NVSE/Plugins/hNVSE.dll'
-        display: '[hNVSE](https://www.nexusmods.com/newvegas/mods/85748/)'
+    req: [ *hNVSE ]
     msg: [ *requiresNVSE ]
     clean:
       - crc: 0x4FF11DA1
