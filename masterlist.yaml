@@ -4360,6 +4360,68 @@ plugins:
       - crc: 0xC0E2EF21
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
+    url:
+      - link: 'https://www.moddb.com/mods/falloutprojectbrazil/'
+        name: 'Fallout - New California (ModDB)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/45138/'
+        name: 'Fallout - New California (Nexus Mods)'
+  - name: 'NewCalifornia.esm'
+    group: *veryEarlyGroup
+    after:
+      - 'CaravanPack.esm'
+      - 'ClassicPack.esm'
+      - 'DeadMoney.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'HonestHearts.esm'
+      - 'LonesomeRoad.esm'
+      - 'MercenaryPack.esm'
+      - 'NOPE.esm'
+      - 'OldWorldBlues.esm'
+      - 'TribalPack.esm'
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
+    inc:
+      - 'Alternative Start.esp'
+      - 'Awesome Crippling Effects v1.8.esp'
+      - 'BellevueBillRegalRises.esp'
+      - 'BoostedSkills.esp'
+      - 'Delay Level Up - Stealth Suit Fix.esp'
+      - 'Delay Level Up.esp'
+      - 'Enhanced NPC Awareness.esp'
+      - 'FNC Overhaul Project.esp'
+      - 'fwv.esm'
+      - 'fwv.esp'
+      - 'Ghoulified.esp'
+      - 'HonestHearts2.esp'
+      - 'HonestHearts2b.esp'
+      - 'HumanPlaguePerk.esp'
+      - 'HumanPlaguePerkReduced.esp'
+      - 'LootEverything_ForDlcSupport.esp'
+      - 'TaleOfTwoWastelands.esm'
+      - 'Threshold.esp'
+      - 'True Wasteland Economy.esp'
+      - 'UnlimitedCompanionsFixed.esp'
+      - 'Vanilla Intro Plus.esp'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Fallout - The Frontier' ]
+        condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
+      - <<: *compatNotes
+        subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
+    clean:
+      - crc: 0xE4316C01
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'NewCalifornia Courier Stash Control.esp'
+    clean:
+      - crc: 0x40BA836F
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'NewCalifornia DLC Control.esp'
+    inc: [ 'Simple DLC Delay.esp' ]
+    clean:
+      - crc: 0x2B81ECDB
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+
   - name: 'Nova ?Arizona( - Map Add-on)?\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85915/'
@@ -4700,55 +4762,6 @@ plugins:
         udr: 16
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
-  - name: 'NewCalifornia.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    group: *veryEarlyGroup
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'CaravanPack.esm'
-      - 'ClassicPack.esm'
-      - 'MercenaryPack.esm'
-      - 'TribalPack.esm'
-    inc:
-      - 'Fallout3.esm'
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-      - 'PointLookout.esm'
-      - 'Zeta.esm'
-      - 'TaleOfTwoWastelands.esm'
-      - 'Alternative Start.esp'
-      - 'UnlimitedCompanionsFixed.esp'
-      - 'LootEverything_ForDlcSupport.esp'
-      - 'Simple DLC Delay.esp'
-      - 'True Wasteland Economy.esp'
-      - 'HumanPlaguePerk.esp'
-      - 'HumanPlaguePerkReduced.esp'
-      - 'BoostedSkills.esp'
-      - 'Delay Level Up.esp'
-      - 'Delay Level Up - Stealth Suit Fix.esp'
-      - 'Enhanced NPC Awareness.esp'
-      - 'Vanilla Intro Plus.esp'
-      - 'HonestHearts2.esp'
-      - 'HonestHearts2b.esp'
-      - 'Threshold.esp'
-      - 'Awesome Crippling Effects v1.8.esp'
-      - 'Ghoulified.esp'
-      - 'BellevueBillRegalRises.esp'
-      - 'fwv.esm'
-      - 'fwv.esp'
-      - 'FNC Overhaul Project.esp'
-    msg:
-      - <<: *compatIssuesWithX
-        subs: [ 'Fallout - The Frontier' ]
-        condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
-      - <<: *compatNotes
-        subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
-
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     url:
       - link: 'https://taleoftwowastelands.com/'
@@ -5433,12 +5446,6 @@ plugins:
 
   - name: 'RX-Auto Incremental Save.esp'
     inc: [ 'CASM.esp' ]
-
-  - name: 'NewCalifornia DLC Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    inc: [ 'Simple DLC Delay.esp' ]
-  - name: 'NewCalifornia Courier Stash Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
 
   - name: 'Centered 3rd Person Camera.esp'
     inc: [ 'FOOK - New Vegas.esm' ]
