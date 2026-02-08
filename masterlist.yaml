@@ -4716,8 +4716,11 @@ plugins:
       - 'HonestHearts.esm'
       - 'LonesomeRoad.esm'
       - 'MercenaryPack.esm'
+      - 'NOPE.esm'
       - 'OldWorldBlues.esm'
       - 'TribalPack.esm'
+      - 'YUP - Base Game.esm'
+      - 'YUP - Base Game + All DLC.esm'
     inc:
       - 'Fallout3.esm'
       - 'Anchorage.esm'
