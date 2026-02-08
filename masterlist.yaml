@@ -4748,6 +4748,11 @@ plugins:
         condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
+  - name: 'NewCalifornia Courier Stash Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+  - name: 'NewCalifornia DLC Control.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+    inc: [ 'Simple DLC Delay.esp' ]
 
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     url:
@@ -5433,12 +5438,6 @@ plugins:
 
   - name: 'RX-Auto Incremental Save.esp'
     inc: [ 'CASM.esp' ]
-
-  - name: 'NewCalifornia DLC Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
-    inc: [ 'Simple DLC Delay.esp' ]
-  - name: 'NewCalifornia Courier Stash Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
 
   - name: 'Centered 3rd Person Camera.esp'
     inc: [ 'FOOK - New Vegas.esm' ]
