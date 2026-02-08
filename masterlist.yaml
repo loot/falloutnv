@@ -4709,14 +4709,14 @@ plugins:
   - name: 'NewCalifornia.esm'
     group: *veryEarlyGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
+      - 'DeadMoney.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'HonestHearts.esm'
+      - 'LonesomeRoad.esm'
       - 'MercenaryPack.esm'
+      - 'OldWorldBlues.esm'
       - 'TribalPack.esm'
     inc:
       - 'Fallout3.esm'
