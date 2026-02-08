@@ -4700,8 +4700,13 @@ plugins:
         udr: 16
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
+  - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
+    url:
+      - link: 'https://www.moddb.com/mods/falloutprojectbrazil/'
+        name: 'Fallout - New California (ModDB)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/45138/'
+        name: 'Fallout - New California (Nexus Mods)'
   - name: 'NewCalifornia.esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     group: *veryEarlyGroup
     after:
       - 'DeadMoney.esm'
@@ -4752,12 +4757,10 @@ plugins:
       - crc: 0xE4316C01
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'NewCalifornia Courier Stash Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     clean:
       - crc: 0x40BA836F
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'NewCalifornia DLC Control.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     inc: [ 'Simple DLC Delay.esp' ]
     clean:
       - crc: 0x2B81ECDB
