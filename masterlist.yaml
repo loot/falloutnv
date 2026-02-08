@@ -4748,11 +4748,20 @@ plugins:
         condition: 'file("NVSE/Plugins/frontier_tweaks.dll")'
       - <<: *compatNotes
         subs: [ 'https://docs.google.com/document/d/14OpRnF5zW4x-qZMQ62JZgM5A4Xq02TAsDoKwKd41P_s/mobilebasic' ]
+    clean:
+      - crc: 0xE4316C01
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'NewCalifornia Courier Stash Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
+    clean:
+      - crc: 0x40BA836F
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'NewCalifornia DLC Control.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/45138/' ]
     inc: [ 'Simple DLC Delay.esp' ]
+    clean:
+      - crc: 0x2B81ECDB
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     url:
