@@ -4722,12 +4722,6 @@ plugins:
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
     inc:
-      - 'Fallout3.esm'
-      - 'Anchorage.esm'
-      - 'ThePitt.esm'
-      - 'BrokenSteel.esm'
-      - 'PointLookout.esm'
-      - 'Zeta.esm'
       - 'TaleOfTwoWastelands.esm'
       - 'Alternative Start.esp'
       - 'UnlimitedCompanionsFixed.esp'
