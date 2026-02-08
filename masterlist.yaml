@@ -4398,7 +4398,6 @@ plugins:
       - 'HumanPlaguePerk.esp'
       - 'HumanPlaguePerkReduced.esp'
       - 'LootEverything_ForDlcSupport.esp'
-      - 'Simple DLC Delay.esp'
       - 'TaleOfTwoWastelands.esm'
       - 'Threshold.esp'
       - 'True Wasteland Economy.esp'
