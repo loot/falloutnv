@@ -251,6 +251,18 @@ common:
     not file("TaleOfTwoWastelands.esm")
 
 # File Anchors
+  # TTW ESM
+  - &TTWv320
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.2+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+
+  - &TTWv330
+    name: 'TaleOfTwoWastelands.esm'
+    display: 'Tale Of Two Wastelands v3.3+'
+    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+
+  # NVSE Files
   - &anhNVSE
     name: 'NVSE/Plugins/AnhNVSE.dll'
     display: '[AnhNVSE](https://www.nexusmods.com/newvegas/mods/74012/)'
@@ -262,6 +274,10 @@ common:
   - &ClimateControl
     name: 'NVSE/Plugins/ClimateControl.dll'
     display: '[ClimateControl](https://www.nexusmods.com/newvegas/mods/77205/)'
+
+  - &hNVSE
+    name: 'NVSE/Plugins/hNVSE.dll'
+    display: '[hNVSE](https://www.nexusmods.com/newvegas/mods/85748/)'
 
   - &JIPLN
     name: 'NVSE/Plugins/jip_nvse.dll'
@@ -295,15 +311,9 @@ common:
     name: 'NVSE/Plugins/supNVSE.dll'
     display: '[SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160/)'
 
-  - &TTWv320
-    name: 'TaleOfTwoWastelands.esm'
-    display: 'Tale Of Two Wastelands v3.2+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
-
-  - &TTWv330
-    name: 'TaleOfTwoWastelands.esm'
-    display: 'Tale Of Two Wastelands v3.3+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+  - &ttwNVSE
+    name: 'NVSE/Plugins/ttw_nvse.dll'
+    display: '[TTW NVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
 
   - &UIO
     name: 'NVSE/Plugins/ui_organizer.dll'
@@ -313,7 +323,21 @@ common:
     name: 'NVSE/Plugins/yGTM.dll'
     display: '[yGTM - Gameplay Tweaks and Madness](https://www.nexusmods.com/newvegas/mods/72784/)'
 
+  - &yUI
+    name: 'NVSE/Plugins/yUI.dll'
+    display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+
+  - &ySI
+    name: 'menus/ySI/ySI.ini'
+    display: '[ySI - Sorting Ycons](https://www.nexusmods.com/newvegas/mods/74358/)'
+
 # Sub-Anchors
+  # &deletePlugin
+  - &deletePluginStarTTW2
+    <<: *deletePlugin
+    subs: [ 'STAR TTW 2.esp' ]
+    condition: 'file("STAR TTW 2.esp")'
+
   # &requiresMCM_X
   - &requiresMCM
     <<: *requiresMCM_X
@@ -1198,25 +1222,6 @@ plugins:
     clean:
       - crc: 0xD72C3602
         util: 'FNVEdit v4.1.5d'
-  - name: 'YUPNavmeshPatch.esm'
-    msg:
-      - <<: *compatIssuesWithX
-        subs: [ 'Essential Vanilla Enhancements Merged' ]
-        condition: 'active("Vanilla Enhancements.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'Functional Post Game Ending' ]
-        condition: 'active("Functional Post Game Ending.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'The Living Desert - Travelers Patrols Consequences' ]
-        condition: 'active("TLD_Travelers.esm")'
-      - <<: *compatIssuesWithX
-        subs: [ 'Uncut Wasteland' ]
-        condition: 'active("Uncut Wasteland.esm")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x8D7FEFA6
-        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 3448
 
   - name: 'RepairKitFix.esp'
     url:
@@ -1239,9 +1244,7 @@ plugins:
       - 'YUP - Base Game + All DLC.esm'
       - 'YUPTTW.esm'
     inc: [ 'Strip Lights Region Fix.esp' ]
-    req:
-      - name: 'NVSE/Plugins/hNVSE.dll'
-        display: '[hNVSE](https://www.nexusmods.com/newvegas/mods/85748/)'
+    req: [ *hNVSE ]
     msg: [ *requiresNVSE ]
     clean:
       - crc: 0x4FF11DA1
@@ -1331,7 +1334,9 @@ plugins:
   - name: 'DarNifiedUINV.esp'
     url:
       - link: 'https://www.moddb.com/mods/unofficial-darnified-ui-update/'
-        name: 'Unofficial DarNified UI Update'
+        name: 'Unofficial DarNified UI Update (ModDB)'
+      - link: 'https://www.nexusmods.com/newvegas/mods/93955/'
+        name: 'Unofficial DarNified UI Update (Nexus)'
     req: [ *UIO ]
     msg: [ *requiresNVSE ]
     clean:
@@ -1418,9 +1423,7 @@ plugins:
       - <<: *deletePlugin
         subs: [ 'Book of Steel.esp' ]
         condition: 'file("Book of Steel.esp")'
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
   - name: 'boa ncrpahelmet.esp'
     tag: [ Delev ]
 
@@ -1433,19 +1436,14 @@ plugins:
       - 'boa ncrpahelmet.esp'
     tag: [ Graphics ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *requiresResources
         subs: [ '[aMidianBorn NV Book Of Water](https://www.nexusmods.com/newvegas/mods/39873/)' ]
         condition: 'not file("meshes/armor/advancedpowerarmor/adpowerarmor.nif")'
 
   - name: 'Classic Combat Armor Replacer Redux FNV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/77658/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag: [ Graphics ]
     clean:
       - crc: 0xCF3A9586
@@ -1457,10 +1455,7 @@ plugins:
         name: 'Classic Replacers for TTW'
     tag: [ Graphics ]
   - name: 'Classic Combat Armor Replacer Redux TTW.esp'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x724F63DF
         util: 'FNVEdit v4.1.5d'
@@ -1486,10 +1481,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/69594/'
         name: 'Classic Leather Armor Replacer for Leather Armor'
   - name: 'Classic Leather Armor Replacer.esp'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag: [ Graphics ]
     clean:
       - crc: 0x7AF51C02
@@ -1500,20 +1492,14 @@ plugins:
       - crc: 0x42958BBA
         util: 'FNVEdit v4.1.5d'
   - name: 'Classic Lightweight Leather Armor Replacer.esp'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x09378564
         util: 'FNVEdit v4.1.5d'
 
   - name: 'CourierDusterReplacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75004/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag:
       - Graphics
       - Names
@@ -1524,10 +1510,7 @@ plugins:
   - name: 'DogToothsEnclaveOfficer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70483/' ]
     tag: [ Graphics ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
 
   - name: 'MetalBoxes.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/63422/' ]
@@ -1558,9 +1541,7 @@ plugins:
       - 'fixy crap ue.esp'
     tag: [ Graphics ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *useOnlyOneX
         subs: [ 'Power Armor Visual Enhancement ESP' ]
         condition: 'many("PAVE_NV(_TTW)?\.esp")'
@@ -1620,10 +1601,7 @@ plugins:
 
   - name: 'Veronica Outfit Replacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag: [ Graphics ]
     clean:
       - crc: 0xA0F3223D
@@ -3530,11 +3508,9 @@ plugins:
       - *supNVSE
       - *UIO
       # Req: yUI & ySI - Version: 2.2+ CRC: 2.2.0 C23B2A4B, 2.2.1 2E13D445
-      - name: 'NVSE/Plugins/yUI.dll'
-        display: '[yUI - User Ynterface](https://www.nexusmods.com/newvegas/mods/74357/)'
+      - <<: *ySI
         condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
-      - name: 'menus/ySI/ySI.ini'
-        display: '[ySI - Sorting Ycons](https://www.nexusmods.com/newvegas/mods/74358/)'
+      - <<: *yUI
         condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
     msg: [ *requires_xNVSE ]
 
@@ -3657,9 +3633,7 @@ plugins:
       - 'Classic Combat Armor Replacer Redux TTW.esp'
       - 'Enclave and BoS Classic Combat Armor .esp'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *requiresResources
         subs: [ '[Brotherhood of Steel and Enclave Classic Combat Armors](https://www.nexusmods.com/newvegas/mods/78216/)' ]
         condition: 'not file("meshes/armor/BoS Combat Armor/combatHelmet_MK1.nif") or not file("STAR TTW 2.esp")'
@@ -3761,10 +3735,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/44476/'
         name: 'Spice of Life - Variety Armor and Clothing'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag:
       - Graphics
       - Invent.Add
@@ -3777,10 +3748,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75714/'
         name: 'Altyn Helmet - Retro Tactical Headgear'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0xC7DBA90B
         util: 'FNVEdit v4.1.5d'
@@ -3789,10 +3757,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/69728/'
         name: 'Bone Harvester - Tribal Cannibal'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag:
       - Invent.Add
       - Invent.Remove
@@ -3804,9 +3769,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/79001/' ]
     req: [ *JIPLN ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - *requires_xNVSE
     clean:
       - crc: 0xCB408957
@@ -3816,20 +3779,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67981/'
         name: 'AKIRAMORI Tactical Gloves'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x6709EE74
         util: 'FNVEdit v4.1.5d'
 
   - name: 'Ballistic Skull Mask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/69388/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0xF5533978
@@ -3854,10 +3811,7 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
   - name: 'BlackjackPackULTIMATEv2.esp'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0xE8D22C1C
@@ -3874,10 +3828,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40091/'
         name: 'WW2 M1 Helmets'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x2963032B
         util: 'FNVEdit v4.1.5d'
@@ -3944,10 +3895,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/67315/'
         name: 'Metal Armor MkI'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x86031BCF
         util: 'FNVEdit v4.1.5d'
@@ -3956,9 +3904,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/74702/' ]
     req: [ *JIPLN ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - *requires_xNVSE
     tag: [ Invent.Add ]
     dirty:
@@ -3969,10 +3915,7 @@ plugins:
 
   - name: 'DeusSpecs.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/76125/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
@@ -3984,10 +3927,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/48848/'
         name: 'Modern Gunslinger Armor'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0x4E0E9F13
@@ -3998,9 +3938,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/79331/' ]
     req: [ *JIPLN ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - *requires_xNVSE
     clean:
       - crc: 0x337EFBCF
@@ -4011,9 +3949,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/78947/'
         name: 'Classic Fallout 2 combat armor Mark 2 (remastered)'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *useOnlyOneX
         subs: [ 'Classic Fallout 2 Combat Armor MK2 ESP' ]
         condition: 'many("Fallout 2 combat armor MK2 \(remastered\) (non)?replacer\.esp")'
@@ -4036,9 +3972,7 @@ plugins:
       - <<: *johnnyGuitar
         condition: 'file("config/Revelation Blues Armors Config.ini")'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *requires_xNVSE
         condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Revelation Blues Armors Config.ini")'
     dirty:
@@ -4053,10 +3987,7 @@ plugins:
 
   - name: 'Fallout Tactics Brotherhood Armor Integration.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70112/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag:
       - Invent.Add
       - Invent.Remove
@@ -4075,9 +4006,7 @@ plugins:
       - <<: *alsoUseX
         subs: [ '[Titans of The New West 2.0](https://www.nexusmods.com/newvegas/mods/78688/)' ]
         condition: 'not active("Titans of The New West.esp") and not file("STAR TTW 2.esp")'
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *requires_xNVSE
         condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Odyssey Armors Config.ini")'
     tag:
@@ -4096,10 +4025,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80915/'
         name: 'Searchlight Firefighter Outfit'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0x578871E9
@@ -4113,9 +4039,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/43844/'
         name: 'Geonox Riot Armor - Female Version'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *requiresResources
         subs: [ '[Geonox Riot Armor](https://www.nexusmods.com/newvegas/mods/38887/)' ]
         condition: 'not file("textures/armor/Geonox_FNV/Geonoxriotarmor/jil01.dds")'
@@ -4127,10 +4051,7 @@ plugins:
 
   - name: 'GP-5 Gasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/72282/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x17CC697A
         util: 'FNVEdit v4.1.5d'
@@ -4138,9 +4059,7 @@ plugins:
   - name: 'KORs Pistol Harness( JG)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/42333/' ]
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *useOnlyOneX
         subs: [ 'KORs Pistol Harness ESP' ]
         condition: 'many("KORs Pistol Harness( JG)?\.esp")'
@@ -4160,10 +4079,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/47855/'
         name: 'Mercenary Wanderer'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0xA144C450
         util: 'FNVEdit v4.1.5d'
@@ -4172,10 +4088,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79493/'
         name: 'Classic Fallout 2 Metal armor Mk II'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       # NVSE Replacer
       - crc: 0x1DFFE0BF
@@ -4192,9 +4105,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/80930/'
         name: 'Classic Fallout Metal Armor'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *useOnlyOneX
         subs: [ 'Classic Fallout Metal Armor ESP' ]
         condition: 'many("MCMetalMK1(Armor|ArmorNonR|Helmet)\.esp")'
@@ -4219,20 +4130,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/80372/'
         name: 'Classic Fallout Tesla armor'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x25C1D762
         util: 'FNVEdit v4.1.5d'
 
   - name: 'NCR Commando.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/75821/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0x4E777EA0
@@ -4243,10 +4148,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66399/'
         name: 'Unique Troublemaker Outfit-Nightstalker Set'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0x39F742FE
@@ -4255,10 +4157,7 @@ plugins:
 
   - name: 'PetalGasmask.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/73963/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x37966E9C
         util: 'FNVEdit v4.1.5d'
@@ -4267,10 +4166,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/58258/'
         name: 'Psycho Armor and Mask'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0xDF8EA762
         util: 'FNVEdit v4.1.5d'
@@ -4281,9 +4177,7 @@ plugins:
         name: 'Canvas Backpacks - FNV - TTW'
   - name: 'QwibNewBackpacks.esp'
     msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+      - *deletePluginStarTTW2
       - <<: *patchProvided
         subs: [ 'Tale of Two Wastelands' ]
         condition: 'active("TaleOfTwoWastelands.esm") and not active("QwibNewBackpacksTTWAddon.esp")'
@@ -4301,17 +4195,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78845/'
         name: 'Waster Gear - TTW - FNV'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
 
   - name: 'Road Warrior''s Armor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0xE7334719
@@ -4320,10 +4208,7 @@ plugins:
 
   - name: 'SalvageArmor.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/64296/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x4A3A0201
         util: 'FNVEdit v4.1.5d'
@@ -4332,10 +4217,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/43760/'
         name: 'Wasteland Seeker Armor'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     dirty:
       - <<: *quickClean
         crc: 0x89A01A68
@@ -4348,10 +4230,7 @@ plugins:
         name: 'Tammer''s NIF-Bashed Armor Mega-Pack (Nexus Mods)'
       - link: 'http://fallout.firedrakecreative.com/doku.php?id=armor#tammer_s_nif-bashed_armor_mega-pack/'
         name: 'Tammer''s NIF-Bashed Armor Mega-Pack'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x7FA3D6F2
         util: 'FNVEdit v4.1.5d'
@@ -4360,18 +4239,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77281/'
         name: 'The Lone Wanderer - TTW and NV'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
 
   - name: 'Tribal Power Helmet.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/65594/' ]
     inc: [ 'Tribal T-51b Helmet.esp' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0xBE4FC61E
         util: 'FNVEdit v4.1.5d'
@@ -4380,10 +4253,7 @@ plugins:
 
   - name: 'Wasteland Stealth Armor NV.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/59659/' ]
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     clean:
       - crc: 0x9616D67D
         util: 'FNVEdit v4.1.5d'
@@ -4394,10 +4264,7 @@ plugins:
         name: 'Wasteland Soldier - NV Edition'
       - link: 'https://www.nexusmods.com/newvegas/mods/74025/'
         name: 'Wasteland Soldier Redux NV'
-    msg:
-      - <<: *deletePlugin
-        subs: [ 'STAR TTW 2.esp' ]
-        condition: 'file("STAR TTW 2.esp")'
+    msg: [ *deletePluginStarTTW2 ]
     tag: [ Invent.Add ]
     clean:
       - crc: 0x3242291C
@@ -4692,7 +4559,6 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/64623/'
         name: 'The Living Desert - Travelers Patrols Consequences Increased Population and more'
     req: [ *JIPLN ]
-    after: [ 'Functional Post Game Ending.esm' ]
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
@@ -4896,8 +4762,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *lStewieAlTweaks
-      - name: 'NVSE/Plugins/ttw_nvse.dll'
-        display: '[ROOGNVSE Plugin](https://www.nexusmods.com/newvegas/mods/77415/)'
+      - *ttwNVSE
     after:
       - 'CaravanPack.esm'
       - 'ClassicPack.esm'
