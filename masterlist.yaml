@@ -2234,6 +2234,11 @@ plugins:
       - Stats
 
 ###### Environment, Landscape & Flora ######
+  - name: 'Landscape Disposition Fix.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73937/'
+        name: 'Landscape Disposition Fix'
+
   - name: 'Landscape Texture Improvements( TTW| - (AWOLP|NVLORR|YUP) Patch)?\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
