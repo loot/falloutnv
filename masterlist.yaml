@@ -2234,6 +2234,23 @@ plugins:
       - Stats
 
 ###### Environment, Landscape & Flora ######
+  - name: 'Landscape Disposition Fix.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73937/'
+        name: 'Landscape Disposition Fix'
+    group: *fixesGroup
+    after:
+      - 'Landscape Texture Improvements.esm'
+      - 'Landscape Texture Improvements TTW.esm'
+      - 'Landscape Texture Improvements - YUP Patch.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Enhanced Landscapes' ]
+        condition: 'active("New Vegas Landscape Overhaul.esm")'
+    clean:
+      - crc: 0x89D0594A
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+
   - name: 'Landscape Texture Improvements( TTW| - (AWOLP|NVLORR|YUP) Patch)?\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83425/'
