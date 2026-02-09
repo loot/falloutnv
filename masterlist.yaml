@@ -1223,6 +1223,11 @@ plugins:
       - crc: 0xD72C3602
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'Placement Fixes.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/90593/'
+        name: 'Vanilla Placement Fixes'
+
   - name: 'RepairKitFix.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/40224/'
