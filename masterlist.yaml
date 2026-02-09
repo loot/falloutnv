@@ -1227,6 +1227,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/90593/'
         name: 'Vanilla Placement Fixes'
+    clean:
+      - crc: 0x520C072C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'RepairKitFix.esp'
     url:
