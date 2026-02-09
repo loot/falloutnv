@@ -2243,6 +2243,10 @@ plugins:
       - 'Landscape Texture Improvements.esm'
       - 'Landscape Texture Improvements TTW.esm'
       - 'Landscape Texture Improvements - YUP Patch.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Enhanced Landscapes' ]
+        condition: 'active("New Vegas Landscape Overhaul.esm")'
     clean:
       - crc: 0x89D0594A
         util: 'FNVEdit v4.1.5p 32bit fix version'
