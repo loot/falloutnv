@@ -2243,6 +2243,9 @@ plugins:
       - 'Landscape Texture Improvements.esm'
       - 'Landscape Texture Improvements TTW.esm'
       - 'Landscape Texture Improvements - YUP Patch.esm'
+    clean:
+      - crc: 0x89D0594A
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'Landscape Texture Improvements( TTW| - (AWOLP|NVLORR|YUP) Patch)?\.esm'
     url:
