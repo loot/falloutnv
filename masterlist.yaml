@@ -5484,9 +5484,6 @@ plugins:
     inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
     msg: [ *requiresNVSE ]
 
-  - name: 'NVORganizedItems.esp'
-    tag: [ Names ]
-
   - name: '188 Trading Post Revisited.esp'
     tag: [ NpcFaces ]
 
@@ -5547,9 +5544,6 @@ plugins:
   - name: 'Hanlon the badass 4.esp'
     tag: [ NpcFaces ]
 
-  - name: 'Lore version.esp'
-    tag: [ NpcFaces ]
-
   - name: 'MikotoBPCCArcade.esp'
     tag:
       - NoMerge
@@ -5582,15 +5576,6 @@ plugins:
       - NoMerge
       - NpcFaces
 
-  - name: 'RivensEyescapesNV.esp'
-    tag: [ Eyes ]
-
-  - name: 'Mikotos_REyescapesNV.esp'
-    tag: [ Eyes ]
-
-  - name: 'VeronicaOlder.esp'
-    tag: [ NpcFaces ]
-
   - name: 'Vulpes Inculta.esp'
     tag: [ NpcFaces ]
 
@@ -5608,9 +5593,6 @@ plugins:
       - Actors.AIPackages
       - Delev
       - Relev
-
-  - name: 'return_deadmoney.esp'
-    inc: [ 'SierraMadreEXIT.esp' ]
 
   - name: 'RustTownAdditions3.esp'
     tag:
@@ -5647,25 +5629,6 @@ plugins:
       - 'HighlyPopulatedFreeside.esp'
       - 'MediumPopulatedFreeside.esp'
 
-  - name: 'NVHarderCore.esp'
-    tag:
-      - Names
-      - Stats
-
-  - name: 'NVWastelandUnlocked.esp'
-    tag:
-      - Delev
-      - Names
-      - Relations
-      - Relev
-      - Stats
-      - WeaponMods
-
-  - name: 'NVWeaponAmmoTweaks.esp'
-    tag:
-      - Stats
-      - WeaponMods
-
   - name: 'FOOK - New Vegas.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
     inc: [ *TTWv320 ]
@@ -5686,28 +5649,11 @@ plugins:
   - name: 'LinkesAuge - Retexture edits.esp'
     tag: [ Graphics ]
 
-  - name: 'NoWeaponZoom.esp'
-    tag: [ Stats ]
-
   - name: 'ImprovedBinocs.esp'
-    tag: [ Invent ]
-
-  - name: 'HeadWearShaderFX.esp'
-    tag:
-      - Scripts
-      - Stats
-
-  - name: 'LootOverhaul.esp'
     tag: [ Invent ]
 
   - name: 'Food&DrinkDontHeal.esp'
     tag: [ Stats ]
-
-  - name: 'CompanionsImproved.esp'
-    tag: [ Actors.AIPackages ]
-
-  - name: 'Npc&CreatureRespawn.esp'
-    tag: [ Relev ]
 
   - name: 'PMT - XPadjust.esp'
     tag: [ Invent ]
@@ -5740,31 +5686,6 @@ plugins:
   - name: 'PMT - Total Challenge Remover.esp'
     inc: [ 'PMT - Reduced Challenge Notifications.esp' ]
 
-  - name: 'Reload.esp'
-    tag:
-      - Delev
-      - Names
-      - Relev
-
-  - name: 'Rebalance.esp'
-    tag:
-      - Names
-      - Stats
-
-  - name: 'Rearm.esp'
-    tag:
-      - Delev
-      - Relev
-
-  - name: 'RebalanceRearm.esp'
-    tag: [ Stats ]
-
-  - name: 'RearmRebalance.esp'
-    tag: [ Stats ]
-
-  - name: 'ReSort.esp'
-    tag: [ Names ]
-
   - name: 'Superior Firepower - Unique Weaponry.esp'
     tag: [ Stats ]
   - name: 'Superior Firepower - Factional Changes.esp'
@@ -5775,14 +5696,6 @@ plugins:
   - name: 'Arwen_NV_Realism_Core.esp'
     msg: [ *requiresNVSE ]
     tag: [ Stats ]
-
-  - name: 'hardercore_combat.esp'
-    tag: [ Stats ]
-
-  - name: 'hardercore_wealth.esp'
-    tag:
-      - Delev
-      - Relev
 
   - name: 'Flight of the ValkED-E.esp'
     tag: [ Sound ]
@@ -5930,9 +5843,6 @@ plugins:
       - 'IWS-AS-HighSpawns.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'Less Weight.esp'
-    inc: [ 'More Weight.esp' ]
-
   - name: 'Isul-MagExchange.esp'
     msg: [ *requiresNVSE ]
 
@@ -5953,9 +5863,6 @@ plugins:
 
   - name: 'ArmourRepairKits.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'Better Ammo Crafting.esp'
-    tag: [ Names ]
 
   - name: 'BetterCraftingSorting.esp'
     tag: [ Names ]
@@ -6024,9 +5931,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/35552/' ]
     tag: [ Graphics ]
 
-  - name: 'EnergyBoost.esp'
-    tag: [ Stats ]
-
   - name: 'ImmaSightinMahLazor.esp'
     tag: [ Stats ]
 
@@ -6082,13 +5986,6 @@ plugins:
 
   - name: 'KDS Wearable Backpacks.esp'
     tag: [ Invent ]
-
-
-  - name: 'Seeker Veronica.esp'
-    tag: [ Invent ]
-
-  - name: 'sexysleepwear.esp'
-    inc: [ 'sexysleepwearnr.esp' ]
 
   - name: 'T6M Equipment Replacer NV.esp'
     tag:
@@ -6174,8 +6071,6 @@ plugins:
 
   - name: 'Correction - Passive 2 Option.esp'
     inc: [ 'Correction - Passive.esp' ]
-  - name: 'Cass Passive Fix.esp'
-    inc: [ 'Cass Passive Fix 2 Option.esp' ]
 
   - name: 'CCC - Save Cass.esp'
     req: [ 'SaveCass.esp' ]
@@ -6184,11 +6079,6 @@ plugins:
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
-
-  - name: 'My essential friends (animals).esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
 
   - name: 'RexReplacerEss.esp'
     tag: [ Graphics ]
@@ -6205,9 +6095,6 @@ plugins:
     req:
       - 'GunSmith.esm'
       - 'GunSmith Guns Upgrade.esp'
-
-  - name: 'repairkitsexpanded.esp'
-    tag: [ Names ]
 
   - name: 'DrugsAreBadMKay-IS.esp'
     tag: [ Names ]
@@ -6267,23 +6154,12 @@ plugins:
   - name: 'Reactive People - Ultimatum.esp'
     msg: [ *requiresNVSE ]
 
-  - name: 'Realistic Weight.esp'
-    tag:
-      - NoMerge
-      - Stats
-
   - name: 'Realistic Weight Overhaul.esp'
     tag:
       - NoMerge
       - Stats
 
   - name: 'Real Time Entry Skills.esp'
-    msg: [ *requiresNVSE ]
-
-  - name: 'RRDynamicXPonly.esp'
-    msg: [ *requiresNVSE ]
-
-  - name: 'Runner.esp'
     msg: [ *requiresNVSE ]
 
   - name: 'SpecialEveryFiveLevels.esp'
