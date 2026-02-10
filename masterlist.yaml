@@ -5458,19 +5458,11 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'JacknDianeFix.esp'
-    tag: [ Invent ]
-
   - name: 'MarcusInvFix.esp'
     tag: [ Invent ]
 
   - name: 'Reload Speed Game Start Fix.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'AutoSaverNV.esp'
-    inc:
-      - 'RX-Auto Incremental Save.esp'
-      - 'CASM.esp'
 
   - name: 'RX-Auto Incremental Save.esp'
     inc: [ 'CASM.esp' ]
@@ -5483,9 +5475,6 @@ plugins:
   - name: 'ImplantGRX-NVSEHotkey.esp'
     inc: [ 'ImplantGRX-ActivatorHotkey.esp' ]
     msg: [ *requiresNVSE ]
-
-  - name: '188 Trading Post Revisited.esp'
-    tag: [ NpcFaces ]
 
   - name: 'A Better Arcade.esp'
     tag:
@@ -5520,26 +5509,10 @@ plugins:
   - name: 'Bitter Springs Revisited.esp'
     tag: [ NpcFaces ]
 
-  - name: 'Cass and Veronica.esp'
-    tag:
-      - Invent
-      - NpcFaces
-
-  - name: 'Cuter Boone.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Cuter Boone NEW.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-
   - name: 'Cuter Veronica Felicia Day.esp'
     tag:
       - NoMerge
       - NpcFaces
-  - name: 'Cuter Veronica Felicia Day-Essential.esp'
-    tag: [ NpcFaces ]
 
   - name: 'Hanlon the badass 4.esp'
     tag: [ NpcFaces ]
@@ -5568,25 +5541,11 @@ plugins:
   - name: 'Mutant Eyes.esp'
     tag: [ Eyes ]
 
-  - name: 'NPC Project - Aero Office Park.esp'
-    tag: [ NpcFaces ]
-
-  - name: 'Raul - Danny Trejo.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-
   - name: 'Vulpes Inculta.esp'
     tag: [ NpcFaces ]
 
   - name: '1st Recon Revised.esp'
     tag: [ Invent ]
-
-  - name: 'Doc Mitchell''s House Owner.esp'
-    tag: [ C.Owner ]
-
-  - name: 'KillableKids_E.esp'
-    inc: [ 'KillableKids_NE.esp' ]
 
   - name: 'Project13 - Populated Wasteland.esp'
     tag:
@@ -5616,19 +5575,6 @@ plugins:
   - name: 'UWHNV-Addon-NoCompanionsRoom.esp'
     inc: [ 'UWHNV-Addon-Follower.esp' ]
 
-  - name: 'HighlyPopulatedFreeside.esp'
-    inc:
-      - 'MediumPopulatedFreeside.esp'
-      - 'LowPopulatedFreeside.esp'
-  - name: 'MediumPopulatedFreeside.esp'
-    inc:
-      - 'HighlyPopulatedFreeside.esp'
-      - 'LowPopulatedFreeside.esp'
-  - name: 'LowPopulatedFreeside.esp'
-    inc:
-      - 'HighlyPopulatedFreeside.esp'
-      - 'MediumPopulatedFreeside.esp'
-
   - name: 'FOOK - New Vegas.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34684/' ]
     inc: [ *TTWv320 ]
@@ -5640,20 +5586,6 @@ plugins:
       - Scripts
       - Sound
       - Stats
-
-  - name: 'LinkesAuge - Bug fixing compilation.esp'
-    tag:
-      - Names
-      - Scripts
-      - Stats
-  - name: 'LinkesAuge - Retexture edits.esp'
-    tag: [ Graphics ]
-
-  - name: 'ImprovedBinocs.esp'
-    tag: [ Invent ]
-
-  - name: 'Food&DrinkDontHeal.esp'
-    tag: [ Stats ]
 
   - name: 'PMT - XPadjust.esp'
     tag: [ Invent ]
@@ -5696,9 +5628,6 @@ plugins:
   - name: 'Arwen_NV_Realism_Core.esp'
     msg: [ *requiresNVSE ]
     tag: [ Stats ]
-
-  - name: 'Flight of the ValkED-E.esp'
-    tag: [ Sound ]
 
   - name: 'Equipment Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/43875/' ]
@@ -5783,9 +5712,6 @@ plugins:
       - 'GRA-WRP-Patch-Two_Unofficial.esp'
       - 'singleshot_retex.esp'
 
-  - name: 'LouderGuns.esp'
-    tag: [ Sound ]
-
   - name: 'awilderwasteland.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/46158/' ]
     inc: [ 'awilderwastelandnobenny.esp' ]
@@ -5818,33 +5744,8 @@ plugins:
       - 'kochandbohr.esp'
       - 'rotfacetoriches.esp'
 
-  - name: 'BrainPerkBugfix.esp'
-    inc: [ 'BrainPerkBugfix_Cardiac.esp' ]
-
   - name: 'FourEyesDynamic.esp'
     inc: [ 'FourEyesBetter.esp' ]
-
-  - name: 'AutoLoot.esp'
-    msg: [ *requiresNVSE ]
-
-  - name: 'IWS-AS-HighSpawns.esp'
-    inc:
-      - 'IWS-AS-MedSpawns.esp'
-      - 'IWS-AS-LowSpawns.esp'
-    msg: [ *requiresNVSE ]
-  - name: 'IWS-AS-MedSpawns.esp'
-    inc:
-      - 'IWS-AS-HighSpawns.esp'
-      - 'IWS-AS-LowSpawns.esp'
-    msg: [ *requiresNVSE ]
-  - name: 'IWS-AS-LowSpawns.esp'
-    inc:
-      - 'IWS-AS-MedSpawns.esp'
-      - 'IWS-AS-HighSpawns.esp'
-    msg: [ *requiresNVSE ]
-
-  - name: 'Isul-MagExchange.esp'
-    msg: [ *requiresNVSE ]
 
   - name: 'ACS-DeadMoney.esp'
     tag: [ Invent ]
@@ -5888,9 +5789,6 @@ plugins:
 
   - name: 'A Load of Balls.esp'
     msg: [ *requiresNVSE ]
-
-  - name: 'Assault Carbine mods.esp'
-    tag: [ WeaponMods ]
 
   - name: 'Better Binoculars Low.esp'
     inc:
@@ -5958,20 +5856,6 @@ plugins:
       - Actors.AIData
       - Invent
       - NpcFaces
-
-  - name: 'LDFemalePowerArmorPack.esp'
-    inc: [ 'LDFemalePowerArmorPack.esm' ]
-
-  - name: 'BlackWolf Backpack - Vendor Script Replenish.esp'
-    req: [ 'BlackWolf Backpack.esp' ]
-
-  - name: 'ERCA FACTLESS.esp'
-    inc: [ 'ERCA.esp' ]
-  - name: 'ERCAFACTLESS.esp'
-    inc: [ 'ERCA.esp' ]
-
-  - name: 'Hereticus Faction Armors Fading.esp'
-    tag: [ Names ]
 
   - name: 'HHType3tribalhands.esp'
     tag: [ Body-F ]
@@ -6069,12 +5953,6 @@ plugins:
       - 'Comp_Idles_NV.esp'
       - 'Companions Relax.esp'
 
-  - name: 'Correction - Passive 2 Option.esp'
-    inc: [ 'Correction - Passive.esp' ]
-
-  - name: 'CCC - Save Cass.esp'
-    req: [ 'SaveCass.esp' ]
-
   - name: 'EZ_VanillaFollowers.esp'
     tag:
       - Actors.AIPackages
@@ -6091,11 +5969,6 @@ plugins:
       - Graphics
       - NpcFaces
 
-  - name: 'Cowboy Repeater with Vanilla Name.esp'
-    req:
-      - 'GunSmith.esm'
-      - 'GunSmith Guns Upgrade.esp'
-
   - name: 'DrugsAreBadMKay-IS.esp'
     tag: [ Names ]
   - name: 'FeelingIrradiated-IS.esp'
@@ -6108,9 +5981,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Max Level ESP' ]
         condition: 'many("Max Level (50|60|75|100|255)\.esp")'
-
-  - name: 'Dynamic Quantity Prompt.esp'
-    msg: [ *requiresNVSE ]
 
   - name: 'IMCNNV - Sorted.esp'
     tag: [ Names ]
@@ -6159,18 +6029,12 @@ plugins:
       - NoMerge
       - Stats
 
-  - name: 'Real Time Entry Skills.esp'
-    msg: [ *requiresNVSE ]
-
   - name: 'SpecialEveryFiveLevels.esp'
     inc:
       - 'SpecialEveryThreeLevels.esp'
       - 'SpecialEveryTwoLevels.esp'
   - name: 'SpecialEveryThreeLevels.esp'
     inc: [ 'SpecialEveryTwoLevels.esp' ]
-
-  - name: 'SubtitlesHotkeyNV.esp'
-    msg: [ *requiresNVSE ]
 
   - name: 'Weight_Balance.esp'
     tag: [ Stats ]
@@ -6285,18 +6149,6 @@ plugins:
   - name: 'friendofnightforfellout.esp'
     req: [ 'Fellout.esp' ]
 
-  - name: 'fnvrwlo - original.esp'
-    inc:
-      - 'fnvrwlo - brighter nights.esp'
-      - 'fnvrwl FNV only - brighter nights.esp'
-      - 'fnvrwl FNV only.esp'
-  - name: 'fnvrwlo - brighter nights.esp'
-    inc:
-      - 'fnvrwl FNV only - brighter nights.esp'
-      - 'fnvrwl FNV only.esp'
-  - name: 'fnvrwl FNV only - brighter nights.esp'
-    inc: [ 'fnvrwl FNV only.esp' ]
-
   - name: 'Western Sky( - Darker Nights)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35497/' ]
     inc:
@@ -6345,9 +6197,6 @@ plugins:
       - C.Climate
       - C.Light
 
-  - name: 'DYNAVISION 2 - Dynamic Lens Effect.esp'
-    inc: [ 'Field Depth.esp' ]
-
   - name: 'UnderwaterFX.esp'
     msg: [ *requiresNVSE ]
 
@@ -6359,9 +6208,6 @@ plugins:
 
   - name: 'ammoingredientsloot.esp'
     tag: [ Invent ]
-
-  - name: 'Alternative Repairing - Breakdown Item Icons.esp'
-    tag: [ Graphics ]
 
   - name: 'MadScience02.esp'
     tag: [ Actors.DeathItem ]
