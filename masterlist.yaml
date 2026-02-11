@@ -2388,6 +2388,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
         name: 'Essential DLC Enhancements Merged'
+    group: *earlyLoadersGroup
     tag:
       - Actors.CombatStyle
       - Delev
