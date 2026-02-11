@@ -2388,14 +2388,15 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
         name: 'Essential DLC Enhancements Merged'
+    group: *earlyLoadersGroup
     tag:
       - Actors.CombatStyle
       - Delev
       - Relev
       - Text
     clean:
-      - crc: 0xE709B604
-        util: 'FNVEdit v4.1.5d'
+      - crc: 0xC99DE5EC
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'DMT (_Dead Money Tweaks_|.+ Patch)\.es[mp]'
     url:
