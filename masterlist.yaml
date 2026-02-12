@@ -2687,6 +2687,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/75514/'
         name: 'Underwater FX - Water Breathing Equipment and Goggles'
     msg: [ *requiresNVSE ]
+    tag:
+      - Actors.DeathItem
+      - Enchantments
+      - Graphics
 
   - name: 'Vanilla Enhancements.esm'
     url:
