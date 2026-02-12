@@ -2683,6 +2683,9 @@ plugins:
         itm: 5
 
   - name: 'UnderwaterFX.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/75514/'
+        name: 'Underwater FX - Water Breathing Equipment and Goggles'
     msg: [ *requiresNVSE ]
 
   - name: 'Vanilla Enhancements.esm'
