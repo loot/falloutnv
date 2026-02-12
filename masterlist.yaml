@@ -1583,35 +1583,21 @@ plugins:
       - crc: 0xF5394413
         util: 'FNVEdit v4.1.5d'
 
-  - name: 'Titans of The New West( - Power Armor Sprint (JAM|JVS))?\.esp'
+  - name: 'Titans of The New West.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78688/'
         name: 'Titans of The New West 2.0'
-  - name: 'Titans of The New West.esp'
-    msg:
-      - <<: *patchProvided
-        subs: [ 'Armed to the Teeth Redux' ]
-        condition: 'active("ArmedToTheTeethNV-Redux.esp") and checksum("Meshes\characters\_male\ATTT\LH\1hpequip.kf", 23040D5E)'
-      - <<: *patchProvided
-        subs: [ 'Just Assorted Mods' ]
-        condition: 'active("JustAssortedMods.esp") and not file("Titans of The New West - Power Armor Sprint JAM.esp")'
-      - <<: *patchProvided
-        subs: [ 'Just Vanilla Sprint' ]
-        condition: 'active("JustVanillaSprint.esp") and not file("Titans of The New West - Power Armor Sprint JVS.esp")'
+    req:
+      - *lStewieAlTweaks
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+      - *ShowOff
+    msg: [ *requires_xNVSE ]
+    tag: [ Sound ]
     clean:
-    # 2.1.03
-      - crc: 0x98CACFE9
-        util: 'FNVEdit v4.0.4c'
-  - name: 'Titans of The New West - Power Armor Sprint JAM.esp'
-    clean:
-    # 2.1.03
-      - crc: 0xA73A2776
-        util: 'FNVEdit v4.0.4c'
-  - name: 'Titans of The New West - Power Armor Sprint JVS.esp'
-    clean:
-    # 2.1.03
-      - crc: 0x89BC24A8
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0xEA320176
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'Veronica Outfit Replacer.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/71823/' ]
