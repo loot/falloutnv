@@ -2682,6 +2682,9 @@ plugins:
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'UnderwaterFX.esp'
+    msg: [ *requiresNVSE ]
+
   - name: 'Vanilla Enhancements.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
@@ -6197,9 +6200,6 @@ plugins:
     tag:
       - C.Climate
       - C.Light
-
-  - name: 'UnderwaterFX.esp'
-    msg: [ *requiresNVSE ]
 
   - name: 'MikotoBeauty.esp'
     tag:
