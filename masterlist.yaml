@@ -4577,6 +4577,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74141/'
         name: 'The Final Resting Place - A Lucky 38 Control Room Overhaul'
+    group: *highPriorityGroup
     tag:
       - C.ImageSpace
       - C.Light
