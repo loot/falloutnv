@@ -4573,6 +4573,11 @@ plugins:
       - crc: 0xAED90543
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'TFRP - L38 Control Room Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/74141/'
+        name: 'The Final Resting Place - A Lucky 38 Control Room Overhaul'
+
 ###### Locations - Player Homes ######
   - name: 'A Trail of Crumbs.esm'
     url:
