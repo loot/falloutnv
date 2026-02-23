@@ -1391,6 +1391,14 @@ plugins:
     msg: [ *requires_xNVSE ]
 
 ###### Resources - LOD ######
+  - name: 'Nuclear_LOD.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
+        name: 'Nuclear LOD'
+  - name: 'TreeLOD(_DesertLandscapes|_MFO)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
+        name: 'Nuclear LOD'
 
   - name: 'VNV LOD Plugins.esp'
     url:
