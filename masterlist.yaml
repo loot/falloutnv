@@ -1390,6 +1390,8 @@ plugins:
     inc: [ 'DarNifiedUINV.esp' ]
     msg: [ *requires_xNVSE ]
 
+###### Resources - LOD ######
+
   - name: 'VNV LOD Plugins.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
