@@ -1399,6 +1399,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
         name: 'Nuclear LOD'
+  - name: 'TreeLOD_(Vanilla|MFO)\.esp'
+    group: *lodGenGroup
+    after:
+      - 'FNVLODGen.esp'
+      - 'HighPriorityLOD.esp'
+      - 'HighPriorityLOD_TTW.esp'
+      - 'VNV LOD Plugins.esp'
 
   - name: 'VNV LOD Plugins.esp'
     url:
