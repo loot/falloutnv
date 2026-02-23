@@ -4815,6 +4815,13 @@ plugins:
         itm: 46
         udr: 16
 
+###### Patches ######
+  - name: 'NVMIM - YUP(Date)? Patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
+        name: 'Viva New Vegas Resources'
+    group: *fixesGroup
+
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
     url:
