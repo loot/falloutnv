@@ -1406,6 +1406,14 @@ plugins:
       - 'HighPriorityLOD.esp'
       - 'HighPriorityLOD_TTW.esp'
       - 'VNV LOD Plugins.esp'
+    msg:
+      - <<: *disableAfterGeneratingXwithY
+        subs:
+          - 'LOD'
+          - '[xLODGen](https://stepmodifications.org/forum/topic/13451-xlodgen-terrain-lod-beta-132-for-fnv-fo3-fo4-fo4vr-tes5-sse-tes5vr-enderal-enderalse/)'
+      - <<: *useOnlyOneX
+        subs: [ 'Core Trees ESP' ]
+        condition: 'many("TreeLOD_(Vanilla|MFO)\.esp")'
 
   - name: 'VNV LOD Plugins.esp'
     url:
