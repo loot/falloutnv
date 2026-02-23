@@ -1396,7 +1396,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
         name: 'Nuclear LOD'
     group: *lodResGroup
-  - name: 'TreeLOD(_DesertLandscapes|_MFO)?\.esp'
+  - name: 'TreeLOD_(Vanilla|MFO|DesertLandscapes)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
         name: 'Nuclear LOD'
