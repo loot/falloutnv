@@ -1407,6 +1407,7 @@ plugins:
       - 'HighPriorityLOD.esp'
       - 'HighPriorityLOD_TTW.esp'
       - 'VNV LOD Plugins.esp'
+    inc: [ 'Vurt''s WFO.esp' ]
     msg:
       - <<: *disableAfterGeneratingXwithY
         subs:
