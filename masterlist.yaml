@@ -4821,7 +4821,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
         name: 'Viva New Vegas Resources'
-  - name: 'NVMIM - YUP(Date)? Patch\.esp'
+  - name: 'NVMIM - YUP Patch.esp'
+    group: *fixesGroup
+  - name: 'NVMIM - YUPDate Patch.esp'
     group: *fixesGroup
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
