@@ -1395,6 +1395,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
         name: 'Nuclear LOD'
+    group: *lodResGroup
   - name: 'TreeLOD(_DesertLandscapes|_MFO)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
@@ -1414,6 +1415,8 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Core Trees ESP' ]
         condition: 'many("TreeLOD_(Vanilla|MFO)\.esp")'
+  - name: 'TreeLOD_DesertLandscapes.esp'
+    group: *lodResGroup
 
   - name: 'VNV LOD Plugins.esp'
     url:
