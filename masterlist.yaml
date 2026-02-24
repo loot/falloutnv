@@ -1401,6 +1401,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88898/'
         name: 'High Priority LOD'
+  - name: 'HighPriorityLOD.esp'
+    group: *lodGenGroup
+    after:
+      - 'FNVLODGen.esp'
+      - 'VNV LOD Plugins.esp'
+  - name: 'HighPriorityLOD_(FreesideOpen|PerformanceTitans|RemasteredQuaries|RevisedMojave|TTW)\.esp'
+    group: *lodResGroup
+    after: [ 'HighPriorityLOD.esp' ]
+  - name: 'HighPriorityLOD_RevisedMojave.esp'
+    after: [ 'VNV LOD Plugins.esp' ]
 
   - name: 'Nuclear_LOD.esp'
     url:
