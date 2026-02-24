@@ -1406,6 +1406,9 @@ plugins:
     after:
       - 'FNVLODGen.esp'
       - 'VNV LOD Plugins.esp'
+    req:
+      - name: 'NVSE/Plugins/LOD Fixes.dll'
+        display: '[LOD Fixes and Improvements - NVSE](https://www.nexusmods.com/newvegas/mods/84171/)'
   - name: 'HighPriorityLOD_(FreesideOpen|PerformanceTitans|RemasteredQuaries|RevisedMojave|TTW)\.esp'
     group: *lodResGroup
     after: [ 'HighPriorityLOD.esp' ]
