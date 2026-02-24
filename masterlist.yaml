@@ -1391,6 +1391,12 @@ plugins:
     msg: [ *requires_xNVSE ]
 
 ###### Resources - LOD ######
+  - name: '(LODIFY_FNV|TTWLods)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/84165/'
+        name: 'LODIFY - Level of detail improvement for your Fallout (TTW And NV Lods)'
+    group: *lodResGroup
+
   - name: 'Nuclear_LOD.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
