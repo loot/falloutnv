@@ -1395,6 +1395,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/84165/'
         name: 'LODIFY - Level of detail improvement for your Fallout (TTW And NV Lods)'
+    group: *lodResGroup
 
   - name: 'Nuclear_LOD.esp'
     url:
