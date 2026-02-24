@@ -1416,6 +1416,11 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Core Trees ESP' ]
         condition: 'many("TreeLOD_(Vanilla|MFO)\.esp")'
+  - name: 'TreeLOD_MFO.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Mojave Flora Project (WIP)](https://www.nexusmods.com/newvegas/mods/84698/)' ]
+        condition: 'not file("Spiffyskytrooper/Landscape/Plants/Creosote/CreosoteBushLOD_D.dds")'
   - name: 'TreeLOD_DesertLandscapes.esp'
     group: *lodResGroup
 
