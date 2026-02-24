@@ -1390,6 +1390,36 @@ plugins:
     inc: [ 'DarNifiedUINV.esp' ]
     msg: [ *requires_xNVSE ]
 
+###### Resources - LOD ######
+  - name: 'Nuclear_LOD.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
+        name: 'Nuclear LOD'
+    group: *lodResGroup
+  - name: 'TreeLOD_(Vanilla|MFO|DesertLandscapes)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
+        name: 'Nuclear LOD'
+  - name: 'TreeLOD_(Vanilla|MFO)\.esp'
+    group: *lodGenGroup
+    after:
+      - 'FNVLODGen.esp'
+      - 'HighPriorityLOD.esp'
+      - 'HighPriorityLOD_TTW.esp'
+      - 'VNV LOD Plugins.esp'
+    inc: [ 'Vurt''s WFO.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Core Trees ESP' ]
+        condition: 'many("TreeLOD_(Vanilla|MFO)\.esp")'
+  - name: 'TreeLOD_MFO.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Mojave Flora Project (WIP)](https://www.nexusmods.com/newvegas/mods/84698/)' ]
+        condition: 'not file("Spiffyskytrooper/Landscape/Plants/Creosote/CreosoteBushLOD_D.dds")'
+  - name: 'TreeLOD_DesertLandscapes.esp'
+    group: *lodResGroup
+
   - name: 'VNV LOD Plugins.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
