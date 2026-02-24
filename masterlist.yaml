@@ -1425,6 +1425,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
         name: 'Viva New Vegas Resources'
     group: *lodGenGroup
+    after: [ 'FNVLODGen.esp' ]
 
 ###### AudioVisual ######
   - name: '357retex.esp'
