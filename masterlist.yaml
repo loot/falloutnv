@@ -1397,6 +1397,24 @@ plugins:
         name: 'LODIFY - Level of detail improvement for your Fallout (TTW And NV Lods)'
     group: *lodResGroup
 
+  - name: 'HighPriorityLOD(_FreesideOpen|_PerformanceTitans|_RemasteredQuaries|_RevisedMojave|_TTW)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88898/'
+        name: 'High Priority LOD'
+  - name: 'HighPriorityLOD.esp'
+    group: *lodGenGroup
+    after:
+      - 'FNVLODGen.esp'
+      - 'VNV LOD Plugins.esp'
+    req:
+      - name: 'NVSE/Plugins/LOD Fixes.dll'
+        display: '[LOD Fixes and Improvements - NVSE](https://www.nexusmods.com/newvegas/mods/84171/)'
+  - name: 'HighPriorityLOD_(FreesideOpen|PerformanceTitans|RemasteredQuaries|RevisedMojave|TTW)\.esp'
+    group: *lodResGroup
+    after: [ 'HighPriorityLOD.esp' ]
+  - name: 'HighPriorityLOD_RevisedMojave.esp'
+    after: [ 'VNV LOD Plugins.esp' ]
+
   - name: 'Nuclear_LOD.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
@@ -1406,6 +1424,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/88902/'
         name: 'Nuclear LOD'
+      - link: 'https://www.nexusmods.com/newvegas/mods/88898/'
+        name: 'High Priority LOD'
   - name: 'TreeLOD_(Vanilla|MFO)\.esp'
     group: *lodGenGroup
     after:
