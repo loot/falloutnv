@@ -4516,22 +4516,28 @@ plugins:
       - crc: 0x2B81ECDB
         util: 'FNVEdit v4.1.5p 32bit fix version'
 
-  - name: 'Nova ?Arizona( - Map Add-on)?\.es[mp]'
+  - name: 'NovaArizona.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85915/'
         name: 'Nova Arizona - A Legion Lands Expansion'
-  - name: 'NovaArizona.esm'
+    group: *highPriorityGroup
+    req:
+      - *anhNVSE
+      - *hNVSE
+      - *KEYWORDS
+    tag:
+      - C.Light
+      - C.ImageSpace
+      - C.Owner
+      - C.Regions
+      - C.Water
+      - Graphics
+      - ObjectBounds
     dirty:
       - <<: *quickClean
-        crc: 0x0C1B23B3
-        util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 6
-  - name: 'Nova Arizona - Map Add-on.esp'
-    group: *lateChangesGroup
-    tag:
-      - C.Regions
-      - Deactivate
-      - NoMerge
+        crc: 0xB1B36B3C
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 462
 
   - name: 'ZionTrail(-NV)?\.es[mp]'
     url:
