@@ -2419,6 +2419,11 @@ plugins:
       - crc: 0x8C1ABEFC
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'AguaFria.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/94767/'
+        name: 'Agua Fria - JSawyer Redone'
+
   - name: 'Better Character Creation.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/70973/' ]
     req: [ *JIPLN ]
