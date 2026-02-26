@@ -4520,6 +4520,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85915/'
         name: 'Nova Arizona - A Legion Lands Expansion'
+    group: *highPriorityGroup
     dirty:
       - <<: *quickClean
         crc: 0xB1B36B3C
