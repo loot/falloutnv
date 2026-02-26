@@ -658,9 +658,13 @@ groups:
     description: 'A group for modules that modify climate, weather & lighting.'
     after: [ *lodGenGroup ]
 
+  - name: &weatherTweaksGroup Weather Tweaks & Settings
+    description: 'A group for small modules that modify game settings or records related to weather.'
+    after: [ *weatherOverhaulsGroup ]
+
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
-    after: [ *weatherOverhaulsGroup ]
+    after: [ *weatherTweaksGroup ]
 
   - name: &conflictResPatchGroup Conflict Resolution Patches
     description: 'A group for patches that resolve conflicts.'
@@ -1777,10 +1781,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/79661/'
         name: 'Climate Control - Rain'
   - name: 'CC - Rain.esp'
-    group: *lateChangesGroup
+    group: *weatherTweaksGroup
     # doNotClean - Intentional ITM, to turn on rain in TTW.
   - name: 'CC - 3D Rain.esp'
-    group: *lateChangesGroup
+    group: *weatherTweaksGroup
     msg:
       - <<: *missingRequirementXforY
         subs:
@@ -1860,7 +1864,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77205/'
         name: 'Climate Control NVSE'
-    group: *lateChangesGroup
+    group: *weatherTweaksGroup
     clean:
       - crc: 0x93FA8202
         util: 'FNVEdit v4.0.4c'
