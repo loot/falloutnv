@@ -2423,6 +2423,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/94767/'
         name: 'Agua Fria - JSawyer Redone'
+      - link: 'https://www.nexusmods.com/newvegas/mods/94804/'
+        name: 'AAgua Fria - JSawyer Redone TTW'
     req:
       - *JIPLN
       - *johnnyGuitar
