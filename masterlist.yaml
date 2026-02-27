@@ -1943,10 +1943,6 @@ plugins:
       - 'Western Sky.esp'
       - 'Western Sky - Darker Nights.esp'
       - 'YellowGoodbye.esp'
-    tag:
-      - C.Climate
-      - C.ImageSpace
-      - C.Regions
     clean:
       - crc: 0x85D9A58F
         util: 'FNVEdit v4.1.5d'
