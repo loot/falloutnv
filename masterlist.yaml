@@ -1322,6 +1322,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/83782/'
         name: 'Bad Touch NVSE'
+    group: *frameworksGroup
     req:
       - *JIPLN
       - *johnnyGuitar
