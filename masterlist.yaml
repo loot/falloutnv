@@ -2553,10 +2553,42 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
         name: 'Goodies'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - Delev
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - ObjectBounds
+      - Relations.Add
+      - Scripts
+      - Stats
+      - Text
+      - WeaponMods
   - name: 'ExtraGoodies.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
         name: 'Goodies'
+    tag:
+      - Actors.ACBS
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Sound
 
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
