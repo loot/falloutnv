@@ -2426,7 +2426,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - name: 'NVSE/Plugins/LOD Fixes.dll'
+      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
         display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
         condition: 'active("The Mod Configuration Menu.esp")'
       - *ShowOff
