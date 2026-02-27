@@ -1921,6 +1921,7 @@ plugins:
   - name: 'Weathers Revised.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83861/' ]
     group: *weatherOverhaulsGroup
+    after: [ 'Perfect Skies.esp' ]
     inc:
       - 'Altitude.esp'
       - 'BlueMoonImagespace.esp'
