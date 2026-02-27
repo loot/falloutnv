@@ -2487,6 +2487,11 @@ plugins:
     after:
       - 'Goodies.esp'
       - 'ExtraGoodies.esp'
+    inc:
+      - 'AguaFria.esm'
+      - 'jsawyer.esp'
+      - 'JSawyer Ultimate.esp'
+      - 'sawyerbatty.esp'
     clean:
       - crc: 0x24F9D7FA
         util: 'FNVEdit v4.1.5p 32bit fix version'
