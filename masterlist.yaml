@@ -2487,6 +2487,7 @@ plugins:
     after:
       - 'Goodies.esp'
       - 'ExtraGoodies.esp'
+      - 'Leveled DLC Delay.esm'
     inc:
       - 'AguaFria.esm'
       - 'jsawyer.esp'
