@@ -2450,7 +2450,7 @@ plugins:
       - WeaponMods
     msg:
       - <<: *requiresX
-        subs: [ '[Agua Fria INI](https://www.nexusmods.com/newvegas/mods/94767/)' ]
+        subs: [ 'Agua Fria INI' ]
         condition: 'not file("config/AguaFria.ini")'
       - type: say
         content: '{0} is required if you want to alter this mods settings in game.'
