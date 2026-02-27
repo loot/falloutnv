@@ -1318,6 +1318,11 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'Bad Touch.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/83782/'
+        name: 'Bad Touch NVSE'
+
   - name: 'Caliber(Xgunrunners|Xhonesthearts)?\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/39981/'
