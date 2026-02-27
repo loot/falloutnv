@@ -2430,6 +2430,9 @@ plugins:
         display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
         condition: 'active("The Mod Configuration Menu.esp")'
       - *ShowOff
+    after:
+      - 'ExtraGoodies.esp'
+      - 'Goodies.esp'
     tag:
       - Delev
       - Destructible
