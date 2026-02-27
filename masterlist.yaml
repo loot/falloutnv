@@ -2480,6 +2480,11 @@ plugins:
       - <<: *obsolete
         subs: [ '[Better Game Performance v5](https://www.nexusmods.com/newvegas/mods/51871/)' ]
 
+  - name: 'Dead Hand.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/94982/'
+        name: 'Dead Hand - The Ultimate Vanilla-Plus Balance'
+
   - name: 'DLC Enhancements.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73803/'
