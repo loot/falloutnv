@@ -2549,6 +2549,15 @@ plugins:
   - name: 'DMT DN Weathers Toxic Cloud Patch.esp'
     req: [ 'DNWeathers.esp' ]
 
+  - name: 'Goodies.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
+        name: 'Goodies'
+  - name: 'ExtraGoodies.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
+        name: 'Goodies'
+
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
     after:
