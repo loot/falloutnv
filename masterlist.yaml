@@ -2590,6 +2590,7 @@ plugins:
         content: '{0} is required if you want to alter this mods settings in game.'
         subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
         condition: 'not active("The Mod Configuration Menu.esp")'
+    # Do not clean - ITM Door ref, to revert removal in YUP.
   - name: 'ExtraGoodies.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
