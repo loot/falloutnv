@@ -853,6 +853,8 @@ plugins:
       - EnchantmentStats
       - Graphics
       - Relev
+      - Scripts
+      - Sound
       - Stats
       - Text
     msg: [ *requires_xNVSE ]
