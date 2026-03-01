@@ -840,6 +840,13 @@ plugins:
     inc:
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
+    tag:
+      - C.Acoustic
+      - C.Encounter
+      - C.Light
+      - C.Owner
+      - C.Regions
+      - C.Water
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
