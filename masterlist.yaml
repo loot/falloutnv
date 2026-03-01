@@ -871,6 +871,9 @@ plugins:
       - NPC.Class
       - NPC.Eyes
       - NPC.Race
+      - R.Eyes
+      - R.Hair
+      - R.Head
       - Relations.Add
       - Relations.Change
       - Relations.Remove
