@@ -2549,6 +2549,64 @@ plugins:
   - name: 'DMT DN Weathers Toxic Cloud Patch.esp'
     req: [ 'DNWeathers.esp' ]
 
+  - name: 'Goodies.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
+        name: 'Goodies'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
+        display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
+        condition: 'active("The Mod Configuration Menu.esp")'
+      - *ShowOff
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - C.Water
+      - Delev
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - ObjectBounds
+      - Relations.Add
+      - Scripts
+      - Stats
+      - Text
+      - WeaponMods
+    msg:
+      - <<: *requiresX
+        subs: [ 'Goodies INI' ]
+        condition: 'not file("config/Goodies.ini")'
+      - type: say
+        content: '{0} is required if you want to alter this mods settings in game.'
+        subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+        condition: 'not active("The Mod Configuration Menu.esp")'
+    # Do not clean - ITM Door ref, to revert removal in YUP.
+  - name: 'ExtraGoodies.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/91028/'
+        name: 'Goodies'
+    tag:
+      - Actors.ACBS
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Sound
+
   - name: 'FlashlightNVSE.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39968/' ]
     after:
