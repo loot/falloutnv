@@ -848,6 +848,7 @@ plugins:
       - C.Regions
       - C.Water
       - Delev
+      - Enchantments
       - Relev
       - Text
     msg: [ *requires_xNVSE ]
