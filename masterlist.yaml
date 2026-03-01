@@ -841,12 +841,25 @@ plugins:
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
     tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
       - C.Acoustic
       - C.Encounter
       - C.Light
       - C.Owner
       - C.Regions
       - C.Water
+      - Creatures.Blood
       - Delev
       - Destructible
       - Enchantments
@@ -855,6 +868,9 @@ plugins:
       - Invent.Change
       - Invent.Remove
       - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.Race
       - Relations.Add
       - Relations.Change
       - Relations.Remove
