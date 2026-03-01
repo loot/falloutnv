@@ -852,6 +852,9 @@ plugins:
       - Enchantments
       - EnchantmentStats
       - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
       - Names
       - Relations.Add
       - Relations.Change
