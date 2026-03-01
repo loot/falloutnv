@@ -853,6 +853,9 @@ plugins:
       - EnchantmentStats
       - Graphics
       - Names
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
       - Relev
       - Scripts
       - Sound
