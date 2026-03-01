@@ -1552,6 +1552,8 @@ plugins:
         subs: [ 'WMX-WRP patch' ]
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
+###### AudioVisual - Animations & Physics ######
+
 ###### AudioVisual - Models & Textures ######
   - name: '(Boacombat2glove|boa ncrpahelmet)\.esp'
     url:
