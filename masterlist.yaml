@@ -849,6 +849,7 @@ plugins:
       - C.Water
       - Delev
       - Relev
+      - Text
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
