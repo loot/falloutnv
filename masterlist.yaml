@@ -1565,6 +1565,11 @@ plugins:
         display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
         condition: 'active("The Mod Configuration Menu.esp")'
       - *ShowOff
+    inc:
+      - '1st Person Sliding Fix.esp'
+      - 'FPS Leaning.esp'
+      - 'Just Sprint Plus - JAM.esp'
+      - 'Just Sprint Plus - JVS.esp'
     msg:
       - <<: *requiresX
         subs: [ 'Enhanced Movement INI' ]
