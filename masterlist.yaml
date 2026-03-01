@@ -1553,6 +1553,10 @@ plugins:
         condition: 'file("WMX-ArenovalisTextures.esp")'
 
 ###### AudioVisual - Animations & Physics ######
+  - name: 'Enhanced Movement.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85459/'
+        name: 'Enhanced Movement'
 
 ###### AudioVisual - Models & Textures ######
   - name: '(Boacombat2glove|boa ncrpahelmet)\.esp'
