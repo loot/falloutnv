@@ -850,7 +850,6 @@ plugins:
       - Delev
       - Destructible
       - Enchantments
-      - EnchantmentStats
       - Graphics
       - Invent.Add
       - Invent.Change
