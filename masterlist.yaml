@@ -840,6 +840,49 @@ plugins:
     inc:
       - 'YUP - Base Game.esm'
       - 'YUP - Base Game + All DLC.esm'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.RecordFlags
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Actors.Voice
+      - C.Acoustic
+      - C.Encounter
+      - C.Light
+      - C.Owner
+      - C.Regions
+      - C.Water
+      - Creatures.Blood
+      - Delev
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.Race
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
+      - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
+      - WeaponMods
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
