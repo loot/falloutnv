@@ -2568,6 +2568,7 @@ plugins:
       - Actors.Spells
       - Actors.Stats
       - Actors.Voice
+      - C.Water
       - Delev
       - Enchantments
       - Graphics
