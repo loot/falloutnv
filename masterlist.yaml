@@ -864,6 +864,7 @@ plugins:
       - Sound
       - Stats
       - Text
+      - WeaponMods
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
