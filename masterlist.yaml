@@ -847,6 +847,8 @@ plugins:
       - C.Owner
       - C.Regions
       - C.Water
+      - Delev
+      - Relev
     msg: [ *requires_xNVSE ]
     dirty:
       - <<: *quickClean
