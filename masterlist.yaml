@@ -848,8 +848,12 @@ plugins:
       - C.Regions
       - C.Water
       - Delev
+      - Destructible
       - Enchantments
+      - EnchantmentStats
+      - Graphics
       - Relev
+      - Stats
       - Text
     msg: [ *requires_xNVSE ]
     dirty:
