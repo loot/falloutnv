@@ -852,6 +852,7 @@ plugins:
       - Enchantments
       - EnchantmentStats
       - Graphics
+      - Names
       - Relev
       - Scripts
       - Sound
