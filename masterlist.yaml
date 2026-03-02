@@ -1337,6 +1337,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
   - name: 'FNV_Optimization.esm'
+    after: [ 'AWorldOfPain(Preview).esm' ]
     inc:
       - 'ExRB.esp'
       - 'ExRB-TTW.esp'
