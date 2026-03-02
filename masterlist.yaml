@@ -2181,6 +2181,11 @@ plugins:
         subs: [ 'Simple Street Lights ESP' ]
         condition: 'many("SimpleStreetLights( \(Extra Lights\))?\.esp")'
 
+  - name: 'Sunshine On My Shoulders.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96215/'
+        name: 'Sunshine On My Shoulders - A Vanilla Weather Enhancement'
+
   - name: 'True Weathers TTW.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76244/'
