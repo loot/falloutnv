@@ -1332,6 +1332,10 @@ plugins:
         condition: 'active("DNWeathers.esp")'
 
 ###### Fixes - Stability & Performance ######
+  - name: 'FNV_Optimization.*\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
+        name: 'New Vegas Interior Optimization Project'
 
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
