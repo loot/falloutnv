@@ -303,6 +303,11 @@ common:
     name: 'NVSE/Plugins/MCM.dll'
     display: '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)'
 
+  - &MCM_Extender
+    name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
+    display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
+    condition: 'active("The Mod Configuration Menu.esp")'
+
   - &ShowOff
     name: 'NVSE/Plugins/ShowOffNVSE.dll'
     display: '[ShowOff xNVSE Plugin](https://www.nexusmods.com/newvegas/mods/72541/)'
@@ -1592,9 +1597,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *kNVSE_Animation
-      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
-        display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
-        condition: 'active("The Mod Configuration Menu.esp")'
+      - *MCM_Extender
       - *ShowOff
     inc:
       - '1st Person Sliding Fix.esp'
@@ -2252,9 +2255,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
-        display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
-        condition: 'active("The Mod Configuration Menu.esp")'
+      - *MCM_Extender
       - *ShowOff
     msg:
       - <<: *requiresX
@@ -2638,9 +2639,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
-        display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
-        condition: 'active("The Mod Configuration Menu.esp")'
+      - *MCM_Extender
       - *ShowOff
     after:
       - 'ExtraGoodies.esp'
@@ -2748,9 +2747,7 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-      - name: 'NVSE/Plugins/Scripts/gr_MCMExtender.txt'
-        display: '[MCM Extender](https://www.nexusmods.com/newvegas/mods/93642/)'
-        condition: 'active("The Mod Configuration Menu.esp")'
+      - *MCM_Extender
       - *ShowOff
     tag:
       - Actors.ACBS
