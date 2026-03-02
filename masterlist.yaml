@@ -4822,6 +4822,11 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'SaltLakeStoriesHeavyModifications.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/95102/'
+        name: 'Lost Roads - A Salt Lake Stories Complete Overhaul'
+
   - name: 'SLS-Integrated.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96241/'
