@@ -2358,6 +2358,11 @@ plugins:
         util: '[FNVEdit v4.0.3g](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'Simple Character Expansions.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/87763/'
+        name: 'TSimple Character Expansions'
+
   - name: 'Two Wastelands Redesigned.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73667/'
