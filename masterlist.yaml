@@ -2361,7 +2361,7 @@ plugins:
   - name: 'Simple Character Expansions.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/87763/'
-        name: 'TSimple Character Expansions'
+        name: 'Simple Character Expansions'
     tag:
       - NPC.Eyes
       - NPC.FaceGen
@@ -2375,7 +2375,7 @@ plugins:
   - name: 'Simple Character Expansions TTW.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/87763/'
-        name: 'TSimple Character Expansions'
+        name: 'Simple Character Expansions'
     tag:
       - NPC.Eyes
       - NPC.FaceGen
