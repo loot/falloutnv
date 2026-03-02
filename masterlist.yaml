@@ -2362,6 +2362,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/87763/'
         name: 'Simple Character Expansions'
+    inc: [ 'TaleOfTwoWastelands.esm' ]
     tag:
       - NPC.Eyes
       - NPC.FaceGen
@@ -2380,6 +2381,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/87763/'
         name: 'Simple Character Expansions'
+    inc: [ 'TTW Redesigned.esm' ]
     tag:
       - NPC.Eyes
       - NPC.FaceGen
