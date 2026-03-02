@@ -2212,6 +2212,19 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/90273/'
         name: 'Billy Joel''s Nevada Skies - No Interior Edits - Radiactive Weathers'
     group: *weatherOverhaulsGroup
+    req:
+      - *JIPLN
+      - <<: *johnnyGuitar
+        condition: 'checksum("NevadaSkies.esp", D858074C) or checksum("NevadaSkies.esp", 04145054)'
+      - <<: *ShowOff
+        condition: 'checksum("NevadaSkies.esp", D858074C) or checksum("NevadaSkies.esp", 04145054)'
+      - <<: *UIO
+        condition: 'checksum("NevadaSkies.esp", D858074C) or checksum("NevadaSkies.esp", 04145054)'
+    msg:
+      - type: say
+        content: '{0} is required if you want to alter this mods settings in game.'
+        subs: [ '[The Mod Configuration Menu](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+        condition: 'not active("The Mod Configuration Menu.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xFDE3F8E8
