@@ -1331,6 +1331,8 @@ plugins:
         subs: [ '**DNWeathers.esp**' ]
         condition: 'active("DNWeathers.esp")'
 
+###### Fixes - Stability & Performance ######
+
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
     url:
