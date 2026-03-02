@@ -2208,9 +2208,6 @@ plugins:
   - name: 'NevadaSkies.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
     group: *weatherOverhaulsGroup
-    tag:
-      - C.Climate
-      - C.Light
     clean:
       - crc: 0x4494A10F
         util: 'FNVEdit v4.0.2f'
