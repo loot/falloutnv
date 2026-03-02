@@ -2206,7 +2206,9 @@ plugins:
         util: 'FNVEdit v4.0.4b'
 
   - name: 'NevadaSkies.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/35998/'
+        name: 'Nevada Skies - Weather Effects'
     group: *weatherOverhaulsGroup
     dirty:
       - <<: *quickClean
