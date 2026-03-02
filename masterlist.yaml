@@ -2217,6 +2217,13 @@ plugins:
         crc: 0xFDE3F8E8
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 3
+    clean:
+      # No Interior Edits - Radiactive Weathers
+      - crc: 0xD858074C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+      # No LR Nuked Weathers
+      - crc: 0x04145054
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
     url: [ 'http://modsreloaded.com/simple-street-lights/' ]
