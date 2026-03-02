@@ -2205,6 +2205,16 @@ plugins:
       - crc: 0x89C66422
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'NevadaSkies.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
+    group: *weatherOverhaulsGroup
+    tag:
+      - C.Climate
+      - C.Light
+    clean:
+      - crc: 0x4494A10F
+        util: 'FNVEdit v4.0.2f'
+
   - name: 'SimpleStreetLights( \(Extra Lights\))?\.esp'
     url: [ 'http://modsreloaded.com/simple-street-lights/' ]
     msg:
@@ -6636,16 +6646,6 @@ plugins:
         crc: 0x6267D10B
         util: '[FNVEdit v4.0.3f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 4
-
-  - name: 'NevadaSkies.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/35998/' ]
-    group: *weatherOverhaulsGroup
-    tag:
-      - C.Climate
-      - C.Light
-    clean:
-      - crc: 0x4494A10F
-        util: 'FNVEdit v4.0.2f'
 
   - name: 'Project Westland vision.esp'
     tag:
