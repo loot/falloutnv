@@ -2209,6 +2209,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/35998/'
         name: 'Nevada Skies - Weather Effects'
+      - link: 'https://www.nexusmods.com/newvegas/mods/90273/'
+        name: 'Billy Joel''s Nevada Skies - No Interior Edits - Radiactive Weathers'
     group: *weatherOverhaulsGroup
     dirty:
       - <<: *quickClean
