@@ -4855,8 +4855,8 @@ plugins:
       - C.Light
       - Faction
     clean:
-      - crc: 0xC0E2EF21
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0x403A448C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
     url:
