@@ -3551,6 +3551,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/68604/'
         name: 'TTW Reputations'
+  - name: 'TTW New Vegas Speech Checks.esm'
+    clean:
+      - crc: 0x01FAD404
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'TTW New Vegas Speech Checks - TTW Reputations Patch.esm'
+    clean:
+      - crc: 0xB8EEDD23
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'TTW Reputations.esm'
     url:
