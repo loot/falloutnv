@@ -2650,6 +2650,25 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 15
   - name: 'AGE - Anchorage Gear Extension.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.Stats
+      - Actors.Spells
+      - Delev
+      - Destructible
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.Race
+      - Relations.Add
+      - Relev
+      - Scripts
+      - Stats
+      - Text
     dirty:
       - <<: *quickClean
         crc: 0xE87B4775
