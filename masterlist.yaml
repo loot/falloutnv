@@ -2639,6 +2639,7 @@ plugins:
       - *johnnyGuitar
       - *kNVSE_Animation
       - *ShowOff
+    inc: [ 'Anchorage+NV.esp' ]
     msg:
       - <<: *requiresX
         subs: [ 'AGE Asset Pack' ]
