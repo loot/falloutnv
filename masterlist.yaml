@@ -2634,6 +2634,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/72031/'
         name: 'AGE - Anchorage Gameplay Expansion - Complete Overhaul'
+    msg:
+      - <<: *requiresX
+        subs: [ 'AGE Asset Pack' ]
+        condition: 'not file("AGE - Anchorage Gear Extension.bsa") and notfile("meshes/animgroupoverride/AGEM72.json")'
   - name: 'AGE - Anchorage Gear Extension.esm'
     dirty:
       - <<: *quickClean
