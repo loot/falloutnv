@@ -2630,6 +2630,11 @@ plugins:
       - crc: 0x8C1ABEFC
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'AGE - Anchorage Gear Extension\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/72031/'
+        name: 'AGE - Anchorage Gameplay Expansion - Complete Overhaul'
+
   - name: 'AguaFria.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/94767/'
