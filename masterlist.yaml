@@ -2651,6 +2651,9 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 15
   - name: 'AGE - Anchorage Gear Extension.esp'
+    after:
+      - 'DelayDLCRedux.esp'
+      - 'FafnirUniqueTTWOverhaul.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
