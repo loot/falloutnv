@@ -3658,6 +3658,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71112/'
         name: '(Benny Humbles You) and Steals Your Stuff'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
     inc: [ '(TTW) Benny Humbles You.esp' ]
     clean:
       - crc: 0x763C829D
