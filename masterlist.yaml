@@ -4842,21 +4842,12 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/66265/'
         name: 'TTW A World of Pain for Fallout 3'
     req: [ *TTWv320 ]
-    msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Literally Who''s Patch Emporium'
-          - '[AWorldOfPainFO3 - FafnirUniqueTTWOverhaul Patch](https://www.nexusmods.com/newvegas/mods/83169/)'
-        condition: 'active("FafnirUniqueTTWOverhaul.esp") and not active("AWorldOfPainFO3-FafnirUniqueTTWOverhaul.esp")'
-      - <<: *patchProvided
-        subs: [ 'JIP Companions Command and Control' ]
-        condition: 'active("JIP Companions Command & Control.esp") and not file("textures/jazzisparis/ccc/avatar_the_warden.dds")'
     tag:
       - C.Light
-      - Faction
+      - Relations.Add
     clean:
-      - crc: 0xC0E2EF21
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0x403A448C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
     url:
