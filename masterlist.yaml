@@ -2634,6 +2634,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/72031/'
         name: 'AGE - Anchorage Gameplay Expansion - Complete Overhaul'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *kNVSE_Animation
+      - *ShowOff
     msg:
       - <<: *requiresX
         subs: [ 'AGE Asset Pack' ]
