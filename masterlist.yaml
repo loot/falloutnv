@@ -2634,6 +2634,18 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/72031/'
         name: 'AGE - Anchorage Gameplay Expansion - Complete Overhaul'
+  - name: 'AGE - Anchorage Gear Extension.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7C7402D6
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 15
+  - name: 'AGE - Anchorage Gear Extension.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE87B4775
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 11
 
   - name: 'AguaFria.esm'
     url:
