@@ -3658,6 +3658,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71112/'
         name: '(Benny Humbles You) and Steals Your Stuff'
+    inc: [ '(TTW) Benny Humbles You.esp' ]
     clean:
       - crc: 0x763C829D
         util: 'FNVEdit v4.1.5p 32bit fix version'
