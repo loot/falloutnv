@@ -3109,6 +3109,11 @@ plugins:
         util: '[FNVEdit v4.0.4](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 5
 
+  - name: 'Sweet Pain NV.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/81523/'
+        name: 'Sweet Pain NV'
+
   - name: 'UnderwaterFX.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75514/'
