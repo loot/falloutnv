@@ -3113,6 +3113,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78569/'
         name: 'Sweet Pain'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
     dirty:
       - <<: *quickClean
         crc: 0xB86B7D27
