@@ -7526,6 +7526,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/66726/'
         name: "FPGE - Functional Post Game Ending"
   - name: 'Functional Post Game Ending.esm'
+    group: *earlyLoadersGroup
     req:
       - *JIPLN
       - *johnnyGuitar
@@ -7565,12 +7566,14 @@ plugins:
       - crc: 0xEF677734
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Functional Post Game Ending - TTW Patch.esm'
+    group: *earlyLoadersGroup
     req: [ *TTWv330 ]
     tag: [ Actors.AIPackages ]
     clean:
       - crc: 0xBFDD424E
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Functional Post Game Ending - YUP Patch.esm'
+    group: *earlyLoadersGroup
     tag: [ Actors.AIPackages ]
     dirty:
       - <<: *quickClean
