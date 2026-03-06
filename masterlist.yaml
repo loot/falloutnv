@@ -3113,12 +3113,31 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/81523/'
         name: 'Sweet Pain NV'
+    tag:
+      - C.ImageSpace
+      - C.Light
+      - C.Name
+      - C.Owner
+      - C.Water
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - Scripts
+      - Text
     dirty:
       - <<: *quickClean
         crc: 0xD3EB7F32
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 606
   - name: 'SP TTW Patch.esp'
+    tag:
+      - C.Light
+      - C.Owner
+      - C.Water
+      - Invent.Add
+      - Invent.Remove
     clean:
       - crc: 0x48BFC0A6
         util: 'FNVEdit v4.1.5p 32bit fix version'
