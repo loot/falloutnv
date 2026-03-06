@@ -7529,17 +7529,6 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
-    msg:
-      - <<: *patchProvided
-        subs: [ 'A World Of Pain' ]
-        condition: 'active("AWorldOfPain(Preview).esm") and not active("Functional Post Game Ending - AWOP Patch.esm")'
-      - <<: *patchProvided
-        subs: [ 'Tale of Two Wastelands' ]
-        condition: 'active("TaleOfTwoWastelands.esm") and not active("Functional Post Game Ending - TTW Patch.esm")'
-      - <<: *patchProvided
-        subs: [ 'Yukichigai Unofficial Patch - YUP' ]
-        condition: 'active("YUP - Base Game + All DLC.esm") and not active("Functional Post Game Ending - YUP Patch.esm")'
-      - *requires_xNVSE
     inc:
       - 'ContinueAfterEnding.esp'
       - 'CAGE 1.9.3.2.esp'
