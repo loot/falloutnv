@@ -3113,6 +3113,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/81523/'
         name: 'Sweet Pain NV'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
     tag:
       - C.ImageSpace
       - C.Light
