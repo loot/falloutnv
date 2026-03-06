@@ -7532,6 +7532,7 @@ plugins:
     inc:
       - 'ContinueAfterEnding.esp'
       - 'CAGE 1.9.3.2.esp'
+      - 'Functional Post Game Ending Lite.esm'
     tag:
       - Actors.AIPackages
       - Graphics
