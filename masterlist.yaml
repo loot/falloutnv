@@ -4832,6 +4832,27 @@ plugins:
       - Invent.Add
       - Invent.Remove
       - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xCAD329A8
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 38
+  - name: 'AWOPDeadMoney.esm'
+    clean:
+      - crc: 0x5E4CAE2C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'AWOPDeadMoneyVendorPatch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFC4008C9
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 90
+  - name: 'AWOPMonsterPatchVanilla.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0x175953AB
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 2
   - name: 'AWOPCaliberXAmmoPatch.esp'
     tag:
       - Invent.Add
