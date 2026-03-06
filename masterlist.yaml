@@ -4822,7 +4822,9 @@ plugins:
 
 ###### Locations - New Lands ######
   - name: 'AWorldOfPain(Preview).esm'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/38719/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/38719/'
+        name: 'A World Of Pain'
     tag:
       - Invent.Add
       - Invent.Remove
