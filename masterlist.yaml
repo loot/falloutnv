@@ -1337,6 +1337,15 @@ plugins:
         condition: 'active("DNWeathers.esp")'
 
 ###### Fixes - Stability & Performance ######
+  - name: 'FO3_Optimization.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85909/'
+        name: 'Fallout 3 TTW Interior Optimization Project'
+  - name: '(DCAnniversary|FortIndependenceRedesigned|GNR_Redux|Independence_Overhaul|Pentagon_Overhaul|RangerCompoundRedux|TTW Interiors|ZetaRehaul)_Opt\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/85909/'
+        name: 'Fallout 3 TTW Interior Optimization Project'
+
   - name: 'FNV_Optimization.*\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
