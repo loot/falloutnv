@@ -3598,8 +3598,8 @@ plugins:
 
   - name: 'TTW New Vegas Speech Checks( - TTW Reputations Patch)?\.esm'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/68604/'
-        name: 'TTW Reputations'
+      - link: 'https://www.nexusmods.com/newvegas/mods/68736/'
+        name: 'TTW New Vegas Speech Checks'
   - name: 'TTW New Vegas Speech Checks.esm'
     msg:
       - <<: *patchProvided
