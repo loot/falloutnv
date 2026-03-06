@@ -4826,8 +4826,12 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/38719/'
         name: 'A World Of Pain'
     tag:
+      - Actors.ACBS
+      - Actors.RecordFlags
+      - Actors.Stats
       - Invent.Add
       - Invent.Remove
+      - Scripts
   - name: 'AWOPCaliberXAmmoPatch.esp'
     tag:
       - Invent.Add
