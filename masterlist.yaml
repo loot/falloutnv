@@ -1341,6 +1341,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85909/'
         name: 'Fallout 3 TTW Interior Optimization Project'
+    clean:
+      - crc: 0x42713392
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: '(DCAnniversary|FortIndependenceRedesigned|GNR_Redux|Independence_Overhaul|Pentagon_Overhaul|RangerCompoundRedux|TTW Interiors|ZetaRehaul)_Opt\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85909/'
