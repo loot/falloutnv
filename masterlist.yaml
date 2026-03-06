@@ -3736,7 +3736,7 @@ plugins:
   - name: 'Functional Post Game Ending Lite.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/73668/'
-        name: "Functional Post Game Ending Lite"
+        name: "FPGEL - Functional Post Game Ending Lite"
     group: *earlyLoadersGroup
     req:
       - *JIPLN
