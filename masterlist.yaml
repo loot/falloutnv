@@ -7547,25 +7547,45 @@ plugins:
       - Actors.AIPackagesForceAdd
       - Graphics
     clean:
-    # 6.4
-      - crc: 0x8B474C15
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0x75D210C1
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Functional Post Game Ending - AWOP Patch.esm'
     clean:
-    # 6.4
-      - crc: 0x423465ED
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0x55507FA4
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'Functional Post Game Ending - AWOP Revised Patch.esm'
+    clean:
+      - crc: 0x0D0670D4
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'Functional Post Game Ending - Outside Bets Patch.esp'
+    clean:
+      - crc: 0xC9990897
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'Functional Post Game Ending - Uncut Extra Collection Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9C0795DA
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+  - name: 'Functional Post Game Ending - Uncut Wasteland Patch.esp'
+    clean:
+      - crc: 0x25B3CEFA
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'Functional Post Game Ending - Uncut Wasteland Patch (OB).esp'
+    clean:
+      - crc: 0xEF677734
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Functional Post Game Ending - TTW Patch.esm'
     req: [ *TTWv330 ]
     clean:
-    # 6.4
-      - crc: 0x0B4E5CFF
-        util: 'FNVEdit v4.0.4c'
+      - crc: 0xBFDD424E
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Functional Post Game Ending - YUP Patch.esm'
-    clean:
-    # 6.4
-      - crc: 0x12391AB4
-        util: 'FNVEdit v4.0.4c'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA0D9680B
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 7
 
   - name: 'pipboy2500_edisleado.esp'
     url:
