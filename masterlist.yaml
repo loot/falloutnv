@@ -4857,6 +4857,11 @@ plugins:
         itm: 2
   # Update file
   - name: 'AWOP Interim Fixes.esp'
+    msg:
+      - type: say
+        content: 'Recommended to flag this file as an ESM using xEdit. [Guide](https://tes5edit.github.io/docs/8-managing-mod-files.html#ConvertingaPluginintoaMaster). {0}'
+        subs: [ 'Reason: May revert changes in ESM flagged patches for this mod.' ]
+        condition: 'not is_master("AWOP Interim Fixes.esp")'
     clean:
       - crc: 0x1B1763A2
         util: 'FNVEdit v4.1.5p 32bit fix version'
