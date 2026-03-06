@@ -3116,6 +3116,29 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.DeathItem
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - C.Light
+      - C.Name
+      - C.Owner
+      - C.Water
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
+      - Scripts
+      - Stats
+      - Text
     dirty:
       - <<: *quickClean
         crc: 0xB86B7D27
