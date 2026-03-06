@@ -3733,6 +3733,15 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 7
 
+  - name: 'Functional Post Game Ending Lite.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73668/'
+        name: "Functional Post Game Ending Lite"
+  - name: 'Functional Post Game Ending Lite TTW Patch.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73668/'
+        name: "Functional Post Game Ending Lite"
+
   - name: 'NewVegasBounties.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
