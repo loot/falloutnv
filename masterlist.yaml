@@ -1397,8 +1397,38 @@ plugins:
     clean:
       - crc: 0xA7CB6783
         util: 'FNVEdit v4.1.5p 32bit fix version'
+  ### NVIOP - Standalone files ###
+  - name: 'Lucky(38_MogulPenthouse|_38_Penthouse)_Optimization\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
+        name: 'New Vegas Interior Optimization Project'
+  - name: 'Lucky_38_Penthouse_Optimization.esm'
+    clean:
+      - crc: 0x1927141C
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'Lucky38_MogulPenthouse_Optimization.esm'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xF18A7B52
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'McCarranConcourse(_Less_Trash)?_opt\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
+        name: 'New Vegas Interior Optimization Project'
+  - name: 'McCarranConcourse_opt.esm'
+    clean:
+      - crc: 0xC078275B
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'McCarranConcourse_Less_Trash_opt.esm'
+    clean:
+      - crc: 0x4C810066
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   ### NVIOP - Patches ###
-  - name: '.*_(opt|Optimization)\.es[mp]'
+  - name: '(?!(DCAnniversary|FortIndependenceRedesigned|GNR_Redux|Independence_Overhaul|Pentagon_Overhaul|RangerCompoundRedux|TTW Interiors|ZetaRehaul)).*_opt\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
+        name: 'New Vegas Interior Optimization Project'
+  - name: 'NatsL38Suite - (NOPE|YUP|YUPTTW)\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
