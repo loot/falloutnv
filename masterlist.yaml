@@ -2646,15 +2646,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
         name: 'Vault 22 Flora Overhaul Remastered'
-    tag:
-      - C.Acoustic
-      - Graphics
-      - Invent.Add
-    dirty:
-      - <<: *quickClean
-        crc: 0x113C1E94
-        util: '[FNVEdit v4.0.4c](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 14
+    group: *underridesGroup
+    clean:
+      - crc: 0x437ED4B9
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'Vurt''s WFO.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39856/' ]
