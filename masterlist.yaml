@@ -2646,10 +2646,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/71521/'
         name: 'Vault 22 Flora Overhaul Remastered'
-    tag:
-      - C.Acoustic
-      - Graphics
-      - Invent.Add
     dirty:
       - <<: *quickClean
         crc: 0x113C1E94
