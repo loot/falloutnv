@@ -5378,6 +5378,11 @@ plugins:
       - crc: 0xAED90543
         util: 'FNVEdit v4.0.4b'
 
+  - name: 'Simple Open Strip.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/73127/'
+        name: 'Simple Open Strip'
+
   - name: 'TFRP - L38 Control Room Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/74141/'
