@@ -5383,6 +5383,11 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/73127/'
         name: 'Simple Open Strip'
     after: [ 'Lightweight Strip Overhaul.esm' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Voice
+      - NPC.Race
     clean:
       - crc: 0xA18A150B
         util: 'FNVEdit v4.1.5p 32bit fix version'
