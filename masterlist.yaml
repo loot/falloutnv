@@ -5383,6 +5383,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/73127/'
         name: 'Simple Open Strip'
     after: [ 'Lightweight Strip Overhaul.esm' ]
+    inc:
+      - 'NVStripOpen.esm'
+      - 'StripOpenMain.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
