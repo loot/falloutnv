@@ -5384,6 +5384,7 @@ plugins:
         name: 'Simple Open Strip'
     after: [ 'Lightweight Strip Overhaul.esm' ]
     inc:
+      - 'New Vegas Open.esp'
       - 'NVStripOpen.esm'
       - 'StripOpenMain.esp'
     tag:
