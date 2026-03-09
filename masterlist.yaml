@@ -5617,6 +5617,13 @@ plugins:
       - crc: 0x758572C9
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Russell.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/50107/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+
   - name: 'Russell( - YUP Patch)?\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/95104/'
@@ -7173,13 +7180,6 @@ plugins:
         crc: 0x456E6B31
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
-
-  - name: 'Russell.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/50107/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
 
   - name: 'KingOfTheRing.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
