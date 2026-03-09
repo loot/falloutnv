@@ -1383,11 +1383,11 @@ plugins:
       - 'ExRB.esp'
       - 'ExRB-TTW.esp'
     clean:
-      - crc: 0x6E359A53
+      - crc: 0x06ED2CC4
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'FNV_Optimization NOPE.esm'
     clean:
-      - crc: 0x8144F5D4
+      - crc: 0xE57A2ECF
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'FNV_Optimization TTW.esm'
     clean:
@@ -1395,7 +1395,11 @@ plugins:
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'FNV_Optimization YUP.esm'
     clean:
-      - crc: 0xA7CB6783
+      - crc: 0x77B7BC39
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'FNV_Optimization YUPTTW.esm'
+    clean:
+      - crc: 0xD9FEACB8
         util: 'FNVEdit v4.1.5p 32bit fix version'
   ### NVIOP - Standalone files ###
   - name: 'Lucky(38_MogulPenthouse|_38_Penthouse)_Optimization\.esm'
@@ -1409,7 +1413,7 @@ plugins:
   - name: 'Lucky38_MogulPenthouse_Optimization.esm'
     tag: [ Graphics ]
     clean:
-      - crc: 0xF18A7B52
+      - crc: 0x44F96BEE
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'McCarranConcourse(_Less_Trash)?_opt\.esm'
     url:
