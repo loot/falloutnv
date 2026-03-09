@@ -3949,6 +3949,9 @@ plugins:
         name: 'New Vegas Bounties I LE'
   - name: 'NewVegasBounties.esm'
     req: [ 'SomeguySeries.esm' ]
+    inc:
+      - 'NewVegasBounties.esp'
+      - 'SomeguySeries Revamped.esp'
     msg:
       - <<: *patchProvided
         subs: [ 'Tale of Two Wastelands' ]
