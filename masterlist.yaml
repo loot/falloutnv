@@ -5621,10 +5621,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/50107/'
         name: 'Russell'
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
 
   - name: 'Russell( - YUP Patch)?\.esm'
     url:
