@@ -1378,7 +1378,14 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
   - name: 'FNV_Optimization.esm'
-    after: [ 'AWorldOfPain(Preview).esm' ]
+    after:
+      - 'AWorldOfPain(Preview).esm'
+      - 'Masters of the Madre.esm'
+      - 'OliverSwanickFollower.esp'
+      - 'TGDLCIO.esm'
+      - 'vault22FloralOverhaul.esm'
+      - name: 'Windows of the Mojave v1.2.1.esp'
+        condition: 'is_master("Windows of the Mojave v1.2.1.esp")'
     inc:
       - 'ExRB.esp'
       - 'ExRB-TTW.esp'
