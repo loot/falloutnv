@@ -5618,7 +5618,9 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
   - name: 'Russell.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/50107/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/50107/'
+        name: 'Russell'
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
