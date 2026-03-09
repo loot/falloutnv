@@ -5625,6 +5625,10 @@ plugins:
     inc:
       - 'Russell.esp'
       - 'SomeguySeries Revamped.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Yukichigai Unofficial Patch - YUP' ]
+        condition: 'active("YUP - Base Game + All DLC.esm") and not active("Russell - YUP Patch.esm")'
     clean:
       - crc: 0xA64E60C7
         util: 'FNVEdit v4.1.5p 32bit fix version'
