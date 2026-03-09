@@ -5629,6 +5629,7 @@ plugins:
       - crc: 0xA64E60C7
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Russell - YUP Patch.esm'
+    inc: [ 'TaleOfTwoWastelands.esm' ]
     clean:
       - crc: 0x2CD72D4D
         util: 'FNVEdit v4.1.5p 32bit fix version'
