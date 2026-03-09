@@ -5617,6 +5617,11 @@ plugins:
       - crc: 0x758572C9
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Russell( - YUP Patch)?\.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/95104/'
+        name: 'Russell LE'
+
   - name: 'VanessaFollowerNV.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56270/' ]
     dirty:
