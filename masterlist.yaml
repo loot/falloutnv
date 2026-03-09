@@ -5223,7 +5223,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85915/'
         name: 'Nova Arizona - A Legion Lands Expansion'
-    group: *highPriorityGroup
     req:
       - *anhNVSE
       - *hNVSE
