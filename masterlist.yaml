@@ -1378,43 +1378,62 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
   - name: 'FNV_Optimization.esm'
-    after: [ 'AWorldOfPain(Preview).esm' ]
+    after:
+      - 'AWorldOfPain(Preview).esm'
+      - 'Masters of the Madre.esm'
+      - 'OliverSwanickFollower.esp'
+      - 'TGDLCIO.esm'
+      - 'vault22FloralOverhaul.esm'
+      - name: 'Windows of the Mojave v1.2.1.esp'
+        condition: 'is_master("Windows of the Mojave v1.2.1.esp")'
     inc:
       - 'ExRB.esp'
       - 'ExRB-TTW.esp'
     clean:
-      - crc: 0x6E359A53
+      - crc: 0x06ED2CC4
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'FNV_Optimization NOPE.esm'
     clean:
-      - crc: 0x8144F5D4
-        util: 'FNVEdit v4.1.5p 32bit fix version'
-  - name: 'FNV_Optimization TTW.esm'
-    clean:
-      - crc: 0x14AF9EA4
+      - crc: 0xE57A2ECF
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'FNV_Optimization YUP.esm'
     clean:
-      - crc: 0xA7CB6783
+      - crc: 0x77B7BC39
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'FNV_Optimization YUPTTW.esm'
+    clean:
+      - crc: 0xD9FEACB8
         util: 'FNVEdit v4.1.5p 32bit fix version'
   ### NVIOP - Standalone files ###
   - name: 'Lucky(38_MogulPenthouse|_38_Penthouse)_Optimization\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Lucky 38 Penthouse Optimization ESM' ]
+        condition: 'many("Lucky(38_MogulPenthouse|_38_Penthouse)_Optimization\.esm")'
   - name: 'Lucky_38_Penthouse_Optimization.esm'
     clean:
       - crc: 0x1927141C
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'Lucky38_MogulPenthouse_Optimization.esm'
     tag: [ Graphics ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[The Mogul Mausoleum - A Lucky 38 Overhaul](https://www.nexusmods.com/newvegas/mods/66622/)' ]
+        condition: 'not file("textures/Lucky38Overhaul/base/basequad01.dds")'
     clean:
-      - crc: 0xF18A7B52
+      - crc: 0x44F96BEE
         util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'McCarranConcourse(_Less_Trash)?_opt\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'McCarran Concourse Optimization ESM' ]
+        condition: 'many("McCarranConcourse(_Less_Trash)?_opt\.esm")'
   - name: 'McCarranConcourse_opt.esm'
     clean:
       - crc: 0xC078275B
