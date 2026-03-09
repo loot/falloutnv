@@ -1433,6 +1433,11 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
 
+  - name: 'PerformanceOfTheTitans.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/89069/'
+        name: 'Performance Of The Titans'
+
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
     url:
