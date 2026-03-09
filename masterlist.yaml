@@ -5637,6 +5637,7 @@ plugins:
     inc:
       - 'Russell.esp'
       - 'SomeguySeries Revamped.esp'
+    tag: [ Relations.Add ]
     msg:
       - <<: *patchProvided
         subs: [ 'Yukichigai Unofficial Patch - YUP' ]
