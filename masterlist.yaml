@@ -1433,6 +1433,18 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
 
+  - name: 'PerformanceOfTheTitans.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/89069/'
+        name: 'Performance Of The Titans'
+    group: *fixesGroup
+    tag: [ Actors.AIPackages ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB0C0B345
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 1
+
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
     url:
