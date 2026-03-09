@@ -3956,13 +3956,12 @@ plugins:
         subs: [ 'Tale of Two Wastelands' ]
         condition: 'active("TaleOfTwoWastelands.esm") and not active("NewVegasBountiesTTW.esp")'
     clean:
-      # 1.4
       - crc: 0x4ABA5574
-        util: 'FNVEdit v4.0.4c'
+        util: 'FNVEdit v4.1.5p 32bit fix version'
   - name: 'NewVegasBountiesTTW.esp'
     clean:
       - crc: 0x84DC295A
-        util: 'FNVEdit v4.0.4c'
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
 
 ###### Gameplay - Skills & Perks ######
