@@ -1409,6 +1409,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Lucky 38 Penthouse Optimization ESM' ]
+        condition: 'many("Lucky(38_MogulPenthouse|_38_Penthouse)_Optimization\.esm")'
   - name: 'Lucky_38_Penthouse_Optimization.esm'
     clean:
       - crc: 0x1927141C
@@ -1422,6 +1426,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'McCarran Concourse Optimization ESM' ]
+        condition: 'many("McCarranConcourse(_Less_Trash)?_opt\.esm")'
   - name: 'McCarranConcourse_opt.esm'
     clean:
       - crc: 0xC078275B
