@@ -1437,6 +1437,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/89069/'
         name: 'Performance Of The Titans'
+    tag: [ Actors.AIPackages ]
     dirty:
       - <<: *quickClean
         crc: 0xB0C0B345
