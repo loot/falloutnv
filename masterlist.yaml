@@ -4054,7 +4054,7 @@ plugins:
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
-    tag: [ Relations ]
+    tag: [ Relations.Add ]
     dirty:
       - <<: *reqManualFix
         crc: 0x71715D56
