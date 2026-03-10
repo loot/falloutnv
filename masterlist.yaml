@@ -3994,6 +3994,10 @@ plugins:
     req: [ *theSomeguySeries ]
     inc: [ 'NewVegasBountiesII.esm' ]
     tag: [ Relations.Add ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**New Vegas Bounties II LE**' ]
+        condition: 'active("NewVegasBountiesII.esm")'
     dirty:
       - <<: *reqManualFix
         crc: 0x11D6AFEA
