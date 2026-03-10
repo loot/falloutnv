@@ -4053,15 +4053,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/60837/'
         name: 'The Better Angels'
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
-      - 'Badmothafucka.esp'
-      - 'NewVegasBountiesIII.esp'
 
   - name: 'TheInheritance.esp'
     url:
