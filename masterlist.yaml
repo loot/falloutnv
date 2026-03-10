@@ -3829,7 +3829,9 @@ plugins:
         util: 'FNVEdit v4.0.4c'
 
   - name: 'KingOfTheRing.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/56353/'
+        name: "King of the Ring"
 
   - name: 'Legion Quests Expanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
