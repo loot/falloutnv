@@ -3828,6 +3828,14 @@ plugins:
       - crc: 0xE38D7BA9
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'KingOfTheRing.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+
   - name: 'Legion Quests Expanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
     msg:
@@ -7208,14 +7216,6 @@ plugins:
         crc: 0x456E6B31
         util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
-
-  - name: 'KingOfTheRing.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
 
   - name: 'NewVegasKiller.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56408/' ]
