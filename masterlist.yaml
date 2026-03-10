@@ -253,8 +253,7 @@ common:
 # File Anchors
   - &theSomeguySeries
     name: 'SomeguySeries.esm'
-    display: '[The Someguy Series v2.0](https://www.nexusmods.com/newvegas/mods/48925/)'
-    condition: 'not file("SomeguySeries.esm") and not checksum("SomeguySeries.esm", B67C3495)'
+    display: '[The Someguy Series](https://www.nexusmods.com/newvegas/mods/48925/)'
 
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
