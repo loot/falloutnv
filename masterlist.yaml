@@ -3943,7 +3943,7 @@ plugins:
     msg:
       - <<: *alreadyInX
         subs: [ 'NewVegasBounties.esm' ]
-        condition: 'active("NewVegasBounties.esm")'
+        condition: 'file("NewVegasBounties.esm")'
       - <<: *useInstead
         subs: [ '[New Vegas Bounties 1 LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
         condition: 'not active("NewVegasBounties.esm")'
