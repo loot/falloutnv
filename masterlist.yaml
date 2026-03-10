@@ -4059,6 +4059,10 @@ plugins:
       - 'NewVegasBountiesII.esp'
     inc: [ 'TheInheritance.esm' ]
     tag: [ Relations.Add ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**The Inheritance LE**' ]
+        condition: 'active("TheInheritance.esm")'
     dirty:
       - <<: *reqManualFix
         crc: 0x71715D56
