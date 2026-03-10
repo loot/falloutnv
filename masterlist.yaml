@@ -1562,7 +1562,7 @@ plugins:
     group: *frameworksGroup
     msg:
       - <<: *obsolete
-        subs: [ '[Someguy Series v2.0](https://www.nexusmods.com/newvegas/mods/42507/)' ]
+        subs: [ '[Someguy Series v2.0](https://www.nexusmods.com/newvegas/mods/48925/)' ]
         condition: 'checksum("SomeguySeries.esm", EB2820F1)'
     clean:
       - crc: 0xB67C3495
