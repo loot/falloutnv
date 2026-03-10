@@ -4008,6 +4008,17 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 2
 
+  - name: 'NewVegasBountiesIII.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/55744/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+      - 'Badmothafucka.esp'
+
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
     url:
@@ -7251,17 +7262,6 @@ plugins:
       - 'Russell.esp'
       - 'KingOfTheRing.esp'
       - 'NewVegasKiller.esp'
-
-  - name: 'NewVegasBountiesIII.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/55744/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
-      - 'Badmothafucka.esp'
 
   - name: 'TheBetterAngels.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60837/' ]
