@@ -5694,13 +5694,6 @@ plugins:
 
   - name: 'Badmothafucka.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56742/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
 
   - name: 'Badmothafucka.esm'
     url:
