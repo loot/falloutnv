@@ -4053,6 +4053,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/49012/'
         name: 'The Inheritance'
+    req: [ *theSomeguySeries ]
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
