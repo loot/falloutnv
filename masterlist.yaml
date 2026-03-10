@@ -3990,14 +3990,18 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/41184/'
         name: 'New Vegas Bounties II'
-    after: [ 'NewVegasBounties.esp' ]
-    req: [ *theSomeguySeries ]
+    req:
+      - 'NewVegasBounties.esp'
+      - *theSomeguySeries
     inc: [ 'NewVegasBountiesII.esm' ]
     tag: [ Relations.Add ]
     msg:
       - <<: *alreadyInX
         subs: [ '**New Vegas Bounties II LE**' ]
         condition: 'active("NewVegasBountiesII.esm")'
+      - <<: *requiresX
+        type: say
+        subs: [ 'Completion of [New Vegas Bounties I](https://www.nexusmods.com/newvegas/mods/37310/) quest.' ]
     dirty:
       - <<: *reqManualFix
         crc: 0x11D6AFEA
