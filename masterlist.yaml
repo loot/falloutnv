@@ -4009,7 +4009,9 @@ plugins:
         nav: 2
 
   - name: 'NewVegasBountiesIII.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/55744/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/55744/'
+        name: 'New Vegas Bounties III'
     req: [ *theSomeguySeries ]
     after:
       - 'NewVegasBounties.esp'
