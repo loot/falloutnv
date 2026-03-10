@@ -4030,6 +4030,7 @@ plugins:
     req:
       - 'NewVegasBounties.esp'
       - *theSomeguySeries
+    inc: [ 'NewVegasKiller.esm' ]
     msg:
       - <<: *requiresX
         type: say
