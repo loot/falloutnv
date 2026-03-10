@@ -4032,6 +4032,9 @@ plugins:
       - *theSomeguySeries
     inc: [ 'NewVegasKiller.esm' ]
     msg:
+      - <<: *alreadyInX
+        subs: [ '**New Vegas Killer LE**' ]
+        condition: 'active("NewVegasKiller.esm")'
       - <<: *requiresX
         type: say
         subs: [ 'Completion of [New Vegas Bounties I](https://www.nexusmods.com/newvegas/mods/37310/) quest.' ]
