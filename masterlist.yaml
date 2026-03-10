@@ -3939,7 +3939,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
         name: 'New Vegas Bounties I'
-    req: [ 'SomeguySeries.esm' ]
+    req: [ *theSomeguySeries ]
     msg:
       - <<: *alreadyInX
         subs: [ 'NewVegasBounties.esm' ]
