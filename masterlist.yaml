@@ -5181,6 +5181,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/60877/'
         name: 'Checkpoint Gary'
     req: [ *theSomeguySeries ]
+    inc: [ 'CheckpointGary.esm' ]
     clean:
       - crc: 0x9ECCC759
         util: 'FNVEdit v4.1.5p 32bit fix version'
