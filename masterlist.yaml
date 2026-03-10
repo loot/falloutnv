@@ -3992,6 +3992,7 @@ plugins:
         name: 'New Vegas Bounties II'
     after: [ 'NewVegasBounties.esp' ]
     req: [ *theSomeguySeries ]
+    inc: [ 'NewVegasBountiesII.esm' ]
     tag: [ Relations.Add ]
     dirty:
       - <<: *reqManualFix
