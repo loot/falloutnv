@@ -3991,7 +3991,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/41184/'
         name: 'New Vegas Bounties II'
     after: [ NewVegasBounties.esp ]
-    tag: [ Relations ]
+    tag: [ Relations.Add ]
     dirty:
       - <<: *reqManualFix
         crc: 0x11D6AFEA
