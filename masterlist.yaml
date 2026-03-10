@@ -5698,6 +5698,10 @@ plugins:
         name: 'Bad Mothafucka'
     req: [ *theSomeguySeries ]
     inc: [ 'Badmothafucka.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Bad Mothafucka LE**' ]
+        condition: 'active("Badmothafucka.esm")'
     clean:
       - crc: 0x2D0CA71D
         util: 'FNVEdit v4.1.5p 32bit fix version'
