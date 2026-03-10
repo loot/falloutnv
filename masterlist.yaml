@@ -4055,6 +4055,10 @@ plugins:
         name: 'The Better Angels'
     req: [ *theSomeguySeries ]
     inc: [ 'TheBetterAngels.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**The Better Angels LE**' ]
+        condition: 'active("TheBetterAngels.esm")'
     clean:
       - crc: 0xB4EC0FD6
         util: 'FNVEdit v4.1.5p 32bit fix version'
