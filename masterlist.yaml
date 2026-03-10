@@ -5176,6 +5176,20 @@ plugins:
       - crc: 0x86E19612
         util: 'FNVEdit v4.1.5p 32bit fix version'
 
+  - name: 'CheckpointGary.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/60877/'
+        name: 'Checkpoint Gary'
+    req: [ *theSomeguySeries ]
+    inc: [ 'CheckpointGary.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Checkpoint Gary LE**' ]
+        condition: 'active("CheckpointGary.esm")'
+    clean:
+      - crc: 0x9ECCC759
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+
   - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
     url:
       - link: 'https://www.moddb.com/mods/falloutprojectbrazil/'
@@ -7244,19 +7258,6 @@ plugins:
       - 'NewVegasKiller.esp'
       - 'Badmothafucka.esp'
       - 'NewVegasBountiesIII.esp'
-
-  - name: 'CheckpointGary.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60877/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
-      - 'Badmothafucka.esp'
-      - 'NewVegasBountiesIII.esp'
-      - 'TheBetterAngels.esp'
 
   - name: '(MothershipZetaRehaul|ZetaRehaul(BiWastelands|DelayDLCRedux|HardcoreZeta(DelayDLCRedux)?|NVSpeechChecks)Patch)\.es[mp]'
     url:
