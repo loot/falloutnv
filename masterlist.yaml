@@ -254,7 +254,7 @@ common:
   - &theSomeguySeries
     name: 'SomeguySeries.esm'
     display: '[The Someguy Series](https://www.nexusmods.com/newvegas/mods/48925/) v2.0'
-    condition: 'checksum("SomeguySeries.esm", B67C3495)'
+    condition: 'not checksum("SomeguySeries.esm", B67C3495)'
 
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
