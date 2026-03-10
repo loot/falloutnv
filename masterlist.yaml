@@ -4027,10 +4027,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/newvegas/mods/56408/' ]
     after:
       - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
