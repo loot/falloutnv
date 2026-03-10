@@ -3828,24 +3828,6 @@ plugins:
       - crc: 0xE38D7BA9
         util: 'FNVEdit v4.0.4c'
 
-  - name: 'Legion Quests Expanded.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
-    msg:
-      - <<: *flagESM
-        condition: 'not is_master("Legion Quests Expanded.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Factions
-      - Actors.Stats
-      - C.Regions
-      - Invent.Add
-      - Invent.Remove
-    clean:
-      - crc: 0x230EF43F
-        util: 'FNVEdit v4.1.5d'
-
   - name: 'Functional Post Game Ending.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/66726/'
@@ -3947,6 +3929,24 @@ plugins:
     clean:
       - crc: 0xF98AE969
         util: 'FNVEdit v4.1.5p 32bit fix version'
+
+  - name: 'Legion Quests Expanded.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
+    msg:
+      - <<: *flagESM
+        condition: 'not is_master("Legion Quests Expanded.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Stats
+      - C.Regions
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x230EF43F
+        util: 'FNVEdit v4.1.5d'
 
   - name: 'NewVegasBounties.esp'
     url:
