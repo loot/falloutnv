@@ -3940,10 +3940,11 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/37310/'
         name: 'New Vegas Bounties I'
     req: [ *theSomeguySeries ]
+    inc: [ 'NewVegasBounties.esm' ]
     msg:
       - <<: *alreadyInX
-        subs: [ 'NewVegasBounties.esm' ]
-        condition: 'file("NewVegasBounties.esm")'
+        subs: [ '**New Vegas Bounties I LE**' ]
+        condition: 'active("NewVegasBounties.esm")'
       - <<: *useInstead
         subs: [ '[New Vegas Bounties 1 LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
         condition: 'not active("NewVegasBounties.esm")'
