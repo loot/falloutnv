@@ -3986,6 +3986,27 @@ plugins:
       - crc: 0x84DC295A
         util: 'FNVEdit v4.1.5p 32bit fix version'
 
+  - name: 'NewVegasBountiesII.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/41184/'
+        name: 'New Vegas Bounties II'
+    req:
+      - 'NewVegasBounties.esp'
+      - *theSomeguySeries
+    inc: [ 'NewVegasBountiesII.esm' ]
+    tag: [ Relations.Add ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**New Vegas Bounties II LE**' ]
+        condition: 'active("NewVegasBountiesII.esm")'
+      - <<: *requiresX
+        type: say
+        subs: [ 'Completion of [New Vegas Bounties I](https://www.nexusmods.com/newvegas/mods/37310/) quest.' ]
+    dirty:
+      - <<: *reqManualFix
+        crc: 0x11D6AFEA
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        nav: 2
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
@@ -7192,17 +7213,6 @@ plugins:
 
   - name: 'Shotgun Commando Redone.esp'
     inc: [ 'Shotgun Commando.esp' ]
-
-  - name: 'NewVegasBountiesII.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/41184/' ]
-    after: [ NewVegasBounties.esp ]
-    tag: [ Relations ]
-    dirty:
-      # v1.47
-      - <<: *reqManualFix
-        crc: 0x11D6AFEA
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
-        nav: 2
 
   - name: 'TheInheritance.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49012/' ]
