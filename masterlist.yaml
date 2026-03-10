@@ -5692,6 +5692,16 @@ plugins:
         util: '[FNVEdit v4.0.4b](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 5
 
+  - name: 'Badmothafucka.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/56742/' ]
+    after:
+      - 'NewVegasBounties.esp'
+      - 'NewVegasBountiesII.esp'
+      - 'TheInheritance.esp'
+      - 'Russell.esp'
+      - 'KingOfTheRing.esp'
+      - 'NewVegasKiller.esp'
+
   - name: 'Badmothafucka.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/77229/'
@@ -7296,16 +7306,6 @@ plugins:
 
   - name: 'Shotgun Commando Redone.esp'
     inc: [ 'Shotgun Commando.esp' ]
-
-  - name: 'Badmothafucka.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/56742/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
 
   - name: '(MothershipZetaRehaul|ZetaRehaul(BiWastelands|DelayDLCRedux|HardcoreZeta(DelayDLCRedux)?|NVSpeechChecks)Patch)\.es[mp]'
     url:
