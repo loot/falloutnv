@@ -4045,8 +4045,30 @@ plugins:
       - <<: *requiresX
         type: say
         subs: [ 'Completion of [New Vegas Bounties I](https://www.nexusmods.com/newvegas/mods/37310/) quest.' ]
+      - <<: *useInstead
+        subs: [ '[New Vegas Killer LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
+        condition: 'not active("NewVegasKiller.esm")'
     clean:
       - crc: 0xC31410F9
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+
+  - name: 'NewVegasKiller( - TTW)?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/77108/'
+        name: 'New Vegas Killer LE'
+  - name: 'NewVegasKiller.esm'
+    req: [ *theSomeguySeries ]
+    after: [ 'NewVegasBounties.esm' ]
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'Completion of [New Vegas Bounties I LE](https://www.nexusmods.com/newvegas/mods/77108/) quest.' ]
+    clean:
+      - crc: 0xB92D8783
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'NewVegasKiller - TTW.esp'
+    clean:
+      - crc: 0xB563CD0C
         util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'TheBetterAngels.esp'
