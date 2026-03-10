@@ -4056,16 +4056,14 @@ plugins:
       - 'NewVegasBountiesII.esp'
     tag: [ Relations ]
     dirty:
-      # v1.29
       - <<: *reqManualFix
         crc: 0x71715D56
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         udr: 2
         nav: 4
-      # v1.29 - after first QAC
       - <<: *reqManualFix
-        crc: 0x456E6B31
-        util: '[FNVEdit v4.0.2f](https://www.nexusmods.com/newvegas/mods/34703)'
+        crc: 0x1B85B571
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
 
 ###### Gameplay - Skills & Perks ######
