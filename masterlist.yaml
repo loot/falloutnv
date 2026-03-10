@@ -4013,11 +4013,6 @@ plugins:
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
-      - 'Badmothafucka.esp'
 
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
