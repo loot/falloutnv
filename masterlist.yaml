@@ -4057,6 +4057,7 @@ plugins:
     after:
       - 'NewVegasBounties.esp'
       - 'NewVegasBountiesII.esp'
+    inc: [ 'TheInheritance.esm' ]
     tag: [ Relations.Add ]
     dirty:
       - <<: *reqManualFix
