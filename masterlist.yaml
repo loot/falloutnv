@@ -3830,11 +3830,6 @@ plugins:
 
   - name: 'KingOfTheRing.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/56353/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
 
   - name: 'Legion Quests Expanded.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60208/' ]
