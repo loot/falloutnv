@@ -5178,16 +5178,6 @@ plugins:
 
   - name: 'CheckpointGary.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/60877/' ]
-    after:
-      - 'NewVegasBounties.esp'
-      - 'NewVegasBountiesII.esp'
-      - 'TheInheritance.esp'
-      - 'Russell.esp'
-      - 'KingOfTheRing.esp'
-      - 'NewVegasKiller.esp'
-      - 'Badmothafucka.esp'
-      - 'NewVegasBountiesIII.esp'
-      - 'TheBetterAngels.esp'
 
   - name: 'NewCalifornia( (Courier Stash|DLC) Control)?\.es[mp]'
     url:
