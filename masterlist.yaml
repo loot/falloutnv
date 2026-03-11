@@ -1471,7 +1471,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
   # Patches for files that need to have an ESM flag added.
-  - name: '(BLMedical|NVMC|NoSleepTillGoodsprings|Zardnar''sLocationsCombined)_opt\.esm'
+  - name: '(BLMedical|NatsL38Suite|NVMC|NoSleepTillGoodsprings|Zardnar''sLocationsCombined)_opt\.esm'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
