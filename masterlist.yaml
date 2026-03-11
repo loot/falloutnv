@@ -1479,6 +1479,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96267/'
         name: 'New Vegas Interior Optimization Project'
+    req: [ 'NatsL38Suite_opt.esm' ]
 
   - name: 'PerformanceOfTheTitans.esm'
     url:
