@@ -4072,7 +4072,7 @@ plugins:
         type: say
         subs: [ 'Completion of [New Vegas Bounties I](https://www.nexusmods.com/newvegas/mods/37310/) quest.' ]
       - <<: *useInstead
-        subs: [ '[New Vegas Killer LE](https://www.nexusmods.com/newvegas/mods/77108/)' ]
+        subs: [ '[New Vegas Killer LE](https://www.nexusmods.com/newvegas/mods/78427/)' ]
         condition: 'not active("NewVegasKiller.esm")'
     clean:
       - crc: 0xC31410F9
@@ -4080,7 +4080,7 @@ plugins:
 
   - name: 'NewVegasKiller( - TTW)?\.es[mp]'
     url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/77108/'
+      - link: 'https://www.nexusmods.com/newvegas/mods/78427/'
         name: 'New Vegas Killer LE'
   - name: 'NewVegasKiller.esm'
     req: [ *theSomeguySeries ]
