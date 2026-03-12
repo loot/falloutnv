@@ -1216,7 +1216,7 @@ plugins:
       - crc: 0xF89DC21D
         util: 'FNVEdit v4.0.4c'
 
-  - name: 'ConsistentWeaponModDescriptions.esp
+  - name: 'ConsistentWeaponModDescriptions.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85957/'
         name: 'Consistent Weapon Mod Descriptions'
