@@ -3796,7 +3796,7 @@ plugins:
     clean:
       - crc: 0xB21276AD
         util: 'FNVEdit v4.1.5d'
-  - name: 'Better Brotherhood - TTW Patch.esp'
+  - name: 'Better Brotherhood - TTW Patch.esm'
     tag:
       - Delev
       - Relev
