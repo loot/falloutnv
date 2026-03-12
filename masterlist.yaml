@@ -1220,6 +1220,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85957/'
         name: 'Consistent Weapon Mod Descriptions'
+    group: *fixesGroup
     tag:
       - Deactivate
       - NoMerge
