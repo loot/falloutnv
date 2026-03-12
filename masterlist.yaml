@@ -1220,6 +1220,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/85957/'
         name: 'Consistent Weapon Mod Descriptions'
+    tag:
+      - Deactivate
+      - NoMerge
+      - Text
 
   - name: 'Crafting Consistency Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/81130/' ]
