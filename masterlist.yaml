@@ -4449,14 +4449,7 @@ plugins:
       - *JIPLN
       - *johnnyGuitar
       - *ShowOff
-      - *supNVSE
       - *UIO
-      # Req: yUI & ySI - Version: 2.2+ CRC: 2.2.0 C23B2A4B, 2.2.1 2E13D445
-      - <<: *ySI
-        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
-      - <<: *yUI
-        condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
-    msg: [ *requires_xNVSE ]
     clean:
       - crc: 0x479C967D
         util: 'FNVEdit v4.1.5p 32bit fix version'
