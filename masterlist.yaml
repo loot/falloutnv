@@ -4457,6 +4457,9 @@ plugins:
       - <<: *yUI
         condition: 'checksum("QuickSelect.esp", C23B2A4B) or checksum("QuickSelect.esp", 2E13D445)'
     msg: [ *requires_xNVSE ]
+    clean:
+      - crc: 0x479C967D
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'Sorter( - Combined( - Weighted)?| - Empty Consumables)?( - Dead Money)?\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/34950/' ]
