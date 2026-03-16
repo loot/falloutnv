@@ -3839,6 +3839,10 @@ plugins:
         util: 'FNVEdit v4.1.5d'
 
 ###### Gameplay - Quests ######
+  - name: 'Alternative Start.esp'
+    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
+    inc: [ *TTWv320 ]
+
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/75851/'
@@ -7987,10 +7991,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/36646/'
         name: 'Official Pipboy Readius - New Vegas Edition'
-    inc: [ *TTWv320 ]
-
-  - name: 'Alternative Start.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
     inc: [ *TTWv320 ]
 
   - name: 'Alternate Start - Roleplayers.esp'
