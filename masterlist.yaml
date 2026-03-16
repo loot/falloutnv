@@ -3840,7 +3840,9 @@ plugins:
 
 ###### Gameplay - Quests ######
   - name: 'Alternative Start.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/45739/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/45739/'
+        name: 'Roleplayers Alternative Start Fallout New Vegas'
     inc: [ *TTWv320 ]
 
   - name: 'DelayDLCRedux( - (Delay CG04 Level Up|Hardcore Zeta Patch)|PLNote|POPP)?\.esp'
