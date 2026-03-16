@@ -3843,6 +3843,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/45739/'
         name: 'Roleplayers Alternative Start Fallout New Vegas'
+    msg: [ *requiresNVSE ]
     inc: [ *TTWv320 ]
     dirty:
       - <<: *quickClean
