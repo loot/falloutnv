@@ -4205,6 +4205,11 @@ plugins:
         util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         nav: 4
 
+  - name: 'TTW Quick Start.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/65937/'
+        name: 'Tale of Two Wastelands Quick Start'
+
 ###### Gameplay - Skills & Perks ######
   - name: 'A Crime Against Nature.esp'
     url:
