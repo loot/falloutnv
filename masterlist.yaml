@@ -3844,7 +3844,9 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/45739/'
         name: 'Roleplayers Alternative Start Fallout New Vegas'
     msg: [ *requiresNVSE ]
-    inc: [ *TTWv320 ]
+    inc::
+      - 'NewVegasQuickStart.esp'
+      - 'TaleOfTwoWastelands.esm'
     dirty:
       - <<: *quickClean
         crc: 0xE335391F
