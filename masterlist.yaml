@@ -4493,6 +4493,23 @@ plugins:
   - name: '(Inventory )?Sorter - (Ammo Supplies|Books|Cards|Combined (- Aid Crafting|- T3T Icon Compatch|RUS_(1|2))|Consumables|Crafting Parts|Currency|Magazines|Moddable Unique Weps|Mods)\.esp'
     msg: [ *obsolete ]
 
+  - name: 'Tutorial Killer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/47746/'
+        name: 'Tutorial Killer (Nexus Mods)'
+      - link: 'https://mod.pub/falloutnv/53-esp-less-tutorial-killer/'
+        name: 'ESP-less Tutorial Killer (ModDB)'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**ESP-less Tutorial Killer**' ]
+        condition: 'file("nvse/plugins/scripts/gr_tutorial_killer.txt")'
+    clean:
+      - crc: 0x8324E796
+        util: 'FNVEdit v4.0.4'
+
 ###### Items ######
   - name: 'epock.esp'
     url:
@@ -7694,17 +7711,6 @@ plugins:
   - name: 'RaestlozFactionArmorEnhancement.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/49558/' ]
     tag: [ Scripts ]
-
-  - name: 'Tutorial Killer.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
-    req: [ *johnnyGuitar ]
-    msg: [ *requires_xNVSE ]
-    clean:
-      - crc: 0x8324E796
-        util: 'FNVEdit v4.0.4'
-  - name: 'Tutorial Killer - Alternate Start.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
-    msg: [ *obsolete ]
 
   - name: 'Weapons.of.the.New.Millenia.esm'
     url: [ 'https://www.nexusmods.com/newvegas/mods/55008/' ]
