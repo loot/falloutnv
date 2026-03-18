@@ -1749,6 +1749,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/90327/'
         name: 'TTW Fallout 3 LOD'
+    group: *lodResGroup
     req: [ 'TaleOfTwoWastelands.esm' ]
 
   - name: 'VNV LOD Plugins.esp'
