@@ -7896,19 +7896,8 @@ plugins:
         name: 'FNVLODGen'
     group: *lodGenGroup
     after:
-      - 'LOD Additions - TTW Patch.esp'
       - 'tmzLODadditions.esp'
       - 'Wasted LOD rocks.esp'
-
-  - name: 'LOD Additions - TTW Patch.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/77945/'
-        name: 'Vish''s Patch Hub (FNV-TTW)'
-    group: *lodResGroup
-    after:  [ 'tmzLODadditions.esp' ]
-    clean:
-      - crc: 0x5BD687F8
-        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
 
   - name: '47 ENB Weather.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
