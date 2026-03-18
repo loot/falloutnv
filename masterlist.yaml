@@ -1619,6 +1619,15 @@ plugins:
         name: 'Stash Organizer (ModDB)'
     group: *frameworksGroup
     req: [ *JIPLN ]
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Sortomatic' ]
+        condition: 'active("Sortomatic.esm")'
+      - <<: *compatNotes
+        subs: [ 'https://mod.pub/falloutnv/4/docs/35-stash-organizer-v2-description/' ]
+      - <<: *requiresX
+        subs: [ 'Stash Organizer INI' ]
+        condition: 'not file("config/Stash Organizer.ini")'
     clean:
       - crc: 0xBDA9A96C
         util: 'FNVEdit v4.1.5p 32bit fix version'
