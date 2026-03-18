@@ -1243,6 +1243,10 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/69200/'
         name: 'Critical and Effects - Fixes and Tweaks'
     group: *fixesGroup
+    req:
+      - *JIPLN
+      - *johnnyGuitar
+      - *ShowOff
     tag:
       - Actors.Spells
       - Enchantments
