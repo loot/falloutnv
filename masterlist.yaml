@@ -1613,6 +1613,11 @@ plugins:
       - crc: 0xFFF00ED5
         util: 'FNVEdit v4.0.4c'
 
+  - name: 'Stash Organizer.esp'
+    url:
+      - link: 'https://mod.pub/falloutnv/4-stash-organizer/'
+        name: 'Stash Organizer (ModDB)'
+
   - name: 'The Mod Configuration Menu.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/42507/'
