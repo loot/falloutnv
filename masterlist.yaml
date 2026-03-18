@@ -623,8 +623,12 @@ groups:
     description: 'A group for modules that should load early before most other mods.'
     after: [ *frameworksGroup ]
 
-  - name: &underridesGroup Underrides
+  - name: &newContentGroup New Content
+    description: 'A group for mods that only add new content (e.g. new locations, items or characters).'
     after: [ *earlyLoadersGroup ]
+
+  - name: &underridesGroup Underrides
+    after: [ *newContentGroup ]
 
   - name: default
     after: [ *underridesGroup ]
