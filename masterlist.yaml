@@ -1286,7 +1286,6 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/88587/'
         name: 'Gas Trap Performance Fix'
     group: *fixesGroup
-    msg: [ *requires_xNVSE ]
     msg:
       - <<: *alreadyInX
         subs: [ '**Unofficial Patch NVSE Plus**' ]
