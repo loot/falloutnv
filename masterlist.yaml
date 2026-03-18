@@ -771,16 +771,17 @@ plugins:
     url:
       - link: 'https://store.steampowered.com/app/22470/Fallout_New_Vegas_Couriers_Stash/'
         name: 'Fallout New Vegas: Courier''s Stash'
+    after:
+      - 'DeadMoney.esm'
+      - 'GunRunnersArsenal.esm'
+      - 'HonestHearts.esm'
+      - 'LonesomeRoad.esm'
+      - 'OldWorldBlues.esm'
+      - name: 'Zeta.esm'
+        condition: *condFileTTW
   - name: 'ClassicPack.esm'
     group: *dlcGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
       - name: 'CaravanPack.esm'
         condition: *condFileTTW
     clean:
@@ -788,49 +789,27 @@ plugins:
         util: 'FNVEdit v4.1.5f'
   - name: 'MercenaryPack.esm'
     group: *dlcGroup
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'ClassicPack.esm'
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
+    after: [ 'ClassicPack.esm' ]
     clean:
       - crc: 0xD377B2B9
         util: 'FNVEdit v4.1.5f'
   - name: 'TribalPack.esm'
     group: *dlcGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
     clean:
       - crc: 0x0DE09873
         util: 'FNVEdit v4.1.5f'
   - name: 'CaravanPack.esm'
     group: *dlcGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
       - name: 'ClassicPack.esm'
         condition: *condNotFileTTW
       - name: 'MercenaryPack.esm'
         condition: *condNotFileTTW
       - name: 'TribalPack.esm'
         condition: *condNotFileTTW
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
     clean:
       - crc: 0x228740D1
         util: 'FNVEdit v4.1.5f'
