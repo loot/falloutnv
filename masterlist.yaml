@@ -687,7 +687,9 @@ groups:
 
 plugins:
   - name: 'DeadMoney.esm'
-    url: [ 'https://store.steampowered.com/app/72730/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72730/Fallout_New_Vegas_Dead_Money/'
+        name: 'Fallout New Vegas: Dead Money'
     group: *dlcGroup
     tag:
       - Invent.Add
@@ -701,7 +703,9 @@ plugins:
         itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
-    url: [ 'https://store.steampowered.com/app/72740/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72740/Fallout_New_Vegas_Honest_Hearts/'
+        name: 'Fallout New Vegas: Honest Hearts'
     group: *dlcGroup
     after: [ 'DeadMoney.esm' ]
     tag:
@@ -715,7 +719,9 @@ plugins:
         itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
-    url: [ 'https://store.steampowered.com/app/72750/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72750/Fallout_New_Vegas_Old_World_Blues/'
+        name: 'Fallout New Vegas: Old World Blues'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -733,7 +739,9 @@ plugins:
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 123
   - name: 'LonesomeRoad.esm'
-    url: [ 'https://store.steampowered.com/app/72760/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72760/Fallout_New_Vegas_Lonesome_Road/'
+        name: 'Fallout New Vegas: Lonesome Road'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -750,7 +758,9 @@ plugins:
         itm: 243
         udr: 6
   - name: 'GunRunnersArsenal.esm'
-    url: [ 'https://store.steampowered.com/app/72840/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72840/Fallout_New_Vegas_Gun_Runners_Arsenal/'
+        name: 'Fallout New Vegas: Gun Runners'' Arsenal'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
