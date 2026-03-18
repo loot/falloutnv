@@ -3062,6 +3062,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/78324/'
         name: 'Bullet Time Improved - a JAM addon'
+    clean:
+      - crc: 0xADD2239E
+        util: 'FNVEdit v4.1.5p 32bit fix version'
 
   - name: 'JSawyer Ultimate( - (GRA Merged|Menu Stimpak Variants|Push''s Tweaks))?\.esp'
     url:
