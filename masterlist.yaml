@@ -4502,6 +4502,10 @@ plugins:
     req:
       - *JIPLN
       - *johnnyGuitar
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**ESP-less Tutorial Killer**' ]
+        condition: 'file("nvse/plugins/scripts/gr_tutorial_killer.txt")'
     clean:
       - crc: 0x8324E796
         util: 'FNVEdit v4.0.4'
