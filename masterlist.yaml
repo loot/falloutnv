@@ -1745,6 +1745,13 @@ plugins:
       - crc: 0x0A2432B9
         util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
 
+  - name: 'TTW Fallout 3 LOD.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/90327/'
+        name: 'TTW Fallout 3 LOD'
+    group: *lodResGroup
+    req: [ 'TaleOfTwoWastelands.esm' ]
+
   - name: 'VNV LOD Plugins.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79358/'
