@@ -1737,6 +1737,16 @@ plugins:
     group: *lodGenGroup
     after: [ 'FNVLODGen.esp' ]
 
+  - name: 'Wasted LOD rocks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
+        name: 'Wasted LOD - Cliffs of DC'
+    group: *lodResGroup
+    req: [ *TTWv320 ]
+    clean:
+      - crc: 0x8D74EB63
+        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
+
 ###### AudioVisual ######
   - name: '357retex.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/47714/' ]
@@ -7904,16 +7914,6 @@ plugins:
     after:  [ 'tmzLODadditions.esp' ]
     clean:
       - crc: 0x5BD687F8
-        util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
-
-  - name: 'Wasted LOD rocks.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/79734/'
-        name: 'Wasted LOD - Cliffs of DC'
-    group: *lodResGroup
-    req: [ *TTWv320 ]
-    clean:
-      - crc: 0x8D74EB63
         util: 'FNVEdit v4.1.4m  EXTREMELY EXPERIMENTAL'
 
   - name: '47 ENB Weather.esp'
