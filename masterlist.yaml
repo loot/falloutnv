@@ -1281,6 +1281,11 @@ plugins:
   - name: 'FNV FaceGen Fix.esp'
     inc: [ 'TaleOfTwoWastelands.esm' ]
 
+  - name: 'GasTrapPerformanceFix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/88587/'
+        name: 'Gas Trap Performance Fix'
+
   - name: 'Impostors and LOD Flicker Fix.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/83691/' ]
     group: *fixesGroup
