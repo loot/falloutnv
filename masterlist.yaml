@@ -767,8 +767,11 @@ plugins:
         crc: 0x0AAC938D
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 95
+  - name: '(Caravan|Classic|Mercenary|Tribal)Pack\.esm'
+    url:
+      - link: 'https://store.steampowered.com/app/22470/Fallout_New_Vegas_Couriers_Stash/'
+        name: 'Fallout New Vegas: Courier''s Stash'
   - name: 'ClassicPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -784,7 +787,6 @@ plugins:
       - crc: 0x41F95714
         util: 'FNVEdit v4.1.5f'
   - name: 'MercenaryPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -799,7 +801,6 @@ plugins:
       - crc: 0xD377B2B9
         util: 'FNVEdit v4.1.5f'
   - name: 'TribalPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -815,7 +816,6 @@ plugins:
       - crc: 0x0DE09873
         util: 'FNVEdit v4.1.5f'
   - name: 'CaravanPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
