@@ -4494,7 +4494,11 @@ plugins:
     msg: [ *obsolete ]
 
   - name: 'Tutorial Killer.esp'
-    url: [ 'https://www.nexusmods.com/newvegas/mods/47746/' ]
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/47746/'
+        name: 'Tutorial Killer (Nexus Mods)'
+      - link: 'https://mod.pub/falloutnv/53-esp-less-tutorial-killer/'
+        name: 'ESP-less Tutorial Killer (ModDB)'
     req:
       - *JIPLN
       - *johnnyGuitar
