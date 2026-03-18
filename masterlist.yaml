@@ -687,7 +687,9 @@ groups:
 
 plugins:
   - name: 'DeadMoney.esm'
-    url: [ 'https://store.steampowered.com/app/72730/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72730/Fallout_New_Vegas_Dead_Money/'
+        name: 'Fallout New Vegas: Dead Money'
     group: *dlcGroup
     tag:
       - Invent.Add
@@ -701,7 +703,9 @@ plugins:
         itm: 403
         udr: 51
   - name: 'HonestHearts.esm'
-    url: [ 'https://store.steampowered.com/app/72740/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72740/Fallout_New_Vegas_Honest_Hearts/'
+        name: 'Fallout New Vegas: Honest Hearts'
     group: *dlcGroup
     after: [ 'DeadMoney.esm' ]
     tag:
@@ -715,7 +719,9 @@ plugins:
         itm: 121
         udr: 10
   - name: 'OldWorldBlues.esm'
-    url: [ 'https://store.steampowered.com/app/72750/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72750/Fallout_New_Vegas_Old_World_Blues/'
+        name: 'Fallout New Vegas: Old World Blues'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -733,7 +739,9 @@ plugins:
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 123
   - name: 'LonesomeRoad.esm'
-    url: [ 'https://store.steampowered.com/app/72760/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72760/Fallout_New_Vegas_Lonesome_Road/'
+        name: 'Fallout New Vegas: Lonesome Road'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -750,7 +758,9 @@ plugins:
         itm: 243
         udr: 6
   - name: 'GunRunnersArsenal.esm'
-    url: [ 'https://store.steampowered.com/app/72840/' ]
+    url:
+      - link: 'https://store.steampowered.com/app/72840/Fallout_New_Vegas_Gun_Runners_Arsenal/'
+        name: 'Fallout New Vegas: Gun Runners'' Arsenal'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
@@ -767,70 +777,46 @@ plugins:
         crc: 0x0AAC938D
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 95
-  - name: 'ClassicPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
+  - name: '(Caravan|Classic|Mercenary|Tribal)Pack\.esm'
+    url:
+      - link: 'https://store.steampowered.com/app/22470/Fallout_New_Vegas_Couriers_Stash/'
+        name: 'Fallout New Vegas: Courier''s Stash'
     group: *dlcGroup
     after:
       - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
       - 'GunRunnersArsenal.esm'
+      - 'HonestHearts.esm'
+      - 'LonesomeRoad.esm'
+      - 'OldWorldBlues.esm'
       - name: 'Zeta.esm'
         condition: *condFileTTW
+  - name: 'ClassicPack.esm'
+    after:
       - name: 'CaravanPack.esm'
         condition: *condFileTTW
     clean:
       - crc: 0x41F95714
         util: 'FNVEdit v4.1.5f'
   - name: 'MercenaryPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
-    group: *dlcGroup
-    after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
-      - 'ClassicPack.esm'
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
+    after: [ 'ClassicPack.esm' ]
     clean:
       - crc: 0xD377B2B9
         util: 'FNVEdit v4.1.5f'
   - name: 'TribalPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
-    group: *dlcGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
     clean:
       - crc: 0x0DE09873
         util: 'FNVEdit v4.1.5f'
   - name: 'CaravanPack.esm'
-    url: [ 'https://store.steampowered.com/app/901778/' ]
-    group: *dlcGroup
     after:
-      - 'DeadMoney.esm'
-      - 'HonestHearts.esm'
-      - 'OldWorldBlues.esm'
-      - 'LonesomeRoad.esm'
-      - 'GunRunnersArsenal.esm'
       - name: 'ClassicPack.esm'
         condition: *condNotFileTTW
       - name: 'MercenaryPack.esm'
         condition: *condNotFileTTW
       - name: 'TribalPack.esm'
         condition: *condNotFileTTW
-      - name: 'Zeta.esm'
-        condition: *condFileTTW
     clean:
       - crc: 0x228740D1
         util: 'FNVEdit v4.1.5f'
