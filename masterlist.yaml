@@ -3058,6 +3058,11 @@ plugins:
       - *requiresMCM
       - *requires_xNVSE
 
+  - name: 'JBTImproved.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/78324/'
+        name: 'Bullet Time Improved - a JAM addon'
+
   - name: 'JSawyer Ultimate( - (GRA Merged|Menu Stimpak Variants|Push''s Tweaks))?\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/61592/'
