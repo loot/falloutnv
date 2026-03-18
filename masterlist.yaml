@@ -1617,6 +1617,7 @@ plugins:
     url:
       - link: 'https://mod.pub/falloutnv/4-stash-organizer/'
         name: 'Stash Organizer (ModDB)'
+    group: *frameworksGroup
     req: [ *JIPLN ]
     clean:
       - crc: 0xBDA9A96C
