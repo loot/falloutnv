@@ -1675,6 +1675,12 @@ plugins:
     msg: [ *requires_xNVSE ]
 
 ###### Resources - LOD ######
+  - name: 'FNVLODGen.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
+        name: 'FNVLODGen'
+    group: *lodGenGroup
+
   - name: '(LODIFY_FNV|TTWLods)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/84165/'
@@ -7889,15 +7895,6 @@ plugins:
     clean:
       - crc: 0x2AEE91EB
         util: 'FNVEdit v4.1.5d'
-
-  - name: 'FNVLODGen.esp'
-    url:
-      - link: 'https://www.nexusmods.com/newvegas/mods/58562/'
-        name: 'FNVLODGen'
-    group: *lodGenGroup
-    after:
-      - 'tmzLODadditions.esp'
-      - 'Wasted LOD rocks.esp'
 
   - name: '47 ENB Weather.esp'
     url: [ 'https://www.gunetwork.org/t2762-release-47-enb-2-the-sequel' ]
