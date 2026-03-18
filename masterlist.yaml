@@ -1238,6 +1238,11 @@ plugins:
       - crc: 0x335FAC04
         util: 'FNVEdit v4.1.5d'
 
+  - name: 'CriticalEffectFixes.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/69200/'
+        name: 'Critical and Effects - Fixes and Tweaks'
+
   - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
