@@ -781,6 +781,7 @@ plugins:
     url:
       - link: 'https://store.steampowered.com/app/22470/Fallout_New_Vegas_Couriers_Stash/'
         name: 'Fallout New Vegas: Courier''s Stash'
+    group: *dlcGroup
     after:
       - 'DeadMoney.esm'
       - 'GunRunnersArsenal.esm'
@@ -790,7 +791,6 @@ plugins:
       - name: 'Zeta.esm'
         condition: *condFileTTW
   - name: 'ClassicPack.esm'
-    group: *dlcGroup
     after:
       - name: 'CaravanPack.esm'
         condition: *condFileTTW
@@ -798,13 +798,11 @@ plugins:
       - crc: 0x41F95714
         util: 'FNVEdit v4.1.5f'
   - name: 'MercenaryPack.esm'
-    group: *dlcGroup
     after: [ 'ClassicPack.esm' ]
     clean:
       - crc: 0xD377B2B9
         util: 'FNVEdit v4.1.5f'
   - name: 'TribalPack.esm'
-    group: *dlcGroup
     after:
       - 'ClassicPack.esm'
       - 'MercenaryPack.esm'
@@ -812,7 +810,6 @@ plugins:
       - crc: 0x0DE09873
         util: 'FNVEdit v4.1.5f'
   - name: 'CaravanPack.esm'
-    group: *dlcGroup
     after:
       - name: 'ClassicPack.esm'
         condition: *condNotFileTTW
