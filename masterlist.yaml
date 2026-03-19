@@ -5484,6 +5484,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/95100/'
         name: 'Checkpoint Gary LE'
+    group: *newContentGroup
     inc: [ 'CheckpointGary.esp' ]
     tag: [ Relations.Add ]
     clean:
