@@ -5470,7 +5470,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/60877/'
         name: 'Checkpoint Gary'
-    req: [ *theSomeguySeries ]
+    group: *newContentGroup
     inc: [ 'CheckpointGary.esm' ]
     msg:
       - <<: *alreadyInX
