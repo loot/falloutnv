@@ -3411,6 +3411,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/76128/'
         name: 'TTW Transportalponder Extended'
+    group: *earlyLoadersGroup
     tag:
       - Names
       - Scripts
