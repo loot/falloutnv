@@ -2082,6 +2082,11 @@ plugins:
         util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
+  - name: 'ATMOS Sound Overhaul - TTW.esp'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/84054/'
+        name: 'ATMOS Ambient Sound Overhaul - TTW'
+
   - name: 'Improved Sound FX.*\.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/35293/' ]
     tag: [ Sound ]
