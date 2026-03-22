@@ -5866,6 +5866,11 @@ plugins:
         subs: [ '**The New Bison Steve Hotel.esm**' ]
         condition: 'not is_master("The New Bison Steve Hotel.esp")'
 
+  - name: 'TheUntouchedVault\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/51574/'
+        name: 'The Untouched Vault'
+
 ###### New Characters ######
   - name: 'TLD_Travelers.esm'
     url:
