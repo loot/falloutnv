@@ -2086,6 +2086,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/84054/'
         name: 'ATMOS Ambient Sound Overhaul - TTW'
+    req: [ *JIPLN ]
     tag: [ Sound ]
     clean:
       - crc: 0x45942539
