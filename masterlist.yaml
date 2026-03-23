@@ -2085,6 +2085,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/84235/'
         name: 'All Weapon Sound Overhaul Modern Edition Redone - AWSOMER'
+    req:
+      - *JIPLN
+      - *johnnyGuitar
     msg:
       - <<: *compatPatch
         subs: [ '[AWSOMER PATCH HUB](https://www.nexusmods.com/newvegas/mods/85014/)' ]
