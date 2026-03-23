@@ -6130,7 +6130,7 @@ plugins:
   - name: '(ATMOS - Atmospheric Lighting Tweaks
            {0}|ATMOS NV - TTW
            {0}|DIEO - AWOPFO3
-           {0}|DIEO - Tale of Bi Wastelands) Patch\.esm'
+           {0}|DIEO - Tale of Bi Wastelands) Patch\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79005/'
         name: 'TTW - Wasteland Supplements'
