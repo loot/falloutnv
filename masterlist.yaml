@@ -2050,17 +2050,21 @@ plugins:
     tag:
       - C.Acoustic
       - Sound
+    clean:
+      - crc: 0x74B59F97
+        util: 'FNVEdit v4.1.5p 32bit fix version'
+  - name: 'ATMOS Ambient Overhaul - DLC.esp'
     dirty:
       - <<: *quickClean
-        crc: 0x600DCAA8
-        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
-        itm: 52
+        crc: 0x62F1B5F5
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
+        itm: 54
         udr: 2
   - name: 'ATMOS Music System.esp'
     dirty:
       - <<: *quickClean
         crc: 0x486E31B7
-        util: '[FNVEdit v4.1.5d](https://www.nexusmods.com/newvegas/mods/34703)'
+        util: '[FNVEdit v4.1.5p 32bit fix version](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 2
 
   - name: 'ATMOS Sound Overhaul - TTW.esp'
