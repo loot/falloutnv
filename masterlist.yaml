@@ -6134,6 +6134,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/79005/'
         name: 'TTW - Wasteland Supplements'
+  - name: 'ATMOS - Atmospheric Lighting Tweaks Patch.esp'
+    after: [ 'Atmospheric Lighting Tweaks TTW.esp' ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: '(TaleOfTwoWastelands|YUPTTW|Fallout3|Anchorage|BrokenSteel|PointLookout|ThePitt|Zeta)\.esm'
