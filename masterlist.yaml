@@ -258,12 +258,12 @@ common:
   - &TTWv320
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.2+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+    condition: 'version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
 
   - &TTWv330
     name: 'TaleOfTwoWastelands.esm'
     display: 'Tale Of Two Wastelands v3.3+'
-    condition: 'version("TaleOfTwoWastelands.esm", "3.3.0", >=)'
+    condition: 'version("TaleOfTwoWastelands.esm", >=, "3.3.0")'
 
   # NVSE Files
   - &anhNVSE
@@ -369,7 +369,7 @@ common:
     <<: *requiresX
     type: error
     subs: [ '[New Vegas Script Extender (xNVSE)](https://github.com/xNVSE/NVSE/releases)' ]
-    condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=)'
+    condition: 'not version("../nvse_1_4.dll", >=, "0.6.0.0")'
 
   # &useVersion
   - &useVersionDeadMoney
@@ -535,32 +535,32 @@ globals:
   # Fallout: New Vegas
   - <<: *versionOldX
     subs: [ '**Fallout: New Vegas**' ]
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", <)'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", <, "1.4.0.525")'
   - <<: *versionUpToDateX
     subs: [ '**Fallout: New Vegas**' ]
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", >=)'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", >=, "1.4.0.525")'
 
   # NVSE
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender](http://nvse.silverlock.org/)**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", "0.6.4.6", <)))'
+    condition: 'not file("../nvse_1_4ng.dll") and (file("../nvse_1_[01]\.dll") or (file("../nvse_1_4.dll") and version("../nvse_1_4.dll", <, "0.6.4.6")))'
   - <<: *versionUpToDateX
     subs: [ '**New Vegas Script Extender**' ]
-    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", "0.6.4.6", >=)'
+    condition: 'not file("../nvse_1_4ng.dll") and version("../nvse_1_4.dll", >=, "0.6.4.6")'
   # NVSE NoGore
   - <<: *versionOldX
     subs: [ '**[New Vegas Script Extender NoGore](http://nvse.silverlock.org/)**' ]
-    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", "0.5.1.4", <)'
+    condition: 'file("../nvse_1_4ng.dll") and version("../nvse_1_4ng.dll", <, "0.5.1.4")'
   - <<: *versionUpToDateX
     subs: [ '**New Vegas Script Extender NoGore**' ]
-    condition: 'version("../nvse_1_4ng.dll", "0.5.1.4", >=)'
+    condition: 'version("../nvse_1_4ng.dll", >=, "0.5.1.4")'
 
 # NVSE - Runtime Compatibility
   - <<: *versionXIncY
     subs:
       - '**[New Vegas Script Extender](http://nvse.silverlock.org/)**'
       - '**Fallout: New Vegas**'
-    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", "1.4.0.525", ==) and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", "0.2.0.6", <)))'
+    condition: 'readable("../FalloutNV.exe") and product_version("../FalloutNV.exe", ==, "1.4.0.525") and (file("../nvse_1_0.dll") or (file("../nvse_1_1.dll") and version("../nvse_1_1.dll", <, "0.2.0.6")))'
 
 # NVSE
   # Missing
@@ -5062,7 +5062,7 @@ plugins:
     msg:
       - *deletePluginStarTTW2
       - <<: *requires_xNVSE
-        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Revelation Blues Armors Config.ini")'
+        condition: 'not version("../nvse_1_4.dll", >=, "0.6.0.0") and file("config/Revelation Blues Armors Config.ini")'
     dirty:
       # LL Integrated
       - <<: *quickClean
@@ -5096,7 +5096,7 @@ plugins:
         condition: 'not active("Titans of The New West.esp") and not file("STAR TTW 2.esp")'
       - *deletePluginStarTTW2
       - <<: *requires_xNVSE
-        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("config/Odyssey Armors Config.ini")'
+        condition: 'not version("../nvse_1_4.dll", >=, "0.6.0.0") and file("config/Odyssey Armors Config.ini")'
     tag:
       - name: 'Invent.Add'
         condition: 'file("config/Odyssey Armors Config.ini")'
@@ -8035,7 +8035,7 @@ plugins:
     msg:
       - <<: *alreadyInX
         subs: [ 'YUPTTW.esm' ]
-        condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", "3.2.2", >=)'
+        condition: 'active("YUPTTW.esm") and version("YUPTTW.esm", >=, "3.2.2")'
 
   - name: 'GameSettings.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/39157/' ]
@@ -8080,16 +8080,16 @@ plugins:
         condition: 'file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
     inc:
       - <<: *TTWv320
-        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
     msg:
       - <<: *requiresResources
         subs: [ '[IMPACT](https://www.nexusmods.com/newvegas/mods/57113/)' ]
         condition: 'not file("meshes/effects/impactballisticblood01.nif")'
       - <<: *requires_xNVSE
-        condition: 'not version("../nvse_1_4.dll", "0.6.0.0", >=) and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
+        condition: 'not version("../nvse_1_4.dll", >=, "0.6.0.0") and file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt")'
       - <<: *useInstead
         subs: [ '[IMPACT - Compatibility Edition](https://www.nexusmods.com/newvegas/mods/62050/)' ]
-        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'not file("nvse/plugins/scripts/gr_IMPACTCompatQuestRestart.txt") and version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
 
   - name: 'CAGE 1.9.3.2.esp'
     url:
@@ -8099,7 +8099,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
 
   - name: 'ContinueAfterEnding.esp'
     url: [ 'https://www.nexusmods.com/newvegas/mods/57922/' ]
@@ -8107,7 +8107,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[FPGE: Functional Post Game Ending](https://www.nexusmods.com/newvegas/mods/66726)' ]
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
 
   - name: 'pipboy2500_edisleado.esp'
     url:
@@ -8117,7 +8117,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[Pip-Boy 2500A: The Arm Mounted Pipboy 2500](https://www.nexusmods.com/newvegas/mods/49732/)' ]
-        condition: 'version("TaleOfTwoWastelands.esm", "3.2.0", >=)'
+        condition: 'version("TaleOfTwoWastelands.esm", >=, "3.2.0")'
 
   - name: 'Readius_NV.esp'
     url:
