@@ -1250,6 +1250,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/98584/'
         name: 'Narrative-Consistent Gameplay Tweaks'
+    group: *fixesGroup
 
   - name: 'fixy crap (ttw|ue)\.esp'
     url:
