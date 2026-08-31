@@ -1246,6 +1246,11 @@ plugins:
       - crc: 0x22623BF6
         util: 'FNVEdit v4.1.5p 32bit fix version'
 
+  - name: 'd20Consistency.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/98584/'
+        name: 'Narrative-Consistent Gameplay Tweaks'
+
   - name: 'fixy crap (ttw|ue)\.esp'
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/82042/'
