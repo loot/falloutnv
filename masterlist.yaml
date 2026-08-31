@@ -3462,6 +3462,7 @@ plugins:
       - link: 'https://www.nexusmods.com/newvegas/mods/78877/'
         name: 'Essential Vanilla Enhancements Merged'
     group: *earlyLoadersGroup
+    after: [ 'd20Consistency.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -3505,6 +3506,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/newvegas/mods/96184/'
         name: 'Wastelands Improvements Collection - TTW'
+    after: [ 'd20Consistency.esm' ]
 
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
