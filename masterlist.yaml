@@ -3501,6 +3501,11 @@ plugins:
         util: '[FNVEdit v4.1.5f](https://www.nexusmods.com/newvegas/mods/34703)'
         itm: 52
 
+  - name: 'Wastelands Improvements Collection.esm'
+    url:
+      - link: 'https://www.nexusmods.com/newvegas/mods/96184/'
+        name: 'Wastelands Improvements Collection - TTW'
+
 ###### Gameplay - Combat ######
   - name: 'BLEED.esp'
     url:
